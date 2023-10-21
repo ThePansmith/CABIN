@@ -1,0 +1,7 @@
+
+[compat]
+
+	[compat.jei]
+		#Should C&B inject its bits into JEI?
+		inject-bits = false
+

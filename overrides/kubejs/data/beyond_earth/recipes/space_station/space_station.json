@@ -1,0 +1,29 @@
+{
+	"type": "beyond_earth:space_station",
+	"ingredients": [
+		{
+			"ingredient": {
+				"tag": "forge:computation_matrix"
+			},
+			"count": 64
+		},
+		{
+			"ingredient": {
+				"tag": "forge:enderium_machine"
+			},
+			"count": 64
+		},
+		{
+			"ingredient": {
+				"tag": "forge:controller"
+			},
+			"count": 64
+		},
+		{
+			"ingredient": {
+				"tag": "forge:iron_block"
+			},
+			"count": 64
+		}
+	]
+}

@@ -1,0 +1,78 @@
+To refresh this file, delete it and run /reload command again! Last updated: Oct 9, 2023, 1:08:25 PM
+
+#tconstruct:modifier_like/reflecting
+- parry:rebound?
+
+#tconstruct:modifier_like/experienced
+- cyclic:experience_boost?
+- ensorcellation:exp_boost?
+
+#tconstruct:modifier_like/double_jump
+- cyclic:launch?
+- walljump:doublejump?
+
+#tconstruct:modifier_like/reach
+- cyclic:reach?
+- ensorcellation:reach?
+
+#forbidden_arcanus:modifier/eternal_incompatible
+- minecraft:unbreaking
+- minecraft:mending
+
+#tconstruct:modifier_like/knockback_resistance
+- cyclic:steady?
+
+#tconstruct:modifier_like/multishot
+- cyclic:multishot?
+- ensorcellation:volley?
+
+#tconstruct:modifier_like/magic_protection
+- ensorcellation:magic_protection?
+
+#forbidden_arcanus:indestructible_blacklisted
+- minecraft:unbreaking
+- minecraft:mending
+
+#tconstruct:modifier_like/luck
+- ensorcellation:hunter?
+
+#forbidden_arcanus:modifier/fiery_incompatible
+- minecraft:silk_touch
+
+#tconstruct:modifier_like/revitalizing
+- ensorcellation:vitality?
+
+#tconstruct:modifier_like/soulbound
+- ensorcellation:soulbound?
+
+#tconstruct:modifier_like/severing
+- cyclic:beheading?
+- ensorcellation:vorpal?
+
+#tconstruct:modifier_like/step_up
+- cyclic:step?
+
+#tconstruct:modifier_like/magnetic
+- cyclic:magnet?
+
+#tconstruct:modifier_like/killager
+- ensorcellation:damage_illager?
+
+#tconstruct:modifier_like/autosmelt
+- cyclic:auto_smelt?
+- ensorcellation:smelting?
+
+#tconstruct:modifier_like/trueshot
+- ensorcellation:trueshot?
+
+#tconstruct:modifier_like/necrotic
+- cyclic:life_leech?
+- ensorcellation:leech?
+
+#tconstruct:modifier_like/tilling
+- ensorcellation:tilling?
+
+#tconstruct:modifier_like/expanded
+- cyclic:excavate?
+- ensorcellation:excavating?
+- ensorcellation:furrowing?

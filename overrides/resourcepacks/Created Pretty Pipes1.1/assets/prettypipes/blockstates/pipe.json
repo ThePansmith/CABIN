@@ -1,0 +1,118 @@
+{
+    "multipart": [
+        {
+            "apply": {
+                "model": "prettypipes:block/pipe_center"
+            }
+        },
+        {
+            "when": {
+                "north": "connected"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_end"
+            }
+        },
+        {
+            "when": {
+                "south": "connected"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_end",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "east": "connected"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_end",
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "west": "connected"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_end",
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "down": "connected"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_end",
+                "x": 90
+            }
+        },
+        {
+            "when": {
+                "up": "connected"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_end",
+                "x": 270
+            }
+        },
+        {
+            "when": {
+                "north": "legs"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_legs",
+                "x": 90,
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "south": "legs"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_legs",
+                "x": 90
+            }
+        },
+        {
+            "when": {
+                "east": "legs"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_legs",
+                "x": 90,
+                "y": 270
+            }
+        },
+        {
+            "when": {
+                "west": "legs"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_legs",
+                "x": 90,
+                "y": 90
+            }
+        },
+        {
+            "when": {
+                "down": "legs"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_legs"
+            }
+        },
+        {
+            "when": {
+                "up": "legs"
+            },
+            "apply": {
+                "model": "prettypipes:block/pipe_legs",
+                "x": 180
+            }
+        }
+    ]
+}

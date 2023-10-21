@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kubejs:block/navigation_computer_side",
+    "up": "kubejs:block/navigation_computer_side",
+    "north": "kubejs:block/lander_deployer",
+    "east": "kubejs:block/navigation_computer_side",
+    "south": "kubejs:block/navigation_computer_side",
+    "west": "kubejs:block/navigation_computer_side",
+    "particle": "kubejs:block/navigation_computer_side"
+  }
+}

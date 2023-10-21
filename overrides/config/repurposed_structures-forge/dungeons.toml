@@ -1,0 +1,70 @@
+#
+# Whether End Dungeons spawns Shulker Boxes. if false, spawns regular Chests instead.
+#(Configuredfeatures are unable to be overridden by datapack due to bad Forge hook placement. Hence this config option)
+shulkerBoxInEndDungeons = true
+
+#-----------------------------------------------------------------------------------------
+# How many positions Repurposed Structures Dungeons will pick per chunk to check if it can spawn at those positions.
+# Does NOT replace vanilla Dungeons at all. Except for Deep Dungeon which replaces Vanilla Dungeons below y = 0
+# 0 for no Dungeons at all and 1000 for max Dungeon spawnrate.
+[AttemptsPerChunk]
+	#Range: 0 ~ 1000
+	badlandsDungeonAttemptsPerChunk = 8
+	#Range: 0 ~ 1000
+	darkForestDungeonAttemptsPerChunk = 8
+	#Range: 0 ~ 1000
+	desertDungeonAttemptsPerChunk = 8
+	#Range: 0 ~ 1000
+	deepDungeonAttemptsPerChunk = 4
+	#Range: 0 ~ 1000
+	jungleDungeonAttemptsPerChunk = 8
+	#Range: 0 ~ 1000
+	mushroomDungeonAttemptsPerChunk = 8
+	#Range: 0 ~ 1000
+	snowDungeonAttemptsPerChunk = 8
+	#Range: 0 ~ 1000
+	icyDungeonAttemptsPerChunk = 8
+	#Range: 0 ~ 1000
+	swampDungeonAttemptsPerChunk = 8
+	#Range: 0 ~ 1000
+	endDungeonAttemptsPerChunk = 12
+	#Range: 0 ~ 1000
+	netherDungeonAttemptsPerChunk = 12
+	#Range: 0 ~ 1000
+	oceanDungeonAttemptsPerChunk = 2
+
+#-----------------------------------------------------------------------------------------
+# Minimum Y height that this dungeon can spawn at.
+# Note: The dungeon will spawn between min and max y height set in config.
+["Min Height"]
+	badlandsDungeonMinHeight = 35
+	darkForestDungeonMinHeight = 35
+	desertDungeonMinHeight = 35
+	deepDungeonMinHeight = -60
+	jungleDungeonMinHeight = 35
+	mushroomDungeonMinHeight = 35
+	snowDungeonMinHeight = 35
+	icyDungeonMinHeight = 35
+	swampDungeonMinHeight = 35
+	endDungeonMinHeight = 2
+	netherDungeonMinHeight = 2
+	oceanDungeonMinHeight = 20
+
+#-----------------------------------------------------------------------------------------
+# Maximum Y height that this dungeon can spawn at.
+# Note: The dungeon will spawn between min and max y height set in config.
+# Setting this to below min height config will make dungeon spawn only at min height.
+["Max Height"]
+	badlandsDungeonMaxHeight = 255
+	darkForestDungeonMaxHeight = 255
+	desertDungeonMaxHeight = 255
+	deepDungeonMaxHeight = -10
+	jungleDungeonMaxHeight = 255
+	mushroomDungeonMaxHeight = 255
+	snowDungeonMaxHeight = 255
+	icyDungeonMaxHeight = 255
+	swampDungeonMaxHeight = 255
+	endDungeonMaxHeight = 255
+	netherDungeonMaxHeight = 255
+	oceanDungeonMaxHeight = 255
+

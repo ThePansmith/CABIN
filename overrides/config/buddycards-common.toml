@@ -1,0 +1,100 @@
+
+[mobDrops]
+	#
+	#Odds of baby villager dropping base set packs, 0 for 0%, 1 for 100%, default is 5%
+	#Range: 0.0 ~ 1.0
+	villagerChance = 0.05
+	#
+	#Odds of baby piglin dropping nether set packs, 0 for 0%, 1 for 100%, default is 5%
+	#Range: 0.0 ~ 1.0
+	piglinChance = 0.05
+	#
+	#Odds of ender dragons dropping end set packs, 0 for 0%, 1 for 100%, default is 100%
+	#Range: 0.0 ~ 1.0
+	dragonChance = 1.0
+	#
+	#Maximum amount of packs dropped when a dragon drops packs, default is 4
+	#Range: 1 ~ 16
+	dragonMaxPacks = 4
+	#
+	#Odds of withers dropping nether set packs, 0 for 0%, 1 for 100%, default is 50%
+	#Range: 0.0 ~ 1.0
+	witherChance = 0.5
+	#
+	#Odds of baby zombie villager dropping base set packs, 0 for 0%, 1 for 100%, default is 10%
+	#Range: 0.0 ~ 1.0
+	zombieVillagerChance = 0.1
+	#
+	#Maximum amount of packs dropped when a wither drops packs, default is 3
+	#Range: 1 ~ 16
+	witherMaxPacks = 3
+	#
+	#Odds of baby zombie dropping base set packs, 0 for 0%, 1 for 100%, default is 5%
+	#Range: 0.0 ~ 1.0
+	zombieChance = 0.05
+	#
+	#Odds of baby zombie piglin dropping nether set , 0 for 0%, 1 for 100%, default is 5%
+	#Range: 0.0 ~ 1.0
+	zombiePiglinChance = 0.05
+	#
+	#Odds of shulkers dropping end set packs, 0 for 0%, 1 for 100%, default is 5%
+	#Range: 0.0 ~ 1.0
+	shulkerChance = 0.05
+
+[luminis]
+	#
+	#Amount of Luminis blocks, on average, needed to make 1 Crimson Luminis in an explosion, default is 2
+	#Range: 1 ~ 16
+	explodeCrimsonAvg = 2
+	#
+	#Minimum length of branches in a Luminis vein, default is 8
+	#Range: 1 ~ 32
+	veinBranchLengthMin = 8
+	#
+	#Odds of a kinetic chamber properly converting Luminis blocks to Crimson Luminis, default is 75% 
+	#WARNING: FAILURE WILL CONSUME
+	#Range: 0.0 ~ 1.0
+	kineticCrimsonOdds = 0.75
+	#
+	#Odds of a kinetic chamber properly converting Crimson Luminis blocks to specialty items, default is 85% 
+	#WARNING: FAILURE WILL CONSUME
+	#Range: 0.0 ~ 1.0
+	kineticSpecialtyOdds = 0.8500000238418579
+	#
+	#Distance between chunks that can spawn Luminis veins, under right conditions, default is 5
+	#Range: 1 ~ 16
+	veinChunkDistance = 5
+	#
+	#Maximum length of branches in a Luminis vein, default is 32
+	#Range: 1 ~ 64
+	veinBranchLengthMax = 32
+	#
+	#Enable Luminis vein generation, default is true
+	enableVeins = true
+	#
+	#Maximum amount of branches in a Luminis vein, default is 6
+	#Range: 1 ~ 32
+	veinBranchAmtMax = 6
+	#
+	#Odds of an explosion triggering a Kinetic Chamber to activate, default is 50%
+	#Range: 0.0 ~ 1.0
+	kineticSuccessOdds = 0.5
+	#
+	#Minimum amount of branches in a Luminis vein, default is 3
+	#Range: 1 ~ 16
+	veinBranchAmtMin = 3
+
+[enderling]
+	#
+	#Odds for an Enderling to spawn with an Enderman in the Nether, 0-1, default is 0.5%
+	#Range: 0.0 ~ 1.0
+	netherOdds = 0.005
+	#
+	#Odds for an Enderling to spawn with an Enderman in the End, 0-1, default is 0.5%
+	#Range: 0.0 ~ 1.0
+	endOdds = 0.005
+	#
+	#Odds for an Enderling to spawn with an Enderman in the Overworld, 0-1, default is 1.5%
+	#Range: 0.0 ~ 1.0
+	overOdds = 0.015
+

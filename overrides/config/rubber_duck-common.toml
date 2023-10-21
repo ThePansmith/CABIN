@@ -1,0 +1,13 @@
+#Spawn chance on mobs
+#Range: 0.0 ~ 1.0
+EntitySpawnChance = 0.02
+#Drop chance when mob is killed
+#Range: 0.0 ~ 1.0
+DropChance = 1.0
+#Loot added to Vanilla chests
+ChestLootEnabled = true
+
+["Spawns on this mob"]
+	Zombies = true
+	Skeletons = true
+

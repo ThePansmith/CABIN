@@ -1,0 +1,20 @@
+
+["YUNG's Better Nether Fortresses"]
+
+	###########################################################################################################
+	## General settings.
+	###########################################################################################################
+	["YUNG's Better Nether Fortresses".General]
+		# Whether or not vanilla Nether Fortresses should be disabled.
+		# Default: true
+		#
+		"Disable Vanilla Nether Fortresses" = true
+		# The minimum y-value at which the starting point of the fortress (the keep) can spawn.
+		# Default: 62
+		#
+		"Minimum Starting Height" = 62
+		# The maximum y-value at which the starting point of the fortress (the keep) can spawn.
+		# Default: 82
+		#
+		"Maximum Starting Height" = 82
+

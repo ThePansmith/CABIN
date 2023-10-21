@@ -1,0 +1,20 @@
+
+["YUNG's Better Ocean Monuments"]
+
+	###########################################################################################################
+	## General settings.
+	###########################################################################################################
+	["YUNG's Better Ocean Monuments".General]
+		# The minimum y-value at which the ocean monument can spawn.
+		# Default: 11
+		#
+		"Min Start Y" = 11
+		# The maximum y-value at which the ocean monument can spawn.
+		# Default: 21
+		#
+		"Max Start Y" = 21
+		# Whether or not vanilla ocean monuments should be disabled.
+		# Default: true
+		#
+		"Disable Vanilla Ocean Monuments" = true
+

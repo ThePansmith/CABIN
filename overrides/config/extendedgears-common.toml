@@ -1,0 +1,5 @@
+#.
+#Disable the Extended Cogwheels datafixer. Only do this if you are certain that no pre 0.2.1 cogwheels are left in the world as they will be destroyed
+#[@cui:RequiresReload:both]
+disableDatafixer = false
+

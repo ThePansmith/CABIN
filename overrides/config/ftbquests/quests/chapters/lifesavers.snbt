@@ -1,0 +1,1022 @@
+{
+	id: "0D0BC5B3F6623669"
+	group: "331B6409EF6A7840"
+	order_index: 8
+	filename: "lifesavers"
+	title: " Lifesavers"
+	icon: "minecraft:totem_of_undying"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Hooked"
+			icon: {
+				id: "grapplemod:grapplinghook"
+				Count: 1b
+				tag: {
+					Damage: 0
+					custom: {
+						doublehook: 0b
+						motor: 0b
+						phaserope: 0b
+						attract: 0b
+						rocket: 0b
+						hookgravity: 1.0d
+						repelforce: 1.0d
+						attractradius: 3.0d
+						pullbackwards: 1b
+						smartmotor: 0b
+						detachonkeyrelease: 0b
+						angle: 20.0d
+						crc32: 2252267022L
+						rocket_vertical_angle: 0.0d
+						rocket_force: 1.0d
+						rocket_refuel_ratio: 15.0d
+						motorwhencrouching: 0b
+						motorwhennotcrouching: 1b
+						motordampener: 0b
+						rocket_active_time: 0.5d
+						throwspeed: 2.0d
+						motoracceleration: 0.2d
+						enderstaff: 0b
+						oneropepull: 0b
+						sneakingverticalthrowangle: 0.0d
+						smartdoublemotor: 1b
+						repel: 0b
+						sneakingangle: 10.0d
+						motormaxspeed: 4.0d
+						playermovementmult: 1.0d
+						reelin: 1b
+						sticky: 0b
+						verticalthrowangle: 0.0d
+						maxlen: 30.0d
+					}
+				}
+			}
+			x: -2.0d
+			y: 1.0d
+			description: [
+				"These grappling hooks are a fun way of getting around in the earlygame, and can even save your life while caving."
+				""
+				"If hooked onto another mob, it will launch them in the opposite direction with the same speed as the hook, try flinging a mob into lava with it!"
+			]
+			id: "2A2FA80784667833"
+			tasks: [{
+				id: "66503A543285BEFD"
+				type: "item"
+				title: "Any Grappling Hook"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "grapplemod:grapplinghook"
+								Count: 1b
+								tag: {
+									Damage: 0
+									custom: {
+										doublehook: 0b
+										motor: 0b
+										phaserope: 0b
+										attract: 0b
+										rocket: 0b
+										hookgravity: 1.0d
+										repelforce: 1.0d
+										attractradius: 3.0d
+										pullbackwards: 1b
+										smartmotor: 0b
+										detachonkeyrelease: 0b
+										angle: 20.0d
+										crc32: 2252267022L
+										rocket_vertical_angle: 0.0d
+										rocket_force: 1.0d
+										rocket_refuel_ratio: 15.0d
+										motorwhencrouching: 0b
+										motorwhennotcrouching: 1b
+										motordampener: 0b
+										rocket_active_time: 0.5d
+										throwspeed: 2.0d
+										motoracceleration: 0.2d
+										enderstaff: 0b
+										oneropepull: 0b
+										sneakingverticalthrowangle: 0.0d
+										smartdoublemotor: 1b
+										repel: 0b
+										sneakingangle: 10.0d
+										motormaxspeed: 4.0d
+										playermovementmult: 1.0d
+										reelin: 1b
+										sticky: 0b
+										verticalthrowangle: 0.0d
+										maxlen: 30.0d
+									}
+								}
+							}
+							{
+								id: "grapplemod:grapplinghook"
+								Count: 1b
+								tag: {
+									Damage: 0
+									custom: {
+										motor: 1b
+										throwspeed: 3.5d
+										maxlen: 60
+										playermovementmult: 2
+									}
+								}
+							}
+							{
+								id: "grapplemod:grapplinghook"
+								Count: 1b
+								tag: {
+									Damage: 0
+									custom: {
+										throwspeed: 3.5d
+										maxlen: 60
+										enderstaff: 1b
+									}
+								}
+							}
+							{
+								id: "grapplemod:grapplinghook"
+								Count: 1b
+								tag: {
+									Damage: 0
+									custom: {
+										motor: 1b
+										smartmotor: 1b
+										throwspeed: 3.5d
+										maxlen: 60
+										playermovementmult: 2
+									}
+								}
+							}
+							{
+								id: "grapplemod:grapplinghook"
+								Count: 1b
+								tag: {
+									Damage: 0
+									custom: {
+										doublehook: 1b
+										motor: 1b
+										motorwhencrouching: 1b
+										throwspeed: 20
+										hookgravity: 50
+										sneakingverticalthrowangle: 25
+										smartdoublemotor: 1b
+										sneakingangle: 0
+										motormaxspeed: 10
+										playermovementmult: 2
+										sticky: 1b
+										verticalthrowangle: 30
+										reelin: 0b
+										angle: 25
+										maxlen: 60
+									}
+								}
+							}
+						]
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "68C7B1D32527DD1A"
+					type: "item"
+					item: "minecraft:glow_berries"
+					count: 5
+				}
+				{
+					id: "0AB5655AF01B4199"
+					type: "item"
+					item: "grapplemod:baseupgradeitem"
+				}
+			]
+		}
+		{
+			title: "Control Centre"
+			icon: "projectred_illumination:red_inverted_fixture_light"
+			x: -4.0d
+			y: 1.0d
+			description: [
+				"With new circuitry and wiring capability, you can make your factory a little smarter. Also those lamps you can make are really pretty."
+				""
+				"For an actual piece of advice: it is pretty simple to set up a little circuit at a few points in your factory, which detect when an item has not been produced in a while. You can use redstone links to redirect those signals to a central control room, giving you an overview of which sections require maintenance."
+				""
+				"The circuit on site is basically a tug of war between a slow timer and a content observer detecting the items. The Counter available from circuit stonecutting works perfectly for this."
+			]
+			id: "1127129CBA2B5E6F"
+			tasks: [
+				{
+					id: "19CF5DA7A8547E17"
+					type: "item"
+					item: "projectred_core:platformed_plate"
+					consume_items: false
+				}
+				{
+					id: "457F0290A225EEA9"
+					type: "item"
+					item: "projectred_transmission:red_alloy_wire"
+					consume_items: false
+				}
+				{
+					id: "17B93B8634BC1C2D"
+					type: "item"
+					title: "Any Illumar Dust"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "projectred_core:illumars"
+						}
+					}
+					consume_items: false
+				}
+			]
+			rewards: [{
+				id: "66E867F9537437F1"
+				type: "item"
+				item: "projectred_core:red_ingot"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "Engineer's Companion"
+			x: -5.0d
+			y: -1.0d
+			description: ["Especially while building new Contraptions, this gadget is incredibly handy. Instead of filling up your pockets with components, simply pick up the toolbox from the workshop and bring it with you."]
+			id: "26C39961F2E2ABF2"
+			tasks: [{
+				id: "5E687A6CBD96D0EF"
+				type: "item"
+				title: "Any Toolbox"
+				icon: "create:blue_toolbox"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "create:toolboxes"
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "2AC846CB2DF485C8"
+				type: "item"
+				item: "create:golden_sheet"
+			}]
+		}
+		{
+			title: "Bubble Blocks"
+			icon: "supplementaries:bubble_block"
+			x: 1.0d
+			y: -1.0d
+			description: [
+				"Enchanting a bubbleblower with stasis allows it to be able to blow bubble blocks, which you can replace with other blocks, and walk on. (Crouch to extend duration)"
+				""
+				"Bubbleblowers require soap to work, but will never lose durability themselves."
+				""
+				"Stasis books can be found simifrequently in dungeon chests."
+			]
+			id: "0B8816319F81C12A"
+			tasks: [{
+				id: "180D1CB1BB7EB0AA"
+				type: "item"
+				item: {
+					id: "supplementaries:bubble_blower"
+					Count: 1b
+					tag: {
+						Damage: 250
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "2F5DF773BBBA2725"
+				type: "item"
+				icon: "supplementaries:soap"
+				item: "supplementaries:soap"
+			}]
+		}
+		{
+			title: "Big Barrels II"
+			x: 1.0d
+			y: 3.0d
+			description: ["If you are looking for extra large but specialised storage space in a block, check out Storage Drawers."]
+			id: "382EBC32AC27C839"
+			tasks: [{
+				id: "4BE344E1F204A43D"
+				type: "item"
+				title: "Any Storage Drawer"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "storagedrawers:drawers"
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "2285D6CE87319B4A"
+				type: "item"
+				item: "storagedrawers:upgrade_template"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "The Joy of Cooking"
+			x: 0.0d
+			y: -3.0d
+			description: ["Stoves are a good-looking and very useful campfire alternative. Together with a Cooking Pot, it can help you prepare the most delicious meals in the game."]
+			id: "0E4476BA80B316F6"
+			tasks: [{
+				id: "72F2D3B586A81A2B"
+				type: "item"
+				item: "farmersdelight:stove"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "02BA7C4E293DD955"
+				type: "item"
+				item: "minecraft:salmon"
+			}]
+		}
+		{
+			title: "Hotswap replace"
+			x: -3.0d
+			y: -1.0d
+			description: ["Exchangers make for a nice tool to replace blocks with others. Saves you a lot of digging."]
+			id: "6D7D504E9DC22590"
+			tasks: [{
+				id: "4BE0CCD6F383D961"
+				type: "item"
+				title: "Any Exchanger"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "exchangers:end_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:leadstone_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:hardened_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:reinforced_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:signalum_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:resonant_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:tuberous_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:creative_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:wooden_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:stone_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:golden_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:iron_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:diamond_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+							{
+								id: "exchangers:emerald_exchanger"
+								Count: 1b
+								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									fuzzyPlacement: 0b
+									voidItems: 0b
+									range: 0
+									Damage: 0
+									blockstate: {
+										Name: "minecraft:air"
+									}
+								}
+							}
+						]
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "12B2F2F9A6A257FE"
+				type: "item"
+				item: "forbidden_arcanus:ender_pearl_fragment"
+			}]
+		}
+		{
+			title: "Blockstacker"
+			x: -1.0d
+			y: -1.0d
+			description: ["Construction wands can extend complete walls or surfaces of blocks by the click of a button."]
+			id: "2F469F6F1511D9C4"
+			tasks: [{
+				id: "039DD9EBD46B2C23"
+				type: "item"
+				title: "Any Construction Wand"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "constructionwand:stone_wand"
+								Count: 1b
+								tag: {
+									wand_options: { }
+									Damage: 0
+								}
+							}
+							{
+								id: "constructionwand:infinity_wand"
+								Count: 1b
+								tag: {
+									wand_options: { }
+								}
+							}
+							{
+								id: "constructionwand:diamond_wand"
+								Count: 1b
+								tag: {
+									wand_options: { }
+									Damage: 0
+								}
+							}
+							{
+								id: "constructionwand:iron_wand"
+								Count: 1b
+								tag: {
+									wand_options: { }
+									Damage: 0
+								}
+							}
+						]
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "5B7C253D05152423"
+				type: "item"
+				item: "minecraft:scaffolding"
+				count: 16
+			}]
+		}
+		{
+			title: "Pass me the butter"
+			x: 3.0d
+			y: -1.0d
+			description: ["Human Arms just aren't evolved to build machines efficiently, yet. Thankfully this gadget can make up for it by increasing your reach distance significantly."]
+			id: "7061F42CF050ADCA"
+			tasks: [{
+				id: "0710C744349D2090"
+				type: "item"
+				item: {
+					id: "create:extendo_grip"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "40E5D8DBF58086BB"
+				type: "item"
+				item: "create:cogwheel"
+				count: 8
+			}]
+		}
+		{
+			x: -4.0d
+			y: -3.0d
+			description: ["Sometimes it is desirable to travel to a specific Biome. The Nature's Compass can at least point you in the right direction."]
+			id: "45E7810E21F6F9AE"
+			tasks: [{
+				id: "7AD38BD1318A493B"
+				type: "item"
+				item: {
+					id: "naturescompass:naturescompass"
+					Count: 1b
+					tag: { }
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "482338485BF4B3B0"
+				type: "item"
+				item: "biomesoplenty:spanish_moss"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "Big Barrels"
+			x: -1.0d
+			y: 3.0d
+			description: ["In case you need large universal storage space in a block, check out the upgrade options for wooden barrels."]
+			id: "50E2D6459F3D68C0"
+			tasks: [{
+				id: "6D6CDA4DEFD5795F"
+				type: "item"
+				title: "Any Upgraded Barrel"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "metalbarrels:gold_barrel"
+								Count: 1b
+							}
+							{
+								id: "metalbarrels:iron_barrel"
+								Count: 1b
+							}
+							{
+								id: "metalbarrels:silver_barrel"
+								Count: 1b
+							}
+							{
+								id: "metalbarrels:copper_barrel"
+								Count: 1b
+							}
+						]
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "390AF1049C411219"
+				type: "item"
+				item: "minecraft:barrel"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "House Building Cannon"
+			x: -7.0d
+			y: -1.0d
+			description: ["With the help of Schematicannons, any .nbt Schematic can be built into your world. Use it to replicate parts of your Building, or even to prepare it in a completely different World ahead of time."]
+			id: "09EB29F838620371"
+			tasks: [{
+				id: "103E6982FCFE8B6C"
+				type: "item"
+				item: "create:schematicannon"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "7AF62EF3656DD4E3"
+				type: "item"
+				item: "create:empty_schematic"
+			}]
+		}
+		{
+			title: "Big Plans"
+			x: 2.0d
+			y: -3.0d
+			description: [
+				"These Blueprints can be given one or more crafting recipes, which they then apply to your held items whenever you right-click them."
+				""
+				"The quickest and most effective way to assign recipes is to locate the recipe in JEI while the blueprint UI is open. Clicking the '+' in the JEI recipe view will transfer the recipe ingredients to the blueprint for you."
+			]
+			id: "6D900619B1967D72"
+			tasks: [{
+				id: "006D992D77A782EF"
+				type: "item"
+				item: "create:crafting_blueprint"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "47ADAFAB537F63CE"
+				type: "item"
+				item: "minecraft:painting"
+			}]
+		}
+		{
+			title: "Pressure Tube"
+			x: -7.0d
+			y: 3.0d
+			description: [
+				"Belts and Arms are great, but sometimes we will still give in to the guilty pleasure of using item pipes."
+				""
+				"These tubes however can even serve as a pretty sophisticated logistical infrastructure. Blocks like the Item- or Crafting Terminal will be able to request items from any chests connected to them."
+			]
+			id: "334146C815B304DB"
+			tasks: [{
+				id: "461F9FF1732B308F"
+				type: "item"
+				item: "prettypipes:pipe"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "35445550FFC9B565"
+				type: "item"
+				item: "kubejs:pipe_module_tier_1"
+			}]
+		}
+		{
+			title: "Induction Conduits"
+			x: -3.0d
+			y: 3.0d
+			description: [
+				"With the rise of Inductive Machinery, you'll want to have the option to connect dynamos and machines together in an energy grid."
+				""
+				"You can use a Cresent Hammer to rightclick the pipe connection attached to the block in order to enable/disable the connection, and flux limiters can be used to edit the RF/t that can be exported out of a given connection."
+			]
+			id: "6BC864CC7CB2C316"
+			tasks: [{
+				id: "4912723B6A264380"
+				type: "item"
+				item: "thermal:energy_duct"
+				consume_items: false
+			}]
+			rewards: [{
+				id: "5EA5B33DA2E47592"
+				type: "item"
+				item: "thermal:signalum_ingot"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "Friend?"
+			x: -2.0d
+			y: -3.0d
+			description: ["Placing a Carved Pumpkin on a Hay Bale creates a Straw Golem, who can take care of your crops."]
+			id: "1DBFD0B34659A8F9"
+			tasks: [
+				{
+					id: "7596BE1437EA002D"
+					type: "item"
+					item: "minecraft:hay_block"
+					consume_items: false
+				}
+				{
+					id: "7986E1E6575F2C25"
+					type: "item"
+					item: "minecraft:carved_pumpkin"
+					consume_items: false
+				}
+			]
+			rewards: [{
+				id: "7BD14F5479FAB194"
+				type: "item"
+				item: "minecraft:sweet_berries"
+				random_bonus: 4
+			}]
+		}
+		{
+			title: "Roll for Intelligence"
+			x: 2.0d
+			y: 1.0d
+			description: ["Sometimes it is hard to make up ones' mind. Thankfully, we have technology to help us make our decision."]
+			id: "087659F192F41C6E"
+			tasks: [{
+				id: "0F82D1FCCA10EFBC"
+				type: "item"
+				title: "Any Dice"
+				icon: "dice:white_d6"
+				item: {
+					id: "itemfilters:mod"
+					Count: 1b
+					tag: {
+						value: "dice"
+					}
+				}
+				consume_items: false
+			}]
+			rewards: [{
+				id: "3D69B03DFCB41179"
+				type: "item"
+				item: "randomium:randomium_ore"
+			}]
+		}
+		{
+			title: "The other Gamemode"
+			icon: "magicfeather:magicfeather"
+			x: 3.0d
+			y: 3.0d
+			description: ["Magic Feathers grant flight to the weilder, albeit only within the range of a Beacon Beam. Still, this should be of great help in setting up big factories!"]
+			id: "0F4B0608CBF966E6"
+			tasks: [
+				{
+					id: "18A86C2CE288A35A"
+					type: "item"
+					item: "magicfeather:magicfeather"
+					consume_items: false
+				}
+				{
+					id: "6D2E7DBD75292896"
+					type: "item"
+					item: "minecraft:beacon"
+					consume_items: false
+				}
+			]
+			rewards: [{
+				id: "3E31A943AAC038E9"
+				type: "item"
+				item: "minecraft:iron_block"
+				count: 9
+			}]
+		}
+		{
+			x: -6.0d
+			y: 1.0d
+			description: [
+				"These nice backpacks can be upgraded to increase storage space, as well as augmented to change how they act, such as a autosmelter, or increasing the stacksize of items stored within."
+				""
+				"You can even get one of these in the store, so it may be worth spending your early coins on to make the earlygame mining trip go by much quicker."
+			]
+			id: "661807F8ED723EEB"
+			tasks: [{
+				id: "65A12D108D1E18AA"
+				type: "item"
+				item: "sophisticatedbackpacks:backpack"
+			}]
+			rewards: [{
+				id: "1186F7D43411D62D"
+				type: "item"
+				item: "sophisticatedbackpacks:jukebox_upgrade"
+			}]
+		}
+		{
+			title: "Easier Fluid Movement"
+			x: -5.0d
+			y: 3.0d
+			description: [
+				"Thermal's fluidducts move fluids without requiring SU to do so. Servos, placed on connections, are used to import fluids into the pipes, and filters are used to control what can be exported from a given pipe."
+				""
+				"You can use a Cresent Hammer to rightclick the pipe connection attached to the blcok in order to enable/disable the connection."
+			]
+			id: "1DD2802F5611D419"
+			tasks: [{
+				id: "09FD6301B7CF206E"
+				type: "item"
+				item: "thermal:fluid_duct"
+			}]
+			rewards: [{
+				id: "3A35387B6A431842"
+				type: "item"
+				item: "kubejs:attachment_base"
+			}]
+		}
+		{
+			x: -6.0d
+			y: -3.0d
+			description: ["Exactly what the name implies, its a stonecutter that you can use on the go. It also has an internal inventory and can lock recipes as well."]
+			id: "4B1017D1C176412F"
+			tasks: [{
+				id: "0FC4AFC9209B61A3"
+				type: "item"
+				item: "portable_stonecutter:portable_stonecutter"
+			}]
+			rewards: [{
+				id: "07C632B31F279953"
+				type: "item"
+				item: "minecraft:stone"
+			}]
+		}
+		{
+			title: "Programming the future"
+			icon: "computercraft:computer_normal"
+			x: 0.0d
+			y: 1.0d
+			description: [
+				"If you know LUA (or are willing to learn), computercraft is can be a very strong tool in your factory, as computercraft can read information from create blocks."
+				""
+				"CC:C Bridge extends this a bit futher, with the Target and Source blocks able to read and write to create display targets perspectively."
+			]
+			id: "374933A06E016CE9"
+			tasks: [{
+				id: "42002EEA26A72016"
+				type: "item"
+				title: "Any Computer"
+				item: {
+					id: "itemfilters:or"
+					Count: 1b
+					tag: {
+						items: [
+							{
+								id: "computercraft:computer_normal"
+								Count: 1b
+							}
+							{
+								id: "computercraft:computer_advanced"
+								Count: 1b
+							}
+						]
+					}
+				}
+			}]
+			rewards: [{
+				id: "071BEECB37AFECB4"
+				type: "item"
+				item: "cccbridge:target_block"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

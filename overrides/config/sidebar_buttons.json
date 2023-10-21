@@ -1,0 +1,20 @@
+{
+	"ftbteams": {
+		"my_team": true
+	},
+	"ftbquests": {
+		"quests": true
+	},
+	"ftblibrary": {
+		"toggle.gamemode": true,
+		"toggle.rain": true,
+		"toggle.day": true,
+		"toggle.night": true
+	},
+	"ftbessentials": {
+		"trash_can": true
+	},
+	"ftbchunks": {
+		"chunks": true
+	}
+}

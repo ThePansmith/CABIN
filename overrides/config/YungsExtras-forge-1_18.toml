@@ -1,0 +1,140 @@
+
+["YUNG's Extras"]
+
+	###########################################################################################################
+	## Desert Decorations
+	###########################################################################################################
+	["YUNG's Extras"."Desert Decorations"]
+		# List of additional biomes that will have Desert Decorations.
+		# By default, all biomes (including modded biomes) with the Desert category are automatically included, 
+		# and do not need to be added here.
+		# List must be comma-separated values enclosed in square brackets. 
+		# Entries must have the mod namespace included.
+		# For example: "[minecraft:plains, byg:alps]"
+		# Default: "[]"
+		"Additional Whitelisted Biomes (Desert)" = "[]"
+		# List of biomes that will NOT have Desert Decorations.
+		# By default, all Desert biomes will automatically have Desert Decorations, 
+		# so you only need to blacklist biomes with the Desert category that you don't want to spawn 
+		# Desert Decorations in.
+		# List must be comma-separated values enclosed in square brackets.
+		# Entries must have the mod namespace included.
+		# For example: "[minecraft:desert, byg:dunes]"
+		# Default: "[]"
+		"Blacklisted Biomes (Desert)" = "[]"
+
+		###########################################################################################################
+		## Settings for the different Desert Well variations.
+		## 
+		## The chance of each type of well spawning in a given chunk is 1 / N, where N is the config value set below for that well.
+		## For example, if the value is 1000 then there is a 1 in 1000 chance of spawning, per chunk.
+		###########################################################################################################
+		["YUNG's Extras"."Desert Decorations"."Desert Wells"]
+			# Determines the spawn rate of small normal wells.
+			# Default: 1200
+			"Normal Well Spawn Rate (Small)" = 1200
+			# Determines the spawn rate of medium-sized normal wells.
+			# Default: 1200
+			"Normal Well Spawn Rate (Medium)" = 1200
+			# Determines the spawn rate of large normal wells.
+			# Default: 1200
+			"Normal Well Spawn Rate (Large)" = 1200
+			# Determines the spawn rate of small Wishing Wells.
+			# Default: 1200
+			"Wishing Well Spawn Rate (Small)" = 1200
+			# Determines the spawn rate of medium-sized Wishing Wells.
+			# Default: 1200
+			"Wishing Well Spawn Rate (Medium)" = 1200
+			# Determines the spawn rate of large Wishing Wells.
+			# Default: 1200
+			"Wishing Well Spawn Rate (Large)" = 1200
+			# Determines the spawn rate of small dry wells.
+			# Default: 1200
+			"Dry Well Spawn Rate (Small)" = 1200
+			# Determines the spawn rate of medium-sized dry wells.
+			# Default: 1200
+			"Dry Well Spawn Rate (Medium)" = 1200
+			# Determines the spawn rate of large dry wells.
+			# Default: 1200
+			"Dry Well Spawn Rate (Large)" = 1200
+
+		###########################################################################################################
+		## Settings for the different Desert Obelisk variations.
+		## 
+		## The chance of each type of obelisk spawning in a given chunk is 1 / N, where N is the config value set below for that obelisk.
+		## For example, if the value is 1000 then there is a 1 in 1000 chance of spawning, per chunk.
+		###########################################################################################################
+		["YUNG's Extras"."Desert Decorations"."Desert Obelisks"]
+			# Determines the spawn rate of normal obelisks.
+			# Default: 700
+			"Normal Obelisk Spawn Rate" = 700
+			# Determines the spawn rate of chiseled obelisks.
+			# Default: 700
+			"Chiseled Obelisk Spawn Rate" = 700
+			# Determines the spawn rate of ruined obelisks.
+			# Default: 700
+			"Ruined Obelisk Spawn Rate" = 700
+			# Determines the spawn rate of blackstone obelisks.
+			# Default: 3000
+			"Blackstone Obelisk Spawn Rate" = 3000
+
+		###########################################################################################################
+		## Settings for miscellaneous desert structures.
+		## 
+		## The chance of each structure spawning in a given chunk is 1 / N, where N is the config value set below for that structure.
+		## For example, if the value is 1000 then there is a 1 in 1000 chance of spawning, per chunk.
+		###########################################################################################################
+		["YUNG's Extras"."Desert Decorations"."Desert Miscellaneous"]
+			# Determines the spawn rate of small ruins.
+			# Default: 1000
+			"Ruins Spawn Rate (Small)" = 1000
+			# Determines the spawn rate of flame outposts.
+			# Default: 700
+			"Flame Outpost Spawn Rate" = 700
+			# Determines the spawn rate of abandoned vacation spots.
+			# Default: 1000
+			"Abandoned Vacation Spot Spawn Rate" = 1000
+
+	###########################################################################################################
+	## Settings for swamp structures.
+	## 
+	## The chance of each structure spawning in a given chunk is 1 / N, where N is the config value set below for that structure.
+	## For example, if the value is 1000 then there is a 1 in 1000 chance of spawning, per chunk.
+	###########################################################################################################
+	["YUNG's Extras"."Swamp Structures"]
+		# List of additional biomes that will have Swamp Structures.
+		# By default, all biomes (including modded biomes) with the Swamp category are automatically included, 
+		# and do not need to be added here.
+		# List must be comma-separated values enclosed in square brackets. 
+		# Entries must have the mod namespace included.
+		# For example: "[minecraft:plains, byg:alps]"
+		# Default: "[]"
+		"Additional Whitelisted Biomes (Swamp)" = "[]"
+		# List of biomes that will NOT have Swamp Structures.
+		# By default, all Swamp biomes will automatically have Swamp Structures, 
+		# so you only need to blacklist biomes with the Swamp category that you don't want to spawn 
+		# Swamp Structures in.
+		# List must be comma-separated values enclosed in square brackets.
+		# Entries must have the mod namespace included.
+		# For example: "[minecraft:desert, byg:dunes]"
+		# Default: "[]"
+		"Blacklisted Biomes (Swamp)" = "[]"
+		# Determines the spawn rate of swamp pillars.
+		# Default: 900
+		"Swamp Pillar Spawn Rate" = 900
+		# Determines the spawn rate of outhouses.
+		# Default: 3000
+		"Outhouse Spawn Rate" = 3000
+		# Determines the spawn rate of swamp cubbies.
+		# Default: 1000
+		"Swamp Cubby Spawn Rate" = 1000
+		# Determines the spawn rate of ruined arches.
+		# Default: 1200
+		"Ruined Arch Spawn Rate" = 1200
+		# Determines the spawn rate of ruined double arches.
+		# Default: 1500
+		"Ruined Double Arch Spawn Rate" = 1500
+		# Determines the spawn rate of ruined gateways.
+		# Default: 2000
+		"Ruined Gateway Spawn Rate" = 2000
+

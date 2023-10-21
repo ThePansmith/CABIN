@@ -1,0 +1,583 @@
+To refresh this file, delete it and run /reload command again! Last updated: Oct 9, 2023, 1:08:25 PM
+
+#tconstruct:molten_manyullyn
+- tconstruct:molten_manyullyn
+- tconstruct:flowing_molten_manyullyn
+
+#tconstruct:molten_invar
+- tconstruct:molten_invar
+- tconstruct:flowing_molten_invar
+
+#tconstruct:sky_slime
+- tconstruct:sky_slime
+- tconstruct:flowing_sky_slime
+
+#minecraft:water
+- minecraft:water
+- minecraft:flowing_water
+- beyond_earth:fuel
+- beyond_earth:flowing_fuel
+- beyond_earth:oil
+- beyond_earth:flowing_oil
+- create:flowing_honey
+- create:honey
+- create:flowing_chocolate
+- create:chocolate
+
+#tconstruct:molten_porcelain
+- tconstruct:molten_porcelain
+- tconstruct:flowing_molten_porcelain
+
+#tconstruct:scorched_stone
+- tconstruct:scorched_stone
+- tconstruct:flowing_scorched_stone
+
+#forge:milk
+- minecraft:milk?
+- minecraft:flowing_milk?
+
+#tconstruct:molten_rose_gold
+- tconstruct:molten_rose_gold
+- tconstruct:flowing_molten_rose_gold
+
+#tconstruct:blazing_blood
+- tconstruct:blazing_blood
+- tconstruct:flowing_blazing_blood
+
+#create:fan_processing_catalysts/smoking
+
+#tconstruct:tooltips/gem_small
+- #tconstruct:molten_quartz
+- #tconstruct:molten_amethyst
+
+#tconstruct:molten_platinum
+- tconstruct:molten_platinum
+- tconstruct:flowing_molten_platinum
+
+#tconstruct:molten_obsidian
+- tconstruct:molten_obsidian
+- tconstruct:flowing_molten_obsidian
+
+#forge:rabbit_stew
+- #tconstruct:rabbit_stew
+
+#tconstruct:molten_refined_obsidian
+- tconstruct:molten_refined_obsidian
+- tconstruct:flowing_molten_refined_obsidian
+
+#beyond_earth:molten_ostrum
+- beyond_earth:molten_ostrum?
+- beyond_earth:flowing_molten_ostrum?
+
+#forge:molten_copper
+- #tconstruct:molten_copper
+
+#beyond_earth:oil
+- beyond_earth:oil
+- beyond_earth:flowing_oil
+
+#tconstruct:earth_slime
+- tconstruct:earth_slime
+- tconstruct:flowing_earth_slime
+
+#tconstruct:liquid_soul
+- tconstruct:liquid_soul
+- tconstruct:flowing_liquid_soul
+
+#tconstruct:spilling/metal/expensive
+- #tconstruct:molten_diamond
+- #tconstruct:molten_debris
+- #forge:molten_enderium
+- #forge:molten_lumium
+- #forge:molten_signalum
+- #forge:molten_refined_obsidian
+
+#tconstruct:spilling/metal/average
+- #tconstruct:molten_quartz
+- #tconstruct:molten_emerald
+- #forge:molten_refined_glowstone
+
+#forge:molten_bronze
+- #tconstruct:molten_bronze
+
+#forge:glowstone
+- thermal:glowstone
+
+#forge:molten_silver
+- #tconstruct:molten_silver
+
+#forge:oil
+- beyond_earth:oil
+- beyond_earth:flowing_oil
+
+#forge:molten_rose_gold
+- #tconstruct:molten_rose_gold
+
+#create:fan_processing_catalysts/splashing
+- minecraft:water
+- minecraft:flowing_water
+
+#forge:molten_pewter
+- #tconstruct:molten_pewter
+
+#forge:magma
+- #tconstruct:magma
+
+#forge:molten_manyullyn
+- #tconstruct:molten_manyullyn
+
+#tconstruct:spilling/metal/cheap
+- #forge:molten_platinum
+- #forge:molten_tungsten
+- #forge:molten_osmium
+- #tconstruct:molten_amethyst
+
+#forge:molten_platinum
+- #tconstruct:molten_platinum
+
+#tconstruct:molten_silver
+- tconstruct:molten_silver
+- tconstruct:flowing_molten_silver
+
+#tconstruct:molten_soulsteel
+- tconstruct:molten_soulsteel
+- tconstruct:flowing_molten_soulsteel
+
+#forge:crude_oil
+- thermal:crude_oil
+
+#forge:molten_enderium
+- #tconstruct:molten_enderium
+
+#forge:redstone
+- thermal:redstone
+
+#tconstruct:tooltips/clay
+- #tconstruct:molten_clay
+- #tconstruct:molten_porcelain
+- #tconstruct:seared_stone
+- #tconstruct:scorched_stone
+
+#tconstruct:spilling/clay
+- #tconstruct:molten_clay
+- #tconstruct:molten_porcelain
+- #tconstruct:seared_stone
+- #tconstruct:scorched_stone
+
+#tconstruct:tooltips/metal
+- #forge:molten_desh
+- #forge:molten_ostrum
+- #forge:molten_calorite
+- #forge:molten_iron
+- #forge:molten_gold
+- #forge:molten_copper
+- #forge:molten_cobalt
+- #tconstruct:molten_debris
+- #tconstruct:molten_slimesteel
+- #tconstruct:molten_amethyst_bronze
+- #forge:molten_rose_gold
+- #tconstruct:molten_pig_iron
+- #forge:molten_manyullyn
+- #forge:molten_hepatizon
+- #tconstruct:molten_queens_slime
+- #forge:molten_netherite
+- #tconstruct:molten_soulsteel
+- #tconstruct:molten_knightslime
+- #forge:molten_tin
+- #forge:molten_aluminum
+- #forge:molten_lead
+- #forge:molten_silver
+- #forge:molten_nickel
+- #forge:molten_zinc
+- #forge:molten_platinum
+- #forge:molten_tungsten
+- #forge:molten_osmium
+- #forge:molten_uranium
+- #forge:molten_bronze
+- #forge:molten_brass
+- #forge:molten_electrum
+- #forge:molten_invar
+- #forge:molten_constantan
+- #forge:molten_pewter
+- #forge:molten_steel
+- #forge:molten_enderium
+- #forge:molten_lumium
+- #forge:molten_signalum
+- #forge:molten_refined_glowstone
+- #forge:molten_refined_obsidian
+
+#forge:molten_steel
+- #tconstruct:molten_steel
+
+#tconstruct:molten_aluminum
+- tconstruct:molten_aluminum
+- tconstruct:flowing_molten_aluminum
+
+#forge:molten_aluminum
+- #tconstruct:molten_aluminum
+
+#minecraft:lava
+- minecraft:lava
+- minecraft:flowing_lava
+
+#tconstruct:seared_stone
+- tconstruct:seared_stone
+- tconstruct:flowing_seared_stone
+
+#tconstruct:molten_iron
+- tconstruct:molten_iron
+- tconstruct:flowing_molten_iron
+
+#tconstruct:molten_uranium
+- tconstruct:molten_uranium
+- tconstruct:flowing_molten_uranium
+
+#tconstruct:molten_glass
+- tconstruct:molten_glass
+- tconstruct:flowing_molten_glass
+
+#forge:molten_iron
+- #tconstruct:molten_iron
+
+#tconstruct:molten_steel
+- tconstruct:molten_steel
+- tconstruct:flowing_molten_steel
+
+#beyond_earth:molten_desh
+- beyond_earth:molten_desh?
+- beyond_earth:flowing_molten_desh?
+
+#tconstruct:tooltips/slime
+- #forge:magma
+- #tconstruct:blood
+- #forge:ender
+- #tconstruct:slime
+
+#forge:molten_nickel
+- #tconstruct:molten_nickel
+
+#forge:ender
+- thermal:ender
+- #tconstruct:molten_ender
+
+#tconstruct:rabbit_stew
+- tconstruct:rabbit_stew
+- tconstruct:flowing_rabbit_stew
+
+#tconstruct:molten_ender
+- tconstruct:molten_ender
+- tconstruct:flowing_molten_ender
+
+#forge:molten_osmium
+- #tconstruct:molten_osmium
+
+#forge:molten_uranium
+- #tconstruct:molten_uranium
+
+#tconstruct:molten_enderium
+- tconstruct:molten_enderium
+- tconstruct:flowing_molten_enderium
+
+#create:fan_processing_catalysts/haunting
+
+#tconstruct:molten_nickel
+- tconstruct:molten_nickel
+- tconstruct:flowing_molten_nickel
+
+#forge:latex
+- thermal:latex
+
+#beyond_earth:molten_calorite
+- beyond_earth:molten_calorite?
+- beyond_earth:flowing_molten_calorite?
+
+#tconstruct:molten_tin
+- tconstruct:molten_tin
+- tconstruct:flowing_molten_tin
+
+#tconstruct:molten_quartz
+- tconstruct:molten_quartz
+- tconstruct:flowing_molten_quartz
+
+#forge:molten_cobalt
+- #tconstruct:molten_cobalt
+
+#tconstruct:honey
+- tconstruct:honey
+- tconstruct:flowing_honey
+
+#tconstruct:tooltips/glass
+- #tconstruct:molten_glass
+- #tconstruct:liquid_soul
+- #tconstruct:molten_obsidian
+
+#tconstruct:molten_osmium
+- tconstruct:molten_osmium
+- tconstruct:flowing_molten_osmium
+
+#forge:molten_desh
+- #beyond_earth:molten_desh
+
+#tconstruct:molten_refined_glowstone
+- tconstruct:molten_refined_glowstone
+- tconstruct:flowing_molten_refined_glowstone
+
+#forge:molten_amethyst_bronze
+- #tconstruct:molten_amethyst_bronze
+
+#tconstruct:molten_slimesteel
+- tconstruct:molten_slimesteel
+- tconstruct:flowing_molten_slimesteel
+
+#forge:molten_tin
+- #tconstruct:molten_tin
+
+#tconstruct:molten_debris
+- tconstruct:molten_debris
+- tconstruct:flowing_molten_debris
+
+#forge:molten_constantan
+- #tconstruct:molten_constantan
+
+#tconstruct:molten_cobalt
+- tconstruct:molten_cobalt
+- tconstruct:flowing_molten_cobalt
+
+#create:bottomless/deny
+
+#tconstruct:molten_amethyst_bronze
+- tconstruct:molten_amethyst_bronze
+- tconstruct:flowing_molten_amethyst_bronze
+
+#tconstruct:molten_emerald
+- tconstruct:molten_emerald
+- tconstruct:flowing_molten_emerald
+
+#create:bottomless/allow
+- minecraft:water
+- minecraft:lava
+
+#forge:molten_brass
+- #tconstruct:molten_brass
+
+#tconstruct:slime
+- #forge:slime
+- #tconstruct:sky_slime
+- #tconstruct:ender_slime
+
+#forge:mushroom_stew
+- #tconstruct:mushroom_stew
+
+#tconstruct:molten_tungsten
+- tconstruct:molten_tungsten
+- tconstruct:flowing_molten_tungsten
+
+#tconstruct:blood
+- tconstruct:blood
+- tconstruct:flowing_blood
+
+#forge:molten_refined_glowstone
+- #tconstruct:molten_refined_glowstone
+
+#tconstruct:molten_lumium
+- tconstruct:molten_lumium
+- tconstruct:flowing_molten_lumium
+
+#forge:experience
+- cofh_core:experience
+
+#forge:slime
+- #tconstruct:earth_slime
+
+#mantle:water
+- minecraft:water
+- minecraft:flowing_water
+
+#ae2:blacklisted/annihilation_plane
+
+#tconstruct:molten_constantan
+- tconstruct:molten_constantan
+- tconstruct:flowing_molten_constantan
+
+#tconstruct:molten_lead
+- tconstruct:molten_lead
+- tconstruct:flowing_molten_lead
+
+#tconstruct:tooltips/soup
+- #tconstruct:beetroot_soup
+- #tconstruct:mushroom_stew
+- #tconstruct:rabbit_stew
+
+#tconstruct:molten_clay
+- tconstruct:molten_clay
+- tconstruct:flowing_molten_clay
+
+#tconstruct:molten_gold
+- tconstruct:molten_gold
+- tconstruct:flowing_molten_gold
+
+#forge:molten_lumium
+- #tconstruct:molten_lumium
+
+#forge:molten_gold
+- #tconstruct:molten_gold
+
+#forge:molten_lead
+- #tconstruct:molten_lead
+
+#forge:molten_netherite
+- #tconstruct:molten_netherite
+
+#forge:creosote
+- thermal:creosote
+
+#tconstruct:molten_netherite
+- tconstruct:molten_netherite
+- tconstruct:flowing_molten_netherite
+
+#tconstruct:molten_pig_iron
+- tconstruct:molten_pig_iron
+- tconstruct:flowing_molten_pig_iron
+
+#forge:fuel
+- beyond_earth:fuel
+- beyond_earth:flowing_fuel
+
+#forge:molten_hepatizon
+- #tconstruct:molten_hepatizon
+
+#tconstruct:venom
+- tconstruct:venom
+- tconstruct:flowing_venom
+
+#forge:molten_ostrum
+- #beyond_earth:molten_ostrum
+
+#tconstruct:molten_bronze
+- tconstruct:molten_bronze
+- tconstruct:flowing_molten_bronze
+
+#forge:beetroot_soup
+- #tconstruct:beetroot_soup
+
+#tconstruct:tooltips/water
+- #mantle:water
+
+#tconstruct:molten_electrum
+- tconstruct:molten_electrum
+- tconstruct:flowing_molten_electrum
+
+#tconstruct:molten_pewter
+- tconstruct:molten_pewter
+- tconstruct:flowing_molten_pewter
+
+#tconstruct:molten_brass
+- tconstruct:molten_brass
+- tconstruct:flowing_molten_brass
+
+#tconstruct:molten_amethyst
+- tconstruct:molten_amethyst
+- tconstruct:flowing_molten_amethyst
+
+#forge:chocolate
+- create:flowing_chocolate
+- create:chocolate
+
+#tconstruct:molten_copper
+- tconstruct:molten_copper
+- tconstruct:flowing_molten_copper
+
+#tconstruct:ender_slime
+- tconstruct:ender_slime
+- tconstruct:flowing_ender_slime
+
+#tconstruct:molten_signalum
+- tconstruct:molten_signalum
+- tconstruct:flowing_molten_signalum
+
+#tconstruct:magma
+- tconstruct:magma
+- tconstruct:flowing_magma
+
+#forge:molten_signalum
+- #tconstruct:molten_signalum
+
+#tconstruct:beetroot_soup
+- tconstruct:beetroot_soup
+- tconstruct:flowing_beetroot_soup
+
+#tconstruct:molten_diamond
+- tconstruct:molten_diamond
+- tconstruct:flowing_molten_diamond
+
+#forge:potion
+- cofh_core:potion
+- tconstruct:potion
+
+#tconstruct:molten_zinc
+- tconstruct:molten_zinc
+- tconstruct:flowing_molten_zinc
+
+#forge:molten_electrum
+- #tconstruct:molten_electrum
+
+#forge:tea
+- create:flowing_tea
+- create:tea
+
+#tconstruct:mushroom_stew
+- tconstruct:mushroom_stew
+- tconstruct:flowing_mushroom_stew
+
+#forge:molten_invar
+- #tconstruct:molten_invar
+
+#mantle:lava
+- minecraft:lava
+- minecraft:flowing_lava
+
+#forge:molten_tungsten
+- #tconstruct:molten_tungsten
+
+#tconstruct:molten_queens_slime
+- tconstruct:molten_queens_slime
+- tconstruct:flowing_molten_queens_slime
+
+#beyond_earth:vehicle_fuel
+- beyond_earth:fuel
+- beyond_earth:flowing_fuel
+
+#forge:molten_refined_obsidian
+- #tconstruct:molten_refined_obsidian
+
+#forge:molten_zinc
+- #tconstruct:molten_zinc
+
+#tconstruct:molten_hepatizon
+- tconstruct:molten_hepatizon
+- tconstruct:flowing_molten_hepatizon
+
+#forge:molten_calorite
+- #beyond_earth:molten_calorite
+
+#forge:honey
+- cofh_core:honey
+- #tconstruct:honey
+- create:flowing_honey
+- create:honey
+
+#tconstruct:molten_knightslime
+- tconstruct:molten_knightslime
+- tconstruct:flowing_molten_knightslime
+
+#tconstruct:tooltips/gem_large
+- #tconstruct:molten_emerald
+- #tconstruct:molten_diamond
+
+#create:fan_processing_catalysts/blasting
+- minecraft:lava
+- minecraft:flowing_lava
+
+#tconstruct:spilling/glass
+- #tconstruct:molten_glass
+- #tconstruct:molten_obsidian

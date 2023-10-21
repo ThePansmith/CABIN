@@ -1,0 +1,24 @@
+
+["YUNG's Better Desert Temples"]
+
+	###########################################################################################################
+	## General settings.
+	###########################################################################################################
+	["YUNG's Better Desert Temples".General]
+		# The minimum y-value at which the desert temple can spawn.
+		# Default: 61
+		#
+		"Min Start Y" = 61
+		# The maximum y-value at which the desert temple can spawn.
+		# Default: 200
+		#
+		"Max Start Y" = 200
+		# Whether or not vanilla desert pyramids should be disabled.
+		# Default: true
+		#
+		"Disable Vanilla Pyramids" = true
+		# Whether or not mining fatigue is applied to players in the desert temple if it has not yet been cleared.
+		# Default: true
+		#
+		"Apply Mining Fatigue" = true
+

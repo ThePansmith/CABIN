@@ -1,0 +1,23 @@
+
+["Phantom End Biome"]
+	#Weight of phantom in end biomes.
+	#Range: 1 ~ 100
+	phantomEndBiomeWeight = 1
+	#Min of phantom in end biomes.
+	#Range: 1 ~ 100
+	phantomEndBiomeMin = 1
+	#Max of phantom in end biomes.
+	#Range: 1 ~ 100
+	phantomEndBiomeMax = 3
+
+["Phantom End City"]
+	#Weight of phantom in end cities.
+	#Range: 1 ~ 100
+	phantomEndCityWeight = 5
+	#Min of phantom in end cities.
+	#Range: 1 ~ 100
+	phantomEndCityMin = 3
+	#Max of phantom in end cities.
+	#Range: 1 ~ 100
+	phantomEndCityMax = 7
+

@@ -1,0 +1,21 @@
+
+#Visual Settings
+[visual]
+	#Shows all tags an item has in the tooltip on hover if advanced tooltips (F3+H) are enabled.
+	showItemTagsInTooltip = false
+	#Disables the headache- and possibly seizure-inducing visual effects of Demon's Dream.
+	disableDemonsDreamShaders = false
+	#Disables holiday themed visual content such as familiar skins.
+	disableHolidayTheming = false
+
+#Misc Settings
+[misc]
+	#Sync JEI search in storage actuator.
+	syncJeiSearch = false
+	#If true, divination rod will render all matching blocks with an outline. Disable if it causes lag.
+	#This setting will be unused, if Theurgy is installed alongside, as Occultism will use Theurgy's divination rod result rendering instead.
+	divinationRodHighlightAllResults = false
+	#The scan range in blocks for the divination rod. Too high might cause lags
+	#Range: > 1
+	divinationRodScanRange = 129
+
