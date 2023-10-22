@@ -1,4 +1,3 @@
-
 onEvent('rei.hide.items', event => {
   let coinhide = (name) => {
     event.hide('thermal:' + name + '_coin')  
@@ -21,23 +20,6 @@ onEvent('rei.hide.items', event => {
     coinhide('bronze')
     coinhide('cast_iron')
     coinhide('zinc')
-
-    event.hide('createdeco:gold_coinstack')
-    event.hide('createdeco:gold_coin')
-    event.hide(/mars/)
-    event.hide(/venus/)          
-    event.hide(/glacio/)
-    event.hide(/earth:steel/)
-    event.hide(/desh/)
-    event.hide(/mercury/)
-    event.hide(/ostrum/)
-    event.hide(/calorite/) 
-    event.hide('beyond_earth:rocket_nose_cone')
-    event.hide('beyond_earth:rocket_fin')              
-    event.hide('beyond_earth:rocket_t2')
-    event.hide('beyond_earth:rocket_t3')
-    event.hide('beyond_earth:rocket_t4')
-    event.hide('titanium:machine_test')     
 })
 
   onEvent('rei.group', event => {
@@ -155,3 +137,5 @@ event.groupItems('kubejs:rei_groups/tinkerstools', 'Spawn Eggs', [
     event.yeet(id)
   })
   })
+
+  
