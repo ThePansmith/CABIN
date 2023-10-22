@@ -107,7 +107,6 @@ onEvent('item.registry', event => {
 	event.create('multiply_cast').texture("kubejs:item/multiply_cast").displayName('Operator Cast (x)').unstackable()
 	event.create('divide_cast').texture("kubejs:item/divide_cast").displayName('Operator Cast (/)').unstackable()
 	event.create('computation_matrix').parentModel("kubejs:item/computation_matrix").displayName('Computation Matrix').rarity(RARITY_UNCOMMON).unstackable()
-	event.create('copper_leggings', 'leggings').tier('iron')
 	event.create('attachment_base').texture("kubejs:item/attachment_base").displayName('Attachment Base')
 })
 

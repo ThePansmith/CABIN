@@ -996,28 +996,28 @@ function rocketScience(event) {
 		{
 			A: plastic,
 			G: CR("golden_sheet"),
-			S: CR("copper_backtank")
+			S: MC("iron_chestplate")
 		})
 
 	event.recipes.createMechanicalCrafting("beyond_earth:oxygen_mask", pattern,
 		{
 			A: plastic,
 			G: CR("golden_sheet"),
-			S: CR("copper_diving_helmet")
+			S: MC("iron_helmet")
 		})
 
 	event.recipes.createMechanicalCrafting("beyond_earth:space_pants", pattern,
 		{
 			A: plastic,
 			G: CR("golden_sheet"),
-			S: KJ("copper_leggings")
+			S: MC("iron_leggings")
 		})
 
 	event.recipes.createMechanicalCrafting("beyond_earth:space_boots", pattern,
 		{
 			A: plastic,
 			G: CR("golden_sheet"),
-			S: CR("copper_diving_boots")
+			S: MC("iron_boots")
 		})
 
 	let smithAndMechCraft = (r, i1, i2) => {
