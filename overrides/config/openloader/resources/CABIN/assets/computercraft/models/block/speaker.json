@@ -1,0 +1,9 @@
+{
+  "parent": "computercraft:block/block_front_back",
+  "textures": {
+    "side": "computercraft:block/speaker_side",
+    "front": "computercraft:block/speaker_front",
+    "back": "computercraft:block/speaker_back",
+    "top": "computercraft:block/speaker_top"
+  }
+}

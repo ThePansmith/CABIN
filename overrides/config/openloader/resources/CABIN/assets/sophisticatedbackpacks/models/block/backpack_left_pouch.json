@@ -1,0 +1,65 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [128, 128],
+	"textures": {
+		"particle": "sophisticatedbackpacks:block/backpack_cloth",
+		"cloth": "sophisticatedbackpacks:block/backpack_cloth",
+		"clips": "sophisticatedbackpacks:block/leather_clips"
+	},
+	"elements": [
+		{
+			"from": [13, 1.5, 5.5],
+			"to": [14, 5.5, 10.5],
+			"faces": {
+				"north": {"uv": [11.5, 0, 12, 2], "texture": "#cloth", "tintindex": 0},
+				"east": {"uv": [9.5, 0, 12, 2], "texture": "#cloth", "tintindex": 0},
+				"south": {"uv": [9.5, 0, 10, 2], "texture": "#cloth", "tintindex": 0},
+				"up": {"uv": [12, 0, 9.5, 0.5], "rotation": 90, "texture": "#cloth", "tintindex": 0},
+				"down": {"uv": [9.5, 1.5, 12, 2], "rotation": 270, "texture": "#cloth", "tintindex": 0}
+			}
+		},
+		{
+			"from": [13, 7, 7],
+			"to": [14, 11, 10],
+			"faces": {
+				"north": {"uv": [14, 1.5, 14.5, 3.5], "texture": "#cloth", "tintindex": 0},
+				"east": {"uv": [13, 1.5, 14.5, 3.5], "texture": "#cloth", "tintindex": 0},
+				"south": {"uv": [13, 1.5, 13.5, 3.5], "texture": "#cloth", "tintindex": 0},
+				"up": {"uv": [14.5, 1.5, 13, 2], "rotation": 90, "texture": "#cloth", "tintindex": 0},
+				"down": {"uv": [13, 3, 14.5, 3.5], "rotation": 270, "texture": "#cloth", "tintindex": 0}
+			}
+		},
+		{
+			"from": [13, 1.5, 5.5],
+			"to": [14, 5.5, 10.5],
+			"faces": {
+				"east": {"uv": [9.5, 0, 12, 2], "texture": "#clips"}
+			}
+		},
+		{
+			"from": [13, 7, 7],
+			"to": [14, 11, 10],
+			"faces": {
+				"east": {"uv": [13, 1.5, 14.5, 3.5], "texture": "#clips"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "left-bottom-pouch",
+			"origin": [16, 3, 7.5],
+			"color": 0,
+			"nbt": "{}",
+			"children": [0]
+		},
+		{
+			"name": "left-top-pouch",
+			"origin": [15, 8, 7.5],
+			"color": 0,
+			"nbt": "{}",
+			"children": [1]
+		},
+		2,
+		3
+	]
+}

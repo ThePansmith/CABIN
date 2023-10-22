@@ -1,0 +1,9 @@
+{
+  "parent": "computercraft:block/block_front_back",
+    "textures": {
+        "front": "computercraft:block/disk_drive_front",
+        "side": "computercraft:block/disk_drive_side",
+        "back": "computercraft:block/disk_drive_back",
+        "top": "computercraft:block/disk_drive_top"
+    }
+}

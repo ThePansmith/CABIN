@@ -922,6 +922,7 @@ function barrels(event) {
 
 	smithAndMechCraft("metalbarrels:copper_barrel", MC("barrel"), TE("bronze_ingot"))
 	smithAndMechCraft("metalbarrels:silver_barrel", MC("barrel"), "forbidden_arcanus:rune")
+	smithAndMechCraft("metalbarrels:iron_barrel", MC("barrel"), "thermal:invar_ingot")
 	smithAndMechCraft("metalbarrels:gold_barrel", MC("barrel"), TC("cobalt_ingot"))
 
 	event.shapeless("metalbarrels:wood_to_copper", ["metalbarrels:copper_barrel"])

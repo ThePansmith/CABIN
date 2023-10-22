@@ -1,0 +1,7 @@
+{
+  "parent": "computercraft:block/floor_modem",
+  "textures": {
+    "antenna": "computercraft:block/advanced_modem_antenna",
+    "main": "computercraft:block/advanced_wireless_modem"
+  }
+}

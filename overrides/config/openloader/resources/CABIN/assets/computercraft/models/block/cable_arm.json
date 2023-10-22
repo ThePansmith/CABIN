@@ -1,0 +1,20 @@
+{
+	"credit": "End_Rage waz here",
+	"parent": "block/block",
+	"textures": {
+		"particle": "computercraft:block/cable_side",
+		"side": "computercraft:block/cable_side"
+	},
+	"elements": [
+		{
+			"from": [6, 6, 10],
+			"to": [10, 10, 16],
+			"faces": {
+				"east": {"uv": [10, 6, 16, 10], "texture": "#side"},
+				"west": {"uv": [0, 6, 6, 10], "texture": "#side"},
+				"up": {"uv": [6, 10, 10, 16], "texture": "#side"},
+				"down": {"uv": [6, 0, 10, 6], "texture": "#side"}
+			}
+		}
+	]
+}

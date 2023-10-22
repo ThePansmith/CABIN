@@ -1,0 +1,20 @@
+{
+	"credit": "End_Rage waz here",
+	"parent": "block/block",
+	"textures": {
+		"particle": "#texture"
+	},
+	"elements": [
+		{
+			"from": [14, 4.5, 3.5],
+			"to": [16, 12.5, 11.5],
+			"faces": {
+				"north": {"uv": [10, 2, 12, 10], "texture": "#texture"},
+				"east": {"uv": [2, 2, 10, 10], "texture": "#texture"},
+				"south": {"uv": [0, 2, 2, 10], "texture": "#texture"},
+				"up": {"uv": [2, 0, 10, 2], "rotation": 270, "texture": "#texture"},
+				"down": {"uv": [2, 10, 10, 12], "rotation": 90, "texture": "#texture"}
+			}
+		}
+	]
+}

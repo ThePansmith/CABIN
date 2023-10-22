@@ -1,0 +1,9 @@
+{
+  "parent": "computercraft:block/block_front_back",
+    "textures": {
+        "front": "computercraft:block/printer_front_both_trays",
+        "side": "computercraft:block/printer_side",
+        "back": "computercraft:block/printer_back",
+        "top": "computercraft:block/printer_top"
+    }
+}
