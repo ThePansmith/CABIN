@@ -326,7 +326,7 @@ function unwantedRecipes(event) {
 	event.remove({ type: AE2('grinder') })
 	event.remove({ type: TE('press') })
 	event.remove({ id: /thermal:earth_charge\/.*/ })
-	event.remove({ id: /thermal:machine\/smelter\/.*dust/ })
+	event.remove({ id: /thermal:machines\/smelter\/.*dust/ })
 	event.remove({ id: /tconstruct:smeltery\/.*\/ore/ })
 	event.remove({ id: "tconstruct:smeltery/entity_melting/ender" })
 	event.remove({ id: "tconstruct:tables/tinkers_forge" })
@@ -367,20 +367,21 @@ function unwantedRecipes(event) {
 	event.remove({ id: TE('fire_charge/electrum_ingot_2') })
 	event.remove({ id: TE('fire_charge/lumium_ingot_4') })
 	event.remove({ id: TE('fire_charge/signalum_ingot_4') })
-	event.remove({ id: TE('machine/pulverizer/pulverizer_cinnabar') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_signalum') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_lumium') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_electrum') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_enderium') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_invar') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_constantan') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_bronze') })
+	event.remove({ id: TE('machines/pulverizer/pulverizer_cinnabar') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_signalum') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_lumium') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_electrum') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_enderium') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_invar') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_constantan') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_bronze') })
 	event.remove({ id: TE('compat/create/smelter_create_alloy_brass') })
 	event.remove({ id: TE('compat/tconstruct/smelter_alloy_tconstruct_rose_gold_ingot') })
-	event.remove({ id: TE('machine/pulverizer/pulverizer_ender_pearl') })
+	event.remove({ id: TE('machines/pulverizer/pulverizer_ender_pearl') })
 	event.remove({ id: TE('storage/electrum_block') })
 	event.remove({ id: TE('storage/electrum_nugget_from_ingot') })
-	event.remove({ id: TE('machine/pulverizer/pulverizer_electrum_ingot_to_dust') })
+	event.remove({ id: TE('machines/pulverizer/pulverizer_electrum_ingot_to_dust') })
+	event.remove({ id: TE('machines/pulverizer/pulverizer_electrum_ingot_to_dust') })
 	event.remove({ id: TE('parts/electrum_gear') })
 	event.remove({ id: AP('smelting/charcoal_block_from_logs_that_burn_smoking') })
 	event.remove({ id: 'portality:generator' })
@@ -1407,16 +1408,19 @@ function alloys(event) {
 	event.remove({ id: TC('smeltery/alloys/molten_lumium') })
 	event.remove({ id: TC('smeltery/alloys/molten_signalum') })
 
+	event.remove({ id: TE('machines/smelter/smelter_bronze_plate_to_ingot') })
+	event.remove({ id: TC('thermalmachines/pulverizer/pulverizer_bronze_plate_to_ingot') })
+
 	event.custom({
 		"type": "tconstruct:alloy",
 		"inputs": [
-			{ "name": "tconstruct:molten_silver", "amount": 144 },
-			{ "name": "tconstruct:molten_copper", "amount": 144 },
+			{ "name": "tconstruct:molten_silver", "amount": 90 },
+			{ "name": "tconstruct:molten_copper", "amount": 90 },
 			{ "name": "thermal:redstone", "amount": 1000 }
 		],
 		"result": {
 			"fluid": "tconstruct:molten_signalum",
-			"amount": 144
+			"amount": 90
 		},
 		"temperature": 1000
 	})
@@ -1424,13 +1428,26 @@ function alloys(event) {
 	event.custom({
 		"type": "tconstruct:alloy",
 		"inputs": [
-			{ "name": "tconstruct:molten_silver", "amount": 144 },
-			{ "name": "tconstruct:molten_copper", "amount": 144 },
+			{ "name": "tconstruct:molten_silver", "amount": 90 },
+			{ "name": "tconstruct:molten_copper", "amount": 90 },
 			{ "name": "thermal:glowstone", "amount": 1000 }
 		],
 		"result": {
 			"fluid": "tconstruct:molten_lumium",
-			"amount": 144
+			"amount": 90
+		},
+		"temperature": 1000
+	})
+
+	event.custom({
+		"type": "tconstruct:alloy",
+		"inputs": [
+			{ "name": "tconstruct:molten_copper", "amount": 270 },
+			{ "name": "tconstruct:molten_glass", "amount": 1000 }
+		],
+		"result": {
+			"fluid": "tconstruct:molten_bronze",
+			"amount": 270
 		},
 		"temperature": 1000
 	})
@@ -1451,6 +1468,7 @@ function alloys(event) {
 	event.recipes.thermal.smelter(CR("brass_ingot", 2), [MC("copper_ingot"), CR("zinc_ingot")])
 	event.recipes.thermal.smelter(TC("rose_gold_ingot", 2), [MC("copper_ingot"), MC("gold_ingot")])
 	event.recipes.thermal.smelter(TE("constantan_ingot", 2), [MC("copper_ingot"), TE("nickel_ingot")])
+	event.recipes.thermal.smelter(TE("bronze_ingot", 3), [MC("copper_ingot", 3), '#forge:sand'])
 
 }
 
@@ -1953,18 +1971,18 @@ function invarMachine(event) {
 
 	event.replaceInput({ type: "minecraft:crafting_shaped", id: /ae2:.*/ }, F("#ingots/iron"), TE("lead_plate"))
 
-	// invar_machine(TE('machine_crucible'), 1, MC('nether_bricks'))
-	// invar_machine(TE('machine_furnace'), 1, MC('bricks'))
-	// invar_machine(TE('machine_chiller'), 1, MC('packed_ice'))
-	// invar_machine(TE('machine_pyrolyzer'), 1, MC('blaze_rod'))
-	// invar_machine(TE('machine_bottler'), 1, MC('bucket'))
-	// invar_machine(TE('machine_centrifuge'), 1, MC('compass'))
-	// invar_machine(TE('machine_refinery'), 1, '#forge:glass')
-	// invar_machine(TE('machine_pulverizer'), 1, MC('flint'))
-	// invar_machine(TE('machine_smelter'), 1, MC('blast_furnace'))
-	// invar_machine(TE('machine_sawmill'), 1, TE('saw_blade'))
-	// invar_machine(TE('machine_brewer'), 1, MC('brewing_stand'))
-	// invar_machine(TE('machine_insolator'), 1, MC('dirt'))
+	// invar_machine(TE('machines_crucible'), 1, MC('nether_bricks'))
+	// invar_machine(TE('machines_furnace'), 1, MC('bricks'))
+	// invar_machine(TE('machines_chiller'), 1, MC('packed_ice'))
+	// invar_machine(TE('machines_pyrolyzer'), 1, MC('blaze_rod'))
+	// invar_machine(TE('machines_bottler'), 1, MC('bucket'))
+	// invar_machine(TE('machines_centrifuge'), 1, MC('compass'))
+	// invar_machine(TE('machines_refinery'), 1, '#forge:glass')
+	// invar_machine(TE('machines_pulverizer'), 1, MC('flint'))
+	// invar_machine(TE('machines_smelter'), 1, MC('blast_furnace'))
+	// invar_machine(TE('machines_sawmill'), 1, TE('saw_blade'))
+	// invar_machine(TE('machines_brewer'), 1, MC('brewing_stand'))
+	// invar_machine(TE('machines_insolator'), 1, MC('dirt'))
 
 }
 
