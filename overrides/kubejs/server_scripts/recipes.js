@@ -849,7 +849,7 @@ function prettierpipes(event) {
 	event.remove({ output: TE('fluid_duct') })
 	event.remove({ output: TE('fluid_duct_windowed') })
 	event.shapeless("thermal:fluid_duct", [PP('pipe')])
-	event.shapeless("thermal:fluid_duct_windowed", [TE('fluid_duct_windowed'), MC('glass')])
+	event.shapeless("thermal:fluid_duct_windowed", [TE('fluid_duct'), MC('glass')])
 	event.remove({ output: TE('energy_duct') })
 	event.shaped("8x thermal:energy_duct", [
 		'PMP'
