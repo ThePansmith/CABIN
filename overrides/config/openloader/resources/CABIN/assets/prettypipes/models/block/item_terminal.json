@@ -2,11 +2,11 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"0": "create:block/brass_casing_side",
+		"0": "create:block/brass_casing",
 		"1": "entity/chest/normal",
 		"2": "create:block/brass_casing",
 		"3": "prettypipes:block/terminal",
-		"particle": "create:block/brass_casing_side"
+		"particle": "create:block/brass_casing"
 	},
 	"elements": [
 		{
