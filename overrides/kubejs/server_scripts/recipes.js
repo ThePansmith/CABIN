@@ -845,6 +845,8 @@ function prettierpipes(event) {
 		P: CR('brass_sheet'),
 		M: CR('brass_ingot')
 	})
+	event.remove({ output: TE('fluid_duct') })
+	event.remove({ output: TE('fluid_duct_windowed') })
 	event.shapeless("thermal:fluid_duct", [PP('pipe')])
 	event.shapeless("thermal:fluid_duct_windowed", [TE('fluid_duct_windowed'), MC('glass')])
 	event.remove({ output: TE('energy_duct') })

@@ -341,10 +341,14 @@ onEvent('block.loot_tables', event => {
         let gold = e + "gold_ore"
         event.addJson(gold, metal_ores_drop_dust(gold, CR('crushed_raw_gold')))
     })
-    event.addJson(CR('copper_ore'), metal_ores_drop_dust(CR('copper_ore'), CR('crushed_raw_copper')))
+    event.addJson(MC('copper_ore'), metal_ores_drop_dust(CR('copper_ore'), CR('crushed_raw_copper')))
+	event.addJson(MC('deep_slate_copper_ore'), metal_ores_drop_dust(CR('copper_ore'), CR('crushed_raw_copper')))
     event.addJson(CR('zinc_ore'), metal_ores_drop_dust(CR('zinc_ore'), CR('crushed_raw_zinc')))
+	event.addJson(CR('deepslate_zinc_ore'), metal_ores_drop_dust(CR('zinc_ore'), CR('crushed_raw_zinc')))
     event.addJson(TE('nickel_ore'), metal_ores_drop_dust(TE('nickel_ore'), CR('crushed_raw_nickel')))
+	event.addJson(TE('deepslate_nickel_ore'), metal_ores_drop_dust(TE('nickel_ore'), CR('crushed_raw_nickel')))
     event.addJson(TE('lead_ore'), metal_ores_drop_dust(TE('lead_ore'), CR('crushed_raw_lead')))
+	event.addJson(TE('deepslate_lead_ore'), metal_ores_drop_dust(TE('lead_ore'), CR('crushed_raw_lead')))
 
     event.addJson("forbidden_arcanus:mysterywood_leaves", mystery_leaves_but_no_gapples)
 
