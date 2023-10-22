@@ -24,7 +24,6 @@ onEvent('rei.hide.items', event => {
 
     event.hide('createdeco:gold_coinstack')
     event.hide('createdeco:gold_coin')
-    event.hide(/creative/) 
     event.hide(/mars/)
     event.hide(/venus/)          
     event.hide(/glacio/)

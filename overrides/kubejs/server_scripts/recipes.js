@@ -386,7 +386,7 @@ function unwantedRecipes(event) {
 	event.remove({ id: 'portality:generator' })
 
 	event.remove({ mod: 'portable_stonecutter' })
-	event.remove({ mod: 'structurescompass' })
+	event.remove({ mod: 'explorerscompass' })
 	event.remove({ input: TE('signalum_dust'), output: TE('signalum_ingot') })
 	event.remove({ output: TE('signalum_dust'), input: TE('signalum_ingot') })
 	event.remove({ output: TE('lightning_charge') })

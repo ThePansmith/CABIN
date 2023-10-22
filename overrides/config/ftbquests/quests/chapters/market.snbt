@@ -48,11 +48,9 @@
 				id: "160328DECC54AD5A"
 				type: "item"
 				item: {
-					id: "structurescompass:structures_compass"
+					id: "explorerscompass:explorerscompass"
 					Count: 1b
-					tag: {
-						Structure: "minecraft:fortress"
-					}
+					tag: { }
 				}
 			}]
 		}
@@ -740,12 +738,12 @@
 			}]
 		}
 		{
-			title: "Adopt a Duck"
-			icon: "minecraft:egg"
+			title: "Adopt an Axolotl"
+			icon: "minecraft:axolotl_bucket"
 			x: -11.0d
 			y: -2.0d
 			subtitle: "5 Silver"
-			description: ["Quack"]
+			description: ["Squeak"]
 			id: "6C00F2935F27C2AD"
 			tasks: [
 				{
@@ -758,7 +756,7 @@
 				{
 					id: "5F58BA2473FD6DDA"
 					type: "item"
-					item: "rubber_duck:rubber_duck_item"
+					item: "minecraft:water_bucket"
 				}
 			]
 			rewards: [
@@ -766,7 +764,7 @@
 					id: "500098FD4762A38F"
 					type: "item"
 					auto: "enabled"
-					item: "exoticbirds:duck_spawn_egg"
+					item: "minecraft:axolotl_spawn_egg"
 				}
 				{
 					id: "79C8307ED8450347"
@@ -978,38 +976,12 @@
 				item: "thermal:silver_coin"
 				count: 24L
 			}]
-			rewards: [
-				{
-					id: "738387AED344C59B"
-					type: "item"
-					item: "moreminecarts:powered_locking_rail"
-					count: 8
-				}
-				{
-					id: "4D33B3525FF09C68"
-					type: "item"
-					item: "minecraft:powered_rail"
-					count: 8
-				}
-				{
-					id: "0A214A7B25C331F6"
-					type: "item"
-					item: "minecraft:lever"
-					count: 8
-				}
-				{
-					id: "3F0919FBED64778C"
-					type: "item"
-					item: "minecraft:rail"
-					count: 64
-				}
-				{
-					id: "6D3CCD1BF0BFD7D6"
-					type: "item"
-					item: "minecraft:rail"
-					count: 64
-				}
-			]
+			rewards: [{
+				id: "738387AED344C59B"
+				type: "item"
+				item: "create:track"
+				count: 128
+			}]
 		}
 		{
 			title: "Pet Owner's Starter Pack"

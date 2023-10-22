@@ -298,6 +298,7 @@
 				type: "item"
 				icon: "supplementaries:soap"
 				item: "supplementaries:soap"
+				count: 3
 			}]
 		}
 		{
@@ -891,7 +892,8 @@
 			rewards: [{
 				id: "3D69B03DFCB41179"
 				type: "item"
-				item: "randomium:randomium_ore"
+				item: "thermal:iron_coin"
+				count: 10
 			}]
 		}
 		{
