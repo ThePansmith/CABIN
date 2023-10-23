@@ -549,7 +549,7 @@
 			icon: "sophisticatedbackpacks:backpack"
 			x: -4.5d
 			y: -0.5d
-			subtitle: "55 Silver"
+			subtitle: "10 Silver"
 			description: ["It's like a shulker but classy, wearable, and upgradeable!"]
 			id: "4FD46F841CCD59F8"
 			tasks: [{
@@ -557,7 +557,7 @@
 				type: "item"
 				icon: "thermal:silver_coin"
 				item: "thermal:silver_coin"
-				count: 55L
+				count: 10L
 			}]
 			rewards: [{
 				id: "440DF47BEF341626"
