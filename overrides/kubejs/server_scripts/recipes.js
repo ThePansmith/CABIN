@@ -497,7 +497,7 @@ function tweaks(event) {
 		'  M'
 	], {
 		M: TE("lead_plate"),
-		S: AE2('#crystals/fluix')
+		S: AE2('fluix_crystal')
 	})
 
 	event.shaped('waterstrainer:strainer_survivalist', [
@@ -1598,7 +1598,7 @@ function andesiteMachine(event) {
 	andesite_machine('create:contraption_controls', 1)
 	andesite_machine('thermal:device_tree_extractor', 1, MC('bucket'))
 	andesite_machine(AE2('sky_compass'), 1, AE2('charged_certus_quartz_crystal'))
-	andesite_machine(AE2('charger'), 1, '#' + AE2('crystals/fluix'))
+	andesite_machine(AE2('charger'), 1, '#' + AE2('fluix_crystal'))
 	andesite_machine('thermal:dynamo_stirling', 1, TE('rf_coil'))
 	andesite_machine('create:andesite_funnel', 4)
 	andesite_machine('create:andesite_tunnel', 4)
@@ -2041,7 +2041,7 @@ function fluixMachine(event) {
 	event.replaceInput({ id: AE2("network/cells/spatial_components") }, MC("glowstone_dust"), KJ('calculation_mechanism'))
 	event.replaceInput({ id: AE2("network/cells/spatial_components") }, AE2("engineering_processor"), F('#dusts/glowstone'))
 	event.replaceInput({ id: AE2("network/crafting/patterns_blank") }, MC("glowstone_dust"), KJ('calculation_mechanism'))
-	event.recipes.thermal.smelter(AE2("fluix_crystal", 2), [AE2("#crystals/nether"), AE2("charged_certus_quartz_crystal"), MC("redstone")]).energy(4000)
+	event.recipes.thermal.smelter(AE2("fluix_crystal", 2), [MC("quartz"), AE2("charged_certus_quartz_crystal"), MC("redstone")]).energy(4000)
 
 }
 
@@ -2334,7 +2334,7 @@ function circuits(event) {
 			.id('kubejs:' + e + "_processor")
 	})
 
-	event.recipes.thermal.smelter(AE2('quartz_glass'), AE2("#dusts/quartz"))
+	event.recipes.thermal.smelter(AE2('quartz_glass'), TE('quartz_dust'))
 
 }
 
