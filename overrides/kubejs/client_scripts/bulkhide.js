@@ -316,5 +316,6 @@ onEvent('rei.hide.items', event => {
     event.hide('beyond_earth:rocket_t4')
     event.hide('beyond_earth:wheel')
     event.hide('titanium:machine_test')
-    event.hide('metalbarrels:obsidian_to_netherite')          
+    event.hide('metalbarrels:obsidian_to_netherite')        
+    event.hide(/extendedgears/)	
 })

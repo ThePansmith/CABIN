@@ -388,6 +388,7 @@ function unwantedRecipes(event) {
 
 	event.remove({ mod: 'portable_stonecutter' })
 	event.remove({ mod: 'explorerscompass' })
+	event.remove({ mod: 'extendedgears' })
 	event.remove({ input: TE('signalum_dust'), output: TE('signalum_ingot') })
 	event.remove({ output: TE('signalum_dust'), input: TE('signalum_ingot') })
 	event.remove({ output: TE('lightning_charge') })
