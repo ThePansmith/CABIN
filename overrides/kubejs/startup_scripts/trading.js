@@ -284,7 +284,6 @@ onEvent('item.registry', event => {
 		{ in: MC('golden_apple'), out: S(10) },
 		{ in: MC('arrow', 32), out: S(3) },
 		{ in: MC('iron_sword'), out: S(1) },
-		{ in: TC('#modifiable/two_handed'), out: S(1) },
 		{ in: MC('golden_sword'), out: S(2) }
 	])
 

@@ -1496,8 +1496,8 @@ function electronTube(event) {
 	event.remove({ id: TC('smeltery/melting/metal/iron/reinforcement') })
 	event.remove({ id: TC('smeltery/melting/diamond/enchanting_table') })
 
-	event.recipes.createMechanicalCrafting(Item.of(AE2('certus_crystal_seed'), 2), ['A'], { A: AE2('#crystals/certus') })
-	event.recipes.createMechanicalCrafting(Item.of(AE2('fluix_crystal_seed'), 2), ['A'], { A: AE2('#crystals/fluix') })
+	event.recipes.createMechanicalCrafting(Item.of(AE2('certus_crystal_seed'), 2), ['A'], { A: AE2('certus_quartz_crystal') })
+	event.recipes.createMechanicalCrafting(Item.of(AE2('fluix_crystal_seed'), 2), ['A'], { A: AE2('fluix_crystal') })
 
 	let grow = (from, via, to) => {
 		event.recipes.createSequencedAssembly([to], from, [
