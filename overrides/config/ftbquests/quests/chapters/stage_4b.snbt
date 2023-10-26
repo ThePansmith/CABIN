@@ -146,7 +146,7 @@
 			tasks: [{
 				id: "6F2432F797A27549"
 				type: "item"
-				item: "kubejs:substrate_gabbro"
+				item: "kubejs:substrate_scoria"
 				consume_items: false
 			}]
 		}

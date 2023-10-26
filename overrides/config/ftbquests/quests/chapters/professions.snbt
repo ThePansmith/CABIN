@@ -782,6 +782,14 @@
 					tag: {
 						items: [
 							{
+								id: "minecraft:music_disc_13"
+								Count: 1b
+							}
+							{
+								id: "minecraft:music_disc_cat"
+								Count: 1b
+							}
+							{
 								id: "minecraft:music_disc_blocks"
 								Count: 1b
 							}
@@ -806,7 +814,7 @@
 								Count: 1b
 							}
 							{
-								id: "minecraft:music_disc_cat"
+								id: "minecraft:music_disc_strad"
 								Count: 1b
 							}
 							{
@@ -822,11 +830,11 @@
 								Count: 1b
 							}
 							{
-								id: "minecraft:music_disc_pigstep"
+								id: "minecraft:music_disc_otherside"
 								Count: 1b
 							}
 							{
-								id: "endergetic:music_disc_kilobyte"
+								id: "minecraft:music_disc_pigstep"
 								Count: 1b
 							}
 							{
@@ -834,11 +842,11 @@
 								Count: 1b
 							}
 							{
-								id: "minecraft:music_disc_strad"
+								id: "enlightened_end:sprog_music_disc"
 								Count: 1b
 							}
 							{
-								id: "minecraft:music_disc_13"
+								id: "supplementaries:pancake_disc"
 								Count: 1b
 							}
 						]

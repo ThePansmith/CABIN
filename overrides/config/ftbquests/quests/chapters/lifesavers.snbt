@@ -937,6 +937,7 @@
 				id: "65A12D108D1E18AA"
 				type: "item"
 				item: "sophisticatedbackpacks:backpack"
+				consume_items: false
 			}]
 			rewards: [{
 				id: "1186F7D43411D62D"
@@ -974,6 +975,7 @@
 				id: "0FC4AFC9209B61A3"
 				type: "item"
 				item: "portable_stonecutter:portable_stonecutter"
+				consume_items: false
 			}]
 			rewards: [{
 				id: "07C632B31F279953"
@@ -1012,6 +1014,7 @@
 						]
 					}
 				}
+				consume_items: false
 			}]
 			rewards: [{
 				id: "071BEECB37AFECB4"

@@ -54,7 +54,8 @@
 					type: "command"
 					title: "Fortress Locator"
 					icon: "create:blaze_burner"
-					command: "/locate fortess"
+					command: "/locate betterfortresses:fortress"
+					player_command: true
 				}
 				{
 					id: "5B530574A878C212"
