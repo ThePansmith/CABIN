@@ -578,7 +578,7 @@ function tweaks(event) {
 		"ingredient": { "tag": "forge:circuit_press" },
 		"result": {
 			"fluid": "tconstruct:molten_invar",
-			"amount": 288
+			"amount": 180
 		},
 		"temperature": 500,
 		"time": 90
@@ -589,7 +589,7 @@ function tweaks(event) {
 		"ingredient": { "tag": "forge:recycling" },
 		"result": {
 			"fluid": "tconstruct:molten_iron",
-			"amount": 48
+			"amount": 30
 		},
 		"temperature": 500,
 		"time": 40
@@ -694,7 +694,7 @@ function tweaks(event) {
 	let cast_block = (fluid, item) => {
 		event.custom({
 			"type": "tconstruct:casting_basin",
-			"fluid": { "name": fluid, "amount": 1296 },
+			"fluid": { "name": fluid, "amount": 810 },
 			"result": { "item": item },
 			"cooling_time": 150
 		})
@@ -740,15 +740,15 @@ function tweaks(event) {
 	event.remove({ id: TC("smeltery/casting/metal/silver/nugget_sand_cast") })
 	event.remove({ id: TC("smeltery/casting/metal/silver/block") })
 
-	cast("ingot", TC("molten_steel"), 144, "xkdeco:steel_ingot", 50)
+	cast("ingot", TC("molten_steel"), 90, "xkdeco:steel_ingot", 50)
 	cast_block(TC("molten_steel"), "BE:steel_block")
 
-	cast("ingot", TC("molten_silver"), 144, TE("silver_ingot"), 50)
-	cast("nugget", TC("molten_silver"), 16, TE("silver_nugget"), 17)
+	cast("ingot", TC("molten_silver"), 90, TE("silver_ingot"), 50)
+	cast("nugget", TC("molten_silver"), 10, TE("silver_nugget"), 17)
 	cast_block(TC("molten_silver"), TE("silver_block"))
 
-	cast("ingot", TC("molten_copper"), 144, MC("copper_ingot"), 50)
-	cast("nugget", TC("molten_copper"), 16, CR("copper_nugget"), 17)
+	cast("ingot", TC("molten_copper"), 90, MC("copper_ingot"), 50)
+	cast("nugget", TC("molten_copper"), 10, CR("copper_nugget"), 17)
 	cast_block(TC("molten_copper"), MC("copper_block"))
 
 
@@ -772,14 +772,14 @@ function tweaks(event) {
 		},
 		"result": {
 			"fluid": "tconstruct:molten_cobalt",
-			"amount": 144
+			"amount": 90
 		},
 		"temperature": 950,
 		"time": 97,
 		"byproducts": [
 			{
 				"fluid": "tconstruct:molten_iron",
-				"amount": 48
+				"amount": 30
 			}
 		]
 	})
@@ -791,18 +791,18 @@ function tweaks(event) {
 		},
 		"result": {
 			"fluid": "tconstruct:molten_debris",
-			"amount": 144
+			"amount": 90
 		},
 		"temperature": 1175,
 		"time": 143,
 		"byproducts": [
 			{
 				"fluid": "tconstruct:molten_diamond",
-				"amount": 48
+				"amount": 30
 			},
 			{
 				"fluid": "tconstruct:molten_gold",
-				"amount": 144
+				"amount": 90
 			}
 		]
 	})
@@ -1327,11 +1327,11 @@ function oreProcessing(event) {
 		event.recipes.createCrushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushed)
 		event.recipes.thermal.pulverizer([Item.of(dust, 6)], crushed).energy(15000)
 		event.recipes.thermal.pulverizer([crushed], oretag).energy(3000)
-		event.recipes.thermal.crucible(Fluid.of(fluid, 144), ingot).energy(2000)
+		event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000)
 
-		event.recipes.thermal.crucible(Fluid.of(fluid, 48), dust).energy(3000)
+		event.recipes.thermal.crucible(Fluid.of(fluid, 30), dust).energy(3000)
 		event.recipes.createSplashing([Item.of(nugget, 2)], dust)
-		event.recipes.createMixing([Fluid.of(fluid, 288)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
+		event.recipes.createMixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
 
 		event.remove({ input: "#forge:ores/" + name, type: TE("smelter") })
 		event.remove({ input: "#forge:ores/" + name, type: TE("pulverizer") })
@@ -1372,14 +1372,14 @@ function oreProcessing(event) {
 			},
 			"result": {
 				"fluid": fluid,
-				"amount": 48
+				"amount": 30
 			},
 			"temperature": 500,
 			"time": 30,
 			"byproducts": [
 				{
 					"fluid": fluid_byproduct,
-					"amount": 16
+					"amount": 10
 				}
 			]
 		});
@@ -1476,7 +1476,7 @@ function alloys(event) {
 
 function electronTube(event) {
 
-	event.recipes.createFilling(CR("electron_tube"), [CR('polished_rose_quartz'), Fluid.of(TC('molten_iron'), 16)])
+	event.recipes.createFilling(CR("electron_tube"), [CR('polished_rose_quartz'), Fluid.of(TC('molten_iron'), 10)])
 
 	let redstone = MC('redstone')
 	event.shapeless('create:rose_quartz', [[MC('quartz'), AE2('certus_quartz_crystal'), AE2('charged_certus_quartz_crystal')], redstone, redstone, redstone, redstone])
@@ -2049,14 +2049,14 @@ function fluixMachine(event) {
 function enderMachine(event) {
 
 	// event.remove({ id: TE("machine/crucible/crucible_ender_pearl") })
-	// event.recipes.createMixing(Fluid.of(TE("ender"), 576), [Fluid.of('tconstruct:molten_silver', 144), Fluid.of('tconstruct:ender_slime', 1000)]).heated()
+	// event.recipes.createMixing(Fluid.of(TE("ender"), 360), [Fluid.of('tconstruct:molten_silver', 90), Fluid.of('tconstruct:ender_slime', 1000)]).heated()
 
 	event.custom({
 		"type": "tconstruct:melting",
 		"ingredient": { "tag": "forge:coins/silver" },
 		"result": {
 			"fluid": "tconstruct:molten_silver",
-			"amount": 16
+			"amount": 10
 		},
 		"temperature": 790,
 		"time": 40
@@ -2067,7 +2067,7 @@ function enderMachine(event) {
 		"ingredient": { "tag": "forge:coins/gold" },
 		"result": {
 			"fluid": "tconstruct:molten_gold",
-			"amount": 16
+			"amount": 10
 		},
 		"temperature": 790,
 		"time": 40
@@ -2078,7 +2078,7 @@ function enderMachine(event) {
 	// 	"cast": { "tag": "tconstruct:casts/multi_use/ingot" },
 	// 	"fluid": {
 	// 		"name": "thermal:ender",
-	// 		"amount": 144
+	// 		"amount": 90
 	// 	},
 	// 	"result": { "item": TE("enderium_ingot") },
 	// 	"cooling_time": 50
@@ -2090,7 +2090,7 @@ function enderMachine(event) {
 	// 	"cast_consumed": true,
 	// 	"fluid": {
 	// 		"name": "thermal:ender",
-	// 		"amount": 144
+	// 		"amount": 90
 	// 	},
 	// 	"result": { "item": TE("enderium_ingot") },
 	// 	"cooling_time": 50
@@ -2101,7 +2101,7 @@ function enderMachine(event) {
 	// 	"cast": { "tag": "tconstruct:casts/multi_use/gear" },
 	// 	"fluid": {
 	// 		"name": TE("ender"),
-	// 		"amount": 576
+	// 		"amount": 360
 	// 	},
 	// 	"result": { "item": TE("enderium_gear") },
 	// 	"cooling_time": 114
@@ -2113,7 +2113,7 @@ function enderMachine(event) {
 	// 	"cast_consumed": true,
 	// 	"fluid": {
 	// 		"name": TE("ender"),
-	// 		"amount": 576
+	// 		"amount": 360
 	// 	},
 	// 	"result": { "item": TE("enderium_gear") },
 	// 	"cooling_time": 114
@@ -2290,7 +2290,7 @@ function circuits(event) {
 		"type": "tconstruct:casting_table",
 		"cast": { "item": AE2("calculation_processor_press") },
 		"cast_consumed": false,
-		"fluid": { "tag": "tconstruct:molten_copper", "amount": 144 },
+		"fluid": { "tag": "tconstruct:molten_copper", "amount": 90 },
 		"result": { "item": AE2("printed_calculation_processor") },
 		"cooling_time": 150
 	})
@@ -2299,7 +2299,7 @@ function circuits(event) {
 		"type": "tconstruct:casting_table",
 		"cast": { "item": AE2("logic_processor_press") },
 		"cast_consumed": false,
-		"fluid": { "tag": "tconstruct:molten_gold", "amount": 144 },
+		"fluid": { "tag": "tconstruct:molten_gold", "amount": 90 },
 		"result": { "item": AE2("printed_logic_processor") },
 		"cooling_time": 150
 	})
@@ -2308,16 +2308,16 @@ function circuits(event) {
 		"type": "tconstruct:casting_table",
 		"cast": { "item": AE2("engineering_processor_press") },
 		"cast_consumed": false,
-		"fluid": { "tag": "tconstruct:molten_diamond", "amount": 144 },
+		"fluid": { "tag": "tconstruct:molten_diamond", "amount": 90 },
 		"result": { "item": AE2("printed_engineering_processor") },
 		"cooling_time": 150
 	})
 
-	event.recipes.thermal.crucible(Fluid.of(TC("molten_diamond"), 144), MC("diamond")).energy(10000)
+	event.recipes.thermal.crucible(Fluid.of(TC("molten_diamond"), 90), MC("diamond")).energy(10000)
 
-	event.recipes.thermal.chiller(AE2("printed_calculation_processor"), [Fluid.of("tconstruct:molten_copper", 144), AE2("calculation_processor_press")]).energy(5000)
-	event.recipes.thermal.chiller(AE2("printed_logic_processor"), [Fluid.of("tconstruct:molten_gold", 144), AE2("logic_processor_press")]).energy(5000)
-	event.recipes.thermal.chiller(AE2("printed_engineering_processor"), [Fluid.of("tconstruct:molten_diamond", 144), AE2("engineering_processor_press")]).energy(5000)
+	event.recipes.thermal.chiller(AE2("printed_calculation_processor"), [Fluid.of("tconstruct:molten_copper", 90), AE2("calculation_processor_press")]).energy(5000)
+	event.recipes.thermal.chiller(AE2("printed_logic_processor"), [Fluid.of("tconstruct:molten_gold", 90), AE2("logic_processor_press")]).energy(5000)
+	event.recipes.thermal.chiller(AE2("printed_engineering_processor"), [Fluid.of("tconstruct:molten_diamond", 90), AE2("engineering_processor_press")]).energy(5000)
 
 	event.custom(ifiniDeploying(AE2("printed_silicon"), AE2("silicon"), AE2("silicon_press")))
 
