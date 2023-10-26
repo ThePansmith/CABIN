@@ -750,6 +750,7 @@
 		}
 		{
 			title: "Deep Below"
+			icon: "minecraft:deepslate"
 			x: 4.0d
 			y: 8.5d
 			subtitle: "Contraption 10-1"
@@ -764,25 +765,40 @@
 			]
 			hide: true
 			id: "5C4F6E63B02A25F0"
-			tasks: [{
-				id: "414AB7FC6D0F52BF"
-				type: "item"
-				item: "minecraft:deepslate"
-			}]
+			tasks: [
+				{
+					id: "414AB7FC6D0F52BF"
+					type: "item"
+					item: "minecraft:deepslate"
+				}
+				{
+					id: "5A531D21DEBB3FA8"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
 		}
 		{
 			title: "Heating up"
+			icon: "minecraft:magma_block"
 			x: 5.0d
 			y: 9.5d
 			subtitle: "Contraption 10-2"
 			description: ["Then, blast the deepslate to extreme temperatures, partially liquifying it."]
 			dependencies: ["5C4F6E63B02A25F0"]
 			id: "4D8972AE5B614FB3"
-			tasks: [{
-				id: "2E9806386AA204A1"
-				type: "item"
-				item: "minecraft:magma_block"
-			}]
+			tasks: [
+				{
+					id: "2E9806386AA204A1"
+					type: "item"
+					item: "minecraft:magma_block"
+				}
+				{
+					id: "728CB4E169DEED42"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
 		}
 		{
 			title: "Curing by Quenching"

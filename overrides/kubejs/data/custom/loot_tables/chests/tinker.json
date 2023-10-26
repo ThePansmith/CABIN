@@ -40,7 +40,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -50,7 +50,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -60,7 +60,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -70,17 +70,17 @@
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -90,7 +90,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -100,7 +100,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -110,7 +110,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -120,7 +120,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -130,7 +130,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "tconstruct:pickaxe_head",
+          "name": "tconstruct:pick_head",
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -174,7 +174,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
@@ -274,7 +274,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
@@ -374,7 +374,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
@@ -474,7 +474,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
@@ -574,7 +574,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
@@ -674,7 +674,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
@@ -774,7 +774,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
@@ -874,7 +874,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },
@@ -974,7 +974,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{\"Material\": \"tconstruct:tinkers_bronze\"}"
+              "tag": "{\"Material\": \"tconstruct:bronze\"}"
             }
           ]
         },

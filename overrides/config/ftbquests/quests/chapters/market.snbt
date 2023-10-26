@@ -35,7 +35,11 @@
 			x: -7.5d
 			y: 0.5d
 			subtitle: "2 Gold"
-			description: ["Aimlessly traversing the nether is just the worst. This wonderful gadget will point you in the correct direction at all times."]
+			description: [
+				"Aimlessly traversing the nether is just the worst. This reward will give you the exact location of the nearest fortress."
+				""
+				"Make sure to actually be in the nether before claiming this one."
+			]
 			id: "252B9DD5BFB8184A"
 			tasks: [{
 				id: "5345AA8760A95127"
@@ -44,15 +48,22 @@
 				item: "thermal:gold_coin"
 				count: 2L
 			}]
-			rewards: [{
-				id: "160328DECC54AD5A"
-				type: "item"
-				item: {
-					id: "explorerscompass:explorerscompass"
-					Count: 1b
-					tag: { }
+			rewards: [
+				{
+					id: "352CB6B379E66DF8"
+					type: "command"
+					title: "Fortress Locator"
+					icon: "create:blaze_burner"
+					command: "/locate fortess"
 				}
-			}]
+				{
+					id: "5B530574A878C212"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					tags: ["reset"]
+				}
+			]
 		}
 		{
 			title: "Saw everything"
@@ -254,6 +265,12 @@
 			tasks: [{
 				id: "3929233A89B34A71"
 				type: "checkmark"
+			}]
+			rewards: [{
+				id: "1F6D0B4450F57C5A"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 15
 			}]
 		}
 		{
@@ -1133,6 +1150,60 @@
 					icon: "thermal:machine_cycle_augment"
 					tags: ["reset"]
 					auto: "no_toast"
+				}
+			]
+		}
+		{
+			title: "Sea Leaves"
+			icon: "minecraft:kelp"
+			x: -12.5d
+			y: 1.5d
+			subtitle: "5 Silver"
+			description: ["Sometimes you simply just have bad spawning RNG. This one time deal should help you with that."]
+			id: "04468935C9A7298F"
+			tasks: [{
+				id: "1EB77DF31A04A04D"
+				type: "item"
+				item: "thermal:silver_coin"
+				count: 5L
+			}]
+			rewards: [{
+				id: "4420617E22747710"
+				type: "item"
+				item: "minecraft:kelp"
+				count: 15
+			}]
+		}
+		{
+			title: "Smelt and Stash"
+			icon: "sophisticatedbackpacks:auto_blasting_upgrade"
+			x: 0.5d
+			y: -1.5d
+			subtitle: "20 Silver"
+			description: ["A small pack of upgrades for your 'pack."]
+			id: "185F9F8EBD0F8F87"
+			tasks: [{
+				id: "78ABC9B3BB0C7DC6"
+				type: "item"
+				title: "Smelt and Smash"
+				item: "thermal:silver_coin"
+				count: 20L
+			}]
+			rewards: [
+				{
+					id: "67E1EFF44408867B"
+					type: "item"
+					item: "sophisticatedbackpacks:auto_blasting_upgrade"
+				}
+				{
+					id: "0CE606B75F3B27B2"
+					type: "item"
+					item: "sophisticatedbackpacks:advanced_compacting_upgrade"
+				}
+				{
+					id: "401831CDED2C1763"
+					type: "item"
+					item: "sophisticatedbackpacks:advanced_pickup_upgrade"
 				}
 			]
 		}

@@ -32,7 +32,7 @@
 				title: "Complete Chapter 1"
 				icon: "kubejs:kinetic_mechanism"
 				disable_toast: true
-				stat: "minecraft:play_one_minute"
+				stat: "minecraft:play_time"
 				value: 1
 			}]
 		}
@@ -58,7 +58,7 @@
 				title: "Complete Chapter 2"
 				icon: "create:precision_mechanism"
 				disable_toast: true
-				stat: "minecraft:play_one_minute"
+				stat: "minecraft:play_time"
 				value: 1
 			}]
 		}
@@ -84,7 +84,7 @@
 				title: "Complete Chapter 3"
 				icon: "kubejs:inductive_mechanism"
 				disable_toast: true
-				stat: "minecraft:play_one_minute"
+				stat: "minecraft:play_time"
 				value: 1
 			}]
 		}
@@ -114,7 +114,7 @@
 				title: "Complete Chapter 4"
 				icon: "kubejs:calculation_mechanism"
 				disable_toast: true
-				stat: "minecraft:play_one_minute"
+				stat: "minecraft:play_time"
 				value: 1
 			}]
 		}
