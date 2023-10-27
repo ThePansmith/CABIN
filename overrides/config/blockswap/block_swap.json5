@@ -71,9 +71,9 @@ to make editing this file much easier.
 	    		},
 	    		"old": {
 	    			"Name": "minecraft:acacia_planks",
+	    			}
 	    		}
 	    	}
-	    	
 	    ]
 	*/
 	"state_swapper": [],
@@ -84,12 +84,12 @@ to make editing this file much easier.
 	   		"minecraft:diamond_block": "minecraft:emerald_block"
 	   	}
 	*/
-	"swapper": {
+	"swapper": { 
 		"minecraft:redstone_ore": "minecraft:stone"
 		"minecraft:deepslate_redstone_ore": "minecraft:deepslate"
 		"thermal:tin_ore": "minecraft:stone"
 		"thermal:deepslate_tin_ore": "minecraft:deepslate"
-		"thermal:silver_ore": "minecraft:iron_ore"
-		"thermal:deepslate_silver_ore": "minecraft:deepslate_iron_ore"
+		"thermal:silver_ore": "minecraft:stone"
+		"thermal:deepslate_silver_ore": "minecraft:deepslate"
 	}
 }
