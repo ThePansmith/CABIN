@@ -725,7 +725,7 @@
 				{
 					id: "38E1B6571EDAA96B"
 					type: "item"
-					item: "create:copper_ingot"
+					item: "minecraft:copper_ingot"
 					random_bonus: 4
 				}
 			]
