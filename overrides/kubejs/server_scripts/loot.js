@@ -342,7 +342,7 @@ onEvent('block.loot_tables', event => {
         event.addJson(gold, metal_ores_drop_dust(gold, CR('crushed_raw_gold')))
     })
     event.addJson(MC('copper_ore'), metal_ores_drop_dust(MC('copper_ore'), CR('crushed_raw_copper')))
-	event.addJson(MC('deep_slate_copper_ore'), metal_ores_drop_dust(MC('copper_ore'), CR('crushed_raw_copper')))
+	event.addJson(MC('deepslate_copper_ore'), metal_ores_drop_dust(MC('copper_ore'), CR('crushed_raw_copper')))
     event.addJson(CR('zinc_ore'), metal_ores_drop_dust(CR('zinc_ore'), CR('crushed_raw_zinc')))
 	event.addJson(CR('deepslate_zinc_ore'), metal_ores_drop_dust(CR('zinc_ore'), CR('crushed_raw_zinc')))
     event.addJson(TE('nickel_ore'), metal_ores_drop_dust(TE('nickel_ore'), CR('crushed_raw_nickel')))
