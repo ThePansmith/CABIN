@@ -89,7 +89,7 @@ to make editing this file much easier.
 		"minecraft:deepslate_redstone_ore": "minecraft:deepslate"
 		"thermal:tin_ore": "minecraft:stone"
 		"thermal:deepslate_tin_ore": "minecraft:deepslate"
-		"thermal:silver_ore": "minecraft:iron_ore"
-		"thermal:deepslate_silver_ore": "minecraft:deepslate_iron_ore"
+		"thermal:silver_ore": "minecraft:stone"
+		"thermal:deepslate_silver_ore": "minecraft:deepslate"
 	}
 }
