@@ -1462,9 +1462,9 @@ function alloys(event) {
 	event.remove({ type: MC("crafting_shapeless"), output: TE('bronze_dust') })
 	event.remove({ type: MC("crafting_shapeless"), output: TE('invar_dust') })
 
-	event.recipes.createMixing(Fluid.of(TC('molten_brass'), 4), [Fluid.of(TC('molten_copper'), 4), Fluid.of(TC('molten_zinc'), 4)]).processingTime(1)
-	event.recipes.createMixing(Fluid.of(TC('molten_constantan'), 4), [Fluid.of(TC('molten_copper'), 4), Fluid.of(TC('molten_nickel'), 4)]).processingTime(1)
-	event.recipes.createMixing(Fluid.of(TC('molten_rose_gold'), 4), [Fluid.of(TC('molten_copper'), 4), Fluid.of(TC('molten_gold'), 4)]).processingTime(1)
+	event.recipes.createMixing(Fluid.of(TC('molten_brass'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_zinc'), 3)]).processingTime(1)
+	event.recipes.createMixing(Fluid.of(TC('molten_constantan'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_nickel'), 3)]).processingTime(1)
+	event.recipes.createMixing(Fluid.of(TC('molten_rose_gold'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_gold'), 3)]).processingTime(1)
 
 	event.recipes.thermal.smelter([KJ("invar_compound"), KJ("invar_compound")], [TE("nickel_ingot"), MC("iron_ingot")])
 	event.recipes.thermal.smelter(CR("brass_ingot", 2), [MC("copper_ingot"), CR("zinc_ingot")])
