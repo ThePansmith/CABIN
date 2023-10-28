@@ -504,15 +504,23 @@
 			}]
 		}
 		{
+			title: "Gold Machinary"
 			x: -8.0d
 			y: -2.5d
 			subtitle: "Utility"
-			dependencies: ["7664FBB32FCC6BE6"]
+			description: ["Zoom"]
+			dependencies: [
+				"7664FBB32FCC6BE6"
+				"5F986F8FC1D339AA"
+			]
 			id: "11C36A243F5108DC"
 			tasks: [{
-				id: "03A555C5D7DB9783"
-				type: "item"
-				item: "kubejs:reinforced_mechanism"
+				id: "159661080AE7707A"
+				type: "stat"
+				title: "Completed Bonus 1B"
+				icon: "kubejs:reinforced_mechanism"
+				stat: "minecraft:play_time"
+				value: 1
 			}]
 		}
 		{

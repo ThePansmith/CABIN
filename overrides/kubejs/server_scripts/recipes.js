@@ -1591,7 +1591,7 @@ function andesiteMachine(event) {
 	andesite_machine('create:mechanical_mixer', 1, CR('whisk'))
 	andesite_machine('create:mechanical_drill', 1, TE('drill_head'))
 	andesite_machine('create:mechanical_saw', 1, TE('saw_blade'))
-	andesite_machine('create:mechanical_roller', 1, CR('crushing_wheel'))
+	andesite_machine('create:mechanical_roller', 1, "createdeco:andesite_hull")
 	andesite_machine('rechiseledcreate:mechanical_chisel', 1, "rechiseled:chisel")
 	andesite_machine('create:deployer', 1, CR('brass_hand'))
 	andesite_machine('create:mechanical_harvester', 2)

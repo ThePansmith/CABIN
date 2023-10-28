@@ -770,6 +770,7 @@
 					id: "414AB7FC6D0F52BF"
 					type: "item"
 					item: "minecraft:deepslate"
+					consume_items: false
 				}
 				{
 					id: "5A531D21DEBB3FA8"
@@ -792,6 +793,7 @@
 					id: "2E9806386AA204A1"
 					type: "item"
 					item: "minecraft:magma_block"
+					consume_items: false
 				}
 				{
 					id: "728CB4E169DEED42"
@@ -812,6 +814,7 @@
 				id: "09D097DEABDD1E51"
 				type: "item"
 				item: "minecraft:obsidian"
+				consume_items: false
 			}]
 		}
 		{
@@ -831,6 +834,7 @@
 				id: "5F986F8FC1D339AA"
 				type: "item"
 				item: "kubejs:gold_machine"
+				consume_items: false
 			}]
 			rewards: [
 				{
@@ -854,7 +858,6 @@
 			description: [
 				"Same deal as it's sealed counterpart, you don't need to automate the rest of the steps."
 				""
-				"Unless you really like trains."
 			]
 			dependencies: ["4064D448404CD639"]
 			id: "76706BE282ABAC31"
@@ -862,6 +865,7 @@
 				id: "232D11392F252A8E"
 				type: "item"
 				item: "kubejs:reinforced_mechanism"
+				consume_items: false
 			}]
 		}
 	]
