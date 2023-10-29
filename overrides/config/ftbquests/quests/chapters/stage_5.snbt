@@ -169,19 +169,12 @@
 				}
 				consume_items: false
 			}]
-			rewards: [
-				{
-					id: "7F4FDBDE58C30C3A"
-					type: "item"
-					item: "minecraft:enchanted_golden_apple"
-					count: 3
-				}
-				{
-					id: "71A7E180ACBDB690"
-					type: "item"
-					item: "beyond_earth:moon_globe"
-				}
-			]
+			rewards: [{
+				id: "7F4FDBDE58C30C3A"
+				type: "item"
+				item: "minecraft:enchanted_golden_apple"
+				count: 3
+			}]
 		}
 		{
 			title: "Solving Trajectories"
@@ -196,7 +189,7 @@
 				""
 				"Each digit now has to be dissolved back into its liquified form via Smeltery. Once a Smeltery collected 10 liquified items of each digit, they combine into the encoded logic required for our Computer. Once enough of this figurative alloy has accumulated, it can be cast into the powerful Computation Matrix."
 				""
-				"The Guidance Computer requires 8 Matrices to function. Depending on your data centre and mechanism assembly lines, this may take a while."
+				"The Navigation Computer requires 8 Matrices to function. Depending on your data centre and mechanism assembly lines, this may take a while."
 			]
 			dependencies: [
 				"42B5C0102B22F389"
@@ -850,7 +843,7 @@
 		}
 		{
 			title: "Going The Extra Mile"
-			icon: "create:creative_motor"
+			icon: "create:creative_fluid_tank"
 			x: 5.0d
 			y: 7.75d
 			shape: "hexagon"

@@ -849,6 +849,42 @@
 								id: "supplementaries:pancake_disc"
 								Count: 1b
 							}
+							{
+								id: "quark:music_disc_drips"
+								Count: 1b
+							}
+							{
+								id: "quark:music_disc_ocean"
+								Count: 1b
+							}
+							{
+								id: "quark:music_disc_rain"
+								Count: 1b
+							}
+							{
+								id: "quark:music_disc_wind"
+								Count: 1b
+							}
+							{
+								id: "quark:music_disc_fire"
+								Count: 1b
+							}
+							{
+								id: "quark:music_disc_clock"
+								Count: 1b
+							}
+							{
+								id: "quark:music_disc_crickets"
+								Count: 1b
+							}
+							{
+								id: "quark:music_disc_chatter"
+								Count: 1b
+							}
+							{
+								id: "quark:music_disc_endermosh"
+								Count: 1b
+							}
 						]
 					}
 				}
@@ -1365,7 +1401,7 @@
 					id: "0D666C3C352901FA"
 					type: "custom"
 					title: "Clear Bad Omen"
-					icon: "biomesoplenty:wildflower"
+					icon: "farmersdelight:milk_bottle"
 					tags: ["bad_omen"]
 					team_reward: false
 					auto: "no_toast"

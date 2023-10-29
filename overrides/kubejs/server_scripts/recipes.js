@@ -1182,6 +1182,12 @@ function unify(event) {
 	woodcutting("tconstruct", "skyroot_log", "skyroot_planks", "skyroot_planks_slab")
 	woodcutting("tconstruct", "bloodshroom_log", "bloodshroom_planks", "bloodshroom_planks_slab")
 
+	let justplankwoodcutting = (mod, planks, slab) => {
+		event.recipes.createCutting([Item.of(mod + ":" + slab, 2)], mod + ":" + planks).processingTime(50)
+	}
+
+	justplankwoodcutting("quark", "azalea_planks", "azalea_planks_slab")
+	justplankwoodcutting("quark", "blossom_planks", "blossom_planks_slab")
 }
 
 function trickierWindmills(event) {

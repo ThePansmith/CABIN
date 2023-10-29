@@ -267,12 +267,6 @@
 				id: "3929233A89B34A71"
 				type: "checkmark"
 			}]
-			rewards: [{
-				id: "1F6D0B4450F57C5A"
-				type: "item"
-				item: "thermal:silver_coin"
-				count: 15
-			}]
 		}
 		{
 			title: "Manual Exchange"
@@ -985,14 +979,15 @@
 			icon: "minecraft:minecart"
 			x: -11.0d
 			y: 2.0d
-			subtitle: "24 Silver"
+			subtitle: "16 Silver"
+			description: ["Just gotta supply your own press and kenetic mechanisms and you have everything you need to make an automated rail system. "]
 			id: "117587D824D23D69"
 			tasks: [{
 				id: "06C835DB602D6F9F"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: { id: "thermal:silver_coin", Count: 16b }
 				item: "thermal:silver_coin"
-				count: 24L
+				count: 16L
 			}]
 			rewards: [{
 				id: "738387AED344C59B"
@@ -1048,56 +1043,60 @@
 			]
 		}
 		{
-			title: "Instant Aesthetics"
-			icon: "minecraft:oak_leaves"
+			title: "Exotic Saplings"
+			icon: "quark:pink_blossom_sapling"
 			x: 1.0d
 			y: 0.0d
-			subtitle: "24 Silver"
-			description: ["Not too stoked with your facade? Not a problem! Foliage solves everything."]
+			subtitle: "16 Silver"
+			description: [
+				"Various saplings prized for their unique leaves."
+				""
+				"The traveler who traded us this set also threw in some bamboo, claiming that \"a oriental build just doesn't work without it\"."
+			]
 			id: "7D93DAB3E8ACF953"
 			tasks: [{
 				id: "06028A67C6DCCD00"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
-				item: "thermal:silver_coin"
-				count: 24L
+				icon: "thermal:silver_coin"
+				item: { id: "thermal:silver_coin", Count: 16b }
+				count: 16L
 			}]
 			rewards: [
 				{
-					id: "1BA12452E9A090EC"
-					type: "item"
-					item: "biomesoplenty:flowering_oak_leaves"
-					count: 32
-				}
-				{
 					id: "17FCE9D6C12A7822"
 					type: "item"
-					item: "minecraft:oak_leaves"
-					count: 64
-				}
-				{
-					id: "51C2FE4F4F5057CC"
-					type: "item"
-					item: "minecraft:oak_leaves"
-					count: 64
+					item: "quark:pink_blossom_sapling"
+					count: 4
 				}
 				{
 					id: "5B801D097C1C538F"
 					type: "item"
-					item: "minecraft:spruce_leaves"
-					count: 64
+					item: "quark:lavender_blossom_sapling"
+					count: 4
 				}
 				{
-					id: "5A23AFB90F20641B"
+					id: "15B0F60077A03C61"
 					type: "item"
-					item: "minecraft:spruce_leaves"
-					count: 64
+					item: "biomesoplenty:yellow_autumn_sapling"
+					count: 4
 				}
 				{
-					id: "1EC1E1486084AE66"
+					id: "745C64C48231B0CA"
 					type: "item"
-					item: "minecraft:spruce_fence"
-					count: 16
+					item: "biomesoplenty:orange_autumn_sapling"
+					count: 4
+				}
+				{
+					id: "4BCFE98EB9FF9DB4"
+					type: "item"
+					item: "minecraft:flowering_azalea"
+					count: 4
+				}
+				{
+					id: "0D573F7B68F63049"
+					type: "item"
+					item: "minecraft:bamboo"
+					count: 4
 				}
 			]
 		}

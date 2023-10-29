@@ -249,6 +249,11 @@
 				}
 				dimension: "beyond_earth:moon"
 			}]
+			rewards: [{
+				id: "52F34D324E5E10E9"
+				type: "item"
+				item: "beyond_earth:moon_globe"
+			}]
 		}
 		{
 			title: "High Aspirations"
@@ -508,7 +513,7 @@
 			x: -8.0d
 			y: -2.5d
 			subtitle: "Utility"
-			description: ["Zoom"]
+			description: ["Like explained before, trains are a super useful option for item and fluid movement, especially with how cheap they are."]
 			dependencies: [
 				"7664FBB32FCC6BE6"
 				"5F986F8FC1D339AA"
