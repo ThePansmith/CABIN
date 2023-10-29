@@ -83,8 +83,8 @@
 	"Wooden Posts" = true
 	"Vertical Slabs" = true
 	"Vertical Planks" = true
-	"Variant Ladders" = false
-	"Variant Furnaces" = false
+	"Variant Ladders" = true
+	"Variant Furnaces" = true
 	"Variant Chests" = true
 	"Variant Bookshelves" = true
 	Thatch = true

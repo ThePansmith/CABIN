@@ -1062,7 +1062,7 @@ function rocketScience(event) {
 }
 
 function drawersop(event) {
-	let drawer_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak']
+	let drawer_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'warped', 'crimson']
 	let drawer_sizes = ['1', '2', '4']
 	event.replaceInput({ id: SD('compacting_drawers_3') }, MC('iron_ingot'), CR('zinc_ingot'))
 	event.remove({ output: SD("upgrade_template") })
