@@ -798,7 +798,7 @@ function tweaks(event) {
 		"byproducts": [
 			{
 				"fluid": "tconstruct:molten_diamond",
-				"amount": 30
+				"amount": 25
 			},
 			{
 				"fluid": "tconstruct:molten_gold",
@@ -2308,16 +2308,16 @@ function circuits(event) {
 		"type": "tconstruct:casting_table",
 		"cast": { "item": AE2("engineering_processor_press") },
 		"cast_consumed": false,
-		"fluid": { "tag": "tconstruct:molten_diamond", "amount": 90 },
+		"fluid": { "tag": "tconstruct:molten_diamond", "amount": 100 },
 		"result": { "item": AE2("printed_engineering_processor") },
 		"cooling_time": 150
 	})
 
-	event.recipes.thermal.crucible(Fluid.of(TC("molten_diamond"), 90), MC("diamond")).energy(10000)
+	event.recipes.thermal.crucible(Fluid.of(TC("molten_diamond"), 100), MC("diamond")).energy(10000)
 
 	event.recipes.thermal.chiller(AE2("printed_calculation_processor"), [Fluid.of("tconstruct:molten_copper", 90), AE2("calculation_processor_press")]).energy(5000)
 	event.recipes.thermal.chiller(AE2("printed_logic_processor"), [Fluid.of("tconstruct:molten_gold", 90), AE2("logic_processor_press")]).energy(5000)
-	event.recipes.thermal.chiller(AE2("printed_engineering_processor"), [Fluid.of("tconstruct:molten_diamond", 90), AE2("engineering_processor_press")]).energy(5000)
+	event.recipes.thermal.chiller(AE2("printed_engineering_processor"), [Fluid.of("tconstruct:molten_diamond", 100), AE2("engineering_processor_press")]).energy(5000)
 
 	event.custom(ifiniDeploying(AE2("printed_silicon"), AE2("silicon"), AE2("silicon_press")))
 
