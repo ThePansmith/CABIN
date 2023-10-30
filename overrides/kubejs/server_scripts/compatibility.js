@@ -20,5 +20,13 @@ onEvent('recipes', event => {
 //		machine('copper','minecraft:dispenser', 2, 'minecraft:bow')          // Recipes with one are smithing table recipes
 //
 //      event.shapeless("create:creative_crate", "minecraft:redstone_ore")]) // If you have any other recipes, put them following the machine recipes
-//}                                                                   
+//}                                     
+
+if (Platform.isLoaded('createbigcannons')) {
+		machine('andesite','createbigcannons:yaw_controller', 1)
+		machine('andesite','createbigcannons:cannon_builder', 1, 'create:mechanical_bearing')
+		machine('andesite','createbigcannons:cannon_loader', 1, 'create:mechanical_piston')
+		machine('andesite','createbigcannons:cannon_drill', 1, 'create:fluid_tank')
+	}                         
+	
 })
