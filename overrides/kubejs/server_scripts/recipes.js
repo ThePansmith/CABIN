@@ -133,7 +133,7 @@ onEvent('item.tags', event => {
 	event.get("forbidden_arcanus:indestructible_blacklisted")
 		.add(/exchangers:.*/)
 //		.add(/advancedrocketry:.*/)
-		.add(/xreliquary:.*/)
+		.add(/reliquary:.*/)
 		.add(/waterstrainer:.*/)
 		.add(OC("#miners/ores"))
 		.add(PR_C("draw_plate"))
@@ -409,13 +409,11 @@ function unwantedRecipes(event) {
 	event.remove({ id: 'ravencoffee:sandwich_ham' })
 	event.remove({ id: 'ravencoffee:sandwich_beef' })
 	event.remove({ id: 'ravencoffee:sandwich_chicken' })
-
 	native_metals.forEach(e => {
 		event.remove({ type: MC("smelting"), input: F("#dusts/" + e) })
 		event.remove({ type: MC("blasting"), input: F("#dusts/" + e) })
 		event.remove({ type: TC("melting"), input: F("#dusts/" + e) })
 	})
-
 }
 
 function tweaks(event) {
@@ -553,6 +551,10 @@ function tweaks(event) {
 		A: MC('stick')
 	})
 
+	event.forEachRecipe({id: /alkahestry/}, recipe => {
+        recipe.id(recipe.getId() + '_manual_only')
+    })
+	
 	event.replaceInput({ id: "computercraft:cable" }, MC('redstone'), PR_C('red_ingot'))
 	event.replaceInput({ id: "computercraft:wired_modem" }, MC('redstone'), PR_C('red_ingot'))
 	event.replaceInput({ id: CR('crafting/kinetics/rope_pulley') }, '#forge:wool', '#supplementaries:ropes')

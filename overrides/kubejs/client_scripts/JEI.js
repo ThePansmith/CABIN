@@ -72,6 +72,8 @@ event.groupItems('kubejs:rei_groups/tinkerstools', 'Spawn Eggs', [
     tooltip.add("minecraft:deepslate_redstone_ore", [`§7Does not generate, crush Cinnabar to obtain Redstone.`]);
     tooltip.add('supplementaries:ash', ['Created by burning wooden materals in-world'])
     tooltip.add('createdeco:cast_iron_ingot', ['A building material that resembles Netherite.'])
+	tooltip.add('storagedrawers:controller', ['Allows automation to insert and extract from connected drawers'])
+	tooltip.add('storagedrawers:controller_slave', ['Serves as a extra point for automation to insert and extract items from if a drawer controller is present.'])
 
     holds('copper', 5 * 9)
     holds('iron', 6 * 9)
@@ -106,10 +108,7 @@ event.groupItems('kubejs:rei_groups/tinkerstools', 'Spawn Eggs', [
     global.substrates[6].forEach(e => tooltip.add(e.id, [`§8Category: §7Catalyst`]));
   
     tooltip.add("structurescompass:structures_compass", [`§7Right-Click to Activate`]);
-  
-    tooltip.add("magicfeather:magicfeather", [`§6Grants Creative Flight when in range of a beacon`]);
-  
-    tooltip.add("xreliquary:alkahestry_tome", [`§6Cannot be used in Mechanical Crafting`]);
+    tooltip.add("reliquary:alkahestry_tome", [`§6Cannot be used in Mechanical Crafting or Mixing`]);
   
     tooltip.add("kubejs:accellerator_redstone", ["§7When used in Alchemy Research:", "  §6One of the §ecorrect §6Reagents",
       "  §6in §eincorrect §6slots will not be consumed"]);
