@@ -27,7 +27,7 @@ function colourMap(c) {
 }
 
 function shuffle(array, random) {
-    for (let i = array.length - 1; i > 0; i--) {
+    for (var i = array.length - 1; i > 0; i--) {
         var j = random.nextInt(i + 1);
         var temp = array[i];
         array[i] = array[j];
@@ -36,23 +36,25 @@ function shuffle(array, random) {
     return array
 }
 
-function attackNearby(world, x, y, z) {
-    let aabb = AABB.CUBE.offset(x - .5, y + .5, z - .5).offset(-3, -3, -3).offset(3, 3, 3)
-    let list = world.minecraftLevel.List(null, aabb, e => true)
+function attackNearby(level, x, y, z) {
+    // let aabb = AABB.CUBE.func_72317_d(x - .5, y + .5, z - .5).func_72321_a(-3, -3, -3).func_72321_a(3, 3, 3)
+    // let list = level.minecraftLevel.func_217394_a(null, aabb, e => true)
 
-    list.forEach(e => {
-        let entity = world.getEntity(e)
+    let entities = level.getEntitiesWithin(AABB.of(x-3,y-3,z-3,x+3,y+3,z+3))
+
+    entities.forEach(e => {
+        let entity = e
         if (!entity.isLiving())
             return
         entity.attack("magic", 6)
     })
 }
 
-function process(world, block, entity, face) {
+function process(level, block, entity, face) {
 
-    if (global.cachedSeed != ServerLevel.getSeed()) {
-        global.cachedSeed = ServerLevel.getSeed()
-        let random = new java("java.util.Random")(ServerLevel.getSeed())
+    if (global.cachedSeed != level.getSeed()) {
+        global.cachedSeed = level.getSeed()
+        let random = new java("java.util.Random")(level.getSeed())
         let next = () => random.nextInt(6)
         let generateCode = () => [next(), next(), next(), next()]
         for (let cat = 0; cat < 7; cat++) {
@@ -159,11 +161,11 @@ function process(world, block, entity, face) {
         if (!resultItem)
             return
 
-        world.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
-        world.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
-        world.server.runCommandSilent(`/particle minecraft:${particle} ${entity.x} ${entity.y + .5} ${entity.z} .65 .65 .65 0 10`)
-        world.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
-        attackNearby(world, entity.x, entity.y, entity.z)
+        level.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
+        level.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
+        level.server.runCommandSilent(`/particle minecraft:${particle} ${entity.x} ${entity.y + .5} ${entity.z} .65 .65 .65 0 10`)
+        level.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
+        attackNearby(level, entity.x, entity.y, entity.z)
 
         let resultCount = Math.ceil(processAmount / 2.0)
         nbt.Items.clear()
@@ -251,7 +253,7 @@ function process(world, block, entity, face) {
         //         let prevCat = catalystId - 1;
         //         if (catalystId == 0)
         //             prevCat += 6
-        //         for (i = 0; i < 6; i++)
+        //         for (let i = 0; i < 6; i++)
         //             if (global.cachedAlchemyData[prevCat].mappings[i] == categoryMapping.index)
         //                 id2 = global.substrates[prevCat - 1][i].id
         //     }
@@ -260,11 +262,11 @@ function process(world, block, entity, face) {
         // }
         let resultItems = [id1]//, id2]
 
-        world.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
-        world.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
-        world.server.runCommandSilent(`/particle minecraft:effect ${entity.x} ${entity.y + .5} ${entity.z} .75 .75 .75 .75 10`)
-        world.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
-        attackNearby(world, entity.x, entity.y, entity.z)
+        level.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
+        level.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
+        level.server.runCommandSilent(`/particle minecraft:effect ${entity.x} ${entity.y + .5} ${entity.z} .75 .75 .75 .75 10`)
+        level.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
+        attackNearby(level, entity.x, entity.y, entity.z)
 
         let random = new java("java.util.Random")()
         let resultCounts = [0]//, 0]
@@ -450,13 +452,13 @@ function process(world, block, entity, face) {
 
     let success = errorId == -1
     let resultItem = success ? data.result : `kubejs:failed_alchemy_${errorId}`
-    world.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
-    world.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
-    world.server.runCommandSilent(`/particle minecraft:dust 0 1 1 1 ${entity.x} ${entity.y + .5} ${entity.z} .75 .75 .75 .75 ${success ? "80" : "6"}`)
-    world.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 ${success ? "2" : "1.25"}`)
-    attackNearby(world, entity.x, entity.y, entity.z)
+    level.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
+    level.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
+    level.server.runCommandSilent(`/particle minecraft:dust 0 1 1 1 ${entity.x} ${entity.y + .5} ${entity.z} .75 .75 .75 .75 ${success ? "80" : "6"}`)
+    level.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 ${success ? "2" : "1.25"}`)
+    attackNearby(level, entity.x, entity.y, entity.z)
     if (success)
-        world.server.runCommandSilent(`/playsound minecraft:block.beacon.activate block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
+        level.server.runCommandSilent(`/playsound minecraft:block.beacon.activate block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
     nbt.Items.clear()
 
     let resultItemNBT = Utils.newMap();
@@ -495,62 +497,79 @@ onEvent('block.left_click', event => {
     if (!block.id.startsWith("thermal:machine_frame"))
         return
 
-    let world = event.getLevel()
+    let level = event.getLevel()
     let clickedFace = event.getFacing()
     let item = event.getItem()
     let player = event.getPlayer()
 
+    
     if (!item.empty)
         return
-    if (player.name != "Deployer")
-        return
+    
+//    if (player.name.text != "Deployer")
+//        return
+    
 
+    
     let sound = false
 
-Object.values(Direction.ALL).forEach(face => {//    Direction.ALL.values().forEach(face => {
+    Direction.ALL.values().forEach(face => {
         if (clickedFace == face)
             return
         let laser = block.offset(face)
-        if (!laser.id.startsWith("cb_multipart:multipart"))
-            return
-        let te = laser.getEntity()
-        if (!te)
-            return
-        let nbt = Utils.newMap().toNBT()
-        te.deserializeNBT(nbt)
-        let parts = nbt.getList("parts", 10)
-        let valid = false
-        let color = ""
-        if (parts) {
-            parts.forEach(part => {
-                if (!part.id.endsWith("_cage_light"))
-                    return
-                if (part.pow == part.id.contains("inverted"))
-                    return
-                if (part.side != face.getOpposite().ordinal())
-                    return
-                valid = true
-                color = part.id.replace("_inverted", "").replace("_cage_light", "").replace("projectred_illumination:", "")
-            })
-        }
 
-        if (!valid)
+
+        if (!laser.id.startsWith("createdeco:"))
             return
+
+        if (!laser.id.endsWith("_lamp"))
+            return
+
+        // let valid = false
+        let words = laser.id.replace("createdeco:","").split("_");
+
+        let color = words[0]
+		
+        // let te = laser.getEntity()
+        // if (!te)
+        //     return
+        // let nbt = Utils.newMap().toNBT()
+        // te.func_189515_b(nbt)
+        // let parts = nbt.func_150295_c("parts", 10)
+        // let color = ""
+        // if (parts) {
+        //     parts.forEach(part => {
+        //         if (!part.id.endsWith("_cage_light"))
+        //             return
+        //         if (part.pow == part.id.contains("inverted"))
+        //             return
+        //         if (part.side != face.getOpposite().ordinal())
+        //             return
+        //         valid = true
+        //         color = part.id.replace("_inverted", "").replace("_cage_light", "").replace("projectred-illumination:", "")
+        //     })
+        // }
+
+        // if (!valid)
+        //     return
 
         let x = laser.x
         let y = laser.y
         let z = laser.z
-        let aabb = AABB.CUBE.move(x, y, z).inflate(4 * face.x, 4 * face.y, 4 * face.z)
-        let list = world.minecraftLevel.getEntities(null, aabb, e => true)
+        // let aabb = AABB.CUBE.func_72317_d(x, y, z).func_72321_a(4 * face.x, 4 * face.y, 4 * face.z)
+        
+        // let list = level.minecraftWorld.func_217394_a(null, aabb, e => true)
 
-        list.forEach(e => {
-            let entity = world.getEntity(e)
+        let entities = level.getEntitiesWithin(AABB.of(x-2,y-2,z-2,x+2,y+2,z+2))
+
+        entities.forEach(e => {
+            let entity = e
             if (!entity.type.equals("minecraft:hopper_minecart")) {
                 if (!entity.type.equals("minecraft:item"))
                     entity.attack("magic", 6)
                 return
             }
-            process(world, block, entity, face)
+            process(level, block, entity, face)
             entity.attack("magic", 1)
         })
 
@@ -558,14 +577,14 @@ Object.values(Direction.ALL).forEach(face => {//    Direction.ALL.values().forEa
         let rgb = colourMap(color)
         for (let i = 0; i < 22; i++) {
             let offset = (i / 20.0) * 4
-            world.server.runCommandSilent(`/particle dust ${rgb[0] / 256} ${rgb[1] / 256} ${rgb[2] / 256} 1 ${x + .5 + face.x * offset} ${y + .5 + face.y * offset} ${z + .5 + face.z * offset} 0 0 0 .001 1`)
+            level.server.runCommandSilent(`/particle dust ${rgb[0] / 256} ${rgb[1] / 256} ${rgb[2] / 256} 1 ${x + .5 + face.x * offset} ${y + .5 + face.y * offset} ${z + .5 + face.z * offset} 0 0 0 .001 1`)
         }
-        world.server.runCommandSilent(`/particle minecraft:end_rod ${x + .5 + face.x * 2} ${y + .5 + face.y * 2} ${z + .5 + face.z * 2} ${face.x * 2} ${face.y * 2} ${face.z * 2} .1 10`)
+        level.server.runCommandSilent(`/particle minecraft:end_rod ${x + .5 + face.x * 2} ${y + .5 + face.y * 2} ${z + .5 + face.z * 2} ${face.x * 2} ${face.y * 2} ${face.z * 2} .1 10`)
 
     })
 
     if (sound)
-        world.server.runCommandSilent(`/playsound minecraft:entity.firework_rocket.blast block @a ${block.x} ${block.y} ${block.z} 0.55 0.5`)
+        level.server.runCommandSilent(`/playsound minecraft:entity.firework_rocket.blast block @a ${block.x} ${block.y} ${block.z} 0.55 0.5`)
 
 
 })
