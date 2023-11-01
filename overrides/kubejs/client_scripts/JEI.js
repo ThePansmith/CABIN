@@ -130,8 +130,7 @@ event.groupItems('kubejs:rei_groups/tinkerstools', 'Spawn Eggs', [
   })
 
   onEvent('rei.remove.categories', event => {
-  event.yeet('create:compacting')
-  const category = ['beyond_earth:rocket_t2', 'beyond_earth:rocket_t3', 'beyond_earth:rocket_t4', 'beyond_earth:rover']
+  const category = ['beyond_earth:rocket_t2', 'beyond_earth:rocket_t3', 'beyond_earth:rocket_t4', 'beyond_earth:rover', 'beyond_earth:space_station']
   category.forEach(id => {
     event.yeet(id)
   })
