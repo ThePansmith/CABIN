@@ -26,7 +26,7 @@ onEvent("ponder.registry", event => {
 
             scene.world.showSection(light, Facing.east)
             scene.overlay.showText(40)
-                .text("Attach a Laser Lamp of any colour")
+                .text("Attach a Cage Lamp of any colour")
                 .pointAt(util.vector.centerOf(2, 1, 2))
                 .colored(PonderPalette.WHITE)
                 .placeNearTarget()
