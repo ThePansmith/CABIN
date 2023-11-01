@@ -130,10 +130,10 @@ function process(level, block, entity, face) {
         if (validTool.id.startsWith(magnet)) {
             if (!toProcess.equals("minecraft:basalt"))
                 return
-            let energy = validTool.tag.getInteger("Energy") - 80 * processAmount
+            let energy = validTool.tag.getInt("Energy") - 80 * processAmount
             if (energy < 0)
                 return
-            validTool.tag.setInteger("Energy", energy)
+            validTool.tag.putInt("Energy", energy)
             resultItem = "thermal:basalz_rod"
             particle = "flame"
         }
@@ -143,7 +143,7 @@ function process(level, block, entity, face) {
             let energy = validTool.tag.getDouble("internalCurrentPower") - 40 * processAmount
             if (energy < 0)
                 return
-            validTool.tag.setDouble("internalCurrentPower", energy)
+            validTool.tag.putDouble("internalCurrentPower", energy)
             resultItem = "thermal:blitz_rod"
             particle = "firework"
         }
@@ -153,7 +153,7 @@ function process(level, block, entity, face) {
             let energy = validTool.tag.getDouble("internalCurrentPower") - 80 * processAmount
             if (energy < 0)
                 return
-            validTool.tag.setDouble("internalCurrentPower", energy)
+            validTool.tag.putDouble("internalCurrentPower", energy)
             resultItem = "thermal:blizz_rod"
             particle = "spit"
         }
