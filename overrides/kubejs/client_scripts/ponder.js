@@ -1,11 +1,3 @@
-onEvent("ponder.tag", event =>{
-event.createTag("kubejs:getting_started", "minecraft:paper", "Getting started.", "We ponder now!", [
-    "minecraft:paper",
-    "minecraft:apple",
-    "minecraft:emerald_block",
-    ]);
-});
-
 
 onEvent("ponder.registry", event => {
     event.create("kubejs:alchemical_laser")
@@ -32,28 +24,31 @@ onEvent("ponder.registry", event => {
                 .placeNearTarget()
             scene.idle(60)
 
-            scene.world.showSection(light, Facing.south)
-            scene.overlay.showText(50)
+            scene.world.showSection(light, Facing.east)
+            scene.overlay.showText(40)
                 .text("Attach a Laser Lamp of any colour")
                 .pointAt(util.vector.centerOf(2, 1, 2))
                 .colored(PonderPalette.WHITE)
                 .placeNearTarget()
-            scene.idle(30)
+            scene.idle(60)
 
-            scene.world.showSection(util.select.position(1, 1, 2), Facing.north)
-            scene.idle(25)
-
-            scene.world.toggleRedstonePower(util.select.position(1, 1, 2))
-            scene.effects.indicateRedstone(util.grid.at(1, 1, 2))
-            scene.world.setBlock(util.grid.at(2, 1, 2), util.getDefaultState("kubejs:ponder_laser_lamp_on"), false)
-            scene.idle(15)
 
             scene.overlay.showText(40)
-                .text("Ensure that the light is powered")
+                .text("Toggle it on with a wrench")
                 .colored(PonderPalette.GREEN)
                 .pointAt(util.vector.centerOf(2, 1, 2))
                 .placeNearTarget()
-            scene.idle(50)
+                scene.idle(20)
+
+                scene.overlay.showControls(new PonderInput(util.vector.blockSurface(util.vector.centerOf(2.5, 1, 2), Facing.west), PonderPointing.RIGHT)
+                .rightClick().withWrench(),
+                50)            
+            scene.idle(10)
+            
+            scene.world.setBlock(util.grid.at(2, 1, 2), util.getDefaultState("kubejs:ponder_laser_lamp_on"), false)
+            scene.idle(15)
+
+        scene.idle(50)
 
             scene.world.setKineticSpeed(deployer, 0)
             scene.world.showSection(deployerSingle, Facing.down)
