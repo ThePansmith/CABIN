@@ -1,7 +1,7 @@
 {
 	version: 13
-	title: "&6 Above &f\\&&6 Beyond"
-	icon: "kubejs:abstruse_mechanism"
+	title: "&6 CABIN"
+	icon: "kubejs:gold_machine"
 	disable_toast: true
 	default_reward_team: true
 	default_consume_items: true
