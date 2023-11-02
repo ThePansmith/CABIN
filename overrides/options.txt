@@ -1,0 +1,1 @@
+resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","Everycomp Generated Pack","quark:emote_resources","file/Terralith Config","resources/CABIN"]
