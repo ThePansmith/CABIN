@@ -1,12 +1,3 @@
----
-name: General PRs
-about: 
-title: ""
-labels: ''
-assignees: ''
-
----
-
 **Describe the PR**
 A clear and concise description of what this PR does.
 
