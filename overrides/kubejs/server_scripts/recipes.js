@@ -557,6 +557,7 @@ function tweaks(event) {
 	
 	event.replaceInput({ id: "computercraft:cable" }, MC('redstone'), PR_C('red_ingot'))
 	event.replaceInput({ id: "computercraft:wired_modem" }, MC('redstone'), PR_C('red_ingot'))
+	event.replaceInput({ id: /backpacks/ }, MC('redstone'), MC('copper_ingot'))
 	event.replaceInput({ id: CR('crafting/kinetics/rope_pulley') }, '#forge:wool', '#supplementaries:ropes')
 	event.replaceInput({ output: CR('adjustable_chain_gearshift') }, CR('electron_tube'), MC('redstone'))
 
@@ -1622,7 +1623,12 @@ function obsidianMachine(event) {
 	event.remove({ input: 'create:railway_casing' })
 	event.remove({ output: 'create:railway_casing' })
 	event.shapeless(CR('railway_casing'), [MC('deepslate'), CR('golden_sheet')])
-	event.shaped(KJ('reinforced_mechanism'), [MC('obsidian'), KJ('kinetic_mechanism'), MC('obsidian')])
+	event.shaped(KJ('reinforced_mechanism'), [
+		'OCO'
+	], {
+		C: KJ('kinetic_mechanism'),
+		O: MC('obsidian')
+	})
 	donutCraft(event, KJ('gold_machine'), CR('railway_casing'), KJ('reinforced_mechanism'))
 
 	let gold_machine = (id, amount, other_ingredient) => {
