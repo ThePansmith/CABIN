@@ -15,6 +15,7 @@ let TE = (id, x) => MOD("thermal", id, x)
 let AP = (id, x) => MOD("architects_palette", id, x)
 let LV = (id, x) => MOD("libvulpes", id, x)
 let CR = (id, x) => MOD("create", id, x)
+let CD = (id, x) => MOD("createdeco", id, x)
 let TC = (id, x) => MOD("tconstruct", id, x)
 let MC = (id, x) => MOD("minecraft", id, x)
 let KJ = (id, x) => MOD("kubejs", id, x)
@@ -151,8 +152,6 @@ onEvent('item.tags', event => {
 	event.get('forge:super_glues').add(CR('super_glue'))
 	event.get('forge:wrenches').add(CR('wrench'))
 	event.get('forge:tools/wrench').add(CR('wrench'))
-	event.get('forge:plates/zinc').add(KJ("zinc_sheet"))
-
 	event.get('thermal:crafting/dies').add('#forge:trade_cards')
 	event.get('thermal:crafting/dies').add('#forge:profession_cards')
 	event.get('thermal:crafting/casts').add(KJ("three_cast")).add(KJ("eight_cast")).add(KJ("plus_cast")).add(KJ("minus_cast")).add(KJ("multiply_cast")).add(KJ("divide_cast")).add(F("#circuit_press"))
@@ -571,7 +570,7 @@ function tweaks(event) {
 	tweak_casing('brass', [CR('brass_sheet'), '#minecraft:logs'], CR)
 	tweak_casing('refined_radiance', [CR('refined_radiance'), '#minecraft:logs'], CR)
 	tweak_casing('shadow_steel', [CR('shadow_steel'), '#minecraft:logs'], CR)
-	tweak_casing('zinc', [KJ('zinc_sheet'), 'minecraft:stone'], KJ)
+	tweak_casing('zinc', [CD('zinc_sheet'), 'minecraft:stone'], KJ)
 	tweak_casing('invar', [TE('invar_ingot'), 'minecraft:stone'], KJ)
 	tweak_casing('enderium', [MC('ender_pearl'), 'minecraft:obsidian'], KJ)
 	tweak_casing('fluix', [TE('lead_plate'), 'minecraft:blackstone'], KJ)
@@ -623,7 +622,6 @@ function tweaks(event) {
 	bedrock_cobblegen(AP("chiseled_packed_ice"), MC("diorite"))
 	bedrock_cobblegen(AP("packed_ice_pillar"), CR("scoria"))
 
-	event.recipes.createPressing([KJ('zinc_sheet')], CR('zinc_ingot'))
 	event.recipes.createPressing([TE('nickel_plate')], TE('nickel_ingot'))
 
 //	event.remove({ id: "chisel:charcoal/raw" })

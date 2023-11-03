@@ -81,7 +81,6 @@ onEvent('item.registry', event => {
 	event.create('charged_calculator').texture("kubejs:item/charged_calculator").displayName('Calculator').maxDamage(64)
 	event.create('missingno').texture("kubejs:item/missingno").displayName('∄')
 	event.create('zinc_dust').texture("kubejs:item/zinc_dust").displayName('Zinc Dust')
-	event.create('zinc_sheet').texture("kubejs:item/zinc_sheet").displayName('Zinc Sheet')
 	event.create('creosote_pellet').texture("kubejs:item/creosote_pellet").displayName('Creosote Pellet')
 	event.create('sand_ball').texture("kubejs:item/sand_ball").displayName('Ball of Sand').unstackable()
 	event.create('rough_sand').texture("kubejs:item/rough_sand").displayName('Sand Chunks')
