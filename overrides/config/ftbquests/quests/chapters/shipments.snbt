@@ -3837,7 +3837,7 @@
 			tasks: [{
 				id: "3E2EAC7B2D274669"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]

@@ -521,7 +521,7 @@
 			rewards: [{
 				id: "60DDCBCC377BA8B6"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 25b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 25
 			}]
@@ -586,7 +586,7 @@
 			rewards: [{
 				id: "6C5F42C1888F0C63"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 16b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 15
 			}]
@@ -674,7 +674,7 @@
 			rewards: [{
 				id: "5CEE44BA4F587BB2"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 45b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 45
 			}]
@@ -716,7 +716,7 @@
 			rewards: [{
 				id: "7FA1F28AC13E3742"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 25
 			}]
@@ -759,7 +759,7 @@
 			rewards: [{
 				id: "158BDC6AB3DED2C8"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 45b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 45
 			}]
@@ -893,7 +893,7 @@
 				{
 					id: "76F8080C0E176A08"
 					type: "item"
-					icon: { id: "thermal:silver_coin", Count: 32b }
+					icon: "kubejs:silver_coin"
 					auto: "enabled"
 					item: "thermal:silver_coin"
 					count: 32
@@ -944,7 +944,7 @@
 			rewards: [{
 				id: "3D573B952A099408"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 25b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 25
 			}]
@@ -980,7 +980,7 @@
 			rewards: [{
 				id: "191FAA4E0A99AF43"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 45b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 45
 			}]
@@ -1001,7 +1001,7 @@
 			rewards: [{
 				id: "3125103507C80C78"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 15b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 15
 			}]
@@ -1054,7 +1054,7 @@
 			rewards: [{
 				id: "001C0326E6B6F1FF"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 25b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 25
 			}]
@@ -1108,7 +1108,7 @@
 			rewards: [{
 				id: "2EE90E45D02D23F1"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 45b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 45
 			}]
@@ -1147,7 +1147,7 @@
 			rewards: [{
 				id: "652AE60D13691604"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 55b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 55
 			}]
@@ -1189,7 +1189,7 @@
 			rewards: [{
 				id: "57CF6CE48FF1115D"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 50b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 50
 			}]
@@ -1210,7 +1210,7 @@
 			rewards: [{
 				id: "5D7DB09D0FA7B0A5"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 50b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 50
 			}]
@@ -1229,7 +1229,7 @@
 			rewards: [{
 				id: "0D8EB996DBC24C64"
 				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 2b }
+				icon: "kubejs:gold_coin"
 				item: "thermal:gold_coin"
 				count: 2
 			}]
@@ -1251,8 +1251,8 @@
 			rewards: [{
 				id: "76F2C38DE80E75F0"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 15b }
-				item: "kubejs:silver_coin"
+				icon: "kubejs:silver_coin"
+				item: "thermal:silver_coin"
 				count: 15
 			}]
 		}
@@ -1392,7 +1392,7 @@
 				{
 					id: "72ADE787CA674127"
 					type: "item"
-					icon: { id: "thermal:silver_coin", Count: 10b }
+					icon: "kubejs:silver_coin"
 					auto: "enabled"
 					item: "thermal:silver_coin"
 					count: 10
@@ -1440,7 +1440,7 @@
 			rewards: [{
 				id: "52C6094274D540AB"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 60b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 60
 			}]
