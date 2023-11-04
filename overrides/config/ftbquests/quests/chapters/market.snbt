@@ -594,7 +594,7 @@
 			tasks: [{
 				id: "32ACF7B1C0BD9D97"
 				type: "item"
-				icon: "minecraft:calcite"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 25L
 			}]
