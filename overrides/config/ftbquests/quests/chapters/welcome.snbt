@@ -162,6 +162,7 @@
 			rewards: [{
 				id: "583C35BA7A7B9004"
 				type: "item"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 15
 			}]

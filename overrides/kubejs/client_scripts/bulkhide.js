@@ -328,4 +328,6 @@ onEvent('rei.hide.items', event => {
 	event.hide('create:crushed_raw_quicksilver')
 	event.hide('create:crushed_raw_aluminum')
 	event.hide('create:crushed_raw_uranium')
+	event.hide('kubejs:silver_coin')   
+    event.hide('kubejs:gold_coin')
 })

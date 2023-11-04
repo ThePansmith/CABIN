@@ -19,7 +19,7 @@
 			tasks: [{
 				id: "0783860FB502A201"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -44,7 +44,7 @@
 			tasks: [{
 				id: "5345AA8760A95127"
 				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 2b }
+				icon: "kubejs:gold_coin"
 				item: "thermal:gold_coin"
 				count: 2L
 			}]
@@ -104,7 +104,7 @@
 				{
 					id: "3EE8736C08EF80F4"
 					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 5b }
+					icon: "kubejs:gold_coin"
 					item: "thermal:gold_coin"
 					count: 5L
 				}
@@ -165,7 +165,7 @@
 				{
 					id: "74585BB7E80CF010"
 					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 5b }
+					icon: "kubejs:gold_coin"
 					item: "thermal:gold_coin"
 					count: 5L
 				}
@@ -224,7 +224,7 @@
 				{
 					id: "5B31A98B9EFCCFAB"
 					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 7b }
+					icon: "kubejs:gold_coin"
 					item: "thermal:gold_coin"
 					count: 7L
 				}
@@ -270,7 +270,7 @@
 		}
 		{
 			title: "Manual Exchange"
-			icon: { id: "thermal:silver_coin", Count: 16b }
+			icon: "kubejs:silver_coin"
 			x: -4.0d
 			y: -4.0d
 			shape: "circle"
@@ -287,7 +287,7 @@
 				{
 					id: "26512E93CE404069"
 					type: "item"
-					icon: { id: "thermal:silver_coin", Count: 64b }
+					icon: "kubejs:silver_coin"
 					auto: "enabled"
 					item: "thermal:silver_coin"
 					count: 64
@@ -304,7 +304,7 @@
 		}
 		{
 			title: "Manual Exchange"
-			icon: { id: "thermal:gold_coin", Count: 2b }
+			icon: "kubejs:silver_coin"
 			x: -8.0d
 			y: -4.0d
 			shape: "circle"
@@ -315,7 +315,7 @@
 			tasks: [{
 				id: "2387D852CA97AD1A"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 64b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 64L
 			}]
@@ -347,7 +347,7 @@
 			tasks: [{
 				id: "6235F365D702DF2B"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -395,7 +395,7 @@
 			tasks: [{
 				id: "188BEC2BA245DB13"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 15b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 15L
 			}]
@@ -440,7 +440,7 @@
 			tasks: [{
 				id: "3EA558277444F605"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 50b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 50L
 			}]
@@ -594,7 +594,7 @@
 			tasks: [{
 				id: "32ACF7B1C0BD9D97"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 25b }
+				icon: "minecraft:calcite"
 				item: "thermal:silver_coin"
 				count: 25L
 			}]
@@ -627,7 +627,7 @@
 			tasks: [{
 				id: "165B9A886A26BCC8"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 60b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 60L
 			}]
@@ -648,7 +648,7 @@
 			tasks: [{
 				id: "4FB1B4787D648565"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 35b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 45L
 			}]
@@ -701,7 +701,7 @@
 				{
 					id: "04FA9389D991556D"
 					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 11b }
+					icon: "kubejs:gold_coin"
 					item: "thermal:gold_coin"
 					count: 7L
 				}
@@ -738,7 +738,7 @@
 			tasks: [{
 				id: "3D328A6D69E64EDA"
 				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 12b }
+				icon: "kubejs:gold_coin"
 				item: "thermal:gold_coin"
 				count: 6L
 			}]
@@ -761,7 +761,7 @@
 				{
 					id: "491FF95EFE8DCB67"
 					type: "item"
-					icon: { id: "thermal:silver_coin", Count: 5b }
+					icon: "kubejs:silver_coin"
 					item: "thermal:silver_coin"
 					count: 5L
 				}
@@ -799,7 +799,7 @@
 			tasks: [{
 				id: "30B16CC21946FE8E"
 				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 2b }
+				icon: "kubejs:gold_coin"
 				item: "thermal:gold_coin"
 				count: 2L
 			}]
@@ -831,7 +831,7 @@
 			tasks: [{
 				id: "2BF8F9E5070C6122"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 32b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 32L
 			}]
@@ -872,7 +872,7 @@
 			tasks: [{
 				id: "05BB5DFA82280C0C"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 24L
 			}]
@@ -919,7 +919,7 @@
 			tasks: [{
 				id: "6404722100F1DEF7"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 24L
 			}]
@@ -985,7 +985,7 @@
 			tasks: [{
 				id: "06C835DB602D6F9F"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 16b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 16L
 			}]
@@ -1006,7 +1006,7 @@
 			tasks: [{
 				id: "3AA788B63B6A73EF"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 24L
 			}]
@@ -1111,7 +1111,7 @@
 				{
 					id: "6837BEE1075CC785"
 					type: "item"
-					icon: { id: "thermal:silver_coin", Count: 48b }
+					icon: "kubejs:silver_coin"
 					item: "thermal:silver_coin"
 					count: 48L
 				}

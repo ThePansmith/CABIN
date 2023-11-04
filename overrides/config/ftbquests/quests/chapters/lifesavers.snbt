@@ -892,7 +892,8 @@
 			rewards: [{
 				id: "3D69B03DFCB41179"
 				type: "item"
-				item: "thermal:iron_coin"
+				icon: "kubejs:silver_coin"
+				item: "thermal:silver_coin"
 				count: 10
 			}]
 		}

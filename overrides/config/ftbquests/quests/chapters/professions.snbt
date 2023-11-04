@@ -62,7 +62,7 @@
 			tasks: [{
 				id: "121ECE09FBC2490A"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
@@ -144,7 +144,7 @@
 			tasks: [{
 				id: "40D5C78A3738FC5E"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
@@ -227,7 +227,7 @@
 			tasks: [{
 				id: "1D8BF49B36108A4D"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
@@ -267,7 +267,7 @@
 			tasks: [{
 				id: "7DB85322979AEF65"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
@@ -348,7 +348,7 @@
 			tasks: [{
 				id: "30824E76C57A8679"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
@@ -423,7 +423,7 @@
 			tasks: [{
 				id: "3F3272C9BFC25003"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
@@ -545,7 +545,7 @@
 			tasks: [{
 				id: "79BD40CF4A57DA36"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
@@ -610,7 +610,7 @@
 			tasks: [{
 				id: "042431BBCD1966C4"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30L
 			}]
@@ -1168,7 +1168,7 @@
 			rewards: [{
 				id: "15ACAE1E4D900E4C"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30
 			}]
@@ -1252,7 +1252,7 @@
 				id: "76F2C38DE80E75F0"
 				type: "item"
 				icon: { id: "thermal:silver_coin", Count: 15b }
-				item: "thermal:silver_coin"
+				item: "kubejs:silver_coin"
 				count: 15
 			}]
 		}
@@ -1304,7 +1304,7 @@
 			rewards: [{
 				id: "1727FE45C409A64E"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 30b }
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 30
 			}]

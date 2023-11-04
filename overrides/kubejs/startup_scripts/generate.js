@@ -107,6 +107,8 @@ onEvent('item.registry', event => {
 	event.create('divide_cast').texture("kubejs:item/divide_cast").displayName('Operator Cast (/)').unstackable()
 	event.create('computation_matrix').parentModel("kubejs:item/computation_matrix").displayName('Computation Matrix').rarity(RARITY_UNCOMMON).unstackable()
 	event.create('attachment_base').texture("kubejs:item/attachment_base").displayName('Attachment Base')
+	event.create('silver_coin').texture("kubejs:item/silver_coin").displayName('Silver Coin Stack Icon')
+	event.create('gold_coin').texture("kubejs:item/gold_coin").displayName('Gold Coin Stack Icon')
 })
 
 onEvent('block.registry', event => {
