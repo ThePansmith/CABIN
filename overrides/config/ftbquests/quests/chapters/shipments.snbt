@@ -1053,7 +1053,7 @@
 			icon: "minecraft:amethyst_shard"
 			disable_toast: true
 			x: 3.5d
-			y: 7.0d
+			y: 8.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
 			id: "01F3EDC327B63908"
@@ -1217,7 +1217,7 @@
 			title: "4x Cinnabar"
 			icon: "thermal:cinnabar"
 			disable_toast: true
-			x: -0.5d
+			x: 0.5d
 			y: 7.0d
 			shape: "hexagon"
 			subtitle: "16 Silver"
@@ -1250,7 +1250,7 @@
 			title: "16x Redstone Dust"
 			icon: "minecraft:redstone"
 			disable_toast: true
-			x: 0.5d
+			x: 1.5d
 			y: 7.0d
 			shape: "hexagon"
 			subtitle: "8 Silver"
@@ -1283,7 +1283,7 @@
 			title: "1x Diamond"
 			icon: "minecraft:diamond"
 			disable_toast: true
-			x: 1.5d
+			x: 2.5d
 			y: 7.0d
 			shape: "hexagon"
 			subtitle: "1 Gold"
@@ -1316,7 +1316,7 @@
 			title: "8x Lapis Lazuli"
 			icon: "minecraft:lapis_lazuli"
 			disable_toast: true
-			x: 2.5d
+			x: 3.5d
 			y: 7.0d
 			shape: "hexagon"
 			subtitle: "32 Silver"
@@ -1580,8 +1580,8 @@
 			title: "6x Cured Rubber"
 			icon: "thermal:cured_rubber"
 			disable_toast: true
-			x: 3.5d
-			y: 8.0d
+			x: 2.0d
+			y: 9.5d
 			shape: "hexagon"
 			subtitle: "16 Silver"
 			id: "488A4B4A3295CF10"
@@ -1613,7 +1613,7 @@
 			title: "16x Scaffolding"
 			icon: "minecraft:scaffolding"
 			disable_toast: true
-			x: -1.5d
+			x: -2.0d
 			y: 9.5d
 			shape: "hexagon"
 			subtitle: "2 Silver"
@@ -1646,7 +1646,7 @@
 			title: "1x Wool"
 			icon: "minecraft:white_wool"
 			disable_toast: true
-			x: -0.5d
+			x: -1.0d
 			y: 9.5d
 			shape: "hexagon"
 			subtitle: "8 Silver"
@@ -1679,7 +1679,7 @@
 			title: "1x Sponge"
 			icon: "minecraft:sponge"
 			disable_toast: true
-			x: 0.5d
+			x: 1.0d
 			y: 9.5d
 			shape: "hexagon"
 			subtitle: "16 Silver"
@@ -1712,7 +1712,7 @@
 			title: "1x Cobweb"
 			icon: "minecraft:cobweb"
 			disable_toast: true
-			x: 1.5d
+			x: 0.0d
 			y: 9.5d
 			shape: "hexagon"
 			subtitle: "16 Silver"
@@ -3874,6 +3874,7 @@
 			tasks: [{
 				id: "7040CEB8E0B25C4B"
 				type: "item"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 				consume_items: true
@@ -3882,6 +3883,7 @@
 				{
 					id: "1B9ABC1FB22D5A5F"
 					type: "item"
+					auto: "enabled"
 					item: "kubejs:trade_card_iron_sheet_metal"
 				}
 				{
@@ -3905,6 +3907,7 @@
 			tasks: [{
 				id: "229575A1F4440B37"
 				type: "item"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -3912,6 +3915,7 @@
 				{
 					id: "392B8B372A0EFB42"
 					type: "item"
+					auto: "enabled"
 					item: "kubejs:trade_card_glow_berries"
 				}
 				{
@@ -3935,6 +3939,7 @@
 			tasks: [{
 				id: "37ADF61FC03B4C2A"
 				type: "item"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -3942,6 +3947,7 @@
 				{
 					id: "24F734399AE4D396"
 					type: "item"
+					auto: "enabled"
 					item: "kubejs:trade_card_glow_lichen"
 				}
 				{
@@ -3964,6 +3970,7 @@
 			tasks: [{
 				id: "01C6C40FAA354934"
 				type: "item"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -3971,6 +3978,7 @@
 				{
 					id: "027915A405B20646"
 					type: "item"
+					auto: "enabled"
 					item: "kubejs:trade_card_moss_block"
 				}
 				{
@@ -3994,6 +4002,7 @@
 			tasks: [{
 				id: "0AB3ED0B9BDA13BC"
 				type: "item"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -4001,6 +4010,7 @@
 				{
 					id: "3734299704FB3F86"
 					type: "item"
+					auto: "enabled"
 					item: "kubejs:trade_card_glowing_moss_block"
 				}
 				{
@@ -4024,15 +4034,26 @@
 			tasks: [{
 				id: "034EC9523C7B1914"
 				type: "item"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
-			rewards: [{
-				id: "17462E7C5F835004"
-				type: "item"
-				auto: "no_toast"
-				item: "kubejs:trade_card_glow_ink_sac"
-			}]
+			rewards: [
+				{
+					id: "17462E7C5F835004"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:trade_card_glow_ink_sac"
+				}
+				{
+					id: "629907BC19801F8E"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					tags: ["reset"]
+					auto: "no_toast"
+				}
+			]
 		}
 		{
 			title: "8x Cobbled Deepslate"
@@ -4045,6 +4066,7 @@
 			tasks: [{
 				id: "2C547C8C3B1D4530"
 				type: "item"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -4052,6 +4074,7 @@
 				{
 					id: "4BC62D1FB35515D6"
 					type: "item"
+					auto: "enabled"
 					item: "kubejs:trade_card_cobbled_deepslate"
 				}
 				{
@@ -4075,7 +4098,7 @@
 			tasks: [{
 				id: "4141C439BFBDF1FD"
 				type: "item"
-				icon: "thermal:silver_coin"
+				icon: "kubejs:silver_coin"
 				item: "thermal:silver_coin"
 				count: 10L
 			}]
@@ -4083,6 +4106,7 @@
 				{
 					id: "28C9BA04E5E7E281"
 					type: "item"
+					auto: "enabled"
 					item: "kubejs:trade_card_honeycomb_block"
 				}
 				{
@@ -4091,6 +4115,38 @@
 					title: "Repeatable"
 					icon: "thermal:machine_cycle_augment"
 					tags: ["reset"]
+				}
+			]
+		}
+		{
+			title: "1x Bitumen"
+			icon: "thermal:bitumen"
+			x: -0.5d
+			y: 7.0d
+			shape: "hexagon"
+			subtitle: "3x Gold"
+			id: "53A0ED15395EE1C9"
+			tasks: [{
+				id: "1F55B86BB2A2EB5F"
+				type: "item"
+				icon: "kubejs:silver_coin"
+				item: "thermal:silver_coin"
+				count: 10L
+			}]
+			rewards: [
+				{
+					id: "7B2ED7C22E8D675B"
+					type: "item"
+					auto: "enabled"
+					item: "kubejs:trade_card_bitumen"
+				}
+				{
+					id: "44861FFB651C7796"
+					type: "custom"
+					title: "Repeatable"
+					icon: "thermal:machine_cycle_augment"
+					tags: ["reset"]
+					auto: "no_toast"
 				}
 			]
 		}

@@ -574,34 +574,18 @@
 			x: -2.5d
 			y: 8.0d
 			shape: "circle"
-			description: ["For powering our Rocket, we will require some very potent fuel. Search some of the warmer biomes or the oceans for it. You cannot miss it."]
+			description: [
+				"For powering our Rocket, we will require some very potent fuel. Search some of the warmer biomes or the oceans for crude oil to get started."
+				""
+				"If having no luck finding crude oil, perhaps there could be another way to get the heavy oil you need..."
+			]
 			hide_dependency_lines: true
 			dependencies: ["5D0454F977C4F080"]
 			id: "4761DAE59CDD93AF"
 			tasks: [{
-				id: "22F3791E442D6B38"
-				type: "item"
-				title: "Any Crude Oil"
-				item: {
-					id: "itemfilters:or"
-					Count: 1b
-					tag: {
-						items: [
-							{
-								id: "thermal:crude_oil_bucket"
-								Count: 1b
-							}
-							{
-								id: "kubejs:crude_oil_bucket"
-								Count: 1b
-							}
-							{
-								id: "beyond_earth:oil_bucket"
-								Count: 1b
-							}
-						]
-					}
-				}
+				id: "75BA7954B280A213"
+				type: "checkmark"
+				title: "Oil Found"
 			}]
 		}
 		{

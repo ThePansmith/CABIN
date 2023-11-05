@@ -19,6 +19,7 @@ let SP = (id, x) => MOD("supplementaries", id, x)
 let F = (id, x) => MOD("forge", id, x)
 let AC = (id, x) => MOD("aquaculture", id, x)
 let CD = (id, x) => MOD("createdeco", id, x)
+let QR = (id, x) => MOD("quark", id, x)
 //
 
 
@@ -100,6 +101,8 @@ onEvent('item.registry', event => {
 		{ in: BOP('palm_log', 64), out: S(3) },
 		{ in: BOP('mahogany_log', 64), out: S(3) },
 		{ in: BOP('magic_log', 64), out: S(3) },
+		{ in: QR('azalea_log', 64), out: S(3) },
+		{ in: QR('blossom_log', 64), out: S(3) },
 		{ in: MC('crimson_stem', 64), out: S(4) },
 		{ in: MC('warped_stem', 64), out: S(4) },
 		{ in: BOP('hellbark_log', 64), out: S(8) }
@@ -434,6 +437,8 @@ onEvent('item.registry', event => {
 		simple("Certus Quartz", AE2('certus_quartz_crystal', 8), 24, S, 0x91C5FC, 0xA7CBCF)
 		simple("Fluix Quartz", AE2('fluix_crystal', 8), 32, S, 0x8F5CCB, 0xFC7ED4)
 		simple("Cured Rubber", TE('cured_rubber', 6), 16, S, 0x3D363C, 0x594F55)
+		simple("Bitumen", TE('bitumen', 1), 3, G, 0x0B0909, 0x0B0909)
+
 		
 		next_group()
 		entry_cost = 10
