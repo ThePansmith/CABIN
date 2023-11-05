@@ -306,7 +306,8 @@ function beforeNuke(event) {
 
 function unwantedRecipes(event) {
 
-	event.remove({ output: '#forge:coins' })
+	event.remove({ output: '#forge:coins/gold' })
+	event.remove({ output: '#forge:coins/silver' })
 	event.remove({ output: AE2('grindstone') })
 	event.remove({ output: TE('tin_block') })
 	event.remove({ output: AE2('vibration_chamber') })
