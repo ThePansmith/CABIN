@@ -305,9 +305,6 @@ function beforeNuke(event) {
 }
 
 function unwantedRecipes(event) {
-
-	event.remove({ output: '#forge:coins/gold' })
-	event.remove({ output: '#forge:coins/silver' })
 	event.remove({ output: AE2('grindstone') })
 	event.remove({ output: TE('tin_block') })
 	event.remove({ output: AE2('vibration_chamber') })
@@ -333,6 +330,7 @@ function unwantedRecipes(event) {
 	event.remove({ id: "tconstruct:tables/scorched_forge" })
 	event.remove({ id: /tconstruct:smeltery\/melting\/ender\/.*/ })
 	event.remove({ id: /tconstruct:smeltery\/casting\/ender\/.*/ })
+	event.remove({ id: /tconstruct:smeltery\/.*\/coin.*/ })
 	event.remove({ id: /tconstruct:smeltery\/.*\/tin.*/ })
 	event.remove({ id: /ae2:tools\/paintballs.*/ })
 	event.remove({ id: "grapplemod:repeller" })
