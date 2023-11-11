@@ -327,6 +327,7 @@ function unwantedRecipes(event) {
 	event.remove({ type: TE('press') })
 	event.remove({ id: /thermal:earth_charge\/.*/ })
 	event.remove({ id: /thermal:machines\/smelter\/.*dust/ })
+	event.remove({ id: /tconstruct:smeltery\/melting\/metal\/.*\/dust/ })
 	event.remove({ id: /tconstruct:smeltery\/.*\/ore/ })
 	event.remove({ id: "tconstruct:smeltery/entity_melting/ender" })
 	event.remove({ id: "tconstruct:tables/tinkers_forge" })
