@@ -1348,6 +1348,7 @@ function oreProcessing(event) {
 		event.remove({ input: "#forge:ores/" + name, type: CR("crushing") })
 		event.remove({ input: "#forge:ores/" + name, type: CR("milling") })
 		event.remove({ id: TC('smeltery/melting/metal/' + name + '/raw_block') })
+		event.remove({ id: TC('smeltery/melting/metal/' + name + '/dust') })
 		event.remove({ id: CR('crushing/raw_' + name + '_block') })	
 
 		event.custom({
