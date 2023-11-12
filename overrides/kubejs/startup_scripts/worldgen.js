@@ -25,8 +25,6 @@ onEvent('worldgen.add', event => {
     })
     event.addOre(ore => {
       ore.id = 'kubejs:ruby_ore_gen'
-
-      // examples on how to use targets
       ore.addTarget('#minecraft:stone_ore_replaceables', 'thermal:ruby_ore')
       ore.addTarget('minecraft:deepslate', 'thermal:deepslate_ruby_ore')
 
@@ -36,8 +34,6 @@ onEvent('worldgen.add', event => {
           anchors.aboveBottom(3),    
           anchors.absolute(32)	      
         )								              
-  
-      // more, optional parameters (default values are shown here)
       ore.size = 5                            
       ore.noSurface = 0.5                     
       ore.worldgenLayer = 'underground_ores'  
@@ -45,8 +41,6 @@ onEvent('worldgen.add', event => {
     })
     event.addOre(ore => {
       ore.id = 'kubejs:sapphire_ore_gen'
-
-      // examples on how to use targets
       ore.addTarget('#minecraft:stone_ore_replaceables', 'thermal:sapphire_ore')
       ore.addTarget('minecraft:deepslate', 'thermal:deepslate_sapphire_ore')
 
@@ -56,30 +50,42 @@ onEvent('worldgen.add', event => {
           anchors.aboveBottom(3),    
           anchors.absolute(32)	      
         )								              
-  
-      // more, optional parameters (default values are shown here)
       ore.size = 7                          
       ore.noSurface = 0.5                     
       ore.worldgenLayer = 'underground_ores'  
       ore.chance = 0							
     })
     event.addOre(ore => {
-      ore.id = 'kubejs:extra_cinnabar_ore_gen'
-
-      // examples on how to use targets
+      ore.id = 'kubejs:cinnabar_ore_gen'
       ore.addTarget('#minecraft:stone_ore_replaceables', 'thermal:cinnabar_ore')
       ore.addTarget('minecraft:deepslate', 'thermal:deepslate_cinnabar_ore')
 
-      ore.count([0, 1])                        
+      ore.count([0, 5])             
+        .squared()                    
         .triangleHeight(				      
           anchors.aboveBottom(3),    
           anchors.absolute(64)	      
         )								              
-      // more, optional parameters (default values are shown here)
-      ore.size = 25                         
+      ore.size = 7                          
       ore.noSurface = 0.5                     
       ore.worldgenLayer = 'underground_ores'  
       ore.chance = 0							
+    })
+
+    event.addOre(ore => {
+      ore.id = 'kubejs:extra_cinnabar_ore_gen'
+
+      ore.addTarget('#minecraft:stone_ore_replaceables', 'thermal:cinnabar_ore')
+      ore.addTarget('minecraft:deepslate', 'thermal:deepslate_cinnabar_ore')
+                 
+        .triangleHeight(				      
+          anchors.aboveBottom(3),    
+          anchors.absolute(64)	      
+        )								              
+      ore.size = 35                         
+      ore.noSurface = 0.75                     
+      ore.worldgenLayer = 'underground_ores'  
+      ore.chance = 16						
         }
 	)})
 
