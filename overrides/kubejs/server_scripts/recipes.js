@@ -2818,7 +2818,29 @@ function trading(event) {
 function stripping(event) {
 	event.remove({ input: '#minecraft:logs', type: 'farmersdelight:cutting' })
 
-	let normal_wood_types = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), AP('twisted')]
+	let normal_wood_types = [
+		MC('oak'), 
+		MC('spruce'), 
+		MC('birch'), 
+		MC('jungle'), 
+		MC('acacia'), 
+		MC('dark_oak'), 
+		BOP('fir'), 
+		BOP('redwood'), 
+		BOP('cherry'), 
+		BOP('mahogany'), 
+		BOP('jacaranda'), 
+		BOP('palm'), 
+		BOP('willow'), 
+		BOP('dead'), 
+		BOP('magic'), 
+		BOP('umbran'), 
+		BOP('hellbark'), 
+		AP('twisted'),
+		TC('greenheart'),
+		TC('skyroot'),
+		TC('bloodshroom')
+	]
 	//laziness and its consequences have been a distaster for the human race
 	normal_wood_types.forEach(wood => {
 		event.custom({
