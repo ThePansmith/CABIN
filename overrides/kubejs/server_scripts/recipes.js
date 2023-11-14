@@ -117,7 +117,7 @@ onEvent('item.tags', event => {
 	let unregistered_axes = [
 		"ae2:certus_quartz_axe",
 		"ae2:nether_quartz_axe",
-		"ae2:fluix_axe"
+		"ae2:fluix_axe",
 		"tconstruct:hand_axe",
 		"tconstruct:mattock",
 		"tconstruct:broad_axe",
