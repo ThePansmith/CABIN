@@ -802,6 +802,7 @@ function tweaks(event) {
 		},
 		"temperature": 950,
 		"time": 97,
+		"rate": "metal",
 		"byproducts": [
 			{
 				"fluid": "tconstruct:molten_iron",
@@ -821,6 +822,7 @@ function tweaks(event) {
 		},
 		"temperature": 1175,
 		"time": 143,
+		"rate": "metal",
 		"byproducts": [
 			{
 				"fluid": "tconstruct:molten_diamond",
