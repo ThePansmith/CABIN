@@ -89,10 +89,11 @@ onEvent('recipes', event => {
 	madMaths(event)
 	alchemy(event)
 	barrels(event)
-    rocketScience(event)
+	rocketScience(event)
 	drawersop(event)
 	trading(event)
 	glitch(event)
+	stripping(event)
 	log.push('Recipes Updated')
 })
 
@@ -113,7 +114,28 @@ onEvent('item.tags', event => {
 	event.get("farmersdelight:offhand_equipment").add("forbidden_arcanus:obsidian_skull_shield")
 
 //	event.get("forge:raw_chicken").add("exoticbirds:raw_birdmeat")
-	event.get("forge:tools/axes").add(TC("hand_axe"))
+	let unregistered_axes = [
+		"ae2:certus_quartz_axe",
+		"ae2:nether_quartz_axe",
+		"ae2:fluix_axe"
+		"tconstruct:hand_axe",
+		"tconstruct:mattock",
+		"tconstruct:broad_axe",
+		"buddycards:buddysteel_axe",
+		"enlightened_end:tenebrium_axe",
+		"enlightened_end:starsteel_axe",
+		"enlightened_end:adamantite_axe",
+		"thermal:flux_saw",
+		"aquaculture:neptunium_axe",
+		"forbidden_arcanus:draco_arcanus_axe",
+		"forbidden_arcanus:arcane_golden_axe",
+		"forbidden_arcanus:reinforced_arcane_golden_axe"
+	]
+	
+	unregistered_axes.forEach(axe => {
+		event.get("forge:tools/axes").add(axe)
+	});
+	
 	event.get("forge:vines").add(MC("vine")).add(BOP("willow_vine")).add(BOP("spanish_moss"))
 	event.get("forge:recycling")
 //		.add("extcaves:rusty_pickaxe")
@@ -2793,6 +2815,42 @@ function trading(event) {
 	});
 }
 
+function stripping(event) {
+	event.remove({ input: '#minecraft:logs', type: 'farmersdelight:cutting' })
+
+	let normal_wood_types = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), AP('twisted')]
+	//laziness and its consequences have been a distaster for the human race
+	normal_wood_types.forEach(wood => {
+		event.custom({
+			"type": "farmersdelight:cutting",
+			"ingredients": [{ "item": wood + "_log" }],
+			"tool": { "tag": "forge:tools/axes" },
+			"result": [{ "item": wood.replace(':',':stripped_') + "_log" }, { "item": "farmersdelight:tree_bark" }]
+		})
+		event.custom({
+			"type": "farmersdelight:cutting",
+			"ingredients": [{ "item": wood + "_wood" }],
+			"tool": { "tag": "forge:tools/axes" },
+			"result": [{ "item": wood.replace(':',':stripped_') + "_wood" }, { "item": "farmersdelight:tree_bark" }]
+		})
+	})
+	
+	let special_wood_types = [MC('crimson'), MC('warped')] //"special"
+	special_wood_types.forEach(wood => {
+		event.custom({
+			"type": "farmersdelight:cutting",
+			"ingredients": [{ "item": wood + "_stem" }],
+			"tool": { "tag": "forge:tools/axes" },
+			"result": [{ "item": wood.replace(':',':stripped_') + "_stem" }, { "item": "farmersdelight:tree_bark" }]
+		})
+		event.custom({
+			"type": "farmersdelight:cutting",
+			"ingredients": [{ "item": wood + "_hyphae" }],
+			"tool": { "tag": "forge:tools/axes" },
+			"result": [{ "item": wood.replace(':',':stripped_') + "_hyphae" }, { "item": "farmersdelight:tree_bark" }]
+		})
+	})
+}
 
 // Program 
 
