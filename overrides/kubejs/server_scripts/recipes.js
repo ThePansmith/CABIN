@@ -582,6 +582,7 @@ function tweaks(event) {
 	event.replaceInput({ id: "computercraft:cable" }, MC('redstone'), PR_C('red_ingot'))
 	event.replaceInput({ id: "computercraft:wired_modem" }, MC('redstone'), PR_C('red_ingot'))
 	event.replaceInput({ id: /backpacks/ }, MC('redstone'), MC('copper_ingot'))
+	event.replaceInput({ id: "forbidden_arcanus:mundabitur_dust" }, MC('phantom_membrane'), TE('apatite_dust'))
 	event.replaceInput({ id: CR('crafting/kinetics/rope_pulley') }, '#forge:wool', '#supplementaries:ropes')
 	event.replaceInput({ output: CR('adjustable_chain_gearshift') }, CR('electron_tube'), MC('redstone'))
 
@@ -1132,6 +1133,12 @@ function unify(event) {
 	event.recipes.createMilling(KJ("zinc_dust"), CR("zinc_ingot"))
 
 	event.replaceInput({ id: OC("ritual/summon_djinni_crusher") }, '#forge:dusts/silver', KJ('zinc_dust'))
+	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/silver', KJ('zinc_dust'))
+	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/iron', TE('iron_dust'))
+	event.replaceInput({ id: OC("ritual/craft_miner_foliot_unspecialized") }, '#forge:raw_materials/iron', TE('iron_dust'))
+	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/gold', TE('gold_dust'))
+	event.replaceInput({ id: OC("ritual/craft_miner_dinji_unspecialized") }, '#forge:raw_materials/iron', TE('iron_dust'))
+	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/copper', TE('copper_dust'))
 	event.replaceOutput({ id: CR('compat/ae2/milling/gold') }, AE2('gold_dust'), TE('gold_dust'))
 	event.replaceOutput({ id: CR('compat/ae2/milling/iron') }, AE2('iron_dust'), TE('iron_dust'))
 	event.replaceOutput({ id: OC('crushing/iron_dust_from_ingot') }, OC('iron_dust'), TE('iron_dust'))
