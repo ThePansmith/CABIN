@@ -11,7 +11,7 @@
 	#Range: 0 ~ 1000000
 	sampleSpaceModifier = 16
 	#A list of biomes that the compass will not be able to search for, specified by resource location. The wildcard character * can be used to match any number of characters, and ? can be used to match one character. Ex: ["minecraft:savanna", "minecraft:desert", "minecraft:*ocean*"]
-	biomeBlacklist = []
+	biomeBlacklist = ["beyond_earth:*"]
 	#The maximum number of samples to be taken when searching for a biome.
 	#Range: 0 ~ 1000000
 	maxSamples = 50000

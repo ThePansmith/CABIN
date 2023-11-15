@@ -21,7 +21,7 @@
 		# Entries must have the mod namespace included.
 		# For example: "[minecraft:desert, byg:dunes]"
 		# Default: "[]"
-		"Blacklisted Biomes (Desert)" = "[]"
+		"Blacklisted Biomes (Desert)" = "[beyond_earth:moon_desert]"
 
 		###########################################################################################################
 		## Settings for the different Desert Well variations.
