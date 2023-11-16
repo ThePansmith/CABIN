@@ -25,7 +25,7 @@
 
 
   "disallowedFeatureDimensions": {
-    "all": "theabyss:.+, the_bumblezone:the_bumblezone, undergarden:undergarden, the_midnight:the_midnight, advancedrocketry:space, pokecube:secret_base, pokecube_legends:distorted_world, pokecube_legends:ultraspace, dystopia:dystopia, elvenation:elvenia_dimension, futurepack:.+, the_afterlight:.+, lotr:middle_earth, thebeginning:.+, twilightforest:twilight_forest",
+    "all": "theabyss:.+, the_bumblezone:the_bumblezone, undergarden:undergarden, the_midnight:the_midnight, advancedrocketry:space, pokecube:secret_base, pokecube_legends:distorted_world, pokecube_legends:ultraspace, dystopia:dystopia, elvenation:elvenia_dimension, futurepack:.+, the_afterlight:.+, lotr:middle_earth, thebeginning:.+, twilightforest:twilight_forest, beyond_earth:.+",
     "repurposed_structures:well_badlands": "aoa3:barathos"
   },
   //-------------------------------------------------------------------------------------------------------------------------------------------------
