@@ -1204,6 +1204,8 @@ function unify(event) {
 	event.recipes.createPressing([TE('signalum_plate')], TE('signalum_ingot'))
 	event.recipes.createPressing([TE('constantan_plate')], TE('constantan_ingot'))
 
+  event.replaceInput({ id: TE('machines/smelter/smelter_silver_plate_to_ingot') }, TE('invar_ingot'), TE('silver_plate'))
+
 	let woodcutting = (mod, log, planks, slab) => {
 		event.recipes.createCutting([mod + ":stripped_" + log], mod + ":" + log).processingTime(50)
 		event.recipes.createCutting([Item.of(mod + ":" + planks, 6)], mod + ":stripped_" + log).processingTime(50)
