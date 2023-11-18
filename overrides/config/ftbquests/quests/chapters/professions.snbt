@@ -849,42 +849,6 @@
 								id: "supplementaries:pancake_disc"
 								Count: 1b
 							}
-							{
-								id: "quark:music_disc_drips"
-								Count: 1b
-							}
-							{
-								id: "quark:music_disc_ocean"
-								Count: 1b
-							}
-							{
-								id: "quark:music_disc_rain"
-								Count: 1b
-							}
-							{
-								id: "quark:music_disc_wind"
-								Count: 1b
-							}
-							{
-								id: "quark:music_disc_fire"
-								Count: 1b
-							}
-							{
-								id: "quark:music_disc_clock"
-								Count: 1b
-							}
-							{
-								id: "quark:music_disc_crickets"
-								Count: 1b
-							}
-							{
-								id: "quark:music_disc_chatter"
-								Count: 1b
-							}
-							{
-								id: "quark:music_disc_endermosh"
-								Count: 1b
-							}
 						]
 					}
 				}
