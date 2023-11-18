@@ -42,7 +42,7 @@
 	Oddities = true
 
 [automation]
-	"Redstone Randomizer" = true
+	"Redstone Randomizer" = false
 	"Pistons Move Tile Entities" = false
 	"Obsidian Plate" = true
 	"Metal Buttons" = true
