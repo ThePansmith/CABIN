@@ -405,7 +405,6 @@ function unwantedRecipes(event) {
 	event.remove({ id: TE('storage/electrum_block') })
 	event.remove({ id: TE('storage/electrum_nugget_from_ingot') })
 	event.remove({ id: TE('machines/pulverizer/pulverizer_electrum_ingot_to_dust') })
-	event.remove({ id: TE('machines/pulverizer/pulverizer_electrum_ingot_to_dust') })
 	event.remove({ id: TE('parts/electrum_gear') })
 	event.remove({ id: AP('smelting/charcoal_block_from_logs_that_burn_smoking') })
 	event.remove({ id: 'portality:generator' })
@@ -1203,8 +1202,16 @@ function unify(event) {
 	event.recipes.createPressing([TE('lumium_plate')], TE('lumium_ingot'))
 	event.recipes.createPressing([TE('signalum_plate')], TE('signalum_ingot'))
 	event.recipes.createPressing([TE('constantan_plate')], TE('constantan_ingot'))
+  
+  event.remove( {id: TE('machines/pulverizer/pulverizer_invar_plate_to_dust') })
+  event.replaceInput({ id: TE('machines/pulverizer/pulverizer_silver_plate_to_dust') }, TE('invar_ingot'), TE('silver_plate'))
+  event.replaceInput({ id: TE('machines/pulverizer/pulverizer_bronze_plate_to_dust') }, TE('nickel_plate'), TE('bronze_plate'))
+  event.replaceInput({ id: TE('machines/pulverizer/pulverizer_constantan_plate_to_dust') }, TE('signalum_plate'), TE('constantan_plate'))
 
+  event.remove( {id: TE('machines/smelter/smelter_invar_plate_to_ingot') })
   event.replaceInput({ id: TE('machines/smelter/smelter_silver_plate_to_ingot') }, TE('invar_ingot'), TE('silver_plate'))
+  event.replaceInput({ id: TE('machines/smelter/smelter_bronze_plate_to_ingot') }, TE('nickel_plate'), TE('bronze_plate'))
+  event.replaceInput({ id: TE('machines/smelter/smelter_constantan_plate_to_ingot') }, TE('signalum_plate'), TE('constantan_plate'))
 
 	let woodcutting = (mod, log, planks, slab) => {
 		event.recipes.createCutting([mod + ":stripped_" + log], mod + ":" + log).processingTime(50)
@@ -1453,9 +1460,6 @@ function alloys(event) {
 	event.remove({ id: TC('smeltery/alloys/molten_enderium') })
 	event.remove({ id: TC('smeltery/alloys/molten_lumium') })
 	event.remove({ id: TC('smeltery/alloys/molten_signalum') })
-
-	event.remove({ id: TE('machines/smelter/smelter_bronze_plate_to_ingot') })
-	event.remove({ id: TC('thermalmachines/pulverizer/pulverizer_bronze_plate_to_ingot') })
 
 	event.custom({
 		"type": "tconstruct:alloy",
