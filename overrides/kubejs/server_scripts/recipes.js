@@ -1201,12 +1201,16 @@ function unify(event) {
   event.replaceInput({ id: TE('machines/pulverizer/pulverizer_silver_plate_to_dust') }, TE('invar_ingot'), '#forge:plates/silver')
   event.replaceInput({ id: TE('machines/pulverizer/pulverizer_bronze_plate_to_dust') }, TE('nickel_plate'), '#forge:plates/bronze')
   event.replaceInput({ id: TE('machines/pulverizer/pulverizer_constantan_plate_to_dust') }, TE('signalum_plate'), '#forge:plates/constantan')
+  event.replaceInput({ id: TE('machines/pulverizer/pulverizer_electrum_plate_to_dust') }, TE('constantan_plate'), '#forge:plates/electrum')
 
   event.remove( {id: TE('machines/smelter/smelter_invar_plate_to_ingot') })
   event.replaceInput({ id: TE('machines/smelter/smelter_silver_plate_to_ingot') }, TE('invar_ingot'), '#forge:plates/silver')
   event.replaceInput({ id: TE('machines/smelter/smelter_bronze_plate_to_ingot') }, TE('nickel_plate'), '#forge:plates/bronze')
   event.replaceInput({ id: TE('machines/smelter/smelter_constantan_plate_to_ingot') }, TE('signalum_plate'), '#forge:plates/constantan')
+  event.replaceInput({ id: TE('machines/smelter/smelter_electrum_plate_to_ingot') }, TE('constantan_plate'), '#forge:plates/electrum')
 
+  event.replaceInput({ id: OC('crushing/electrum_dust_from_ingot') }, TE('constantan_ingot'), '#forge:ingots/electrum')
+  
 	let woodcutting = (mod, log, planks, slab) => {
 		event.recipes.createCutting([mod + ":stripped_" + log], mod + ":" + log).processingTime(50)
 		event.recipes.createCutting([Item.of(mod + ":" + planks, 6)], mod + ":stripped_" + log).processingTime(50)
