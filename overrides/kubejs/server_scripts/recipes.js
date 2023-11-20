@@ -968,6 +968,52 @@ function barrels(event) {
 
 function rocketScience(event) {
 
+	event.remove({ id: BE("nasa_workbenching/tier1") })
+	event.remove({ id: BE("nasa_workbenching/tier2") })
+	event.remove({ id: BE("nasa_workbenching/tier3") })
+	event.remove({ id: BE("nasa_workbenching/tier4") })
+	event.remove({ id: BE("rover") })
+
+	event.remove({ id: BE("oxygen_mask") })
+	event.remove({ id: BE("space_suit") })
+	event.remove({ id: BE("space_leggings") })
+	event.remove({ id: BE("space_boots") })
+
+
+	event.remove({ id: BE("hammer") })
+	event.remove({ id: BE("iron_stick") })
+	event.remove({ id: BE("oxygen_gear") })
+	event.remove({ id: BE("wheel") })
+	event.remove({ id: BE("engine_frame") })
+	event.remove({ id: BE("engine_fan") })
+	event.remove({ id: BE("rocket_nose_cone") })
+
+	event.remove({ id: BE("iron_engine") })
+	event.remove({ id: BE("gold_engine") })
+	event.remove({ id: BE("diamond_engine") })
+	event.remove({ id: BE("calorite_engine") })
+	
+	event.remove({ id: BE("iron_tank") })
+	event.remove({ id: BE("gold_tank") })
+	event.remove({ id: BE("diamond_tank") })
+	event.remove({ id: BE("calorite_tank") })
+
+	event.remove({ id: BE("rocket_fin") })
+
+	event.remove({ id: BE("iron_plate") })
+	event.remove({ id: BE("desh_plate") })
+
+	event.remove({ id: BE("rocket_launch_pad") })
+	event.remove({ id: BE("nasa_workbench") })
+
+	event.remove({ id: BE("solar_panel") })
+	event.remove({ id: BE("coal_generator") })
+	event.remove({ id: BE("compressor") })
+	event.remove({ id: BE("fuel_refinery") })
+	event.remove({ id: BE("oxygen_loader") })
+	event.remove({ id: BE("oxygen_bubble_distributer") })
+	event.remove({ id: BE("water_pump") })
+
 	event.recipes.createCompacting(KJ("matter_plastics"), [AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball")]).superheated()
 
 	let gear = TE("diamond_gear")
