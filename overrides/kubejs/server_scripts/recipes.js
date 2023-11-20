@@ -740,10 +740,28 @@ function tweaks(event) {
 		})
 	}
 
+  event.remove({ id: TE("storage/copper_nugget_from_ingot")})
+  event.remove({ id: TC("common/materials/copper_nugget_from_ingot")})
+  event.remove({ id: TE("storage/copper_ingot_from_nuggets")})
+  event.remove({ id: TC("common/materials/copper_ingot_from_nuggets")})
+
 	event.remove({ id: TC("smeltery/casting/metal/copper/nugget_gold_cast") })
 	event.remove({ id: TC("smeltery/casting/metal/copper/nugget_sand_cast") })
 
 	cast("nugget", TC("molten_copper"), 10, CR("copper_nugget"), 17)
+
+  event.remove({ id: TE("storage/netherite_nugget_from_ingot")})
+  event.remove({ id: TC("common/materials/netherite_nugget_from_ingot")})
+  event.remove({ id: TE("storage/netherite_ingot_from_nuggets")})
+  event.remove({ id: TC("common/materials/netherite_ingot_from_nuggets")})
+
+  event.remove({ id: TC("smeltery/casting/metal/netherite/nugget_gold_cast") })
+  event.remove({ id: TC("smeltery/casting/metal/netherite/nugget_sand_cast") })
+  event.remove({ id: TC("smeltery/casting/metal/netherite/plate_gold_cast") })
+  event.remove({ id: TC("smeltery/casting/metal/netherite/plate_sand_cast") })
+
+  cast("nugget", TC("molten_netherite"), 10, CD("netherite_nugget"), 17)
+  cast("plate", TC("molten_netherite"), 90, CD("netherite_sheet"), 75)
 
   event.remove({id: "alloyed:mixing/bronze_ingot"})
   event.remove({id: "alloyed:mixing/bronze_ingot_x3"})
@@ -752,8 +770,6 @@ function tweaks(event) {
   event.remove({ id: TE('storage/bronze_ingot_from_nuggets')})
   event.remove({ id: TE('storage/bronze_ingot_from_block')})
   event.remove({ id: TE('storage/bronze_block')})
-
-  event.replaceOutput({}, '#forge:ingots/bronze', 'alloyed:bronze_ingot')
 
   event.remove({ id: TC("smeltery/casting/metal/bronze/nugget_gold_cast")})
   event.remove({ id: TC("smeltery/casting/metal/bronze/nugget_sand_cast")})
@@ -767,6 +783,8 @@ function tweaks(event) {
   cast("nugget", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
   cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
   cast_block(TC("molten_bronze"), "alloyed:bronze_block")
+
+  event.replaceInput({id: TE("machines/smelter/smelter_alloy_netherite")}, TE("gold_dust"), MC("gold_ingot"))
 
 	event.custom({
 		"type": "tconstruct:melting",
@@ -1147,21 +1165,12 @@ function unify(event) {
 	event.replaceOutput({ type: OC("crushing") }, OC('gold_dust'), TE('gold_dust'))
 	event.replaceOutput({ type: OC("crushing") }, OC('silver_dust'), TE('silver_dust'))
 
-	event.replaceInput({}, '#forge:plates/iron', CR('iron_sheet'))
-	event.replaceInput({}, '#forge:plates/gold', CR('golden_sheet'))
-	event.replaceInput({}, '#forge:dusts/gold', TE('gold_dust'))
-	event.replaceInput({}, '#forge:dusts/iron', TE('iron_dust'))
-	event.replaceInput({}, '#forge:dusts/copper', TE('copper_dust'))
-	event.replaceInput({}, '#forge:plates/copper', CR('copper_sheet'))
-	event.replaceInput({}, '#forge:ingots/copper', MC('copper_ingot'))
-	event.replaceOutput({}, '#forge:ingots/copper', MC('copper_ingot'))
-	event.replaceInput({}, '#forge:nuggets/copper', CR('copper_nugget'))
 	event.replaceOutput({}, '#forge:nuggets/copper', CR('copper_nugget'))
-	event.replaceOutput({}, '#forge:ores/copper', MC('copper_ore'))
+	event.replaceOutput({}, '#forge:nuggets/netherite', CD('netherite_nugget'))
 	event.replaceOutput({}, '#forge:nuggets/silver', TE('silver_nugget'))
 	event.replaceOutput({}, '#forge:ingots/silver', TE('silver_ingot'))
+  event.replaceOutput({}, '#forge:ingots/bronze', 'alloyed:bronze_ingot')
 	event.replaceOutput({}, '#forge:storage_blocks/silver', TE('silver_block'))
-	event.replaceInput({}, '#forge:storage_blocks/copper', MC('copper_block'))
 	event.replaceOutput({}, '#forge:storage_blocks/copper', MC('copper_block'))
 	event.replaceInput({}, '#forge:gems/ruby', TE('ruby'))
 	event.replaceInput({}, '#forge:gems/sapphire', TE('sapphire'))
