@@ -22,45 +22,40 @@ onEvent('rei.hide.items', event => {
     coinhide('zinc')
 })
 
-  onEvent('rei.group', event => {
+onEvent('rei.group', event => {
 
-    event.groupItemsByTag('supplementaries:rei_groups/hanging_signs', 'Sign Posts', 'supplementaries:hanging_signs')
-    event.groupItemsByTag('supplementaries:rei_groups/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
-    event.groupItemsByTag('tconstruct:rei_groups/modifiable', 'Tinkers Tools', 'tconstruct:modifiable')
-    event.groupItemsByTag('tconstruct:rei_groups/parts', 'Tinkers Parts', 'tconstruct:parts')
+	event.groupItemsByTag('supplementaries:rei_groups/hanging_signs', 'Sign Posts', 'supplementaries:hanging_signs')
+	event.groupItemsByTag('supplementaries:rei_groups/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
+	event.groupItemsByTag('tconstruct:rei_groups/modifiable', 'Tinkers Tools', 'tconstruct:modifiable')
+	event.groupItemsByTag('tconstruct:rei_groups/parts', 'Tinkers Parts', 'tconstruct:parts')
 
-    const useNbt = ['potion', 'enchanted_book', 'splash_potion', 'tipped_arrow', 'lingering_potion', 'reliquary:potion', 'reliquary:potion_essence', 'reliquary:splash_potion', 'reliquary:lingering_potion', 'reliquary:tipped_arrow', 'tconstruct:potion_bucket', 'tconstruct:crafting_station','tconstruct:tinker_station','tconstruct:part_builder', 'tconstruct:modifier_worktable', 'tconstruct:tinkers_anvil', 'tconstruct:scorched_anvil', 'tconstruct:repair_kit', 'chiselandbits:block_bit']
-  
-    useNbt.forEach(id => {
-      const item = Item.of(id)
-      const { namespace, path } = Utils.id(item.id)
-      event.groupSameItem(`kubejs:rei_groups/${namespace}/${path}`, item.name, item)
-    })
-  
+	const useNbt = ['potion', 'enchanted_book', 'splash_potion', 'tipped_arrow', 'lingering_potion', 'reliquary:potion', 'reliquary:potion_essence', 'reliquary:splash_potion', 'reliquary:lingering_potion', 'reliquary:tipped_arrow', 'tconstruct:potion_bucket', 'tconstruct:crafting_station', 'tconstruct:tinker_station', 'tconstruct:part_builder', 'tconstruct:modifier_worktable', 'tconstruct:tinkers_anvil', 'tconstruct:scorched_anvil', 'tconstruct:repair_kit', 'chiselandbits:block_bit']
 
-
-    event.groupItems('kubejs:rei_groups/microblocks', 'Microblocks', [
-        /microblock/,
-    ])
-
-    event.groupItems('kubejs:rei_groups/buddycards', 'Buddy Cards', [
-      /buddycard/
-  ])
-
-  event.groupItems('kubejs:rei_groups/fluidbuckets', 'Buckets of Fluids', [
-    /bucket/
-])
-
-event.groupItems('kubejs:rei_groups/spawneggs', 'Spawn Eggs', [
-  /spawn_egg/
-])
-
-event.groupItems('kubejs:rei_groups/tinkerstools', 'Spawn Eggs', [
-  /spawn_egg/
-])
+	useNbt.forEach(id => {
+		const item = Item.of(id)
+		const { namespace, path } = Utils.id(item.id)
+		event.groupSameItem(`kubejs:rei_groups/${namespace}/${path}`, item.name, item)
+	})
 
 
-  })
+
+	event.groupItems('kubejs:rei_groups/microblocks', 'Microblocks', [
+		/microblock/,
+	])
+
+	event.groupItems('kubejs:rei_groups/buddycards', 'Buddy Cards', [
+		/buddycard/
+	])
+
+	event.groupItems('kubejs:rei_groups/fluidbuckets', 'Buckets of Fluids', [
+		/bucket/
+	])
+
+	event.groupItems('kubejs:rei_groups/spawneggs', 'Spawn Eggs', [
+		/spawn_egg/
+	])
+
+})
 
   onEvent('item.tooltip', tooltip => {
     let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots} Slots`])
