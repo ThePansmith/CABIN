@@ -784,8 +784,6 @@ function tweaks(event) {
   cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
   cast_block(TC("molten_bronze"), "alloyed:bronze_block")
 
-  event.replaceInput({id: TE("machines/smelter/smelter_alloy_netherite")}, TE("gold_dust"), MC("gold_ingot"))
-
 	event.custom({
 		"type": "tconstruct:melting",
 		"ingredient": {
@@ -1159,6 +1157,7 @@ function unify(event) {
 	event.replaceInput({ id: TE('augments/rf_coil_xfer_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('augments/rf_coil_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('tools/detonator') }, F('#ingots/silver'), TE('lead_ingot'))
+  event.replaceInput({ id: TE("machines/smelter/smelter_alloy_netherite")}, TE("gold_dust"), MC("gold_ingot"))
 
 	event.replaceOutput({ type: OC("crushing") }, OC('copper_dust'), TE('copper_dust'))
 	event.replaceOutput({ type: OC("crushing") }, OC('iron_dust'), TE('iron_dust'))
