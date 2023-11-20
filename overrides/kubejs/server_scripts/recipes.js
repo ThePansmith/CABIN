@@ -394,7 +394,7 @@ function unwantedRecipes(event) {
 	event.remove({ id: TE('machines/pulverizer/pulverizer_cinnabar') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_signalum') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_lumium') })
-  event.remove({ id: TE('machines/smelter/smelter_alloy_electrum') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_electrum') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_enderium') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_invar') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_constantan') })
@@ -571,8 +571,8 @@ function tweaks(event) {
 	})
 
 	event.forEachRecipe({id: /alkahestry/}, recipe => {
-        recipe.id(recipe.getId() + '_manual_only')
-    })
+		recipe.id(recipe.getId() + '_manual_only')
+	})
 	
 	event.replaceInput({ id: "computercraft:cable" }, MC('redstone'), PR_C('red_ingot'))
 	event.replaceInput({ id: "computercraft:wired_modem" }, MC('redstone'), PR_C('red_ingot'))
@@ -740,49 +740,49 @@ function tweaks(event) {
 		})
 	}
 
-  event.remove({ id: TE("storage/copper_nugget_from_ingot")})
-  event.remove({ id: TC("common/materials/copper_nugget_from_ingot")})
-  event.remove({ id: TE("storage/copper_ingot_from_nuggets")})
-  event.remove({ id: TC("common/materials/copper_ingot_from_nuggets")})
+	event.remove({ id: TE("storage/copper_nugget_from_ingot")})
+	event.remove({ id: TC("common/materials/copper_nugget_from_ingot")})
+	event.remove({ id: TE("storage/copper_ingot_from_nuggets")})
+	event.remove({ id: TC("common/materials/copper_ingot_from_nuggets")})
 
 	event.remove({ id: TC("smeltery/casting/metal/copper/nugget_gold_cast") })
 	event.remove({ id: TC("smeltery/casting/metal/copper/nugget_sand_cast") })
 
 	cast("nugget", TC("molten_copper"), 10, CR("copper_nugget"), 17)
 
-  event.remove({ id: TE("storage/netherite_nugget_from_ingot")})
-  event.remove({ id: TC("common/materials/netherite_nugget_from_ingot")})
-  event.remove({ id: TE("storage/netherite_ingot_from_nuggets")})
-  event.remove({ id: TC("common/materials/netherite_ingot_from_nuggets")})
+	event.remove({ id: TE("storage/netherite_nugget_from_ingot")})
+	event.remove({ id: TC("common/materials/netherite_nugget_from_ingot")})
+	event.remove({ id: TE("storage/netherite_ingot_from_nuggets")})
+	event.remove({ id: TC("common/materials/netherite_ingot_from_nuggets")})
 
-  event.remove({ id: TC("smeltery/casting/metal/netherite/nugget_gold_cast") })
-  event.remove({ id: TC("smeltery/casting/metal/netherite/nugget_sand_cast") })
-  event.remove({ id: TC("smeltery/casting/metal/netherite/plate_gold_cast") })
-  event.remove({ id: TC("smeltery/casting/metal/netherite/plate_sand_cast") })
+	event.remove({ id: TC("smeltery/casting/metal/netherite/nugget_gold_cast") })
+	event.remove({ id: TC("smeltery/casting/metal/netherite/nugget_sand_cast") })
+	event.remove({ id: TC("smeltery/casting/metal/netherite/plate_gold_cast") })
+	event.remove({ id: TC("smeltery/casting/metal/netherite/plate_sand_cast") })
 
-  cast("nugget", TC("molten_netherite"), 10, CD("netherite_nugget"), 17)
-  cast("plate", TC("molten_netherite"), 90, CD("netherite_sheet"), 75)
+	cast("nugget", TC("molten_netherite"), 10, CD("netherite_nugget"), 17)
+	cast("plate", TC("molten_netherite"), 90, CD("netherite_sheet"), 75)
 
-  event.remove({id: "alloyed:mixing/bronze_ingot"})
-  event.remove({id: "alloyed:mixing/bronze_ingot_x3"})
+	event.remove({id: "alloyed:mixing/bronze_ingot"})
+	event.remove({id: "alloyed:mixing/bronze_ingot_x3"})
 
-  event.remove({ id: TE('storage/bronze_nugget_from_ingot')})
-  event.remove({ id: TE('storage/bronze_ingot_from_nuggets')})
-  event.remove({ id: TE('storage/bronze_ingot_from_block')})
-  event.remove({ id: TE('storage/bronze_block')})
+	event.remove({ id: TE('storage/bronze_nugget_from_ingot')})
+	event.remove({ id: TE('storage/bronze_ingot_from_nuggets')})
+	event.remove({ id: TE('storage/bronze_ingot_from_block')})
+	event.remove({ id: TE('storage/bronze_block')})
 
-  event.remove({ id: TC("smeltery/casting/metal/bronze/nugget_gold_cast")})
-  event.remove({ id: TC("smeltery/casting/metal/bronze/nugget_sand_cast")})
-  event.remove({ id: TC("smeltery/casting/metal/bronze/ingot_gold_cast")})
-  event.remove({ id: TC("smeltery/casting/metal/bronze/ingot_sand_cast")})
-  event.remove({ id: TC("smeltery/casting/metal/bronze/plate_gold_cast")})
-  event.remove({ id: TC("smeltery/casting/metal/bronze/plate_sand_cast")})
-  event.remove({ id: TC("smeltery/casting/metal/bronze/block")})
+	event.remove({ id: TC("smeltery/casting/metal/bronze/nugget_gold_cast")})
+	event.remove({ id: TC("smeltery/casting/metal/bronze/nugget_sand_cast")})
+	event.remove({ id: TC("smeltery/casting/metal/bronze/ingot_gold_cast")})
+	event.remove({ id: TC("smeltery/casting/metal/bronze/ingot_sand_cast")})
+	event.remove({ id: TC("smeltery/casting/metal/bronze/plate_gold_cast")})
+	event.remove({ id: TC("smeltery/casting/metal/bronze/plate_sand_cast")})
+	event.remove({ id: TC("smeltery/casting/metal/bronze/block")})
 
-  cast("nugget", TC("molten_bronze"), 10, "alloyed:bronze_nugget", 17)
-  cast("nugget", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
-  cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
-  cast_block(TC("molten_bronze"), "alloyed:bronze_block")
+	cast("nugget", TC("molten_bronze"), 10, "alloyed:bronze_nugget", 17)
+	cast("nugget", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
+	cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
+	cast_block(TC("molten_bronze"), "alloyed:bronze_block")
 
 	event.custom({
 		"type": "tconstruct:melting",
@@ -1157,7 +1157,7 @@ function unify(event) {
 	event.replaceInput({ id: TE('augments/rf_coil_xfer_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('augments/rf_coil_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('tools/detonator') }, F('#ingots/silver'), TE('lead_ingot'))
-  event.replaceInput({ id: TE("machines/smelter/smelter_alloy_netherite")}, TE("gold_dust"), MC("gold_ingot"))
+	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_netherite")}, TE("gold_dust"), MC("gold_ingot"))
 
 	event.replaceOutput({ type: OC("crushing") }, OC('copper_dust'), TE('copper_dust'))
 	event.replaceOutput({ type: OC("crushing") }, OC('iron_dust'), TE('iron_dust'))
@@ -1168,7 +1168,7 @@ function unify(event) {
 	event.replaceOutput({}, '#forge:nuggets/netherite', CD('netherite_nugget'))
 	event.replaceOutput({}, '#forge:nuggets/silver', TE('silver_nugget'))
 	event.replaceOutput({}, '#forge:ingots/silver', TE('silver_ingot'))
-  event.replaceOutput({}, '#forge:ingots/bronze', 'alloyed:bronze_ingot')
+	event.replaceOutput({}, '#forge:ingots/bronze', 'alloyed:bronze_ingot')
 	event.replaceOutput({}, '#forge:storage_blocks/silver', TE('silver_block'))
 	event.replaceOutput({}, '#forge:storage_blocks/copper', MC('copper_block'))
 	event.replaceInput({}, '#forge:gems/ruby', TE('ruby'))
@@ -1200,21 +1200,21 @@ function unify(event) {
 	event.recipes.createPressing([TE('lumium_plate')], TE('lumium_ingot'))
 	event.recipes.createPressing([TE('signalum_plate')], TE('signalum_ingot'))
 	event.recipes.createPressing([TE('constantan_plate')], TE('constantan_ingot'))
-  
-  event.remove( {id: TE('machines/pulverizer/pulverizer_invar_plate_to_dust') })
-  event.replaceInput({ id: TE('machines/pulverizer/pulverizer_silver_plate_to_dust') }, TE('invar_ingot'), '#forge:plates/silver')
-  event.replaceInput({ id: TE('machines/pulverizer/pulverizer_bronze_plate_to_dust') }, TE('nickel_plate'), '#forge:plates/bronze')
-  event.replaceInput({ id: TE('machines/pulverizer/pulverizer_constantan_plate_to_dust') }, TE('signalum_plate'), '#forge:plates/constantan')
-  event.replaceInput({ id: TE('machines/pulverizer/pulverizer_electrum_plate_to_dust') }, TE('constantan_plate'), '#forge:plates/electrum')
+	
+	event.remove( {id: TE('machines/pulverizer/pulverizer_invar_plate_to_dust') })
+	event.replaceInput({ id: TE('machines/pulverizer/pulverizer_silver_plate_to_dust') }, TE('invar_ingot'), '#forge:plates/silver')
+	event.replaceInput({ id: TE('machines/pulverizer/pulverizer_bronze_plate_to_dust') }, TE('nickel_plate'), '#forge:plates/bronze')
+	event.replaceInput({ id: TE('machines/pulverizer/pulverizer_constantan_plate_to_dust') }, TE('signalum_plate'), '#forge:plates/constantan')
+	event.replaceInput({ id: TE('machines/pulverizer/pulverizer_electrum_plate_to_dust') }, TE('constantan_plate'), '#forge:plates/electrum')
 
-  event.remove( {id: TE('machines/smelter/smelter_invar_plate_to_ingot') })
-  event.replaceInput({ id: TE('machines/smelter/smelter_silver_plate_to_ingot') }, TE('invar_ingot'), '#forge:plates/silver')
-  event.replaceInput({ id: TE('machines/smelter/smelter_bronze_plate_to_ingot') }, TE('nickel_plate'), '#forge:plates/bronze')
-  event.replaceInput({ id: TE('machines/smelter/smelter_constantan_plate_to_ingot') }, TE('signalum_plate'), '#forge:plates/constantan')
-  event.replaceInput({ id: TE('machines/smelter/smelter_electrum_plate_to_ingot') }, TE('constantan_plate'), '#forge:plates/electrum')
+	event.remove( {id: TE('machines/smelter/smelter_invar_plate_to_ingot') })
+	event.replaceInput({ id: TE('machines/smelter/smelter_silver_plate_to_ingot') }, TE('invar_ingot'), '#forge:plates/silver')
+	event.replaceInput({ id: TE('machines/smelter/smelter_bronze_plate_to_ingot') }, TE('nickel_plate'), '#forge:plates/bronze')
+	event.replaceInput({ id: TE('machines/smelter/smelter_constantan_plate_to_ingot') }, TE('signalum_plate'), '#forge:plates/constantan')
+	event.replaceInput({ id: TE('machines/smelter/smelter_electrum_plate_to_ingot') }, TE('constantan_plate'), '#forge:plates/electrum')
 
-  event.replaceInput({ id: OC('crushing/electrum_dust_from_ingot') }, TE('constantan_ingot'), '#forge:ingots/electrum')
-  
+	event.replaceInput({ id: OC('crushing/electrum_dust_from_ingot') }, TE('constantan_ingot'), '#forge:ingots/electrum')
+	
 	let woodcutting = (mod, log, planks, slab) => {
 		event.recipes.createCutting([mod + ":stripped_" + log], mod + ":" + log).processingTime(50)
 		event.recipes.createCutting([Item.of(mod + ":" + planks, 6)], mod + ":stripped_" + log).processingTime(50)
@@ -1521,7 +1521,7 @@ function alloys(event) {
 	event.recipes.thermal.smelter(CR("brass_ingot", 2), [MC("copper_ingot"), CR("zinc_ingot")])
 	event.recipes.thermal.smelter(TC("rose_gold_ingot", 2), [MC("copper_ingot"), MC("gold_ingot")])
 	event.recipes.thermal.smelter(TE("constantan_ingot", 2), [MC("copper_ingot"), TE("nickel_ingot")])
-  event.recipes.thermal.smelter(TE("electrum_ingot", 2), [TE("silver_ingot"), MC("gold_ingot")])
+	event.recipes.thermal.smelter(TE("electrum_ingot", 2), [TE("silver_ingot"), MC("gold_ingot")])
 	event.recipes.thermal.smelter("3x alloyed:bronze_ingot", [MC("copper_ingot", 3), '#forge:sand'])
 
 }
