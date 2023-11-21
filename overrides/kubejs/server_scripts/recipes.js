@@ -33,6 +33,7 @@ let AC = (id, x) => MOD("aquaculture", id, x)
 let PP = (id, x) => MOD("prettypipes", id, x)
 let OC = (id, x) => MOD("occultism", id, x)
 let BE = (id, x) => MOD("beyond_earth", id, x)
+let AL = (id, x) => MOD("alloyed", id, x)
 //
 
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
@@ -595,7 +596,9 @@ function tweaks(event) {
 	tweak_casing('invar', [TE('invar_ingot'), 'minecraft:stone'], KJ)
 	tweak_casing('enderium', [MC('ender_pearl'), 'minecraft:obsidian'], KJ)
 	tweak_casing('fluix', [TE('lead_plate'), 'minecraft:blackstone'], KJ)
-
+	tweak_casing('steel', [AL('steel_ingot'), '#minecraft:logs'], AL)
+	tweak_casing('railway', [CR('golden_sheet'), 'minecraft:deepslate'], CR)
+	
 	event.custom({
 		"type": "tconstruct:melting",
 		"ingredient": { "tag": "forge:circuit_press" },
@@ -780,7 +783,7 @@ function tweaks(event) {
 	event.remove({ id: TC("smeltery/casting/metal/bronze/block")})
 
 	cast("nugget", TC("molten_bronze"), 10, "alloyed:bronze_nugget", 17)
-	cast("nugget", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
+	cast("ingot", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
 	cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
 	cast_block(TC("molten_bronze"), "alloyed:bronze_block")
 
@@ -1709,9 +1712,6 @@ function obsidianMachine(event) {
 
 	event.blasting(MC('magma_block'), MC('deepslate'))
 
-	event.remove({ input: 'create:railway_casing' })
-	event.remove({ output: 'create:railway_casing' })
-	event.shapeless(CR('railway_casing'), [MC('deepslate'), CR('golden_sheet')])
 	event.shaped(KJ('reinforced_mechanism'), [
 		'OCO'
 	], {
