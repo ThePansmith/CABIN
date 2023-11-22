@@ -755,9 +755,9 @@
 			y: 8.5d
 			subtitle: "Contraption 10-1"
 			description: [
-				"You should already be producing cobbled deepslate, so time to put it to use."
+				"Having a magma block be present when creating a stone block via water and lava causes an odd reaction where deepslate is formed instead."
 				""
-				"Firstly, smelt it into deepslate."
+				"Like with the andesite generator, drills should be used to harvest the deepslate, which will then need to be resmelted."
 			]
 			dependencies: [
 				"3F45DFEF31838A00"

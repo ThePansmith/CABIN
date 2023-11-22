@@ -50,19 +50,22 @@
 			}]
 			rewards: [
 				{
-					id: "352CB6B379E66DF8"
+					id: "5CAE42EDC4CE4A1D"
 					type: "command"
 					title: "Fortress Locator"
 					icon: "create:blaze_burner"
+					tags: [""]
+					auto: "enabled"
 					command: "/locate betterfortresses:fortress"
 					player_command: true
 				}
 				{
-					id: "5B530574A878C212"
+					id: "654464FB386A729A"
 					type: "custom"
 					title: "Repeatable"
 					icon: "thermal:machine_cycle_augment"
 					tags: ["reset"]
+					auto: "invisible"
 				}
 			]
 		}
@@ -776,7 +779,7 @@
 					id: "500098FD4762A38F"
 					type: "item"
 					auto: "enabled"
-					item: "minecraft:axolotl_spawn_egg"
+					item: "minecraft:axolotl_bucket"
 				}
 				{
 					id: "79C8307ED8450347"
@@ -1051,7 +1054,7 @@
 			description: [
 				"Various saplings prized for their unique leaves."
 				""
-				"The traveler who traded us this set also threw in some bamboo, claiming that \"a oriental build just doesn't work without it\"."
+				"The traveler who traded us this set also threw in some bamboo, claiming that \"an oriental build just doesn't work without it\"."
 			]
 			id: "7D93DAB3E8ACF953"
 			tasks: [{
@@ -1175,8 +1178,8 @@
 			}]
 		}
 		{
-			title: "Smelt and Stash"
-			icon: "sophisticatedbackpacks:auto_blasting_upgrade"
+			title: "Craft and Stash"
+			icon: "sophisticatedbackpacks:crafting_upgrade"
 			x: 0.5d
 			y: -1.5d
 			subtitle: "20 Silver"
@@ -1193,17 +1196,17 @@
 				{
 					id: "67E1EFF44408867B"
 					type: "item"
-					item: "sophisticatedbackpacks:auto_blasting_upgrade"
-				}
-				{
-					id: "0CE606B75F3B27B2"
-					type: "item"
-					item: "sophisticatedbackpacks:advanced_compacting_upgrade"
+					item: "sophisticatedbackpacks:crafting_upgrade"
 				}
 				{
 					id: "401831CDED2C1763"
 					type: "item"
-					item: "sophisticatedbackpacks:advanced_pickup_upgrade"
+					item: "sophisticatedbackpacks:pickup_upgrade"
+				}
+				{
+					id: "192D6973AB74C953"
+					type: "item"
+					item: "sophisticatedbackpacks:advanced_compacting_upgrade"
 				}
 			]
 		}

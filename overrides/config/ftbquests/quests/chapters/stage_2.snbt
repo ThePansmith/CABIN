@@ -527,7 +527,7 @@
 				""
 				"Every Zinc Machine will end up using 24 Buckets of Lava in Production. It's not a great ecological footprint, but even just one Hose Pulley can make quick work of it."
 				""
-				"Look into trains for transporting said lava."
+				"Look into trains for transporting said lava back to your base."
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -708,7 +708,6 @@
 			x: 1.0d
 			y: 2.0d
 			shape: "circle"
-			subtitle: "Contraption 10"
 			description: [
 				"Not part of the Mechanism Chain, yet very important for creating relevant machines."
 				""

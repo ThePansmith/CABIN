@@ -477,7 +477,7 @@
 			description: [
 				"In order for the blizz essence to form, the Entropy Manipulator present in the cart has to be charged."
 				""
-				"Ensure the charge in it restored before its next use."
+				"Ensure the charge in it is restored before its next use."
 			]
 			dependencies: ["4B34B52092BA32BE"]
 			id: "6D1519B746E032FB"
