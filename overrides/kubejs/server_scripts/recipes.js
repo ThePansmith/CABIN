@@ -596,7 +596,7 @@ function tweaks(event) {
 	tweak_casing('invar', [TE('invar_ingot'), 'minecraft:stone'], KJ)
 	tweak_casing('enderium', [MC('ender_pearl'), 'minecraft:obsidian'], KJ)
 	tweak_casing('fluix', [TE('lead_plate'), 'minecraft:blackstone'], KJ)
-	tweak_casing('steel', [AL('steel_ingot'), '#minecraft:logs'], AL)
+	tweak_casing('steel', [AL('steel_sheet'), '#minecraft:logs'], AL)
 	tweak_casing('railway', [CR('golden_sheet'), 'minecraft:deepslate'], CR)
 	
 	event.custom({
@@ -1736,6 +1736,7 @@ function obsidianMachine(event) {
 	gold_machine('create:schedule', 4)
 	gold_machine('create:track_observer', 2)
 	gold_machine('railways:conductor_whistle', 4)
+	gold_machine('railways:track_coupler', 2)
 	gold_machine('railways:track_switch_andesite', 1, 'create:andesite_alloy')
 	gold_machine('railways:track_switch_brass', 1, 'create:brass_ingot')
 }
