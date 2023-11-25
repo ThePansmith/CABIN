@@ -79,7 +79,7 @@ onEvent('recipes', event => {
 	alloys(event)
 	electronTube(event)
 	andesiteMachine(event)
-	obsidianMachine(event)
+	goldMachine(event)
 	copperMachine(event)
 	brassMachine(event)
 	zincMachine(event)
@@ -598,7 +598,26 @@ function tweaks(event) {
 	tweak_casing('fluix', [TE('lead_plate'), 'minecraft:blackstone'], KJ)
 	tweak_casing('steel', [AL('steel_sheet'), '#minecraft:logs'], AL)
 	tweak_casing('railway', [CR('golden_sheet'), 'minecraft:deepslate'], CR)
-	
+
+	let tweak_glass_casing = (name, mod) => {
+		event.remove({ output: ("create_crystal_clear:" + name + "_glass_casing") })
+		event.remove({ output: ("create_crystal_clear:" + name + "_clear_glass_casing") })
+		event.shapeless("create_crystal_clear:" + name + "_glass_casing", [mod(name + "_casing"), MC("glass")])
+		event.shapeless("create_crystal_clear:" + name + "_clear_glass_casing", [mod(name + "_casing"), TC("clear_glass")])
+	}
+
+	tweak_glass_casing('andesite', CR)
+	tweak_glass_casing('copper', CR)
+	tweak_glass_casing('brass', CR)
+
+	let tweak_glass_casing_diffname = (name, name2, mod) => {
+		event.remove({ output: ("create_crystal_clear:" + name + "_glass_casing") })
+		event.remove({ output: ("create_crystal_clear:" + name + "_clear_glass_casing") })
+		event.shapeless("create_crystal_clear:" + name + "_glass_casing", [mod(name2 + "_casing"), MC("glass")])
+		event.shapeless("create_crystal_clear:" + name + "_clear_glass_casing", [mod(name2 + "_casing"), TC("clear_glass")])
+	}
+	tweak_glass_casing_diffname('train', 'railway', CR)
+
 	event.custom({
 		"type": "tconstruct:melting",
 		"ingredient": { "tag": "forge:circuit_press" },
@@ -1708,7 +1727,7 @@ function andesiteMachine(event) {
 
 }
 
-function obsidianMachine(event) {
+function goldMachine(event) {
 
 	event.blasting(MC('magma_block'), MC('deepslate'))
 
