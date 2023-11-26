@@ -277,8 +277,6 @@
 				"Enchanting a bubbleblower with stasis allows it to be able to blow bubble blocks, which you can replace with other blocks, and walk on. (Crouch to extend duration)"
 				""
 				"Bubbleblowers require soap to work, but will never lose durability themselves."
-				""
-				"Stasis books can be found simifrequently in dungeon chests."
 			]
 			id: "0B8816319F81C12A"
 			tasks: [{
@@ -294,11 +292,18 @@
 				consume_items: false
 			}]
 			rewards: [{
-				id: "2F5DF773BBBA2725"
+				id: "7488D3D81C7FAC51"
 				type: "item"
-				icon: "supplementaries:soap"
-				item: "supplementaries:soap"
-				count: 3
+				item: {
+					id: "minecraft:enchanted_book"
+					Count: 1b
+					tag: {
+						StoredEnchantments: [{
+							lvl: 1s
+							id: "supplementaries:stasis"
+						}]
+					}
+				}
 			}]
 		}
 		{
