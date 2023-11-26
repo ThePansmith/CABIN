@@ -246,7 +246,7 @@
 			title: "Engineer's Companion"
 			x: -5.0d
 			y: -1.0d
-			description: ["Especially while building new Contraptions, this gadget is incredibly handy. Instead of filling up your pockets with components, simply pick up the toolbox from the workshop and bring it with you."]
+			description: ["Especially while building new Contraptions, this gadget is incredibly handy. Instead of filling up your pockets with components, you can remotely access the toolbox with a keybind. It also has a increased stacksize."]
 			id: "26C39961F2E2ABF2"
 			tasks: [{
 				id: "5E687A6CBD96D0EF"
