@@ -315,3 +315,9 @@ onEvent('item.modification', event => {
 	});
 })
 
+onEvent('block.modification', event => {
+    event.modify("pointed_dripstone",
+        block => {
+            block.randomlyTicking = false
+        })
+})
