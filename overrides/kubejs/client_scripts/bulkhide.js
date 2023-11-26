@@ -343,6 +343,7 @@ onEvent('rei.hide.items', event => {
 	event.hide('create:crushed_raw_uranium')
 	event.hide('kubejs:silver_coin')   
 	event.hide('kubejs:gold_coin')
+	event.hide('thermal:servo_attachment')
 })
 
 onEvent('rei.hide.fluids', event => {

@@ -905,8 +905,6 @@ function prettierpipes(event) {
 	})
 	event.remove({ output: TE('fluid_duct') })
 	event.remove({ output: TE('fluid_duct_windowed') })
-	event.shapeless("thermal:fluid_duct", [PP('pipe')])
-	event.shapeless("thermal:fluid_duct_windowed", [TE('fluid_duct'), MC('glass')])
 	event.remove({ output: TE('energy_duct') })
 	event.shaped("8x thermal:energy_duct", [
 		'PMP'
@@ -956,9 +954,8 @@ function prettierpipes(event) {
 			event.stonecutting(Item.of(id, amount), 'kubejs:attachment_base')
 	}
 	attachment_base('thermal:filter_attachment', 1)
-	attachment_base('thermal:servo_attachment', 1)
+	attachment_base('thermal:turbo_servo_attachment', 1, KJ('enderium_machine'))
 	attachment_base('thermal:energy_limiter_attachment', 1, CR('brass_ingot'))
-	attachment_base('thermal:turbo_servo_attachment', 1, TE('invar_ingot'))
 }
 
 function barrels(event) {
@@ -1719,7 +1716,7 @@ function andesiteMachine(event) {
 	andesite_machine('create:contraption_controls', 1)
 	andesite_machine('thermal:device_tree_extractor', 1, MC('bucket'))
 	andesite_machine(AE2('sky_compass'), 1, AE2('charged_certus_quartz_crystal'))
-	andesite_machine(AE2('charger'), 1, AE2('fluix_crystal'))
+	andesite_machine(AE2('charger'), 1, AE2('certus_quartz_crystal'))
 	andesite_machine('thermal:dynamo_stirling', 1, TE('rf_coil'))
 	andesite_machine('create:andesite_funnel', 4)
 	andesite_machine('create:andesite_tunnel', 4)
@@ -2288,6 +2285,7 @@ function enderMachine(event) {
 	ender_machine(TE("upgrade_augment_3"), 1, MC('redstone'))
 	ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
 	ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
+	ender_machine(TE("fluid_duct"), 6, CR('fluid_pipe'))
 	ender_machine('kubejs:pipe_module_tier_3', 4)
 
 }
