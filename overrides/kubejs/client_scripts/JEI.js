@@ -66,9 +66,8 @@ onEvent('rei.group', event => {
     tooltip.add("minecraft:redstone_ore", [`§7Does not generate, crush Cinnabar to obtain Redstone.`]);
     tooltip.add("minecraft:deepslate_redstone_ore", [`§7Does not generate, crush Cinnabar to obtain Redstone.`]);
     tooltip.add('supplementaries:ash', ['Created by burning wooden materals in-world'])
-	tooltip.add('storagedrawers:controller', ['Allows automation to insert and extract from connected drawers'])
-	tooltip.add('storagedrawers:controller_slave', ['Serves as a extra point for automation to insert and extract items from if a drawer controller is present.'])
-	tooltip.add('minecraft:pointed_dripstone', ['Despite the name, it does not drip fluids'])
+	  tooltip.add('storagedrawers:controller', ['Allows automation to insert and extract from connected drawers'])
+	  tooltip.add('storagedrawers:controller_slave', ['Serves as a extra point for automation to insert and extract items from if a drawer controller is present.'])
 
     holds('copper', 5 * 9)
     holds('iron', 6 * 9)
