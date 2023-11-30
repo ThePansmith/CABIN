@@ -1235,7 +1235,6 @@ function unify(event) {
 	event.replaceOutput({}, '#forge:ingots/silver', TE('silver_ingot'))
 	event.replaceOutput({}, '#forge:ingots/bronze', 'alloyed:bronze_ingot')
 	event.replaceOutput({}, '#forge:storage_blocks/silver', TE('silver_block'))
-	event.replaceOutput({}, '#forge:storage_blocks/copper', MC('copper_block'))
 	event.replaceInput({}, '#forge:gems/ruby', TE('ruby'))
 	event.replaceInput({}, '#forge:gems/sapphire', TE('sapphire'))
 	event.replaceInput({ id: "exchangers:thermal/thermal_exchanger_core_tier1" }, TE('ender_pearl_dust'), AE2('ender_dust'))
@@ -1598,6 +1597,9 @@ function electronTube(event) {
 	let redstone = MC('redstone')
 	event.shapeless('create:rose_quartz', [[MC('quartz'), AE2('certus_quartz_crystal'), AE2('charged_certus_quartz_crystal')], redstone, redstone, redstone, redstone])
 
+	event.recipes.createMilling([AE2('certus_quartz_dust')], AE2('#all_certus_quartz')).processingTime(200)
+	event.recipes.createMilling([TE('quartz_dust')], MC("quartz")).processingTime(200)
+
 	event.remove({ id: CR('compat/ae2/milling/sky_stone_block') })
 	event.remove({ id: CR('compat/ae2/milling/nether_quartz') })
 	event.remove({ id: CR('compat/ae2/milling/certus_quartz') })
@@ -1635,7 +1637,7 @@ function electronTube(event) {
 
 	event.recipes.createMixing(Fluid.of(TC("molten_obsidian"), 500), [AE2('sky_dust'), AE2('sky_dust'), AE2('sky_dust'), AE2('sky_dust'), Fluid.of(MC('water'), 500)])
 	event.recipes.createMixing([AE2('certus_quartz_crystal'), Fluid.of(TE("redstone"), 250)], [AE2('charged_certus_quartz_crystal'), Fluid.of(TC("molten_obsidian"), 250)])
-	event.recipes.createMixing(['create:polished_rose_quartz'], [[TE('quartz_dust'), AE2('certus_quartz_crystal')], Fluid.of(TE("redstone"), 250)])
+	event.recipes.createMixing(['create:polished_rose_quartz'], [AE2('certus_quartz_crystal'), Fluid.of(TE("redstone"), 250)])
 
 }
 
@@ -2456,7 +2458,7 @@ function circuits(event) {
 			.id('kubejs:' + e + "_processor")
 	})
 
-	event.recipes.thermal.smelter(AE2('quartz_glass'), TE('quartz_dust'))
+	event.recipes.thermal.smelter(AE2('quartz_glass'), [[AE2('certus_quartz_dust'), TE('quartz_dust')]])
 
 }
 

@@ -168,7 +168,6 @@ onEvent('rei.hide.items', event => {
 	event.hide('ae2:red_smart_dense_cable')
 	event.hide('ae2:black_smart_dense_cable')
 	event.hide('thermal:ender_pearl_dust')
-	event.hide('thermal:quartz_dust')
 	event.hide('ae2:iron_dust')
 	event.hide('ae2:gold_dust')
 	event.hide('occultism:obsidian_dust')
