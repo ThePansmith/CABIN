@@ -42,7 +42,7 @@ let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold']
 let wood_types = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), AP('twisted')]
 
 let donutCraft = (event, output, center, ring) => {
-	event.shaped(output, [
+	return event.shaped(output, [
 		'SSS',
 		'SCS',
 		'SSS'
@@ -1825,7 +1825,11 @@ function copperMachine(event) {
 
 	event.remove({ id: TC("smeltery/casting/seared/smeltery_controller") })
 	event.remove({ id: TC("smeltery/melting/copper/smeltery_controller") })
-	donutCraft(event, TC('smeltery_controller'), TC('seared_bricks'), KJ('sealed_mechanism'))
+
+	donutCraft(event, TC('smeltery_controller'), TC('#seared_blocks'), KJ('sealed_mechanism')).modifyResult((grid, result) => {
+		let item = grid.find(TC("#seared_blocks"))
+		return result.withNBT({texture: item.id})
+	})
 
 	let copper_machine = (id, amount, other_ingredient) => {
 		event.remove({ output: id })
@@ -1946,7 +1950,10 @@ function zincMachine(event) {
 	event.remove({ id: TC('smeltery/melting/soul/sand') })
 	// event.recipes.createMilling([Item.of(TE('basalz_powder'), 1)], TE("basalz_rod")).processingTime(300)
 
-	donutCraft(event, TC('foundry_controller'), TC('scorched_bricks'), KJ('infernal_mechanism'))
+	donutCraft(event, TC('foundry_controller'), TC('#scorched_blocks'), KJ('infernal_mechanism')).modifyResult((grid, result) => {
+		let item = grid.find(TC("#scorched_blocks"))
+		return result.withNBT({texture: item.id})
+	})
 
 	event.recipes.createMixing(Fluid.of(TC("liquid_soul"), 500), [MC('twisting_vines'), MC('weeping_vines')]).heated()
 
