@@ -43,10 +43,6 @@ onEvent('rei.group', event => {
 		/microblock/
 	])
 
-	// event.groupItems('kubejs:rei_groups/buddycards', 'Buddy Cards', [
-	// 	/buddycard/
-	// ])
-
 	event.groupItems('kubejs:rei_groups/fluidbuckets', 'Buckets of Fluids', [
 		/bucket/
 	])
