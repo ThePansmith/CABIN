@@ -34,6 +34,7 @@ let PP = (id, x) => MOD("prettypipes", id, x)
 let OC = (id, x) => MOD("occultism", id, x)
 let BE = (id, x) => MOD("beyond_earth", id, x)
 let AL = (id, x) => MOD("alloyed", id, x)
+let QU = (id, x) => MOD("quark", id, x)
 //
 
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
@@ -41,7 +42,7 @@ let native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold']
 let wood_types = [MC('oak'), MC('spruce'), MC('birch'), MC('jungle'), MC('acacia'), MC('dark_oak'), MC('crimson'), MC('warped'), BOP('fir'), BOP('redwood'), BOP('cherry'), BOP('mahogany'), BOP('jacaranda'), BOP('palm'), BOP('willow'), BOP('dead'), BOP('magic'), BOP('umbran'), BOP('hellbark'), AP('twisted')]
 
 let donutCraft = (event, output, center, ring) => {
-	event.shaped(output, [
+	return event.shaped(output, [
 		'SSS',
 		'SCS',
 		'SSS'
@@ -373,9 +374,6 @@ function unwantedRecipes(event) {
 	event.remove({ id: MC('andesite') })
 	event.remove({ id: MC('granite') })
 	event.remove({ id: CR('mixing/brass_ingot') })
-	event.remove({ id: 'thermal:compat/biomesoplenty/tree_extractor_bop_pink_cherry' })
-	event.remove({ id: 'thermal:compat/biomesoplenty/tree_extractor_bop_white_cherry' })
-	event.remove({ id: 'thermal:compat/biomesoplenty/tree_extractor_bop_fir' })
 	event.remove({ id: TC('smeltery/melting/metal/gold/enchanted_apple') })
 	event.remove({ id: CR('cutting/andesite_alloy') })
 	event.remove({ id: TE('storage/beetroot_block') })
@@ -1321,24 +1319,55 @@ function trickierWindmills(event) {
 }
 
 function rubberMatters(event) {
-	let overrideTreeOutput = (id, trunk, leaf) => {
-		event.remove({ id: id })
+	let addTreeOutput = (trunk, leaf, fluid) => {
 		event.custom({
 			"type": "thermal:tree_extractor",
 			"trunk": trunk,
 			"leaves": leaf,
-			"result": {
+			"result": fluid || {
 				"fluid": "thermal:resin",
 				"amount": 25
 			}
-		});
+		})
+	}
+	let overrideTreeOutput = (id, trunk, leaf, fluid) => {
+		event.remove({ id: id })
+		addTreeOutput(trunk, leaf, fluid)
 	}
 
 	overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_jungle'), MC('jungle_log'), MC('jungle_leaves'))
 	overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_spruce'), MC('spruce_log'), MC('spruce_leaves'))
 	overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_dark_oak'), MC('dark_oak_log'), MC('dark_oak_leaves'))
-	overrideTreeOutput(TE('compat/biomesoplenty/tree_extractor_bop_maple'), MC('oak_log'), 'biomesoplenty:maple_leaves')
 
+	addTreeOutput(MC('oak_log'), BOP('origin_leaves'))
+	addTreeOutput(MC('oak_log'), BOP('flowering_oak_leaves'))
+	addTreeOutput(MC('birch_log'), BOP('rainbow_birch_leaves'))
+	addTreeOutput(MC('birch_log'), BOP('yellow_autumn_leaves'))
+	addTreeOutput(MC('dark_oak_log'), BOP('orange_autumn_leaves'))
+	addTreeOutput(MC('oak_log'), BOP('maple_leaves'))
+	addTreeOutput(BOP('fir_log'), BOP('fir_leaves'))
+	addTreeOutput(BOP('redwood_log'), BOP('redwood_leaves'))
+	addTreeOutput(BOP('cherry_log'), BOP('white_cherry_leaves'))
+	addTreeOutput(BOP('cherry_log'), BOP('pink_cherry_leaves'))
+	addTreeOutput(BOP('mahogany_log'), BOP('mahogany_leaves'))
+	addTreeOutput(BOP('jacaranda_log'), BOP('jacaranda_leaves'))
+	addTreeOutput(BOP('palm_log'), BOP('palm_leaves'))
+	addTreeOutput(BOP('willow_log'), BOP('willow_leaves'))
+	addTreeOutput(BOP('dead_log'), BOP('dead_leaves'))
+	addTreeOutput(BOP('magic_log'), BOP('magic_leaves'))
+	addTreeOutput(BOP('umbran_log'), BOP('umbran_leaves'))
+	addTreeOutput(BOP('hellbark_log'), BOP('hellbark_leaves'))
+
+	addTreeOutput( QU('blossom_log'), QU('blue_blossom_leaves'))
+	addTreeOutput( QU('blossom_log'), QU('lavender_blossom_leaves'))
+	addTreeOutput( QU('blossom_log'), QU('orange_blossom_leaves'))
+	addTreeOutput( QU('blossom_log'), QU('pink_blossom_leaves'))
+	addTreeOutput( QU('blossom_log'), QU('yellow_blossom_leaves'))
+	addTreeOutput( QU('blossom_log'), QU('red_blossom_leaves'))
+
+	// addTreeOutput( TC('greenheart_log'), TC('earth_slime_leaves'), {fluid: TC("earth_slime"), amount: 10})
+	// addTreeOutput( TC('skyroot_log'), TC('sky_slime_leaves'), {fluid: TC("sky_slime"), amount: 10})
+	
 	event.remove({ id: CR('crafting/kinetics/belt_connector') })
 	event.shaped(CR('belt_connector', 3), [
 		'SSS',
@@ -1796,7 +1825,11 @@ function copperMachine(event) {
 
 	event.remove({ id: TC("smeltery/casting/seared/smeltery_controller") })
 	event.remove({ id: TC("smeltery/melting/copper/smeltery_controller") })
-	donutCraft(event, TC('smeltery_controller'), TC('seared_bricks'), KJ('sealed_mechanism'))
+
+	donutCraft(event, TC('smeltery_controller'), TC('#seared_blocks'), KJ('sealed_mechanism')).modifyResult((grid, result) => {
+		let item = grid.find(TC("#seared_blocks"))
+		return result.withNBT({texture: item.id})
+	})
 
 	let copper_machine = (id, amount, other_ingredient) => {
 		event.remove({ output: id })
@@ -1917,7 +1950,10 @@ function zincMachine(event) {
 	event.remove({ id: TC('smeltery/melting/soul/sand') })
 	// event.recipes.createMilling([Item.of(TE('basalz_powder'), 1)], TE("basalz_rod")).processingTime(300)
 
-	donutCraft(event, TC('foundry_controller'), TC('scorched_bricks'), KJ('infernal_mechanism'))
+	donutCraft(event, TC('foundry_controller'), TC('#scorched_blocks'), KJ('infernal_mechanism')).modifyResult((grid, result) => {
+		let item = grid.find(TC("#scorched_blocks"))
+		return result.withNBT({texture: item.id})
+	})
 
 	event.recipes.createMixing(Fluid.of(TC("liquid_soul"), 500), [MC('twisting_vines'), MC('weeping_vines')]).heated()
 
