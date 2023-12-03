@@ -46,6 +46,7 @@ onEvent('rei.hide.items', event => {
 	event.hide('thermal:copper_plate')
 	event.hide('thermal:netherite_plate')
 	event.hide('thermal:silver_ore')
+	event.hide('thermal:deepslate_silver_ore')
 	event.hide('thermal:tin_ore')
 	event.hide('thermal:deepslate_tin_ore') 
 	event.hide('thermal:tin_nugget') 

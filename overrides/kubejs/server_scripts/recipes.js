@@ -340,9 +340,7 @@ function unwantedRecipes(event) {
 	event.remove({ input: '#forge:ores/tin' })
 	event.remove({ input: '#forge:ores/silver' })
 	event.remove({ output: '#forge:plates/tin' })
-	event.remove({ output: '#forge:plates/silver' })
 	event.remove({ output: '#forge:gears/tin' })
-	event.remove({ output: '#forge:gears/silver' })
 	event.remove({ type: AE2('grinder') })
 	event.remove({ type: TE('press') })
 	event.remove({ id: /thermal:earth_charge\/.*/ })
@@ -762,13 +760,17 @@ function tweaks(event) {
 		})
 	}
 
+	let remove_cast = (name) => {
+		event.remove({ id: `${TC(name)}_sand_cast`})
+		event.remove({ id:`${TC(name)}_gold_cast`})
+	}
+
 	event.remove({ id: TE("storage/copper_nugget_from_ingot")})
 	event.remove({ id: TC("common/materials/copper_nugget_from_ingot")})
 	event.remove({ id: TE("storage/copper_ingot_from_nuggets")})
 	event.remove({ id: TC("common/materials/copper_ingot_from_nuggets")})
 
-	event.remove({ id: TC("smeltery/casting/metal/copper/nugget_gold_cast") })
-	event.remove({ id: TC("smeltery/casting/metal/copper/nugget_sand_cast") })
+	remove_cast("smeltery/casting/metal/copper/nugget")
 
 	cast("nugget", TC("molten_copper"), 10, CR("copper_nugget"), 17)
 
@@ -777,10 +779,8 @@ function tweaks(event) {
 	event.remove({ id: TE("storage/netherite_ingot_from_nuggets")})
 	event.remove({ id: TC("common/materials/netherite_ingot_from_nuggets")})
 
-	event.remove({ id: TC("smeltery/casting/metal/netherite/nugget_gold_cast") })
-	event.remove({ id: TC("smeltery/casting/metal/netherite/nugget_sand_cast") })
-	event.remove({ id: TC("smeltery/casting/metal/netherite/plate_gold_cast") })
-	event.remove({ id: TC("smeltery/casting/metal/netherite/plate_sand_cast") })
+	remove_cast("smeltery/casting/metal/netherite/nugget")
+	remove_cast("smeltery/casting/metal/netherite/plate")
 
 	cast("nugget", TC("molten_netherite"), 10, CD("netherite_nugget"), 17)
 	cast("plate", TC("molten_netherite"), 90, CD("netherite_sheet"), 75)
@@ -793,18 +793,20 @@ function tweaks(event) {
 	event.remove({ id: TE('storage/bronze_ingot_from_block')})
 	event.remove({ id: TE('storage/bronze_block')})
 
-	event.remove({ id: TC("smeltery/casting/metal/bronze/nugget_gold_cast")})
-	event.remove({ id: TC("smeltery/casting/metal/bronze/nugget_sand_cast")})
-	event.remove({ id: TC("smeltery/casting/metal/bronze/ingot_gold_cast")})
-	event.remove({ id: TC("smeltery/casting/metal/bronze/ingot_sand_cast")})
-	event.remove({ id: TC("smeltery/casting/metal/bronze/plate_gold_cast")})
-	event.remove({ id: TC("smeltery/casting/metal/bronze/plate_sand_cast")})
+	remove_cast("smeltery/casting/metal/bronze/nugget")
+	remove_cast("smeltery/casting/metal/bronze/ingot")
+	remove_cast("smeltery/casting/metal/bronze/plate")
 	event.remove({ id: TC("smeltery/casting/metal/bronze/block")})
 
 	cast("nugget", TC("molten_bronze"), 10, "alloyed:bronze_nugget", 17)
 	cast("ingot", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
 	cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
 	cast_block(TC("molten_bronze"), "alloyed:bronze_block")
+
+	remove_cast("smeltery/casting/metal/silver/plate")
+	remove_cast("smeltery/casting/metal/electrum/plate")
+	remove_cast("smeltery/casting/metal/silver/gear")
+	remove_cast("smeltery/casting/metal/electrum/gear")
 
 	event.custom({
 		"type": "tconstruct:melting",
@@ -1278,7 +1280,10 @@ function unify(event) {
 	event.replaceInput({ id: TE('machines/smelter/smelter_electrum_plate_to_ingot') }, TE('constantan_plate'), '#forge:plates/electrum')
 
 	event.replaceInput({ id: OC('crushing/electrum_dust_from_ingot') }, TE('constantan_ingot'), '#forge:ingots/electrum')
+	event.replaceInput({ id: TE('machines/pulverizer/pulverizer_electrum_ingot_to_dust') }, TE('constantan_ingot'), '#forge:ingots/electrum')
 	
+	event.replaceInput({ id: TE('parts/electrum_gear') }, TE('constantan_ingot'), '#forge:ingots/electrum')
+
 	let woodcutting = (mod, log, planks, slab) => {
 		event.recipes.createCutting([mod + ":stripped_" + log], mod + ":" + log).processingTime(50)
 		event.recipes.createCutting([Item.of(mod + ":" + planks, 6)], mod + ":stripped_" + log).processingTime(50)
