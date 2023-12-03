@@ -40,11 +40,7 @@ onEvent('rei.group', event => {
 
 
 	event.groupItems('kubejs:rei_groups/microblocks', 'Microblocks', [
-		/microblock/,
-	])
-
-	event.groupItems('kubejs:rei_groups/buddycards', 'Buddy Cards', [
-		/buddycard/
+		/microblock/
 	])
 
 	event.groupItems('kubejs:rei_groups/fluidbuckets', 'Buckets of Fluids', [
@@ -52,7 +48,29 @@ onEvent('rei.group', event => {
 	])
 
 	event.groupItems('kubejs:rei_groups/spawneggs', 'Spawn Eggs', [
-		/spawn_egg/
+		/spawn_egg/,
+		"supplementaries:red_merchant_spawn_egg"
+	])
+
+	event.groupItems('kubejs:rei_groups/buddycards_base_set', 'Buddy Cards Base Set', [
+		/buddycards:buddycard_base/
+	])
+
+	event.groupItems('kubejs:rei_groups/buddycards_nether_set', 'Buddy Cards Nether Set', [
+		/buddycards:buddycard_nether/
+	])
+
+	event.groupItems('kubejs:rei_groups/buddycards_end_set', 'Buddy Cards End Set', [
+		/buddycards:buddycard_end/
+	])
+
+	event.groupItems('kubejs:rei_groups/buddycards_holiday', 'Buddy Cards Holiday', [
+		"buddycards:buddycard_holiday1",
+		"buddycards:buddycard_holiday2",
+		"buddycards:buddycard_holiday3",
+		"buddycards:buddycard_holiday4",
+		"buddycards:buddycard_holiday5",
+		"buddycards:buddycard_holiday6"
 	])
 
 })
