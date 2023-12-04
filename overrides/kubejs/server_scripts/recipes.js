@@ -954,8 +954,7 @@ function prettierpipes(event) {
 			event.stonecutting(Item.of(id, amount), 'kubejs:attachment_base')
 	}
 	attachment_base('thermal:filter_attachment', 1)
-	attachment_base('thermal:turbo_servo_attachment', 1, KJ('enderium_machine'))
-	attachment_base('thermal:energy_limiter_attachment', 1, CR('brass_ingot'))
+	attachment_base('thermal:energy_limiter_attachment', 1)
 }
 
 function barrels(event) {
@@ -2329,6 +2328,8 @@ function enderMachine(event) {
 	ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
 	ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
 	ender_machine(TE("fluid_duct"), 6, CR('fluid_pipe'))
+	ender_machine('thermal:turbo_servo_attachment', 1, KJ('attachment_base'))
+
 	ender_machine('kubejs:pipe_module_tier_3', 4)
 
 }
