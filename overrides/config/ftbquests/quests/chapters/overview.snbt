@@ -516,7 +516,7 @@
 			description: ["Like explained before, trains are a super useful option for item and fluid movement, especially with how cheap they are."]
 			dependencies: [
 				"7664FBB32FCC6BE6"
-				"5F986F8FC1D339AA"
+				"667F4F686A45EF3E"
 			]
 			id: "11C36A243F5108DC"
 			tasks: [{
@@ -536,7 +536,7 @@
 			shape: "circle"
 			subtitle: "Bonus 1B"
 			description: [
-				"Trains can be used to transport materials and fluids across long distances and dimensions, without the need for chunkloading."
+				"Trains can be used to transport materials and fluids across long distances and the nether, without the need for chunkloading."
 				""
 				"After hitting the Checkmark above, additional Quests located in the First Chapter will be revealed."
 			]

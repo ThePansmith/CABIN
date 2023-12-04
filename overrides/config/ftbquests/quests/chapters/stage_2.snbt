@@ -249,26 +249,11 @@
 			description: ["Route the nuggets into your High-Temperature melting equipment. A Melter from Tinkers' Construct, for example."]
 			dependencies: ["53735DC4231AB566"]
 			id: "2167272204B6627B"
-			tasks: [
-				{
-					id: "611F921F94FAE142"
-					type: "item"
-					title: "Copper Can (Molten Iron)"
-					item: {
-						id: "tconstruct:copper_can"
-						Count: 1b
-						tag: {
-							fluid: "tconstruct:molten_iron"
-						}
-					}
-					consume_items: false
-				}
-				{
-					id: "75C982848F2CEA85"
-					type: "checkmark"
-					title: "Automated"
-				}
-			]
+			tasks: [{
+				id: "75C982848F2CEA85"
+				type: "checkmark"
+				title: "Automated"
+			}]
 		}
 		{
 			title: "Second Coating Layer"
@@ -527,7 +512,7 @@
 				""
 				"Every Zinc Machine will end up using 24 Buckets of Lava in Production. It's not a great ecological footprint, but even just one Hose Pulley can make quick work of it."
 				""
-				"Look into trains for transporting said lava back to your base."
+				"Remember that trains can cross through nether portals, perhaps this can help you."
 			]
 			hide_dependency_lines: true
 			dependencies: [
