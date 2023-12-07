@@ -955,6 +955,11 @@ function prettierpipes(event) {
 	}
 	attachment_base('thermal:filter_attachment', 1)
 	attachment_base('thermal:energy_limiter_attachment', 1)
+	
+	// Fluid Cells use in fluid transportation replaced by TE pipes, may come back to this if i can find a way to just disable the autooutput part
+	event.remove({ output: TE('fluid_cell') })
+	event.remove({ output: TE('fluid_cell_frame') })
+	
 }
 
 function barrels(event) {
