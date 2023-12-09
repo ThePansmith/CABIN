@@ -15,18 +15,25 @@ onEvent('recipes', event => {
 			event.stonecutting(Item.of(id, amount), 'kubejs:'+ machinename + '_machine')
 	}
 	
-//	if (Platform.isLoaded('YourModID')) {                                    // Mod ID goes here
-//		machine('andesite','minecraft:dirt', 1)                              // Recipes without an additional item will be stonecutting (saw) recipes
-//		machine('copper','minecraft:dispenser', 2, 'minecraft:bow')          // Recipes with one are smithing table recipes
-//
-//      event.shapeless("create:creative_crate", "minecraft:redstone_ore")]) // If you have any other recipes, put them following the machine recipes
-//}                                     
+	//	if (Platform.isLoaded('YourModID')) {                                    // Mod ID goes here
+	//		machine('andesite','minecraft:dirt', 1)                              // Recipes without an additional item will be stonecutting (saw) recipes
+	//		machine('copper','minecraft:dispenser', 2, 'minecraft:bow')          // Recipes with one are smithing table recipes
+	//
+	//      event.shapeless("create:creative_crate", "minecraft:redstone_ore")]) // If you have any other recipes, put them following the machine recipes
+	//}                                     
 
-if (Platform.isLoaded('createbigcannons')) {
+	if (Platform.isLoaded('createbigcannons')) {
 		machine('andesite','createbigcannons:yaw_controller', 1)
 		machine('andesite','createbigcannons:cannon_builder', 1, 'create:mechanical_bearing')
 		machine('andesite','createbigcannons:cannon_loader', 1, 'create:mechanical_piston')
 		machine('andesite','createbigcannons:cannon_drill', 1, 'create:fluid_tank')
 	}                         
 	
+	if (Platform.isLoaded('miners_delight')) {
+		event.remove({ id: 'miners_delight:cutting/bat_wing' })
+	}
+
+	if(Platform.isLoaded('create_edible_belts')) {
+		event.remove({ id: 'create_edible_belts:embrecipe' })
+	}
 })
