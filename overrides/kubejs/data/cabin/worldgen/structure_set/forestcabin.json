@@ -1,14 +1,14 @@
 {
   "structures": [
     {
-      "structure": "cabin:oil_fountain",
+      "structure": "cabin:forestcabin",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 20,
-    "separation": 15,
-    "salt": 1646207490
+    "spacing": 25,
+    "separation": 20,
+    "salt": 1286630835
   }
 }

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "cabin:crystal_harvester",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 20,
+    "separation": 10,
+    "salt": 1532222125
+  }
+}

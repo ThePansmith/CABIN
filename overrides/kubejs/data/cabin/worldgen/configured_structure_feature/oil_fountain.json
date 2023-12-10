@@ -4,7 +4,7 @@
     "start_pool": "cabin:oil_fountain",
     "size": 1
   },
-  "biomes": "#desert",
-  "adapt_noise": true,
+  "biomes": "minecraft:desert",
+  "adapt_noise": false,
   "spawn_overrides": {}
 }
