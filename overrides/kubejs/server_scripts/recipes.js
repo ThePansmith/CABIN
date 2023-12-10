@@ -2010,13 +2010,12 @@ function invarMachine(event) {
 			"tool": { "tag": "forge:tools/knives" },
 			"result": [Item.of(KJ(type + "_slimy_fern_leaf"), 2).toResultJson()]
 		}).id(`kjs:cutting/${type}_slime_fern_leaf`)
-		event.forEachRecipe({ id:`farmersdelight:kjs_${type}_slime_fern_leaf_using_deployer` }, r => { r.keepHeldItem = true })
+		event.custom(ifiniDeploying(KJ(type + "_slimy_fern_leaf", 2), TC(type + "_slime_fern"), "#forge:tools/knives")).id(`kjs:deploying/${type}_slime_fern_leaf`)
 		event.custom({
 			"type": "occultism:spirit_fire",
 			"ingredient": { "item": KJ(type + "_slimy_fern_leaf") },
 			"result": { "item": TC(type + "_slime_fern") }
 		})
-		event.custom(ifiniDeploying(KJ(type + "_slimy_fern_leaf", 2), TC(type + "_slime_fern"), "#forge:tools/knives"))
 		event.recipes.createMilling([KJ(type + "_slime_fern_paste")], KJ(type + "_slimy_fern_leaf"))
 		event.campfireCooking(output, KJ(type + "_slime_fern_paste")).cookingTime(300)
 	}
