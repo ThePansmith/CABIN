@@ -2009,7 +2009,7 @@ function invarMachine(event) {
 			"ingredients": [{ "item": TC(type + "_slime_fern") }],
 			"tool": { "tag": "forge:tools/knives" },
 			"result": [Item.of(KJ(type + "_slimy_fern_leaf"), 2).toResultJson()]
-		}).id(`kjs:cutting/${type}_slime_fern_leaf`).keepHeldItem = true;
+		}).id(`kjs:cutting/${type}_slime_fern_leaf`)
 		event.forEachRecipe({ id:`farmersdelight:kjs_${type}_slime_fern_leaf_using_deployer` }, r => { r.keepHeldItem = true })
 		event.custom({
 			"type": "occultism:spirit_fire",
