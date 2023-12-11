@@ -801,11 +801,6 @@ function tweaks(event) {
 	cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
 	cast_block(TC("molten_bronze"), "alloyed:bronze_block")
 
-	remove_cast("smeltery/casting/metal/silver/plate")
-	remove_cast("smeltery/casting/metal/electrum/plate")
-	remove_cast("smeltery/casting/metal/silver/gear")
-	remove_cast("smeltery/casting/metal/electrum/gear")
-
 	event.custom({
 		"type": "tconstruct:melting",
 		"ingredient": {
@@ -2014,13 +2009,13 @@ function invarMachine(event) {
 			"ingredients": [{ "item": TC(type + "_slime_fern") }],
 			"tool": { "tag": "forge:tools/knives" },
 			"result": [Item.of(KJ(type + "_slimy_fern_leaf"), 2).toResultJson()]
-		})
+		}).id(`kjs:cutting/${type}_slime_fern_leaf`)
+		event.custom(ifiniDeploying(KJ(type + "_slimy_fern_leaf", 2), TC(type + "_slime_fern"), "#forge:tools/knives")).id(`kjs:deploying/${type}_slime_fern_leaf`)
 		event.custom({
 			"type": "occultism:spirit_fire",
 			"ingredient": { "item": KJ(type + "_slimy_fern_leaf") },
 			"result": { "item": TC(type + "_slime_fern") }
 		})
-		event.custom(ifiniDeploying(KJ(type + "_slimy_fern_leaf", 2), TC(type + "_slime_fern"), "#forge:tools/knives"))
 		event.recipes.createMilling([KJ(type + "_slime_fern_paste")], KJ(type + "_slimy_fern_leaf"))
 		event.campfireCooking(output, KJ(type + "_slime_fern_paste")).cookingTime(300)
 	}
