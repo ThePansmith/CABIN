@@ -54,7 +54,7 @@ let metal_ores_drop_dust = (id, dust_id) => ({
                                 0.25,
                                 0.375,
                                 0.5,
-																0.625
+                                0.625
                             ]
                         }
                     ],
