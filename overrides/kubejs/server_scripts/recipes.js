@@ -2651,6 +2651,30 @@ function madMaths(event) {
 					"acceptMirrored": false
 				})
 
+				event.custom({
+					"type": "create:mechanical_crafting",
+					"pattern": [
+						"A",
+						"O",
+						"B"
+					],
+					"key": {
+						"A": {
+							"item": KJ(nums[a])
+						},
+						"O": {
+							"item": KJ(opNames[op])
+						},
+						"B": {
+							"item": KJ(nums[b])
+						}
+					},
+					"result": {
+						"item": output
+					},
+					"acceptMirrored": false
+				})
+
 			}
 		}
 	}
