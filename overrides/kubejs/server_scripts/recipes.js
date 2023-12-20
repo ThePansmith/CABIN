@@ -907,6 +907,8 @@ function prettierpipes(event) {
 		P: TE('invar_ingot'),
 		M: MC('redstone')
 	})
+	
+	event.shapeless(TE('fluid_duct_windowed'), [TE('fluid_duct_windowed'), MC('glass')])
 
 	let module = (type, result) => {
 		event.remove({ output: PP(result) })
@@ -2327,7 +2329,7 @@ function enderMachine(event) {
 	ender_machine(TE("upgrade_augment_3"), 1, MC('redstone'))
 	ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
 	ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
-	ender_machine(TE("fluid_duct"), 6, CR('fluid_pipe'))
+	ender_machine(TE("fluid_duct"), 16, CR('fluid_pipe'))
 	ender_machine('thermal:turbo_servo_attachment', 1, KJ('attachment_base'))
 
 	ender_machine('kubejs:pipe_module_tier_3', 4)
