@@ -9,193 +9,6 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "Hooked"
-			icon: {
-				id: "grapplemod:grapplinghook"
-				Count: 1b
-				tag: {
-					Damage: 0
-					custom: {
-						doublehook: 0b
-						motor: 0b
-						phaserope: 0b
-						attract: 0b
-						rocket: 0b
-						hookgravity: 1.0d
-						repelforce: 1.0d
-						attractradius: 3.0d
-						pullbackwards: 1b
-						smartmotor: 0b
-						detachonkeyrelease: 0b
-						angle: 20.0d
-						crc32: 2252267022L
-						rocket_vertical_angle: 0.0d
-						rocket_force: 1.0d
-						rocket_refuel_ratio: 15.0d
-						motorwhencrouching: 0b
-						motorwhennotcrouching: 1b
-						motordampener: 0b
-						rocket_active_time: 0.5d
-						throwspeed: 2.0d
-						motoracceleration: 0.2d
-						enderstaff: 0b
-						oneropepull: 0b
-						sneakingverticalthrowangle: 0.0d
-						smartdoublemotor: 1b
-						repel: 0b
-						sneakingangle: 10.0d
-						motormaxspeed: 4.0d
-						playermovementmult: 1.0d
-						reelin: 1b
-						sticky: 0b
-						verticalthrowangle: 0.0d
-						maxlen: 30.0d
-					}
-				}
-			}
-			x: -2.0d
-			y: 1.0d
-			description: [
-				"These grappling hooks are a fun way of getting around in the earlygame, and can even save your life while caving."
-				""
-				"If hooked onto another mob, it will launch them in the opposite direction with the same speed as the hook, try flinging a mob into lava with it!"
-			]
-			id: "2A2FA80784667833"
-			tasks: [{
-				id: "66503A543285BEFD"
-				type: "item"
-				title: "Any Grappling Hook"
-				item: {
-					id: "itemfilters:or"
-					Count: 1b
-					tag: {
-						items: [
-							{
-								id: "grapplemod:grapplinghook"
-								Count: 1b
-								tag: {
-									Damage: 0
-									custom: {
-										doublehook: 0b
-										motor: 0b
-										phaserope: 0b
-										attract: 0b
-										rocket: 0b
-										hookgravity: 1.0d
-										repelforce: 1.0d
-										attractradius: 3.0d
-										pullbackwards: 1b
-										smartmotor: 0b
-										detachonkeyrelease: 0b
-										angle: 20.0d
-										crc32: 2252267022L
-										rocket_vertical_angle: 0.0d
-										rocket_force: 1.0d
-										rocket_refuel_ratio: 15.0d
-										motorwhencrouching: 0b
-										motorwhennotcrouching: 1b
-										motordampener: 0b
-										rocket_active_time: 0.5d
-										throwspeed: 2.0d
-										motoracceleration: 0.2d
-										enderstaff: 0b
-										oneropepull: 0b
-										sneakingverticalthrowangle: 0.0d
-										smartdoublemotor: 1b
-										repel: 0b
-										sneakingangle: 10.0d
-										motormaxspeed: 4.0d
-										playermovementmult: 1.0d
-										reelin: 1b
-										sticky: 0b
-										verticalthrowangle: 0.0d
-										maxlen: 30.0d
-									}
-								}
-							}
-							{
-								id: "grapplemod:grapplinghook"
-								Count: 1b
-								tag: {
-									Damage: 0
-									custom: {
-										motor: 1b
-										throwspeed: 3.5d
-										maxlen: 60
-										playermovementmult: 2
-									}
-								}
-							}
-							{
-								id: "grapplemod:grapplinghook"
-								Count: 1b
-								tag: {
-									Damage: 0
-									custom: {
-										throwspeed: 3.5d
-										maxlen: 60
-										enderstaff: 1b
-									}
-								}
-							}
-							{
-								id: "grapplemod:grapplinghook"
-								Count: 1b
-								tag: {
-									Damage: 0
-									custom: {
-										motor: 1b
-										smartmotor: 1b
-										throwspeed: 3.5d
-										maxlen: 60
-										playermovementmult: 2
-									}
-								}
-							}
-							{
-								id: "grapplemod:grapplinghook"
-								Count: 1b
-								tag: {
-									Damage: 0
-									custom: {
-										doublehook: 1b
-										motor: 1b
-										motorwhencrouching: 1b
-										throwspeed: 20
-										hookgravity: 50
-										sneakingverticalthrowangle: 25
-										smartdoublemotor: 1b
-										sneakingangle: 0
-										motormaxspeed: 10
-										playermovementmult: 2
-										sticky: 1b
-										verticalthrowangle: 30
-										reelin: 0b
-										angle: 25
-										maxlen: 60
-									}
-								}
-							}
-						]
-					}
-				}
-				consume_items: false
-			}]
-			rewards: [
-				{
-					id: "68C7B1D32527DD1A"
-					type: "item"
-					item: "minecraft:glow_berries"
-					count: 5
-				}
-				{
-					id: "0AB5655AF01B4199"
-					type: "item"
-					item: "grapplemod:baseupgradeitem"
-				}
-			]
-		}
-		{
 			title: "Control Centre"
 			icon: "projectred_illumination:red_inverted_fixture_light"
 			x: -4.0d
@@ -618,7 +431,11 @@
 			title: "Blockstacker"
 			x: -1.0d
 			y: -1.0d
-			description: ["Construction wands can extend complete walls or surfaces of blocks by the click of a button."]
+			description: [
+				"Construction wands can extend complete walls or surfaces of blocks by the click of a button."
+				""
+				"You can add a destruction core to give it the option to destory blocks instead."
+			]
 			id: "2F469F6F1511D9C4"
 			tasks: [{
 				id: "039DD9EBD46B2C23"
@@ -782,7 +599,7 @@
 		}
 		{
 			title: "Big Plans"
-			x: 2.0d
+			x: -2.0d
 			y: -3.0d
 			description: [
 				"These Blueprints can be given one or more crafting recipes, which they then apply to your held items whenever you right-click them."
@@ -849,7 +666,7 @@
 		}
 		{
 			title: "Friend?"
-			x: -2.0d
+			x: 2.0d
 			y: -3.0d
 			description: ["Placing a Carved Pumpkin on a Hay Bale creates a Straw Golem, who can take care of your crops."]
 			id: "1DBFD0B34659A8F9"
@@ -1026,6 +843,35 @@
 				id: "071BEECB37AFECB4"
 				type: "item"
 				item: "cccbridge:target_block"
+			}]
+		}
+		{
+			title: "Chiseling"
+			icon: "rechiseledcreate:mechanical_chisel"
+			x: -2.0d
+			y: 1.0d
+			description: [
+				"Rechiseled adds a variety of block varients to give you more options when building your base."
+				""
+				"Rechiseled: CABIN Additions adds a variety of blocks, including classic chisel and xtones blocks, to give you even more options."
+				""
+				"Rechiseled: Create adds even more blocks, as well as a way to automate the chiseling of all of the above, with the mechanical chisel."
+			]
+			id: "78A8751AF86E0E32"
+			tasks: [{
+				id: "728C7440719BF00D"
+				type: "item"
+				item: {
+					id: "rechiseled:chisel"
+					Count: 1b
+					tag: { }
+				}
+			}]
+			rewards: [{
+				id: "65589D633E5A9F73"
+				type: "item"
+				item: "rechiseledcabinadditions:checkertile"
+				count: 16
 			}]
 		}
 	]
