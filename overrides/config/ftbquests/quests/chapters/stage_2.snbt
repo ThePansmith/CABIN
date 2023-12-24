@@ -193,7 +193,7 @@
 				{
 					id: "36E36D584FCBC358"
 					type: "item"
-					item: "tconstruct:molten_obsidian_bucket"
+					item: "kubejs:volatile_sky_solution_bucket"
 					consume_items: false
 				}
 				{

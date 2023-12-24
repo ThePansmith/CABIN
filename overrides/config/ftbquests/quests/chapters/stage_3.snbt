@@ -890,7 +890,7 @@
 		}
 		{
 			title: "Toxic Byproducts"
-			icon: "tconstruct:molten_ender_bucket"
+			icon: "kubejs:chromatic_waste_bucket"
 			x: 0.5d
 			y: 9.0d
 			shape: "circle"

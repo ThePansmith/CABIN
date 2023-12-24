@@ -303,6 +303,8 @@ onEvent('fluid.registry', event => {
 	event.create('matrix').displayName(`Liquified Computation Matrix`).stillTexture('kubejs:fluid/matrix_still').flowingTexture('kubejs:fluid/matrix_flow').bucketColor(colors[0])
 	event.create('fine_sand').displayName(`Fine Sand`).stillTexture('kubejs:fluid/fine_sand_still').flowingTexture('kubejs:fluid/fine_sand_flow').bucketColor(0xE3DBB0)
 	event.create('crude_oil').displayName(`Crude Oil`).stillTexture('thermal:block/fluids/crude_oil_still').flowingTexture('thermal:block/fluids/crude_oil_flow').bucketColor(0x222118)
+	event.create('volatile_sky_solution').displayName(`Volatile Sky Solution`).stillTexture('tconstruct:block/fluid/obsidian/still').flowingTexture('tconstruct:block/fluid/obsidian/flowing').color(0x1A1123)
+	event.create('chromatic_waste').displayName(`Chromatic Waste`).stillTexture('tconstruct:block/fluid/enderium/still').flowingTexture('tconstruct:block/fluid/enderium/flowing').color(0x0B3E36)
 //	event.create('liquid_smoke').displayName(`Liquid Smoke`).stillTexture('advancedrocketry:blocks/fluid/oxygen_still').flowingTexture('advancedrocketry:blocks/fluid/oxygen_flow').bucketColor(0xEBEBEB)
 })
 

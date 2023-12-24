@@ -1640,12 +1640,10 @@ function electronTube(event) {
 	event.remove({ id: CR('compat/ae2/milling/certus_quartz') })
 	event.remove({ id: CR('crafting/materials/electron_tube') })
 	event.remove({ id: CR('crafting/materials/rose_quartz') })
-	event.remove({ id: TC('smeltery/casting/obsidian/block') })
 	event.remove({ id: CR('sandpaper_polishing/rose_quartz') })
 	event.remove({ id: CR('sandpaper_polishing/rose_quartz') })
 
 	event.remove({ id: TC('smeltery/alloys/molten_obsidian') })
-	event.remove({ id: /tconstruct:smeltery\/melting\/obsidian\/.*/ })
 	event.remove({ id: TC('smeltery/melting/metal/slimesteel/reinforcement') })
 	event.remove({ id: TC('smeltery/melting/metal/iron/reinforcement') })
 	event.remove({ id: TC('smeltery/melting/diamond/enchanting_table') })
@@ -1670,8 +1668,8 @@ function electronTube(event) {
 	grow(KJ("small_certus_crystal"), KJ('growing_small_certus_crystal'), AE2('certus_quartz_crystal'))
 	grow(KJ("small_fluix_crystal"), KJ('growing_small_fluix_crystal'), AE2('fluix_crystal'))
 
-	event.recipes.createMixing(Fluid.of(TC("molten_obsidian"), 500), [AE2('sky_dust'), AE2('sky_dust'), AE2('sky_dust'), AE2('sky_dust'), Fluid.of(MC('water'), 500)])
-	event.recipes.createMixing([AE2('certus_quartz_crystal'), Fluid.of(TE("redstone"), 250)], [AE2('charged_certus_quartz_crystal'), Fluid.of(TC("molten_obsidian"), 250)])
+	event.recipes.createMixing(Fluid.of(KJ('volatile_sky_solution'), 500), [AE2('sky_dust'), AE2('sky_dust'), AE2('sky_dust'), AE2('sky_dust'), Fluid.of(MC('water'), 500)])
+	event.recipes.createMixing([AE2('certus_quartz_crystal'), Fluid.of(TE("redstone"), 250)], [AE2('charged_certus_quartz_crystal'), Fluid.of(KJ('volatile_sky_solution'), 250)])
 	event.recipes.createMixing(['create:polished_rose_quartz'], [AE2('certus_quartz_crystal'), Fluid.of(TE("redstone"), 250)])
 
 }
@@ -2076,7 +2074,7 @@ function invarMachine(event) {
 		var element = colors[index];
 		if (index == colors.length - 1)
 			continue;
-		event.recipes.createEmptying([AE2(colors[index + 1] + '_paint_ball'), Fluid.of(TC('molten_ender'), 250)], AE2(element + '_paint_ball'))
+		event.recipes.createEmptying([AE2(colors[index + 1] + '_paint_ball'), Fluid.of(KJ('chromatic_waste'), 250)], AE2(element + '_paint_ball'))
 	}
 
 	event.recipes.createMechanicalCrafting(CR('chromatic_compound'), [

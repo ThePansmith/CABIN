@@ -1,10 +1,8 @@
 {
-  "kubejs.ponder.tag.getting_started": "Getting started.",
-  "kubejs.ponder.tag.getting_started.description": "We ponder now!",
   "kubejs.ponder.alchemy_setup.header": "The Thermal Alchemy Setup",
   "kubejs.ponder.alchemy_setup.text_1": "Start with an Invar Machine",
-  "kubejs.ponder.alchemy_setup.text_2": "Attach a Laser Lamp of any colour",
-  "kubejs.ponder.alchemy_setup.text_3": "Ensure that the light is powered",
+  "kubejs.ponder.alchemy_setup.text_2": "Attach a Cage Lamp of any colour",
+  "kubejs.ponder.alchemy_setup.text_3": "Toggle it on with a wrench",
   "kubejs.ponder.alchemy_setup.text_4": "Place a Deployer targeting the Invar Machine",
   "kubejs.ponder.alchemy_setup.text_5": "Set it to Punch mode using a Wrench",
   "kubejs.ponder.alchemy_setup.text_6": "Whenever the Deployer activates...",
