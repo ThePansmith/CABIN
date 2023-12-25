@@ -1,7 +1,7 @@
 {
   "structures": [
     {
-      "structure": "cabin:plainscabin",
+      "structure": "cabin:campsite",
       "weight": 1
     }
   ],
@@ -9,6 +9,6 @@
     "type": "minecraft:random_spread",
     "spacing": 25,
     "separation": 20,
-    "salt": 1340924326
+    "salt": 1143757710
   }
 }

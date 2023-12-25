@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:village",
+  "config": {
+    "start_pool": "cabin:broken_windmill",
+    "size": 1
+  },
+  "biomes": "#minecraft:is_plains",
+  "adapt_noise": false,
+  "spawn_overrides": {}
+}
