@@ -4,7 +4,7 @@
     "start_pool": "cabin:campsite",
     "size": 1
   },
-  "biomes": "#minecraft:is_plains",
+  "biomes": "#cabin:has_structure/campsite",
   "adapt_noise": true,
   "spawn_overrides": {}
 }
