@@ -57,6 +57,7 @@ onEvent('rei.hide.items', event => {
 	event.hide('thermal:tin_gear') 
 	event.hide('thermal:raw_tin') 
 	event.hide('thermal:raw_tin_block')
+	event.hide('create:crushed_raw_tin')
 	event.hide('tconstruct:molten_tin_bucket')
 	event.hide('ftblibrary:fluid_container')
 	event.hide('forbidden_arcanus:pixie_spawn_egg')
