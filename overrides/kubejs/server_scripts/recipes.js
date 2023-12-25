@@ -1483,6 +1483,11 @@ function oreProcessing(event) {
 		event.recipes.thermal.crucible(Fluid.of(fluid, 30), dust).energy(3000)
 		event.recipes.createSplashing([Item.of(nugget, 2)], dust)
 		event.recipes.createMixing([Fluid.of(fluid, 180)], [Item.of(dust, 3), AE2('matter_ball')]).superheated()
+		
+		event.remove({ input: rawore })
+		event.recipes.createMilling([Item.of(crushed, 5)], rawore)
+		event.recipes.createCrushing([Item.of(crushed, 5), Item.of(crushed, 2).withChance(0.5)], rawore)
+
 
 		event.remove({ input: "#forge:ores/" + name, type: TE("smelter") })
 		event.remove({ input: "#forge:ores/" + name, type: TE("pulverizer") })
@@ -1493,7 +1498,10 @@ function oreProcessing(event) {
 		event.remove({ id: TC('smeltery/melting/metal/' + name + '/raw_block') })
 		event.remove({ id: TC('smeltery/melting/metal/' + name + '/dust') })
 		event.remove({ id: CR('crushing/raw_' + name + '_block') })	
-
+		
+		event.remove({ input: TE("raw_silver") })
+		event.remove({ output: TE("raw_silver") })
+		
 		event.custom({
 			"type": "thermal:smelter",
 			"ingredient": {

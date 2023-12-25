@@ -139,6 +139,10 @@ onEvent('rei.group', event => {
         "   §7in the correct slot"
       ])
     }
+    const pureore = ['minecraft:raw_iron', 'minecraft:raw_copper', 'minecraft:raw_gold', 'thermal:raw_lead', 'thermal:raw_nickel', 'create:raw_zinc']
+    pureore.forEach(pureore => {
+    tooltip.add(pureore, [`§7A purer grade of ore`,`§7Can only be found by exploring`])
+    })
   })
 
   onEvent('rei.remove.categories', event => {
