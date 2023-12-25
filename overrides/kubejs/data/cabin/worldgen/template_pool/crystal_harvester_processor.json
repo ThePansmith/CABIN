@@ -1,0 +1,24 @@
+{
+  "name": "cabin:crystal_harvester_processor",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/block",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/molten",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

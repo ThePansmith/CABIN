@@ -1,0 +1,42 @@
+{
+  "name": "cabin:crystal_harvester_molten_toolbox",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/molten/toolbox_1",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/molten/toolbox_2",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/molten/toolbox_3",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/molten/toolbox_4",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

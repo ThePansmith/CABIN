@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "cabin:blacksmith_shop",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 25,
+    "separation": 20,
+    "salt": 1143257710
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "cabin:aridcabin",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 25,
+    "separation": 20,
+    "salt": 1243757710
+  }
+}

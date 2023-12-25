@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:bastion_remnant",
+  "config": {
+    "start_pool": "cabin:underground_lab",
+    "size": 1
+  },
+  "biomes": "#minecraft:has_structure/mineshaft",
+  "adapt_noise": true,
+  "spawn_overrides": {}
+}
