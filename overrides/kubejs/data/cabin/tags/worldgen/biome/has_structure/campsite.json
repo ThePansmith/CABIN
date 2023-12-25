@@ -1,11 +1,7 @@
 {
     "values": [
     "#minecraft:has_structure/village_plains",
-    "#is_forest",
     "#minecraft:has_structure/jungle_temple", 
-    "#is_hill",
-    "#is_spooky",
-    "#is_magic"
     ]
   }
   
