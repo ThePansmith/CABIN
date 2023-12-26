@@ -2,9 +2,8 @@
   "type": "minecraft:bastion_remnant",
   "config": {
     "start_pool": "cabin:crystal_harvester",
-    "size": 1
+    "size": 2
   },
   "biomes": "#minecraft:has_structure/mineshaft",
-  "adapt_noise": true,
   "spawn_overrides": {}
 }
