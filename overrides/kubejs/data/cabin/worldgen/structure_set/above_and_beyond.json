@@ -1,15 +1,18 @@
 {
   "structures": [
     {
+      "structure": "cabin:campsite",
+      "weight": 1
+    },
+    {
       "structure": "cabin:log_cabin",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 25,
-    "separation": 20,
-    "salt": 1320924121
+    "spacing": 20,
+    "separation": 16,
+    "salt": 1143757710
   }
 }
-
