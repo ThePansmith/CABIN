@@ -2,7 +2,7 @@
   "type": "minecraft:village",
   "config": {
     "start_pool": "cabin:broken_windmill",
-    "size": 1
+    "size": 2
   },
   "biomes": "#cabin:has_structure/campsite",
   "adapt_noise": false,
