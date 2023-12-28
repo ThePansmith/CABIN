@@ -1,0 +1,33 @@
+{
+  "name": "cabin:crystal_harvester/shaft",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/shaft/16",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/shaft/32",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/shaft/48",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

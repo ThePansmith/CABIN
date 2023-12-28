@@ -1,5 +1,5 @@
 {
-  "name": "cabin:crystal_harvester_block_toolbox",
+  "name": "cabin:crystal_harvester/block/toolbox",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "cabin:crystal_harvester/block/toolbox_1",
+        "location": "cabin:crystal_harvester/block/toolbox/1",
         "processors": "minecraft:empty"
       }
     },
@@ -16,7 +16,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "cabin:crystal_harvester/block/toolbox_2",
+        "location": "cabin:crystal_harvester/block/toolbox/2",
         "processors": "minecraft:empty"
       }
     },
@@ -25,7 +25,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "cabin:crystal_harvester/block/toolbox_3",
+        "location": "cabin:crystal_harvester/block/toolbox/3",
         "processors": "minecraft:empty"
       }
     },
@@ -34,7 +34,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "cabin:crystal_harvester/block/toolbox_4",
+        "location": "cabin:crystal_harvester/block/toolbox/4",
         "processors": "minecraft:empty"
       }
     }
