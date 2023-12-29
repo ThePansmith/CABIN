@@ -1,5 +1,5 @@
 {
-  "name": "cabin:crystal_harvester_processor",
+  "name": "cabin:crystal_harvester/processor",
   "fallback": "minecraft:empty",
   "elements": [
     {

@@ -1,31 +1,13 @@
 {
-  "name": "cabin:crystal_harvester_collector",
+  "name": "cabin:crystal_harvester/molten/toolbox",
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "cabin:crystal_harvester/collector/drills_1",
-        "processors": "minecraft:empty"
-      }
-    },
-    {
-      "weight": 3,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "cabin:crystal_harvester/collector/drills_2",
-        "processors": "minecraft:empty"
-      }
-    },
-    {
-      "weight": 4,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "cabin:crystal_harvester/collector/drills_3",
+        "location": "cabin:crystal_harvester/molten/toolbox/1",
         "processors": "minecraft:empty"
       }
     },
@@ -34,7 +16,25 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "cabin:crystal_harvester/collector/drills_4",
+        "location": "cabin:crystal_harvester/molten/toolbox/2",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/molten/toolbox/3",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "cabin:crystal_harvester/molten/toolbox/4",
         "processors": "minecraft:empty"
       }
     }
