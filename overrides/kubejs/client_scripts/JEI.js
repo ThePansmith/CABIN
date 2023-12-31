@@ -64,13 +64,31 @@ onEvent('rei.group', event => {
 		/buddycards:buddycard_end/
 	])
 
+	event.groupItems('kubejs:rei_groups/buddycards_create_set', 'Buddy Cards Create Set', [
+		/buddycardsexp:buddycard_create/
+	])
+
+	event.groupItems('kubejs:rei_groups/buddycards_aquaculture_set', 'Buddy Cards Aquaculture Set', [
+		/buddycardsexp:buddycard_aquaculture/
+	])
+
+	event.groupItems("kubejs:rei_groups/buddycards_farmers_set", "Buddy Cards Farmer's Set", [
+		/buddycardsexp:buddycard_farmers/
+	])
+
+	event.groupItems('kubejs:rei_groups/buddycards_malum_set', 'Buddy Cards Malum Set', [
+		"#buddycardsexp:buddycards_malum", //only hides non foil (kubejs issue)
+		/buddycardsexp:buddycard_malum/ //does not work if malum isn't present (it should work)
+	])
+
 	event.groupItems('kubejs:rei_groups/buddycards_holiday', 'Buddy Cards Holiday', [
 		"buddycards:buddycard_holiday1",
 		"buddycards:buddycard_holiday2",
 		"buddycards:buddycard_holiday3",
 		"buddycards:buddycard_holiday4",
 		"buddycards:buddycard_holiday5",
-		"buddycards:buddycard_holiday6"
+		"buddycards:buddycard_holiday6",
+		/buddycards:buddycard_holiday/
 	])
 
 })
