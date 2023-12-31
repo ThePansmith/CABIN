@@ -77,8 +77,7 @@ onEvent('rei.group', event => {
 	])
 
 	event.groupItems('kubejs:rei_groups/buddycards_malum_set', 'Buddy Cards Malum Set', [
-		"#buddycardsexp:buddycards_malum", //only hides non foil (kubejs issue)
-		/buddycardsexp:buddycard_malum/ //does not work if malum isn't present (it should work)
+		/buddycardsexp:buddycard_malum/
 	])
 
 	event.groupItems('kubejs:rei_groups/buddycards_holiday', 'Buddy Cards Holiday', [
