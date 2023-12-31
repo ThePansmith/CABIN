@@ -2022,6 +2022,7 @@ function invarMachine(event) {
 			"tool": { "tag": "forge:tools/knives" },
 			"result": [Item.of(KJ(type + "_slimy_fern_leaf"), 2).toResultJson()]
 		}).id(`kjs:cutting/${type}_slime_fern_leaf`)
+		event.custom(ifiniDeploying(KJ(type + "_slimy_fern_leaf", 2), TC(type + "_slime_fern"), "#forge:tools/knives"))
 		event.custom({
 			"type": "occultism:spirit_fire",
 			"ingredient": { "item": KJ(type + "_slimy_fern_leaf") },
