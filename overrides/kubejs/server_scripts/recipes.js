@@ -1287,6 +1287,16 @@ function unify(event) {
 	
 	event.replaceInput({ id: TE('parts/electrum_gear') }, TE('constantan_ingot'), '#forge:ingots/electrum')
 
+	event.replaceInput({ id: TE('storage/electrum_nugget_from_ingot') }, TE('constantan_ingot'), '#forge:ingots/electrum')
+
+	event.remove( {id: TE('storage/silver_block')})
+	event.remove( {id: TE('storage/silver_ingot_from_block')})
+	event.remove( {id: TE('storage/silver_ingot_from_nuggets')})
+	event.remove( {id: TE('storage/silver_nugget_from_ingot')})
+
+	event.remove( {id: TE('smelting/silver_ingot_from_dust_smelting')})
+	event.remove( {id: TE('smelting/silver_ingot_from_dust_blasting')})
+
 	let woodcutting = (mod, log, planks, slab) => {
 		event.recipes.createCutting([mod + ":stripped_" + log], mod + ":" + log).processingTime(50)
 		event.recipes.createCutting([Item.of(mod + ":" + planks, 6)], mod + ":stripped_" + log).processingTime(50)
