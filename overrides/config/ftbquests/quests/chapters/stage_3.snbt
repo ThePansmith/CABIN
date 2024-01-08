@@ -687,24 +687,24 @@
 			description: [
 				"After your flawless encounter with the Ender Dragon, make your way to the Gateway and travel to the outer Islands."
 				""
-				"Here you should be able to find the Ennegel necessary for creating Enderium Alloy."
+				"Here you should be able to find the Chorus Flowers necessary for creating Enderium Alloy."
 			]
 			dependencies: ["05C7E580ED88B556"]
 			id: "794B3C10C6110CB5"
 			tasks: [{
 				id: "7E7DF9C3DCFF0724"
 				type: "item"
-				item: "enlightened_end:ennegel_glob"
+				item: "minecraft:chorus_flower"
 				consume_items: false
 			}]
 		}
 		{
-			title: "The Ennegel Cycle"
-			icon: "enlightened_end:ennegel_fern"
+			title: "The Chorus Cycle"
+			icon: "quark:chorus_fruit_block"
 			x: 0.0d
 			y: 19.5d
 			shape: "circle"
-			description: ["Thanks to Inductive Technology, you have the option to replicate Ennegel passively, should you require a steadier and more convenient supply of Enderium."]
+			description: ["Thanks to Inductive Technology, you have the option to replicate Chorus Flowers passively, should you require a steadier and more convenient supply of Enderium."]
 			dependencies: ["794B3C10C6110CB5"]
 			id: "1CCDA748B237F6F5"
 			tasks: [{
@@ -728,7 +728,7 @@
 			description: [
 				"Fire up your Induction Smelter for two rounds of processing:"
 				""
-				"First off, refine your Silver Ingots with Ender Dust and Poise Bushes."
+				"First off, refine your Silver Ingots with Ender Dust and Chorous Flowers."
 			]
 			dependencies: [
 				"0D146AD9FE774F8B"
@@ -751,7 +751,7 @@
 			description: [
 				"The Special properties of Silver can prove useful in creating Enderium Alloy."
 				""
-				"As it turns out, the only source of Silver seems to be your money. Makes you wonder where the official mints get it from.."
+				"As it turns out, the only source of Silver seems to be your money. Makes you wonder where the official mints get it from..."
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -769,6 +769,13 @@
 		}
 		{
 			title: "Dissolved"
+			icon: {
+				id: "tconstruct:copper_can"
+				Count: 1b
+				tag: {
+					fluid: "tconstruct:molten_silver"
+				}
+			}
 			x: -1.5d
 			y: 15.5d
 			shape: "circle"
@@ -776,16 +783,8 @@
 			dependencies: ["38B063C8DE71E86D"]
 			id: "0C11EC34D5FA508B"
 			tasks: [{
-				id: "1E9F96D2152F7384"
-				type: "item"
-				title: "Copper Can (Molten Silver)"
-				item: {
-					id: "tconstruct:copper_can"
-					Count: 1b
-					tag: {
-						fluid: "tconstruct:molten_silver"
-					}
-				}
+				id: "07ECEB35508F8871"
+				type: "checkmark"
 			}]
 		}
 		{

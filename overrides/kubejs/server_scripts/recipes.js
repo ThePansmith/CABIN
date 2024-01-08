@@ -2310,8 +2310,8 @@ function enderMachine(event) {
 	// 	.loops(1)
 	// 	.id('kubejs:abstruse_mechanism')
 
-	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "enlightened_end:ennegel_glob", MC("ender_pearl")]).energy(10000)
-	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "enlightened_end:ennegel_glob", AE2("ender_dust", 4)]).energy(10000)
+	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_flower", MC("ender_pearl")]).energy(10000)
+	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_flower", AE2("ender_dust", 4)]).energy(10000)
 	event.recipes.thermal.smelter(KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")]).energy(2000)
 
 	event.shaped(KJ('enderium_machine'), [
