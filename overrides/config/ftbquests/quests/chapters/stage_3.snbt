@@ -681,13 +681,14 @@
 		}
 		{
 			title: "Gateway Expedition"
+			icon: "minecraft:chorus_fruit"
 			x: 0.0d
 			y: 17.5d
 			shape: "circle"
 			description: [
 				"After your flawless encounter with the Ender Dragon, make your way to the Gateway and travel to the outer Islands."
 				""
-				"Here you should be able to find the Chorus Flowers necessary for creating Enderium Alloy."
+				"Here you should be able to find the Chorus Fruit necessary for creating Enderium Alloy."
 			]
 			dependencies: ["05C7E580ED88B556"]
 			id: "794B3C10C6110CB5"
@@ -700,7 +701,7 @@
 		}
 		{
 			title: "The Chorus Cycle"
-			icon: "quark:chorus_fruit_block"
+			icon: "minecraft:chorus_flower"
 			x: 0.0d
 			y: 19.5d
 			shape: "circle"
@@ -728,7 +729,7 @@
 			description: [
 				"Fire up your Induction Smelter for two rounds of processing:"
 				""
-				"First off, refine your Silver Ingots with Ender Dust and Chorous Flowers."
+				"First off, refine your Silver Ingots with Ender Dust and Chorous Fruit."
 			]
 			dependencies: [
 				"0D146AD9FE774F8B"

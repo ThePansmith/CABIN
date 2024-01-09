@@ -124,9 +124,6 @@ onEvent('item.tags', event => {
 		"tconstruct:mattock",
 		"tconstruct:broad_axe",
 		"buddycards:buddysteel_axe",
-		"enlightened_end:tenebrium_axe",
-		"enlightened_end:starsteel_axe",
-		"enlightened_end:adamantite_axe",
 		"thermal:flux_saw",
 		"aquaculture:neptunium_axe",
 		"forbidden_arcanus:draco_arcanus_axe",
@@ -2307,8 +2304,8 @@ function enderMachine(event) {
 	//event.recipes.thermal.insolator(['endergetic:poise_cluster'], 'endergetic:tall_poise_bush').water(1000)
 	//event.recipes.thermal.insolator(['tconstruct:ender_slime_ball', '3x endergetic:poise_bush'], 'endergetic:poise_cluster').water(1000)
 	
-	event.recipes.thermal.insolator(['enlightened_end:ennegel_glob', 'enlightened_end:ennegel_fern'], 'enlightened_end:ennegel_fern').water(1000)
-	event.recipes.createMixing(['tconstruct:ender_slime_ball'], ['enlightened_end:ennegel_glob', '#forge:slimeballs'])
+
+	event.recipes.createMixing(['tconstruct:ender_slime_ball'], ['minecraft:chorus_fruit', '#forge:slimeballs'])
 	// let t = KJ('incomplete_abstruse_mechanism')
 	// event.recipes.createSequencedAssembly([
 	// 	KJ('abstruse_mechanism'),
@@ -2320,8 +2317,8 @@ function enderMachine(event) {
 	// 	.loops(1)
 	// 	.id('kubejs:abstruse_mechanism')
 
-	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_flower", MC("ender_pearl")]).energy(10000)
-	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_flower", AE2("ender_dust", 4)]).energy(10000)
+	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_fruit", MC("ender_pearl")]).energy(10000)
+	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_fruit", AE2("ender_dust", 4)]).energy(10000)
 	event.recipes.thermal.smelter(KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")]).energy(2000)
 
 	event.shaped(KJ('enderium_machine'), [
