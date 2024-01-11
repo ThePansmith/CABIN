@@ -345,6 +345,10 @@ onEvent('rei.hide.items', event => {
 	event.hide('kubejs:silver_coin')   
 	event.hide('kubejs:gold_coin')
 	event.hide('thermal:servo_attachment')
+
+	if (!Platform.isLoaded("malum")) {
+		event.hide("#buddycardsexp:buddycards_malum")
+	}
 })
 
 onEvent('rei.hide.fluids', event => {
