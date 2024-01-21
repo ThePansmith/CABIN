@@ -4124,7 +4124,7 @@
 			x: -0.5d
 			y: 7.0d
 			shape: "hexagon"
-			subtitle: "3x Gold"
+			subtitle: "8x Silver"
 			id: "53A0ED15395EE1C9"
 			tasks: [{
 				id: "1F55B86BB2A2EB5F"

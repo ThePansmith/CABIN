@@ -1154,8 +1154,8 @@ function rocketScience(event) {
 	];
 
 	event.recipes.createMixing(
-		[Fluid.of('beyond_earth:fuel', 10)],
-		[Fluid.of(TE('light_oil'), 30), Fluid.of(TE('heavy_oil'), 20)]
+		[Fluid.of('beyond_earth:fuel', 2)],
+		[Fluid.of(TE('refined_fuel'), 30), Fluid.of(TE('heavy_oil'), 20)]
 	).heated()
 
 

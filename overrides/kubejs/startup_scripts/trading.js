@@ -437,7 +437,7 @@ onEvent('item.registry', event => {
 		simple("Certus Quartz", AE2('certus_quartz_crystal', 8), 24, S, 0x91C5FC, 0xA7CBCF)
 		simple("Fluix Quartz", AE2('fluix_crystal', 8), 32, S, 0x8F5CCB, 0xFC7ED4)
 		simple("Cured Rubber", TE('cured_rubber', 6), 16, S, 0x3D363C, 0x594F55)
-		simple("Bitumen", TE('bitumen', 1), 3, G, 0x0B0909, 0x0B0909)
+		simple("Bitumen", TE('bitumen', 1), 8, S, 0x0B0909, 0x0B0909)
 
 		
 		next_group()
