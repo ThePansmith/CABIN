@@ -608,13 +608,13 @@
 			x: -1.0d
 			y: 9.0d
 			shape: "circle"
-			description: ["Refining Crude Oil into Heavy Oil creates a by-product of Light Oil."]
+			description: ["Refined fuel can be made from either heavy oil or light oil."]
 			dependencies: ["4761DAE59CDD93AF"]
 			id: "26DD1CA6A8D4E249"
 			tasks: [{
 				id: "2EA66D1B4EEBFA62"
 				type: "item"
-				item: "thermal:light_oil_bucket"
+				item: "thermal:refined_fuel_bucket"
 				consume_items: false
 			}]
 		}

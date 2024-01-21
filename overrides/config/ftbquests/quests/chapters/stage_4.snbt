@@ -67,6 +67,8 @@
 			description: [
 				"Great work! The final assembly line is now complete. Your factory just entered the Digital Age."
 				""
+				"If you have not used AE2 before, it's highly recommended to learn it; Even just a basic autocrafting setup can save you a ton of time. This quest will link a guide, that while for 1.12.2, just about everything carries over."
+				""
 				"New options have opened up in the Overview. Whenever you are ready."
 			]
 			dependencies: ["6824055533465010"]
@@ -96,6 +98,13 @@
 					type: "item"
 					item: "thermal:lead_plate"
 					random_bonus: 4
+				}
+				{
+					id: "0BFFA00BD71FC785"
+					type: "command"
+					title: "Link a guide"
+					icon: "ftbquests:book"
+					command: "/tellraw @p {\"text\":\"\\u00A79Link to AE2 Guide\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.youtube.com/watch?v=u0ouTWgdcXk\"}}"
 				}
 			]
 		}
@@ -649,7 +658,7 @@
 		}
 		{
 			title: "The Alchemical Laser"
-			icon: "projectred_illumination:lime_inverted_cage_light"
+			icon: "createdeco:green_cast_iron_lamp"
 			x: 3.0d
 			y: -2.5d
 			shape: "circle"
