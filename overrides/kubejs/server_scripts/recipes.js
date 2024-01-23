@@ -128,7 +128,8 @@ onEvent('item.tags', event => {
 		"aquaculture:neptunium_axe",
 		"forbidden_arcanus:draco_arcanus_axe",
 		"forbidden_arcanus:arcane_golden_axe",
-		"forbidden_arcanus:reinforced_arcane_golden_axe"
+		"forbidden_arcanus:reinforced_arcane_golden_axe",
+		"alloyed:steel_axe"
 	]
 	
 	unregistered_axes.forEach(axe => {
