@@ -117,12 +117,12 @@ onEvent('block.registry', event => {
 	event.create('invar_casing').material('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName('Invar Casing')
 	event.create('fluix_casing').material('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName('Fluix Casing')
 
-	event.create('computation_matrix').model("kubejs:item/computation_matrix").material("glass").hardness(0.3).displayName('Computation Matrix').fullBlock(false).notSolid().box(1,1,1,15,15,15).waterlogged().opaque(false).lightLevel(1.0).item(i => { i.rarity(RARITY_UNCOMMON) })
+	event.create('computation_matrix').model("kubejs:block/computation_matrix").material("lantern").hardness(0.1).displayName('Computation Matrix').fullBlock(false).notSolid().box(1,1,1,15,15,15).waterlogged().opaque(false).lightLevel(7).renderType("translucent").item(i => { i.rarity(RARITY_UNCOMMON) })
 
 	event.create('ponder_laser_lamp').model('kubejs:block/ponder_laser_lamp').notSolid().renderType("translucent").displayName('Laser Lamp (For Ponder)')
 	event.create('ponder_laser_lamp_on').model('kubejs:block/ponder_laser_lamp_on').notSolid().lightLevel(15).renderType("translucent").displayName('Laser Lamp (For Ponder)')
-	event.create('navigation_computer').material('metal').tagBlock("mineable/pickaxe").hardness(3.0).displayName('Navigation Computer')
-	event.create('lander_deployer').material('metal').tagBlock("mineable/pickaxe").hardness(3.0).displayName('Lander Deployer')
+	event.create('navigation_computer').material('metal').tagBlock("mineable/pickaxe").hardness(3.0).requiresTool(true).displayName('Navigation Computer')
+	event.create('lander_deployer').material('metal').tagBlock("mineable/pickaxe").hardness(3.0).requiresTool(true).displayName('Lander Deployer')
 
 	
 
@@ -159,6 +159,10 @@ onEvent('block.registry', event => {
 			.displayName(`Mundane Alchemic Blend`)
 			.renderType("cutout")
 			.waterlogged()
+			.item(e => e
+				.color(0, 0x394867)
+				.color(1, 0x14274E)
+			)
 
 	global.substrates = []
 	global.substrate_mapping = {}
@@ -194,7 +198,10 @@ onEvent('block.registry', event => {
 			.displayName(name)
 			.renderType("cutout")
 			.waterlogged()
-			.item(e => e.rarity(model == "catalyst" ? 'uncommon' : 'common'))
+			.item(e => e.rarity(model == "catalyst" ? 'uncommon' : 'common')
+				.color(0, c1)
+				.color(1, c2)
+			)
 		substrate_index++
 	}
 
@@ -261,7 +268,10 @@ onEvent('block.registry', event => {
 		.displayName("Chaos Catalyst")
 		.renderType("cutout")
 		.waterlogged()
-		.item(e => e.rarity('rare'))
+		.item(e => e.rarity('rare')
+			.color(0, 0xb200ed)
+			.color(1, 0xff66cc)
+		)
 
 	event.create(`substrate_silicon`)
 		.material('glass')
@@ -273,6 +283,10 @@ onEvent('block.registry', event => {
 		.displayName("Silicon Reagent")
 		.renderType("cutout")
 		.waterlogged()
+		.item(e => e.rarity('rare')
+			.color(0, 0x474449)
+			.color(1, 0x967DA0)
+		)
 
 	event.create(`substrate_silver`)
 		.material('glass')
@@ -284,6 +298,10 @@ onEvent('block.registry', event => {
 		.displayName("Silver Reagent")
 		.renderType("cutout")
 		.waterlogged()
+		.item(e =>  e.rarity('rare')
+			.color(0, 0x9FADB4)
+			.color(1, 0xBECCD2)
+		)
 
 	event.create(`accellerator_glowstone`)
 		.material('glass')
@@ -294,6 +312,9 @@ onEvent('block.registry', event => {
 		.displayName("Glowstone Accelerator")
 		.renderType("cutout")
 		.waterlogged()
+		.item(e => e
+			.color(0, 0xFFBC5E)
+		)
 
 	event.create(`accellerator_redstone`)
 		.material('glass')
@@ -304,6 +325,9 @@ onEvent('block.registry', event => {
 		.displayName("Redstone Accelerator")
 		.renderType("cutout")
 		.waterlogged()
+		.item(e => e
+			.color(0, 0xAA0F01)
+		)
 })
 
 onEvent('fluid.registry', event => {
