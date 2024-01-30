@@ -389,10 +389,8 @@ function unwantedRecipes(event) {
 	event.remove({ id: TE('machines/pulverizer/pulverizer_cinnabar') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_signalum') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_lumium') })
-	event.remove({ id: TE('machines/smelter/smelter_alloy_electrum') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_enderium') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_invar') })
-	event.remove({ id: TE('machines/smelter/smelter_alloy_constantan') })
 	event.remove({ id: TE('machines/smelter/smelter_alloy_bronze') })
 	event.remove({ id: TE('compat/create/smelter_create_alloy_brass') })
 	event.remove({ id: TE('compat/tconstruct/smelter_alloy_tconstruct_rose_gold_ingot') })
@@ -1225,7 +1223,12 @@ function unify(event) {
 	event.replaceInput({ id: TE('augments/rf_coil_xfer_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('augments/rf_coil_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('tools/detonator') }, F('#ingots/silver'), TE('lead_ingot'))
-	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_netherite")}, TE("gold_dust"), MC("gold_ingot"))
+
+	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_constantan")}, F('#dusts/copper'), MC("copper_ingot"))
+	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_constantan")}, F('#dusts/nickel'), TE("nickel_ingot"))
+	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_electrum")}, F('#dusts/gold'), MC("gold_ingot"))
+	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_electrum")}, F('#dusts/silver'), TE("silver_ingot"))
+	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_netherite")}, F('#dusts/gold'), MC("gold_ingot"))
 
 	event.replaceOutput({ type: OC("crushing") }, OC('copper_dust'), TE('copper_dust'))
 	event.replaceOutput({ type: OC("crushing") }, OC('iron_dust'), TE('iron_dust'))
@@ -1286,6 +1289,7 @@ function unify(event) {
 	event.replaceInput({ id: TE('parts/electrum_gear') }, TE('constantan_ingot'), '#forge:ingots/electrum')
 
 	event.replaceInput({ id: TE('storage/electrum_nugget_from_ingot') }, TE('constantan_ingot'), '#forge:ingots/electrum')
+	event.replaceInput({ id: TE('storage/electrum_block') }, TE('constantan_ingot'), '#forge:ingots/electrum')
 
 	event.remove( {id: TE('storage/silver_block')})
 	event.remove( {id: TE('storage/silver_ingot_from_block')})
@@ -1639,8 +1643,6 @@ function alloys(event) {
 	event.recipes.thermal.smelter([KJ("invar_compound"), KJ("invar_compound")], [TE("nickel_ingot"), MC("iron_ingot")])
 	event.recipes.thermal.smelter(CR("brass_ingot", 2), [MC("copper_ingot"), CR("zinc_ingot")])
 	event.recipes.thermal.smelter(TC("rose_gold_ingot", 2), [MC("copper_ingot"), MC("gold_ingot")])
-	event.recipes.thermal.smelter(TE("constantan_ingot", 2), [MC("copper_ingot"), TE("nickel_ingot")])
-	event.recipes.thermal.smelter(TE("electrum_ingot", 2), [TE("silver_ingot"), MC("gold_ingot")])
 	event.recipes.thermal.smelter("3x alloyed:bronze_ingot", [MC("copper_ingot", 3), '#forge:sand'])
 
 }

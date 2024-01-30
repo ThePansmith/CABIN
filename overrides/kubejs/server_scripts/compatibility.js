@@ -42,14 +42,19 @@ onEvent('recipes', event => {
 		machine('brass','createaddition:tesla_coil', 1, 'createaddition:copper_spool')
 		machine('brass','createaddition:modular_accumulator', 1, 'thermal:energy_cell_frame')
 
+		event.replaceOutput({}, '#forge:nuggets/electrum','createaddition:electrum_nugget')
+		event.replaceOutput({}, '#forge:ingots/electrum','createaddition:electrum_ingot')
+		event.replaceOutput({}, '#forge:plates/electrum','createaddition:electrum_sheet')
+
+		event.replaceOutput({id: 'kubejs:machines/smelter/electrum_ingot'}, 'thermal:electrum_ingot','createaddition:electrum_ingot')
+
 		// Duplicate Items
-		event.remove({ output: 'createaddition:electrum_ingot'})
-		event.remove({ output: 'createaddition:electrum_nugget'})
+		//event.remove({ id: 'createaddition:electrum_ingot'})
+		event.remove({ id: 'createaddition:crafting/electrum_nugget'})
 		event.remove({ output: 'createaddition:zinc_sheet'})
 
 		// Bugged Recipe
-		event.remove({ output: 'createaddition:electrum_sheet', input: 'thermal:constantan_ingot'})
-		event.recipes.createPressing('createaddition:electrum_sheet', '#forge:ingots/electrum')
+		event.replaceInput( { id:'createaddition:pressing/electrum_ingot'}, 'thermal:constantan_ingot', '#forge:ingots/electrum')
 
 		// Motor & Alternator
 		// event.remove({ output: 'createaddition:electric_motor'})
