@@ -45,6 +45,7 @@ onEvent('recipes', event => {
 		event.replaceOutput({}, '#forge:nuggets/electrum','createaddition:electrum_nugget')
 		event.replaceOutput({}, '#forge:ingots/electrum','createaddition:electrum_ingot')
 		event.replaceOutput({}, '#forge:plates/electrum','createaddition:electrum_sheet')
+		event.replaceOutput({}, '#forge:dusts/diamond','thermal:diamond_dust')
 
 		event.replaceOutput({id: 'kubejs:machines/smelter/electrum_ingot'}, 'thermal:electrum_ingot','createaddition:electrum_ingot')
 
