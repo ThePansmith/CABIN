@@ -4,7 +4,6 @@
 // If you have a create addon that you think could fit in the general theme/tone/whathaveyou of CABIN, make a PR with it.
 
 onEvent('recipes', event => {
-
 	let machine = (machinename, id, amount, other_ingredient) => {
 		event.remove({ output: id })
 		var machine_item = 'kubejs:'+ machinename + '_machine';
@@ -99,7 +98,16 @@ onEvent('recipes', event => {
 				event.recipes.createFilling('kubejs:incomplete_large_connector', ['kubejs:incomplete_large_connector', Fluid.of('tconstruct:molten_gold', 10)])
 			]
 		).transitionalItem('kubejs:incomplete_large_connector').loops(1)
-	}          
+	}
+
+	if (Platform.isLoaded('create_enchantment_industry')) {
+		event.remove( {id: 'create_enchantment_industry:crafting/disenchanter'})
+		event.remove( {id: 'create_enchantment_industry:crafting/printer'})
+
+		machine('copper', 'create_enchantment_industry:disenchanter', 1, '#create:sandpaper')
+		machine('copper', 'create_enchantment_industry:printer', 1, '#forge:storage_blocks/lapis')
+
+	}
 	
 	if (Platform.isLoaded('miners_delight')) {
 		event.remove({ id: 'miners_delight:cutting/bat_wing' })
