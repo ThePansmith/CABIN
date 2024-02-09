@@ -114,11 +114,3 @@
 			#Maximum Y spawn.
 			#Range: -2032 ~ 2031
 			"Max Y" = 64
-
-		#Apatite will only try to generate from this config when thermal cultivation is installed
-		#Since thermal cultivation isn't in the base pack we handle it using kubejs and disable it here for thermal cultivation compatability
-		[World.Ores.Apatite]
-			"Vein Count" = 0
-			"Vein Size" = 9
-			"Min Y" = -16
-			"Max Y" = 96

@@ -58,5 +58,5 @@ onEvent('worldgen.add', event => {
 })
 
 onEvent('worldgen.remove', event => {
-	event.removeFeatureById('underground_ores', ['ore_redstone', 'minecraft:ore_redstone_lower'])
+	event.removeFeatureById('underground_ores', ['minecraft:ore_redstone', 'minecraft:ore_redstone_lower'])
 })
