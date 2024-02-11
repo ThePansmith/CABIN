@@ -350,5 +350,9 @@ onEvent('item.modification', event => {
 			item.maxStackSize = 1
 		})
 	});
+
+	event.modify('projectred_core:screwdriver', item => {
+		item.maxDamage = 256
+	})
 })
 
