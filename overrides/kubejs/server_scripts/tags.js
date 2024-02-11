@@ -32,8 +32,8 @@ onEvent('block.tags', event => {
 	event.add("create:wrench_pickup", 'supplementaries:spring_launcher')
 	//event.add("create:wrench_pickup", 'supplementaries:speaker_block') //note block and jukebox are not wrenchable
 	event.add("create:wrench_pickup", 'supplementaries:turn_table')
-	event.add("create:wrench_pickup", 'supplementaries:pulley_block')
-	event.add("create:wrench_pickup", 'supplementaries:hourglass')
+	//event.add("create:wrench_pickup", 'supplementaries:pulley_block')
+	//event.add("create:wrench_pickup", 'supplementaries:hourglass')
 	event.add("create:wrench_pickup", 'supplementaries:bellows')
 	event.add("create:wrench_pickup", 'supplementaries:clock_block')
 	event.add("create:wrench_pickup", 'supplementaries:crystal_display')
