@@ -1,146 +1,144 @@
 let metal_ores_drop_dust = (id, dust_id) => ({
-    "type": "minecraft:block",
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:alternatives",
-                    "children": [
-                        {
-                            "type": "minecraft:item",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:match_tool",
-                                    "predicate": {
-                                        "enchantments": [
-                                            {
-                                                "enchantment": "minecraft:silk_touch",
-                                                "levels": {
-                                                    "min": 1
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            ],
-                            "name": id
-                        },
-                        {
-                            "type": "minecraft:item",
-                            "name": dust_id,
-                            "functions": [
-                                {
-                                    "function": "minecraft:explosion_decay"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:table_bonus",
-                            "enchantment": "minecraft:fortune",
-                            "chances": [
-                                0.0,
-                                0.125,
-                                0.25,
-                                0.375,
-                                0.5,
-                                0.625,
-                                0.75
-                            ]
-                        }
-                    ],
-                    "name": dust_id
-                }
-            ]
-        }
-    ]
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:item",
+							"name": id,
+							"conditions": [
+								{
+									"condition": "minecraft:match_tool",
+									"predicate": {
+										"enchantments": [
+											{
+												"enchantment": "minecraft:silk_touch",
+												"levels": {
+													"min": 1
+												}
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"type": "minecraft:item",
+							"name": dust_id,
+							"functions": [
+								{
+									"function": "minecraft:set_count",
+									"count": 1,
+									"add": true,
+									"conditions": [
+										{
+											"condition": "minecraft:table_bonus",
+											"enchantment": "minecraft:fortune",
+											"chances": [
+												0,
+												0.125,
+												0.25,
+												0.375,
+												0.5,
+												0.625,
+												0.75,
+												0.875,
+												1
+											]
+										}
+									]
+								},
+								{
+									"function": "minecraft:explosion_decay"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
 })
 
 let slabs = (id) => ({
-    "type": "minecraft:block",
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:block_state_property",
-                                    "block": id,
-                                    "properties": {
-                                        "type": "double"
-                                    }
-                                }
-                            ],
-                            "count": 2
-                        },
-                        {
-                            "function": "minecraft:explosion_decay"
-                        }
-                    ],
-                    "name": id
-                }
-            ]
-        }
-    ]
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"functions": [
+						{
+							"function": "minecraft:set_count",
+							"conditions": [
+								{
+									"condition": "minecraft:block_state_property",
+									"block": id,
+									"properties": {
+										"type": "double"
+									}
+								}
+							],
+							"count": 2
+						},
+						{
+							"function": "minecraft:explosion_decay"
+						}
+					],
+					"name": id
+				}
+			]
+		}
+	]
 })
 
 let cobble = (id, cobbleId) => ({
-    "type": "minecraft:block",
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:alternatives",
-                    "children": [
-                        {
-                            "type": "minecraft:item",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:match_tool",
-                                    "predicate": {
-                                        "enchantments": [
-                                            {
-                                                "enchantment": "minecraft:silk_touch",
-                                                "levels": {
-                                                    "min": 1
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            ],
-                            "name": id
-                        },
-                        {
-                            "type": "minecraft:item",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:survives_explosion"
-                                }
-                            ],
-                            "name": cobbleId
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:item",
+							"conditions": [
+								{
+									"condition": "minecraft:match_tool",
+									"predicate": {
+										"enchantments": [
+											{
+												"enchantment": "minecraft:silk_touch",
+												"levels": {
+													"min": 1
+												}
+											}
+										]
+									}
+								}
+							],
+							"name": id
+						},
+						{
+							"type": "minecraft:item",
+							"conditions": [
+								{
+									"condition": "minecraft:survives_explosion"
+								}
+							],
+							"name": cobbleId
+						}
+					]
+				}
+			]
+		}
+	]
 })
 
 onEvent('block.loot_tables', event => {
