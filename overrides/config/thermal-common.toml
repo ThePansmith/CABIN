@@ -20,7 +20,7 @@
 		[World.Ores.Silver]
 			#Max number of veins per chunk; set to 0 to disable.
 			#Range: 0 ~ 64
-			"Vein Count" = 4
+			"Vein Count" = 0
 			#Max size of the vein.
 			#Range: 1 ~ 64
 			"Vein Size" = 8
@@ -62,10 +62,10 @@
 		[World.Ores.Cinnabar]
 			#Max number of veins per chunk; set to 0 to disable.
 			#Range: 0 ~ 64
-			"Vein Count" = 1
+			"Vein Count" = 4
 			#Max size of the vein.
 			#Range: 1 ~ 64
-			"Vein Size" = 5
+			"Vein Size" = 6
 			#Minimum Y spawn.
 			#Range: -2032 ~ 2031
 			"Min Y" = -16
@@ -90,7 +90,7 @@
 		[World.Ores.Tin]
 			#Max number of veins per chunk; set to 0 to disable.
 			#Range: 0 ~ 64
-			"Vein Count" = 6
+			"Vein Count" = 0
 			#Max size of the vein.
 			#Range: 1 ~ 64
 			"Vein Size" = 9
@@ -114,4 +114,3 @@
 			#Maximum Y spawn.
 			#Range: -2032 ~ 2031
 			"Max Y" = 64
-

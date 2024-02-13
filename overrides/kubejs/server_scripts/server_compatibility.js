@@ -4,7 +4,6 @@
 // If you have a create addon that you think could fit in the general theme/tone/whathaveyou of CABIN, make a PR with it.
 
 onEvent('recipes', event => {
-
 	let machine = (machinename, id, amount, other_ingredient) => {
 		event.remove({ output: id })
 		var machine_item = 'kubejs:'+ machinename + '_machine';
@@ -72,14 +71,13 @@ onEvent('recipes', event => {
 		event.recipes.createMechanicalCrafting('createaddition:redstone_relay', 'AB', { A: 'projectred_core:platformed_plate', B: 'createaddition:connector' })
 
 		// Remove heated basin ingot recipes
-		event.remove({ output: 'tconstruct:slimesteel_ingot', type: 'create:mixing'})
-		event.remove({ output: 'tconstruct:amethyst_bronze_ingot', type: 'create:mixing'})
-		event.remove({ output: 'tconstruct:rose_gold_ingot', type: 'create:mixing'})
-		event.remove({ output: 'tconstruct:pig_iron_ingot', type: 'create:mixing'})
-		event.remove({ output: 'tconstruct:queens_slime_ingot', type: 'create:mixing'})
-		event.remove({ output: 'tconstruct:manyullyn_ingot', type: 'create:mixing'})
-		event.remove({ output: 'tconstruct:hepatizon_ingot', type: 'create:mixing'})
+		event.remove({ id: "createaddition:mixing/electrum"} )
+		event.remove({ id: /createaddition:compat\/tconstruct/} )
 
+		// Connectors
+		event.remove( {id:"createaddition:crafting/small_connector_copper"})
+		event.remove( {id:"createaddition:crafting/large_connector_gold"})
+		event.remove( {id:"createaddition:crafting/large_connector_electrum"})
 		event.recipes.createSequencedAssembly(
 			[Item.of('createaddition:connector', 4)], 
 			'create:andesite_alloy', 
@@ -92,14 +90,22 @@ onEvent('recipes', event => {
 		
 		event.recipes.createSequencedAssembly(
 			[Item.of('createaddition:large_connector', 1)], 
-			'createaddition:connector', 
+			'create:andesite_alloy', 
 			[
-				event.recipes.createDeploying('kubejs:incomplete_large_connector', ['kubejs:incomplete_large_connector', '#forge:plates/iron']),
-				event.recipes.createPressing('kubejs:incomplete_large_connector', 'kubejs:incomplete_large_connector'),
-				event.recipes.createFilling('kubejs:incomplete_large_connector', ['kubejs:incomplete_large_connector', Fluid.of('tconstruct:molten_gold', 10)])
+				event.recipes.createDeploying('kubejs:incomplete_connector', ['kubejs:incomplete_connector', '#forge:rods/electrum']),
+				event.recipes.createDeploying('kubejs:incomplete_connector', ['kubejs:incomplete_connector', '#forge:plates/iron']),
+				event.recipes.createPressing('kubejs:incomplete_connector', 'kubejs:incomplete_connector'),
+				event.recipes.createDeploying('kubejs:incomplete_connector', ['kubejs:incomplete_connector', '#forge:plates/iron']),
+				event.recipes.createPressing('kubejs:incomplete_connector', 'kubejs:incomplete_connector')
 			]
 		).transitionalItem('kubejs:incomplete_large_connector').loops(1)
-	}          
+	}
+
+	if (Platform.isLoaded('create_enchantment_industry')) {
+		machine('copper', 'create_enchantment_industry:disenchanter', 1, '#create:sandpaper')
+		machine('copper', 'create_enchantment_industry:printer', 1, '#forge:storage_blocks/lapis')
+
+	}
 	
 	if (Platform.isLoaded('miners_delight')) {
 		event.remove({ id: 'miners_delight:cutting/bat_wing' })

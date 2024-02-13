@@ -1170,7 +1170,7 @@
 				"Is Blacklist" = true
 
 			[world.big_dungeon.biome_config.biomes]
-				Biomes = []
+				Biomes = ["beyond_earth:orbit", "beyond_earth:moon_desert"]
 				"Is Blacklist" = true
 
 	[world.azalea_wood]

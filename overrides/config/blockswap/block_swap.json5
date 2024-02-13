@@ -85,11 +85,7 @@ to make editing this file much easier.
 	   	}
 	*/
 	"swapper": { 
-		"minecraft:redstone_ore": "minecraft:stone"
-		"minecraft:deepslate_redstone_ore": "minecraft:deepslate"
-		"thermal:tin_ore": "minecraft:stone"
-		"thermal:deepslate_tin_ore": "minecraft:deepslate"
-		"thermal:silver_ore": "minecraft:stone"
-		"thermal:deepslate_silver_ore": "minecraft:deepslate"
+		"minecraft:redstone_ore": "thermal:cinnabar_ore"
+		"minecraft:deepslate_redstone_ore": "thermal:deepslate_cinnabar_ore"
 	}
 }
