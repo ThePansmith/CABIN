@@ -352,7 +352,7 @@ onEvent('item.modification', event => {
 	});
 
 	event.modify('projectred_core:screwdriver', item => {
-		item.maxDamage = 256
+		item.maxDamage = 512
 	})
 })
 
