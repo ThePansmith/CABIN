@@ -1,0 +1,40 @@
+{
+  "parent": "create:andesite_alloy",
+  "display": {
+    "icon": {
+      "item": "create:andesite_casing"
+    },
+    "title": {
+      "translate": "advancement.create.andesite_casing"
+    },
+    "description": {
+      "color": "#DBA213",
+      "translate": "advancement.create.andesite_casing.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {}
+          }
+        ],
+        "items": [
+          {
+            "items": [
+              "create:andesite_casing"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
