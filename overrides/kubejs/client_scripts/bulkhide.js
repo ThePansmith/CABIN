@@ -350,11 +350,8 @@ onEvent('rei.hide.items', event => {
 	event.hide('kubejs:silver_coin')   
 	event.hide('kubejs:gold_coin')
 	event.hide('thermal:servo_attachment')
-
-	//The buddycard malum cards are a strange case where we only want to hide items when a mod is not present
-	if (!Platform.isLoaded("malum")) {
-		event.hide("#buddycardsexp:buddycards_malum")
-	}
+	event.hide('create:sturdy_sheet')
+	event.hide('create:unprocessed_obsidian_sheet')
 })
 
 onEvent('rei.hide.fluids', event => {

@@ -443,8 +443,9 @@ function tweaks(event) {
 	event.remove({ id: TE("augments/item_filter_augment") })
 	event.shapeless(TE("item_filter_augment"), [CR("filter"), TE("lapis_gear")])
 
+	event.remove({ id: CR("sequenced_assembly/sturdy_sheet") })
 	event.remove({ id: 'create_central_kitchen:crafting/cooking_guide' })
-	event.shapeless('create_central_kitchen:cooking_guide', [F("#plates/obsidian"), FD("canvas")])
+	event.shapeless('create_central_kitchen:cooking_guide', [CE("schedule"), FD("canvas")])
 	
 	event.stonecutting(AE2("silicon_press"), KJ("circuit_scrap"))
 	event.stonecutting(AE2("engineering_processor_press"), KJ("circuit_scrap"))
