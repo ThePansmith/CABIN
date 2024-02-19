@@ -1542,7 +1542,7 @@ function oreProcessing(event) {
 		event.custom({
 			"type": "tconstruct:melting",
 			"ingredient": {
-				"tag": dusttag
+				"tag": dusttag.slice(1)
 			},
 			"result": {
 				"fluid": fluid,
