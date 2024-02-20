@@ -104,7 +104,8 @@ onEvent('recipes', event => {
 	if (Platform.isLoaded('create_enchantment_industry')) {
 		machine('copper', 'create_enchantment_industry:disenchanter', 1, '#create:sandpaper')
 		machine('copper', 'create_enchantment_industry:printer', 1, '#forge:storage_blocks/lapis')
-
+		
+		event.replaceInput( {id: 'create_enchantment_industry:crafting/enchanting_guide'}, 'create:sturdy_sheet', 'create:schedule' )
 	}
 	
 	if (Platform.isLoaded('miners_delight')) {
