@@ -3,6 +3,9 @@ onEvent('item.tags', event => {
 	event.add('forge:enderium_machine', 'kubejs:enderium_machine')
 	event.add('forge:controller', 'ae2:controller')
 	event.add('forge:iron_block', 'minecraft:iron_block')
+
+	event.add('forge:dusts/obsidian', 'create:powdered_obsidian')
+	event.add('forge:dusts', 'create:powdered_obsidian')
 })
 
 onEvent('block.tags', event => {
