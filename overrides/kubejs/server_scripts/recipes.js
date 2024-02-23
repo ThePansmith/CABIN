@@ -374,11 +374,19 @@ function unwantedRecipes(event) {
 	event.remove({ id: CR('mixing/brass_ingot') })
 	event.remove({ id: TC('smeltery/melting/metal/gold/enchanted_apple') })
 	event.remove({ id: CR('cutting/andesite_alloy') })
-	event.remove({ id: TE('storage/beetroot_block') })
+	event.remove({ id: QU('building/crafting/compressed/charcoal_block')})
+	event.remove({ id: QU('building/crafting/compressed/sugar_cane_block')})
+	event.remove({ id: TE('building/crafting/compressed/bamboo_block')})
+	event.remove({ id: QU('building/crafting/compressed/gunpowder_sack')})
+	event.remove({ id: TE('storage/silver_block')})
+	event.remove({ id: TE('storage/silver_ingot_from_block')})
+	event.remove({ id: TE('storage/silver_ingot_from_nuggets')})
+	event.remove({ id: TE('storage/silver_nugget_from_ingot')})
+	event.remove({ id: TE('storage/carrot_block') })
 	event.remove({ id: TE('storage/potato_block') })
+	event.remove({ id: TE('storage/beetroot_block') })
 	event.remove({ id: AE2('misc/grindstone_woodengear') })
 	event.remove({ id: AE2('tools/misctools_entropy_manipulator') })
-	event.remove({ id: TE('storage/carrot_block') })
 	event.remove({ id: TE('fire_charge/invar_ingot_3') })
 	event.remove({ id: TE('fire_charge/enderium_ingot_2') })
 	event.remove({ id: TE('fire_charge/constantan_ingot_2') })
@@ -426,6 +434,8 @@ function unwantedRecipes(event) {
 		event.remove({ type: MC("blasting"), input: F("#dusts/" + e) })
 		event.remove({ type: TC("melting"), input: F("#dusts/" + e) })
 	})
+	event.remove({ id: TE('smelting/silver_ingot_from_dust_smelting')})
+	event.remove({ id: TE('smelting/silver_ingot_from_dust_blasting')})
 }
 
 function tweaks(event) {
@@ -1292,13 +1302,32 @@ function unify(event) {
 	event.replaceInput({ id: TE('storage/electrum_nugget_from_ingot') }, TE('constantan_ingot'), '#forge:ingots/electrum')
 	event.replaceInput({ id: TE('storage/electrum_block') }, TE('constantan_ingot'), '#forge:ingots/electrum')
 
-	event.remove( {id: TE('storage/silver_block')})
-	event.remove( {id: TE('storage/silver_ingot_from_block')})
-	event.remove( {id: TE('storage/silver_ingot_from_nuggets')})
-	event.remove( {id: TE('storage/silver_nugget_from_ingot')})
+	event.replaceInput({ id: AP('sheet_metal_block')}, F('#ingots/iron'), F('#plates/iron'))
+	
+	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('carrot_crate')}, 'energy': 48000})
+	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('potato_crate')}, 'energy': 16000})
+	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('beetroot_crate')}, 'energy': 16000})
+	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('cabbage_crate')}, 'energy': 32000})
+	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('onion_crate')}, 'energy': 32000})
+	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('tomato_crate')}, 'energy': 16000})
+	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': 'buddycardsexp:buddybean_crate'}, 'energy': 32000})
 
-	event.remove( {id: TE('smelting/silver_ingot_from_dust_smelting')})
-	event.remove( {id: TE('smelting/silver_ingot_from_dust_blasting')})
+	event.shaped(TE('ruby_block', 1), [
+		'RRR',
+		'RRR',
+		'RRR'
+	], {
+		R: F('#gems/ruby')
+	})
+	event.shapeless(TE('ruby', 9), [F('#storage_blocks/ruby')])
+	event.shaped(TE('sapphire_block', 1), [
+		'SSS',
+		'SSS',
+		'SSS'
+	], {
+		S: F('#gems/sapphire')
+	})
+	event.shapeless(TE('sapphire', 9), [F('#storage_blocks/sapphire')])
 
 	let woodcutting = (mod, log, planks, slab) => {
 		event.recipes.createCutting([mod + ":stripped_" + log], mod + ":" + log).processingTime(50)

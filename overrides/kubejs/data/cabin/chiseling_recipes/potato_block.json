@@ -1,0 +1,12 @@
+{
+  "type": "rechiseled:chiseling",
+  "entries": [
+    {
+      "item": "farmersdelight:potato_crate"
+    },
+    {
+      "item": "thermal:potato_block"
+    }
+  ],
+  "overwrite": false
+}

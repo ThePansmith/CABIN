@@ -1,0 +1,12 @@
+{
+  "type": "rechiseled:chiseling",
+  "entries": [
+    {
+      "item": "thermal:sugar_cane_block"
+    },
+    {
+      "item": "quark:sugar_cane_block"
+    }
+  ],
+  "overwrite": false
+}
