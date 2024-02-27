@@ -10,6 +10,7 @@ onEvent('item.tags', event => {
 
 onEvent('block.tags', event => {
 	event.add('minecraft:beacon_base_blocks', 'alloyed:steel_block')
+	event.remove('minecraft:beacon_base_blocks', 'thermal:bronze_block')
 
 	event.add("create:wrench_pickup", "waterstrainer:strainer_base")
 
@@ -44,6 +45,8 @@ onEvent('block.tags', event => {
 	event.add("create:wrench_pickup", 'supplementaries:crank')
 	event.add("create:wrench_pickup", 'supplementaries:wind_vane')
 	event.add("create:wrench_pickup", 'supplementaries:faucet')
+
+	event.add("create:wrench_pickup", 'cb_multipart:multipart')
 
 	//I really don't know why these blocks are missing the pressure plate tag
 	//All the other pressure plates from quark and forbidden have the tag.

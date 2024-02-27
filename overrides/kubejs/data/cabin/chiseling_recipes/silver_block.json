@@ -1,0 +1,12 @@
+{
+  "type": "rechiseled:chiseling",
+  "entries": [
+    {
+      "item": "thermal:silver_block"
+    },
+    {
+      "item": "occultism:silver_block"
+    }
+  ],
+  "overwrite": false
+}

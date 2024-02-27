@@ -1,0 +1,12 @@
+{
+  "type": "rechiseled:chiseling",
+  "entries": [
+    {
+      "item": "alloyed:steel_block"
+    },
+		{
+      "item": "beyond_earth:steel_block"
+    }
+  ],
+  "overwrite": false
+}

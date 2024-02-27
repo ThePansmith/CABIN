@@ -1,0 +1,12 @@
+{
+  "type": "rechiseled:chiseling",
+  "entries": [
+		{
+      "item": "alloyed:bronze_block"
+    },
+    {
+      "item": "thermal:bronze_block"
+    }
+  ],
+  "overwrite": false
+}
