@@ -143,24 +143,24 @@ let cobble = (id, cobbleId) => ({
 
 onEvent('block.loot_tables', event => {
 
-    event.addSimpleBlock('minecraft:twisting_vines', 'minecraft:twisting_vines')
-    event.addSimpleBlock('minecraft:weeping_vines', 'minecraft:weeping_vines')
+	event.addSimpleBlock('minecraft:twisting_vines', 'minecraft:twisting_vines')
+	event.addSimpleBlock('minecraft:weeping_vines', 'minecraft:weeping_vines')
 
-    let extra_ores = ['minecraft:', 'minecraft:deepslate_']
+	let extra_ores = ['minecraft:', 'minecraft:deepslate_']
 
-    extra_ores.forEach(e => {
-        let iron = e + "iron_ore"
-        event.addJson(iron, metal_ores_drop_dust(iron, CR('crushed_raw_iron')))
-        let gold = e + "gold_ore"
-        event.addJson(gold, metal_ores_drop_dust(gold, CR('crushed_raw_gold')))
-    })
-    event.addJson(MC('copper_ore'), metal_ores_drop_dust(MC('copper_ore'), CR('crushed_raw_copper')))
-	event.addJson(MC('deepslate_copper_ore'), metal_ores_drop_dust(MC('copper_ore'), CR('crushed_raw_copper')))
-    event.addJson(CR('zinc_ore'), metal_ores_drop_dust(CR('zinc_ore'), CR('crushed_raw_zinc')))
-	event.addJson(CR('deepslate_zinc_ore'), metal_ores_drop_dust(CR('zinc_ore'), CR('crushed_raw_zinc')))
-    event.addJson(TE('nickel_ore'), metal_ores_drop_dust(TE('nickel_ore'), CR('crushed_raw_nickel')))
-	event.addJson(TE('deepslate_nickel_ore'), metal_ores_drop_dust(TE('nickel_ore'), CR('crushed_raw_nickel')))
-    event.addJson(TE('lead_ore'), metal_ores_drop_dust(TE('lead_ore'), CR('crushed_raw_lead')))
-	event.addJson(TE('deepslate_lead_ore'), metal_ores_drop_dust(TE('lead_ore'), CR('crushed_raw_lead')))
+	extra_ores.forEach(e => {
+			let iron = e + "iron_ore"
+			event.addJson(iron, metal_ores_drop_dust(iron, CR('crushed_raw_iron')))
+			let gold = e + "gold_ore"
+			event.addJson(gold, metal_ores_drop_dust(gold, CR('crushed_raw_gold')))
+	})
+	event.addJson(MC('copper_ore'), metal_ores_drop_dust(MC('copper_ore'), CR('crushed_raw_copper')))
+	event.addJson(MC('deepslate_copper_ore'), metal_ores_drop_dust(MC('deepslate_copper_ore'), CR('crushed_raw_copper')))
+	event.addJson(CR('zinc_ore'), metal_ores_drop_dust(CR('zinc_ore'), CR('crushed_raw_zinc')))
+	event.addJson(CR('deepslate_zinc_ore'), metal_ores_drop_dust(CR('deepslate_zinc_ore'), CR('crushed_raw_zinc')))
+	event.addJson(TE('nickel_ore'), metal_ores_drop_dust(TE('nickel_ore'), CR('crushed_raw_nickel')))
+	event.addJson(TE('deepslate_nickel_ore'), metal_ores_drop_dust(TE('deepslate_nickel_ore'), CR('crushed_raw_nickel')))
+	event.addJson(TE('lead_ore'), metal_ores_drop_dust(TE('lead_ore'), CR('crushed_raw_lead')))
+	event.addJson(TE('deepslate_lead_ore'), metal_ores_drop_dust(TE('deepslate_lead_ore'), CR('crushed_raw_lead')))
 
 })
