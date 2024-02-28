@@ -1351,9 +1351,7 @@ function unify(event) {
 }
 
 function trickierWindmills(event) {
-	event.remove({ output: 'create:sail_frame' })
-	event.remove({ output: 'create:white_sail' })
-	event.shapeless('create:sail_frame', ['create:white_sail'])
+	event.remove({ id: CR('crafting/kinetics/white_sail') })
 	event.shaped('2x create:white_sail', [
 		'SSS',
 		'NAN',
