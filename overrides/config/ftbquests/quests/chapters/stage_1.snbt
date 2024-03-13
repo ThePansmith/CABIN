@@ -684,7 +684,7 @@
 			x: -0.20000000000003126d
 			y: 11.5d
 			shape: "circle"
-			description: ["From here it's really no hassle to do things manually. If you must, you can always come back with some Mechanical Crafters later on."]
+			description: ["From here it's really no hassle to do things manually. If you must, you can always come back to make an assembly line later on."]
 			dependencies: ["29D37095C73B3DEC"]
 			id: "6545C3F427B12106"
 			tasks: [{

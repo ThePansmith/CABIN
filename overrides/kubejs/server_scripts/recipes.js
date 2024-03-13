@@ -165,14 +165,14 @@ onEvent('item.tags', event => {
 	event.get("minecraft:planks").add("forbidden_arcanus:mysterywood_planks").add("forbidden_arcanus:cherrywood_planks")
 	event.get("minecraft:logs_that_burn").add("#forbidden_arcanus:mysterywood_logs").add("#forbidden_arcanus:cherrywood_logs")
 
-	event.get('forge:saws').add('cb_microblock:stone_saw').add('cb_microblock:iron_saw').add('cb_microblock:diamond_saw')
-	event.get('forge:screwdrivers').add(PR_C('screwdriver'))
-	event.get('forge:chromatic_resonators').add(KJ('chromatic_resonator'))
-	event.get('forge:flash_drives').add(KJ('flash_drive'))
-	event.get('forge:ender_staffs').add(RQ('ender_staff'))
-	event.get('forge:cross_of_mercys').add(RQ('mercy_cross'))
-	event.get('forge:super_glues').add(CR('super_glue'))
-	event.get('forge:wrenches').add(CR('wrench'))
+	event.get('kubejs:saws').add('cb_microblock:stone_saw').add('cb_microblock:iron_saw').add('cb_microblock:diamond_saw')
+	event.get('kubejs:screwdrivers').add(PR_C('screwdriver'))
+	event.get('kubejs:chromatic_resonators').add(KJ('chromatic_resonator'))
+	event.get('kubejs:flash_drives').add(KJ('flash_drive'))
+	//event.get('kubejs:ender_staffs').add(RQ('ender_staff'))
+	//event.get('kubejs:cross_of_mercys').add(KJ('mercy_cross'))
+	//event.get('kubejs:super_glues').add(CR('super_glue'))
+	//event.get('kubejs:wrenches').add(CR('wrench'))
 	event.get('forge:tools/wrench').add(CR('wrench'))
 	event.get('thermal:crafting/dies').add('#forge:trade_cards')
 	event.get('thermal:crafting/dies').add('#forge:profession_cards')
@@ -1303,6 +1303,11 @@ function unify(event) {
 	event.replaceInput({ id: TE('storage/electrum_block') }, TE('constantan_ingot'), '#forge:ingots/electrum')
 
 	event.replaceInput({ id: AP('sheet_metal_block')}, F('#ingots/iron'), F('#plates/iron'))
+
+
+	event.recipes.thermal.pulverizer([KJ('zinc_dust')], F('#ingots/zinc')).energy(2000)
+	event.recipes.thermal.pulverizer([KJ('zinc_dust')], F('#plates/zinc')).energy(2000)
+	event.recipes.thermal.smelter([CR('zinc_ingot')], F('#plates/zinc')).energy(1600)
 	
 	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('carrot_crate')}, 'energy': 48000})
 	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('potato_crate')}, 'energy': 16000})
@@ -1334,13 +1339,6 @@ function unify(event) {
 		event.recipes.createCutting([Item.of(mod + ":" + planks, 6)], mod + ":stripped_" + log).processingTime(50)
 		event.recipes.createCutting([Item.of(mod + ":" + slab, 2)], mod + ":" + planks).processingTime(50)
 	}
-
-	woodcutting("forbidden_arcanus", "cherrywood_log", "cherrywood_planks", "cherrywood_slab")
-	woodcutting("forbidden_arcanus", "mysterywood_log", "mysterywood_planks", "mysterywood_slab")
-	woodcutting("architects_palette", "twisted_log", "twisted_planks", "twisted_slab")
-	woodcutting("tconstruct", "greenheart_log", "greenheart_planks", "greenheart_planks_slab")
-	woodcutting("tconstruct", "skyroot_log", "skyroot_planks", "skyroot_planks_slab")
-	woodcutting("tconstruct", "bloodshroom_log", "bloodshroom_planks", "bloodshroom_planks_slab")
 
 	let justplankwoodcutting = (mod, planks, slab) => {
 		event.recipes.createCutting([Item.of(mod + ":" + slab, 2)], mod + ":" + planks).processingTime(50)
@@ -1738,12 +1736,12 @@ function andesiteMachine(event) {
 	], '#minecraft:wooden_slabs', [
 		event.recipes.createDeploying(transitional, [transitional, CR('andesite_alloy')]),
 		event.recipes.createDeploying(transitional, [transitional, CR('andesite_alloy')]),
-		event.recipes.createDeploying(transitional, [transitional, F('#saws')])
+		event.recipes.createDeploying(transitional, [transitional, KJ('#saws')])
 	]).transitionalItem(transitional)
 		.loops(1)
 		.id('kubejs:kinetic_mechanism')
 
-	event.shapeless(KJ('kinetic_mechanism'), [F('#saws'), CR('cogwheel'), CR('andesite_alloy'), '#minecraft:logs']).id("kubejs:kinetic_mechanism_manual_only")
+	event.shapeless(KJ('kinetic_mechanism'), [KJ('#saws'), CR('cogwheel'), CR('andesite_alloy'), '#minecraft:logs']).id("kubejs:kinetic_mechanism_manual_only")
 
 	// Andesite
 	event.shaped(KJ('andesite_machine'), [
@@ -1814,6 +1812,17 @@ function goldMachine(event) {
 
 	event.blasting(MC('magma_block'), MC('deepslate'))
 
+	let t = KJ('incomplete_reinforced_mechanism')
+	event.recipes.createSequencedAssembly([
+		KJ('reinforced_mechanism'),
+	], KJ('kinetic_mechanism'), [
+		event.recipes.createDeploying(t, [t, MC('obsidian')]),
+		event.recipes.createDeploying(t, [t, MC('obsidian')]),
+	event.recipes.createPressing(t, [t])
+	]).transitionalItem(t)
+		.loops(1)
+		.id('kubejs:reinforced_mechanism')
+	
 	event.shaped(KJ('reinforced_mechanism'), [
 		'OCO'
 	], {
@@ -1846,16 +1855,16 @@ function goldMachine(event) {
 
 function copperMachine(event) {
 
-	// let t = KJ('incomplete_sealed_mechanism')
-	// event.recipes.createSequencedAssembly([
-	// 	KJ('sealed_mechanism'),
-	// ], KJ('kinetic_mechanism'), [
-	// 	event.recipes.createDeploying(t, [t, TE('cured_rubber')]),
-	// 	event.recipes.createDeploying(t, [t, TE('cured_rubber')]),
-	// 	event.recipes.createDeploying(t, [t, F('#super_glues')])
-	// ]).transitionalItem(t)
-	// 	.loops(1)
-	// 	.id('kubejs:sealed_mechanism')
+	let t = KJ('incomplete_sealed_mechanism')
+	event.recipes.createSequencedAssembly([
+		KJ('sealed_mechanism'),
+	], KJ('kinetic_mechanism'), [
+		event.recipes.createDeploying(t, [t, TE('cured_rubber')]),
+		event.recipes.createDeploying(t, [t, TE('cured_rubber')]),
+		event.recipes.createDeploying(t, [t, F('#slimeballs')]).keepHeldItem(true)
+	]).transitionalItem(t)
+		.loops(1)
+		.id('kubejs:sealed_mechanism')
 
 	event.shaped(KJ('sealed_mechanism'), [
 		'SCS'
@@ -1932,7 +1941,7 @@ function brassMachine(event) {
 	], KJ('kinetic_mechanism'), [
 		event.recipes.createDeploying(t, [t, CR('electron_tube')]),
 		event.recipes.createDeploying(t, [t, CR('electron_tube')]),
-		event.recipes.createDeploying(t, [t, F('#screwdrivers')])
+		event.recipes.createDeploying(t, [t, KJ('#screwdrivers')])
 	]).transitionalItem(t)
 		.loops(1)
 		.id('kubejs:precision_mechanism')
@@ -2146,7 +2155,7 @@ function invarMachine(event) {
 	], CR('precision_mechanism'), [
 		event.recipes.createDeploying(t, [t, KJ('radiant_coil')]),
 		event.recipes.createDeploying(t, [t, KJ('radiant_coil')]),
-		event.recipes.createDeploying(t, [t, F('#chromatic_resonators')])
+		event.recipes.createDeploying(t, [t, KJ('#chromatic_resonators')])
 	]).transitionalItem(t)
 		.loops(1)
 		.id('kubejs:inductive_mechanism')
@@ -2217,7 +2226,7 @@ function fluixMachine(event) {
 	], KJ('inductive_mechanism'), [
 		event.recipes.createDeploying(t, [t, AE2('printed_silicon')]),
 		event.recipes.createDeploying(t, [t, AE2('printed_silicon')]),
-		event.recipes.createDeploying(t, [t, F('#flash_drives')])
+		event.recipes.createDeploying(t, [t, KJ('#flash_drives')])
 	]).transitionalItem(t)
 		.loops(1)
 		.id('kubejs:calculation_mechanism')
@@ -2344,7 +2353,7 @@ function enderMachine(event) {
 	// ], KJ('inductive_mechanism'), [
 	// 	event.recipes.createDeploying(t, [t, TE('enderium_gear')]),
 	// 	event.recipes.createDeploying(t, [t, TE('enderium_gear')]),
-	// 	event.recipes.createDeploying(t, [t, F('#ender_staffs')])
+	// 	event.recipes.createDeploying(t, [t, KJ('#ender_staffs')])
 	// ]).transitionalItem(t)
 	// 	.loops(1)
 	// 	.id('kubejs:abstruse_mechanism')
