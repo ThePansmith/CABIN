@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:village",
+  "config": {
+    "start_pool": "cabin:oak_station_ruin",
+    "size": 1
+  },
+  "biomes": "#cabin:has_structure/oak_station_ruin",
+  "adapt_noise": true,
+  "spawn_overrides": {}
+}
