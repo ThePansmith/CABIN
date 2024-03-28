@@ -1818,7 +1818,7 @@ function goldMachine(event) {
 	], KJ('kinetic_mechanism'), [
 		event.recipes.createDeploying(t, [t, MC('obsidian')]),
 		event.recipes.createDeploying(t, [t, MC('obsidian')]),
-	event.recipes.createPressing(t, [t])
+		event.recipes.createPressing(t, [t])
 	]).transitionalItem(t)
 		.loops(1)
 		.id('kubejs:reinforced_mechanism')

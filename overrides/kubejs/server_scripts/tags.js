@@ -12,6 +12,9 @@ onEvent('block.tags', event => {
 	event.add('minecraft:beacon_base_blocks', 'alloyed:steel_block')
 	event.remove('minecraft:beacon_base_blocks', 'thermal:bronze_block')
 
+	//I don't know why this isn't wrenchable by default
+	event.add("create:wrench_pickup", "minecraft:note_block")
+
 	event.add("create:wrench_pickup", "waterstrainer:strainer_base")
 
 	event.add("create:wrench_pickup", /thermal:machine/)
@@ -34,7 +37,7 @@ onEvent('block.tags', event => {
 	event.add("create:wrench_pickup", 'supplementaries:cog_block')
 	event.add("create:wrench_pickup", 'supplementaries:relayer')
 	event.add("create:wrench_pickup", 'supplementaries:spring_launcher')
-	//event.add("create:wrench_pickup", 'supplementaries:speaker_block') //note block and jukebox are not wrenchable
+	event.add("create:wrench_pickup", 'supplementaries:speaker_block')
 	event.add("create:wrench_pickup", 'supplementaries:turn_table')
 	//event.add("create:wrench_pickup", 'supplementaries:pulley_block')
 	//event.add("create:wrench_pickup", 'supplementaries:hourglass')
