@@ -1,7 +1,7 @@
 {
   "structures": [
     {
-      "structure": "cabin:broken_windmill",
+      "structure": "cabin:abandoned_engineer_house",
       "weight": 1
     }
   ],
@@ -9,6 +9,6 @@
     "type": "minecraft:random_spread",
     "spacing": 25,
     "separation": 20,
-    "salt": 1014532926
+    "salt": 95336364
   }
 }

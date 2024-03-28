@@ -1,14 +1,14 @@
 {
   "structures": [
     {
-      "structure": "cabin:broken_windmill",
+      "structure": "cabin:oak_station_ruin",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 25,
+    "spacing": 30,
     "separation": 20,
-    "salt": 1014532926
+    "salt": 241292441
   }
 }
