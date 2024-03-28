@@ -918,7 +918,8 @@ function prettierpipes(event) {
 		M: MC('redstone')
 	})
 	
-	event.shapeless(TE('fluid_duct_windowed'), [TE('fluid_duct'), MC('glass')])
+	event.shapeless(TE('fluid_duct_windowed'), [TE('fluid_duct')])
+	event.shapeless(TE('fluid_duct'), [TE('fluid_duct_windowed')])
 
 	let module = (type, result) => {
 		event.remove({ output: PP(result) })
@@ -963,11 +964,9 @@ function prettierpipes(event) {
 	attachment_base('thermal:turbo_servo_attachment', 1)
 	attachment_base('thermal:filter_attachment', 1)
 	attachment_base('thermal:energy_limiter_attachment', 1)
-	
-	// Fluid Cells use in fluid transportation replaced by TE pipes, may come back to this if i can find a way to just disable the autooutput part
-	event.remove({ output: TE('fluid_cell') })
-	event.remove({ output: TE('fluid_cell_frame') })
-	
+
+	// Fluid Cells moved to late game due to being able to transport fluids more efficiently than pipes
+	event.replaceInput( {id: TE('fluid_cell_frame')}, F('#glass'), [TE('fluid_duct'),TE('fluid_duct_windowed')])
 }
 
 function barrels(event) {
