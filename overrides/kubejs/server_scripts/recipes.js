@@ -584,7 +584,6 @@ function tweaks(event) {
 	event.replaceInput({ id: "computercraft:cable" }, MC('redstone'), PR_C('red_ingot'))
 	event.replaceInput({ id: "computercraft:wired_modem" }, MC('redstone'), PR_C('red_ingot'))
 	event.replaceInput({ id: /backpacks/ }, MC('redstone'), MC('copper_ingot'))
-	event.replaceInput({ id: "forbidden_arcanus:mundabitur_dust" }, MC('phantom_membrane'), TE('apatite_dust'))
 	event.replaceInput({ id: CR('crafting/kinetics/rope_pulley') }, '#forge:wool', '#supplementaries:ropes')
 	event.replaceInput({ output: CR('adjustable_chain_gearshift') }, CR('electron_tube'), MC('redstone'))
 
