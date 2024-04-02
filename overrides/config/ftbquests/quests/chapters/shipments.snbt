@@ -3761,7 +3761,7 @@
 			x: 1.5d
 			y: 25.0d
 			shape: "hexagon"
-			subtitle: "48 Silver"
+			subtitle: "24 Silver"
 			id: "210A3F8C44AAD89A"
 			tasks: [{
 				id: "2E1F7F34C7142CAA"

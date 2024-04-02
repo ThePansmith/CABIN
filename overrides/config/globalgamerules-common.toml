@@ -18,7 +18,7 @@
 	#Players respawn immediately without showing the death screen.
 	do_immediate_respawn = false
 	#Whether phantoms can spawn in the nighttime.
-	do_insomnia = true
+	do_insomnia = false
 	#Whether players can craft only those recipes that they have unlocked.
 	do_limited_crafting = false
 	#Whether mobs should drop items and experience orbs.
