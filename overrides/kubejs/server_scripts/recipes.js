@@ -327,7 +327,7 @@ function beforeNuke(event) {
 }
 
 function unwantedRecipes(event) {
-	event.remove({ output: AE2('grindstone') })
+	event.remove({ id:'ftbquests:loot_crate_opener'})
 	event.remove({ output: TE('tin_block') })
 	event.remove({ output: AE2('vibration_chamber') })
 	event.remove({ output: AE2('inscriber') })
@@ -340,7 +340,6 @@ function unwantedRecipes(event) {
 	event.remove({ input: '#forge:ores/silver' })
 	event.remove({ output: '#forge:plates/tin' })
 	event.remove({ output: '#forge:gears/tin' })
-	event.remove({ type: AE2('grinder') })
 	event.remove({ type: TE('press') })
 	event.remove({ id: /thermal:earth_charge\/.*/ })
 	event.remove({ id: /thermal:machines\/smelter\/.*dust/ })

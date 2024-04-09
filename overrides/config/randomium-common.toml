@@ -29,7 +29,7 @@
 
 [drops]
 	#A way to blacklist entire mods from the loot pool. Enter a list of mod ids
-	mod_blacklist = ["chisel"]
+	mod_blacklist = ["chiselsandbits"]
 	#Loot mode: decides if it can drop everything except blacklist or only stuff on the whitelist
 	#Allowed Values: BLACKLIST, WHITELIST
 	loot_mode = "BLACKLIST"
