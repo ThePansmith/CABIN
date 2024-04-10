@@ -525,7 +525,7 @@
 					id: "itemfilters:tag"
 					Count: 1b
 					tag: {
-						value: "forge:saws"
+						value: "kubejs:saws"
 					}
 				}
 				consume_items: false
