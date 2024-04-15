@@ -6,6 +6,14 @@ onEvent('item.tags', event => {
 
 	event.add('forge:dusts/obsidian', 'create:powdered_obsidian')
 	event.add('forge:dusts', 'create:powdered_obsidian')
+
+	global.itemBlacklist.forEach(item=>{
+		event.add('randomium:blacklist', item)
+	})
+
+	global.randomiumBlacklist.forEach(item=>{
+		event.add('randomium:blacklist', item)
+	})
 })
 
 onEvent('block.tags', event => {
