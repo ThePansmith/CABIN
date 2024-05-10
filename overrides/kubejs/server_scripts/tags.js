@@ -6,13 +6,26 @@ onEvent('item.tags', event => {
 
 	event.add('forge:dusts/obsidian', 'create:powdered_obsidian')
 	event.add('forge:dusts', 'create:powdered_obsidian')
+})
 
+//for some inexplicable reason these need to be kept in seperate onEvent triggers.
+//I've been told that this is some Rino (compiler) jank
+onEvent('item.tags', event => {
 	global.itemBlacklist.forEach(item=>{
-		event.add('randomium:blacklist', item)
+		if (Item.exists(item)) {
+			event.add('randomium:blacklist', item)
+		} else {
+			console.error(`Failed to add \"randomium:blacklist\" tag to ${item} from randomium blacklist`)
+		}
 	})
-
+})
+onEvent('item.tags', event => {
 	global.randomiumBlacklist.forEach(item=>{
-		event.add('randomium:blacklist', item)
+		if (Item.exists(item)) {
+			event.add('randomium:blacklist', item)
+		} else {
+			console.error(`Failed to add \"randomium:blacklist\" tag to ${item} from randomium blacklist`)
+		}
 	})
 })
 
