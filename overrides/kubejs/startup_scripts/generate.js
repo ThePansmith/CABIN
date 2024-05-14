@@ -78,7 +78,7 @@ onEvent('item.registry', event => {
 	event.create('pipe_module_tier_3').texture("kubejs:item/pipe_module_tier_3").displayName('Enderium Pipe Module')
 	
 	event.create('circuit_scrap').texture("kubejs:item/circuit_scrap").displayName('Circuit Scrap')
-	event.create('charged_calculator').texture("kubejs:item/charged_calculator").displayName('Calculator').maxDamage(64)
+	//event.create('charged_calculator').texture("kubejs:item/charged_calculator").displayName('Calculator').maxDamage(64)
 	event.create('missingno').texture("kubejs:item/missingno").displayName('∄')
 	event.create('zinc_dust').texture("kubejs:item/zinc_dust").displayName('Zinc Dust').tag("forge:dusts/zinc").tag("forge:dusts")
 	//event.create('creosote_pellet').texture("kubejs:item/creosote_pellet").displayName('Creosote Pellet')

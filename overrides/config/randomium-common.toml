@@ -35,7 +35,7 @@
 	loot_mode = "BLACKLIST"
 	#Base randomium drop chance (in percentage, so out of 100). Final chance will be [base_chance + luck*luck_multiplier + fortune*fortune_multiplier]
 	#Range: 0.0 ~ 100.0
-	base_drop_chance = 0.5
+	base_drop_chance = 0.0
 	#Multiplier applied to each luck level the player has
 	#Range: 0.0 ~ 20.0
 	luck_multiplier = 1.0
