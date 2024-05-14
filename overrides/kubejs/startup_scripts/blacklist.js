@@ -547,6 +547,9 @@ global.itemBlacklist = [
 	'quark:waxed_black_corundum',
 	'quark:black_corundum_cluster',
 
+	//randomium
+	'randomium:randomium',
+
 	//reliquary
 	///reliquary:magazines/,
 	///reliquary:bullets/,

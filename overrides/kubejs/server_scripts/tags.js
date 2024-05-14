@@ -15,7 +15,7 @@ onEvent('item.tags', event => {
 		if (Item.exists(item)) {
 			event.add('randomium:blacklist', item)
 		} else {
-			console.error(`Failed to add \"randomium:blacklist\" tag to ${item} from randomium blacklist`)
+			console.warn(`Failed to add \"randomium:blacklist\" tag to ${item} from randomium blacklist`)
 		}
 	})
 })
@@ -24,7 +24,7 @@ onEvent('item.tags', event => {
 		if (Item.exists(item)) {
 			event.add('randomium:blacklist', item)
 		} else {
-			console.error(`Failed to add \"randomium:blacklist\" tag to ${item} from randomium blacklist`)
+			console.warn(`Failed to add \"randomium:blacklist\" tag to ${item} from randomium blacklist`)
 		}
 	})
 })
