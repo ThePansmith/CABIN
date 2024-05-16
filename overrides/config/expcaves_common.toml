@@ -1,0 +1,165 @@
+
+[oreFeatures]
+
+	[oreFeatures.brokenStone]
+		#Whether this feature generates
+		enabled = true
+		#The maximum size of each vein. (default = 24)
+		#Range: 0 ~ 64
+		veinSize = 24
+		#The maximum number of this feature per chunk. (default = 12)
+		#Range: 0 ~ 64
+		count = 12
+
+	[oreFeatures.brokenDeepslate]
+		#Whether this feature generates
+		enabled = true
+		#The maximum size of each vein. (default = 24)
+		#Range: 0 ~ 64
+		veinSize = 24
+		#The maximum number of this feature per chunk. (default = 12)
+		#Range: 0 ~ 64
+		count = 12
+
+	[oreFeatures.sedimentStone]
+		#Whether this feature generates
+		enabled = true
+		#The maximum size of each vein. (default = 54)
+		#Range: 0 ~ 64
+		veinSize = 54
+		#The maximum number of this feature per chunk. (default = 8)
+		#Range: 0 ~ 64
+		count = 8
+
+	[oreFeatures.lavastone]
+		#Whether this feature generates
+		enabled = true
+		#The maximum size of each vein. (default = 48)
+		#Range: 0 ~ 64
+		veinSize = 48
+		#The maximum number of this feature per chunk. (default = 12)
+		#Range: 0 ~ 64
+		count = 12
+
+	[oreFeatures.dirtstone]
+		#Whether this feature generates
+		enabled = true
+		#The maximum size of each vein. (default = 64)
+		#Range: 0 ~ 64
+		veinSize = 64
+		#The maximum number of this feature per chunk. (default = 5)
+		#Range: 0 ~ 64
+		count = 5
+
+	[oreFeatures.marlstone]
+		#Whether this feature generates
+		enabled = true
+		#The maximum size of each vein. (default = 48)
+		#Range: 0 ~ 64
+		veinSize = 48
+		#The maximum number of this feature per chunk. (default = 5)
+		#Range: 0 ~ 64
+		count = 5
+
+	[oreFeatures.packedIce]
+		#Whether this feature generates
+		enabled = true
+		#The maximum size of each vein. (default = 64)
+		#Range: 0 ~ 64
+		veinSize = 64
+		#The maximum number of this feature per chunk. (default = 5)
+		#Range: 0 ~ 64
+		count = 5
+
+[rockFeatures]
+
+	[rockFeatures.flintPebbles]
+		#Whether this feature generates
+		enabled = true
+		#The spawnrate of this feature. (default = 12)
+		#Range: 1 ~ 50
+		count = 12
+
+	[rockFeatures.pebbles]
+		#Whether this feature generates
+		enabled = true
+		#The spawnrate of this feature. (default = 12)
+		#Range: 1 ~ 50
+		count = 12
+
+	[rockFeatures.surface_pebbles]
+		#Whether this feature generates
+		enabled = true
+		#The spawnrate of this feature. (default = 4)
+		#Range: 1 ~ 50
+		count = 4
+
+	[rockFeatures.rockpiles]
+		#Whether this feature generates
+		enabled = true
+		#The spawnrate of this feature. (default = 12)
+		#Range: 1 ~ 50
+		count = 12
+
+	[rockFeatures.stalagmites]
+		#Whether this feature generates
+		enabled = true
+		#The spawnrate of this feature. (default = 16)
+		#Range: 1 ~ 50
+		count = 16
+
+	[rockFeatures.stalactites]
+		#Whether this feature generates
+		enabled = true
+		#The spawnrate of this feature. (default = 16)
+		#Range: 1 ~ 50
+		count = 16
+
+[mushrooms]
+	#Whether mushrooms can generate.
+	enabled = true
+	#The number of sweetshroom generated. (default = 32)
+	#Range: 0 ~ 64
+	sweetshroomCount = 32
+	#The number of goldishroom generated. (default = 16)
+	#Range: 0 ~ 64
+	goldishroomCount = 16
+	#The number of shinyshroom generated. (default = 24)
+	#Range: 0 ~ 64
+	shinyshroomCount = 24
+	#The number of lumishroom generated. (default = 32)
+	#Range: 0 ~ 64
+	lumishroomCount = 32
+	#The number of fluoshroom generated. (default = 32)
+	#Range: 0 ~ 64
+	fluoshroomCount = 32
+	#The number of rockshroom generated. (default = 12)
+	#Range: 0 ~ 64
+	rockshroomCount = 12
+
+[mosses]
+	#Whether moss can generate.
+	enabled = true
+	#The number of dry moss generated. (default = 54)
+	#Range: 0 ~ 64
+	dryMossCount = 54
+	#The number of fire moss generated. (default = 24)
+	#Range: 0 ~ 64
+	fireMossCount = 24
+	#The number of frozen moss generated. (default = 32)
+	#Range: 0 ~ 64
+	frozenMossCount = 32
+	#The number of hanging roots generated. (default = 32)
+	#Range: 0 ~ 64
+	hangingRootsCount = 32
+	#The number of humid moss generated. (default = 32)
+	#Range: 0 ~ 64
+	humidMossCount = 32
+
+[vines]
+	#Whether vines can generate.
+	enabled = true
+	#The number of cave vines generated. (default = 54)
+	#Range: 0 ~ 64
+	caveVineCount = 54
+

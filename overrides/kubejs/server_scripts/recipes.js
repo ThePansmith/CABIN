@@ -96,6 +96,7 @@ onEvent('recipes', event => {
 	trading(event)
 	glitch(event)
 	stripping(event)
+	expandCaves(event)
 	log.push('Recipes Updated')
 })
 
@@ -3078,6 +3079,64 @@ function stripping(event) {
 			"tool": { "tag": "forge:tools/axes" },
 			"result": [{ "item": wood.replace(':',':stripped_') + "_hyphae" }, { "item": "farmersdelight:tree_bark" }]
 		})
+	})
+}
+
+function expandCaves(event) {
+	// Expanded Caves --- This mod is alpha and it really shows in some places
+	//Dev forgot to add pressure plate recipes to the mod so we add them ourselves.
+	let pressurePlateMaterials = ["sediment_stone", "lavastone", "polished_lavastone", "dirtstone", "dirtstone_cobble", "marlstone", "bricks_ice", "bricks_snow"]
+	pressurePlateMaterials.forEach(str=>{
+		event.shaped(`expcaves:${str}_pressure_plate`, [
+			'SS'
+		], {
+			S: `expcaves:${str}`
+		}).id(`kubejs:expcaves/${str}_pressure_plate`)
+	})
+
+	//snow and ice brick --- these are probably intended for the structures that never got ported. But we'll give them recipes
+	event.shaped(Item.of('expcaves:bricks_snow',4), [
+		'SS',
+		'SS'
+	], {
+		S: `minecraft:snow_block`
+	}).id(`kubejs:expcaves/bricks_snow`)
+
+	event.shaped(Item.of('expcaves:bricks_ice',4), [
+		'SS',
+		'SS'
+	], {
+		S: `architects_palette:polished_packed_ice`
+	}).id(`kubejs:expcaves/bricks_ice`)
+
+	//broken stone
+	event.recipes.createPressing(['expcaves:broken_stone'], 'minecraft:stone').id('kubejs:pressing/broken_stone')
+	event.recipes.createPressing(['expcaves:broken_deepslate'], 'minecraft:deepslate').id('kubejs:pressing/broken_deepslate')
+
+	//flint rock
+	event.custom({ "type": "create:haunting",
+	"ingredients": [{"item": "minecraft:flint"}],
+		"results": [
+			{
+			"item": "expcaves:rock_flint"
+			}
+		]
+	}).id('kubejs:haunting/rock_flint')
+
+	//stalagmites
+	let stalagmites = ["stone", "andesite", "diorite", "granite", "tuff", "deepslate", "packed_ice", "netherrack", "blackstone"]
+	stalagmites.forEach(str=>{
+		event.stonecutting(Item.of(`expcaves:${str}_stalagmite`, 2), `minecraft:${str}`).id(`kubejs:stonecutting/${str}_stalagmite`)
+		event.stonecutting(Item.of(`expcaves:${str}_stalactite`, 2), `minecraft:${str}`).id(`kubejs:stonecutting/${str}_stalactite`)
+		event.stonecutting(`expcaves:${str}_tall_stalagmite`, `minecraft:${str}`).id(`kubejs:stonecutting/${str}_tall_stalagmite`)
+		event.stonecutting(`expcaves:${str}_tall_stalactite`, `minecraft:${str}`).id(`kubejs:stonecutting/${str}_tall_stalactite`)
+	})
+	stalagmites = ["sediment_stone", "lavastone"]
+	stalagmites.forEach(str=>{
+		event.stonecutting(Item.of(`expcaves:${str}_stalagmite`, 2), `expcaves:${str}`).id(`kubejs:stonecutting/${str}_stalagmite`)
+		event.stonecutting(Item.of(`expcaves:${str}_stalactite`, 2), `expcaves:${str}`).id(`kubejs:stonecutting/${str}_stalactite`)
+		event.stonecutting(`expcaves:${str}_tall_stalagmite`, `expcaves:${str}`).id(`kubejs:stonecutting/${str}_tall_stalagmite`)
+		event.stonecutting(`expcaves:${str}_tall_stalactite`, `expcaves:${str}`).id(`kubejs:stonecutting/${str}_tall_stalactite`)
 	})
 }
 
