@@ -1,0 +1,7 @@
+{
+  "parent": "expcaves:item/rock_flint",
+  "textures": {
+    "0": "minecraft:block/blackstone",
+    "particle": "minecraft:block/blackstone"
+  }
+}

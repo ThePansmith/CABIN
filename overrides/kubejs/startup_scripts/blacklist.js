@@ -259,6 +259,37 @@ global.itemBlacklist = [
 	'everycomp:q/forbidden_arcanus/mysterywood_chest',
 	'everycomp:q/forbidden_arcanus/mysterywood_trapped_chest',
 
+	//Expanded Caves
+	'expcaves:plant_fiber', //useless inventory bloat
+	/* There next few items don't seem to generate for whatever reason.
+	   Let the CABIN discord know if you somehow find these in your world */
+	'expcaves:sweetshroom',
+	'expcaves:goldishroom',
+	'expcaves:shinyshroom',
+	'expcaves:lumishroom',
+	'expcaves:fluoshroom',
+	'expcaves:rockshroom',
+	'expcaves:cooked_sweetshroom',
+	'expcaves:sticky_stew',
+	'expcaves:fluorescent_stew',
+	'expcaves:hard_stew',
+	/* unobtainable, probably meant to come from structures that aren't in this version */
+	'expcaves:butcher_knife',
+	'expcaves:chef_knife',
+	'expcaves:gourmet_fork',
+	'expcaves:gourmet_spoon',
+	'expcaves:iron_dagger',
+	'expcaves:rusty_sword',
+	'expcaves:rusty_pickaxe',
+	'expcaves:wooden_cane',
+	/* unobtainable brown endstone */
+	'expcaves:dirtstone_cobble',
+	'expcaves:dirtstone_cobble_stairs',
+	'expcaves:dirtstone_cobble_slab',
+	'expcaves:dirtstone_cobble_button',
+	'expcaves:dirtstone_cobble_pressure_plate',
+	'expcaves:dirtstone_cobble_wall',
+
 	//Extended Gears
 	'extendedgears:half_shaft_cogwheel',
 	'extendedgears:shaftless_cogwheel',
@@ -636,6 +667,8 @@ global.randomiumBlacklist = [
 	'chiselsandbits:pattern_multi_use',
 	'ae2:facade',
 	'cb_microblock:microblock',
+	'culinaryconstruct:sandwich',
+	'culinaryconstruct:food_bowl',
 
 	//not supposed to have in survival items
 	'occultism:spirit_fire',
@@ -649,6 +682,13 @@ global.randomiumBlacklist = [
 	'tconstruct:budding_sky_slime_crystal',
 	'tconstruct:budding_ichor_slime_crystal',
 	'tconstruct:budding_ender_slime_crystal',
+	'beyond_earth:earth_globe', //might be added to the pack later but unobtainable at the moment
+	'expcaves:treasure_pot',
+	'expcaves:small_treasure_pot',
+	'expcaves:treasure_amphora',
+	'expcaves:small_quartz_treasure_pot',
+	'expcaves:quartz_treasure_amphora',
+
 
 	//Tconstruct molten fluid buckets
 	'tconstruct:molten_aluminum_bucket',
