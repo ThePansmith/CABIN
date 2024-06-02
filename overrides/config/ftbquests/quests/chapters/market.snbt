@@ -500,7 +500,7 @@
 																	Count: 1b
 																	tag: {
 																		BlockEntityTag: {
-																			LootTable: "custom:chests/patience_1"
+																			LootTable: "cabin:chests/the_market/patience/1"
 																		}
 																		display: {
 																			Lore: ["{\"italic\":true,\"color\":\"gray\",\"text\":\"The fabled prize awaits at the bottom...\"}"]
@@ -609,7 +609,7 @@
 					Count: 1b
 					tag: {
 						BlockEntityTag: {
-							LootTable: "custom:chests/tinker"
+							LootTable: "cabin:chests/the_market/tinkerbox"
 							id: "minecraft:chest"
 						}
 						display: {
