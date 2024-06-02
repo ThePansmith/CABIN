@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "cabin:chests/the_market/patience/2"
+          "name": "cabin:chests/tinkerbox"
         }
       ]
     }

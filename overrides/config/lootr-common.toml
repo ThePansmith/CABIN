@@ -29,7 +29,7 @@ decay_structures = []
 #lootr will automatically log all unresolved tables (i.e., for containers that have a loot table associated with them but, for whatever reason, the lookup for this table returns empty). setting this option to true additionally informs players when they open containers.
 report_unresolved_tables = false
 #list of loot tables which shouldn't be converted (in the format of ["modid:loot_table", "othermodid:other_loot_table"])
-loot_table_blacklist = ["custom:chests/patience_1", "custom:chests/patience_2", "custom:chests/tinker"]
+loot_table_blacklist = ["custom:chests/patience_1", "custom:chests/patience_2", "custom:chests/tinker", "cabin:chests/the_market/patience/1", "cabin:chests/the_market/patience/2", "cabin:chests/the_market/tinkerbox"]
 #list of dimensions where loot chests should automatically refresh (default: blank, e.g., ["minecraft:overworld", "othermod:otherdimension"])
 refresh_dimensions = []
 #list of mod IDs whose loot tables will refresh (default blank, meaning no chests refresh, in the format of ["modid", "othermodid"])

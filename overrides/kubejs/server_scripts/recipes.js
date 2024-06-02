@@ -1660,10 +1660,15 @@ function alloys(event) {
 	event.remove({ type: MC("crafting_shapeless"), output: TE('bronze_dust') })
 	event.remove({ type: MC("crafting_shapeless"), output: TE('invar_dust') })
 
-	event.recipes.createMixing(Fluid.of(TC('molten_brass'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_zinc'), 3)]).processingTime(1)
-	event.recipes.createMixing(Fluid.of(TC('molten_constantan'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_nickel'), 3)]).processingTime(1)
-	event.recipes.createMixing(Fluid.of(TC('molten_rose_gold'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_gold'), 3)]).processingTime(1)
-	event.recipes.createMixing(Fluid.of(TC('molten_electrum'), 3), [Fluid.of(TC('molten_silver'), 3), Fluid.of(TC('molten_gold'), 3)]).processingTime(1)
+	let moltenAlloy = function (fluidAlloy, fluid1, fluid2) {
+		//Recipe ids are actually important here since the id that comes later in alphabetical order is the one that is prioritized
+		event.recipes.createMixing(Fluid.of(TC(fluidAlloy), 3), [Fluid.of(fluid1, 3), Fluid.of(fluid2, 3)]).processingTime(1).id(`kubejs:mixing/${fluidAlloy}_3`)
+		event.recipes.createMixing(Fluid.of(TC(fluidAlloy), 1), [Fluid.of(fluid1, 1), Fluid.of(fluid2, 1)]).processingTime(1).id(`kubejs:mixing/${fluidAlloy}_1`)
+	}
+	moltenAlloy('molten_brass', TC('molten_copper'), TC('molten_zinc'))
+	moltenAlloy('molten_constantan', TC('molten_copper'), TC('molten_nickel'))
+	moltenAlloy('molten_rose_gold', TC('molten_copper'), TC('molten_gold'))
+	moltenAlloy('molten_electrum', TC('molten_silver'), TC('molten_gold'))
 
 	event.recipes.thermal.smelter([KJ("invar_compound"), KJ("invar_compound")], [TE("nickel_ingot"), MC("iron_ingot")])
 	event.recipes.thermal.smelter(CR("brass_ingot", 2), [MC("copper_ingot"), CR("zinc_ingot")])
