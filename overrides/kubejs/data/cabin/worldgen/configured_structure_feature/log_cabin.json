@@ -4,7 +4,7 @@
     "start_pool": "cabin:log_cabin",
     "size": 1
   },
-  "biomes": "#minecraft:has_structure/village_plains",
+  "biomes": "#minecraft:has_structure/campsite",
   "adapt_noise": true,
   "spawn_overrides": {}
 }
