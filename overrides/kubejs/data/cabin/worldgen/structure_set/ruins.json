@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "cabin:ruins/dripstone",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 30,
+    "separation": 25,
+    "salt": 848649716
+  }
+}
