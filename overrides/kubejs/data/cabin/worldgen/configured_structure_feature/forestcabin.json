@@ -4,7 +4,7 @@
     "start_pool": "cabin:forestcabin",
     "size": 1
   },
-  "biomes": "minecraft:forest",
+  "biomes": "#minecraft:is_forest",
   "adapt_noise": true,
   "spawn_overrides": {}
 }
