@@ -783,58 +783,15 @@ function tweaks(event) {
 		"energy": 6000
 	})
 
-
-	let cast_block = (fluid, item) => {
-		event.custom({
-			"type": "tconstruct:casting_basin",
-			"fluid": { "name": fluid, "amount": 810 },
-			"result": { "item": item },
-			"cooling_time": 150
-		})
-	}
-
-	let cast = (type, fluid, amount, item, time) => {
-		event.custom({
-			"type": "tconstruct:casting_table",
-			"cast": { "tag": "tconstruct:casts/single_use/" + type },
-			"cast_consumed": true,
-			"fluid": { "name": fluid, "amount": amount },
-			"result": { "item": item },
-			"cooling_time": time
-		})
-		event.custom({
-			"type": "tconstruct:casting_table",
-			"cast": { "tag": "tconstruct:casts/multi_use/" + type },
-			"fluid": { "name": fluid, "amount": amount },
-			"result": { "item": item },
-			"cooling_time": time
-		})
-	}
-
-	let remove_cast = (name) => {
-		event.remove({ id: `${TC(name)}_sand_cast`})
-		event.remove({ id:`${TC(name)}_gold_cast`})
-	}
-
 	event.remove({ id: TE("storage/copper_nugget_from_ingot")})
 	event.remove({ id: TC("common/materials/copper_nugget_from_ingot")})
 	event.remove({ id: TE("storage/copper_ingot_from_nuggets")})
 	event.remove({ id: TC("common/materials/copper_ingot_from_nuggets")})
 
-	remove_cast("smeltery/casting/metal/copper/nugget")
-
-	cast("nugget", TC("molten_copper"), 10, CR("copper_nugget"), 17)
-
 	event.remove({ id: TE("storage/netherite_nugget_from_ingot")})
 	event.remove({ id: TC("common/materials/netherite_nugget_from_ingot")})
 	event.remove({ id: TE("storage/netherite_ingot_from_nuggets")})
 	event.remove({ id: TC("common/materials/netherite_ingot_from_nuggets")})
-
-	remove_cast("smeltery/casting/metal/netherite/nugget")
-	remove_cast("smeltery/casting/metal/netherite/plate")
-
-	cast("nugget", TC("molten_netherite"), 10, CD("netherite_nugget"), 17)
-	cast("plate", TC("molten_netherite"), 90, CD("netherite_sheet"), 75)
 
 	event.remove({id: "alloyed:mixing/bronze_ingot"})
 	event.remove({id: "alloyed:mixing/bronze_ingot_x3"})
@@ -843,16 +800,6 @@ function tweaks(event) {
 	event.remove({ id: TE('storage/bronze_ingot_from_nuggets')})
 	event.remove({ id: TE('storage/bronze_ingot_from_block')})
 	event.remove({ id: TE('storage/bronze_block')})
-
-	remove_cast("smeltery/casting/metal/bronze/nugget")
-	remove_cast("smeltery/casting/metal/bronze/ingot")
-	remove_cast("smeltery/casting/metal/bronze/plate")
-	event.remove({ id: TC("smeltery/casting/metal/bronze/block")})
-
-	cast("nugget", TC("molten_bronze"), 10, "alloyed:bronze_nugget", 17)
-	cast("ingot", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
-	cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
-	cast_block(TC("molten_bronze"), "alloyed:bronze_block")
 
 	event.custom({
 		"type": "tconstruct:melting",
