@@ -668,13 +668,57 @@ function tweaks(event) {
 	bedrock_cobblegen(MC("packed_ice"), MC("andesite"))
 	bedrock_cobblegen(AP("polished_packed_ice"), MC("granite"))
 	bedrock_cobblegen(AP("chiseled_packed_ice"), MC("diorite"))
-	bedrock_cobblegen(AP("packed_ice_pillar"), CR("scoria"))
+
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "create:chocolate",
+		"result": { "item": "create:scoria"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "create:honey",
+		"result": { "item": "create:limestone"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "biomesoplenty:blood",
+		"result": { "item": "biomesoplenty:flesh"}
+	})
+
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:end_stone",
+		"result": { "item": "quark:myalite"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:clay",
+		"result": { "item": "quark:shale"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:quartz_block",
+		"result": { "item": "quark:jasper"}
+	})
+	event.custom({
+    "type": "architects_palette:warping",
+    "ingredient": [
+        {
+            "item": "create:limestone"
+        }
+    ],
+    "result": {
+        "item": "quark:limestone"
+    },
+		"dimension": "minecraft:the_nether"
+	})
 
 	event.recipes.createPressing([TE('nickel_plate')], TE('nickel_ingot'))
 
-//	event.remove({ id: "chisel:charcoal/raw" })
 	event.remove({ id: AP("charcoal_block") })
-//	event.stonecutting("chisel:charcoal/raw", MC('charcoal'))
 	event.stonecutting(AP("charcoal_block"), MC('charcoal'))
 
 	event.remove({ id: CR('splashing/gravel') })
@@ -1460,19 +1504,19 @@ function algalAndesite(event) {
 		'SS',
 		'AA'
 	], {
-		A: ['minecraft:andesite', CR('andesite_cobblestone')],
+		A: 'minecraft:andesite',
 		S: AP('algal_brick')
 	})
 	event.shaped(Item.of(CR('andesite_alloy'), 2), [
 		'AA',
 		'SS'
 	], {
-		A: ['minecraft:andesite', CR('andesite_cobblestone')],
+		A: 'minecraft:andesite',
 		S: AP('algal_brick')
 	})
 
 	event.recipes.createMixing(Item.of(AP('algal_blend'), 2), ['minecraft:clay_ball', ['minecraft:kelp', 'minecraft:seagrass']])
-	event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), ['minecraft:andesite', CR('andesite_cobblestone')]])
+	event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), 'minecraft:andesite'])
 }
 
 function oreProcessing(event) {

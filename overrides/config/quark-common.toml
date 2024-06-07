@@ -96,7 +96,7 @@
 	Rope = true
 	"Oriental Palette" = true
 	"Nether Brick Fence Gate" = true
-	"More Stone Variants" = false
+	"More Stone Variants" = true
 	"More Potted Plants" = true
 	"More Brick Types" = true
 	Midori = true
@@ -262,7 +262,7 @@
 
 [tools]
 	Trowel = true
-	"Slime In A Bucket" = false
+	"Slime In A Bucket" = true
 	"Seed Pouch" = false
 	Pickarang = false
 	"Pathfinder Maps" = false
@@ -401,7 +401,7 @@
 	Emotes = false
 	"Dragon Scales" = true
 	"Double Door Opening" = true
-	"Compasses Work Everywhere" = false
+	"Compasses Work Everywhere" = true
 	"Campfires Boost Elytra" = true
 	"Better Elytra Rocket" = true
 	"Automatic Recipe Unlock" = true
@@ -543,7 +543,7 @@
 	"Spiral Spires" = false
 	Permafrost = true
 	"No More Lava Pockets" = true
-	"New Stone Types" = false
+	"New Stone Types" = true
 	"Nether Obsidian Spikes" = false
 	"Monster Box" = false
 	"Glimmering Weald" = true
@@ -564,7 +564,7 @@
 
 		[world.spiral_spires.dimensions]
 			"Is Blacklist" = false
-			Dimensions = ["minecraft:the_end"]
+			Dimensions = []
 
 		[world.spiral_spires.biomes]
 
@@ -628,7 +628,7 @@
 
 			[world.new_stone_types.limestone.dimensions]
 				"Is Blacklist" = false
-				Dimensions = ["minecraft:overworld"]
+				Dimensions = []
 
 			[world.new_stone_types.limestone.oregen_lower]
 				#Allowed values: [-64,320]
@@ -656,7 +656,7 @@
 
 			[world.new_stone_types.jasper.dimensions]
 				"Is Blacklist" = false
-				Dimensions = ["minecraft:overworld"]
+				Dimensions = []
 
 			[world.new_stone_types.jasper.oregen_lower]
 				#Allowed values: [-64,320]
@@ -684,7 +684,7 @@
 
 			[world.new_stone_types.shale.dimensions]
 				"Is Blacklist" = false
-				Dimensions = ["minecraft:overworld"]
+				Dimensions = []
 
 			[world.new_stone_types.shale.oregen_lower]
 				#Allowed values: [-64,320]
