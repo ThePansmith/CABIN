@@ -213,11 +213,11 @@
 		"Enable Cactus Block" = true
 		"Enable Chorus Fruit Block" = true
 		"Enable Stick Block" = true
-		"Enable Apple Crate" = false
+		"Enable Apple Crate" = true
 		"Enable Golden Apple Crate" = true
-		"Enable Potato Crate" = false
-		"Enable Carrot Crate" = false
-		"Enable Beetroot Crate" = false
+		"Enable Potato Crate" = true
+		"Enable Carrot Crate" = true
+		"Enable Beetroot Crate" = true
 		"Enable Cocoa Bean Sack" = true
 		"Enable Nether Wart Sack" = true
 		"Enable Gunpowder Sack" = true
