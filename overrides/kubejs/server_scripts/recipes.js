@@ -376,8 +376,12 @@ function unwantedRecipes(event) {
 	event.remove({ id: CR('cutting/andesite_alloy') })
 	event.remove({ id: QU('building/crafting/compressed/charcoal_block')})
 	event.remove({ id: QU('building/crafting/compressed/sugar_cane_block')})
-	event.remove({ id: TE('building/crafting/compressed/bamboo_block')})
 	event.remove({ id: QU('building/crafting/compressed/gunpowder_sack')})
+	event.remove({ id: QU('building/crafting/compressed/apple_crate')})
+	event.remove({ id: QU('building/crafting/compressed/potato_crate')})
+	event.remove({ id: QU('building/crafting/compressed/carrot_crate')})
+	event.remove({ id: QU('building/crafting/compressed/beetroot_crate')})
+	event.remove({ id: TE('building/crafting/compressed/bamboo_block')})
 	event.remove({ id: TE('storage/silver_block')})
 	event.remove({ id: TE('storage/silver_ingot_from_block')})
 	event.remove({ id: TE('storage/silver_ingot_from_nuggets')})
@@ -668,13 +672,57 @@ function tweaks(event) {
 	bedrock_cobblegen(MC("packed_ice"), MC("andesite"))
 	bedrock_cobblegen(AP("polished_packed_ice"), MC("granite"))
 	bedrock_cobblegen(AP("chiseled_packed_ice"), MC("diorite"))
-	bedrock_cobblegen(AP("packed_ice_pillar"), CR("scoria"))
+
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "create:chocolate",
+		"result": { "item": "create:scoria"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "create:honey",
+		"result": { "item": "create:limestone"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "biomesoplenty:blood",
+		"result": { "item": "biomesoplenty:flesh"}
+	})
+
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:end_stone",
+		"result": { "item": "quark:myalite"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:clay",
+		"result": { "item": "quark:shale"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:quartz_block",
+		"result": { "item": "quark:jasper"}
+	})
+	event.custom({
+    "type": "architects_palette:warping",
+    "ingredient": [
+        {
+            "item": "create:limestone"
+        }
+    ],
+    "result": {
+        "item": "quark:limestone"
+    },
+		"dimension": "minecraft:the_nether"
+	})
 
 	event.recipes.createPressing([TE('nickel_plate')], TE('nickel_ingot'))
 
-//	event.remove({ id: "chisel:charcoal/raw" })
 	event.remove({ id: AP("charcoal_block") })
-//	event.stonecutting("chisel:charcoal/raw", MC('charcoal'))
 	event.stonecutting(AP("charcoal_block"), MC('charcoal'))
 
 	event.remove({ id: CR('splashing/gravel') })
@@ -739,58 +787,15 @@ function tweaks(event) {
 		"energy": 6000
 	})
 
-
-	let cast_block = (fluid, item) => {
-		event.custom({
-			"type": "tconstruct:casting_basin",
-			"fluid": { "name": fluid, "amount": 810 },
-			"result": { "item": item },
-			"cooling_time": 150
-		})
-	}
-
-	let cast = (type, fluid, amount, item, time) => {
-		event.custom({
-			"type": "tconstruct:casting_table",
-			"cast": { "tag": "tconstruct:casts/single_use/" + type },
-			"cast_consumed": true,
-			"fluid": { "name": fluid, "amount": amount },
-			"result": { "item": item },
-			"cooling_time": time
-		})
-		event.custom({
-			"type": "tconstruct:casting_table",
-			"cast": { "tag": "tconstruct:casts/multi_use/" + type },
-			"fluid": { "name": fluid, "amount": amount },
-			"result": { "item": item },
-			"cooling_time": time
-		})
-	}
-
-	let remove_cast = (name) => {
-		event.remove({ id: `${TC(name)}_sand_cast`})
-		event.remove({ id:`${TC(name)}_gold_cast`})
-	}
-
 	event.remove({ id: TE("storage/copper_nugget_from_ingot")})
 	event.remove({ id: TC("common/materials/copper_nugget_from_ingot")})
 	event.remove({ id: TE("storage/copper_ingot_from_nuggets")})
 	event.remove({ id: TC("common/materials/copper_ingot_from_nuggets")})
 
-	remove_cast("smeltery/casting/metal/copper/nugget")
-
-	cast("nugget", TC("molten_copper"), 10, CR("copper_nugget"), 17)
-
 	event.remove({ id: TE("storage/netherite_nugget_from_ingot")})
 	event.remove({ id: TC("common/materials/netherite_nugget_from_ingot")})
 	event.remove({ id: TE("storage/netherite_ingot_from_nuggets")})
 	event.remove({ id: TC("common/materials/netherite_ingot_from_nuggets")})
-
-	remove_cast("smeltery/casting/metal/netherite/nugget")
-	remove_cast("smeltery/casting/metal/netherite/plate")
-
-	cast("nugget", TC("molten_netherite"), 10, CD("netherite_nugget"), 17)
-	cast("plate", TC("molten_netherite"), 90, CD("netherite_sheet"), 75)
 
 	event.remove({id: "alloyed:mixing/bronze_ingot"})
 	event.remove({id: "alloyed:mixing/bronze_ingot_x3"})
@@ -799,16 +804,6 @@ function tweaks(event) {
 	event.remove({ id: TE('storage/bronze_ingot_from_nuggets')})
 	event.remove({ id: TE('storage/bronze_ingot_from_block')})
 	event.remove({ id: TE('storage/bronze_block')})
-
-	remove_cast("smeltery/casting/metal/bronze/nugget")
-	remove_cast("smeltery/casting/metal/bronze/ingot")
-	remove_cast("smeltery/casting/metal/bronze/plate")
-	event.remove({ id: TC("smeltery/casting/metal/bronze/block")})
-
-	cast("nugget", TC("molten_bronze"), 10, "alloyed:bronze_nugget", 17)
-	cast("ingot", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
-	cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
-	cast_block(TC("molten_bronze"), "alloyed:bronze_block")
 
 	event.custom({
 		"type": "tconstruct:melting",
@@ -1460,19 +1455,19 @@ function algalAndesite(event) {
 		'SS',
 		'AA'
 	], {
-		A: ['minecraft:andesite', CR('andesite_cobblestone')],
+		A: 'minecraft:andesite',
 		S: AP('algal_brick')
 	})
 	event.shaped(Item.of(CR('andesite_alloy'), 2), [
 		'AA',
 		'SS'
 	], {
-		A: ['minecraft:andesite', CR('andesite_cobblestone')],
+		A: 'minecraft:andesite',
 		S: AP('algal_brick')
 	})
 
 	event.recipes.createMixing(Item.of(AP('algal_blend'), 2), ['minecraft:clay_ball', ['minecraft:kelp', 'minecraft:seagrass']])
-	event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), ['minecraft:andesite', CR('andesite_cobblestone')]])
+	event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), 'minecraft:andesite'])
 }
 
 function oreProcessing(event) {

@@ -6,6 +6,9 @@
     },
     {
       "item": "thermal:carrot_block"
+    },
+		{
+      "item": "quark:carrot_crate"
     }
   ],
   "overwrite": false
