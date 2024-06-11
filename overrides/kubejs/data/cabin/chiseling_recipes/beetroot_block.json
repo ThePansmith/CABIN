@@ -6,6 +6,9 @@
     },
     {
       "item": "thermal:beetroot_block"
+    },
+		{
+      "item": "quark:beetroot_crate"
     }
   ],
   "overwrite": false

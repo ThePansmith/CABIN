@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:village",
+  "config": {
+    "start_pool": "cabin:ruins/dripstone_start",
+    "size": 7
+  },
+  "biomes": "#cabin:has_structure/ruins",
+  "adapt_noise": true,
+  "spawn_overrides": {}
+}

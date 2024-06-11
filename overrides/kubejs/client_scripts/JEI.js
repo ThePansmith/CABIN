@@ -1,27 +1,3 @@
-onEvent('rei.hide.items', event => {
-  let coinhide = (name) => {
-    event.hide('thermal:' + name + '_coin')  
-    event.hide('createdeco:' + name + '_coin')  
-    event.hide('createdeco:' + name + '_coinstack')  
-    }
-    coinhide('iron')
-    coinhide('copper')
-    coinhide('netherite')
-    coinhide('tin')
-    coinhide('lead')
-    coinhide('nickel')
-    coinhide('electrum')
-    coinhide('invar')
-    coinhide('constantan')
-    coinhide('signalum')
-    coinhide('lumium')
-    coinhide('enderium')
-    coinhide('brass')
-    coinhide('bronze')
-    coinhide('cast_iron')
-    coinhide('zinc')
-})
-
 onEvent('rei.group', event => {
 
 	event.groupItemsByTag('supplementaries:rei_groups/hanging_signs', 'Sign Posts', 'supplementaries:hanging_signs')
@@ -29,7 +5,7 @@ onEvent('rei.group', event => {
 	event.groupItemsByTag('tconstruct:rei_groups/modifiable', 'Tinkers Tools', 'tconstruct:modifiable')
 	event.groupItemsByTag('tconstruct:rei_groups/parts', 'Tinkers Parts', 'tconstruct:parts')
 
-	const useNbt = ['potion', 'enchanted_book', 'splash_potion', 'tipped_arrow', 'lingering_potion', 'reliquary:potion', 'reliquary:potion_essence', 'reliquary:splash_potion', 'reliquary:lingering_potion', 'reliquary:tipped_arrow', 'tconstruct:potion_bucket', 'tconstruct:crafting_station', 'tconstruct:tinker_station', 'tconstruct:part_builder', 'tconstruct:modifier_worktable', 'tconstruct:tinkers_anvil', 'tconstruct:scorched_anvil', 'tconstruct:repair_kit', 'chiselandbits:block_bit']
+	const useNbt = ['reliquary:potion', 'reliquary:potion_essence', 'reliquary:splash_potion', 'reliquary:lingering_potion', 'reliquary:tipped_arrow', 'tconstruct:crafting_station', 'tconstruct:tinker_station', 'tconstruct:part_builder', 'tconstruct:modifier_worktable', 'tconstruct:tinkers_anvil', 'tconstruct:scorched_anvil', 'tconstruct:repair_kit', 'chiselandbits:block_bit']
 
 	useNbt.forEach(id => {
 		const item = Item.of(id)
@@ -40,7 +16,7 @@ onEvent('rei.group', event => {
 
 
 	event.groupItems('kubejs:rei_groups/microblocks', 'Microblocks', [
-		/microblock/
+		/cb_microblock:microblock/
 	])
 
 	event.groupItems('kubejs:rei_groups/fluidbuckets', 'Buckets of Fluids', [

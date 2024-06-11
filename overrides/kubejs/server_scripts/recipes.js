@@ -96,6 +96,7 @@ onEvent('recipes', event => {
 	trading(event)
 	glitch(event)
 	stripping(event)
+	expandCaves(event)
 	log.push('Recipes Updated')
 })
 
@@ -327,7 +328,7 @@ function beforeNuke(event) {
 }
 
 function unwantedRecipes(event) {
-	event.remove({ output: AE2('grindstone') })
+	event.remove({ id:'ftbquests:loot_crate_opener'})
 	event.remove({ output: TE('tin_block') })
 	event.remove({ output: AE2('vibration_chamber') })
 	event.remove({ output: AE2('inscriber') })
@@ -340,7 +341,6 @@ function unwantedRecipes(event) {
 	event.remove({ input: '#forge:ores/silver' })
 	event.remove({ output: '#forge:plates/tin' })
 	event.remove({ output: '#forge:gears/tin' })
-	event.remove({ type: AE2('grinder') })
 	event.remove({ type: TE('press') })
 	event.remove({ id: /thermal:earth_charge\/.*/ })
 	event.remove({ id: /thermal:machines\/smelter\/.*dust/ })
@@ -376,8 +376,12 @@ function unwantedRecipes(event) {
 	event.remove({ id: CR('cutting/andesite_alloy') })
 	event.remove({ id: QU('building/crafting/compressed/charcoal_block')})
 	event.remove({ id: QU('building/crafting/compressed/sugar_cane_block')})
-	event.remove({ id: TE('building/crafting/compressed/bamboo_block')})
 	event.remove({ id: QU('building/crafting/compressed/gunpowder_sack')})
+	event.remove({ id: QU('building/crafting/compressed/apple_crate')})
+	event.remove({ id: QU('building/crafting/compressed/potato_crate')})
+	event.remove({ id: QU('building/crafting/compressed/carrot_crate')})
+	event.remove({ id: QU('building/crafting/compressed/beetroot_crate')})
+	event.remove({ id: TE('building/crafting/compressed/bamboo_block')})
 	event.remove({ id: TE('storage/silver_block')})
 	event.remove({ id: TE('storage/silver_ingot_from_block')})
 	event.remove({ id: TE('storage/silver_ingot_from_nuggets')})
@@ -436,6 +440,10 @@ function unwantedRecipes(event) {
 	})
 	event.remove({ id: TE('smelting/silver_ingot_from_dust_smelting')})
 	event.remove({ id: TE('smelting/silver_ingot_from_dust_blasting')})
+	//Remove Tconstruct cheese since it only costs milk to craft and cheese already exists on the moon.
+	event.remove({ id: TC('smeltery/casting/cheese_block')})
+	event.remove({ id: TC('smeltery/casting/cheese_ingot_gold_cast')})
+	event.remove({ id: TC('smeltery/casting/cheese_ingot_sand_cast')})
 }
 
 function tweaks(event) {
@@ -668,13 +676,57 @@ function tweaks(event) {
 	bedrock_cobblegen(MC("packed_ice"), MC("andesite"))
 	bedrock_cobblegen(AP("polished_packed_ice"), MC("granite"))
 	bedrock_cobblegen(AP("chiseled_packed_ice"), MC("diorite"))
-	bedrock_cobblegen(AP("packed_ice_pillar"), CR("scoria"))
+
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "create:chocolate",
+		"result": { "item": "create:scoria"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "create:honey",
+		"result": { "item": "create:limestone"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "biomesoplenty:blood",
+		"result": { "item": "biomesoplenty:flesh"}
+	})
+
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:end_stone",
+		"result": { "item": "quark:myalite"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:clay",
+		"result": { "item": "quark:shale"}
+	})
+	event.custom({
+		"type": "thermal:rock_gen",
+		"adjacent": "kubejs:chromatic_waste",
+		"below": "minecraft:quartz_block",
+		"result": { "item": "quark:jasper"}
+	})
+	event.custom({
+    "type": "architects_palette:warping",
+    "ingredient": [
+        {
+            "item": "create:limestone"
+        }
+    ],
+    "result": {
+        "item": "quark:limestone"
+    },
+		"dimension": "minecraft:the_nether"
+	})
 
 	event.recipes.createPressing([TE('nickel_plate')], TE('nickel_ingot'))
 
-//	event.remove({ id: "chisel:charcoal/raw" })
 	event.remove({ id: AP("charcoal_block") })
-//	event.stonecutting("chisel:charcoal/raw", MC('charcoal'))
 	event.stonecutting(AP("charcoal_block"), MC('charcoal'))
 
 	event.remove({ id: CR('splashing/gravel') })
@@ -739,58 +791,15 @@ function tweaks(event) {
 		"energy": 6000
 	})
 
-
-	let cast_block = (fluid, item) => {
-		event.custom({
-			"type": "tconstruct:casting_basin",
-			"fluid": { "name": fluid, "amount": 810 },
-			"result": { "item": item },
-			"cooling_time": 150
-		})
-	}
-
-	let cast = (type, fluid, amount, item, time) => {
-		event.custom({
-			"type": "tconstruct:casting_table",
-			"cast": { "tag": "tconstruct:casts/single_use/" + type },
-			"cast_consumed": true,
-			"fluid": { "name": fluid, "amount": amount },
-			"result": { "item": item },
-			"cooling_time": time
-		})
-		event.custom({
-			"type": "tconstruct:casting_table",
-			"cast": { "tag": "tconstruct:casts/multi_use/" + type },
-			"fluid": { "name": fluid, "amount": amount },
-			"result": { "item": item },
-			"cooling_time": time
-		})
-	}
-
-	let remove_cast = (name) => {
-		event.remove({ id: `${TC(name)}_sand_cast`})
-		event.remove({ id:`${TC(name)}_gold_cast`})
-	}
-
 	event.remove({ id: TE("storage/copper_nugget_from_ingot")})
 	event.remove({ id: TC("common/materials/copper_nugget_from_ingot")})
 	event.remove({ id: TE("storage/copper_ingot_from_nuggets")})
 	event.remove({ id: TC("common/materials/copper_ingot_from_nuggets")})
 
-	remove_cast("smeltery/casting/metal/copper/nugget")
-
-	cast("nugget", TC("molten_copper"), 10, CR("copper_nugget"), 17)
-
 	event.remove({ id: TE("storage/netherite_nugget_from_ingot")})
 	event.remove({ id: TC("common/materials/netherite_nugget_from_ingot")})
 	event.remove({ id: TE("storage/netherite_ingot_from_nuggets")})
 	event.remove({ id: TC("common/materials/netherite_ingot_from_nuggets")})
-
-	remove_cast("smeltery/casting/metal/netherite/nugget")
-	remove_cast("smeltery/casting/metal/netherite/plate")
-
-	cast("nugget", TC("molten_netherite"), 10, CD("netherite_nugget"), 17)
-	cast("plate", TC("molten_netherite"), 90, CD("netherite_sheet"), 75)
 
 	event.remove({id: "alloyed:mixing/bronze_ingot"})
 	event.remove({id: "alloyed:mixing/bronze_ingot_x3"})
@@ -799,16 +808,6 @@ function tweaks(event) {
 	event.remove({ id: TE('storage/bronze_ingot_from_nuggets')})
 	event.remove({ id: TE('storage/bronze_ingot_from_block')})
 	event.remove({ id: TE('storage/bronze_block')})
-
-	remove_cast("smeltery/casting/metal/bronze/nugget")
-	remove_cast("smeltery/casting/metal/bronze/ingot")
-	remove_cast("smeltery/casting/metal/bronze/plate")
-	event.remove({ id: TC("smeltery/casting/metal/bronze/block")})
-
-	cast("nugget", TC("molten_bronze"), 10, "alloyed:bronze_nugget", 17)
-	cast("ingot", TC("molten_bronze"), 90, "alloyed:bronze_ingot", 50)
-	cast("plate", TC("molten_bronze"), 90, "alloyed:bronze_sheet", 50)
-	cast_block(TC("molten_bronze"), "alloyed:bronze_block")
 
 	event.custom({
 		"type": "tconstruct:melting",
@@ -1460,19 +1459,19 @@ function algalAndesite(event) {
 		'SS',
 		'AA'
 	], {
-		A: ['minecraft:andesite', CR('andesite_cobblestone')],
+		A: 'minecraft:andesite',
 		S: AP('algal_brick')
 	})
 	event.shaped(Item.of(CR('andesite_alloy'), 2), [
 		'AA',
 		'SS'
 	], {
-		A: ['minecraft:andesite', CR('andesite_cobblestone')],
+		A: 'minecraft:andesite',
 		S: AP('algal_brick')
 	})
 
 	event.recipes.createMixing(Item.of(AP('algal_blend'), 2), ['minecraft:clay_ball', ['minecraft:kelp', 'minecraft:seagrass']])
-	event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), ['minecraft:andesite', CR('andesite_cobblestone')]])
+	event.recipes.createMixing(Item.of(CR('andesite_alloy'), 2), [AP('algal_brick'), 'minecraft:andesite'])
 }
 
 function oreProcessing(event) {
@@ -1660,10 +1659,15 @@ function alloys(event) {
 	event.remove({ type: MC("crafting_shapeless"), output: TE('bronze_dust') })
 	event.remove({ type: MC("crafting_shapeless"), output: TE('invar_dust') })
 
-	event.recipes.createMixing(Fluid.of(TC('molten_brass'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_zinc'), 3)]).processingTime(1)
-	event.recipes.createMixing(Fluid.of(TC('molten_constantan'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_nickel'), 3)]).processingTime(1)
-	event.recipes.createMixing(Fluid.of(TC('molten_rose_gold'), 3), [Fluid.of(TC('molten_copper'), 3), Fluid.of(TC('molten_gold'), 3)]).processingTime(1)
-	event.recipes.createMixing(Fluid.of(TC('molten_electrum'), 3), [Fluid.of(TC('molten_silver'), 3), Fluid.of(TC('molten_gold'), 3)]).processingTime(1)
+	let moltenAlloy = function (fluidAlloy, fluid1, fluid2) {
+		//Recipe ids are actually important here since the id that comes later in alphabetical order is the one that is prioritized
+		event.recipes.createMixing(Fluid.of(TC(fluidAlloy), 3), [Fluid.of(fluid1, 3), Fluid.of(fluid2, 3)]).processingTime(1).id(`kubejs:mixing/${fluidAlloy}_3`)
+		event.recipes.createMixing(Fluid.of(TC(fluidAlloy), 1), [Fluid.of(fluid1, 1), Fluid.of(fluid2, 1)]).processingTime(1).id(`kubejs:mixing/${fluidAlloy}_1`)
+	}
+	moltenAlloy('molten_brass', TC('molten_copper'), TC('molten_zinc'))
+	moltenAlloy('molten_constantan', TC('molten_copper'), TC('molten_nickel'))
+	moltenAlloy('molten_rose_gold', TC('molten_copper'), TC('molten_gold'))
+	moltenAlloy('molten_electrum', TC('molten_silver'), TC('molten_gold'))
 
 	event.recipes.thermal.smelter([KJ("invar_compound"), KJ("invar_compound")], [TE("nickel_ingot"), MC("iron_ingot")])
 	event.recipes.thermal.smelter(CR("brass_ingot", 2), [MC("copper_ingot"), CR("zinc_ingot")])
@@ -3079,6 +3083,64 @@ function stripping(event) {
 			"tool": { "tag": "forge:tools/axes" },
 			"result": [{ "item": wood.replace(':',':stripped_') + "_hyphae" }, { "item": "farmersdelight:tree_bark" }]
 		})
+	})
+}
+
+function expandCaves(event) {
+	// Expanded Caves --- This mod is alpha and it really shows in some places
+	//Dev forgot to add pressure plate recipes to the mod so we add them ourselves.
+	let pressurePlateMaterials = ["sediment_stone", "lavastone", "polished_lavastone", "dirtstone", "dirtstone_cobble", "marlstone", "bricks_ice", "bricks_snow"]
+	pressurePlateMaterials.forEach(str=>{
+		event.shaped(`expcaves:${str}_pressure_plate`, [
+			'SS'
+		], {
+			S: `expcaves:${str}`
+		}).id(`kubejs:expcaves/${str}_pressure_plate`)
+	})
+
+	//snow and ice brick --- these are probably intended for the structures that never got ported. But we'll give them recipes
+	event.shaped(Item.of('expcaves:bricks_snow',4), [
+		'SS',
+		'SS'
+	], {
+		S: `minecraft:snow_block`
+	}).id(`kubejs:expcaves/bricks_snow`)
+
+	event.shaped(Item.of('expcaves:bricks_ice',4), [
+		'SS',
+		'SS'
+	], {
+		S: `architects_palette:polished_packed_ice`
+	}).id(`kubejs:expcaves/bricks_ice`)
+
+	//broken stone
+	event.recipes.createPressing(['expcaves:broken_stone'], 'minecraft:stone').id('kubejs:pressing/broken_stone')
+	event.recipes.createPressing(['expcaves:broken_deepslate'], 'minecraft:deepslate').id('kubejs:pressing/broken_deepslate')
+
+	//flint rock
+	event.custom({ "type": "create:haunting",
+	"ingredients": [{"item": "minecraft:flint"}],
+		"results": [
+			{
+			"item": "expcaves:rock_flint"
+			}
+		]
+	}).id('kubejs:haunting/rock_flint')
+
+	//stalagmites
+	let stalagmites = ["stone", "andesite", "diorite", "granite", "tuff", "deepslate", "packed_ice", "netherrack", "blackstone"]
+	stalagmites.forEach(str=>{
+		event.stonecutting(Item.of(`expcaves:${str}_stalagmite`, 2), `minecraft:${str}`).id(`kubejs:stonecutting/${str}_stalagmite`)
+		event.stonecutting(Item.of(`expcaves:${str}_stalactite`, 2), `minecraft:${str}`).id(`kubejs:stonecutting/${str}_stalactite`)
+		event.stonecutting(`expcaves:${str}_tall_stalagmite`, `minecraft:${str}`).id(`kubejs:stonecutting/${str}_tall_stalagmite`)
+		event.stonecutting(`expcaves:${str}_tall_stalactite`, `minecraft:${str}`).id(`kubejs:stonecutting/${str}_tall_stalactite`)
+	})
+	stalagmites = ["sediment_stone", "lavastone"]
+	stalagmites.forEach(str=>{
+		event.stonecutting(Item.of(`expcaves:${str}_stalagmite`, 2), `expcaves:${str}`).id(`kubejs:stonecutting/${str}_stalagmite`)
+		event.stonecutting(Item.of(`expcaves:${str}_stalactite`, 2), `expcaves:${str}`).id(`kubejs:stonecutting/${str}_stalactite`)
+		event.stonecutting(`expcaves:${str}_tall_stalagmite`, `expcaves:${str}`).id(`kubejs:stonecutting/${str}_tall_stalagmite`)
+		event.stonecutting(`expcaves:${str}_tall_stalactite`, `expcaves:${str}`).id(`kubejs:stonecutting/${str}_tall_stalactite`)
 	})
 }
 

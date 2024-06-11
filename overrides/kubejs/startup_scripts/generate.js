@@ -78,15 +78,15 @@ onEvent('item.registry', event => {
 	event.create('pipe_module_tier_3').texture("kubejs:item/pipe_module_tier_3").displayName('Enderium Pipe Module')
 	
 	event.create('circuit_scrap').texture("kubejs:item/circuit_scrap").displayName('Circuit Scrap')
-	event.create('charged_calculator').texture("kubejs:item/charged_calculator").displayName('Calculator').maxDamage(64)
+	//event.create('charged_calculator').texture("kubejs:item/charged_calculator").displayName('Calculator').maxDamage(64)
 	event.create('missingno').texture("kubejs:item/missingno").displayName('∄')
 	event.create('zinc_dust').texture("kubejs:item/zinc_dust").displayName('Zinc Dust').tag("forge:dusts/zinc").tag("forge:dusts")
-	event.create('creosote_pellet').texture("kubejs:item/creosote_pellet").displayName('Creosote Pellet')
+	//event.create('creosote_pellet').texture("kubejs:item/creosote_pellet").displayName('Creosote Pellet')
 	event.create('sand_ball').texture("kubejs:item/sand_ball").displayName('Ball of Sand').unstackable()
 	event.create('rough_sand').texture("kubejs:item/rough_sand").displayName('Sand Chunks')
 	event.create('purified_sand').texture("kubejs:item/purified_sand").displayName('Purified Sand')
 	event.create('silicon_compound').texture("kubejs:item/silicon_compound").displayName('Silicon Compound')
-	event.create('smoke_mote').texture("kubejs:item/smoke_mote").displayName('Tiny Smoke Cloud')
+	//event.create('smoke_mote').texture("kubejs:item/smoke_mote").displayName('Tiny Smoke Cloud')
 	event.create('incomplete_coke_chunk','create:sequenced_assembly').texture("kubejs:item/incomplete_coke_chunk").displayName('Cut Coke')
 	event.create('coke_chunk').texture("kubejs:item/coke_chunk").displayName('Coke Chunks')
 

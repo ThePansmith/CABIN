@@ -1,0 +1,12 @@
+{
+  "type": "rechiseled:chiseling",
+  "entries": [
+    {
+      "item": "thermal:apple_block"
+    },
+		{
+      "item": "quark:apple_crate"
+    }
+  ],
+  "overwrite": false
+}
