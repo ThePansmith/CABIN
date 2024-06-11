@@ -440,6 +440,10 @@ function unwantedRecipes(event) {
 	})
 	event.remove({ id: TE('smelting/silver_ingot_from_dust_smelting')})
 	event.remove({ id: TE('smelting/silver_ingot_from_dust_blasting')})
+	//Remove Tconstruct cheese since it only costs milk to craft and cheese already exists on the moon.
+	event.remove({ id: TC('smeltery/casting/cheese_block')})
+	event.remove({ id: TC('smeltery/casting/cheese_ingot_gold_cast')})
+	event.remove({ id: TC('smeltery/casting/cheese_ingot_sand_cast')})
 }
 
 function tweaks(event) {
