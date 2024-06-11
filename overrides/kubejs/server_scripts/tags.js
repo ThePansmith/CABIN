@@ -6,6 +6,9 @@ onEvent('item.tags', event => {
 
 	event.add('forge:dusts/obsidian', 'create:powdered_obsidian')
 	event.add('forge:dusts', 'create:powdered_obsidian')
+
+	//Fixes copper dupe.
+	event.remove('forge:storage_blocks/copper', 'minecraft:cut_copper');
 })
 
 //for some inexplicable reason these need to be kept in seperate onEvent triggers.
@@ -32,6 +35,9 @@ onEvent('item.tags', event => {
 onEvent('block.tags', event => {
 	event.add('minecraft:beacon_base_blocks', 'alloyed:steel_block')
 	event.remove('minecraft:beacon_base_blocks', 'thermal:bronze_block')
+
+	//Not sure if anything checks for this block tag but don't want to risk it.
+	event.remove('forge:storage_blocks/copper', 'minecraft:cut_copper');
 
 	//I don't know why this isn't wrenchable by default
 	event.add("create:wrench_pickup", "minecraft:note_block")

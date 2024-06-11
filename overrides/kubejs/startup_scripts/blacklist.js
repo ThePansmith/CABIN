@@ -550,6 +550,8 @@ global.itemBlacklist = [
 	'tconstruct:netherite_nugget',
 	'tconstruct:copper_nugget',
 	'tconstruct:molten_tin_bucket',
+	'tconstruct:cheese_ingot',
+	'tconstruct:cheese_block',
 
 	//thermal
 	'thermal:laser_diode', //I don't even know what this thing it
