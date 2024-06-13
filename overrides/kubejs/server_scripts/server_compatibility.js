@@ -28,6 +28,11 @@ onEvent('recipes', event => {
     //      event.shapeless("create:creative_crate", "minecraft:redstone_ore")]) // If you have any other recipes, put them following the machine recipes
     //}
 
+    if (Platform.isLoaded('sliceanddice')) {
+        machine('andesite', 'sliceanddice:slicer', 1, '#farmersdelight:tools/knives')
+        machine('copper', 'sliceanddice:sprinkler', 1, 'createdeco:copper_trapdoor')
+    }
+
     if (Platform.isLoaded('createbigcannons')) {
         machine('andesite', 'createbigcannons:yaw_controller', 1)
         machine('andesite', 'createbigcannons:cannon_builder', 1, 'create:mechanical_bearing')
