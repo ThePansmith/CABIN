@@ -10,7 +10,7 @@
         },
 		{
           "type": "tag",
-          "name": "forge:treasure1",
+          "name": "kubejs:treasure1",
 		  "expand": true,
           "weight": 1
         },

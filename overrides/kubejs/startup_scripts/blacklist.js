@@ -607,6 +607,28 @@ global.itemBlacklist = [
 	'titanium:creative_generator'
 ]
 
+//The buddycard malum cards are a strange case where we only want to hide items when a mod is not present
+if (!Platform.isLoaded("malum")) {
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum1")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum2")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum3")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum4")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum5")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum6")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum7")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum8")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum9")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum10")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum11")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum12")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum13")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum14")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum15")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum16")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum17")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum18")
+}
+
 global.jeiItemBlacklist = [
 	//Beyond earth adds 2 sets of these which means we have to blacklist them twice
 	'beyond_earth:rover',

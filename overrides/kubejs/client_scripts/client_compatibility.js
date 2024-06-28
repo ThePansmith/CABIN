@@ -1,1 +1,0 @@
-// Client scripts for addon mods

@@ -5,12 +5,12 @@
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "forge:treasure1",
+          "name": "kubejs:treasure1",
           "expand": true
         },
         {
           "type": "minecraft:tag",
-          "name": "forge:treasure2",
+          "name": "kubejs:treasure2",
           "expand": true
         },
         {
