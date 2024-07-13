@@ -47,23 +47,6 @@ onEvent('entity.spawned', event => {
 	entity.setZ(Math.floor(entity.getZ()) + .5)
 })
 
-
-onEvent('player.tick', event => {
-
-	// Fixes advanced rocketry not applying low gravity on the moon
-	let player = event.getPlayer()
-
-	if (player.minecraftPlayer.field_70173_aa % 10 != 0)
-		return
-	if (event.world.getDimension() != "custommoon:moon")
-		return
-
-	let effects = java("net.minecraft.potion.Effects")
-	player.getPotionEffects().add(effects.field_204839_B, 20, 0, false, false) // slow fall
-	player.getPotionEffects().add(effects.field_76430_j, 20, 4, false, false) // jump boost
-
-})
-
 onEvent('block.place', event => {
 	// Reverse placed Dynamos on Sneak 
 	if (event.getEntity() == null)
