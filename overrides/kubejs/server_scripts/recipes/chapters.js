@@ -557,7 +557,7 @@ onEvent('recipes', event => {
 	event.stonecutting(AE2("logic_processor_press"), KJ("circuit_scrap"))
 	event.shaped(KJ("circuit_scrap", 2), [" A ", "ABA", " A "], { A: TE("invar_ingot"), B: KJ("#circuit_press") })
 	// Pyrolyzer charcoal
-	event.remove({ id: TE("machine/pyrolyzer/pyrolyzer_logs") })
+	event.remove({ id: TE("machines/pyrolyzer/pyrolyzer_logs") })
 	event.recipes.thermal.pyrolyzer([MC("charcoal", 2), Fluid.of(TE('creosote'), 50)], MC("#logs")).energy(1000)
 	//Coal Coke
 	event.recipes.thermal.pyrolyzer([TE("coal_coke"), Fluid.of(TE('creosote'), 50)], MC("charcoal")).energy(2000)

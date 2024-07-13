@@ -1,23 +1,6 @@
-// Addon Compatibility Script for CABIN
-// These are for mods that are not installed by default, sections of this script will enable if the applicable mod is installed.
-// With how many create addons there are, it would not be feasible for me to add compat for them all.
-// If you have a create addon that you think could fit in the general theme/tone/whathaveyou of CABIN, make a PR with it.
-onEvent('recipes', event => {
-	//	if (Platform.isLoaded('YourModID')) {                                           // Mod ID goes here
-	//		(material)Machine(event,Item.of('minecraft:dirt', 1))                        // Recipes without an additional item will be stonecutting (saw) recipes
-	//		(material)Machine(event,Item.of('minecraft:dispenser', 2), 'minecraft:bow')  // Recipes with one are smithing table recipes
-	//
-	//     event.shapeless("create:creative_crate", "minecraft:redstone_ore")]) // If you have any other recipes, put them following the machine recipes
-	//}                                     
-
-	if (Platform.isLoaded('createbigcannons')) {
-		andesiteMachine(event, Item.of('createbigcannons:yaw_controller', 1))
-		andesiteMachine(event, Item.of('createbigcannons:cannon_builder', 1), 'create:mechanical_bearing')
-		andesiteMachine(event, Item.of('createbigcannons:cannon_loader', 1), 'create:mechanical_piston')
-		andesiteMachine(event, Item.of('createbigcannons:cannon_drill', 1), 'create:fluid_tank')
-	}                      
-
-	if (Platform.isLoaded('createaddition')) {
+//Create: Crafts and Additions
+if(Platform.isLoaded("createaddition")) {
+	onEvent('recipes', event => {
 		andesiteMachine(event, Item.of('createaddition:rolling_mill', 1), 'create:shaft')
 		brassMachine(event, Item.of('createaddition:portable_energy_interface', 2))
 		brassMachine(event, Item.of('createaddition:tesla_coil', 1), 'createaddition:copper_spool')
@@ -81,20 +64,5 @@ onEvent('recipes', event => {
 				event.recipes.createPressing('kubejs:incomplete_connector', 'kubejs:incomplete_connector')
 			]
 		).transitionalItem('kubejs:incomplete_large_connector').loops(1)
-	}
-
-	if (Platform.isLoaded('create_enchantment_industry')) {
-		copperMachine(event, Item.of('create_enchantment_industry:disenchanter', 1), '#create:sandpaper')
-		copperMachine(event, Item.of('create_enchantment_industry:printer', 1), '#forge:storage_blocks/lapis')
-		
-		event.replaceInput( {id: 'create_enchantment_industry:crafting/enchanting_guide'}, 'create:sturdy_sheet', 'create:schedule' )
-	}
-	
-	if (Platform.isLoaded('miners_delight')) {
-		event.remove({ id: 'miners_delight:cutting/bat_wing' })
-	}
-
-	if(Platform.isLoaded('create_edible_belts')) {
-		event.remove({ id: 'create_edible_belts:embrecipe' })
-	}
-})
+	})
+}
