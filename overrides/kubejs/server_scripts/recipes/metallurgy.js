@@ -21,7 +21,16 @@ onEvent('recipes', event => {
 	event.remove({ id: OC('miner/deeps/deepslate_tin_ore') })
 	event.remove({ id: OC('miner/deeps/deepslate_silver_ore') })
 
-	//metal replacement
+	//Occultism silver replacements
+	event.replaceInput({ id: OC('ritual/craft_infused_lenses') }, F('#ingots/silver'), TE('nickel_ingot'))
+	event.replaceInput({ id: OC('crafting/magic_lamp_empty') }, F('#ingots/silver'), MC('iron_ingot'))
+	event.replaceInput({ id: OC('crafting/lens_frame') }, F('#ingots/silver'), TE('nickel_ingot'))
+	event.replaceInput({ id: TE('augments/rf_coil_storage_augment') }, F('#ingots/silver'), MC('iron_ingot'))
+	event.replaceInput({ id: TE('augments/rf_coil_xfer_augment') }, F('#ingots/silver'), MC('iron_ingot'))
+	event.replaceInput({ id: TE('augments/rf_coil_augment') }, F('#ingots/silver'), MC('iron_ingot'))
+	event.replaceInput({ id: TE('tools/detonator') }, F('#ingots/silver'), TE('lead_ingot'))
+
+	//metal replacements
 	event.replaceInput({ type: "minecraft:crafting_shaped" }, '#forge:ingots/tin', CR('zinc_ingot'))
 	event.replaceInput({}, '#forge:gears/tin', TE('lead_gear'))
 
@@ -65,6 +74,7 @@ onEvent('recipes', event => {
 
 //Tweaks for the metals that we actually want
 onEvent('recipes', event => {
+
 	//Thermal recipes for zinc
 	event.recipes.thermal.pulverizer([KJ('zinc_dust')], F('#ingots/zinc')).energy(2000)
 	event.recipes.thermal.pulverizer([KJ('zinc_dust')], F('#plates/zinc')).energy(2000)
@@ -162,9 +172,24 @@ onEvent('recipes', event => {
 	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_electrum")}, F('#dusts/gold'), MC("gold_ingot"))
 	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_electrum")}, F('#dusts/silver'), TE("silver_ingot"))
 	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_netherite")}, F('#dusts/gold'), MC("gold_ingot"))
-	//bronze and invar
-	event.recipes.thermal.smelter([KJ("invar_compound"), KJ("invar_compound")], [TE("nickel_ingot"), MC("iron_ingot")])
+	//bronze
 	event.recipes.thermal.smelter("3x alloyed:bronze_ingot", [MC("copper_ingot", 3), '#forge:sand'])
+	
+	// Nickel Compound
+	event.shapeless(KJ('nickel_compound'), [TE('nickel_ingot'), TE("iron_dust"), TE("iron_dust"), TE("iron_dust"), TE("iron_dust")])
+	event.recipes.thermal.smelter([KJ("invar_compound"), KJ("invar_compound")], [TE("nickel_ingot"), MC("iron_ingot")])
+	// Invar Compound
+	event.blasting(KJ('invar_compound'), KJ('nickel_compound'))
+	{ //Invar ingots
+		let s = KJ('invar_compound')
+		event.recipes.createSequencedAssembly([
+			TE('invar_ingot'),
+		], KJ('invar_compound'), [
+			event.recipes.createPressing(s, s)
+		]).transitionalItem(s)
+			.loops(16)
+			.id('kubejs:invar')
+	} 
 
 	//smeltery alloys
 	event.custom({
@@ -264,6 +289,8 @@ onEvent('recipes', event => {
 	event.replaceOutput({ id:OC('crafting/silver_block')}, '#forge:storage_blocks/silver', TE('silver_block'))
 
 	//Ore processing
+	event.remove({ id: /thermal:machines\/smelter\/.*dust/ })
+	event.remove({ id: /tconstruct:smeltery\/.*\/ore/ })
 	event.remove({ input: '#create:crushed_raw_materials' })
 
 	native_metals.forEach(e => {
@@ -275,6 +302,7 @@ onEvent('recipes', event => {
 	event.remove({ id: TE('smelting/silver_ingot_from_dust_blasting')})
 
 	const stone = Item.of(MC("cobblestone"), 1).withChance(.5)
+	let experience = Item.of(CR("experience_nugget"), 1).withChance(0.75)
 
 	let dust_process = (name, ingot, nugget, dust, ore, byproduct, fluid_byproduct_name, rawore) => {
 		let crushed = CR('crushed_' + 'raw_' + name)
@@ -288,11 +316,11 @@ onEvent('recipes', event => {
 		
 		event.smelting(Item.of(nugget, 3), crushed)
 		event.smelting(Item.of(nugget, 1), dusttag).cookingTime(40)
-		event.recipes.createMilling([Item.of(crushed, 1), stone], oretag)
 		event.recipes.createMilling([Item.of(dust, 3)], crushed)
+		event.recipes.createCrushing([Item.of(crushed, 1), Item.of(crushed, 1).withChance(0.25), experience, stone], oretag)
 		event.recipes.createCrushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushed)
 		event.recipes.thermal.pulverizer([Item.of(dust, 6)], crushed).energy(15000)
-		event.recipes.thermal.pulverizer([crushed], oretag).energy(3000)
+		event.recipes.thermal.pulverizer([Item.of(crushed).withChance(1.5)], oretag).energy(3000)
 		event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000)
 
 		event.recipes.thermal.crucible(Fluid.of(fluid, 30), dusttag).energy(3000)
@@ -316,22 +344,11 @@ onEvent('recipes', event => {
 
 		event.custom({
 			"type": "thermal:smelter",
-			"ingredient": {
-				"item": crushed
-			},
+			"ingredient": { "item": crushed },
 			"result": [
-				{
-					"item": nugget,
-					"chance": 9.0
-				},
-				{
-					"item": byproduct,
-					"chance": (byproduct.endsWith('nugget') ? 1.8 : 0.2)
-				},
-				{
-					"item": "thermal:rich_slag",
-					"chance": 0.2
-				}
+				{ "item": nugget, "chance": 9.0 },
+				{ "item": byproduct, "chance": (byproduct.endsWith('nugget') ? 1.8 : 0.2) },
+				{ "item": "thermal:rich_slag", "chance": 0.2 }
 			],
 			"experience": 0.2,
 			"energy": 20000
@@ -339,21 +356,11 @@ onEvent('recipes', event => {
 
 		event.custom({
 			"type": "tconstruct:melting",
-			"ingredient": {
-				"tag": dusttag.slice(1)
-			},
-			"result": {
-				"fluid": fluid,
-				"amount": 30
-			},
+			"ingredient": { "tag": dusttag.slice(1) },
+			"result": { "fluid": fluid, "amount": 30 },
 			"temperature": 500,
 			"time": 30,
-			"byproducts": [
-				{
-					"fluid": fluid_byproduct,
-					"amount": 10
-				}
-			]
+			"byproducts": [{ "fluid": fluid_byproduct, "amount": 10 }]
 		});
 	}
 

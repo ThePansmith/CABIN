@@ -32,11 +32,11 @@ onEvent('item.tags', event => {
 	});
 
 	global.trades.forEach(element => {
-		event.get('forge:trade_cards').add(`kubejs:trade_card_${element}`)
+		event.get('kubejs:transaction_cards/trade').add(`kubejs:trade_card_${element}`)
 	});
 
 	global.professions.forEach(element => {
-		event.get('forge:profession_cards').add(`kubejs:profession_card_${element}`)
+		event.get('kubejs:transaction_cards/profession').add(`kubejs:profession_card_${element}`)
 	});
 
 	event.get("farmersdelight:offhand_equipment").add("forbidden_arcanus:obsidian_skull_shield")
@@ -64,7 +64,7 @@ onEvent('item.tags', event => {
 		event.get("forge:tools/axes").add(axe)
 	});
 	
-	event.get("forge:vines").add(MC("vine")).add(BOP("willow_vine")).add(BOP("spanish_moss"))
+	event.get("forge:vines").add(MC("vine"))
 
 	//These items aren't obtainable at the moment.
 	//This tag lets these items be melted into iron using the smeltery
@@ -99,8 +99,10 @@ onEvent('item.tags', event => {
 	event.get('kubejs:chromatic_resonators').add(KJ('chromatic_resonator'))
 	event.get('kubejs:flash_drives').add(KJ('flash_drive'))
 
-	event.get('thermal:crafting/dies').add('#forge:trade_cards')
-	event.get('thermal:crafting/dies').add('#forge:profession_cards')
+	event.get('kubejs:transaction_cards').add('#kubejs:transaction_cards/trade')
+	event.get('kubejs:transaction_cards').add('#kubejs:transaction_cards/profession')
+	event.get('thermal:crafting/dies').add('#kubejs:transaction_cards')
+	
 	event.get('thermal:crafting/casts').add(KJ("three_cast")).add(KJ("eight_cast")).add(KJ("plus_cast")).add(KJ("minus_cast")).add(KJ("multiply_cast")).add(KJ("divide_cast")).add(F("#circuit_press"))
 
 	event.get('create:upright_on_belt')
@@ -214,6 +216,9 @@ onEvent('item.tags', event => {
 		.add(MC('prismarine_crystals'))
 		.add(MC('chorus_fruit'))
 		.add(MC('blaze_powder'))
+
+	//This tag auto adds the beacon_payment_items tag which we don't want
+	event.remove(CR('create_ingots'), CR('andesite_alloy'))
 })
 
 onEvent('block.tags', event => {
@@ -241,10 +246,6 @@ onEvent('block.tags', event => {
 	event.add("create:wrench_pickup", "thermal:fluid_duct")
 	event.add("create:wrench_pickup", "thermal:fluid_duct_windowed")
 
-	event.add("create:wrench_pickup", /storagedrawers:/)
-
-	event.add("create:wrench_pickup", 'quark:ender_watcher')
-
 	event.add("create:wrench_pickup", 'supplementaries:cog_block')
 	event.add("create:wrench_pickup", 'supplementaries:relayer')
 	event.add("create:wrench_pickup", 'supplementaries:spring_launcher')
@@ -264,6 +265,5 @@ onEvent('block.tags', event => {
 
 	//I really don't know why these blocks are missing the pressure plate tag
 	//All the other pressure plates from quark and forbidden have the tag.
-	event.add("minecraft:pressure_plates", 'quark:obsidian_pressure_plate')
 	event.add("minecraft:pressure_plates", 'forbidden_arcanus:polished_darkstone_pressure_plate')
 })

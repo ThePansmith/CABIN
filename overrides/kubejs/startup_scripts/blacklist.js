@@ -293,12 +293,6 @@ global.itemBlacklist = [
 	'expcaves:dirtstone_cobble_pressure_plate',
 	'expcaves:dirtstone_cobble_wall',
 
-	//Extended Gears
-	'extendedgears:half_shaft_cogwheel',
-	'extendedgears:shaftless_cogwheel',
-	'extendedgears:large_half_shaft_cogwheel',
-	'extendedgears:large_shaftless_cogwheel',
-
 	//Forbidden Arcanus
 	'forbidden_arcanus:edelwood_bucket',
 	'forbidden_arcanus:edelwood_tropical_fish_bucket',
@@ -555,6 +549,8 @@ global.itemBlacklist = [
 
 	//thermal
 	'thermal:laser_diode', //I don't even know what this thing it
+	'thermal:rs_control_augment',
+	'thermal:side_config_augment',
 	'thermal:press_coin_die',
 	'thermal:press_gear_die',
 	'thermal:press_packing_2x2_die',

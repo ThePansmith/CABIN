@@ -64,31 +64,11 @@ onEvent('player.tick', event => {
 
 })
 
-onEvent('player.tick', event => {
-
-	// Fixes advanced rocketry not descending their rocket
-	let player = event.getPlayer()
-	if (player.getY() < 700)
-		return
-
-	let riding = player.getRidingEntity()
-	if (!riding)
-		return
-	if (riding.getType() != "advancedrocketry:rocket")
-		return
-
-	let nbt = riding.getFullNBT()
-	if (nbt["flight"] == 0) {
-		nbt["flight"] = 1
-		riding.setFullNBT(nbt)
-	}
-
-})
-
 onEvent('block.place', event => {
 	// Reverse placed Dynamos on Sneak 
 	if (event.getEntity() == null)
 		return
+	let block = event.getBlock();
 	if (block.getId().startsWith('thermal:dynamo')) {
 		let properties = block.getProperties()
 		if (event.getEntity().isCrouching()) {
