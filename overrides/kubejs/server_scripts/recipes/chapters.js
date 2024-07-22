@@ -346,8 +346,6 @@ onEvent('recipes', event => {
 	brassMachine(event, Item.of('thermal:machine_press', 1), MC('dropper'))
 	brassMachine(event, Item.of('torchmaster:feral_flare_lantern', 1), MC('glowstone_dust'))
 	brassMachine(event, Item.of('thermal:dynamo_numismatic', 1), TE('rf_coil'))
-	brassMachine(event, Item.of(PP('item_terminal'), 1), TE('diamond_gear'))
-	brassMachine(event, Item.of(PP('pressurizer'), 1), CR('propeller'))
 	brassMachine(event, Item.of('create:brass_funnel', 4))
 	brassMachine(event, Item.of('create:brass_tunnel', 4))
 	brassMachine(event, Item.of('create:elevator_pulley', 1))

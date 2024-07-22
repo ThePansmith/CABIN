@@ -5,6 +5,10 @@ if (Platform.isLoaded('prettypipes')) {
 	onEvent('recipes', event => {
 		//There are so few recipes that we want to keep that we're better off removing them all
 		event.remove({ mod: 'prettypipes' })
+		//machine recipes
+		brassMachine(event, Item.of(PP('item_terminal'), 1), TE('diamond_gear'))
+		brassMachine(event, Item.of(PP('pressurizer'), 1), CR('propeller'))
+
 		event.shaped(PP("pipe", 8), [
 			'PMP'
 		], {

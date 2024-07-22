@@ -293,7 +293,6 @@ onEvent('recipes', event => {
 	event.remove({ id: TC('smeltery/casting/cheese_ingot_sand_cast')})
 
 	//Water strainer
-	//Water strainer changes
 	//Might be considered a part of chapter 1
 	event.remove({ id: 'waterstrainer:string_mesh' })
 	event.remove({ id: 'waterstrainer:iron_mesh' })
