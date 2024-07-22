@@ -1,5 +1,5 @@
 const QU = (id, x) => MOD("quark", id, x)
-//Quark was added as Qol and is also really easy to configure. You can still remove it if you hate quality.
+//Quark was added as Qol and is also really easy to configure. You can still remove it if you hate quality of life.
 //This mod can be removed from the pack with no issues
 if(Platform.isLoaded("quark")) {
 
@@ -49,9 +49,27 @@ if(Platform.isLoaded("quark")) {
 
 	onEvent('block.tags', event => {
 
-	event.add("create:wrench_pickup", 'quark:ender_watcher')
+		event.add("create:wrench_pickup", 'quark:ender_watcher')
 		//I really don't know why these blocks are missing the pressure plate tag
 		//All the other pressure plates from quark and forbidden have the tag.
 		event.add("minecraft:pressure_plates", 'quark:obsidian_pressure_plate')
+	})
+
+	onEvent('server.datapack.first', event => {
+		addChiselingRecipe(event, 'rechiseledcreate:chiseling_recipes/limestone', [
+			"quark:limestone",
+			"quark:polished_limestone",
+			"quark:limestone_bricks",
+			"quark:chiseled_limestone_bricks",
+			"quark:limestone_pillar"
+		])
+		addChiselingRecipe(event, 'cabin:chiseling_recipes/apple_block', ["quark:apple_crate"])
+		addChiselingRecipe(event, 'cabin:chiseling_recipes/bamboo_block', ["quark:bamboo_block"])
+		addChiselingRecipe(event, 'cabin:chiseling_recipes/beetroot_block', ["quark:beetroot_crate"])
+		addChiselingRecipe(event, 'cabin:chiseling_recipes/carrot_block', ["quark:carrot_crate"])
+		addChiselingRecipe(event, 'cabin:chiseling_recipes/charcoal_block', ["quark:charcoal_block"])
+		addChiselingRecipe(event, 'cabin:chiseling_recipes/gunpowder_block', ["quark:gunpowder_sack"])
+		addChiselingRecipe(event, 'cabin:chiseling_recipes/potato_block', ["quark:potato_crate"])
+		addChiselingRecipe(event, 'cabin:chiseling_recipes/sugar_cane_block', ["quark:sugar_cane_block"])
 	})
 }

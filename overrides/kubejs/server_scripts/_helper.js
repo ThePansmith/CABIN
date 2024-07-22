@@ -94,7 +94,7 @@ const fluixMachine = (event, outputIngredient, inputIngredient) => {
 	return createMachine('ae2:controller', event, outputIngredient, inputIngredient)
 }
 
-let addTreeOutput = (event, trunk, leaf, fluid) => {
+const addTreeOutput = (event, trunk, leaf, fluid) => {
 	event.custom({
 		"type": "thermal:tree_extractor",
 		"trunk": trunk,
@@ -104,4 +104,18 @@ let addTreeOutput = (event, trunk, leaf, fluid) => {
 			"amount": 25
 		}
 	})
+}
+
+const addChiselingRecipe = (event, id, items, overwrite) => {
+	const json = {
+		type: "rechiseled:chiseling",
+		entries: [],
+		overwrite: !!overwrite
+	}
+	items.forEach(item=>{
+		json.entries.push({
+			item: item
+		})
+	})
+	event.addJson(id, json)
 }

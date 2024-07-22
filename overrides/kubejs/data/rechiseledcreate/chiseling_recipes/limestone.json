@@ -1,21 +1,6 @@
 {
   "type": "rechiseled:chiseling",
   "entries": [
-		{
-      "item": "quark:limestone"
-    },
-		{
-      "item": "quark:polished_limestone"
-    },
-		{
-      "item": "quark:limestone_bricks"
-    },
-		{
-      "item": "quark:chiseled_limestone_bricks"
-    },
-		{
-      "item": "quark:limestone_pillar"
-    },
     {
       "item": "expcaves:sediment_stone"
     }
