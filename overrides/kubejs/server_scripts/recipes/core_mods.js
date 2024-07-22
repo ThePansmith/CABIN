@@ -1,3 +1,4 @@
+// priority: 1
 //Script file for recipes unrelated to progression involving the main mods in the pack
 onEvent('recipes', event => {
 
@@ -306,9 +307,9 @@ onEvent('recipes', event => {
 	
 	let strainerPattern = ['SSS', 'MAM', 'SSS']
 	event.shaped('waterstrainer:strainer_survivalist', strainerPattern,
-	{ A: FD('canvas'), M: FD('canvas'), S: 'minecraft:stick' })
+	{ A: FD('canvas'), M: FD('canvas'), S: 'minecraft:stick' }).id('kubejs:sediment_strainer')
 	event.shaped('waterstrainer:strainer_fisherman', strainerPattern,
-	{ A: FD('canvas'), M: FD('canvas'), S: MC('bamboo') })
+	{ A: FD('canvas'), M: FD('canvas'), S: MC('bamboo') }).id('kubejs:fishing_strainer')
 	event.shaped('waterstrainer:strainer_fisherman_reinforced', strainerPattern,
-	{ A: AC('neptunium_ingot'), M: FD('canvas'), S: MC('bamboo') })
+	{ A: MC('heart_of_the_sea'), M: FD('canvas'), S: MC('bamboo') }).id('kubejs:specialty_strainer')
 })

@@ -1,4 +1,4 @@
-// priority: 1
+// priority: 2
 function ifiniDeploying(event, output, input, tool) {
 	return {
 		"type": "create:deploying",
