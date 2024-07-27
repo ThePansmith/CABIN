@@ -1,8 +1,4 @@
 const PR_I = (id, x) => MOD("projectred_illumination", id, x)
-//Projectred illumination doesn't add much to the pack now that cage lamps have replaced its role in the alchemical laser.
-//Not much is lost when it's removed
-
-//This mod can be removed from the pack with no issues
 if (Platform.isLoaded('projectred_illumination')) {
 	onEvent('recipes', event => {
 		event.remove({ mod: 'projectred_illumination' })

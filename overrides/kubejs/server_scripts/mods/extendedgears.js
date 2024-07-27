@@ -1,4 +1,3 @@
-//This mod can be removed from the pack with no issues
 //By the way, this mod also lets you decorate you cogwheels with wood variants and metals.
 //Shaftless cogwheels isn't the only thing this mod adds.
 if (Platform.isLoaded('extendedgears')) {
@@ -18,7 +17,9 @@ if (Platform.isLoaded('extendedgears')) {
 				event.recipes.createCutting(cogs[i], cogs[i-1]).processingTime(150)
 			}
 		})
-		//Use a tag so that this recipe only uses 1 entry instead of 2.
+
+		//There already are exploits to restore half cogs back to full.
+		//Here's a qol recipe to craft them back to full cogwheels.
 		event.shapeless('create:cogwheel', '#c:cogwheel/small')
 		event.shapeless('create:large_cogwheel', '#c:cogwheel/large')
 	})

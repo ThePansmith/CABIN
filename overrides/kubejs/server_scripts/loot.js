@@ -64,39 +64,6 @@ let metal_ores_drop_dust = (id, dust_id) => ({
 	]
 })
 
-let slabs = (id) => ({
-	"type": "minecraft:block",
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "minecraft:item",
-					"functions": [
-						{
-							"function": "minecraft:set_count",
-							"conditions": [
-								{
-									"condition": "minecraft:block_state_property",
-									"block": id,
-									"properties": {
-										"type": "double"
-									}
-								}
-							],
-							"count": 2
-						},
-						{
-							"function": "minecraft:explosion_decay"
-						}
-					],
-					"name": id
-				}
-			]
-		}
-	]
-})
-
 onEvent('block.loot_tables', event => {
 
 	event.addSimpleBlock('minecraft:twisting_vines', 'minecraft:twisting_vines')

@@ -1,5 +1,6 @@
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("buddycards")) {
+	unregistered_axes.push("buddycards:buddysteel_axe")
+	
 	onEvent('recipes', event => {
 		let stone = Item.of(MC("cobblestone"), 1).withChance(.5)
 		let experience = Item.of(CR("experience_nugget"), 1).withChance(0.75)

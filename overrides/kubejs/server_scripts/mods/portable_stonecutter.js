@@ -1,5 +1,3 @@
-//Qol mod, not sure why you'd want to remove it but you can.
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("portable_stonecutter")) {
 	onEvent('recipes', event => {
 		event.remove({ mod: 'portable_stonecutter' })

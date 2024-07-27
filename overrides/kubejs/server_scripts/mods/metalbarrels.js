@@ -1,5 +1,3 @@
-//Metal barrels is a part of CABIN by default but many people may prefer other storage mods
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("metalbarrels")) {
 	onEvent('recipes', event => {
 		event.remove({ mod: "metalbarrels" })

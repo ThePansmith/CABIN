@@ -1,4 +1,3 @@
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("portality")) {
 	onEvent('recipes', event => {
 		event.remove({ id: 'portality:generator' })

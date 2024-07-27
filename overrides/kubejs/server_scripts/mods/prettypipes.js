@@ -1,6 +1,4 @@
 const PP = (id, x) => MOD("prettypipes", id, x)
-//Some people may find pretty pipes annoying to use since belts already work just fine.
-//This mod can be removed from the pack with no issues
 if (Platform.isLoaded('prettypipes')) {
 	onEvent('recipes', event => {
 		//There are so few recipes that we want to keep that we're better off removing them all

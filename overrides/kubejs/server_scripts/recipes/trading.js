@@ -23,14 +23,19 @@ onEvent('recipes', event => {
 	global.trades.forEach(element => {
 		if (global.transactions[element])
 			global.transactions[element].forEach(transaction => {
-				trade(KJ('trade_card_' + element), transaction.in, transaction.out)
+				if (Item.of(transaction.in).id!='minecraft:air' && Item.of(transaction.out)!='minecraft:air') {
+					trade(KJ('trade_card_' + element), transaction.in, transaction.out)
+				}
 			})
 	});
 
 	global.professions.forEach(element => {
 		if (global.transactions[element])
 			global.transactions[element].forEach(transaction => {
-				trade(KJ('profession_card_' + element), transaction.in, transaction.out)
+				if (Item.of(transaction.in).id!='minecraft:air' && Item.of(transaction.out).id!='minecraft:air') {
+					trade(KJ('profession_card_' + element), transaction.in, transaction.out)
+				}
 			})
 	});
+	trade(KJ('missingno'), Item.of(TE('gold_coin'), 1), Item.of('supplementaries:candy', 128))
 })

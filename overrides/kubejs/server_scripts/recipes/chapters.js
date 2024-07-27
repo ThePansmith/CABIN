@@ -381,8 +381,6 @@ onEvent('recipes', event => {
 	zincMachine(event, Item.of(TE('device_collector'), 1), MC('ender_pearl'))
 	zincMachine(event, Item.of(TE('device_nullifier'), 1), MC('lava_bucket'))
 	zincMachine(event, Item.of(TE('device_potion_diffuser'), 1), MC('glass_bottle'))
-	zincMachine(event, Item.of('storagedrawers:controller', 1), MC('diamond'))
-	zincMachine(event, Item.of('storagedrawers:controller_slave', 1), MC('gold_ingot'))
 	zincMachine(event, Item.of('torchmaster:megatorch', 1), MC('torch'))
 	zincMachine(event, Item.of('thermal:upgrade_augment_2', 1), MC('redstone'))
 	// Foundry Controller Recipe

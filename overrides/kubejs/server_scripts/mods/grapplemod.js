@@ -1,4 +1,3 @@
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("grapplemod")) {
 	onEvent('recipes', event => {
 		//This mod has loads of overpowered stuff in it

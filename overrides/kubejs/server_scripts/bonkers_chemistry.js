@@ -589,7 +589,7 @@ onEvent('block.left_click', event => {
 
 })
 
-onEvent('item.pickup', event => {
+onEvent('player.inventory.changed', event => {
     let entity = event.getEntity()
     if (event.getItem().id == 'kubejs:missingno') {
         event.getLevel().getBlock(entity.x, entity.y, entity.z)

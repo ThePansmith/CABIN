@@ -1,6 +1,4 @@
 const QU = (id, x) => MOD("quark", id, x)
-//Quark was added as Qol and is also really easy to configure. You can still remove it if you hate quality of life.
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("quark")) {
 
 	//Add quark wood types to the arrays of wood types
@@ -16,7 +14,7 @@ if(Platform.isLoaded("quark")) {
 		event.remove({ id: QU('building/crafting/compressed/potato_crate')})
 		event.remove({ id: QU('building/crafting/compressed/carrot_crate')})
 		event.remove({ id: QU('building/crafting/compressed/beetroot_crate')})
-
+		event.remove({ id: QU('building/crafting/compressed/bamboo_block')})
 
 		//Tree resin
 		addTreeOutput(event, QU('blossom_log'), QU('blue_blossom_leaves'))
@@ -55,7 +53,10 @@ if(Platform.isLoaded("quark")) {
 		event.add("minecraft:pressure_plates", 'quark:obsidian_pressure_plate')
 	})
 
-	onEvent('server.datapack.first', event => {
+	//Use last to avoid overwriting earlier datapack changes.
+	//If the situation with overlapping chisel datapacks gets worse,
+	//we might need to upgrade to an array similar to wood_types
+	onEvent('server.datapack.last', event => {
 		addChiselingRecipe(event, 'rechiseledcreate:chiseling_recipes/limestone', [
 			"quark:limestone",
 			"quark:polished_limestone",

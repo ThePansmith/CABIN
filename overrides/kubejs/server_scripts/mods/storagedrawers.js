@@ -1,6 +1,4 @@
 const SD = (id, x) => MOD("storagedrawers", id, x)
-//Some people may want to switch out Storage Drawers for Sophisticated Storage
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("storagedrawers")) {
 	onEvent('recipes', event => {
 		let drawer_types = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'warped', 'crimson']
@@ -34,6 +32,10 @@ if(Platform.isLoaded("storagedrawers")) {
 				event.stonecutting(Item.of(half, 2), trim)
 			})
 		})
+
+		//drawer controller and controller_slave
+		zincMachine(event, Item.of('storagedrawers:controller', 1), MC('diamond'))
+		zincMachine(event, Item.of('storagedrawers:controller_slave', 1), MC('gold_ingot'))
 	})
 
 	onEvent('block.tags', event => {

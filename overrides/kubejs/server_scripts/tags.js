@@ -42,23 +42,6 @@ onEvent('item.tags', event => {
 	event.get("farmersdelight:offhand_equipment").add("forbidden_arcanus:obsidian_skull_shield")
 
 //	event.get("forge:raw_chicken").add("exoticbirds:raw_birdmeat")
-
-	//None of the modded axes are registered for some reason
-	let unregistered_axes = [
-		"ae2:certus_quartz_axe",
-		"ae2:nether_quartz_axe",
-		"ae2:fluix_axe",
-		"tconstruct:hand_axe",
-		"tconstruct:mattock",
-		"tconstruct:broad_axe",
-		"buddycards:buddysteel_axe",
-		"thermal:flux_saw",
-		"aquaculture:neptunium_axe",
-		"forbidden_arcanus:draco_arcanus_axe",
-		"forbidden_arcanus:arcane_golden_axe",
-		"forbidden_arcanus:reinforced_arcane_golden_axe",
-		"alloyed:steel_axe"
-	]
 	
 	unregistered_axes.forEach(axe => {
 		event.get("forge:tools/axes").add(axe)
@@ -101,8 +84,11 @@ onEvent('item.tags', event => {
 
 	event.get('kubejs:transaction_cards').add('#kubejs:transaction_cards/trade')
 	event.get('kubejs:transaction_cards').add('#kubejs:transaction_cards/profession')
+
+	//This tag prevents items from being consumed in press (market) recipes
 	event.get('thermal:crafting/dies').add('#kubejs:transaction_cards')
-	
+	event.get('thermal:crafting/dies').add('kubejs:missingno')
+
 	event.get('thermal:crafting/casts').add(KJ("three_cast")).add(KJ("eight_cast")).add(KJ("plus_cast")).add(KJ("minus_cast")).add(KJ("multiply_cast")).add(KJ("divide_cast")).add(F("#circuit_press"))
 
 	event.get('create:upright_on_belt')

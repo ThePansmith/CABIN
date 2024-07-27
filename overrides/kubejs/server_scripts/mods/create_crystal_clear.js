@@ -1,5 +1,4 @@
 const CCR = (id, x) => MOD("create_crystal_clear", id, x)
-//This mod can be removed from the pack with no issues
 if (Platform.isLoaded('create_crystal_clear')) {
 	onEvent('recipes', event => {
 		let tweak_glass_casing = (name) => {

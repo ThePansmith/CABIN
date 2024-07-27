@@ -1,5 +1,3 @@
-//Removing this mod is not recommended since it adds useful redstone components.
-//This mod can be removed from the pack with no issues
 if (Platform.isLoaded('projectred_integration')) {
 	onEvent('recipes', event => {	
 		let p_circuit = (id) => event.stonecutting(Item.of("projectred_integration:" + id + "_gate", 1), PR_C('platformed_plate'))

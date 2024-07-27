@@ -3,51 +3,30 @@
 
 //Redstone, silver and tin do not exist in A&B and we need a bit of scripting to remove them
 onEvent('recipes', event => {
-	event.replaceInput({ id: "occultism:ritual/summon_foliot_crusher" }, F("#ores/silver"), CR("zinc_ore"))
-
 	event.remove({ output: '#forge:nuggets/tin' })
 	event.remove({ output: '#forge:ingots/tin' })
 	event.remove({ output: '#forge:storage_blocks/tin' })
 	event.remove({ output: '#forge:plates/tin' })
 	event.remove({ output: '#forge:gears/tin' })
 
-	//Ore miner
-	event.remove({ id: OC('miner/ores/redstone_ore') })
-	event.remove({ id: OC('miner/ores/aluminum_ore') })
-	event.remove({ id: OC('miner/ores/tin_ore') })
-	event.remove({ id: OC('miner/ores/silver_ore') })
-	event.remove({ id: OC('miner/deeps/deepslate_redstone_ore') })
-	event.remove({ id: OC('miner/deeps/deepslate_aluminum_ore') })
-	event.remove({ id: OC('miner/deeps/deepslate_tin_ore') })
-	event.remove({ id: OC('miner/deeps/deepslate_silver_ore') })
-
-	//Occultism silver replacements
-	event.replaceInput({ id: OC('ritual/craft_infused_lenses') }, F('#ingots/silver'), TE('nickel_ingot'))
-	event.replaceInput({ id: OC('crafting/magic_lamp_empty') }, F('#ingots/silver'), MC('iron_ingot'))
-	event.replaceInput({ id: OC('crafting/lens_frame') }, F('#ingots/silver'), TE('nickel_ingot'))
-	event.replaceInput({ id: TE('augments/rf_coil_storage_augment') }, F('#ingots/silver'), MC('iron_ingot'))
-	event.replaceInput({ id: TE('augments/rf_coil_xfer_augment') }, F('#ingots/silver'), MC('iron_ingot'))
-	event.replaceInput({ id: TE('augments/rf_coil_augment') }, F('#ingots/silver'), MC('iron_ingot'))
-	event.replaceInput({ id: TE('tools/detonator') }, F('#ingots/silver'), TE('lead_ingot'))
-
 	//metal replacements
-	event.replaceInput({ type: "minecraft:crafting_shaped" }, '#forge:ingots/tin', CR('zinc_ingot'))
-	event.replaceInput({}, '#forge:gears/tin', TE('lead_gear'))
+	event.replaceInput({ type: "minecraft:crafting_shaped" }, '#forge:ingots/tin', F('#ingots/zinc'))
+	event.replaceInput({}, '#forge:gears/tin', F('#gears/lead'))
 
-	event.replaceInput({}, '#forge:plates/bronze', TE('nickel_plate'))
-	event.replaceInput({}, '#forge:gears/bronze', TE('nickel_gear'))
+	event.replaceInput({}, '#forge:plates/bronze', F('#plates/nickel'))
+	event.replaceInput({}, '#forge:gears/bronze', F('#gears/nickel'))
 
-	event.replaceInput({}, '#forge:plates/silver', TE('invar_plate'))
-	event.replaceInput({}, '#forge:gears/silver', TE('invar_gear'))
+	event.replaceInput({}, '#forge:plates/silver', F('#ingots/invar'))
+	event.replaceInput({}, '#forge:gears/silver', F('#gears/invar'))
 
-	event.replaceInput({}, '#forge:plates/constantan', TE('signalum_plate'))
-	event.replaceInput({}, '#forge:gears/constantan', TE('signalum_gear'))
+	event.replaceInput({}, '#forge:plates/constantan', F('#plates/signalum'))
+	event.replaceInput({}, '#forge:gears/constantan', F('#gears/signalum'))
 
-	event.replaceInput({}, '#forge:ingots/electrum', TE('constantan_ingot'))
-	event.replaceInput({}, '#forge:plates/electrum', TE('constantan_plate'))
-	event.replaceInput({}, '#forge:gears/electrum', TE('constantan_gear'))
+	event.replaceInput({}, '#forge:ingots/electrum', F('#ingots/constantan'))
+	event.replaceInput({}, '#forge:plates/electrum', F('#plates/constantan'))
+	event.replaceInput({}, '#forge:gears/electrum', F('#gears/constantan'))
 
-	event.replaceInput({}, '#forge:plates/invar', TE('invar_ingot'))
+	event.replaceInput({}, '#forge:plates/invar', F('#ingots/invar'))
 
 	//fix recipes broken by replacement
 	event.remove( {id: TE('machines/pulverizer/pulverizer_invar_plate_to_dust') })

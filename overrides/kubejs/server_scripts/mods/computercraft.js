@@ -1,6 +1,3 @@
-//If you don't know how to program Lua, then this mod doesn't do much.
-//It's recommended to keep most mods in the pack if removing mods is really necessary then computercraft can be removed.
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("computercraft")) {
 	onEvent('recipes', event => {
 		event.replaceInput({ id: "computercraft:cable" }, MC('redstone'), PR_C('red_ingot'))

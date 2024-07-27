@@ -1,6 +1,4 @@
 const BOP = (id, x) => MOD("biomesoplenty", id, x)
-//Not everyone wants to play with biomes o' plenty
-//This mod can be removed from the pack with no issues
 if(Platform.isLoaded("biomesoplenty")) {
 	wood_types.push(BOP('fir'))
 	wood_types.push(BOP('redwood'))
@@ -38,7 +36,7 @@ if(Platform.isLoaded("biomesoplenty")) {
 		addTreeOutput(event, BOP('umbran_log'), BOP('umbran_leaves'))
 		addTreeOutput(event, BOP('hellbark_log'), BOP('hellbark_leaves'))
 		//Wash sand into clay
-		//This code doesn't even work
+		//This code doesn't even work properly
 		event.recipes.createSplashing([Item.of(MC('clay_ball'), 1).withChance(0.25)], 'biomesoplenty:black_sand')
 		event.recipes.createSplashing([Item.of(MC('clay_ball'), 1).withChance(0.25)], 'biomesoplenty:white_sand')
 		event.recipes.createSplashing([Item.of(MC('clay_ball'), 1).withChance(0.25)], 'biomesoplenty:orange_sand')
