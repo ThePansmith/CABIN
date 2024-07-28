@@ -40,8 +40,6 @@ onEvent('item.tags', event => {
 	});
 
 	event.get("farmersdelight:offhand_equipment").add("forbidden_arcanus:obsidian_skull_shield")
-
-//	event.get("forge:raw_chicken").add("exoticbirds:raw_birdmeat")
 	
 	unregistered_axes.forEach(axe => {
 		event.get("forge:tools/axes").add(axe)
