@@ -293,12 +293,6 @@ global.itemBlacklist = [
 	'expcaves:dirtstone_cobble_pressure_plate',
 	'expcaves:dirtstone_cobble_wall',
 
-	//Extended Gears
-	'extendedgears:half_shaft_cogwheel',
-	'extendedgears:shaftless_cogwheel',
-	'extendedgears:large_half_shaft_cogwheel',
-	'extendedgears:large_shaftless_cogwheel',
-
 	//Forbidden Arcanus
 	'forbidden_arcanus:edelwood_bucket',
 	'forbidden_arcanus:edelwood_tropical_fish_bucket',
@@ -555,6 +549,8 @@ global.itemBlacklist = [
 
 	//thermal
 	'thermal:laser_diode', //I don't even know what this thing it
+	'thermal:rs_control_augment',
+	'thermal:side_config_augment',
 	'thermal:press_coin_die',
 	'thermal:press_gear_die',
 	'thermal:press_packing_2x2_die',
@@ -606,6 +602,28 @@ global.itemBlacklist = [
 	'titanium:block_asset_test',
 	'titanium:creative_generator'
 ]
+
+//The buddycard malum cards are a strange case where we only want to hide items when a mod is not present
+if (!Platform.isLoaded("malum")) {
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum1")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum2")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum3")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum4")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum5")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum6")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum7")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum8")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum9")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum10")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum11")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum12")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum13")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum14")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum15")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum16")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum17")
+	global.itemBlacklist.push("buddycardsexp:buddycard_malum18")
+}
 
 global.jeiItemBlacklist = [
 	//Beyond earth adds 2 sets of these which means we have to blacklist them twice

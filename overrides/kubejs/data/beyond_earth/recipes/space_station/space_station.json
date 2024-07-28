@@ -3,25 +3,25 @@
 	"ingredients": [
 		{
 			"ingredient": {
-				"tag": "forge:computation_matrix"
+				"item": "kubejs:computation_matrix"
 			},
 			"count": 64
 		},
 		{
 			"ingredient": {
-				"tag": "forge:enderium_machine"
+				"item": "kubejs:enderium_machine"
 			},
 			"count": 64
 		},
 		{
 			"ingredient": {
-				"tag": "forge:controller"
+				"item": "ae2:controller"
 			},
 			"count": 64
 		},
 		{
 			"ingredient": {
-				"tag": "forge:iron_block"
+				"tag": "forge:storage_blocks/iron"
 			},
 			"count": 64
 		}

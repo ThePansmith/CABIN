@@ -6,11 +6,25 @@ onEvent('recipes', event => {
 		event.recipes.createFilling("railways:track_phantom", [CR('track'), Fluid.of('cofh_core:potion', 50, '{Potion:"minecraft:invisibility"}')])
 		event.recipes.createFilling("railways:track_phantom", [CR('track'), Fluid.of('cofh_core:potion', 50, '{Potion:"minecraft:long_invisibility"}')])
 
-		event.remove({ id:"buddycards:mystery_pack"})
-		event.shapeless("buddycards:buddycard_pack_mystery", ["#buddycards:buddycard_packs", MC("diamond"), MC("emerald"), TE("ruby"), TE("sapphire")])
-
 		event.shapeless("moreminecarts:levitation_powder", TE("blitz_powder"))
 		event.recipes.createCrushing([Item.of("moreminecarts:levitation_powder"), Item.of("moreminecarts:levitation_powder", 1).withChance(.5)], TE("blitz_powder"))
 })
 
+//alternate double jump recipe
+onEvent('server.datapack.first', event => {
+	event.addJson('kubejs:recipes/tools/modifiers/ability/double_jump', {
+		"type": "tconstruct:modifier",
+		"inputs": [
+			{ "item": "minecraft:piston" },
+			{ "item": "tconstruct:sky_slime" },
+			{ "item": "minecraft:piston" },
+			{ "item": "tconstruct:sky_slime_bottle" },
+			{ "item": "tconstruct:sky_slime_bottle" }
+		],
+		"tools": { "tag": "tconstruct:modifiable/armor/boots" },
+		"slots": { "abilities": 1 },
+		"allow_crystal": true,
+		"result": { "name": "tconstruct:double_jump", "level": 1 }
+	})
+})
 //slow fall potion is in startup script potions.js

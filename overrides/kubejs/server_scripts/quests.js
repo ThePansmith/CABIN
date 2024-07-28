@@ -1,5 +1,3 @@
-
-
 onEvent('ftbquests.custom_reward', function (event) {
     let reward = event.getReward()
     let id = reward.quest.getCodeString()

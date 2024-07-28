@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "forge:treasure3",
+          "name": "kubejs:treasure3",
           "expand": true
         },
         {

@@ -3,9 +3,6 @@
   "entries": [
     {
       "item": "thermal:charcoal_block"
-    },
-    {
-      "item": "quark:charcoal_block"
     }
   ],
   "overwrite": false

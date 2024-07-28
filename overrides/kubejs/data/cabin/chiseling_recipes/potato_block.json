@@ -6,9 +6,6 @@
     },
     {
       "item": "thermal:potato_block"
-    },
-		{
-      "item": "quark:potato_crate"
     }
   ],
   "overwrite": false
