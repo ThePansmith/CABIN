@@ -64,9 +64,10 @@ onEvent('recipes', event => {
 	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/silver', KJ('zinc_dust'))
 	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/iron', TE('iron_dust'))
 	event.replaceInput({ id: OC("ritual/craft_miner_foliot_unspecialized") }, '#forge:raw_materials/iron', TE('iron_dust'))
-	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/gold', TE('gold_dust'))
-	event.replaceInput({ id: OC("ritual/craft_miner_dinji_unspecialized") }, '#forge:raw_materials/iron', TE('iron_dust'))
+	event.replaceInput({ id: OC("ritual/craft_miner_djinni_ores") }, '#forge:raw_materials/gold', TE('gold_dust'))
+	
 	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/copper', TE('copper_dust'))
+	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/gold', TE('gold_dust'))
 
 	//Thermal's fire charge ingot crafting recipes. We don't want them
 	event.remove({ id: TE('fire_charge/invar_ingot_3') })
