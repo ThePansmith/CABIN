@@ -87,3 +87,16 @@ onEvent('block.loot_tables', event => {
 	event.addJson(TE('deepslate_lead_ore'), metal_ores_drop_dust(TE('deepslate_lead_ore'), CR('crushed_raw_lead')))
 	event.addJson(BE('moon_iron_ore'), metal_ores_drop_dust(BE('moon_iron_ore'), CR('crushed_raw_iron')))
 })
+
+//Repurposed structures' underground bastions contain redstone ore which we don't want.
+onEvent('lootjs', event => {
+	event.addLootTypeModifier(LootType.CHEST)
+	.modifyLoot('minecraft:redstone_ore', itemStack => {
+		return Item.of('thermal:cinnabar_ore', itemStack.getCount());
+	})
+
+	event.addLootTypeModifier(LootType.CHEST)
+	.modifyLoot('minecraft:deepslate_redstone_ore', itemStack => {
+		return Item.of('thermal:deepslate_cinnabar_ore', itemStack.getCount());
+	})
+})
