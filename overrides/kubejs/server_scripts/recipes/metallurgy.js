@@ -64,9 +64,10 @@ onEvent('recipes', event => {
 	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/silver', KJ('zinc_dust'))
 	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/iron', TE('iron_dust'))
 	event.replaceInput({ id: OC("ritual/craft_miner_foliot_unspecialized") }, '#forge:raw_materials/iron', TE('iron_dust'))
-	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/gold', TE('gold_dust'))
-	event.replaceInput({ id: OC("ritual/craft_miner_dinji_unspecialized") }, '#forge:raw_materials/iron', TE('iron_dust'))
+	event.replaceInput({ id: OC("ritual/craft_miner_djinni_ores") }, '#forge:raw_materials/gold', TE('gold_dust'))
+	
 	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/copper', TE('copper_dust'))
+	event.replaceInput({ id: OC("ritual/summon_foliot_crusher") }, '#forge:raw_materials/gold', TE('gold_dust'))
 
 	//Thermal's fire charge ingot crafting recipes. We don't want them
 	event.remove({ id: TE('fire_charge/invar_ingot_3') })
@@ -299,7 +300,7 @@ onEvent('recipes', event => {
 		event.recipes.createCrushing([Item.of(crushed, 1), Item.of(crushed, 1).withChance(0.25), experience, stone], oretag)
 		event.recipes.createCrushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushed)
 		event.recipes.thermal.pulverizer([Item.of(dust, 6)], crushed).energy(15000)
-		event.recipes.thermal.pulverizer([Item.of(crushed).withChance(1.5)], oretag).energy(3000)
+		event.recipes.thermal.pulverizer([Item.of(crushed).withChance(1.25), Item.of('minecraft:gravel').withChance(0.2)], oretag).energy(3000)
 		event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000)
 
 		event.recipes.thermal.crucible(Fluid.of(fluid, 30), dusttag).energy(3000)

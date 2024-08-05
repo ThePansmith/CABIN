@@ -38,3 +38,12 @@ onEvent('recipes', event => {
 	event.remove({ id: TC('smeltery/casting/cheese_ingot_gold_cast')})
 	event.remove({ id: TC('smeltery/casting/cheese_ingot_sand_cast')})
 })
+
+onEvent('item.tags', event => {
+	//zinc anvils
+	event.get('tconstruct:anvil_metal').add(CR('zinc_block'))
+})
+
+onEvent('block.tags', event => {
+	event.add('minecraft:mineable/shovel','tconstruct:mud_bricks_slab')
+})

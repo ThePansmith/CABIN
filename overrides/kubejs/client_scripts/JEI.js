@@ -23,11 +23,6 @@ onEvent('rei.group', event => {
 		/bucket/
 	])
 
-	event.groupItems('kubejs:rei_groups/spawneggs', 'Spawn Eggs', [
-		/spawn_egg/,
-		"supplementaries:red_merchant_spawn_egg"
-	])
-
 	event.groupItems('kubejs:rei_groups/buddycards_base_set', 'Buddy Cards Base Set', [
 		/buddycards:buddycard_base/
 	])
