@@ -6,8 +6,10 @@ onEvent('recipes', event => {
 		event.recipes.createFilling("railways:track_phantom", [CR('track'), Fluid.of('cofh_core:potion', 50, '{Potion:"minecraft:invisibility"}')])
 		event.recipes.createFilling("railways:track_phantom", [CR('track'), Fluid.of('cofh_core:potion', 50, '{Potion:"minecraft:long_invisibility"}')])
 
-		event.shapeless("moreminecarts:levitation_powder", TE("blitz_powder"))
-		event.recipes.createCrushing([Item.of("moreminecarts:levitation_powder"), Item.of("moreminecarts:levitation_powder", 1).withChance(.5)], TE("blitz_powder"))
+		if(Platform.isLoaded("moreminecarts")) {
+			event.shapeless("moreminecarts:levitation_powder", TE("blitz_powder"))
+			event.recipes.createCrushing([Item.of("moreminecarts:levitation_powder"), Item.of("moreminecarts:levitation_powder", 1).withChance(.5)], TE("blitz_powder"))
+		}
 })
 
 //alternate double jump recipe

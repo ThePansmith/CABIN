@@ -96,9 +96,7 @@ onEvent('item.tags', event => {
 		.add(AE2("blue_paint_ball"))
 		.add(AE2("magenta_paint_ball"))
 		.add(AE2("black_paint_ball"))
-
-	event.get('tconstruct:anvil_metal').add(CR('zinc_block'))
-
+		
 	//Items in the treasure tags are given as loot from treasure pots
 	event.get("kubejs:treasure1")
 		.add(MC('cobweb'))
