@@ -801,11 +801,11 @@
          "projectID":558746,
          "required":true
       },
-			{
-				 "fileID":4105690,
-				 "projectID":570630,
-				 "required":true
-			},
+      {
+         "fileID":4105690,
+         "projectID":570630,
+         "required":true
+      },
       {
          "fileID":4578744,
          "projectID":581495,
