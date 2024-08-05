@@ -300,7 +300,7 @@ onEvent('recipes', event => {
 		event.recipes.createCrushing([Item.of(crushed, 1), Item.of(crushed, 1).withChance(0.25), experience, stone], oretag)
 		event.recipes.createCrushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushed)
 		event.recipes.thermal.pulverizer([Item.of(dust, 6)], crushed).energy(15000)
-		event.recipes.thermal.pulverizer([Item.of(crushed).withChance(1.5)], oretag).energy(3000)
+		event.recipes.thermal.pulverizer([Item.of(crushed).withChance(1.25), Item.of('minecraft:gravel').withChance(0.2)], oretag).energy(3000)
 		event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000)
 
 		event.recipes.thermal.crucible(Fluid.of(fluid, 30), dusttag).energy(3000)
