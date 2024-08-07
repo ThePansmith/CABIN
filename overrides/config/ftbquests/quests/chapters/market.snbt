@@ -983,7 +983,7 @@
 			x: -11.0d
 			y: 2.0d
 			subtitle: "16 Silver"
-			description: ["Just gotta supply your own press and kenetic mechanisms and you have everything you need to make an automated rail network, great for long distances and crossing the nether."]
+			description: ["Just gotta supply your own press and kinetic mechanisms and you have everything you need to make an automated rail network, great for long distances and crossing the nether."]
 			id: "117587D824D23D69"
 			tasks: [{
 				id: "06C835DB602D6F9F"
