@@ -38,10 +38,10 @@
 	base_drop_chance = 0.0
 	#Multiplier applied to each luck level the player has
 	#Range: 0.0 ~ 20.0
-	luck_multiplier = 1.0
+	luck_multiplier = 0.0
 	#Multiplier applied to each fortune level the player has
 	#Range: 0.0 ~ 20.0
-	fortune_multiplier = 0.2
+	fortune_multiplier = 0.0
 	#Allow the block to be silk touched
 	allow_silk_touch = true
 
