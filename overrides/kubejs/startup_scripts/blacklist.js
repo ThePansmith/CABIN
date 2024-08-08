@@ -264,18 +264,6 @@ global.itemBlacklist = [
 
 	//Expanded Caves
 	'expcaves:plant_fiber', //useless inventory bloat
-	/* There next few items don't seem to generate for whatever reason.
-	   Let the CABIN discord know if you somehow find these in your world */
-	'expcaves:sweetshroom',
-	'expcaves:goldishroom',
-	'expcaves:shinyshroom',
-	'expcaves:lumishroom',
-	'expcaves:fluoshroom',
-	'expcaves:rockshroom',
-	'expcaves:cooked_sweetshroom',
-	'expcaves:sticky_stew',
-	'expcaves:fluorescent_stew',
-	'expcaves:hard_stew',
 	/* unobtainable, probably meant to come from structures that aren't in this version */
 	'expcaves:butcher_knife',
 	'expcaves:chef_knife',
