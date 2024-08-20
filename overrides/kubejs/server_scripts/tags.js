@@ -87,7 +87,7 @@ onEvent('item.tags', event => {
 	event.get('thermal:crafting/dies').add('#kubejs:transaction_cards')
 	event.get('thermal:crafting/dies').add('kubejs:missingno')
 
-	event.get('thermal:crafting/casts').add(KJ("three_cast")).add(KJ("eight_cast")).add(KJ("plus_cast")).add(KJ("minus_cast")).add(KJ("multiply_cast")).add(KJ("divide_cast")).add(F("#circuit_press"))
+	event.get('thermal:crafting/casts').add(KJ("three_cast")).add(KJ("eight_cast")).add(KJ("plus_cast")).add(KJ("minus_cast")).add(KJ("multiply_cast")).add(KJ("divide_cast")).add(KJ("#circuit_press"))
 
 	event.get('create:upright_on_belt')
 		.add(AE2("red_paint_ball"))
