@@ -46,4 +46,5 @@ onEvent('item.tags', event => {
 
 onEvent('block.tags', event => {
 	event.add('minecraft:mineable/shovel','tconstruct:mud_bricks_slab')
+	event.add('minecraft:mineable/shovel','tconstruct:mud_bricks_stairs')
 })

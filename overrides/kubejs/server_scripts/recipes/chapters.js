@@ -211,7 +211,7 @@ onEvent('recipes', event => {
 	copperMachine(event, Item.of('kubejs:attachment_base', 1), CR('mechanical_pump'))
 	//smeltery controller recipe
 	event.remove({ id: TC("smeltery/casting/seared/smeltery_controller") })
-	event.remove({ id: TC("smeltery/melting/copper/smeltery_controller") })
+	event.remove({ id: TC("smeltery/melting/metal/copper/smeltery_controller") })
 	donutCraft(event, TC('smeltery_controller'), TC('#seared_blocks'), KJ('sealed_mechanism')).modifyResult((grid, result) => {
 		let item = grid.find(TC("#seared_blocks"))
 		return result.withNBT({texture: item.id})

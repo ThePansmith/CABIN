@@ -999,15 +999,113 @@ global.randomiumBlacklist = [
 	'modonomicon:modonomicon'
 ]
 
-//Global blacklist for fluids that will be hidden from jei
-global.fluidBlacklist = [
+global.jeiFluidBlacklist = [
+	//Most of this blacklist if filled with flowing fluid variants that sometimes show in rei when using tags
+	
+	'minecraft:flowing_water',
+	'minecraft:flowing_lava',
+
 	//Beyond Earth
 	'beyond_earth:molten_ostrum',
 	'beyond_earth:molten_calorite',
-	//Tconstruct
-	'tconstruct:molten_tin'
-]
 
-global.jeiFluidBlacklist = [
-	
+	'beyond_earth:flowing_fuel',
+	'beyond_earth:flowing_oil',
+	'beyond_earth:flowing_molten_desh',
+	'beyond_earth:flowing_molten_ostrum',
+	'beyond_earth:flowing_molten_calorite',
+
+	//biomes o plenty
+	'biomesoplenty:flowing_blood',
+
+	//decorative_blocks
+	'decorative_blocks:flowing_thatch',
+
+	//Tconstruct
+	'tconstruct:molten_tin',
+
+	'tconstruct:flowing_blood',
+	'tconstruct:flowing_venom',
+	'tconstruct:flowing_earth_slime',
+	'tconstruct:flowing_sky_slime',
+	'tconstruct:flowing_ender_slime',
+	'tconstruct:flowing_magma',
+	'tconstruct:flowing_honey',
+	'tconstruct:flowing_beetroot_soup',
+	'tconstruct:flowing_mushroom_stew',
+	'tconstruct:flowing_rabbit_stew',
+	'tconstruct:flowing_seared_stone',
+	'tconstruct:flowing_scorched_stone',
+	'tconstruct:flowing_molten_clay',
+	'tconstruct:flowing_molten_glass',
+	'tconstruct:flowing_liquid_soul',
+	'tconstruct:flowing_molten_obsidian',
+	'tconstruct:flowing_molten_ender',
+	'tconstruct:flowing_blazing_blood',
+	'tconstruct:flowing_molten_emerald',
+	'tconstruct:flowing_molten_quartz',
+	'tconstruct:flowing_molten_amethyst',
+	'tconstruct:flowing_molten_diamond',
+	'tconstruct:flowing_molten_debris',
+	'tconstruct:flowing_molten_iron',
+	'tconstruct:flowing_molten_gold',
+	'tconstruct:flowing_molten_copper',
+	'tconstruct:flowing_molten_cobalt',
+	'tconstruct:flowing_molten_slimesteel',
+	'tconstruct:flowing_molten_amethyst_bronze',
+	'tconstruct:flowing_molten_rose_gold',
+	'tconstruct:flowing_molten_pig_iron',
+	'tconstruct:flowing_molten_manyullyn',
+	'tconstruct:flowing_molten_hepatizon',
+	'tconstruct:flowing_molten_queens_slime',
+	'tconstruct:flowing_molten_netherite',
+	'tconstruct:flowing_molten_tin',
+	'tconstruct:flowing_molten_lead',
+	'tconstruct:flowing_molten_silver',
+	'tconstruct:flowing_molten_nickel',
+	'tconstruct:flowing_molten_zinc',
+	'tconstruct:flowing_molten_bronze',
+	'tconstruct:flowing_molten_brass',
+	'tconstruct:flowing_molten_electrum',
+	'tconstruct:flowing_molten_invar',
+	'tconstruct:flowing_molten_constantan',
+	'tconstruct:flowing_molten_steel',
+	'tconstruct:flowing_molten_enderium',
+	'tconstruct:flowing_molten_lumium',
+	'tconstruct:flowing_molten_signalum',
+
+	//other tinker's fluids that don't show up in the main pack
+	'tconstruct:flowing_molten_aluminum',
+	'tconstruct:flowing_molten_osmium',
+	'tconstruct:flowing_molten_pewter',
+	'tconstruct:flowing_molten_porcelain',
+	'tconstruct:flowing_molten_refined_glowstone',
+	'tconstruct:flowing_molten_refined_obsidian',
+	'tconstruct:flowing_molten_tungsten',
+	'tconstruct:flowing_molten_uranium',
+
+	//kubejs fluids
+	'kubejs:flowing_raw_logic',
+	'kubejs:flowing_number_0',
+	'kubejs:flowing_number_1',
+	'kubejs:flowing_number_2',
+	'kubejs:flowing_number_3',
+	'kubejs:flowing_number_4',
+	'kubejs:flowing_number_5',
+	'kubejs:flowing_number_6',
+	'kubejs:flowing_number_7',
+	'kubejs:flowing_number_8',
+	'kubejs:flowing_number_9',
+	'kubejs:flowing_matrix',
+	'kubejs:flowing_fine_sand',
+	'kubejs:flowing_crude_oil',
+	'kubejs:flowing_volatile_sky_solution',
+	'kubejs:flowing_chromatic_waste',
+
+	//Create fluids
+	'create:flowing_honey',
+	'create:flowing_chocolate',
+	//Central Kitchen
+	'create_central_kitchen:flowing_tomato_sauce',
+
 ]

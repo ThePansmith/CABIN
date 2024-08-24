@@ -8,9 +8,6 @@ onEvent('rei.hide.items', event => {
 })
 
 onEvent('rei.hide.fluids', event => {
-	global.fluidBlacklist.forEach(fluid=>{
-		event.hide(fluid);
-	})
 	global.jeiFluidBlacklist.forEach(fluid=>{
 		event.hide(fluid);
 	})
