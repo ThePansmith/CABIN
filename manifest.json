@@ -832,6 +832,11 @@
          "required":true
       },
       {
+         "fileID":5363258,
+         "projectID":1019297,
+         "required":true
+      },
+      {
          "fileID":4578744,
          "projectID":581495,
          "required":false
@@ -860,5 +865,5 @@
    },
    "name":"CABIN",
    "overrides":"overrides",
-   "version":"1.3.0"
+   "version":"1.3.2"
 }
