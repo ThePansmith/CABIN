@@ -123,3 +123,29 @@ const addChiselingRecipe = (event, id, items, overwrite) => {
 	})
 	event.addJson(id, json)
 }
+
+/**
+ * Gets the prefered item from a tag. Useful for porting Mantle recipes that use tags as outputs.
+ * @param {string} tag Don't include a hashtag in the tag name
+ */
+// const ItemOutput = java('slimeknights.mantle.recipe.helper.ItemOutput');
+// const TagKey = java('net.minecraft.tags.TagKey');
+// const Registry = java('net.minecraft.core.Registry');
+const getPreferredTag = (tag) => {
+	/* Tried using mantle for this and it didn't work on first launch unfortunately */
+	//return Item.of(ItemOutput.fromTag(TagKey.create(Registry.ITEM_REGISTRY, tag), 1).get()).getId();
+	/* Create a copy of the mantle preferred mods list */
+	const preferredMods = ["minecraft", "create", "alloyed", "createdeco", "createaddition", "create_dd", "thermal", "tconstruct", "tmechworks"];
+	const tagItems = Ingredient.of('#' + tag).itemIds;
+	for (let i=0;i<preferredMods.length;++i) { let modId = preferredMods[i];
+		for (let j=0;j<tagItems.length;++j) { let itemId = tagItems[j];
+			if (itemId.split(':')[0]===modId) {
+				return itemId;
+			}
+		}
+	}
+	if (tagItems.length>0) {
+		return tagItems[0];
+	}
+	return 'minecraft:air';
+}

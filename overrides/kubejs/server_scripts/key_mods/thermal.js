@@ -76,4 +76,63 @@ onEvent('recipes', event => {
 		P: TE('invar_ingot'),
 		M: MC('redstone')
 	})
+
+	//Thermal doesn't do compatibility anymore, so we have to port over recipes outselves.
+	//Fortunately for us, we can make a script to automatically port casting recipes into chiller recipes.
+	event.forEachRecipe([{ type: 'tconstruct:casting_table' }], recipe => {
+		//recipe.json gives us some info that the recipe object cannot give us
+		let recipeJSON = JSON.parse(recipe.json)
+
+		let inputCast;
+		let inputFluid;
+		let resultItem;
+
+		//If the recipe is not a casting recipe then we don't want to port it
+		if (!recipeJSON.cast) { return; }
+		//We also don't want to port any recipes where the cast is consumed (sand casting recipes)
+		if (recipeJSON.cast_consumed) { return }
+
+		//Figure out what Thermal cast we should use based on the original tconstruct cast
+		switch (recipeJSON.cast.tag) {
+			case "tconstruct:casts/multi_use/ingot":
+				inputCast = 'thermal:chiller_ingot_cast';
+			break;
+			case "tconstruct:casts/multi_use/rod":
+				inputCast = 'thermal:chiller_rod_cast';
+			break;
+			default: return;
+		}
+
+		//Port the fluid ingredient
+		if (recipeJSON.fluid.name) {
+			inputFluid = {fluid:recipeJSON.fluid.name, amount:recipeJSON.fluid.amount};
+		} else if (recipeJSON.fluid.tag) {
+			inputFluid = {fluid_tag:recipeJSON.fluid.tag, amount:recipeJSON.fluid.amount};
+		}
+		
+		//Unlike other recipes types, tconstruct recipes accept item tags as outputs.
+		//Output items can be prioritised by mod in the Mantle server config.
+		if (typeof recipeJSON.result === 'string') {
+			resultItem = {item:recipeJSON.result, count:1};
+		} else {
+			resultItem = {item:getPreferredTag(recipeJSON.result.tag), count:1}
+			;
+		}
+
+		//We don't want this recipe
+		if (resultItem.item=='tconstruct:cheese_ingot') {return;}
+		
+		//Creating the ported recipe
+		event.custom({
+			type:"thermal:chiller",
+			ingredients:[inputFluid, inputCast],
+			result:[resultItem],
+			energy:5000
+		}).id(`kubejs:chiller/${recipe.getId().replace(':', '/')}`)
+	})
+	//Ball recipes aren't so easy to port so we'll just make them manually
+	event.recipes.thermal.chiller(MC('slime_ball'), [Fluid.of("tconstruct:earth_slime", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/slime_ball');
+	event.recipes.thermal.chiller(TC('sky_slime_ball'), [Fluid.of("tconstruct:sky_slime", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/sky_slime_ball');
+	event.recipes.thermal.chiller(TC('ender_slime_ball'), [Fluid.of("tconstruct:ender_slime", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/ender_slime_ball');
+	event.recipes.thermal.chiller(TC('blood_slime_ball'), [Fluid.of("tconstruct:blood", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/blood_slime_ball');
 })
