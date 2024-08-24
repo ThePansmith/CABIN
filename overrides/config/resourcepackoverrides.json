@@ -1,0 +1,48 @@
+{
+	"schema_version": 1,
+  "failed_reloads_per_session": 5,
+
+	"default_packs": [
+    "Everycomp Generated Pack",
+    "Supplementaries Generated Pack",
+    "quark:emote_resources",
+    "file/CABIN",
+    "file/Lopy-Create-Sophisticated-Backpacks.zip",
+    "file/LootrChestRetexture_v1.1_1.18.zip",
+    "file/Created Pretty Pipes1.0 FIXED.zip",
+    "file/CreatedDrawers_1.19.2_1.0.zip",
+    "file/Create Computers 1.2.zip"
+  ],
+	"pack_overrides": {
+		"file/CABIN": {
+			"required": true
+		},
+		"programer_art": {
+			"hidden": true
+		},
+		"file/Quark Programmer Art.zip": {
+			"hidden": true
+		},
+		"create:legacy_copper": {
+			"hidden": true
+		},
+		"railways:legacy_semaphore": {
+			"hidden": true
+		},
+		"railways:green_signals": {
+			"hidden": true
+		},
+		"quark:emote_resources": {
+			"force_compatible": true
+		},
+		"file/Lopy-Create-Sophisticated-Backpacks.zip": {
+			"force_compatible": true
+		},
+		"file/Created Pretty Pipes1.0 FIXED.zip": {
+			"force_compatible": true
+		},
+		"file/Create Computers 1.2.zip": {
+			"force_compatible": true
+		}
+	}
+}
