@@ -51,13 +51,11 @@
 			rewards: [
 				{
 					id: "5CAE42EDC4CE4A1D"
-					type: "command"
+					type: "custom"
 					title: "Fortress Locator"
 					icon: "create:blaze_burner"
-					tags: [""]
+					tags: ["fortress"]
 					auto: "enabled"
-					command: "/locate betterfortresses:fortress"
-					player_command: true
 				}
 				{
 					id: "654464FB386A729A"
