@@ -1,5 +1,10 @@
 // priority: 9999
 
+//Java imports
+const Registry = java('net.minecraft.core.Registry'); //registries, needed for almost everything involving Java classes
+//const BlockPos = java('net.minecraft.core.BlockPos'); //Block position. For some reason we don't need to import this?
+const TagKey = java('net.minecraft.tags.TagKey');
+
 // Mod shortcuts
 const MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "") + domain + ":" + id.replace('#', '')
 
@@ -129,8 +134,6 @@ const addChiselingRecipe = (event, id, items, overwrite) => {
  * @param {string} tag Don't include a hashtag in the tag name
  */
 // const ItemOutput = java('slimeknights.mantle.recipe.helper.ItemOutput');
-// const TagKey = java('net.minecraft.tags.TagKey');
-// const Registry = java('net.minecraft.core.Registry');
 const getPreferredTag = (tag) => {
 	/* Tried using mantle for this and it didn't work on first launch unfortunately */
 	//return Item.of(ItemOutput.fromTag(TagKey.create(Registry.ITEM_REGISTRY, tag), 1).get()).getId();

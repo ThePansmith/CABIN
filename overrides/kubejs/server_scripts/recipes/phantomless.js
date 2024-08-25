@@ -30,3 +30,10 @@ onEvent('server.datapack.first', event => {
 	})
 })
 //slow fall potion is in startup script potions.js
+
+onEvent('server.load', event=>{
+	if (!event.server.persistentData.insomniaDisabled) {
+		event.server.runCommandSilent("/gamerule doInsomnia false")
+		event.server.persistentData.insomniaDisabled = true;
+	} 
+})
