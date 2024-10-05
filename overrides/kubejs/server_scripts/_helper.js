@@ -134,7 +134,7 @@ const addChiselingRecipe = (event, id, items, overwrite) => {
  * @param {string} tag Don't include a hashtag in the tag name
  */
 // const ItemOutput = java('slimeknights.mantle.recipe.helper.ItemOutput');
-const getPreferredTag = (tag) => {
+const getPreferredItemFromTag = (tag) => {
 	/* Tried using mantle for this and it didn't work on first launch unfortunately */
 	//return Item.of(ItemOutput.fromTag(TagKey.create(Registry.ITEM_REGISTRY, tag), 1).get()).getId();
 	/* Create a copy of the mantle preferred mods list */

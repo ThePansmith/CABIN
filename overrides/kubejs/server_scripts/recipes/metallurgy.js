@@ -284,47 +284,66 @@ onEvent('recipes', event => {
 	const stone = Item.of(MC("cobblestone"), 1).withChance(.5)
 	let experience = Item.of(CR("experience_nugget"), 1).withChance(0.75)
 
-	let dust_process = (name, ingot, nugget, dust, ore, byproduct, fluid_byproduct_name, rawore) => {
-		let crushed = CR('crushed_' + 'raw_' + name)
-		let oretag = ('#forge:ores/' + name)
-		let dusttag = ('#forge:dusts/' + name)
-		let fluid = TC("molten_" + name)
-		let fluid_byproduct = TC("molten_" + fluid_byproduct_name)
+	let dust_process = (materialName, byproduct, fluidByproductName) => {
+		let crushedOre = CR('crushed_' + 'raw_' + materialName)
+		let oreTag = ('#forge:ores/' + materialName)
+		let dustTag = ('#forge:dusts/' + materialName)
+		let fluid = TC("molten_" + materialName)
+		let fluidByproduct = TC("molten_" + fluidByproductName)
+		let rawOreTag = ('#forge:raw_materials/' + materialName)
 
-		event.replaceInput({type: 'minecraft:crafting_shaped'}, rawore, crushed)
-		event.replaceOutput({type: 'minecraft:crafting_shapeless'}, rawore, crushed)
+		//slightly slower than passing the name directly but it reduces how many parameters this function needs.
+		let ingot = getPreferredItemFromTag('forge:ingots/'+materialName);
+		let nugget = getPreferredItemFromTag('forge:nuggets/'+materialName);
+		let dust = getPreferredItemFromTag('forge:dusts/'+materialName);
+
+		//raw ore block compression and decompression
+		event.replaceInput({type: 'minecraft:crafting_shaped'}, rawOreTag, crushedOre)
+		event.replaceOutput({type: 'minecraft:crafting_shapeless'}, rawOreTag, crushedOre)
 		
-		event.smelting(Item.of(nugget, 3), crushed)
-		event.smelting(Item.of(nugget, 1), dusttag).cookingTime(40)
-		event.recipes.createMilling([Item.of(dust, 3)], crushed)
-		event.recipes.createCrushing([Item.of(crushed, 1), Item.of(crushed, 1).withChance(0.25), experience, stone], oretag)
-		event.recipes.createCrushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushed)
-		event.recipes.thermal.pulverizer([Item.of(dust, 6)], crushed).energy(15000)
-		event.recipes.thermal.pulverizer([Item.of(crushed).withChance(1.25), Item.of('minecraft:gravel').withChance(0.2)], oretag).energy(3000)
-		event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000)
-
-		event.recipes.thermal.crucible(Fluid.of(fluid, 30), dusttag).energy(3000)
-		event.recipes.createSplashing([Item.of(nugget, 2)], dusttag)
-		event.recipes.createMixing([Fluid.of(fluid, 180)], [Item.of(dusttag, 3), AE2('matter_ball')]).superheated()
+		event.remove({ input: rawOreTag })
+		event.remove({ input: oreTag, type: TE("smelter") })
+		event.remove({ input: oreTag, type: TE("pulverizer") })
+		event.remove({ input: oreTag, type: MC("blasting") })
+		event.remove({ input: oreTag, type: MC("smelting") })
+		event.remove({ input: oreTag, type: CR("crushing") })
+		event.remove({ input: oreTag, type: CR("milling") })
+		event.remove({ id: TC('smeltery/melting/metal/' + materialName + '/raw_block') })
+		event.remove({ id: TC('smeltery/melting/metal/' + materialName + '/dust') })
+		event.remove({ id: CR('crushing/raw_' + materialName + '_block') })	
 		
-		event.remove({ input: rawore })
-		event.recipes.createMilling([Item.of(crushed, 5)], rawore)
-		event.recipes.createCrushing([Item.of(crushed, 5), Item.of(crushed, 2).withChance(0.5)], rawore)
 
+		//'concentrated ore' to crushed ore
+		event.recipes.createMilling([Item.of(crushedOre, 5)], rawOreTag).id('kubejs:ore_processing/milling/raw_ore/'+materialName)
+		event.recipes.createCrushing([Item.of(crushedOre, 5), Item.of(crushedOre, 2).withChance(0.5)], rawOreTag).id('kubejs:ore_processing/crushing/ore/'+materialName)
 
-		event.remove({ input: oretag, type: TE("smelter") })
-		event.remove({ input: oretag, type: TE("pulverizer") })
-		event.remove({ input: oretag, type: MC("blasting") })
-		event.remove({ input: oretag, type: MC("smelting") })
-		event.remove({ input: oretag, type: CR("crushing") })
-		event.remove({ input: oretag, type: CR("milling") })
-		event.remove({ id: TC('smeltery/melting/metal/' + name + '/raw_block') })
-		event.remove({ id: TC('smeltery/melting/metal/' + name + '/dust') })
-		event.remove({ id: CR('crushing/raw_' + name + '_block') })	
+		//ore to crushed ore
+		event.recipes.createCrushing([Item.of(crushedOre, 1), Item.of(crushedOre, 1).withChance(0.25), experience, stone], oreTag).id('kubejs:ore_processing/crushing/ore/'+materialName)
+		event.recipes.thermal.pulverizer([Item.of(crushedOre).withChance(1.25), Item.of('minecraft:gravel').withChance(0.2)], oreTag).energy(3000).id('kubejs:ore_processing/pulverizing/ore/'+materialName)
+		
+		//crushed ore to nuggets
+		event.smelting(Item.of(nugget, 3), crushedOre).id('kubejs:ore_processing/smelting/crushed/'+materialName)
+		event.recipes.createSplashing([Item.of(nugget, 2)], dustTag).id('kubejs:ore_processing/splashing/dust/'+materialName)
 
+		//crushed ore to ore dust
+		event.recipes.createMilling([Item.of(dust, 3)], crushedOre).id('kubejs:ore_processing/milling/crushed/'+materialName)
+		event.recipes.createCrushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushedOre).id('kubejs:ore_processing/crushing/crushed/'+materialName)
+		event.recipes.thermal.pulverizer([Item.of(dust, 6)], crushedOre).energy(15000).id('kubejs:ore_processing/pulverizing/crushed/'+materialName)
+
+		//ore dust to nuggets
+		event.smelting(Item.of(nugget, 1), dustTag).cookingTime(40).id('kubejs:ore_processing/smelting/dust/'+materialName)
+		
+		//ore dust to fluid
+		event.recipes.thermal.crucible(Fluid.of(fluid, 30), dustTag).energy(3000).id('kubejs:ore_processing/crucible/dust/'+materialName)
+		event.recipes.createMixing([Fluid.of(fluid, 180)], [Item.of(dustTag, 3), AE2('matter_ball')]).superheated().id('kubejs:ore_processing/mixing/dust/'+materialName)
+		
+		//ingots to fluid
+		event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000).id('kubejs:ore_processing/crucible/ingot/'+materialName)
+		
+		//melting crushed ores to fluid
 		event.custom({
 			"type": "thermal:smelter",
-			"ingredient": { "item": crushed },
+			"ingredient": { "item": crushedOre },
 			"result": [
 				{ "item": nugget, "chance": 9.0 },
 				{ "item": byproduct, "chance": (byproduct.endsWith('nugget') ? 1.8 : 0.2) },
@@ -332,25 +351,25 @@ onEvent('recipes', event => {
 			],
 			"experience": 0.2,
 			"energy": 20000
-		})
+		}).id('kubejs:ore_processing/induction_smelting/crushed/'+materialName)
 
+		//melting ore dusts to fluid
 		event.custom({
 			"type": "tconstruct:melting",
-			"ingredient": { "tag": dusttag.slice(1) },
+			"ingredient": { "tag": dustTag.slice(1) },
 			"result": { "fluid": fluid, "amount": 30 },
 			"temperature": 500,
 			"time": 30,
-			"byproducts": [{ "fluid": fluid_byproduct, "amount": 10 }]
-		});
+			"byproducts": [{ "fluid": fluidByproduct, "amount": 10 }]
+		}).id('kubejs:ore_processing/melting/dust/'+materialName);
 	}
 
-
-	dust_process('nickel', TE('nickel_ingot'), TE('nickel_nugget'), TE('nickel_dust'), TE('nickel_ore'), CR('copper_nugget'), 'copper', TE('raw_nickel'))
-	dust_process('lead', TE('lead_ingot'), TE('lead_nugget'), TE('lead_dust'), TE('lead_ore'), MC('iron_nugget'), 'iron', TE('raw_lead'))
-	dust_process('iron', MC('iron_ingot'), MC('iron_nugget'), TE('iron_dust'), MC('iron_ore'), TE('nickel_nugget'), 'nickel', MC('raw_iron'))
-	dust_process('gold', MC('gold_ingot'), MC('gold_nugget'), TE('gold_dust'), MC('gold_ore'), TE('cinnabar'), 'zinc', MC('raw_gold'))
-	dust_process('copper', MC('copper_ingot'), CR('copper_nugget'), TE('copper_dust'), MC('copper_ore'), CR('copper_nugget'), 'copper', MC('raw_copper'))
-	dust_process('zinc', CR('zinc_ingot'), CR('zinc_nugget'), KJ('zinc_dust'), CR('zinc_ore'), TE('sulfur'), 'lead', CR('raw_zinc'))
+	dust_process('nickel', CR('copper_nugget'), 'copper')
+	dust_process('lead', MC('iron_nugget'), 'iron')
+	dust_process('iron', TE('nickel_nugget'), 'nickel')
+	dust_process('gold', TE('cinnabar'), 'zinc')
+	dust_process('copper', MC('gold_nugget'), 'gold')
+	dust_process('zinc', TE('sulfur'), 'lead')
 
 	event.remove({ input: TE("raw_silver") })
 	//event.remove({ output: TE("raw_silver") })

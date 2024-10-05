@@ -115,7 +115,7 @@ onEvent('recipes', event => {
 		if (typeof recipeJSON.result === 'string') {
 			resultItem = {item:recipeJSON.result, count:1};
 		} else {
-			resultItem = {item:getPreferredTag(recipeJSON.result.tag), count:1}
+			resultItem = {item:getPreferredItemFromTag(recipeJSON.result.tag), count:1}
 			;
 		}
 
