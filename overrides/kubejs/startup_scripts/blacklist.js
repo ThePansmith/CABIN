@@ -649,6 +649,7 @@ global.randomiumBlacklist = [
 	'expcaves:treasure_amphora',
 	'expcaves:small_quartz_treasure_pot',
 	'expcaves:quartz_treasure_amphora',
+	'occultism:miner_debug_unspecialized',
 
 
 	//Tconstruct molten fluid buckets

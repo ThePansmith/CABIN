@@ -385,6 +385,7 @@ onEvent('recipes', event => {
 	zincMachine(event, Item.of('thermal:upgrade_augment_2', 1), MC('redstone'))
 	// Foundry Controller Recipe
 	event.remove({ id: TC('smeltery/casting/scorched/foundry_controller') })
+	event.remove({ id: TC('smeltery/melting/obsidian/foundry_controller') })
 	donutCraft(event, TC('foundry_controller'), TC('#scorched_blocks'), KJ('infernal_mechanism')).modifyResult((grid, result) => {
 		let item = grid.find(TC("#scorched_blocks"))
 		return result.withNBT({texture: item.id})
@@ -632,8 +633,7 @@ onEvent('recipes', event => {
 	//Goodbye Inscriber
 	event.remove({ id: AE2('network/blocks/inscribers') })
 	event.remove({ type: AE2('inscriber') })
-	//magma crucible diamond melting
-	event.recipes.thermal.crucible(Fluid.of(TC("molten_diamond"), 100), MC("diamond")).energy(10000)
+	//all gem melting recipes are automatically ported to megma crucible recipe in thermal.js
 	//Printed Processors
 	event.custom({
 		"type": "tconstruct:casting_table",
