@@ -199,6 +199,14 @@ onEvent('item.tags', event => {
 		.add(MC('chorus_fruit'))
 		.add(MC('blaze_powder'))
 
+	event.get('kubejs:ore_processing/metal/dusts')
+		.add('#forge:dusts/copper')
+		.add('#forge:dusts/iron')
+		.add('#forge:dusts/gold')
+		.add('#forge:dusts/zinc')
+		.add('#forge:dusts/lead')
+		.add('#forge:dusts/nickel')
+
 	//This tag auto adds the beacon_payment_items tag which we don't want
 	event.remove(CR('create_ingots'), CR('andesite_alloy'))
 })

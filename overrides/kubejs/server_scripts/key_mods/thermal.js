@@ -115,8 +115,7 @@ onEvent('recipes', event => {
 		if (typeof recipeJSON.result === 'string') {
 			resultItem = {item:recipeJSON.result, count:1};
 		} else {
-			resultItem = {item:getPreferredItemFromTag(recipeJSON.result.tag), count:1}
-			;
+			resultItem = {item:getPreferredItemFromTag(recipeJSON.result.tag), count:1};
 		}
 
 		//We don't want this recipe
@@ -135,4 +134,24 @@ onEvent('recipes', event => {
 	event.recipes.thermal.chiller(TC('sky_slime_ball'), [Fluid.of("tconstruct:sky_slime", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/sky_slime_ball');
 	event.recipes.thermal.chiller(TC('ender_slime_ball'), [Fluid.of("tconstruct:ender_slime", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/ender_slime_ball');
 	event.recipes.thermal.chiller(TC('blood_slime_ball'), [Fluid.of("tconstruct:blood", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/blood_slime_ball');
+
+	//port melting recipes for dusts, ingots and gems
+	event.forEachRecipe([
+		{ type: 'tconstruct:melting', input: ['#forge:ingots', '#forge:gems'] },
+		{ type: 'tconstruct:melting', input: '#forge:dusts', not: {input: '#kubejs:ore_processing/metal/dusts' }}
+	], recipe => {
+		//recipe.json gives us some info that the recipe object cannot give us
+		let recipeJSON = JSON.parse(recipe.json)
+
+		let inputItem = recipeJSON.ingredient;
+		let resultFluid = recipeJSON.result;
+		
+		//Creating the ported recipe
+		event.custom({
+			type:"thermal:crucible",
+			ingredients:[inputItem],
+			result:[resultFluid],
+			energy:recipeJSON.time*50
+		}).id(`kubejs:crucible/${recipe.getId().replace(':', '/')}`)
+	})
 })

@@ -300,7 +300,7 @@ onEvent('recipes', event => {
 		//raw ore block compression and decompression
 		event.replaceInput({type: 'minecraft:crafting_shaped'}, rawOreTag, crushedOre)
 		event.replaceOutput({type: 'minecraft:crafting_shapeless'}, rawOreTag, crushedOre)
-		
+
 		event.remove({ input: rawOreTag })
 		event.remove({ input: oreTag, type: TE("smelter") })
 		event.remove({ input: oreTag, type: TE("pulverizer") })
@@ -338,7 +338,7 @@ onEvent('recipes', event => {
 		event.recipes.createMixing([Fluid.of(fluid, 180)], [Item.of(dustTag, 3), AE2('matter_ball')]).superheated().id('kubejs:ore_processing/mixing/dust/'+materialName)
 		
 		//ingots to fluid
-		event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000).id('kubejs:ore_processing/crucible/ingot/'+materialName)
+		//event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000).id('kubejs:ore_processing/crucible/ingot/'+materialName) //now automatically ported
 		
 		//melting crushed ores to fluid
 		event.custom({
