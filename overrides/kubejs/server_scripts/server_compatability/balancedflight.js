@@ -9,5 +9,10 @@ if(Platform.isLoaded("balancedflight")) {
 		event.recipes.createDeploying(MC('beacon'), [MC('beacon'), CR('shaft')]),
 		event.recipes.createDeploying(MC('beacon'), [MC('beacon'), MC('elytra')]),
 	]).loops(1)
+	event.replaceInput(
+		{ output: 'balancedflight:ascended_flight_ring' },
+		'minecraft:netherite_block',            
+		'kubejs:computation_matrix'
+	  )
   })
 }
