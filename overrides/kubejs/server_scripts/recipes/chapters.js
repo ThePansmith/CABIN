@@ -338,7 +338,7 @@ onEvent('recipes', event => {
 	// Machine Crafting
 	brassMachine(event, Item.of('create:mechanical_crafter', 3), MC('crafting_table'))
 	brassMachine(event, Item.of('create:sequenced_gearshift', 2))
-	brassMachine(event, Item.of('create:steam_engine', 1))
+	brassMachine(event, Item.of('create:steam_engine', 1), MC('copper_block'))
 	brassMachine(event, Item.of('create:rotation_speed_controller', 1))
 	brassMachine(event, Item.of('create:mechanical_arm', 1))
 	brassMachine(event, Item.of('create:stockpile_switch', 2))
