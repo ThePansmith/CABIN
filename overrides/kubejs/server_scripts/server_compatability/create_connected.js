@@ -1,8 +1,7 @@
 if(Platform.isLoaded("create_connected")) {
 	onEvent('recipes', event => {
-    event.remove({ output: 'create_connected:control_chip' })
-    event.remove({ output: 'create_connected:sequenced_pulse_generator' })
+        event.remove({ id: 'create_connected:sequenced_assembly/control_chip' })
 
-    event.smithing('create_connected:sequenced_pulse_generator', 'projectred_core:platformed_plate', 'create:electron_tube')
+        createMachine('projectred_core:platformed_plate', event, 'create_connected:sequenced_pulse_generator', 'create:electron_tube')
 	})
 }

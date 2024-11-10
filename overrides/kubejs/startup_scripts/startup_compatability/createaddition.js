@@ -8,6 +8,8 @@ if (Platform.isLoaded("createaddition")) {
 	//Unfortunately we have stick to thermal diamond dust due to the strainer recipe
 	global.itemBlacklist.push("createaddition:diamond_grit")
 	global.itemBlacklist.push("createaddition:accumulator")
+
+	global.randomiumBlacklist.push("createaddition:creative_energy")
 }
 
 //Sequence assembly items
