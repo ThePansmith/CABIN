@@ -41,9 +41,9 @@ if(Platform.isLoaded("steampowered")) {
     brassMachine(event,Item.of('steampowered:steel_steam_engine'), 'alloyed:steel_block')
 
     // Flywheels
-    event.smithing('steampowered:bronze_flywheel', 'create:flywheel', 'alloyed:bronze_block')
-    event.smithing('steampowered:cast_iron_flywheel', 'create:flywheel', 'createdeco:cast_iron_block')
-    event.smithing('steampowered:steel_flywheel', 'create:flywheel', 'alloyed:steel_block')
+    createMachine('create:flywheel', event, 'steampowered:bronze_flywheel', 'alloyed:bronze_block')
+    createMachine('create:flywheel', event, 'steampowered:cast_iron_flywheel', 'createdeco:cast_iron_block')
+    createMachine('create:flywheel', event, 'steampowered:steel_flywheel', 'alloyed:steel_block')
   })
 }
 
