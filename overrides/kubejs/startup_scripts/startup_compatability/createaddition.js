@@ -8,14 +8,15 @@ if (Platform.isLoaded("createaddition")) {
 	//Unfortunately we have stick to thermal diamond dust due to the strainer recipe
 	global.itemBlacklist.push("createaddition:diamond_grit")
 	global.itemBlacklist.push("createaddition:accumulator")
+	global.itemBlacklist.push("kubejs:incomplete_connector")
+	global.itemBlacklist.push("kubejs:incomplete_large_connector")
 
 	global.randomiumBlacklist.push("createaddition:creative_energy")
-}
 
-//Sequence assembly items
-onEvent('item.registry', event => {
-	if (Platform.isLoaded('createaddition')) {
+
+	//Sequence assembly items
+	onEvent('item.registry', event => {
 		event.create('incomplete_connector','create:sequenced_assembly').texture("createaddition:item/connector").displayName('Incomplete Small Connector')
 		event.create('incomplete_large_connector','create:sequenced_assembly').texture("createaddition:item/large_connector").displayName('Incomplete Large Connector')
-	}
-})
+	})
+}
