@@ -5,7 +5,29 @@ onEvent('rei.group', event => {
 	event.groupItemsByTag('tconstruct:rei_groups/modifiable', 'Tinkers Tools', 'tconstruct:modifiable')
 	event.groupItemsByTag('tconstruct:rei_groups/parts', 'Tinkers Parts', 'tconstruct:parts')
 
-	const useNbt = ['reliquary:potion', 'reliquary:potion_essence', 'reliquary:splash_potion', 'reliquary:lingering_potion', 'reliquary:tipped_arrow', 'tconstruct:crafting_station', 'tconstruct:tinker_station', 'tconstruct:part_builder', 'tconstruct:modifier_worktable', 'tconstruct:tinkers_anvil', 'tconstruct:scorched_anvil', 'tconstruct:repair_kit', 'chiselandbits:block_bit']
+	const useNbt = [
+    'reliquary:potion',
+    'reliquary:potion_essence',
+    'reliquary:splash_potion',
+    'reliquary:lingering_potion',
+    'reliquary:tipped_arrow',
+    'tconstruct:crafting_station',
+    'tconstruct:tinker_station',
+    'tconstruct:part_builder',
+    'tconstruct:modifier_worktable',
+    'tconstruct:tinkers_anvil',
+    'tconstruct:scorched_anvil',
+    'tconstruct:seared_drain',
+    'tconstruct:seared_duct',
+    'tconstruct:seared_chute',
+    'tconstruct:scorched_drain',
+    'tconstruct:scorched_duct',
+    'tconstruct:scorched_chute',
+    'tconstruct:smeltery_controller',
+    'tconstruct:foundry_controller',
+    'tconstruct:repair_kit',
+    'tconstruct:slime_helmet'
+  ]
 
 	useNbt.forEach(id => {
 		const item = Item.of(id)
@@ -15,9 +37,7 @@ onEvent('rei.group', event => {
 
 
 
-	event.groupItems('kubejs:rei_groups/microblocks', 'Microblocks', [
-		/cb_microblock:microblock/
-	])
+	event.groupSameItem('kubejs:rei_groups/microblocks', 'Microblocks', "cb_microblock:microblock")
 
 	event.groupItems('kubejs:rei_groups/fluidbuckets', 'Buckets of Fluids', [
 		/bucket/
