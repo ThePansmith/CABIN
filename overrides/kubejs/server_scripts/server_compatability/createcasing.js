@@ -2,22 +2,8 @@
 if(Platform.isLoaded("createcasing")) {
   onEvent('item.tags', event => {
 
-    // Custom Tags
-    event.add('cabin:encased_mixers',
-      'createcasing:brass_mixer',
-      'createcasing:copper_mixer',
-      'createcasing:industrial_iron_mixer',
-      'createcasing:railway_mixer',
-      'createcasing:creative_mixer')
-
-    event.add('cabin:encased_presses',
-      'createcasing:brass_press',
-      'createcasing:copper_press',
-      'createcasing:industrial_iron_press',
-      'createcasing:railway_press',
-      'createcasing:creative_press')
-
-    event.add('cabin:encased_shafts',
+    // Custom Tag
+    event.add('createcasing:shafts',
       'createcasing:oak_shaft',
       'createcasing:spruce_shaft',
       'createcasing:birch_shaft',
@@ -30,13 +16,12 @@ if(Platform.isLoaded("createcasing")) {
       'createcasing:glass_shaft',
       'createcasing:mldeg_shaft')
   })
-
-	onEvent('recipes', event => {
+   onEvent('recipes', event => {
 
     // Cleanup
-    event.remove({ output: '#cabin:encased_mixers'})
-    event.remove({ output: '#cabin:encased_presses'})
-    event.remove({ output: '#cabin:encased_shafts'}) // Most of them are useless, and somewhat buggy
+    event.remove({ input: 'create:whisk', mod: 'createcasing'}) // Breaks Progression
+    event.remove({ input: 'miencraft:iron_block', mod: 'createcasing'}) // Same as Above
+    event.remove({ output: '#createcasing:shafts', mod: 'createcasing'}) // Most of them are useless, and somewhat buggy
 
     // Mixers
     let mixer = (output, sheet) => { 
