@@ -5,7 +5,7 @@ if(Platform.isLoaded("balancedflight")) {
 	   'balancedflight:flight_anchor',
 	], 'minecraft:beacon', [
 		event.recipes.createDeploying(KJ('incomplete_flight_anchor'), [KJ('incomplete_flight_anchor'), KJ('gold_machine')]),
-		event.recipes.createDeploying(KJ('incomplete_flight_anchor'), [KJ('incomplete_flight_anchor'), TE('inductive_mechanism')]),
+		event.recipes.createDeploying(KJ('incomplete_flight_anchor'), [KJ('incomplete_flight_anchor'), KJ('inductive_mechanism')]),
 		event.recipes.createDeploying(KJ('incomplete_flight_anchor'), [KJ('incomplete_flight_anchor'), KJ('inductive_mechanism')]),
 		event.recipes.createDeploying(KJ('incomplete_flight_anchor'), [KJ('incomplete_flight_anchor'), CR('shaft')]),
 		event.recipes.createDeploying(KJ('incomplete_flight_anchor'), [KJ('incomplete_flight_anchor'), Platform.isLoaded('magicfeather') ? "magicfeather:magicfeather" : MC('elytra')]),
