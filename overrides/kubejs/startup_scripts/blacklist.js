@@ -529,6 +529,7 @@ global.itemBlacklist = [
 	'waterstrainer:strainer_survivalist_reinforced',
 
 	//Tconstruct
+	'tconstruct:coin_cast',
 	'tconstruct:netherite_nugget',
 	'tconstruct:copper_nugget',
 	'tconstruct:molten_tin_bucket',
@@ -725,6 +726,7 @@ global.randomiumBlacklist = [
 	// Chapter 3
 	'kubejs:inductive_mechanism',
 	'thermal:dynamo_compression',
+	'thermal:dynamo_disenchantment',
 	'kubejs:pipe_module_tier_2',
 	'prettypipes:medium_crafting_module',
 	'prettypipes:medium_filter_module',
