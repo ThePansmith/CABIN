@@ -1,18 +1,13 @@
-// Thermal Systeams
+// Thermal Systeams (Works best when used with Create: Steam Powered)
 if(Platform.isLoaded("systeams")) {
 	onEvent('recipes', event => {
 
-    // Boiler Crafting
-    event.remove({ id: 'systeams:boilers/compression' })
-    event.remove({ id: 'systeams:boilers/disenchantment' })
-    event.remove({ id: 'systeams:boilers/gourmand' })
-    event.remove({ id: 'systeams:boilers/lapidary' })
-    event.remove({ id: 'systeams:boilers/magmatic' })
-    event.remove({ id: 'systeams:boilers/numismatic' })
-    event.remove({ id: 'systeams:boilers/stirling' })
+    // Boiler Crafting Removal
+    event.remove({input: 'minecraft:redstone', output: '#systeams:boilers'})
 
     // Steam Bucket
-    // I couldn't make it work with KubeJS Thermal, so a custom event will be used as a placeholder: 
+    // event.recipes.thermal.bottler('minecraft:bucket', [Fluid.of('#forge:steam', 1000), 'systeams:steam_bucket'])
+    // Seems like KubeJS Thermal doesn't support Fluid Tags, so a custom event will be used as a placeholder:
     event.custom({
       "type": "thermal:bottler",
       "ingredients": [
@@ -23,12 +18,9 @@ if(Platform.isLoaded("systeams")) {
         {"item": "systeams:steam_bucket"}
       ]
     })
-    // event.recipes.thermal.bottler('minecraft:bucket', [Fluid.of('#forge:steam', 1000), 'systeams:steam_bucket'])
     
-    // Steam Dynamo
+    // Steam Dynamo & Pipe
     zincMachine(event,Item.of('systeams:steam_dynamo'), 'thermal:rf_coil')
-
-    // Steam Pipe
     event.replaceInput({ id: 'systeams:boiler_pipe' }, 'thermal:cured_rubber', 'create:brass_sheet')
 
     // Boiler to Dynamo Fix
@@ -54,5 +46,3 @@ if(Platform.isLoaded("systeams")) {
     dynamo('thermal:dynamo_stirling', 'systeams:stirling_boiler')
   })
 }
-
-// This addon works best when used in conjunction with Create: Steam Powered
