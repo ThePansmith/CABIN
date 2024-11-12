@@ -57,9 +57,9 @@ if(Platform.isLoaded("steampowered")) {
     boiler('steampowered:steel_boiler', 'alloyed:steel_sheet')
 
     // Engines & Flywheels
-    brassMachine(event,Item.of('steampowered:bronze_steam_engine'), 'alloyed:bronze_block')
-    brassMachine(event,Item.of('steampowered:cast_iron_steam_engine'), 'createdeco:cast_iron_block')
-    brassMachine(event,Item.of('steampowered:steel_steam_engine'), 'alloyed:steel_block')
+    zincMachine(event,Item.of('steampowered:bronze_steam_engine'), 'alloyed:bronze_block')
+    zincMachine(event,Item.of('steampowered:cast_iron_steam_engine'), 'createdeco:cast_iron_block')
+    zincMachine(event,Item.of('steampowered:steel_steam_engine'), 'alloyed:steel_block')
 
     createMachine('create:flywheel', event, 'steampowered:bronze_flywheel', 'alloyed:bronze_block')
     createMachine('create:flywheel', event, 'steampowered:cast_iron_flywheel', 'createdeco:cast_iron_block')
