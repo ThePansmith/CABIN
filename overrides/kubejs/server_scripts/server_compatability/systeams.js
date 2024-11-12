@@ -3,7 +3,7 @@ if(Platform.isLoaded("systeams")) {
 	onEvent('recipes', event => {
 
     // Boiler Crafting Removal
-    event.remove({input: 'minecraft:redstone', output: '#systeams:boilers'})
+    event.remove({mod: 'systeams', input: 'minecraft:redstone', output: '#systeams:boilers'})
 
     // Steam Bucket
     // event.recipes.thermal.bottler('minecraft:bucket', [Fluid.of('#forge:steam', 1000), 'systeams:steam_bucket'])

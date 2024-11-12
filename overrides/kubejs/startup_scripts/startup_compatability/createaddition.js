@@ -11,6 +11,8 @@ if (Platform.isLoaded("createaddition")) {
 	global.itemBlacklist.push("kubejs:incomplete_connector")
 	global.itemBlacklist.push("kubejs:incomplete_large_connector")
 
+	global.randomiumBlacklist.push("createaddition:electric_motor")
+	global.randomiumBlacklist.push("createaddition:alternator")
 	global.randomiumBlacklist.push("createaddition:creative_energy")
 
 
