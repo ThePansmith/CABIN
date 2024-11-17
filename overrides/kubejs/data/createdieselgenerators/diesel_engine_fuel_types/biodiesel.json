@@ -1,5 +1,5 @@
 {
-  "fluid": "createaddition:bioethanol",
+  "fluid": "#forge:biofuel",
   "sound_speed": 3,
   "normal": {
     "speed": 64.0,
