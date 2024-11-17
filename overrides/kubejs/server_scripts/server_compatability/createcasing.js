@@ -1,27 +1,13 @@
 // Create Encased
 if(Platform.isLoaded("createcasing")) {
-  onEvent('item.tags', event => {
-
-    // Custom Tag
-    event.add('createcasing:shafts',
-      'createcasing:oak_shaft',
-      'createcasing:spruce_shaft',
-      'createcasing:birch_shaft',
-      'createcasing:jungle_shaft',
-      'createcasing:acacia_shaft',
-      'createcasing:dark_oak_shaft',
-      'createcasing:crimson_shaft',
-      'createcasing:warped_shaft',
-      'createcasing:brass_shaft',
-      'createcasing:glass_shaft',
-      'createcasing:mldeg_shaft')
-  })
-   onEvent('recipes', event => {
+	onEvent('recipes', event => {
 
     // Cleanup
-    event.remove({ input: 'create:whisk', mod: 'createcasing'}) // Breaks Progression
-    event.remove({ input: 'minecraft:iron_block', mod: 'createcasing'}) // Same as Above
-    event.remove({ output: '#createcasing:shafts', mod: 'createcasing'}) // Most of them are useless, and somewhat buggy
+    event.remove({ input: 'minecraft:iron_block', mod: 'createcasing'}) // Removes Presses
+    event.remove({ input: 'create:whisk', mod: 'createcasing'}) // Removes Mixers
+    event.remove({ input: '#forge:stripped_logs', mod: 'createcasing'}) // Removes Wooden Shaffs
+    event.remove({ input: 'create:brass_ingot', mod: 'createcasing'}) // Removes Brass Shaft
+    event.remove({ input: 'minecraft:glass', mod: 'createcasing'}) // Removes Glass Shaft
 
     // Mixers
     let mixer = (output, sheet) => { 
