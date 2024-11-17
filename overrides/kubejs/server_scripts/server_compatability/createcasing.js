@@ -20,7 +20,7 @@ if(Platform.isLoaded("createcasing")) {
 
     // Cleanup
     event.remove({ input: 'create:whisk', mod: 'createcasing'}) // Breaks Progression
-    event.remove({ input: 'miencraft:iron_block', mod: 'createcasing'}) // Same as Above
+    event.remove({ input: 'minecraft:iron_block', mod: 'createcasing'}) // Same as Above
     event.remove({ output: '#createcasing:shafts', mod: 'createcasing'}) // Most of them are useless, and somewhat buggy
 
     // Mixers
