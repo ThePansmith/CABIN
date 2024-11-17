@@ -1,0 +1,19 @@
+{
+  "fluid": "thermal:heavy_oil",
+  "sound_speed": 2,
+  "normal": {
+    "speed": 64.0,
+    "strength": 3072.0,
+    "burn_rate": 2
+  },
+  "modular": {
+    "speed": 96.0,
+    "strength": 6144.0,
+    "burn_rate": 3
+  },
+  "huge": {
+    "speed": 128.0,
+    "strength": 12288.0,
+    "burn_rate": 4
+  }
+}
