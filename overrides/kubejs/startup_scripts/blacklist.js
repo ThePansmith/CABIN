@@ -529,6 +529,7 @@ global.itemBlacklist = [
 	'waterstrainer:strainer_survivalist_reinforced',
 
 	//Tconstruct
+	'tconstruct:coin_cast',
 	'tconstruct:netherite_nugget',
 	'tconstruct:copper_nugget',
 	'tconstruct:molten_tin_bucket',
@@ -725,6 +726,7 @@ global.randomiumBlacklist = [
 	// Chapter 3
 	'kubejs:inductive_mechanism',
 	'thermal:dynamo_compression',
+	'thermal:dynamo_disenchantment',
 	'kubejs:pipe_module_tier_2',
 	'prettypipes:medium_crafting_module',
 	'prettypipes:medium_filter_module',
@@ -988,6 +990,10 @@ global.randomiumBlacklist = [
 	'ae2:creative_energy_cell',
 	'ae2:creative_item_cell',
 	'ae2:creative_fluid_cell',
+	'ae2:debug_eraser',
+	'ae2:debug_meteorite_placer',
+	'ae2:debug_card',
+	'ae2:debug_replicator_card',
 	'exchangers:creative_exchanger',
 	'create:creative_motor',
 	'create:creative_fluid_tank',
