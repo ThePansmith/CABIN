@@ -10,12 +10,12 @@ if(Platform.isLoaded("steampowered")) {
         metalIngot
       ])
     }
-    cog('steampowered:bronze_cogwheel', 'create:shaft', 'alloyed:bronze_ingot')
-    cog('steampowered:cast_iron_cogwheel', 'create:shaft', 'createdeco:cast_iron_ingot')
-    cog('steampowered:steel_cogwheel', 'create:shaft', 'alloyed:steel_ingot')
-    cog('steampowered:bronze_large_cogwheel', 'steampowered:bronze_cogwheel', 'alloyed:bronze_ingot')
-    cog('steampowered:cast_iron_large_cogwheel', 'steampowered:cast_iron_cogwheel', 'createdeco:cast_iron_ingot')
-    cog('steampowered:steel_large_cogwheel', 'steampowered:steel_cogwheel', 'alloyed:steel_ingot')
+    cog('steampowered:bronze_cogwheel', 'create:shaft', '#forge:ingots/bronze')
+    cog('steampowered:cast_iron_cogwheel', 'create:shaft', '#forge:ingots/cast_iron')
+    cog('steampowered:steel_cogwheel', 'create:shaft', '#forge:ingots/steel')
+    cog('steampowered:bronze_large_cogwheel', 'steampowered:bronze_cogwheel', '#forge:ingots/bronze')
+    cog('steampowered:cast_iron_large_cogwheel', 'steampowered:cast_iron_cogwheel', '#forge:ingots/cast_iron')
+    cog('steampowered:steel_large_cogwheel', 'steampowered:steel_cogwheel', '#forge:ingots/steel')
     
     let largeCog = (output, metalIngot) => { 
       event.shapeless(output, [
@@ -24,9 +24,9 @@ if(Platform.isLoaded("steampowered")) {
         metalIngot
       ])
     }
-    largeCog('steampowered:bronze_large_cogwheel', 'alloyed:bronze_ingot')
-    largeCog('steampowered:cast_iron_large_cogwheel', 'createdeco:cast_iron_ingot')
-    largeCog('steampowered:steel_large_cogwheel', 'alloyed:steel_ingot')
+    largeCog('steampowered:bronze_large_cogwheel', '#forge:ingots/bronze')
+    largeCog('steampowered:cast_iron_large_cogwheel', '#forge:ingots/cast_iron')
+    largeCog('steampowered:steel_large_cogwheel', '#forge:ingots/steel')
 
     // Burners & Boilers
     let burner = (output, metalSheet) => { 
@@ -57,14 +57,12 @@ if(Platform.isLoaded("steampowered")) {
     boiler('steampowered:steel_boiler', 'alloyed:steel_sheet')
 
     // Engines & Flywheels
-    zincMachine(event,Item.of('steampowered:bronze_steam_engine'), 'alloyed:bronze_block')
-    zincMachine(event,Item.of('steampowered:cast_iron_steam_engine'), 'createdeco:cast_iron_block')
-    zincMachine(event,Item.of('steampowered:steel_steam_engine'), 'alloyed:steel_block')
+    zincMachine(event,Item.of('steampowered:bronze_steam_engine'), '#forge:storage_blocks/bronze')
+		zincMachine(event,Item.of('steampowered:cast_iron_steam_engine'), '#forge:storage_blocks/cast_iron')
+    zincMachine(event,Item.of('steampowered:steel_steam_engine'), '#forge:storage_blocks/steel')
 
-    createMachine('create:flywheel', event, 'steampowered:bronze_flywheel', 'alloyed:bronze_block')
-    createMachine('create:flywheel', event, 'steampowered:cast_iron_flywheel', 'createdeco:cast_iron_block')
-    createMachine('create:flywheel', event, 'steampowered:steel_flywheel', 'alloyed:steel_block')
+    createMachine('create:flywheel', event, 'steampowered:bronze_flywheel', '#forge:storage_blocks/bronze')
+    createMachine('create:flywheel', event, 'steampowered:cast_iron_flywheel', '#forge:storage_blocks/cast_iron')
+    createMachine('create:flywheel', event, 'steampowered:steel_flywheel', '#forge:storage_blocks/steel')
   })
 }
-
-
