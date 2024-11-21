@@ -32,7 +32,7 @@ onEvent('item.tags', event => {
 	});
 
 	global.trades.forEach(element => {
-		event.get('kubejs:transaction_cards/trade').add(`kubejs:trade_card_${element}`)
+		event.get('kubejs:transaction_cards/import').add(`kubejs:trade_card_${element}`)
 	});
 
 	global.professions.forEach(element => {
@@ -80,7 +80,7 @@ onEvent('item.tags', event => {
 	event.get('kubejs:chromatic_resonators').add(KJ('chromatic_resonator'))
 	event.get('kubejs:flash_drives').add(KJ('flash_drive'))
 
-	event.get('kubejs:transaction_cards').add('#kubejs:transaction_cards/trade')
+	event.get('kubejs:transaction_cards').add('#kubejs:transaction_cards/import')
 	event.get('kubejs:transaction_cards').add('#kubejs:transaction_cards/profession')
 
 	//This tag prevents items from being consumed in press (market) recipes
