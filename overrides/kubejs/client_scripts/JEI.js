@@ -1,9 +1,12 @@
 onEvent('rei.group', event => {
 
-	event.groupItemsByTag('supplementaries:rei_groups/hanging_signs', 'Sign Posts', 'supplementaries:hanging_signs')
-	event.groupItemsByTag('supplementaries:rei_groups/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
-	event.groupItemsByTag('tconstruct:rei_groups/modifiable', 'Tinkers Tools', 'tconstruct:modifiable')
-	event.groupItemsByTag('tconstruct:rei_groups/parts', 'Tinkers Parts', 'tconstruct:parts')
+	event.groupItemsByTag('kubejs:rei_groups/supplementaries/hanging_signs', 'Sign Posts', 'supplementaries:hanging_signs')
+	event.groupItemsByTag('kubejs:rei_groups/supplementaries/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
+
+  // trades cards need a rework first
+	// event.groupItemsByTag('kubejs:rei_groups/kubejs/transaction_cards/profession', 'Trade Card: Profession', "kubejs:transaction_cards/profession")
+	// event.groupItemsByTag('kubejs:rei_groups/kubejs/transaction_cards/import', 'Trade Card: Import', "kubejs:transaction_cards/import")
+
 
 	const useNbt = [
     'reliquary:potion',
@@ -34,8 +37,6 @@ onEvent('rei.group', event => {
 		const { namespace, path } = Utils.id(item.id)
 		event.groupSameItem(`kubejs:rei_groups/${namespace}/${path}`, item.name, item)
 	})
-
-
 
 	event.groupSameItem('kubejs:rei_groups/microblocks', 'Microblocks', "cb_microblock:microblock")
 

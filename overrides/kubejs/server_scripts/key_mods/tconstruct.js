@@ -35,10 +35,28 @@ onEvent('recipes', event => {
 	event.remove({ id: TC('smeltery/casts/sand_casts/coins') })
 	event.remove({ id: TC('smeltery/casts/red_sand_casts/coins') })
 	event.remove({ id: TC('smeltery/casts/gold_casts/coins') })
-	event.remove({ id:TC('smeltery/casting/metal/gold/coin_gold_cast') })
-	event.remove({ id:TC('smeltery/casting/metal/gold/coin_sand_cast') })
-	event.remove({ id:TC('smeltery/casting/metal/silver/coin_gold_cast') })
-	event.remove({ id:TC('smeltery/casting/metal/silver/coin_sand_cast') })
+
+	let coinMaterials = [
+		'iron',
+		'gold',
+		'copper',
+		'netherite',
+		'tin',
+		'lead',
+		'silver',
+		'nickel',
+		'bronze',
+		'electrum',
+		'invar',
+		'constantan',
+		'signalum',
+		'lumium',
+		'enderium'
+	];
+	coinMaterials.forEach(material=>{
+		event.remove({ id:TC(`smeltery/casting/metal/${coinMaterials}/coin_gold_cast`) })
+		event.remove({ id:TC(`smeltery/casting/metal/${coinMaterials}/coin_sand_cast`) })
+	})
 	//Remove enchanted apple melting recipe
 	event.remove({ id: TC('smeltery/melting/metal/gold/enchanted_apple') })
 	//Remove Tconstruct cheese since it only costs milk to craft and cheese already exists on the moon.

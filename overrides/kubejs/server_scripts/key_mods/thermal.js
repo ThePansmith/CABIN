@@ -136,22 +136,80 @@ onEvent('recipes', event => {
 	event.recipes.thermal.chiller(TC('blood_slime_ball'), [Fluid.of("tconstruct:blood", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/blood_slime_ball');
 
 	//port melting recipes for dusts, ingots and gems
-	event.forEachRecipe([
-		{ type: 'tconstruct:melting', input: ['#forge:ingots', '#forge:gems'] },
-		{ type: 'tconstruct:melting', input: '#forge:dusts', not: {input: '#kubejs:ore_processing/metal/dusts' }}
-	], recipe => {
-		//recipe.json gives us some info that the recipe object cannot give us
-		let recipeJSON = JSON.parse(recipe.json)
+	const TICMETALS = [
+		"aluminum",
+		"amethyst_bronze",
+		"brass",
+		"bronze",
+		"cobalt",
+		"constantan",
+		//"copper",
+		"electrum",
+		"enderium",
+		//"gold",
+		"hepatizon",
+		"invar",
+		//"iron",
+		"knightslime",
+		//"lead",
+		"lumium",
+		"manyullyn",
+		"netherite",
+		//"nickel",
+		"osmium",
+		"pewter",
+		"pig_iron",
+		"platinum",
+		"queens_slime",
+		"refined_glowstone",
+		"refined_obsidian",
+		"rose_gold",
+		"signalum",
+		"silver",
+		"slimesteel",
+		"soulsteel",
+		"steel",
+		"tin",
+		"tungsten",
+		"uranium"//,
+		//"zinc"
+	];
+	const TICGEMS = [
+		"diamond",
+		"emerald",
+		"quartz",
+		"amethyst",
+	]
 
-		let inputItem = recipeJSON.ingredient;
-		let resultFluid = recipeJSON.result;
-		
-		//Creating the ported recipe
-		event.custom({
-			type:"thermal:crucible",
-			ingredients:[inputItem],
-			result:[resultFluid],
-			energy:recipeJSON.time*50
-		}).id(`kubejs:crucible/${recipe.getId().replace(':', '/')}`)
+	TICMETALS.forEach(metal=>{
+		if (Ingredient.of(`#forge:dusts/${metal}`).first != Item.empty) {
+			event.custom({
+				type:"thermal:crucible",
+				ingredients:{tag: `forge:dusts/${metal}`},
+				result:{fluid: `tconstruct:molten_${metal}`, amount: 90},
+				energy:5000
+			}).id(`kubejs:crucible/tconstruct/smeltery/melting/metal/${metal}/dust`)
+		}
+	})
+	TICMETALS.concat(['copper', 'gold', 'iron', 'lead', 'nickel', 'zinc'])
+	TICMETALS.forEach(metal=>{
+		if (Ingredient.of(`#forge:ingots/${metal}`).first != Item.empty) {
+			event.custom({
+				type:"thermal:crucible",
+				ingredients:{tag: `forge:ingots/${metal}`},
+				result:{fluid: `tconstruct:molten_${metal}`, amount: 90},
+				energy:5000
+			}).id(`kubejs:crucible/tconstruct/smeltery/melting/metal/${metal}/ingot`)
+		}
+	})
+	TICGEMS.forEach(gem=>{
+		if (Ingredient.of(`#forge:gems/${gem}`).first != Item.empty) {
+			event.custom({
+				type:"thermal:crucible",
+				ingredients:{tag: `forge:gems/${gem}`},
+				result:{fluid: `tconstruct:molten_${gem}`, amount: 100},
+				energy:5000
+			}).id(`kubejs:crucible/tconstruct/smeltery/melting/${gem}/gem`)
+		}
 	})
 })
