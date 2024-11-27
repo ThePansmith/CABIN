@@ -1,0 +1,13 @@
+{
+  "parent": "thermal:block/frame_base",
+  "textures": {
+    "particle": "cabin:block/enderium_machine_top",
+    "down": "cabin:block/enderium_machine_bottom",
+    "up": "cabin:block/enderium_machine_top",
+    "north": "cabin:block/enderium_machine_side",
+    "east": "cabin:block/enderium_machine_side",
+    "south": "cabin:block/enderium_machine_side",
+    "west": "cabin:block/enderium_machine_side",
+    "inner": "cabin:block/enderium_machine_inner"
+  }
+}
