@@ -36,8 +36,8 @@ onEvent('item.registry', event => {
 		event.create(`profession_card_${id}`)
 			.color(1, c1)
 			.color(2, c2)
-			.parentModel("kubejs:item/profession_card")
-			.texture("kubejs:item/profession_card_0")
+			.parentModel("cabin:item/profession_card")
+			.texture("cabin:item/profession_card_0")
 			.displayName(`Profession: ${name}`)
 			.unstackable()
 	}
@@ -49,8 +49,8 @@ onEvent('item.registry', event => {
 		event.create(`trade_card_${id}`)
 			.color(1, c1)
 			.color(2, c2)
-			.parentModel("kubejs:item/trade_card")
-			.texture("kubejs:item/trade_card_0")
+			.parentModel("cabin:item/trade_card")
+			.texture("cabin:item/trade_card_0")
 			.displayName((custom ? "" : "Import: ") + name)
 			.unstackable()
 	}

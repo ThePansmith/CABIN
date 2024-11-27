@@ -1,7 +1,0 @@
-{
-	"ctm": {
-		"ctm_version": 1,
-		"type": "ctm",
-		"textures": [ "kubejs:block/enderium_casing_ctm" ]
-	}
-}
