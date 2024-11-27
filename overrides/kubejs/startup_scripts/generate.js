@@ -1,5 +1,7 @@
 // priority: 0
 
+//Textures must use the 'cabin' namespace to avoid a bug involving kubejs loading textures from resource packs.
+//Textures must also be stored in a resource pack since the kubejs assets folder cannot be overridden using resource packs for whatever reason
 onEvent('item.registry', event => {
 
 	let types = ['Certus', 'Fluix']
