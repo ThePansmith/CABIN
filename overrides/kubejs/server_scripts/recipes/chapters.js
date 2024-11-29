@@ -257,9 +257,9 @@ onEvent('recipes', event => {
 	goldMachine(event, Item.of('railways:track_switch_brass', 1), 'create:brass_ingot')
 	
 	// - - - - - Chapter 2 - - - - -
-	event.remove({ id: CR('compat/ae2/milling/sky_stone_block') })
-	event.remove({ id: CR('compat/ae2/milling/nether_quartz') })
-	event.remove({ id: CR('compat/ae2/milling/certus_quartz') })
+	event.remove({ id: CR('milling/compat/ae2/sky_stone_block') })
+	event.remove({ id: CR('milling/compat/ae2/nether_quartz') })
+	event.remove({ id: CR('milling/compat/ae2/certus_quartz') })
 	event.remove({ id: CR('crafting/materials/electron_tube') })
 	event.remove({ id: CR('crafting/materials/rose_quartz') })
 	event.remove({ id: CR('sandpaper_polishing/rose_quartz') })

@@ -6,7 +6,7 @@ onEvent('client.init', event => {
 	//The version only needs to be updated when the default enabled resource packs are changed. Otherwise this number can stay the same.
 	//Give each part of the semantic version 2 digits 1.3.3 -> 010303 = 10303.
 	const resourceOptionsVersion = 10303;
-	const fileName = 'kubejs/client_data';
+	const fileName = 'kubejs_client_data.json';
 
 	//read data from the file saved in the client's Kubejs folder
 	let data = JsonIO.read(fileName) || {};
