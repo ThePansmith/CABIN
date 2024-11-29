@@ -782,6 +782,7 @@
 				id: "09FD6301B7CF206E"
 				type: "item"
 				item: "thermal:fluid_duct"
+				consume_items: false
 			}]
 			rewards: [{
 				id: "3A35387B6A431842"
@@ -866,6 +867,7 @@
 					Count: 1b
 					tag: { }
 				}
+				consume_items: false
 			}]
 			rewards: [{
 				id: "65589D633E5A9F73"
