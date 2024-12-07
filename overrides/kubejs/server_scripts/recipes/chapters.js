@@ -263,7 +263,6 @@ onEvent('recipes', event => {
 	event.remove({ id: CR('crafting/materials/electron_tube') })
 	event.remove({ id: CR('crafting/materials/rose_quartz') })
 	//event.remove({ id: CR('sandpaper_polishing/rose_quartz') })
-	//event.remove({ id: CR('sandpaper_polishing/rose_quartz') })
 
 	{ //This is a part of the chapter 2 script for some reason
 		let redstoneTransmute = (input, output) => {

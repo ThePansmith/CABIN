@@ -136,7 +136,7 @@
 			tasks: [{
 				id: "27B07858A6018539"
 				type: "stat"
-				title: "Completed Bonus 1A"
+				title: "Complete Bonus 1A"
 				icon: "kubejs:sealed_mechanism"
 				stat: "minecraft:play_time"
 				value: 1
@@ -520,7 +520,7 @@
 			tasks: [{
 				id: "159661080AE7707A"
 				type: "stat"
-				title: "Completed Bonus 1B"
+				title: "Complete Bonus 1B"
 				icon: "kubejs:reinforced_mechanism"
 				stat: "minecraft:play_time"
 				value: 1
