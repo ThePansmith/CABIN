@@ -30,7 +30,7 @@ if(Platform.isLoaded("steampowered")) {
 
     // Burners & Boilers
     let burner = (output, metalSheet) => { 
-      event.recipes.create.mechanical_crafting(output, [
+      event.shaped(output, [
         'III',
         'I I',
         'BBB'
@@ -44,7 +44,7 @@ if(Platform.isLoaded("steampowered")) {
     burner('steampowered:steel_burner', 'alloyed:steel_sheet')
 
     let boiler = (output, metalSheet) => {
-      event.recipes.create.mechanical_crafting(output, [
+      event.shaped(output, [
         'MM ',
         'MTM',
         ' MM'
