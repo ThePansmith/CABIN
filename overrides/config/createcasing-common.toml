@@ -1,0 +1,18 @@
+
+#.
+#Modify Create Encased blocks comportements
+[kinetics]
+	#.
+	#Should Brass/Copper/Train mixe faster
+	shouldCustomMixerMixeFaster = false
+	#.
+	#Should Wooden Shaft break if the speed is too high
+	shouldWoodenShaftBreak = true
+	#.
+	#Should Glass Shaft break if the system is overstressed
+	shouldGlassShaftBreak = true
+	#.
+	#The max speed wooden shafts can endure
+	#Range: 2 ~ 256
+	maxSpeedWoodenShaft = 32
+
