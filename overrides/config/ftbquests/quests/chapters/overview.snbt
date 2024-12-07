@@ -120,7 +120,6 @@
 		}
 		{
 			title: "Copper Machinery"
-			disable_toast: true
 			x: -8.0d
 			y: 2.5d
 			subtitle: "Utility"
@@ -131,16 +130,15 @@
 			]
 			dependencies: [
 				"7D872F933F45809B"
-				"6545C3F427B12106"
+				"0E0535849D8D9279"
 			]
 			id: "342BB6EF80EBFDCA"
 			tasks: [{
 				id: "27B07858A6018539"
 				type: "stat"
-				title: "Complete Bonus 1A"
+				title: "Completed Bonus 1A"
 				icon: "kubejs:sealed_mechanism"
-				disable_toast: true
-				stat: "minecraft:play_one_minute"
+				stat: "minecraft:play_time"
 				value: 1
 			}]
 		}
