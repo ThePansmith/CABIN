@@ -64,5 +64,10 @@ if(Platform.isLoaded("createaddition")) {
 				event.recipes.createPressing('kubejs:incomplete_connector', 'kubejs:incomplete_connector')
 			]
 		).transitionalItem('kubejs:incomplete_large_connector').loops(1)
+
+		//Flammable Liquids in the Compression Dynamo
+			event.recipes.thermal.compression_fuel(Fluid.of('createaddition:bioethanol', 1000)).energy(1000000)
+			event.recipes.thermal.compression_fuel(Fluid.of('createaddition:seed_oil', 1000)).energy(30000)
+		//Done!
 	})
 }
