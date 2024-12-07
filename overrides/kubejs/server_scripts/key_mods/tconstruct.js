@@ -54,8 +54,9 @@ onEvent('recipes', event => {
 		'enderium'
 	];
 	coinMaterials.forEach(material=>{
-		event.remove({ id:TC(`smeltery/casting/metal/${coinMaterials}/coin_gold_cast`) })
-		event.remove({ id:TC(`smeltery/casting/metal/${coinMaterials}/coin_sand_cast`) })
+		event.remove({ id:TC(`smeltery/casting/metal/${material}/coin_gold_cast`) })
+		event.remove({ id:TC(`smeltery/casting/metal/${material}/coin_sand_cast`) })
+		event.remove({ id:TC(`smeltery/casting/metal/${material}/coin_red_sand_cast`) })
 	})
 	//Remove enchanted apple melting recipe
 	event.remove({ id: TC('smeltery/melting/metal/gold/enchanted_apple') })
