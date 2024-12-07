@@ -65,9 +65,17 @@ if(Platform.isLoaded("createaddition")) {
 			]
 		).transitionalItem('kubejs:incomplete_large_connector').loops(1)
 
-		//Flammable Liquids in the Compression Dynamo
+		//Bioethanol & Seed Oil in the Compression Dynamo
 			event.recipes.thermal.compression_fuel(Fluid.of('createaddition:bioethanol', 1000)).energy(1000000)
 			event.recipes.thermal.compression_fuel(Fluid.of('createaddition:seed_oil', 1000)).energy(30000)
+		//Done!
+
+		//Cake Compatibility
+			event.recipes.createFilling('tconstruct:earth_cake', ['createaddition:cake_base_baked',Fluid.of('tconstruct:earth_slime', 1000)])
+			event.recipes.createFilling('tconstruct:sky_cake', ['createaddition:cake_base_baked',Fluid.of('tconstruct:sky_slime', 1000)])
+			event.recipes.createFilling('tconstruct:ender_cake', ['createaddition:cake_base_baked',Fluid.of('tconstruct:ender_slime', 1000)])
+			event.recipes.createFilling('tconstruct:blood_cake', ['create:blaze_cake_base',Fluid.of('tconstruct:blood', 1000)])
+			event.recipes.createFilling('tconstruct:magma_cake', ['create:blaze_cake_base',Fluid.of('tconstruct:magma', 1000)])
 		//Done!
 	})
 }
