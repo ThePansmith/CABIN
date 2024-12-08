@@ -1,0 +1,119 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "builtin/entity",
+  "texture_size": [
+    128,
+    128
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        31.5,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        -3,
+        -7.5
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        31.5,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        -3,
+        -7.5
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        4,
+        5,
+        0
+      ],
+      "translation": [
+        1.25,
+        -3,
+        -5.5
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        4,
+        5,
+        0
+      ],
+      "translation": [
+        1.25,
+        -3,
+        -5.5
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    "ground": {
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "gui": {
+      "rotation": [
+        59.11,
+        53.1,
+        -34.51
+      ],
+      "translation": [
+        -0.5,
+        -3.5,
+        0
+      ],
+      "scale": [
+        0.47,
+        0.47,
+        0.47
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "translation": [
+        0,
+        -4.5,
+        0
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    }
+  }
+}
