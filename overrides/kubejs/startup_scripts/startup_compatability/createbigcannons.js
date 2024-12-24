@@ -15,4 +15,6 @@ if (Platform.isLoaded("createbigcannons")) {
 
 	global.randomiumBlacklist.push("createbigcannons:traffic_cone")
 	global.randomiumBlacklist.push("createbigcannons:creative_autocannon_ammo_container")
+	global.randomiumBlacklist.push("createbigcannons:cannon_crafting_wand")
+	global.randomiumBlacklist.push("createbigcannons:block_armor_inspection_tool")
 }
