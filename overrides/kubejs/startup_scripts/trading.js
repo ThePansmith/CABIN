@@ -121,7 +121,7 @@ onEvent('item.registry', event => {
 	profession("Cooking", 0xD8B384, 0xF7DAD9, [
 		{ in: '64x #kubejs:cookies', out: S(2) },
 		{ in: FD('tomato_sauce', 8), out: S(3) },
-		{ in: FD('cake_slice', 14), out: S(3) },
+		{ in: '14x #kubejs:cake_slices', out: S(3) },
 		{ in: FD('sweet_berry_cheesecake_slice', 17), out: S(3) },
 		{ in: SP('pancake', 32), out: S(4) },
 		{ in: '16x #market:export/food/3', out: S(3) },
@@ -133,7 +133,8 @@ onEvent('item.registry', event => {
 		{ in: '16x #market:export/food/9', out: S(9) },
 		{ in: '16x #market:export/food/10', out: S(10) },
 		{ in: '16x #market:export/food/11', out: S(11) },
-		{ in: FD('pumpkin_soup', 16), out: S(12) }
+		{ in: '16x #market:export/food/12', out: S(12) },
+		{ in: '16x #market:export/food/15', out: S(15) }
 	])
 
 	profession("Fishing", 0x9DDFD3, 0xDBF6E9, [
@@ -159,9 +160,7 @@ onEvent('item.registry', event => {
 		{ in: MC('golden_leggings'), out: S(7) },
 		{ in: MC('golden_boots'), out: S(4) },
 		{ in: MC('golden_apple'), out: S(10) },
-		{ in: TC('ingot_cast'), out: S(2) },
-		{ in: TC('pick_head_cast'), out: S(3) },
-		{ in: TC('gem_cast'), out: S(4) },
+		{ in: TC('#casts/gold'), out: S(2) },
 		{ in: MC('#arrows', 32), out: S(3) }
 	])
 
