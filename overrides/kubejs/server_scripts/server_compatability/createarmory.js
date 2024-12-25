@@ -3,15 +3,16 @@ if(Platform.isLoaded("createarmory")) {
 	onEvent('recipes', event => {
   
     // Strengthened Molten Brass Rework
-    event.remove({id: 'createarmory:strengthened_brass_recipe'})
-    event.recipes.createMixing(Fluid.of('createarmory:molten_brass', 3), [Fluid.of('tconstruct:molten_brass', 3), Fluid.of('tconstruct:molten_copper', 3)]).processingTime(1)
-    event.recipes.createMixing(Fluid.of('createarmory:molten_brass', 1), [Fluid.of('tconstruct:molten_brass', 1), Fluid.of('tconstruct:molten_copper', 1)]).processingTime(1)
+    //event.remove({id: 'createarmory:strengthened_brass_recipe'})
+    //event.recipes.createMixing(Fluid.of('createarmory:molten_brass', 3), [Fluid.of('tconstruct:molten_brass', 3), Fluid.of('tconstruct:molten_copper', 3)]).processingTime(1)
+    //event.recipes.createMixing(Fluid.of('createarmory:molten_brass', 1), [Fluid.of('tconstruct:molten_brass', 1), Fluid.of('tconstruct:molten_copper', 1)]).processingTime(1)
 
     // Bullet Casings Rework
     event.remove({id: 'createarmory:nine_mm_mold_complete_recipe'})
     event.remove({id: 'createarmory:fifty_cal_mold_complete_recipe'})
     event.remove({id: 'createarmory:five_five_six_mold_complete_recipe'})
-    let casing = (type, inter, brassAmount) => {
+    let casing = (type, brassAmount) => {
+      let inter = `kubejs:unfinished_${type}_mold`
       event.recipes.createSequencedAssembly([
         'createarmory:' + type + '_mold_complete',],
         'createarmory:' + type + '_mold',[
@@ -20,16 +21,16 @@ if(Platform.isLoaded("createarmory")) {
       .loops(1)
       .transitionalItem(inter)
     }
-    casing('nine_mm', 'kubejs:incomplete_9mm_mold', 10)
-    casing('fifty_cal', 'kubejs:incomplete_50_cal_mold', 25)
-    casing('five_five_six', 'kubejs:incomplete_556_mold', 15)
+    casing('nine_mm', 10)
+    casing('fifty_cal', 25)
+    casing('five_five_six', 15)
 
     // Bullet Molds Rework
     event.remove({id: 'createarmory:nine_mm_mold_break'})
     event.remove({id: 'createarmory:fifty_cal_mold_break'})
     event.remove({id: 'createarmory:five_five_six_mold_break'})
     let mold = (casing, mold) => {
-      event.recipes.createCutting('createarmory:' + casing, 'createarmory:' + mold).processingTime(100)
+      event.recipes.createCutting('createarmory:' + casing, 'createarmory:' + mold)
     }
     mold('nine_mm_casing', 'nine_mm_mold_complete')
     mold('fifty_cal_casing', 'fifty_cal_mold_complete')

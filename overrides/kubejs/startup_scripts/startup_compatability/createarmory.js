@@ -14,9 +14,9 @@ if (Platform.isLoaded("createarmory")) {
 	global.itemBlacklist.push("createarmory:unfinished_five_five_six_casing")
 	global.itemBlacklist.push("createarmory:unfinished_shotgun_shell")
 
-	global.itemBlacklist.push("kubejs:incomplete_9mm_mold")
-	global.itemBlacklist.push("kubejs:incomplete_50_cal_mold")
-	global.itemBlacklist.push("kubejs:incomplete_556_mold")
+	global.itemBlacklist.push("kubejs:unfinished_nine_mm_mold")
+	global.itemBlacklist.push("kubejs:unfinished_fifty_cal_mold")
+	global.itemBlacklist.push("kubejs:unfinished_five_five_six_mold")
 
 	global.itemBlacklist.push("createarmory:impact_nade")
 	global.itemBlacklist.push("createarmory:smoke_nade")
@@ -32,14 +32,14 @@ if (Platform.isLoaded("createarmory")) {
 	global.jeiFluidBlacklist.push("createarmory:flowing_molten_brass")
 
 	onEvent('item.registry', event => {
-		event.create("incomplete_9mm_mold")
-			.texture("createarmory:item/incomplete_9mm_mold")
+		event.create("unfinished_nine_mm_mold")
+			.texture("cabin:item/compat/createarmory/unfinished_nine_mm_mold")
 			.displayName("Incomplete 9mm Casing"),
-		event.create("incomplete_50_cal_mold")
-			.texture("createarmory:item/incomplete_50_cal_mold")
+		event.create("unfinished_fifty_cal_mold")
+			.texture("cabin:item/compat/createarmory/unfinished_fifty_cal_mold")
 			.displayName("Incomplete 50 Caliber Casing")
-		event.create("incomplete_556_mold")
-			.texture("createarmory:item/incomplete_556_mold")
+		event.create("unfinished_five_five_six_mold")
+			.texture("cabin:item/compat/createarmory/unfinished_five_five_six_mold")
 			.displayName("Incomplete 556 Casing")
 	})
 }
