@@ -1,0 +1,39 @@
+{
+  "item.createarmory.double_barrel": "Double-Barreled Shotgun",
+  "item.createarmory.m_sixteen": "M16",
+  "item.createarmory.barret": "M82",
+  "item.createarmory.mac_ten": "MAC-10",
+  "item.createarmory.mini_gun": "4-Barreled Minigun",
+  "item.createarmory.upgraded_mini_gun": "8-Barreled Minigun",
+
+  "item.createarmory.empty_pipe_pistol": "Pipe Pistol",
+  "item.createarmory.empty_double_barrel": "Double-Barreled Shotgun",
+  "item.createarmory.empty_junk_gun": "Junk Gun",
+  "item.createarmory.empty_m_sixteen": "M16",
+  "item.createarmory.empty_m_four": "M4A4",
+  "item.createarmory.empty_barret": "M82",
+  "item.createarmory.empty_rpg": "RPG",
+  "item.createarmory.empty_mac_ten": "MAC-10",
+  "item.createarmory.empty_four_sixteen": "AR-416",
+
+  "item.createarmory.barret_lower": "M82 Grip",
+  "item.createarmory.barret_upper": "M82 Barrel",
+  "item.createarmory.m_four_lower": "M4 Grip",
+  "item.createarmory.m_four_upper": "M4A4 Barrel",
+  "item.createarmory.m_sixteen_upper": "M16 Barrel",
+  "item.createarmory.four_sixteen_upper": "AR-416 Barrel",
+  "item.createarmory.minigun_base": "Minigun Body",
+
+  "item.createarmory.unfinished_shotgun_shell": "Incomplete Shotgun Shell",
+  "item.createarmory.unfinished_fifty_cal_casing": "Incomplete 50 Caliber Bullet",
+  "item.createarmory.unfinished_five_five_six_casing": "Incomplete 556 Bullet",
+  "item.createarmory.unfinished_nine_mm": "Incomplete 9mm Bullet",
+
+  "block.createarmory.gun_mount": "Weapon Support",
+
+  "subtitles.m16.fire": "M16 Shoots",
+  "subtitles.m4.fire": "M4A4 Shoots",
+  "subtitles.mac10.fire": "MAC-10 Shoots",
+  "subtitles.mac10.fire2": "MAC-10 Shoots",
+  "subtitles.mac10.reload": "MAC-10 Reload"
+}
