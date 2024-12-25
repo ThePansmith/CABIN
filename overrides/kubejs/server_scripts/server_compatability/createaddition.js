@@ -78,4 +78,10 @@ if(Platform.isLoaded("createaddition")) {
 			event.recipes.createFilling('tconstruct:magma_cake', ['create:blaze_cake_base',Fluid.of('tconstruct:magma', 1000)])
 		//Done!
 	})
+	
+	onEvent('item.tags', event => {
+		event.get('kubejs:cake_slices')
+			.add('create_central_kitchen:chocolate_cake_slice')
+			.add('create_central_kitchen:honey_cake_slice')
+	})
 }
