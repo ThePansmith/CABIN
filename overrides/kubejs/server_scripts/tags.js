@@ -65,6 +65,7 @@ onEvent('item.tags', event => {
 		.add(AE2("logic_processor_press"))
 		.add(AE2("engineering_processor_press"))
 		.add(AE2("calculation_processor_press"))
+		.add('kubejs:circuit_scrap')
 
 	event.get("forbidden_arcanus:modifier/eternal_incompatible")
 		.add(/exchangers:.*/)
@@ -86,6 +87,12 @@ onEvent('item.tags', event => {
 	//This tag prevents items from being consumed in press (market) recipes
 	event.get('thermal:crafting/dies').add('#kubejs:transaction_cards')
 	event.get('thermal:crafting/dies').add('kubejs:missingno')
+
+	event.get('thermal:crafting/casts').add(KJ("three_cast")).add(KJ("eight_cast")).add(KJ("plus_cast")).add(KJ("minus_cast")).add(KJ("multiply_cast")).add(KJ("divide_cast")).add(KJ("#circuit_press"))
+	event.get('tconstruct:crafting/casts').add(TC('nugget_cast')).add(TC('ingot_cast')).add(TC('gem_cast')).add(TC('rod_cast')).add(TC('repair_kit_cast')).add(TC('plate_cast')).add(TC('gear_cast')).add(TC('wire_cast')).add(TC('pick_head_cast')).add(TC('small_axe_head_cast')).add(TC('small_blade_cast')).add(TC('hammer_head_cast')).add(TC('broad_blade_cast')).add(TC('broad_axe_head_cast')).add(TC('tool_binding_cast')).add(TC('round_plate_cast')).add(TC('large_plate_cast')).add(TC('tool_handle_cast')).add(TC('bow_grip_cast')).add(TC('bow_limb_cast')).add(TC('tough_handle_cast'))
+	event.get('kubejs:casts')
+		.add('#thermal:crafting/casts')
+		.add('#tconstruct:crafting/casts')
 
 	//Tags for use in market recipes	
 		event.get('kubejs:food_crate')
@@ -406,10 +413,10 @@ onEvent('item.tags', event => {
 			.add(MC('golden_leggings'))
 			.add(MC('golden_boots'))
 			.add(MC('golden_apple'))
-			.add(TC('#casts/gold'))
+			.add(KJ('#casts'))
 			.add(MC('#arrows'))
 			.add('kubejs:profession_card_smithing')
-		
+
 		event.get('market:export')
 			.add('#market:export/farming')
 			.add('#market:export/carpentry')
@@ -423,8 +430,6 @@ onEvent('item.tags', event => {
 			.add('thermal:silver_coin')
 			.add('thermal:gold_coin')
 	//Dome!
-
-	event.get('thermal:crafting/casts').add(KJ("three_cast")).add(KJ("eight_cast")).add(KJ("plus_cast")).add(KJ("minus_cast")).add(KJ("multiply_cast")).add(KJ("divide_cast")).add(KJ("#circuit_press"))
 
 	event.get('create:upright_on_belt')
 		.add(AE2("red_paint_ball"))

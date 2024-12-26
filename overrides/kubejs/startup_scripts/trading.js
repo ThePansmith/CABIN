@@ -160,7 +160,7 @@ onEvent('item.registry', event => {
 		{ in: MC('golden_leggings'), out: S(7) },
 		{ in: MC('golden_boots'), out: S(4) },
 		{ in: MC('golden_apple'), out: S(10) },
-		{ in: TC('#casts/gold'), out: S(2) },
+		{ in: KJ('#casts'), out: S(2) },
 		{ in: MC('#arrows', 32), out: S(3) }
 	])
 
