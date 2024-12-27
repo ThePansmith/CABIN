@@ -47,6 +47,11 @@ onEvent('item.tags', event => {
 	
 	event.get("forge:vines").add(MC("vine"))
 
+	event.get('forge:mushrooms')
+		.add(EXP('sweetshroom')).add(EXP('goldishroom')).add(EXP('shinyshroom'))
+		.add(EXP('lumishroom')).add(EXP('fluoshroom')).add(EXP('rockshroom'))
+		.add('quark:glow_shroom')
+
 	//These items aren't obtainable at the moment.
 	//This tag lets these items be melted into iron using the smeltery
 	event.get("kubejs:recycling/iron")
