@@ -1479,7 +1479,7 @@
 		"Food Compression Threshold" = 4
 		#The value of each shank of food. Tweak this when using mods like Hardcore Hunger which change that value.
 		"Food Divisor" = 2
-		"Enchanting Stacks" = ["create:copper_backtank", "minecraft:diamond_sword", "minecraft:diamond_pickaxe", "minecraft:diamond_shovel", "minecraft:diamond_axe", "minecraft:diamond_hoe", "minecraft:diamond_helmet", "minecraft:diamond_chestplate", "minecraft:diamond_leggings", "minecraft:diamond_boots", "minecraft:shears", "minecraft:bow", "minecraft:fishing_rod", "minecraft:crossbow", "minecraft:trident", "minecraft:elytra", "quark:pickarang", "farmersdelight:diamond_knife", "supplementaries:slingshot", "create:potato_cannon", "ae2:annihilation_plane", "waterstrainer:strainer_fisherman_reinforced", "supplementaries:wrench", "exchangers:diamond_exchanger"]
+		"Enchanting Stacks" = ["minecraft:diamond_sword", "minecraft:diamond_pickaxe", "minecraft:diamond_shovel", "minecraft:diamond_axe", "minecraft:diamond_hoe", "minecraft:diamond_helmet", "minecraft:diamond_chestplate", "minecraft:diamond_leggings", "minecraft:diamond_boots", "farmersdelight:diamond_knife", "exchangers:diamond_exchanger", "minecraft:shears", "minecraft:bow", "minecraft:fishing_rod", "minecraft:crossbow", "minecraft:trident", "supplementaries:slingshot", "minecraft:elytra", "quark:pickarang", "supplementaries:wrench", "create:potato_cannon", "create:copper_backtank", "ae2:annihilation_plane", "waterstrainer:strainer_fisherman_reinforced"]
 		#A list of additional stacks to display on each enchantment
 		#The format is as follows:
 		#enchant_id=item1,item2,item3...
