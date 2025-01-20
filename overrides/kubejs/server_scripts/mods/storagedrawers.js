@@ -49,7 +49,7 @@ if(Platform.isLoaded("storagedrawers")) {
 
 		//Upgrades
 		let upgrades = ['obsidian_storage','iron_storage','gold_storage','diamond_storage','emerald_storage','one_stack','conversion','redstone','illumination','fill_level']
-		let ingredients = [MC('obsidian'),MC('iron_ingot'),MC('gold_ingot'),MC('diamond'),MC('emerald'),MC('flint'),MC('lapis_lazuli'),MC('redstone'),MC('glowstone'),MC('repeater')]
+		let ingredients = [MC('obsidian'),MC('iron_ingot'),MC('gold_ingot'),MC('diamond'),MC('emerald'),MC('flint'),MC('lapis_lazuli'),MC('redstone'),MC('glowstone_dust'),MC('repeater')]
 		for (let i = 0; i < upgrades.length; i++) {
 			event.smithing(`storagedrawers:${upgrades[i]}_upgrade`, 'storagedrawers:upgrade_template', ingredients[i])
 		}
