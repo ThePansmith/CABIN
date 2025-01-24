@@ -32,6 +32,12 @@ if(Platform.isLoaded("reliquary")) {
 		event.recipes.createMixing(RQ('witherless_rose'),[MC('rose_bush'),Fluid.of(KJ('fertile_potion'),vialAmount*4),F('#nether_stars',4)])
 		event.recipes.createFilling(RQ('fertile_lily_pad'),[MC('lily_pad'),Fluid.of(KJ('fertile_potion'),vialAmount*3)])
 		event.recipes.createMixing(RQ('angelic_feather'),[F('#feathers'),RQ('nebulous_heart'),RQ('bat_wing'),Fluid.of(KJ('fertile_potion'),vialAmount)])
+		if (Platform.isLoaded("sliceanddice")){
+			event.recipes.create.mixing(
+				[Fluid.of('minecraft:water',216),Fluid.of('kubejs:fertile_potion',24)],
+				[Fluid.of('sliceanddice:fertilizer',240)]
+			)
+		}
 
 		//Mob drops
 		event.remove({id:"reliquary:uncrafting/bone"})
