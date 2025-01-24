@@ -43,6 +43,13 @@ if(Platform.isLoaded("reliquary")) {
 				Item.of(dye).withCount(5).withChance(0.40),
 				Item.of(MC('bone_meal',15)).withChance(0.40)
 			], rib)
+			if(Platform.isLoaded('thermal')){
+				event.recipes.thermal.pulverizer([
+					MC('bone_meal',15),
+					Item.of(dye).withCount(5).withChance(0.40),
+					Item.of(MC('bone_meal',15)).withChance(0.40)
+				], rib)
+			}
 		}
 		boneProcess(RQ('rib_bone'), MC('bone'), MC('white_dye'))
 		event.recipes.createMilling([MC('gunpowder',8)],RQ('catalyzing_gland'))
@@ -121,6 +128,12 @@ if(Platform.isLoaded("reliquary")) {
 					"count":6
 				}]
 			})
+			event.recipes.thermal.pulverizer([MC('gunpowder',8)],RQ('catalyzing_gland'))
+			event.recipes.thermal.pulverizer([MC('gunpowder',12)],RQ('eye_of_the_storm'))
+			event.recipes.thermal.pulverizer([MC('snowball',6)],RQ('frozen_core'))
+			event.recipes.thermal.pulverizer(['4x ae2:ender_dust'],RQ('nebulous_heart'))
+			event.recipes.thermal.pulverizer([MC('prismarine_shard',6)],RQ('guardian_spike'))
+			event.recipes.thermal.pulverizer([MC('black_dye',15),MC('gray_dye')],RQ('squid_beak'))
 		}
 	})
 }
