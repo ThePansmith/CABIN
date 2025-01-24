@@ -37,7 +37,7 @@ if(Platform.isLoaded("reliquary")) {
 		event.remove({id:"reliquary:uncrafting/bone"})
 		let boneProcess = (rib, bone, dye) => {
 			event.shapeless(`3x ${bone}`,[rib])
-			event.recipes.createCutting(`5x ${bone}`,rib)
+			event.stonecutting(`5x ${bone}`,rib)
 			event.recipes.createMilling([
 				MC('bone_meal',15),
 				Item.of(dye).withCount(5).withChance(0.40),
@@ -45,7 +45,6 @@ if(Platform.isLoaded("reliquary")) {
 			], rib)
 		}
 		boneProcess(RQ('rib_bone'), MC('bone'), MC('white_dye'))
-		boneProcess(RQ('withered_rib'),TC('necrotic_bone'),MC('black_dye'))
 		event.recipes.createMilling([MC('gunpowder',8)],RQ('catalyzing_gland'))
 		event.recipes.createMilling([MC('gunpowder',12)],RQ('eye_of_the_storm'))
 		event.recipes.createMilling([MC('snowball',6)],RQ('frozen_core'))
@@ -68,7 +67,7 @@ if(Platform.isLoaded("reliquary")) {
 				}
 			})
 		}
-		if(Platform.isLoaded("tconstruct")){//Melting
+		if(Platform.isLoaded("tconstruct")){//Melting, necrotic bones
 			event.custom({"type": "tconstruct:melting",
 				"ingredient": {"item": "reliquary:slime_pearl"},
 				"result": {
@@ -105,6 +104,8 @@ if(Platform.isLoaded("reliquary")) {
 				"temperature": 0,
 				"time": 80
 			})
+			boneProcess(RQ('withered_rib'),TC('necrotic_bone'),MC('black_dye'))
+			event.recipes.minecraft.stonecutting('5x minecraft:bone',RQ('withered_rib'))
 		}
 		if(Platform.isLoaded('thermal')){//Crystallizer
 			event.custom({"type": "thermal:crystallizer",
