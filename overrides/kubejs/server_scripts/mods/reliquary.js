@@ -34,8 +34,8 @@ if(Platform.isLoaded("reliquary")) {
 		event.recipes.createMixing(RQ('angelic_feather'),[F('#feathers'),RQ('nebulous_heart'),RQ('bat_wing'),Fluid.of(KJ('fertile_potion'),vialAmount)])
 		if (Platform.isLoaded("sliceanddice")){
 			event.recipes.create.mixing(
-				[Fluid.of('minecraft:water',216),Fluid.of('kubejs:fertile_potion',24)],
-				[Fluid.of('sliceanddice:fertilizer',240)]
+				[Fluid.of('sliceanddice:fertilizer',240)],
+				[Fluid.of('kubejs:fertile_potion',24),Fluid.of('minecraft:water',216)]
 			)
 		}
 
@@ -57,89 +57,68 @@ if(Platform.isLoaded("reliquary")) {
 				], rib)
 			}
 		}
+		let crushing = (outputs, input) => {
+			event.recipes.createMilling(outputs,input)
+			if(Platform.isLoaded('thermal')){event.recipes.thermal.pulverizer(outputs,input)}
+		}
+		let melting = (output, input, temp, time) => {
+			if(Platform.isLoaded('thermal')){event.recipes.thermal.crucible(output[0],input)}
+			if(Platform.isLoaded("tconstruct")){
+				var recipe = {
+					"type":"tconstruct:melting",
+					"ingredient":{item:input},
+					"result": output.shift().toJson(),
+					"temperature": temp,
+					"time": time
+				}
+				//Sadly, tcon doesn't want our empty byproducts array :(
+				if(output.length>0){recipe["byproducts"] = output.map(element => element.toJson())}
+				event.custom(recipe)
+			}
+		}
 		boneProcess(RQ('rib_bone'), MC('bone'), MC('white_dye'))
-		event.recipes.createMilling([MC('gunpowder',8)],RQ('catalyzing_gland'))
-		event.recipes.createMilling([MC('gunpowder',12)],RQ('eye_of_the_storm'))
-		event.recipes.createMilling([MC('snowball',6)],RQ('frozen_core'))
-		event.recipes.createMilling(['4x ae2:ender_dust'],RQ('nebulous_heart'))
-		event.recipes.createMilling([MC('prismarine_shard',6)],RQ('guardian_spike'))
-		event.recipes.createMilling([MC('black_dye',15),MC('gray_dye')],RQ('squid_beak'))
+		crushing([MC('gunpowder',8)],RQ('catalyzing_gland'))
+		crushing([MC('gunpowder',12)],RQ('eye_of_the_storm'))
+		crushing([MC('snowball',6)],RQ('frozen_core'))
+		crushing(['4x ae2:ender_dust'],RQ('nebulous_heart'))
+		crushing([MC('prismarine_shard',6)],RQ('guardian_spike'))
+		crushing([MC('black_dye',15),MC('gray_dye')],RQ('squid_beak'))
+		crushing([MC('rotten_flesh',8)],RQ('zombie_heart'))
+		melting([Fluid.of(TC('earth_slime'),1500)],RQ('slime_pearl'),50,60)
+		melting([Fluid.of(TC('blazing_blood'),150),Fluid.of(TC('magma'),500)],RQ('molten_core'),300,92)
+		melting([Fluid.of(TC('molten_ender'),1000)],RQ('nebulous_heart'),477,160)
+		melting([Fluid.of(TC('powdered_snow'),500)],RQ('frozen_core'),0,80)
+		melting([Fluid.of(TC('molten_gold'),30),Fluid.of(TC('blood'),150)],RQ('zombie_heart'),700,60)
+		if(Platform.isLoaded("tconstruct")){boneProcess(RQ('withered_rib'),TC('necrotic_bone'),MC('black_dye'))
+			event.recipes.minecraft.stonecutting('5x minecraft:bone',RQ('withered_rib'))
+		}
+		if(Platform.isLoaded('create_enchantment_industry')){melting([Fluid.of('create_enchantment_industry:ink',4000)],RQ('squid_beak'),75,60)}
+		if(Platform.isLoaded('thermal')){event.custom({"type": "thermal:crystallizer",
+			"ingredients": [
+				{
+					"fluid": "minecraft:water",
+					"amount": 2000
+				},
+				{"item": "reliquary:guardian_spike"}
+			],
+			"result": [{
+				"item":'minecraft:prismarine_crystals',
+				"count":6
+			}]
+		})}
 		if(Platform.isLoaded("createaddition")){//Rolling
-			event.custom({"type":"createaddition:rolling",
-				"input": {"item": "reliquary:chelicerae"},
+			event.custom({"type":"createaddition:rolling","input": {"item": "reliquary:chelicerae"},
 				"result": {
 					"item": "minecraft:string",
 					"count": 8
 				}
 			})
-			event.custom({"type":"createaddition:rolling",
-				"input": {"item": "reliquary:molten_core"},
+			event.custom({"type":"createaddition:rolling","input": {"item": "reliquary:molten_core"},
 				"result": {
 					"item": "minecraft:blaze_rod",
 					"count": 2
 				}
 			})
-		}
-		if(Platform.isLoaded("tconstruct")){//Melting, necrotic bones
-			event.custom({"type": "tconstruct:melting",
-				"ingredient": {"item": "reliquary:slime_pearl"},
-				"result": {
-					"fluid": "tconstruct:earth_slime",
-					"amount": 1500
-				},
-				"temperature": 50,
-				"time": 60
-			})
-			event.custom({"type": "tconstruct:melting",
-				"ingredient": {"item": "reliquary:molten_core"},
-				"result": {
-					"fluid": "tconstruct:magma",
-					"amount": 750
-				},
-				"temperature": 300,
-				"time": 92
-			})
-			event.custom({"type": "tconstruct:melting",
-				"ingredient": {"item": "reliquary:nebulous_heart"},
-				"result": {
-					"fluid": "tconstruct:molten_ender",
-					"amount": 1000
-				},
-				"temperature": 477,
-				"time": 160
-			})
-			event.custom({"type": "tconstruct:melting",
-				"ingredient": {"item": "reliquary:frozen_core"},
-				"result": {
-					"fluid": "tconstruct:powdered_snow",
-					"amount": 500
-				},
-				"temperature": 0,
-				"time": 80
-			})
-			boneProcess(RQ('withered_rib'),TC('necrotic_bone'),MC('black_dye'))
-			event.recipes.minecraft.stonecutting('5x minecraft:bone',RQ('withered_rib'))
-		}
-		if(Platform.isLoaded('thermal')){//Crystallizer
-			event.custom({"type": "thermal:crystallizer",
-				"ingredients": [
-					{
-						"fluid": "minecraft:water",
-						"amount": 2000
-					},
-					{"item": "reliquary:guardian_spike"}
-				],
-				"result": [{
-					"item":'minecraft:prismarine_crystals',
-					"count":6
-				}]
-			})
-			event.recipes.thermal.pulverizer([MC('gunpowder',8)],RQ('catalyzing_gland'))
-			event.recipes.thermal.pulverizer([MC('gunpowder',12)],RQ('eye_of_the_storm'))
-			event.recipes.thermal.pulverizer([MC('snowball',6)],RQ('frozen_core'))
-			event.recipes.thermal.pulverizer(['4x ae2:ender_dust'],RQ('nebulous_heart'))
-			event.recipes.thermal.pulverizer([MC('prismarine_shard',6)],RQ('guardian_spike'))
-			event.recipes.thermal.pulverizer([MC('black_dye',15),MC('gray_dye')],RQ('squid_beak'))
 		}
 	})
 }
