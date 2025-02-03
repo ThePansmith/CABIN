@@ -832,19 +832,39 @@
          "required":true
       },
       {
+         "fileID":3846086,
+         "projectID":306770,
+         "required":true
+      },
+      {
+         "fileID":6153875,
+         "projectID":1139062,
+         "required":true
+      },
+      {
+         "fileID":5089967,
+         "projectID":665658,
+         "required":true
+      },
+      {
          "fileID":4578744,
          "projectID":581495,
-         "required":false
+         "required":true
       },
       {
          "fileID":5603490,
          "projectID":659897,
-         "required":false
+         "required":true
       },
       {
          "fileID":4787564,
          "projectID":920888,
-         "required":false
+         "required":true
+      },
+      {
+         "fileID":5018199,
+         "projectID":959388,
+         "required":true
       }
    ],
    "manifestType":"minecraftModpack",
