@@ -32,16 +32,37 @@ if(Platform.isLoaded("storagedrawers")) {
 				event.stonecutting(Item.of(half, 2), trim)
 			})
 		})
+		//Other planks should yield oak drawer
+		event.shaped(SD('oak_trim',4), [
+			'SSS',
+			'PMP',
+			'SSS'
+		], {
+			P: CR('zinc_ingot'),
+			M: '#forge:chests/wooden',
+			S: Ingredient.custom('#minecraft:planks',item => {return item.getMod() != 'minecraft'})
+		})
 
 		//drawer controller and controller_slave
 		zincMachine(event, Item.of('storagedrawers:controller', 1), MC('diamond'))
 		zincMachine(event, Item.of('storagedrawers:controller_slave', 1), MC('gold_ingot'))
+
+		//Upgrades
+		let upgrades = ['obsidian_storage','iron_storage','gold_storage','diamond_storage','emerald_storage','one_stack','conversion','redstone','illumination','fill_level']
+		let ingredients = [MC('obsidian'),MC('iron_ingot'),MC('gold_ingot'),MC('diamond'),MC('emerald'),MC('flint'),MC('lapis_lazuli'),MC('redstone'),MC('glowstone_dust'),MC('repeater')]
+		for (let i = 0; i < upgrades.length; i++) {
+			event.smithing(`storagedrawers:${upgrades[i]}_upgrade`, 'storagedrawers:upgrade_template', ingredients[i])
+		}
+		event.smithing('storagedrawers:void_upgrade', 'storagedrawers:obsidian_storage_upgrade', MC('obsidian'))
+		event.stonecutting('storagedrawers:min_redstone_upgrade','storagedrawers:redstone_upgrade')
+		event.stonecutting('storagedrawers:max_redstone_upgrade','storagedrawers:redstone_upgrade')
+		
+		//Keys
+		event.stonecutting('storagedrawers:quantify_key','storagedrawers:drawer_key')
+		event.stonecutting('storagedrawers:shroud_key','storagedrawers:drawer_key')
 	})
 
 	onEvent('block.tags', event => {
-		event.add("create:wrench_pickup", '#storagedrawers:drawers')
-		event.add("create:wrench_pickup", 'storagedrawers:compacting_drawers_3')
-		event.add("create:wrench_pickup", 'storagedrawers:controller')
-		event.add("create:wrench_pickup", 'storagedrawers:controller_slave')
+		event.add('create:wrench_pickup', '@storagedrawers')
 	})
 }
