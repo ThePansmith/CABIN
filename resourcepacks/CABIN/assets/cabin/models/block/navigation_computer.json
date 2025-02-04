@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "cabin:block/navigation_computer_side",
+    "up": "cabin:block/navigation_computer_side",
+    "north": "cabin:block/navigation_computer",
+    "east": "cabin:block/navigation_computer_side",
+    "south": "cabin:block/navigation_computer_side",
+    "west": "cabin:block/navigation_computer_side",
+    "particle": "cabin:block/navigation_computer_side"
+  }
+}
