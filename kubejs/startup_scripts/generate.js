@@ -8,11 +8,11 @@ StartupEvents.registry('item', event => {
 	types.forEach(e => {
 		let id = e.toLowerCase()
 		event.create(id + '_crystal_seed').texture("ae2:item/crystal_seed_" + id).displayName(e + ' Quartz Seed')
-		event.create('growing_' + id + '_seed','create:sequenced_assembly').texture("ae2:item/crystal_seed_" + id).displayName(e + ' Quartz Seed')
+		event.create('growing_' + id + '_seed','create:sequenced_assembly').texture("cabin:item/crystal_seed_" + id).displayName(e + ' Quartz Seed')
 		event.create('tiny_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "2").displayName('Tiny ' + e + ' Quartz Crystal')
-		event.create('growing_tiny_' + id + '_crystal','create:sequenced_assembly').texture("ae2:item/crystal_seed_" + id + "2").displayName('Tiny ' + e + ' Quartz Crystal')
+		event.create('growing_tiny_' + id + '_crystal','create:sequenced_assembly').texture("cabin:item/crystal_seed_" + id + "2").displayName('Tiny ' + e + ' Quartz Crystal')
 		event.create('small_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "3").displayName('Small ' + e + ' Quartz Crystal')
-		event.create('growing_small_' + id + '_crystal','create:sequenced_assembly').texture("ae2:item/crystal_seed_" + id + "3").displayName('Small ' + e + ' Quartz Crystal')
+		event.create('growing_small_' + id + '_crystal','create:sequenced_assembly').texture("cabin:item/crystal_seed_" + id + "3").displayName('Small ' + e + ' Quartz Crystal')
 	});
 
 	let processors = ["Calculation", "Logic", "Engineering"]
