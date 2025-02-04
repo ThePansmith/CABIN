@@ -38,5 +38,20 @@ ServerEvents.recipes(event => {
 				}
 			})
 	});
-	trade(KJ('missingno'), Item.of(TE('gold_coin')), Item.of('supplementaries:candy', 128))
+
+
+	event.custom({
+		type: 'thermal:press',
+		ingredients: [
+			'thermal:gold_coin',
+			'kubejs:missingno'
+		],
+		result: [
+			{
+				"count": 128,
+				"item": "csupplementaries:candy"
+			}
+		],
+		energy: 1000
+	})
 })
