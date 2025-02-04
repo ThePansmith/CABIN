@@ -1,0 +1,35 @@
+
+["Opolis Utilities Config File"]
+	#Cooldown in ticks of the home stone, default = 6000
+	"Home Stone Cooldown" = 6000
+	#Does the home stone take damge when teleporting, default = true
+	"Home Stone Durability" = true
+	#URL for your discord
+	"Discord URL" = "https://discord.gg/benbenlaw"
+	#Modpack name
+	"Modpack name" = "TESTMODPACK"
+	#Modpack Version
+	"Modpack Version" = "VERSION"
+	#Mobs basic loot bag drop chance 0.0 = always, 1.0 = never, 0.5 = 50% chance, default = 0.75
+	"Mob Drop Chance" = 0.95
+	#Additional rolls when using the crook on leaves
+	"Additional Crook Rolls" = 3
+	#The max range of the Ender Scrambler
+	"(WIP)Max Ender Scrambler Range" = 8
+	#The min range of the Ender Scrambler
+	"(WIP)Min Ender Scrambler Range" = 8
+	#The number of attempts to grow a sapling per right click
+	"(WIP)Total Attempts for Sapling Grower" = 128
+	#Can the animal net capture hostile mobs, default = false
+	"Animal Net: Hostile Mobs" = false
+	#Can the animal net capture water mobs, default = true
+	"Animal Net: Water Mobs" = true
+	#Can the animal net capture animal mobs, default = true
+	"Animal Net: Animal Mobs" = true
+	#Can the animal net capture villager mobs, default = false
+	"Animal Net: Villager Mobs" = false
+	#Does the animal net take damage when capturing mobs, default = true
+	"Animal Net: Takes Damage?" = true
+	#Do wooden buttons make a doorbell sound, default = false
+	"Wooden Buttons Make Doorbell Sound" = false
+

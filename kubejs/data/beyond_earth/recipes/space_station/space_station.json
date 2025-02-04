@@ -1,0 +1,29 @@
+{
+	"type": "ad_astra:space_station",
+	"ingredients": [
+		{
+			"ingredient": {
+				"item": "kubejs:computation_matrix"
+			},
+			"count": 64
+		},
+		{
+			"ingredient": {
+				"item": "kubejs:enderium_machine"
+			},
+			"count": 64
+		},
+		{
+			"ingredient": {
+				"item": "ae2:controller"
+			},
+			"count": 64
+		},
+		{
+			"ingredient": {
+				"tag": "forge:storage_blocks/iron"
+			},
+			"count": 64
+		}
+	]
+}

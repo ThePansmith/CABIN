@@ -1,7 +1,0 @@
-{
-  "parent": "cabin:block/substrate",
-  "textures": {
-    "particle": "block/glass",
-    "0": "cabin:block/chaos_glass"
-  }
-}

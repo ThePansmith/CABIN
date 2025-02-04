@@ -1,0 +1,127 @@
+
+["Beyond Earth Config"]
+	#Enable or Disable Alien to Spawn
+	"Alien Spawn" = false
+	#Enable or Disable Alien Zombie to Spawn
+	"Alien Zombie Spawn" = false
+	#Enable or Disable Star Crawler to Spawn
+	"Star Crawler Spawn" = false
+	#Enable or Disable Pygro to Spawn
+	"Pygro Spawn" = false
+	#Enable or Disable Pygro Brute to Spawn
+	"Pygro Brute Spawn" = false
+	#Enable or Disable Mogler to Spawn
+	"Mogler Spawn" = false
+	#Enable or Disable Martian Raptor to Spawn
+	"Martian Raptor Spawn" = false
+	#Enable or Disable Player Oxygen System
+	"Player Oxygen System" = true
+	#Enable or Disable Entity Oxygen System
+	"Entity Oxygen System" = true
+	#Should it be impossible to create a space station on another space station?
+	CheckSpaceStation = true
+	#How often Oxygen is breathed from suit (in ticks)
+	"Suit Breathe Rate" = 3
+	#How often Oxygen is breathed (in ticks)
+	"Oxygen Breathe Rate" = 20
+	#How much Oxygen is breathed at at time
+	"Oxygen Breathe Amount" = 5
+	#How often vacuum damage is applied (in ticks)
+	"Vacuum Harm Rate" = 15
+
+[Machines]
+
+	[Machines."Coal Generator"]
+		#Set energy generation per tick, default: 2 FE/t
+		EnergyGeneration = 2
+		#Set energy capacity, default: 9000 FE
+		EnergyCapacity = 9000
+		#Set energy transfer, default: 200 FE
+		EnergyTransfer = 200
+
+	[Machines."Solar Panel"]
+		#Set energy generation per tick, default: 5 FE/t
+		EnergyGeneration = 5
+		#Set energy capacity, default: 9000 FE
+		EnergyCapacity = 9000
+		#Set energy transfer, default: 200 FE
+		EnergyTransfer = 200
+
+	[Machines.Compressor]
+		#Set energy usage per tick, default: 1 FE/t
+		EnergyUsage = 1
+		#Set energy capacity, default: 9000 FE
+		EnergyCapacity = 9000
+		#Set energy transfer, default: 200 FE
+		EnergyTransfer = 200
+
+	[Machines."Fuel Refinery"]
+		#Set energy usage per tick, default: 1 FE/t
+		EnergyUsage = 1
+		#Set energy capacity, default: 9000 FE
+		EnergyCapacity = 9000
+		#Set energy transfer, default: 200 FE
+		EnergyTransfer = 200
+		#Set fluid input tank capacity, default: 3000 mB
+		TankInputCapacity = 3000
+		#Set fluid output tank capacity, default: 3000 mB
+		TankOutputCapacity = 3000
+		#Set tank transfer, default: 256 mB
+		TankTransfer = 256
+
+	[Machines."Oxygen Loader"]
+		#Set energy usage per tick, default: 1 FE/t
+		EnergyUsage = 1
+		#Set energy capacity, default: 12000 FE
+		EnergyCapacity = 12000
+		#Set energy transfer, default: 200 FE
+		EnergyTransfer = 200
+		#Set fluid input tank capacity, default: 3000 mB
+		FluidCapacity = 3000
+		#Set hydrogen output tank capacity, default: 3000 mB
+		OxygenCapacity = 3000
+		#Set tank transfer, default: 256 mB
+		FluidTransfer = 256
+
+	[Machines."Oxygen Bubble Distributor"]
+		#Set energy usage per tick, default: 1 FE/t
+		EnergyUsage = 1
+		#Set energy capacity, default: 9000 FE
+		EnergyCapacity = 9000
+		#Set energy transfer, default: 200 FE
+		EnergyTransfer = 200
+		#Set fluid input tank capacity, default: 3000 mB
+		FluidCapacity = 3000
+		#Set oxygen output tank capacity, default: 3000 mB
+		OxygenCapacity = 3000
+		#Set tank transfer, default: 256 mB
+		FluidTransfer = 256
+		#Set O2 output rate, default: 50 mB
+		"O2 Distribution Rate" = 50
+		#Set O2 input rate, default: 1 mB
+		"O2 Collection Rate" = 1
+
+	[Machines."Water Pump"]
+		#Set energy usage per tick, default: 1 FE/t
+		EnergyUsage = 1
+		#Set energy capacity, default: 9000 FE
+		EnergyCapacity = 9000
+		#Set energy transfer, default: 200 FE
+		EnergyTransfer = 200
+		#Set water tank capacity, default: 6000 mB
+		TankCapacity = 6000
+		#Set water tank transfer, default: 10 mB
+		TankTransfer = 10
+		#Set pumping interval ticks, default: 10 ticks
+		WorkInterval = 10
+
+["Water to Ice"]
+	#Enable or Disable the transformation of water into ice on the moon
+	"Water to ice moon" = false
+	#Enable or Disable the transformation of water into ice on glacio
+	"Water to ice glacio" = false
+
+[Radioactivity]
+	#The distance at which radioactivity affects you
+	"Radioactivity effect distance" = 5
+

@@ -1,9 +1,0 @@
-{
-  "type": "rechiseled:chiseling",
-  "entries": [
-    {
-      "item": "thermal:charcoal_block"
-    }
-  ],
-  "overwrite": false
-}

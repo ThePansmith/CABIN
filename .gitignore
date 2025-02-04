@@ -1,0 +1,129 @@
+/*
+
+!/config
+!/config-overrides
+!/kubejs
+!/defaultconfigs
+!/.gitignore
+!/.gitattributes
+!/manifest.json
+!/tools
+/tools/bootstrap/.cache
+!/.github
+!.editorconfig
+!/pack-mode-switcher*
+!/CONTRIBUTING.md
+!/FAQ.md
+!/KNOWN-ISSUES.md
+!/mods/systeams*
+!/mods/ExtendedCrafting*
+
+/mods/.index
+/mods/.connector
+/mods/memoryleakfix*
+
+# VSCode
+!/.vscode
+/.vscode/*
+!/.vscode/*.code-workspace
+
+# Probe js
+/kubejs/probe
+/kubejs/config/probejs.json
+/kubejs/config/probe-settings.json
+/kubejs/*/jsconfig.json
+/config/iconexporter-common.toml
+
+# Configs we don't want to keep
+config/fml.toml
+config/jei/world/local/*
+config/fabric/indigo-renderer.properties
+config/roughlyenoughitems/pinyin.properties
+config/roughlyenoughitems/pinyin_double.properties
+config/trofers/general.json5
+config/roughlyenoughitems/config.json5
+config/sidebar_buttons.json
+config/oculus.properties
+config/modernfix-mixins.properties
+config/immediatelyfast.json
+config/ftbbackups2.json
+config/spark/tmp
+config/spark/activity.json
+config/roughlyenoughitems/hints.json
+config/voicechat/username-cache.json
+config/minihud/*
+config/embeddium-fingerprint.json
+config/chiselsandbits-common.toml
+config/defaultworldtype/world-presets.txt
+config/jecalculation/record.json
+config/jade/sort-order.json
+config/jei*
+config/embeddium++.toml
+config/embeddium++.toml
+config/emi.css
+config\darkmodeeverywhereshaders.json
+config\darkmodeeverywhereshaders.toml
+config/ichunutil/themes
+
+#Hide code-generated files
+kubejs/client_scripts/Dev_Capes.js
+config/fancymenu/customization/pack_credit_screen_layout.txt
+**/en_ud.local
+**/en_ud.json
+
+#Hide all client-only files
+/config/**/*client.*
+#Except these
+!/config/sophisticatedstorage-client.toml
+!/config/**/darkmodeeverywhere-client.toml
+
+defaultconfigs/ftbultimine/ftbultimine-client.snbt
+defaultconfigs/ftbultimine/ftbultimine-server.snbt
+
+./options.txt
+
+# dotenv
+.env
+
+### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Linux.gitignore
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Windows.gitignore
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/OSX.gitignore
+.DS_Store
+.AppleDouble
+.LSOverride
+kubejs/assets/gtceu/textures/item/material_sets/infinity/infinity_plate.xcf
+config/packmode.json
+config/gtceu.yaml
+config/darkmodeeverywhereshaders.json
+
+#Don't ignore the Create client config so we can remove the Main Menu config button
+#it gets in the way of the beautiful FancyMenu
+!/config/create-client.toml
+
+# Downloadable dependencies
+**/node_modules

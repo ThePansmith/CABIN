@@ -1,0 +1,304 @@
+{
+  "modified": false,
+  "stars": [
+    {
+      "name": "sun",
+      "texture": "beyond_earth:textures/environment/planet/sun.png",
+      "planets": [
+        {
+          "name": "mercury",
+          "planet": "beyond_earth:mercury",
+          "orbit": "beyond_earth:mercury_orbit",
+          "planet_bar": "beyond_earth:textures/planet_bar/mercury_planet_bar.png",
+          "texture": "beyond_earth:textures/environment/planet/mercury.png",
+          "orbit_radius": 5.8343224E7,
+          "mass": 3.24499998241663E23,
+          "g": 0.38,
+          "orbit_g": 0.05,
+          "radius": 2439.7,
+          "air_density": 0.0,
+          "has_oxygen": false,
+          "has_rain": false,
+          "has_clouds": false,
+          "space_level": true,
+          "has_dust_storms": false,
+          "has_stars_at_day": true,
+          "rotation": 270.0,
+          "orbit_colour": [
+            179,
+            49,
+            44
+          ],
+          "sunriseColour": [
+            0.7,
+            0.2,
+            0.2
+          ],
+          "tidal_lock": false,
+          "distanceFromEarth": 9.169E7,
+          "moons": []
+        },
+        {
+          "name": "venus",
+          "planet": "beyond_earth:venus",
+          "orbit": "beyond_earth:venus_orbit",
+          "planet_bar": "beyond_earth:textures/planet_bar/venus_planet_bar.png",
+          "texture": "beyond_earth:textures/environment/planet/venus.png",
+          "orbit_radius": 1.07710576E8,
+          "mass": 4.779000014066696E24,
+          "g": 0.904,
+          "orbit_g": 0.05,
+          "radius": 6051.8,
+          "air_density": 100.0,
+          "has_oxygen": false,
+          "has_rain": false,
+          "has_clouds": false,
+          "space_level": true,
+          "has_dust_storms": false,
+          "has_stars_at_day": false,
+          "rotation": 180.0,
+          "orbit_colour": [
+            235,
+            136,
+            68
+          ],
+          "sunriseColour": [
+            0.7,
+            0.2,
+            0.2
+          ],
+          "tidal_lock": false,
+          "distanceFromEarth": 4.14E7,
+          "moons": []
+        },
+        {
+          "name": "earth",
+          "planet": "minecraft:overworld",
+          "orbit": "beyond_earth:earth_orbit",
+          "texture": "beyond_earth:textures/environment/planet/earth.png",
+          "orbit_radius": 1.49598016E8,
+          "mass": 5.9E24,
+          "g": 1.0,
+          "orbit_g": 0.05,
+          "radius": 6371.0,
+          "air_density": 1.0,
+          "has_oxygen": true,
+          "has_rain": true,
+          "has_clouds": false,
+          "space_level": false,
+          "has_dust_storms": false,
+          "has_stars_at_day": false,
+          "rotation": 90.0,
+          "orbit_colour": [
+            53,
+            163,
+            79
+          ],
+          "sunriseColour": [
+            0.7,
+            0.2,
+            0.2
+          ],
+          "tidal_lock": false,
+          "distanceFromEarth": 0.0,
+          "moons": [
+            {
+              "name": "moon",
+              "planet": "beyond_earth:moon",
+              "orbit": "beyond_earth:moon_orbit",
+              "planet_bar": "beyond_earth:textures/planet_bar/moon_planet_bar.png",
+              "texture": "beyond_earth:textures/environment/planet/moon.png",
+              "phase_texture": "beyond_earth:textures/environment/planet/moon_phases.png",
+              "orbit_radius": 384399.0,
+              "mass": 7.34E22,
+              "g": 0.1654,
+              "orbit_g": 0.05,
+              "radius": 1737.4,
+              "air_density": 0.0,
+              "has_oxygen": false,
+              "has_rain": false,
+              "has_clouds": false,
+              "space_level": true,
+              "has_dust_storms": false,
+              "has_stars_at_day": true,
+              "rotation": 0.0,
+              "orbit_colour": [
+                53,
+                163,
+                79
+              ],
+              "sunriseColour": [
+                0.7,
+                0.2,
+                0.2
+              ],
+              "tidal_lock": true,
+              "distanceFromEarth": 0.0,
+              "moons": []
+            }
+          ]
+        },
+        {
+          "name": "mars",
+          "planet": "beyond_earth:mars",
+          "orbit": "beyond_earth:mars_orbit",
+          "planet_bar": "beyond_earth:textures/planet_bar/mars_planet_bar.png",
+          "texture": "beyond_earth:textures/environment/planet/mars.png",
+          "orbit_radius": 2.27388976E8,
+          "mass": 6.313000045716762E23,
+          "g": 0.3794,
+          "orbit_g": 0.05,
+          "radius": 3389.5,
+          "air_density": 0.001,
+          "has_oxygen": false,
+          "has_rain": true,
+          "has_clouds": false,
+          "space_level": true,
+          "has_dust_storms": true,
+          "has_stars_at_day": false,
+          "rotation": 0.0,
+          "orbit_colour": [
+            37,
+            49,
+            146
+          ],
+          "sunriseColour": [
+            0.0,
+            0.55,
+            0.8
+          ],
+          "tidal_lock": false,
+          "distanceFromEarth": 7.834E7,
+          "moons": [
+            {
+              "name": "phobos",
+              "planet": "beyond_earth:phobos",
+              "orbit": "beyond_earth:phobos_orbit",
+              "planet_bar": "beyond_earth:textures/planet_bar/moon_planet_bar.png",
+              "texture": "beyond_earth:textures/environment/planet/phobos.png",
+              "orbit_radius": 9379.3349609375,
+              "mass": 1.06E16,
+              "g": 0.04,
+              "orbit_g": 0.05,
+              "radius": 11.2,
+              "air_density": 0.0,
+              "has_oxygen": false,
+              "has_rain": false,
+              "has_clouds": false,
+              "space_level": true,
+              "has_dust_storms": false,
+              "has_stars_at_day": true,
+              "rotation": 180.0,
+              "orbit_colour": [
+                37,
+                49,
+                146
+              ],
+              "sunriseColour": [
+                0.7,
+                0.2,
+                0.2
+              ],
+              "tidal_lock": true,
+              "distanceFromEarth": 0.0,
+              "moons": []
+            },
+            {
+              "name": "deimos",
+              "planet": "beyond_earth:deimos",
+              "orbit": "beyond_earth:deimos_orbit",
+              "planet_bar": "beyond_earth:textures/planet_bar/moon_planet_bar.png",
+              "texture": "beyond_earth:textures/environment/planet/deimos.png",
+              "orbit_radius": 23448.33984375,
+              "mass": 1.476E15,
+              "g": 0.04,
+              "orbit_g": 0.05,
+              "radius": 6.2,
+              "air_density": 0.0,
+              "has_oxygen": false,
+              "has_rain": false,
+              "has_clouds": false,
+              "space_level": true,
+              "has_dust_storms": false,
+              "has_stars_at_day": true,
+              "rotation": 0.0,
+              "orbit_colour": [
+                37,
+                49,
+                146
+              ],
+              "sunriseColour": [
+                0.7,
+                0.2,
+                0.2
+              ],
+              "tidal_lock": true,
+              "distanceFromEarth": 0.0,
+              "moons": []
+            }
+          ]
+        }
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "colour": [
+        232,
+        219,
+        176
+      ],
+      "mass": 5.9E24
+    },
+    {
+      "name": "proxima_centauri",
+      "planets": [
+        {
+          "name": "glacio",
+          "planet": "beyond_earth:glacio",
+          "orbit": "beyond_earth:glacio_orbit",
+          "planet_bar": "beyond_earth:textures/planet_bar/glacio_planet_bar.png",
+          "texture": "beyond_earth:textures/environment/planet/glacio.png",
+          "orbit_radius": 5.8343224E7,
+          "mass": 4.7199998944997784E23,
+          "g": 0.3794,
+          "orbit_g": 0.05,
+          "radius": 6000.0,
+          "air_density": 0.0,
+          "has_oxygen": false,
+          "has_rain": true,
+          "has_clouds": false,
+          "space_level": true,
+          "has_dust_storms": false,
+          "has_stars_at_day": false,
+          "rotation": 180.0,
+          "orbit_colour": [
+            37,
+            49,
+            146
+          ],
+          "sunriseColour": [
+            0.7,
+            0.2,
+            0.2
+          ],
+          "tidal_lock": false,
+          "distanceFromEarth": 3.78429E13,
+          "moons": []
+        }
+      ],
+      "location": [
+        4.25,
+        0.0,
+        0.0
+      ],
+      "colour": [
+        255,
+        127,
+        63
+      ],
+      "mass": 2.4400000274181366E29
+    }
+  ]
+}

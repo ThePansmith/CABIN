@@ -1,0 +1,58 @@
+{
+  "armoryHelmets": {
+    "entries": {
+      "chainmail_helmet": 0.3,
+      "golden_helmet": 0.2
+    },
+    "defaultItem": "air"
+  },
+  "wardrobeHelmets": {
+    "entries": {
+      "chainmail_helmet": 0.2,
+      "leather_helmet": 0.4
+    },
+    "defaultItem": "air"
+  },
+  "armoryChestplates": {
+    "entries": {
+      "chainmail_chestplate": 0.3,
+      "golden_chestplate": 0.2
+    },
+    "defaultItem": "air"
+  },
+  "wardrobeChestplates": {
+    "entries": {
+      "chainmail_chestplate": 0.2,
+      "leather_chestplate": 0.4
+    },
+    "defaultItem": "air"
+  },
+  "armoryLeggings": {
+    "entries": {
+      "golden_leggings": 0.2,
+      "chainmail_leggings": 0.3
+    },
+    "defaultItem": "air"
+  },
+  "wardrobeLeggings": {
+    "entries": {
+      "chainmail_leggings": 0.2,
+      "leather_leggings": 0.4
+    },
+    "defaultItem": "air"
+  },
+  "armoryBoots": {
+    "entries": {
+      "golden_boots": 0.2,
+      "chainmail_boots": 0.3
+    },
+    "defaultItem": "air"
+  },
+  "wardrobeBoots": {
+    "entries": {
+      "leather_boots": 0.4,
+      "chainmail_boots": 0.2
+    },
+    "defaultItem": "air"
+  }
+}

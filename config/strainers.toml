@@ -1,0 +1,7 @@
+
+["Strainers Config File"]
+	#Show the strainer meshes in the world, default = true
+	"Show Meshes" = true
+	#Show items in / on the strainer in the world, default = true
+	"Show Items " = true
+

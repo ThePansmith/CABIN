@@ -1,9 +1,0 @@
-{
-  "type": "rechiseled:chiseling",
-  "entries": [
-    {
-      "item": "thermal:bamboo_block"
-    }
-  ],
-  "overwrite": false
-}

@@ -1,0 +1,14 @@
+#Maximum amount of food from eating a single sandwich.
+#Range: 1 ~ 100
+maxFoodPerSandwich = 10
+#If greater than -1, players cannot use ingredients with greater saturation than this amount.
+#Range: -1.0 ~ 100.0
+maxIngredientSaturation = -1.0
+#If greater than -1, players cannot use ingredients with greater food than this amount.
+#Range: -1 ~ 100
+maxIngredientFood = -1
+#Items or tags that cannot be used as ingredients.
+ingredientBlacklist = []
+#If enabled, shows food and saturation amounts in the extended tooltip.
+showNutritionInfo = false
+

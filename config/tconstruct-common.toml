@@ -1,0 +1,103 @@
+
+#Everything to do with gameplay
+[gameplay]
+	#Set this to false to disable new players spawning with the Tinkers' Book.
+	shouldSpawnWithTinkersBook = true
+	#If true, extends the applicable slots for the fire protection enchantment to work better with shields. Will not impact gameplay with the vanilla enchantment.
+	#If false, fire protection on a shield will not reduce fire tick time.
+	extendFireProtectionSlots = true
+	#If true, extends the applicable slots for the blast protection enchantment to work better with shields. Will not impact gameplay with the vanilla enchantment.
+	#If false, blast protection on a shield will not reduce explosion knockback.
+	extendBlastProtectionSlots = true
+	#Amount of durability restored by a repair kit in terms of ingots. Does not affect the cost to create the kit, that is controlled by JSON.
+	#Range: 0.0 ~ 32767.0
+	repairKitAmount = 2.0
+
+#Options related to recipes, limited options as a datapack allows most recipes to be modified
+[recipes]
+	#Add a recipe that allows you to craft a piece of flint using 3 gravel
+	addGravelToFlintRecipe = true
+	#Makes the recipe to alloy netherite in the smeltery only cost 2 gold per netherite ingot. If false uses the vanilla rate of 4 gold per ingot. Disable if there are crafting duplications.
+	cheaperNetheriteAlloy = true
+	#Makes wither skeletons drop necrotic bones
+	witherBoneDrop = true
+	#Allows converting wither bones to regular bones
+	witherBoneConversion = true
+	#Slimeballs not being usable in vanilla recipes that require slimeballs. Config option exists to disable easily in case this fix is redundant to another mod
+	slimeRecipeFix = true
+	#Fixes clear glass not being usable in vanilla recipes that require glass. Config option exists to disable easily in case this fix is redundant to another mod
+	glassRecipeFix = true
+
+	[recipes.ore_rates]
+
+		#Ore rates when melting in the melter
+		[recipes.ore_rates.melter]
+			#Number of nuggets produced per metal ore unit melted. 9 nuggets would give 1 ingot
+			#Range: 1 ~ 45
+			nuggetsPerMetal = 12
+			#Number of gem shards produced per gem ore unit melted. 4 gem shards would give 1 gem
+			#Range: 1 ~ 20
+			shardsPerGem = 8
+
+		#Ore rates when melting in the smeltery
+		[recipes.ore_rates.smeltery]
+			#Number of nuggets produced per metal ore unit melted. 9 nuggets would give 1 ingot
+			#Range: 1 ~ 45
+			nuggetsPerMetal = 12
+			#Number of gem shards produced per gem ore unit melted. 4 gem shards would give 1 gem
+			#Range: 1 ~ 20
+			shardsPerGem = 8
+
+		#Ore rates when melting in the foundry
+		[recipes.ore_rates.foundry]
+			#Number of nuggets produced per metal ore unit melted. 9 nuggets would give 1 ingot
+			#Range: 1 ~ 45
+			nuggetsPerMetal = 9
+			#Number of gem shards produced per gem ore unit melted. 4 gem shards would give 1 gem
+			#Range: 1 ~ 20
+			shardsPerGem = 4
+
+		#Byprouct rates when melting in the foundry
+		[recipes.ore_rates.foundry_byproduct]
+			#Number of nuggets produced per metal ore unit melted. 9 nuggets would give 1 ingot
+			#Range: 1 ~ 45
+			nuggetsPerMetal = 3
+			#Number of gem shards produced per gem ore unit melted. 4 gem shards would give 1 gem
+			#Range: 1 ~ 20
+			shardsPerGem = 4
+
+	#Entity head drops when killed by a charged creeper
+	[recipes.heads]
+		blaze = true
+		enderman = true
+		stray = true
+		husk = true
+		drowned = true
+		spider = true
+		cave_spider = true
+		piglin_brute = true
+		zombified_piglin = true
+
+#Options related to loot table injections. Note some of the changes are done via global loot managers, these only control injecting loot into loot pools
+#If your modpack makes extensive loot table changes, many of these may be automatically disabled. You can also manually set up tables for more control.
+[loot]
+	#Adds slimy saplings and seeds into various loot chests. Helps for worlds without slime islands
+	slimy_loot = true
+	#If true, ender dragons will drop scales when damaged by explosions
+	drop_dragon_Scales = true
+	#Weight of the ancient tool trade for the wandering trader. All traders randomly choose 1 rare trade, so this is roughly the chance the trade occurs compared to the vanilla options (of which there are 6).
+	#Range: 0 ~ 100
+	wanderer_ancient_tool_weight = 6
+
+#Features to use in debugging gameplay and mechanics, generally should not be enabled in packs
+[debug]
+	#If true, forces integration materials to be enabled, even if the relevant metal is missing. Useful for testing material balance.
+	#Does not provide recipes for any of them, they will only be available to cheat in creative.
+	forceIntegrationMaterials = false
+	#If STACKTRACE, logs the stacktrace whenever a tool stack is created from a non-modifiable item. If WARNING (default), logs a shorter but more efficient error. If IGNORE, disables logging (useful for modpacks/players *after* they reported the issue). The stacktrace helps debug which mod is causing it, but is rather expensive on the chance they are doing it a lot.
+	#Allowed Values: STACKTRACE, WARNING, IGNORED
+	logInvalidToolStack = "WARNING"
+	#Set to true if you wish to test whether a side inventory works without constantly reloading datapacks.
+	#Once you find an inventory works, add it to the block entity tag `tconstruct:side_inventories` and disable this option; leaving it enabled will lead to crashes and dupe bugs.
+	disableSideInventoryWhitelist = false
+

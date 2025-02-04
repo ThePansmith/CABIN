@@ -1,0 +1,94 @@
+
+[items]
+
+	[items.orb_of_temporary_flight]
+		#Flight Time the Orb grants (in ticks) [default: 6000]
+		#Range: 20 ~ 120000
+		time = 6000
+
+	[items.edelwood_bucket]
+		#How many Water Blocks the Edelwood Bucket can store [default: 4]
+		#Range: 1 ~ 10
+		water_capacity = 4
+		#How many Lava Blocks the Edelwood Bucket can store [default: 3]
+		#Range: 1 ~ 10
+		lava_capacity = 3
+		#How much Milk the Edelwood Bucket can store [default: 4]
+		#Range: 1 ~ 10
+		milk_capacity = 4
+		#How many Soups/Stews the Edelwood Bucket can store [default: 8]
+		#Range: 1 ~ 10
+		soup_capacity = 8
+
+	[items.boom_arrow]
+		#Should Boom Arrow explosions deal Block Damage [default: false]
+		block_damage = false
+		#Radius of Boom Arrow explosions [default: 3]
+		#Range: 1 ~ 10
+		explosion_radius = 3
+
+	[items.mundabitur_dust]
+		#Should right-clicking a Creeper with Mundabitur Dust charge the Creeper [default: true]
+		charge_creeper = true
+
+	[items.xpetrified_orb]
+		#Experience Points the Orb grants on use [default: 91]
+		#Range: 1 ~ 120000
+		experience_points = 91
+
+	[items.eternal_stella]
+		#How many times the Eternal Stella can be used before breaking [default: 3]
+		#Range: 1 ~ 100
+		uses = 3
+
+[blocks]
+
+	[blocks.stella_arcanum]
+		#Should Stella Arcanum explode when mined [default: true]
+		explode = true
+		#Should Stella Arcanum explosions deal Block Damage (if explosions enabled) [default: true]
+		block_damage = true
+		#Radius of Stella Arcanum explosions (if explosions enabled) [default: 3]
+		#Range: 1 ~ 10
+		explosion_radius = 3
+
+	[blocks.edelwood_ladder]
+		#The speed multiplier that gets added to the players y movement when on the ladder [default: 2.0
+		#Range: 0.0 ~ 10.0
+		speed = 0.07
+
+[enchantments]
+
+	[enchantments.eternal]
+		#Should the item be repaired after applying the Eternal modifier [default: true]
+		repair_item = true
+
+[aureal]
+	#Chance that an entity spawns as Aureal Entity [default: 0.25]
+	#Range: 0.0 ~ 1.0
+	aureal_entity_chance = 0.25
+
+	[aureal.corruption]
+		#Do you want to completely disable corruption consequences? [default: false]
+		disable_consequences = false
+		#How much Corruption should killing a normal Entity give [default: 1]
+		#Range: 0 ~ 100
+		entity_death_increasement_amount = 1
+		#How much Corruption should killing an Aureal Entity give [default: 3]
+		#Range: 0 ~ 100
+		aureal_entity_death_increasement_amount = 3
+		#Chance that killing a normal Entity increases your Corruption [default: 0.35]
+		#Range: 0.0 ~ 1.0
+		entity_death_increasement_chance = 0.35
+		#Chance that killing an Aureal Entity increases your Corruption [default: 0.42]
+		#Range: 0.0 ~ 1.0
+		aureal_entity_death_increasement_chance = 0.42
+		#Should the players Corruption value decrease after a certain amount of time [default: true]
+		natural_decreasement = true
+		#Time before the players Corruption value is reduced by one (in ticks) [default: 6000]
+		#Range: > 0
+		natural_decreasement_time = 6000
+		#Chance that breeding animals decreases your Corruption [default: 0.45]
+		#Range: 0.0 ~ 1.0
+		breeding_decreasement_chance = 0.45
+

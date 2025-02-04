@@ -1,0 +1,20 @@
+
+["basic options"]
+	"Enable weight for fish? Useful for fishing competitions" = false
+	"Should fish be added as compostables for the composter/worm farm? (Based on fish, or weight if enabled)" = true
+	"Should Aquaculture fish be able to be used to breed cats & ocelots?" = true
+	"Enable debug mode? (Enables additional logging)" = false
+	"Show Fillet recipes in JEI?" = true
+	#Range: 0 ~ 63
+	"How many blocks below sea level Aquaculture fish can spawn" = 13
+
+	["basic options"."Amount of Message In A Bottle messages"]
+		#Range: 0 ~ 255
+		" Used to add additional custom messages" = 29
+
+["neptunium options"]
+	"Enable recipes for Neptunium items?" = true
+	"Enable recipes for Neptunium armor?" = true
+	#Should Neptune's bounty be added as fishing loot? Very rare.
+	"Add Neptune's Bounty as loot?" = true
+
