@@ -7,11 +7,11 @@ StartupEvents.registry('item', event => {
 	let types = ['Certus', 'Fluix']
 	types.forEach(e => {
 		let id = e.toLowerCase()
-		event.create(id + '_crystal_seed').texture("ae2:item/crystal_seed_" + id).displayName(e + ' Quartz Seed')
+		event.create(id + '_crystal_seed').texture("cabin:item/crystal_seed_" + id).displayName(e + ' Quartz Seed')
 		event.create('growing_' + id + '_seed','create:sequenced_assembly').texture("cabin:item/crystal_seed_" + id).displayName(e + ' Quartz Seed')
-		event.create('tiny_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "2").displayName('Tiny ' + e + ' Quartz Crystal')
+		event.create('tiny_' + id + '_crystal').texture("cabin:item/crystal_seed_" + id + "2").displayName('Tiny ' + e + ' Quartz Crystal')
 		event.create('growing_tiny_' + id + '_crystal','create:sequenced_assembly').texture("cabin:item/crystal_seed_" + id + "2").displayName('Tiny ' + e + ' Quartz Crystal')
-		event.create('small_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "3").displayName('Small ' + e + ' Quartz Crystal')
+		event.create('small_' + id + '_crystal').texture("cabin:item/crystal_seed_" + id + "3").displayName('Small ' + e + ' Quartz Crystal')
 		event.create('growing_small_' + id + '_crystal','create:sequenced_assembly').texture("cabin:item/crystal_seed_" + id + "3").displayName('Small ' + e + ' Quartz Crystal')
 	});
 
@@ -115,17 +115,17 @@ StartupEvents.registry('item', event => {
 
 StartupEvents.registry("block", event => {
 
-	event.create('enderium_casing').model('cabin:block/enderium_casing').material('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(4.0).displayName('Ender Casing')
-	event.create('zinc_casing').textureAll('cabin:block/zinc_casing').material('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName('Zinc Casing')
-	event.create('invar_casing').textureAll('cabin:block/invar_casing').material('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName('Invar Casing')
-	event.create('fluix_casing').textureAll('cabin:block/fluix_casing').material('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName('Fluix Casing')
+	event.create('enderium_casing').model('cabin:block/enderium_casing').soundType('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(4.0).displayName('Ender Casing')
+	event.create('zinc_casing').textureAll('cabin:block/zinc_casing').soundType('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName('Zinc Casing')
+	event.create('invar_casing').textureAll('cabin:block/invar_casing').soundType('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName('Invar Casing')
+	event.create('fluix_casing').textureAll('cabin:block/fluix_casing').soundType('metal').tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName('Fluix Casing')
 
-	event.create('computation_matrix').model("cabin:block/computation_matrix").material("lantern").hardness(0.1).displayName('Computation Matrix').fullBlock(false).notSolid().box(1,1,1,15,15,15).waterlogged().opaque(false).lightLevel(7).renderType("translucent")
+	event.create('computation_matrix').model("cabin:block/computation_matrix").soundType("lantern").hardness(0.1).displayName('Computation Matrix').fullBlock(false).notSolid().box(1,1,1,15,15,15).waterlogged().opaque(false).lightLevel(7).renderType("translucent")
 
 	event.create('ponder_laser_lamp').model('cabin:block/ponder_laser_lamp').notSolid().renderType("translucent").displayName('Laser Lamp (For Ponder)')
 	event.create('ponder_laser_lamp_on').model('cabin:block/ponder_laser_lamp_on').notSolid().lightLevel(15).renderType("translucent").displayName('Laser Lamp (For Ponder)')
-	event.create('navigation_computer').model('cabin:block/navigation_computer').material('metal').tagBlock("mineable/pickaxe").hardness(3.0).requiresTool(true).displayName('Navigation Computer')
-	event.create('lander_deployer').model('cabin:block/lander_deployer').material('metal').tagBlock("mineable/pickaxe").hardness(3.0).requiresTool(true).displayName('Lander Deployer')
+	event.create('navigation_computer').model('cabin:block/navigation_computer').soundType('metal').tagBlock("mineable/pickaxe").hardness(3.0).requiresTool(true).displayName('Navigation Computer')
+	event.create('lander_deployer').model('cabin:block/lander_deployer').soundType('metal').tagBlock("mineable/pickaxe").hardness(3.0).requiresTool(true).displayName('Lander Deployer')
 
 	
 
@@ -134,7 +134,7 @@ StartupEvents.registry("block", event => {
 		let id = name.toLowerCase()
 		return event.create(id + '_machine')
 			.model('cabin:block/' + id + '_machine')
-			.material('lantern')
+			.soundType('lantern')
 			.hardness(3.0)
 			.tagBlock("mineable/pickaxe")
 			.requiresTool(true)
@@ -153,7 +153,7 @@ StartupEvents.registry("block", event => {
 
 	for (let i = 0; i < 15; i++)
 		event.create(`failed_alchemy_${i}`)
-			.material('glass')
+			.soundType('glass')
 			.color(0, 0x394867)
 			.color(1, 0x14274E)
 			.hardness(0.1)
@@ -192,7 +192,7 @@ StartupEvents.registry("block", event => {
 			outputItem: outputItem
 		})
 		event.create(`substrate_${id}`)
-			.material('glass')
+			.soundType('glass')
 			.color(0, c1)
 			.color(1, c2)
 			.hardness(0.1)
@@ -262,7 +262,7 @@ StartupEvents.registry("block", event => {
 	category()
 
 	event.create(`substrate_chaos`)
-		.material('glass')
+		.soundType('glass')
 		.color(0, 0xb200ed)
 		.color(1, 0xff66cc)
 		.hardness(0.1)
@@ -277,7 +277,7 @@ StartupEvents.registry("block", event => {
 		// )
 
 	event.create(`substrate_silicon`)
-		.material('glass')
+		.soundType('glass')
 		.color(0, 0x474449)
 		.color(1, 0x967DA0)
 		.hardness(0.1)
@@ -292,7 +292,7 @@ StartupEvents.registry("block", event => {
 		// )
 
 	event.create(`substrate_silver`)
-		.material('glass')
+		.soundType('glass')
 		.color(0, 0x9FADB4)
 		.color(1, 0xBECCD2)
 		.hardness(0.1)
@@ -307,7 +307,7 @@ StartupEvents.registry("block", event => {
 		// )
 
 	event.create(`accellerator_glowstone`)
-		.material('glass')
+		.soundType('glass')
 		.color(0, 0xFFBC5E)
 		.hardness(0.1)
 		.box(.125, 0, .125, .875, 10.0 / 16.0, .875, false)
@@ -320,7 +320,7 @@ StartupEvents.registry("block", event => {
 		)
 
 	event.create(`accellerator_redstone`)
-		.material('glass')
+		.soundType('glass')
 		.color(0, 0xAA0F01)
 		.hardness(0.1)
 		.box(.125, 0, .125, .875, 10.0 / 16.0, .875, false)

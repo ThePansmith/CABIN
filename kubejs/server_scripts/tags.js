@@ -49,14 +49,6 @@ ServerEvents.tags('item', event => {
 
 	//These items aren't obtainable at the moment.
 	//This tag lets these items be melted into iron using the smeltery
-	event.get("kubejs:recycling/iron")
-		.add("expcaves:rusty_pickaxe")
-		.add("expcaves:rusty_sword")
-		.add("expcaves:iron_dagger")
-		.add("expcaves:gourmet_spoon")
-		.add("expcaves:gourmet_fork")
-		.add("expcaves:chef_knife")
-		.add("expcaves:butcher_knife")
 
 	//This tag lets these items be turned into circuit scraps and be melted into invar
 	event.get("kubejs:circuit_press")

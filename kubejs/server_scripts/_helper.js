@@ -106,11 +106,26 @@ const fluixMachine = (event, outputIngredient, inputIngredient) => {
 const addTreeOutput = (event, trunk, leaf, fluid) => {
 	event.custom({
 		"type": "thermal:tree_extractor",
-		"trunk": trunk,
-		"leaves": leaf,
-		"result": fluid || {
-			"fluid": "thermal:resin",
-			"amount": 25
+		"trunk": {
+		  "name": trunk,
+		  "properties": {
+			"axis": "y"
+		  }
+		},
+		"leaves": {
+		  "name": leaf,
+		  "properties": {
+			"persistent": "false"
+		  }
+		},
+		"sapling": "thermal:rubberwood_sapling",
+		"min_height": 4,
+		"max_height": 16,
+		"min_leaves": 16,
+		"max_leaves": 24,
+		"result": {
+		  "fluid": "thermal:resin",
+		  "amount": 25
 		}
 	})
 }

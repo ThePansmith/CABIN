@@ -126,10 +126,10 @@ global.itemBlacklist = [
 	'ad_astra:calorite_block',
 	'ad_astra:raw_calorite_block',
 	'ad_astra:molten_calorite_bucket',
-	'ad_astra:compressed_steel',
-	'ad_astra:compressed_desh',
-	'ad_astra:compressed_ostrum',
-	'ad_astra:compressed_calorite',
+	'ad_astra:steel_plate',
+	'ad_astra:desh_plate',
+	'ad_astra:ostrum_plate',
+	'ad_astra:calorite_plate',
 	'ad_astra:engine_frame',
 	'ad_astra:engine_fan',
 	'ad_astra:desh_engine',
@@ -155,9 +155,9 @@ global.itemBlacklist = [
 	'ad_astra:water_pump',
 	'ad_astra:nasa_workbench',
 	'ad_astra:rover',
-	'ad_astra:rocket_t2',
-	'ad_astra:rocket_t3',
-	'ad_astra:rocket_t4',
+	'ad_astra:tier_2_rocket',
+	'ad_astra:tier_3_rocket',
+	'ad_astra:tier_4_rocket',
 
 	//Biomes O' Plenty
 	'biomesoplenty:blood', /* Not the fluid but the item. Use buckets to place this instead */
@@ -267,25 +267,6 @@ global.itemBlacklist = [
 	//everycomp
 	'everycomp:q/forbidden_arcanus/mysterywood_chest',
 	'everycomp:q/forbidden_arcanus/mysterywood_trapped_chest',
-
-	//Expanded Caves
-	'expcaves:plant_fiber', //useless inventory bloat
-	/* unobtainable, probably meant to come from structures that aren't in this version */
-	'expcaves:butcher_knife',
-	'expcaves:chef_knife',
-	'expcaves:gourmet_fork',
-	'expcaves:gourmet_spoon',
-	'expcaves:iron_dagger',
-	'expcaves:rusty_sword',
-	'expcaves:rusty_pickaxe',
-	'expcaves:wooden_cane',
-	/* unobtainable brown endstone */
-	'expcaves:dirtstone_cobble',
-	'expcaves:dirtstone_cobble_stairs',
-	'expcaves:dirtstone_cobble_slab',
-	'expcaves:dirtstone_cobble_button',
-	'expcaves:dirtstone_cobble_pressure_plate',
-	'expcaves:dirtstone_cobble_wall',
 
 	//Forbidden Arcanus
 	'forbidden_arcanus:edelwood_bucket',
@@ -598,28 +579,6 @@ global.itemBlacklist = [
 	'titanium:creative_generator'
 ]
 
-//The buddycard malum cards are a strange case where we only want to hide items when a mod is not present
-if (!Platform.isLoaded("malum")) {
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum1")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum2")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum3")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum4")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum5")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum6")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum7")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum8")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum9")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum10")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum11")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum12")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum13")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum14")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum15")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum16")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum17")
-	global.itemBlacklist.push("buddycardsexp:buddycard_malum18")
-}
-
 global.jeiItemBlacklist = [
 	//Beyond earth adds 2 sets of these which means we have to blacklist them twice
 	'ad_astra:rover',
@@ -836,7 +795,6 @@ global.randomiumBlacklist = [
 	'ae2:fe_p2p_tunnel',
 	'ae2:light_p2p_tunnel',
 	'ae2:spatial_anchor',
-	'ae2:security_station',
 	'ae2:crafting_unit',
 	'ae2:crafting_accelerator',
 	'ae2:crafting_monitor',
@@ -890,23 +848,6 @@ global.randomiumBlacklist = [
 	'ae2:matter_cannon',
 	'ae2:network_tool',
 	'ae2:memory_card',
-	'ae2:memory_card_black',
-	'ae2:memory_card_blue',
-	'ae2:memory_card_brown',
-	'ae2:memory_card_cyan',
-	'ae2:memory_card_gray',
-	'ae2:memory_card_green',
-	'ae2:memory_card_light_blue',
-	'ae2:memory_card_light_gray',
-	'ae2:memory_card_lime',
-	'ae2:memory_card_magenta',
-	'ae2:memory_card_orange',
-	'ae2:memory_card_pink',
-	'ae2:memory_card_purple',
-	'ae2:memory_card_red',
-	'ae2:memory_card_white',
-	'ae2:memory_card_yellow',
-	'ae2:biometric_card',
 	
 	// Chapter 4A
 	'kubejs:substrate_igneous',
@@ -950,7 +891,7 @@ global.randomiumBlacklist = [
 	'kubejs:lander_deployer',
 	'kubejs:computation_matrix',
 	'kubejs:navigation_computer',
-	'ad_astra:rocket_t1',
+	'ad_astra:tier_1_rocket',
 	'ad_astra:rocket_launch_pad',
 	'ad_astra:oxygen_mask',
 	'ad_astra:space_suit',
@@ -988,7 +929,6 @@ global.randomiumBlacklist = [
 
 	//Creative items
 	'waterstrainer:super_worm',
-	'buddycards:creative_grading_sleeve',
 	'thermal:rf_coil_creative_augment',
 	'thermal:fluid_tank_creative_augment',
 	'thermal:machine_efficiency_creative_augment',

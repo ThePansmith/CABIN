@@ -149,12 +149,12 @@ ServerEvents.recipes(event => {
 	// - - - - - Chapter 1A - - - - -
 	let overrideTreeOutput = (id, trunk, leaf, fluid) => {
 		event.remove({ id: id })
-		addTreeOutput(event, trunk, leaf, fluid)
+		addTreeOutput(event, trunk, leaf)
 	}
 	//Some trees give fluid junk that we don't want
-	overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_jungle'), MC('jungle_log'), MC('jungle_leaves'))
-	overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_spruce'), MC('spruce_log'), MC('spruce_leaves'))
-	overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_dark_oak'), MC('dark_oak_log'), MC('dark_oak_leaves'))
+	// overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_jungle'), MC('jungle_log'), MC('jungle_leaves'))
+	// overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_spruce'), MC('spruce_log'), MC('spruce_leaves'))
+	// overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_dark_oak'), MC('dark_oak_log'), MC('dark_oak_leaves'))
 	// addTreeOutput( TC('greenheart_log'), TC('earth_slime_leaves'), {fluid: TC("earth_slime"), amount: 10})
 	// addTreeOutput( TC('skyroot_log'), TC('sky_slime_leaves'), {fluid: TC("sky_slime"), amount: 10})
 
