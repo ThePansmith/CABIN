@@ -204,7 +204,6 @@ ServerEvents.tags('item', event => {
 })
 
 ServerEvents.tags('block', event => {
-	event.add('minecraft:beacon_base_blocks', 'alloyed:steel_block')
 	event.remove('minecraft:beacon_base_blocks', 'thermal:bronze_block')
 
 	//Not sure if anything checks for this block tag but don't want to risk it.

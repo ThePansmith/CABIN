@@ -103,8 +103,7 @@ ServerEvents.recipes(event => {
 
 	//Remove unwanted Alloying recipes
 	event.remove({ id: CR('mixing/brass_ingot') })
-	event.remove({id: "alloyed:mixing/bronze_ingot"})
-	event.remove({id: "alloyed:mixing/bronze_ingot_x3"})
+	event.remove({id: /centrifuge_bronze_dust/})
 	//smeltery
 	event.remove({ id: TC('smeltery/alloys/molten_bronze') })
 	event.remove({ id: TC('smeltery/alloys/molten_brass') })
