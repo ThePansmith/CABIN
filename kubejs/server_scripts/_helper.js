@@ -62,10 +62,43 @@ const donutCraft = (event, output, center, ring) => {
  */
 //event is the second parameter so that machineItem doesn't look like it's the output item
 const createMachine = (machineItem, event, outputIngredient, inputIngredient) => {
+	machineItem = Item.of(machineItem)
+	outputIngredient = Item.of(outputIngredient)
+	
 	event.remove({ output: outputIngredient })
 	if (inputIngredient) {
-		event.smithing(outputIngredient, machineItem, inputIngredient)
-		event.recipes.createMechanicalCrafting(outputIngredient, 'AB', { A: machineItem, B: inputIngredient })
+		inputIngredient = Item.of(inputIngredient)
+		event.custom({
+			"type": "create:item_application",
+			"ingredients": [
+				{
+					item: machineItem.getId()
+				},
+				{
+					item: inputIngredient.getId()
+				}
+			],
+
+			"results": (outputIngredient.isBlock() && outputIngredient.getCount()>1) ?
+				[
+					
+					{
+						item: outputIngredient.getId()
+					},
+					{
+						item: outputIngredient.getId(),
+						count: outputIngredient.getCount()-1
+					}
+				]
+				:
+				[ 
+					{
+						item: outputIngredient.getId(),
+						count: outputIngredient.getCount()
+					}
+				]
+
+		})
 	}
 	else
 		event.stonecutting(outputIngredient, machineItem)
