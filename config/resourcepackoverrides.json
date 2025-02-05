@@ -3,17 +3,10 @@
   "failed_reloads_per_session": 5,
 
 	"default_packs": [
-    "Everycomp Generated Pack",
-    "Supplementaries Generated Pack",
-    "quark:emote_resources",
-    "file/CABIN",
-    "file/Lopy-Create-Sophisticated-Backpacks.zip",
-    "file/LootrChestRetexture_v1.1_1.18.zip",
-    "file/Created Pretty Pipes1.0 FIXED.zip",
-		"file/Create-Energistics-1.1.0-mc1.18.x.zip",
-		"file/CABIN - Create Energistics",
-    "file/CreatedDrawers_1.19.2_1.0.zip",
-    "file/Create Computers 1.2.zip"
+    "vanilla",
+	"mod_resources",
+	"Moonlight Mods Dynamic Assets",
+    "file/CABIN"
   ],
 	"pack_overrides": {
 		"file/CABIN": {
@@ -23,24 +16,18 @@
 			"hidden": true
 		},
 		"file/Quark Programmer Art.zip": {
-			"hidden": true
+			"force_compatible": true
 		},
-		"railways:legacy_semaphore": {
-			"hidden": true
+		"create_central_kitchen:create_styled": {
+			"force_compatible": true
 		},
 		"railways:green_signals": {
-			"hidden": true
-		},
-		"quark:emote_resources": {
 			"force_compatible": true
 		},
-		"file/Lopy-Create-Sophisticated-Backpacks.zip": {
+		"railways:legacy_palettes": {
 			"force_compatible": true
 		},
-		"file/Created Pretty Pipes1.0 FIXED.zip": {
-			"force_compatible": true
-		},
-		"file/Create Computers 1.2.zip": {
+		"railways:legacy_semaphore": {
 			"force_compatible": true
 		}
 	}
