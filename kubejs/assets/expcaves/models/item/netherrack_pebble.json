@@ -1,7 +1,0 @@
-{
-  "parent": "expcaves:item/rock_flint",
-  "textures": {
-    "0": "minecraft:block/netherrack",
-    "particle": "minecraft:block/netherrack"
-  }
-}
