@@ -3,7 +3,7 @@
 	"parent": "create:block/large_wheels",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "ae2:block/sky_compass",
+		"0": "ae2:item/meteorite_compass",
 		"particle": "create:block/cogwheel",
 		"1_2": "create:block/cogwheel"
 	},
