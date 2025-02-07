@@ -589,13 +589,14 @@ BlockEvents.leftClicked(event => {
 
 })
 
-PlayerEvents.inventoryOpened(event => {
+PlayerEvents.inventoryChanged(event => {
     let entity = event.getEntity()
     if (event.getItem().id == 'kubejs:missingno') {
+        event.player.inventory.clear('kubejs:missingno')
         event.getLevel().getBlock(entity.x, entity.y, entity.z)
             .createExplosion()
+            .explosionMode(Level.ExplosionInteraction.TNT)
             .causesFire(true)
-            .damagesTerrain(true)
             .strength(4)
             .explode()
     }

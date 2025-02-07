@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
 	event.remove({ id: TE('storage/potato_block') })
 	event.remove({ id: TE('storage/beetroot_block') })
 	//Obsidian pulverizing
-	event.recipes.thermal.pulverizer([CR("powdered_obsidian")], F("#obsidian")).energy(7000)
+	thermalPulverizer(event, [CR("powdered_obsidian")], F("#obsidian"), 7000)
 	//Ender pearl pulverizing
 	event.replaceOutput({ id: TE('machines/pulverizer/pulverizer_ender_pearl') }, TE('ender_pearl_dust'), AE2('ender_dust'))
 	event.replaceOutput({ id: TE('earth_charge/ender_pearl_dust_from_ender_pearl') }, TE('ender_pearl_dust'), AE2('ender_dust'))
@@ -33,8 +33,8 @@ ServerEvents.recipes(event => {
 	event.shaped(TE('sapphire_block', 1), blockTemplate, { I: F('#gems/sapphire')	})
 	event.shapeless(TE('sapphire', 9), [F('#storage_blocks/sapphire')])
 	//Make molten glass with the cruicible
-	event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_glass", 1000), F("#sand")).energy(6000)
-	event.recipes.thermal.crucible(Fluid.of("tconstruct:molten_glass", 1000), F("#glass/colorless")).energy(3000)
+	thermalCrucible(event, Fluid.of("tconstruct:molten_glass", 1000), F("#sand"), 6000)
+	thermalCrucible(event, Fluid.of("tconstruct:molten_glass", 1000), F("#glass/colorless"), 3000)
 	//Gourmand fuel recipes for farmer's delight crates
 	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('carrot_crate')}, 'energy': 48000})
 	event.custom({'type': 'thermal:gourmand_fuel', 'ingredient': {'item': FD('potato_crate')}, 'energy': 16000})
@@ -130,10 +130,10 @@ ServerEvents.recipes(event => {
 		}).id(`kubejs:chiller/${recipe.getId().replace(':', '/')}`)
 	})
 	//Ball recipes aren't so easy to port so we'll just make them manually
-	event.recipes.thermal.chiller(MC('slime_ball'), [Fluid.of("tconstruct:earth_slime", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/slime_ball');
-	event.recipes.thermal.chiller(TC('sky_slime_ball'), [Fluid.of("tconstruct:sky_slime", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/sky_slime_ball');
-	event.recipes.thermal.chiller(TC('ender_slime_ball'), [Fluid.of("tconstruct:ender_slime", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/ender_slime_ball');
-	event.recipes.thermal.chiller(TC('blood_slime_ball'), [Fluid.of("tconstruct:blood", 250), TE("chiller_ball_cast")]).energy(5000).id('kubejs:chiller/blood_slime_ball');
+	thermalChiller(event, MC('slime_ball'), [Fluid.of("tconstruct:earth_slime", 250), TE("chiller_ball_cast")], 5000).id('kubejs:chiller/slime_ball');
+	thermalChiller(event, TC('sky_slime_ball'), [Fluid.of("tconstruct:sky_slime", 250), TE("chiller_ball_cast")], 5000).id('kubejs:chiller/sky_slime_ball');
+	thermalChiller(event, TC('ender_slime_ball'), [Fluid.of("tconstruct:ender_slime", 250), TE("chiller_ball_cast")], 5000).id('kubejs:chiller/ender_slime_ball');
+	thermalChiller(event, TC('blood_slime_ball'), [Fluid.of("tconstruct:blood", 250), TE("chiller_ball_cast")], 5000).id('kubejs:chiller/blood_slime_ball');
 
 	//port melting recipes for dusts, ingots and gems
 	const TICMETALS = [

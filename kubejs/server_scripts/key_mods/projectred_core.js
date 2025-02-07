@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
 	//red alloy ingot
 	event.recipes.createCompacting([PR_C('red_ingot')], [MC('copper_ingot'), Fluid.of(TE("redstone"), 250)])
 	event.recipes.createCompacting([PR_C('red_ingot')], [MC('copper_ingot'), MC("redstone"), MC("redstone"), MC("redstone"), MC("redstone")])
-	event.recipes.thermal.smelter(PR_C('red_ingot'), [MC("copper_ingot"), MC("redstone")])
+	thermalSmelter(event, PR_C('red_ingot'), [MC("copper_ingot"), MC("redstone")])
 
 	//recreate the circuit plate smelting recipes
 	event.smelting(PR_C('plate', 2), 'minecraft:smooth_stone')

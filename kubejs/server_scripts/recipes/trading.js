@@ -2,20 +2,21 @@
 ServerEvents.recipes(event => {
 	event.remove({ input: '#forge:coins' })
 
-	event.recipes.thermal.numismatic_fuel(TE('silver_coin')).energy(100000)
-	event.recipes.thermal.numismatic_fuel(TE('gold_coin')).energy(6400000)
+	thermalNumismaticFuel(event, TE('silver_coin'), 100000)
+	thermalNumismaticFuel(event, TE('gold_coin'), 6400000)
 	//remove all press recipes
 	event.remove({ type: TE('press') })
+	event.remove({ type: TE('numismatic_fuel') })
 
 	let trade = (card_id, ingredient, output) => {
 		event.custom({
 			type: 'thermal:press',
 			ingredients: [
-				Ingredient.of(ingredient).toJson(),
-				Ingredient.of(card_id).toJson(),
+				toThermalInputJson(ingredient),
+				toThermalInputJson(card_id),
 			],
 			result: [
-				Item.of(output).toResultJson()
+				toThermalOutputJson(output)
 			],
 			energy: 1000
 		})
@@ -24,34 +25,20 @@ ServerEvents.recipes(event => {
 	global.trades.forEach(element => {
 		if (global.transactions[element])
 			global.transactions[element].forEach(transaction => {
-				if (Item.of(transaction.in).id!='minecraft:air' && Item.of(transaction.out)!='minecraft:air') {
+				if (!Item.of(transaction.in).isEmpty() && !Item.of(transaction.out).isEmpty()) {
 					trade(KJ('trade_card_' + element), transaction.in, transaction.out)
-				}
+				} else console.warn(`tried to create trade, ${transaction.in} -> ${transaction.out}, but one of the items does not exist`)
 			})
 	});
 
 	global.professions.forEach(element => {
 		if (global.transactions[element])
 			global.transactions[element].forEach(transaction => {
-				if (Item.of(transaction.in).id!='minecraft:air' && Item.of(transaction.out).id!='minecraft:air') {
+				if (!Item.of(transaction.in).isEmpty() && !Item.of(transaction.out).isEmpty()) {
 					trade(KJ('profession_card_' + element), transaction.in, transaction.out)
-				}
+				} else console.warn(`tried to create trade, ${transaction.in} -> ${transaction.out}, but one of the items does not exist`)
 			})
 	});
 
-
-	event.custom({
-		type: 'thermal:press',
-		ingredients: [
-			'thermal:gold_coin',
-			'kubejs:missingno'
-		],
-		result: [
-			{
-				"count": 128,
-				"item": "csupplementaries:candy"
-			}
-		],
-		energy: 1000
-	})
+	trade('kubejs:missingno', 'thermal:gold_coin', '128x supplementaries:candy')
 })

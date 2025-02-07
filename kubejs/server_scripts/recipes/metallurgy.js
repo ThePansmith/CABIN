@@ -55,9 +55,9 @@ ServerEvents.recipes(event => {
 ServerEvents.recipes(event => {
 
 	//Thermal recipes for zinc
-	event.recipes.thermal.pulverizer([KJ('zinc_dust')], F('#ingots/zinc')).energy(2000)
-	event.recipes.thermal.pulverizer([KJ('zinc_dust')], F('#plates/zinc')).energy(2000)
-	event.recipes.thermal.smelter([CR('zinc_ingot')], F('#plates/zinc')).energy(1600)
+	thermalPulverizer(event, [KJ('zinc_dust')], F('#ingots/zinc'), 2000)
+	thermalPulverizer(event, [KJ('zinc_dust')], F('#plates/zinc'), 2000)
+	thermalSmelter(event, [CR('zinc_ingot')], F('#plates/zinc'), 1600)
 
 	//use dust instead of raw ore for occultism recipes
 	event.replaceInput({ id: OC("ritual/summon_djinni_crusher") }, '#forge:dusts/silver', KJ('zinc_dust'))
@@ -143,8 +143,8 @@ ServerEvents.recipes(event => {
 	moltenAlloy('molten_rose_gold', TC('molten_copper'), TC('molten_gold'))
 	moltenAlloy('molten_electrum', TC('molten_silver'), TC('molten_gold'))
 	//alloy smelter recipes
-	event.recipes.thermal.smelter(CR("brass_ingot", 2), [MC("copper_ingot"), CR("zinc_ingot")])
-	event.recipes.thermal.smelter(TC("rose_gold_ingot", 2), [MC("copper_ingot"), MC("gold_ingot")])
+	thermalSmelter(event, CR("brass_ingot", 2), [MC("copper_ingot"), CR("zinc_ingot")])
+	thermalSmelter(event, TC("rose_gold_ingot", 2), [MC("copper_ingot"), MC("gold_ingot")])
 	//fix existing alloy smelter recipes to not accept dust
 	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_constantan")}, F('#dusts/copper'), MC("copper_ingot"))
 	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_constantan")}, F('#dusts/nickel'), TE("nickel_ingot"))
@@ -152,11 +152,11 @@ ServerEvents.recipes(event => {
 	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_electrum")}, F('#dusts/silver'), TE("silver_ingot"))
 	event.replaceInput({ id: TE("machines/smelter/smelter_alloy_netherite")}, F('#dusts/gold'), MC("gold_ingot"))
 	//bronze
-	event.recipes.thermal.smelter("3x alloyed:bronze_ingot", [MC("copper_ingot", 3), '#forge:sand'])
+	thermalSmelter(event, "3x alloyed:bronze_ingot", [MC("copper_ingot", 3), '#forge:sand'])
 	
 	// Nickel Compound
 	event.shapeless(KJ('nickel_compound'), [TE('nickel_ingot'), TE("iron_dust"), TE("iron_dust"), TE("iron_dust"), TE("iron_dust")])
-	event.recipes.thermal.smelter([KJ("invar_compound"), KJ("invar_compound")], [TE("nickel_ingot"), MC("iron_ingot")])
+	thermalSmelter(event, [KJ("invar_compound"), KJ("invar_compound")], [TE("nickel_ingot"), MC("iron_ingot")])
 	// Invar Compound
 	event.blasting(KJ('invar_compound'), KJ('nickel_compound'))
 	{ //Invar ingots
@@ -318,7 +318,7 @@ ServerEvents.recipes(event => {
 
 		//ore to crushed ore
 		event.recipes.createCrushing([Item.of(crushedOre, 1), Item.of(crushedOre, 1).withChance(0.25), experience, stone], oreTag).id('kubejs:ore_processing/crushing/ore/'+materialName)
-		event.recipes.thermal.pulverizer([Item.of(crushedOre).withChance(1.25), Item.of('minecraft:gravel').withChance(0.2)], oreTag).energy(3000).id('kubejs:ore_processing/pulverizing/ore/'+materialName)
+		thermalPulverizer(event, [Item.of(crushedOre).withChance(1.25), Item.of('minecraft:gravel').withChance(0.2)], oreTag, 3000).id('kubejs:ore_processing/pulverizing/ore/'+materialName)
 		
 		//crushed ore to nuggets
 		event.smelting(Item.of(nugget, 3), crushedOre).id('kubejs:ore_processing/smelting/crushed/'+materialName)
@@ -327,17 +327,17 @@ ServerEvents.recipes(event => {
 		//crushed ore to ore dust
 		event.recipes.createMilling([Item.of(dust, 3)], crushedOre).id('kubejs:ore_processing/milling/crushed/'+materialName)
 		event.recipes.createCrushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushedOre).id('kubejs:ore_processing/crushing/crushed/'+materialName)
-		event.recipes.thermal.pulverizer([Item.of(dust, 6)], crushedOre).energy(15000).id('kubejs:ore_processing/pulverizing/crushed/'+materialName)
+		thermalPulverizer(event, [Item.of(dust, 6)], crushedOre, 15000).id('kubejs:ore_processing/pulverizing/crushed/'+materialName)
 
 		//ore dust to nuggets
 		event.smelting(Item.of(nugget, 1), dustTag).cookingTime(40).id('kubejs:ore_processing/smelting/dust/'+materialName)
 		
 		//ore dust to fluid
-		event.recipes.thermal.crucible(Fluid.of(fluid, 30), dustTag).energy(3000).id('kubejs:ore_processing/crucible/dust/'+materialName)
+		thermalCrucible(event, Fluid.of(fluid, 30), dustTag, 3000).id('kubejs:ore_processing/crucible/dust/'+materialName)
 		event.recipes.createMixing([Fluid.of(fluid, 180)], [Item.of(dustTag, 3), AE2('matter_ball')]).superheated().id('kubejs:ore_processing/mixing/dust/'+materialName)
 		
 		//ingots to fluid
-		//event.recipes.thermal.crucible(Fluid.of(fluid, 90), ingot).energy(2000).id('kubejs:ore_processing/crucible/ingot/'+materialName) //now automatically ported
+		//thermalCrucible(event, Fluid.of(fluid, 90), ingot, 2000).id('kubejs:ore_processing/crucible/ingot/'+materialName) //now automatically ported
 		
 		//melting crushed ores to fluid
 		event.custom({

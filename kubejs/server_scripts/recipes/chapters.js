@@ -147,14 +147,12 @@ ServerEvents.recipes(event => {
 	createMachine(TE("dynamo_stirling"), event, TE("dynamo_gourmand"), MC("golden_apple"))
 
 	// - - - - - Chapter 1A - - - - -
-	let overrideTreeOutput = (id, trunk, leaf, fluid) => {
-		event.remove({ id: id })
-		addTreeOutput(event, trunk, leaf)
-	}
-	//Some trees give fluid junk that we don't want
-	// overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_jungle'), MC('jungle_log'), MC('jungle_leaves'))
-	// overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_spruce'), MC('spruce_log'), MC('spruce_leaves'))
-	// overrideTreeOutput(TE('devices/tree_extractor/tree_extractor_dark_oak'), MC('dark_oak_log'), MC('dark_oak_leaves'))
+	event.remove({type:'thermal:tree_extractor'})
+	wood_types.forEach(wood=>{
+		if (!Item.of(wood+'_log').isEmpty() && !Item.of(wood+'_leaves').isEmpty()&& !Item.of(wood+'_sapling').isEmpty()) {
+			addTreeOutput(event, wood+'_log', wood+'_leaves').id('kubejs:devices/tree_extractor/tree_extractor_'+wood.split(':')[1])
+		}
+	})
 	// addTreeOutput( TC('greenheart_log'), TC('earth_slime_leaves'), {fluid: TC("earth_slime"), amount: 10})
 	// addTreeOutput( TC('skyroot_log'), TC('sky_slime_leaves'), {fluid: TC("sky_slime"), amount: 10})
 
@@ -523,10 +521,10 @@ ServerEvents.recipes(event => {
 		"time": 40
 	})
 	//Enderium Ingots
-	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_fruit", MC("ender_pearl")]).energy(10000)
-	event.recipes.thermal.smelter(TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_fruit", AE2("ender_dust", 4)]).energy(10000)
+	thermalSmelter(event, TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_fruit", MC("ender_pearl")], 10000)
+	thermalSmelter(event, TE("enderium_ingot"), [F("#ingots/silver"), "minecraft:chorus_fruit", AE2("ender_dust", 4)], 10000)
 	// Abstruse Mechanisms
-	event.recipes.thermal.smelter(KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")]).energy(2000)
+	thermalSmelter(event, KJ("abstruse_mechanism"), [KJ("inductive_mechanism"), TE("enderium_ingot")], 2000)
 	// Ender Slime Ball?
 	event.recipes.createMixing(['tconstruct:ender_slime_ball'], ['minecraft:chorus_fruit', '#forge:slimeballs'])
 	// Enderium Machines
@@ -555,9 +553,9 @@ ServerEvents.recipes(event => {
 	event.shaped(KJ("circuit_scrap", 2), [" A ", "ABA", " A "], { A: TE("invar_ingot"), B: KJ("#circuit_press") })
 	// Pyrolyzer charcoal
 	event.remove({ id: TE("machines/pyrolyzer/pyrolyzer_logs") })
-	event.recipes.thermal.pyrolyzer([MC("charcoal", 2), Fluid.of(TE('creosote'), 50)], MC("#logs")).energy(1000)
+	thermalPyrolyzer(event, [MC("charcoal", 2), Fluid.of(TE('creosote'), 50)], MC("#logs"), 1000, {experience: 0.15})
 	//Coal Coke
-	event.recipes.thermal.pyrolyzer([TE("coal_coke"), Fluid.of(TE('creosote'), 50)], MC("charcoal")).energy(2000)
+	thermalPyrolyzer(event, [TE("coal_coke"), Fluid.of(TE('creosote'), 50)], MC("charcoal"), 2000, {experience: 0.15})
 	//Coke Chunk
 	transitional = KJ('incomplete_coke_chunk')
 	event.recipes.createSequencedAssembly([
@@ -572,7 +570,7 @@ ServerEvents.recipes(event => {
 	event.recipes.createSplashing([
 		Item.of(KJ("sand_ball")).withChance(0.125)
 	], 'minecraft:sandstone')
-	event.recipes.thermal.bottler(KJ("sand_ball"), [Fluid.of(MC("water"), 50), F("#sand/colorless")]).energy(1000)
+	thermalBottler(event, KJ("sand_ball"), [Fluid.of(MC("water"), 50), F("#sand/colorless")], 1000)
 	// Sand Chunks
 	event.recipes.createEmptying([KJ("rough_sand"), Fluid.of(KJ("fine_sand"), 500)], KJ("sand_ball"))
 	//Basalz Powder
@@ -617,17 +615,17 @@ ServerEvents.recipes(event => {
 	event.recipes.createCompacting(TE("ice_charge"), [blizz, blizz, blizz, blizz, blizz, blizz, blizz, blizz])
 	event.recipes.createCompacting(TE("earth_charge"), [basalz, basalz, basalz, basalz, basalz, basalz, basalz, basalz])
 	// Purified Sand
-	event.recipes.thermal.smelter(
+	thermalSmelter(event, 
 		[KJ("purified_sand")],
-		[KJ("rough_sand"), TE("earth_charge")])
-		.energy(5000)
+		[KJ("rough_sand"), TE("earth_charge")],
+		5000)
 	// Silicon Compound
 	event.recipes.createCompacting(KJ("silicon_compound"), [Fluid.of(KJ("fine_sand"), 500), KJ("purified_sand"), KJ("coke_chunk")])
 	// Silicon
-	event.recipes.thermal.smelter(
+	thermalSmelter(event, 
 		[AE2("silicon")],
-		[KJ("silicon_compound"), TE("ice_charge")])
-		.energy(5000)
+		[KJ("silicon_compound"), TE("ice_charge")],
+		5000)
 	event.remove({ output: AE2("silicon") })
 
 	//Goodbye Inscriber
@@ -660,9 +658,9 @@ ServerEvents.recipes(event => {
 		"cooling_time": 150
 	})
 	// Chiller recipes for printed processors
-	event.recipes.thermal.chiller(AE2("printed_calculation_processor"), [Fluid.of("tconstruct:molten_copper", 90), AE2("calculation_processor_press")]).energy(5000)
-	event.recipes.thermal.chiller(AE2("printed_logic_processor"), [Fluid.of("tconstruct:molten_gold", 90), AE2("logic_processor_press")]).energy(5000)
-	event.recipes.thermal.chiller(AE2("printed_engineering_processor"), [Fluid.of("tconstruct:molten_diamond", 100), AE2("engineering_processor_press")]).energy(5000)
+	thermalChiller(event, AE2("printed_calculation_processor"), [Fluid.of("tconstruct:molten_copper", 90), AE2("calculation_processor_press")], 5000)
+	thermalChiller(event, AE2("printed_logic_processor"), [Fluid.of("tconstruct:molten_gold", 90), AE2("logic_processor_press")], 5000)
+	thermalChiller(event, AE2("printed_engineering_processor"), [Fluid.of("tconstruct:molten_diamond", 100), AE2("engineering_processor_press")], 5000)
 	// Printed Silicon
 	event.custom(ifiniDeploying(event, AE2("printed_silicon"), AE2("silicon"), AE2("silicon_press")))
 	//Processors
@@ -700,9 +698,9 @@ ServerEvents.recipes(event => {
 		.id('kubejs:calculation_mechanism')
 	// Quartz Glass
 	event.remove({ output: AE2('quartz_glass') })
-	event.recipes.thermal.smelter(AE2('quartz_glass'), [[AE2('certus_quartz_dust'), TE('quartz_dust')]])
+	thermalSmelter(event, AE2('quartz_glass'), [[AE2('certus_quartz_dust'), TE('quartz_dust')]])
 	//Fluix Crystals
-	event.recipes.thermal.smelter(AE2("fluix_crystal", 2), [MC("quartz"), AE2("charged_certus_quartz_crystal"), MC("redstone")]).energy(4000)
+	thermalSmelter(event, AE2("fluix_crystal", 2), [MC("quartz"), AE2("charged_certus_quartz_crystal"), MC("redstone")], 4000)
 	// ME Controller
 	event.remove({ output: AE2('controller') })
 	donutCraft(event, AE2('controller'), KJ('fluix_casing'), KJ('calculation_mechanism'))
@@ -830,7 +828,7 @@ ServerEvents.recipes(event => {
 	}
 	//Digit Melting
 	let meltOrCrucible = (id, out, outAmount) => {
-		event.recipes.thermal.crucible(Fluid.of(out, outAmount), [id]).energy(20)
+		thermalCrucible(event, Fluid.of(out, outAmount), [id], 20)
 		event.custom({
 			"type": "tconstruct:melting",
 			"ingredient": { "item": id },

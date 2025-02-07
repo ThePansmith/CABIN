@@ -9,7 +9,7 @@ if(Platform.isLoaded("buddycards")) {
 
 		event.recipes.createMilling(['3x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(700)
 		event.recipes.createCrushing(['6x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(500)
-		event.recipes.thermal.pulverizer(['9x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').energy(10000)
+		thermalPulverizer(event, ['9x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal', 10000)
 
 		//buddycard pack recipe change
 		event.remove({ id:"buddycards:mystery_pack"})

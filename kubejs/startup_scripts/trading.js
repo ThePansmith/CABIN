@@ -55,8 +55,8 @@ StartupEvents.registry('item', event => {
 			.unstackable()
 	}
 
-	let S = (x) => Item.of('thermal:silver_coin', x)
-	let G = (x) => Item.of('thermal:gold_coin', x)
+	let S = (x) => `${x||1}x thermal:silver_coin`
+	let G = (x) => `${x||1}x thermal:gold_coin`
 
 	profession("Farming", 0xFFCC29, 0x81B214, [
 		{ in: FD('carrot_crate'), out: S(1) },

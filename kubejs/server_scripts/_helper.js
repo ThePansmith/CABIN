@@ -5,6 +5,15 @@ const Registry = Java.loadClass('net.minecraft.core.Registry'); //registries, ne
 //const BlockPos = Java.loadClass('net.minecraft.core.BlockPos'); //Block position. For some reason we don't need to import this?
 const TagKey = Java.loadClass('net.minecraft.tags.TagKey');
 
+const InputItem = Java.loadClass('dev.latvian.mods.kubejs.item.InputItem')
+const OutputItem = Java.loadClass('dev.latvian.mods.kubejs.item.OutputItem')
+const InputFluid = Java.loadClass('dev.latvian.mods.kubejs.fluid.InputFluid')
+const OutputFluid = Java.loadClass('dev.latvian.mods.kubejs.fluid.OutputFluid')
+const FluidStackJS = Java.loadClass('dev.latvian.mods.kubejs.fluid.FluidStackJS')
+const JsonObject = Java.loadClass('com.google.gson.JsonObject')
+
+const Level = Java.loadClass('net.minecraft.world.level.Level') //For some reason, Kubejs requires that you load this class to create explosions that damage blocks
+
 // Mod shortcuts
 const MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "") + domain + ":" + id.replace('#', '')
 
@@ -30,7 +39,7 @@ const TE = (id, x) => MOD("thermal", id, x)
 const colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 const native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold']
 
-const wood_types = [MC('oak'),  MC('spruce'),  MC('birch'),  MC('jungle'),  MC('acacia'),  MC('dark_oak'),  AP('twisted'), TC('greenheart'), TC('skyroot'), TC('bloodshroom'), MC('crimson'), MC('warped'), FA('fungyss'), FA('cherrywood'), FA('mysterywood'), FA('edelwood')]
+const wood_types = [MC('oak'),  MC('spruce'),  MC('birch'),  MC('jungle'),  MC('acacia'),  MC('dark_oak'), MC('mangrove'), MC('cherry'),  AP('twisted'), TC('greenheart'), TC('skyroot'), TC('bloodshroom'), MC('crimson'), MC('warped'), FA('fungyss'), FA('cherrywood'), FA('mysterywood'), FA('edelwood')]
 
 //None of the modded axes are registered for some reason
 const unregistered_axes = ["ae2:certus_quartz_axe", "ae2:nether_quartz_axe", "ae2:fluix_axe", "tconstruct:hand_axe", "tconstruct:mattock", "tconstruct:broad_axe", "thermal:flux_saw", "forbidden_arcanus:draco_arcanus_axe", "forbidden_arcanus:arcane_golden_axe", "forbidden_arcanus:reinforced_arcane_golden_axe"]
@@ -62,40 +71,28 @@ const donutCraft = (event, output, center, ring) => {
  */
 //event is the second parameter so that machineItem doesn't look like it's the output item
 const createMachine = (machineItem, event, outputIngredient, inputIngredient) => {
-	machineItem = Item.of(machineItem)
+	machineItem = Ingredient.of(machineItem)
 	outputIngredient = Item.of(outputIngredient)
 	
 	event.remove({ output: outputIngredient })
 	if (inputIngredient) {
-		inputIngredient = Item.of(inputIngredient)
+		inputIngredient = Ingredient.of(inputIngredient)
 		event.custom({
 			"type": "create:item_application",
 			"ingredients": [
-				{
-					item: machineItem.getId()
-				},
-				{
-					item: inputIngredient.getId()
-				}
+				machineItem.toJson(),
+				inputIngredient.toJson()
 			],
 
 			"results": (outputIngredient.isBlock() && outputIngredient.getCount()>1) ?
 				[
 					
-					{
-						item: outputIngredient.getId()
-					},
-					{
-						item: outputIngredient.getId(),
-						count: outputIngredient.getCount()-1
-					}
+					outputIngredient.withCount(1).toJson(),
+					outputIngredient.withCount(outputIngredient.getCount()-1).toJson()
 				]
 				:
 				[ 
-					{
-						item: outputIngredient.getId(),
-						count: outputIngredient.getCount()
-					}
+					outputIngredient.toJson()
 				]
 
 		})
@@ -136,29 +133,107 @@ const fluixMachine = (event, outputIngredient, inputIngredient) => {
 	return createMachine('ae2:controller', event, outputIngredient, inputIngredient)
 }
 
+const toThermalInputJson = (value) => {
+	if (value instanceof InputFluid) {
+		return (FluidStackJS.of(value)).toJson()
+	}
+	value = InputItem.of(value)
+	if (value.count > 1) {
+		var json = new JsonObject()
+		json.add("value", value.ingredient.toJson())
+		json.addProperty("count", value.count)
+		return json
+	} else {
+		return value.ingredient.toJson();
+	}
+}
+const toThermalOutputJson = (value) => {
+	if (value instanceof OutputFluid) {
+		return (FluidStackJS.of(value)).toJson();
+	}
+	value = OutputItem.of(value)
+	var json = new JsonObject()
+	json.addProperty("item", value.item.getId())
+	json.addProperty("count", value.item.getCount())
+
+	if (value.getNbt() != null) {
+		json.addProperty("nbt", value.getNbt().toString())
+	}
+
+	if (value.hasChance()) {
+		json.addProperty("chance", value.getChance())
+	}
+
+	if (value.rolls != null) {
+		json.addProperty("minRolls", value.rolls.getMinValue())
+		json.addProperty("maxRolls", value.rolls.getMaxValue())
+	}
+
+	return json;
+}
+
+const thermalRecipe = (event, recipeType, inputCount, outputCount, inputIngredients, outputIngredients, energy, extraJson) => {
+	let json = extraJson || {}
+
+	json.type = recipeType
+	if (inputCount==1) {
+		json.ingredient = toThermalInputJson(inputIngredients)
+	} else if (inputCount>1) {
+		json.ingredients = (Array.isArray(inputIngredients) ? inputIngredients.map(toThermalInputJson) : toThermalInputJson(inputIngredients))
+	}
+	if (outputCount>0) {
+		json.result = (Array.isArray(outputIngredients) ? outputIngredients.map(toThermalOutputJson) : toThermalOutputJson(outputIngredients))
+	}
+	if (energy) {
+		json.energy = energy
+	}
+	return event.custom(json)
+}
+
+const thermalBottler = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:bottler", 2, 1, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalCentrifuge = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:centrifuge", 1, 5, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalChiller = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:chiller", 2, 1, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalCrucible = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:crucible", 1, 1, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalCrystalizer = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:crystallizer", 3, 1, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalFurnace = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:furnace", 1, 1, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalInsolator = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:insolator", 1, 4, inputIngredients, outputIngredients, energy, extraJson) }
+//const thermalPress = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:press", 2, 2, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalPulverizer = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:pulverizer", 1, 4, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalPyrolyzer = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:pyrolyzer", 1, 5, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalRefinery = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:refinery", 1, 3, inputIngredients, outputIngredients, energy, extraJson) }
+//const thermalSawmill = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:sawmill", 1, 4, inputIngredients, outputIngredients, energy, extraJson) }
+const thermalSmelter = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:smelter", 3, 4, inputIngredients, outputIngredients, energy, extraJson) }
+
+const thermalNumismaticFuel = (event, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:numismatic_fuel", 1, 0, inputIngredients, undefined, energy, extraJson) }
+
+/* sorry to break the immersion but this is just a reskinned sawmill */
+const thermalExtractor = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:sawmill", 1, 4, inputIngredients, outputIngredients, energy, extraJson) }
+/* sorry to break the immersion but this is just a reskinned press */
+const thermalTradeStation = (event, outputIngredients, inputIngredients, energy, extraJson) => { return thermalRecipe(event, "thermal:press", 2, 2, inputIngredients, outputIngredients, energy, extraJson) }
+
 const addTreeOutput = (event, trunk, leaf, fluid) => {
-	event.custom({
-		"type": "thermal:tree_extractor",
-		"trunk": {
-		  "name": trunk,
-		  "properties": {
-			"axis": "y"
-		  }
+	return event.custom({
+		type: "thermal:tree_extractor",
+		trunk: {
+			Name: trunk,
+			Properties: {
+				axis: "y"
+			}
 		},
-		"leaves": {
-		  "name": leaf,
-		  "properties": {
-			"persistent": "false"
-		  }
+		leaves: {
+			Name: leaf,
+			Properties: {
+				persistent: "false"
+			}
 		},
-		"sapling": "thermal:rubberwood_sapling",
-		"min_height": 4,
-		"max_height": 16,
-		"min_leaves": 16,
-		"max_leaves": 24,
-		"result": {
-		  "fluid": "thermal:resin",
-		  "amount": 25
+		// sapling: "minecraft:jungle_sapling",
+		// min_height: 5,
+		// max_height: 10,
+		// min_leaves: 8,
+		// max_leaves: 12,
+		result: fluid ? toThermalOutputJson(fluid) : {
+			fluid: "thermal:resin",
+			amount: 25
 		}
 	})
 }
@@ -318,6 +393,7 @@ const metalMelting = (event, metalName, outputFluid, meltingTime, temperature) =
 	}
 }
 
+/** Used in datapack events instead of recipe events */
 const addChiselingRecipe = (event, id, items, overwrite) => {
 	const json = {
 		type: "rechiseled:chiseling",

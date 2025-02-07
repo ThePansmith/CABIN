@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
 	event.recipes.createMilling(['4x ' + MC('redstone')], TE('cinnabar')).processingTime(700)
 	event.recipes.createCrushing(['6x ' + MC('redstone')], TE('cinnabar')).processingTime(500)
 	event.remove({ id: TE('machines/pulverizer/pulverizer_cinnabar') })
-	event.recipes.thermal.pulverizer(['8x ' + MC('redstone')], TE('cinnabar')).energy(10000)
+	thermalPulverizer(event, ['8x ' + MC('redstone')], TE('cinnabar'), 10000)
 
 	event.recipes.createMilling([TE('sulfur_dust')], F("#gems/sulfur")).processingTime(500)
 	event.recipes.createMilling([TE('niter_dust')], F("#gems/niter")).processingTime(500)

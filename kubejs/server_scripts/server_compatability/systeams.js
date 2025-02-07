@@ -6,7 +6,7 @@ if(Platform.isLoaded("systeams")) {
     event.remove({mod: 'systeams', input: 'minecraft:redstone', output: '#systeams:boilers'})
 
     // Steam Bucket
-    // event.recipes.thermal.bottler('minecraft:bucket', [Fluid.of('#forge:steam', 1000), 'systeams:steam_bucket'])
+    // thermalBottler(event, 'minecraft:bucket', [Fluid.of('#forge:steam', 1000), 'systeams:steam_bucket'])
     // Seems like KubeJS Thermal doesn't support Fluid Tags, so a custom event will be used as a placeholder:
     event.custom({
       "type": "thermal:bottler",

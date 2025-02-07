@@ -23,18 +23,8 @@ if(Platform.isLoaded("biomesoplenty")) {
 		addTreeOutput(event, MC('birch_log'), BOP('yellow_autumn_leaves'))
 		addTreeOutput(event, MC('dark_oak_log'), BOP('orange_autumn_leaves'))
 		addTreeOutput(event, MC('oak_log'), BOP('maple_leaves'))
-		addTreeOutput(event, BOP('fir_log'), BOP('fir_leaves'))
-		addTreeOutput(event, BOP('redwood_log'), BOP('redwood_leaves'))
 		addTreeOutput(event, BOP('cherry_log'), BOP('white_cherry_leaves'))
 		addTreeOutput(event, BOP('cherry_log'), BOP('pink_cherry_leaves'))
-		addTreeOutput(event, BOP('mahogany_log'), BOP('mahogany_leaves'))
-		addTreeOutput(event, BOP('jacaranda_log'), BOP('jacaranda_leaves'))
-		addTreeOutput(event, BOP('palm_log'), BOP('palm_leaves'))
-		addTreeOutput(event, BOP('willow_log'), BOP('willow_leaves'))
-		addTreeOutput(event, BOP('dead_log'), BOP('dead_leaves'))
-		addTreeOutput(event, BOP('magic_log'), BOP('magic_leaves'))
-		addTreeOutput(event, BOP('umbran_log'), BOP('umbran_leaves'))
-		addTreeOutput(event, BOP('hellbark_log'), BOP('hellbark_leaves'))
 		//Wash sand into clay
 		//This code doesn't even work properly
 		event.recipes.createSplashing([Item.of(MC('clay_ball'), 1).withChance(0.25)], 'biomesoplenty:black_sand')

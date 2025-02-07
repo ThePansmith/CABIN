@@ -15,11 +15,11 @@ ServerEvents.recipes(event => {
 	//laziness and its consequences have been a distaster for the human race
 	wood_types.forEach(wood => {
 		let log = wood +'_log'
-		if (!Item.exists(log)) {
+		if (Item.of(log).isEmpty()) {
 			log = wood +'_stem'
 		}
 		let woodLog = wood +'_wood'
-		if (!Item.exists(woodLog)) {
+		if (Item.of(woodLog).isEmpty()) {
 			woodLog = wood +'_hyphae'
 		}
 		let strippedLog = log.replace(':',':stripped_')
