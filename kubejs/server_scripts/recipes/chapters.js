@@ -149,7 +149,7 @@ ServerEvents.recipes(event => {
 	// - - - - - Chapter 1A - - - - -
 	event.remove({type:'thermal:tree_extractor'})
 	wood_types.forEach(wood=>{
-		if (!Item.of(wood+'_log').isEmpty() && !Item.of(wood+'_leaves').isEmpty()&& !Item.of(wood+'_sapling').isEmpty()) {
+		if (Item.exists(wood+'_log') && Item.exists(wood+'_leaves')&& Item.exists(wood+'_sapling')) {
 			addTreeOutput(event, wood+'_log', wood+'_leaves').id('kubejs:devices/tree_extractor/tree_extractor_'+wood.split(':')[1])
 		}
 	})
