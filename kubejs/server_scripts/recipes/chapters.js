@@ -895,9 +895,9 @@ ServerEvents.recipes(event => {
 		"iron_tank", "gold_tank", "diamond_tank", "calorite_tank",
 		"rocket_fin", "iron_plate", "desh_plate",
 		"rocket_launch_pad", "nasa_workbench",
-		"solar_panel", "coal_generator", "compressor", "fuel_refinery", "oxygen_loader", "oxygen_bubble_distributer", "water_pump"
+		"solar_panel", "coal_generator", "compressor", "fuel_refinery", "oxygen_loader", "oxygen_distributer", "water_pump"
 	]
-	begoneEarth.forEach(begone=>{event.remove({ id:AA(begone) })})
+	begoneEarth.forEach(begone=>{event.remove({ output: AA(begone) })})
 	// Matter Plastics
 	event.recipes.createCompacting(KJ("matter_plastics"), [AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball"), AE2("matter_ball")]).superheated()
 	//Saves a lot of code to reuse an object with the materials here
