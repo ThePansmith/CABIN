@@ -1,4 +1,4 @@
-REIEvents.hide(event => {
+JEIEvents.hideItems(event => {
 	global.itemBlacklist.forEach(item=>{
 		event.hide(item);
 	})
@@ -7,7 +7,7 @@ REIEvents.hide(event => {
 	})
 })
 
-REIEvents.hide(event => {
+JEIEvents.hideFluids(event => {
 	global.jeiFluidBlacklist.forEach(fluid=>{
 		event.hide(fluid);
 	})

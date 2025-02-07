@@ -23,7 +23,7 @@ const POTIONS = [ //The order that we create these rei entries in is important!
 ];
 
 //Add Potion fluids to REI
-REIEvents.add('fluid', event => {
+JEIEvents.add('fluid', event => {
     POTION_BOTTLES.forEach(bottle=>{
         for (let i=0;i<POTIONS.length;++i) {
             let potionName = POTIONS[i][0];
@@ -36,15 +36,4 @@ REIEvents.add('fluid', event => {
             }
         }
     })
-})
-
-REIEvents.groupEntries(event => {
-	//Create potion fluids. They have complicated nbt and we want to split them into 3 categories, so predicates must be used.
-    let createPotion = Fluid.of("create:potion").getId();
-    event.groupFluidsIf('kubejs:rei_groups/create/potion', Component.translate("Potion Fluid"), fluid =>
-        fluid.getId()===createPotion&&fluid.nbt.Bottle==="REGULAR");
-    event.groupFluidsIf('kubejs:rei_groups/create/splash_potion', Component.translate("Splash Potion Fluid"), fluid =>
-        fluid.getId()===createPotion&&fluid.nbt.Bottle==="SPLASH");
-    event.groupFluidsIf('kubejs:rei_groups/create/lingering_potion', Component.translate("Lingering Potion Fluid"), fluid =>
-        fluid.getId()===createPotion&&fluid.nbt.Bottle==="LINGERING");
 })

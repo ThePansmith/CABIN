@@ -1,0 +1,11 @@
+{
+  "kubejs.ponder.alchemy_setup.header": "The Thermal Alchemy Setup",
+  "kubejs.ponder.alchemy_setup.text_1": "Start with an Invar Machine",
+  "kubejs.ponder.alchemy_setup.text_2": "Attach a Cage Lamp of any colour",
+  "kubejs.ponder.alchemy_setup.text_3": "Toggle it on with a wrench",
+  "kubejs.ponder.alchemy_setup.text_4": "Place a Deployer targeting the Invar Machine",
+  "kubejs.ponder.alchemy_setup.text_5": "Set it to Punch mode using a Wrench",
+  "kubejs.ponder.alchemy_setup.text_6": "Whenever the Deployer activates...",
+  "kubejs.ponder.alchemy_setup.text_7": "...the Laser Lamp will emit a High-Energy Beam",
+  "kubejs.ponder.alchemy_setup.text_8": "Hopper Minecarts caught in the Beam will process their contained Items"
+}
