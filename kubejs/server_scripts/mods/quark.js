@@ -20,9 +20,9 @@ if(Platform.isLoaded("quark")) {
 		addTreeOutput(event, QU('blossom_log'), QU('blue_blossom_leaves'))
 		addTreeOutput(event, QU('blossom_log'), QU('lavender_blossom_leaves'))
 		addTreeOutput(event, QU('blossom_log'), QU('orange_blossom_leaves'))
-		addTreeOutput(event, QU('blossom_log'), QU('pink_blossom_leaves'))
 		addTreeOutput(event, QU('blossom_log'), QU('yellow_blossom_leaves'))
 		addTreeOutput(event, QU('blossom_log'), QU('red_blossom_leaves'))
+		addTreeOutput(event, QU('blossom_log'), QU('snowblossom_leaves'))
 
 		//Stone generation
 		event.custom({
@@ -53,24 +53,21 @@ if(Platform.isLoaded("quark")) {
 		event.add("minecraft:pressure_plates", 'quark:obsidian_pressure_plate')
 	})
 
-	//Use last to avoid overwriting earlier datapack changes.
-	//If the situation with overlapping chisel datapacks gets worse,
-	//we might need to upgrade to an array similar to wood_types
 	ServerEvents.lowPriorityData(event => {
-		addChiselingRecipe(event, 'rechiseledcreate:chiseling_recipes/limestone', [
+		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/limestone', [
+			"create:limestone",
 			"quark:limestone",
 			"quark:polished_limestone",
 			"quark:limestone_bricks",
 			"quark:chiseled_limestone_bricks",
 			"quark:limestone_pillar"
 		])
-		addChiselingRecipe(event, 'cabin:chiseling_recipes/apple_block', ["quark:apple_crate"])
-		addChiselingRecipe(event, 'cabin:chiseling_recipes/bamboo_block', ["quark:bamboo_block"])
-		addChiselingRecipe(event, 'cabin:chiseling_recipes/beetroot_block', ["quark:beetroot_crate"])
-		addChiselingRecipe(event, 'cabin:chiseling_recipes/carrot_block', ["quark:carrot_crate"])
-		addChiselingRecipe(event, 'cabin:chiseling_recipes/charcoal_block', ["quark:charcoal_block"])
-		addChiselingRecipe(event, 'cabin:chiseling_recipes/gunpowder_block', ["quark:gunpowder_sack"])
-		addChiselingRecipe(event, 'cabin:chiseling_recipes/potato_block', ["quark:potato_crate"])
-		addChiselingRecipe(event, 'cabin:chiseling_recipes/sugar_cane_block', ["quark:sugar_cane_block"])
+		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/apple_block', ["thermal:apple_block", "quark:apple_crate"])
+		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/beetroot_block', ["farmersdelight:beetroot_crate", "quark:beetroot_crate"])
+		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/carrot_block', ["farmersdelight:carrot_crate", "quark:carrot_crate"])
+		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/charcoal_block', ["thermal:charcoal_block", "quark:charcoal_block"])
+		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/gunpowder_block', ["thermal:gunpowder_block", "quark:gunpowder_sack"])
+		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/potato_block', ["farmersdelight:potato_crate", "quark:potato_crate"])
+		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/sugar_cane_block', ["thermal:sugar_cane_block", "quark:sugar_cane_block"])
 	})
 }

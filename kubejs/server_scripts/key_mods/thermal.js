@@ -213,3 +213,9 @@ ServerEvents.recipes(event => {
 		}
 	})
 })
+
+ServerEvents.lowPriorityData(event => {
+	addChiselingRecipe(event, 'kubejs:chiseling_recipes/thermal/beetroot_block', ["farmersdelight:beetroot_crate", "thermal:beetroot_block"])
+	addChiselingRecipe(event, 'kubejs:chiseling_recipes/thermal/carrot_block', ["farmersdelight:carrot_crate", "thermal:carrot_block"])
+	addChiselingRecipe(event, 'kubejs:chiseling_recipes/thermal/potato_block', ["farmersdelight:potato_crate", "thermal:potato_block"])
+})

@@ -2,7 +2,6 @@ const BOP = (id, x) => MOD("biomesoplenty", id, x)
 if(Platform.isLoaded("biomesoplenty")) {
 	wood_types.push(BOP('fir'))
 	wood_types.push(BOP('redwood'))
-	wood_types.push(BOP('cherry'))
 	wood_types.push(BOP('mahogany'))
 	wood_types.push(BOP('jacaranda'))
 	wood_types.push(BOP('palm'))
@@ -16,17 +15,40 @@ if(Platform.isLoaded("biomesoplenty")) {
 		event.get("forge:vines").add(BOP("willow_vine")).add(BOP("spanish_moss"))
 	})
 	ServerEvents.recipes(event => {
-		//Tree resin
+		//Tree Extracting recipes for leaves that don't match their log names
 		addTreeOutput(event, MC('oak_log'), BOP('origin_leaves'))
 		addTreeOutput(event, MC('oak_log'), BOP('flowering_oak_leaves'))
 		addTreeOutput(event, MC('birch_log'), BOP('rainbow_birch_leaves'))
 		addTreeOutput(event, MC('birch_log'), BOP('yellow_autumn_leaves'))
 		addTreeOutput(event, MC('dark_oak_log'), BOP('orange_autumn_leaves'))
 		addTreeOutput(event, MC('oak_log'), BOP('maple_leaves'))
-		addTreeOutput(event, BOP('cherry_log'), BOP('white_cherry_leaves'))
-		addTreeOutput(event, BOP('cherry_log'), BOP('pink_cherry_leaves'))
+
+		//kubejs throws a duplicate recipe error, we'd need to change how resin recipes are created to avoid that error
+		/*event.custom({
+			type: "thermal:tree_extractor",
+			trunk: {
+				Name: "biomesoplenty:magic_log",
+				Properties: {
+					axis: "y"
+				}
+			},
+			leaves: {
+				Name: "biomesoplenty:magic_leaves",
+				Properties: {
+					persistent: "false"
+				}
+			},
+			result: {
+				fluid: "create:potion",
+				amount: 25,
+				nbt: {
+					Bottle: 'REGULAR',
+					Potion: "minecraft:thick"
+				}
+			}
+		}).id('kubejs:devices/tree_extractor/tree_extractor_magic')*/
+
 		//Wash sand into clay
-		//This code doesn't even work properly
 		event.recipes.createSplashing([Item.of(MC('clay_ball'), 1).withChance(0.25)], 'biomesoplenty:black_sand')
 		event.recipes.createSplashing([Item.of(MC('clay_ball'), 1).withChance(0.25)], 'biomesoplenty:white_sand')
 		event.recipes.createSplashing([Item.of(MC('clay_ball'), 1).withChance(0.25)], 'biomesoplenty:orange_sand')

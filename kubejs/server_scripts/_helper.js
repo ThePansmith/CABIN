@@ -39,7 +39,7 @@ const TE = (id, x) => MOD("thermal", id, x)
 const colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 const native_metals = ['iron', 'zinc', 'lead', 'copper', 'nickel', 'gold']
 
-const wood_types = [MC('oak'),  MC('spruce'),  MC('birch'),  MC('jungle'),  MC('acacia'),  MC('dark_oak'), MC('mangrove'), MC('cherry'),  AP('twisted'), TC('greenheart'), TC('skyroot'), TC('bloodshroom'), MC('crimson'), MC('warped'), FA('fungyss'), FA('cherrywood'), FA('mysterywood'), FA('edelwood')]
+const wood_types = [MC('oak'),  MC('spruce'),  MC('birch'),  MC('jungle'),  MC('acacia'),  MC('dark_oak'), MC('mangrove'), MC('cherry'),  AP('twisted'), TC('greenheart'), TC('skyroot'), TC('bloodshroom'), MC('crimson'), MC('warped'), FA('fungyss'), FA('aurum'), FA('edelwood')]
 
 //None of the modded axes are registered for some reason
 const unregistered_axes = ["ae2:certus_quartz_axe", "ae2:nether_quartz_axe", "ae2:fluix_axe", "tconstruct:hand_axe", "tconstruct:mattock", "tconstruct:broad_axe", "thermal:flux_saw", "forbidden_arcanus:draco_arcanus_axe", "forbidden_arcanus:arcane_golden_axe", "forbidden_arcanus:reinforced_arcane_golden_axe"]
