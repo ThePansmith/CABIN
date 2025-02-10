@@ -69,5 +69,53 @@ if(Platform.isLoaded("quark")) {
 		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/gunpowder_block', ["thermal:gunpowder_block", "quark:gunpowder_sack"])
 		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/potato_block', ["farmersdelight:potato_crate", "quark:potato_crate"])
 		addChiselingRecipe(event, 'kubejs:chiseling_recipes/compat/quark/sugar_cane_block', ["thermal:sugar_cane_block", "quark:sugar_cane_block"])
+
+		//Remove the Forgotten Hat from the forgotten's drop pool (spawns in strongholds with integrated strongholds)
+		event.addJson("quark:loot_tables/entities/forgotten", {
+			"type": "minecraft:entity",
+			"pools": [
+			  {
+				"rolls": 1,
+				"entries": [
+				  {
+					"type": "minecraft:item",
+					"functions": [
+					  {
+						"function": "minecraft:set_count",
+						"count": {"min": 4.0, "max": 8.0, "type": "minecraft:uniform"}
+					  },
+					  {
+						"function": "minecraft:looting_enchant",
+						"count": {"min": 1.0, "max": 2.0}
+					  }
+					],
+					"name": "minecraft:arrow"
+				  }
+				]
+			  },
+			  {
+				"rolls": 1,
+				"entries": [
+				  {
+					"type": "minecraft:item",
+					"functions": [
+					  {
+						"function": "minecraft:set_count",
+						"count": {"min": 2.0, "max": 3.0, "type": "minecraft:uniform"}
+					  },
+					  {
+						"function": "minecraft:looting_enchant",
+						"count": {"min": 0.0, "max": 1.0}
+					  }
+					],
+					"name": "minecraft:bone"
+				  }
+				]
+			  }
+			]
+		  })
+
+		//remove soul beads
+		event.addJson("quark:loot_tables/entities/wraith", {})
 	})
 }
