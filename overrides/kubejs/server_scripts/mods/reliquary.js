@@ -5,7 +5,7 @@ if(Platform.isLoaded("reliquary")) {
 		})
 
 		//Vials contain fluid
-		let vialAmount = 240 //Should be mod 3, < 250
+		let vialAmount = 250
 		let container = RQ('empty_potion_vial')
 		let vials = ['glowing_water','angelheart_vial','aphrodite_potion','fertile_potion']
 		let ingredients = [
@@ -22,7 +22,7 @@ if(Platform.isLoaded("reliquary")) {
 		}
 
 		//Recipes
-		event.recipes.createFilling(RQ('glowing_bread'),[F('#bread'),Fluid.of(KJ('glowing_water'),vialAmount/3)])
+		event.recipes.createFilling(RQ('glowing_bread'),[F('#bread'),Fluid.of(KJ('glowing_water'),vialAmount *  3/10)])
 		event.recipes.createMixing(RQ('holy_hand_grenade',4),[Fluid.of(KJ('glowing_water'),vialAmount),MC('gold_nugget'),MC('tnt'),RQ('catalyzing_gland')])
 
 		event.recipes.createFilling(RQ('phoenix_down'), [RQ('angelic_feather'),Fluid.of(KJ('angelheart_vial'),vialAmount*3)])
@@ -40,41 +40,37 @@ if(Platform.isLoaded("reliquary")) {
 		}
 
 		//Mob drops
-		event.remove({id:"reliquary:uncrafting/bone"})
+		//event.remove({id:"reliquary:uncrafting/bone"})
 		let boneProcess = (rib, bone, dye) => {
-			event.shapeless(`3x ${bone}`,[rib])
+			event.shapeless(`5x ${bone}`,[rib])
 			event.stonecutting(`5x ${bone}`,rib)
 			event.recipes.createMilling([
 				MC('bone_meal',15),
 				Item.of(dye).withCount(5).withChance(0.40),
 				Item.of(MC('bone_meal',15)).withChance(0.40)
 			], rib)
-			if(Platform.isLoaded('thermal')){
-				event.recipes.thermal.pulverizer([
-					MC('bone_meal',15),
-					Item.of(dye).withCount(5).withChance(0.40),
-					Item.of(MC('bone_meal',15)).withChance(0.40)
-				], rib)
-			}
+			event.recipes.thermal.pulverizer([
+				MC('bone_meal',15),
+				Item.of(dye).withCount(5).withChance(0.40),
+				Item.of(MC('bone_meal',15)).withChance(0.40)
+			], rib)
 		}
 		let crushing = (outputs, input) => {
 			event.recipes.createMilling(outputs,input)
-			if(Platform.isLoaded('thermal')){event.recipes.thermal.pulverizer(outputs,input)}
+			event.recipes.thermal.pulverizer(outputs,input)
 		}
 		let melting = (output, input, temp, time) => {
-			if(Platform.isLoaded('thermal')){event.recipes.thermal.crucible(output[0],input)}
-			if(Platform.isLoaded("tconstruct")){
-				var recipe = {
-					"type":"tconstruct:melting",
-					"ingredient":{item:input},
-					"result": output.shift().toJson(),
-					"temperature": temp,
-					"time": time
-				}
-				//Sadly, tcon doesn't want our empty byproducts array :(
-				if(output.length>0){recipe["byproducts"] = output.map(element => element.toJson())}
-				event.custom(recipe)
+			event.recipes.thermal.crucible(output[0],input)
+			var recipe = {
+				"type":"tconstruct:melting",
+				"ingredient":{item:input},
+				"result": output.shift().toJson(),
+				"temperature": temp,
+				"time": time
 			}
+			//Sadly, tcon doesn't want our empty byproducts array :(
+			if(output.length>0){recipe["byproducts"] = output.map(element => element.toJson())}
+			event.custom(recipe)
 		}
 		boneProcess(RQ('rib_bone'), MC('bone'), MC('white_dye'))
 		crushing([MC('gunpowder',8)],RQ('catalyzing_gland'))
@@ -89,11 +85,12 @@ if(Platform.isLoaded("reliquary")) {
 		melting([Fluid.of(TC('molten_ender'),1000)],RQ('nebulous_heart'),477,160)
 		melting([Fluid.of(TC('powdered_snow'),500)],RQ('frozen_core'),0,80)
 		melting([Fluid.of(TC('molten_gold'),30),Fluid.of(TC('blood'),150)],RQ('zombie_heart'),700,60)
-		if(Platform.isLoaded("tconstruct")){boneProcess(RQ('withered_rib'),TC('necrotic_bone'),MC('black_dye'))
-			event.recipes.minecraft.stonecutting('5x minecraft:bone',RQ('withered_rib'))
-		}
+		boneProcess(RQ('withered_rib'),TC('necrotic_bone'),MC('black_dye'))
+		event.recipes.minecraft.stonecutting('5x minecraft:bone',RQ('withered_rib'))
+
+
 		if(Platform.isLoaded('create_enchantment_industry')){melting([Fluid.of('create_enchantment_industry:ink',4000)],RQ('squid_beak'),75,60)}
-		if(Platform.isLoaded('thermal')){event.custom({"type": "thermal:crystallizer",
+		event.custom({"type": "thermal:crystallizer",
 			"ingredients": [
 				{
 					"fluid": "minecraft:water",
@@ -105,7 +102,7 @@ if(Platform.isLoaded("reliquary")) {
 				"item":'minecraft:prismarine_crystals',
 				"count":6
 			}]
-		})}
+		})
 		if(Platform.isLoaded("createaddition")){//Rolling
 			event.custom({"type":"createaddition:rolling","input": {"item": "reliquary:chelicerae"},
 				"result": {
