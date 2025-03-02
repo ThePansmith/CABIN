@@ -48,20 +48,41 @@ if(Platform.isLoaded("storagedrawers")) {
 		zincMachine(event, Item.of('storagedrawers:controller_slave', 1), MC('gold_ingot'))
 
 		//Upgrades
-		let upgrades = ['obsidian_storage','iron_storage','gold_storage','diamond_storage','emerald_storage','one_stack','conversion','redstone','illumination','fill_level']
-		let ingredients = [MC('obsidian'),MC('iron_ingot'),MC('gold_ingot'),MC('diamond'),MC('emerald'),MC('flint'),MC('lapis_lazuli'),MC('redstone'),MC('glowstone_dust'),MC('repeater')]
+		let upgrades = ['iron_storage','gold_storage','diamond_storage','emerald_storage','one_stack','conversion','redstone','illumination','fill_level', 'void']
+		let ingredients = [MC('iron_ingot'),MC('gold_ingot'),MC('diamond'),MC('emerald'),MC('flint'),MC('lapis_lazuli'),MC('redstone'),MC('glowstone_dust'),MC('repeater'),MC('obsidian')]
 		for (let i = 0; i < upgrades.length; i++) {
+			event.remove({ id: `storagedrawers:${upgrades[i]}_upgrade`})
 			event.smithing(`storagedrawers:${upgrades[i]}_upgrade`, 'storagedrawers:upgrade_template', ingredients[i])
 		}
-		event.smithing('storagedrawers:void_upgrade', 'storagedrawers:obsidian_storage_upgrade', MC('obsidian'))
-		event.stonecutting('storagedrawers:min_redstone_upgrade','storagedrawers:redstone_upgrade')
-		event.stonecutting('storagedrawers:max_redstone_upgrade','storagedrawers:redstone_upgrade')
+		event.remove({ id:'storagedrawers:obsidian_storage_upgrade'})
+		event.stonecutting('storagedrawers:obsidian_storage_upgrade', 'storagedrawers:upgrade_template')
+
+		event.remove({ id:'storagedrawers:min_redstone_upgrade'})
+		event.remove({ id:'storagedrawers:max_redstone_upgrade'})
+		event.stonecutting('storagedrawers:redstone_upgrade','#kubejs:storagedrawers/redstone_upgrade')
+		event.stonecutting('storagedrawers:min_redstone_upgrade','#kubejs:storagedrawers/redstone_upgrade')
+		event.stonecutting('storagedrawers:max_redstone_upgrade','#kubejs:storagedrawers/redstone_upgrade')
 		
 		//Keys
-		event.stonecutting('storagedrawers:quantify_key','storagedrawers:drawer_key')
-		event.stonecutting('storagedrawers:shroud_key','storagedrawers:drawer_key')
+		event.remove({ id: 'storagedrawers:drawer_key'})
+		event.remove({ id: 'storagedrawers:quantify_key'})
+		event.remove({ id: 'storagedrawers:concealment_key'})
+		event.smithing('storagedrawers:drawer_key', 'storagedrawers:upgrade_template', '#forge:plates/gold')
+		event.stonecutting('storagedrawers:drawer_key','#kubejs:storagedrawers/drawer_key')
+		event.stonecutting('storagedrawers:quantify_key','#kubejs:storagedrawers/drawer_key')
+		event.stonecutting('storagedrawers:shroud_key','#kubejs:storagedrawers/drawer_key')
 	})
 
+	onEvent('item.tags', event => {
+		event.get('kubejs:storagedrawers/drawer_key')
+			.add('storagedrawers:drawer_key')
+			.add('storagedrawers:quantify_key')
+			.add('storagedrawers:shroud_key')
+			event.get('kubejs:storagedrawers/redstone_upgrade')
+			.add('storagedrawers:redstone_upgrade')
+			.add('storagedrawers:min_redstone_upgrade')
+			.add('storagedrawers:max_redstone_upgrade')
+	})
 	onEvent('block.tags', event => {
 		event.add('create:wrench_pickup', '@storagedrawers')
 	})
