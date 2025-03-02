@@ -75,31 +75,31 @@ onEvent('item.registry', event => {
 	])
 
 	profession("Carpentry", 0xD0AF84, 0x966C3B, [
-		{ in: '64x #market:export/wood/1', out: S(1) },
-		{ in: '64x #market:export/wood/2', out: S(2) },
-		{ in: '64x #market:export/wood/3', out: S(3) },
-		{ in: '64x #market:export/wood/3', out: S(3) },
-		{ in: '64x #market:export/wood/4', out: S(4) },
+		{ in: '64x #kubejs:market/export/wood/1', out: S(1) },
+		{ in: '64x #kubejs:market/export/wood/2', out: S(2) },
+		{ in: '64x #kubejs:market/export/wood/3', out: S(3) },
+		{ in: '64x #kubejs:market/export/wood/3', out: S(3) },
+		{ in: '64x #kubejs:market/export/wood/4', out: S(4) },
 		{ in: BOP('hellbark_log', 64), out: S(8) }
 	])
 
 	profession("Mining", 0x1C1124, 0x88FFF7, [
-		{ in: '64x #market:export/stone/1', out: S(1) },
-		{ in: '16x #market:export/crushed_raw_ores/8', out: S(8) },
+		{ in: '64x #kubejs:market/export/stone/1', out: S(1) },
+		{ in: '16x #kubejs:market/export/crushed_raw_ores/8', out: S(8) },
 		{ in: CR('crushed_raw_gold', 16), out: S(10) },
-		{ in: '16x #market:export/crushed_raw_ores/12', out: S(12) },
+		{ in: '16x #kubejs:market/export/crushed_raw_ores/12', out: S(12) },
 		{ in: MC('coal', 16), out: S(2) },
 		{ in: TE('apatite', 16), out: S(4) },
-		{ in: '8x #market:export/stone/6', out: S(6) },
-		{ in: '1x #market:export/gem/10', out: S(10) },
+		{ in: '8x #kubejs:market/export/stone/6', out: S(6) },
+		{ in: '1x #kubejs:market/export/gem/10', out: S(10) },
 		{ in: MC('diamond', 1), out: S(14) },
 	])
 
 	profession("Masonry", 0x5E6F64, 0xBA7967, [
-		{ in: '64x #market:export/brick/4', out: S(4) },
-		{ in: '64x #market:export/brick/6', out: S(6) },
-		{ in: '64x #market:export/brick/8', out: S(8) },
-		{ in: '64x #market:export/brick/10', out: S(10) },
+		{ in: '64x #kubejs:market/export/brick/4', out: S(4) },
+		{ in: '64x #kubejs:market/export/brick/6', out: S(6) },
+		{ in: '64x #kubejs:market/export/brick/8', out: S(8) },
+		{ in: '64x #kubejs:market/export/brick/10', out: S(10) },
 		{ in: AP('abyssaline', 64), out: S(12) },
 		{ in: MC('quartz_bricks', 64), out: S(18) }
 	])
@@ -108,12 +108,12 @@ onEvent('item.registry', event => {
 		{ in: MC('dragon_breath'), out: S(1) },
 		{ in: RQ('squid_beak'), out: S(3) },
 		{ in: RQ('frozen_core'), out: S(4) },
-		{ in: '#market:export/drop/5', out: S(5) },
-		{ in: '#market:export/drop/6', out: S(6) },
-		{ in: '#market:export/drop/8', out: S(8) },
-		{ in: '#market:export/drop/10', out: S(10) },
+		{ in: '#kubejs:market/export/drop/5', out: S(5) },
+		{ in: '#kubejs:market/export/drop/6', out: S(6) },
+		{ in: '#kubejs:market/export/drop/8', out: S(8) },
+		{ in: '#kubejs:market/export/drop/10', out: S(10) },
 		{ in: RQ('eye_of_the_storm'), out: S(12) },
-		{ in: '#market:export/drop/15', out: S(15) },
+		{ in: '#kubejs:market/export/drop/15', out: S(15) },
 		{ in: MC('nether_star'), out: G(1) },
 		{ in: MC('dragon_egg'), out: G(2) },
 	])
@@ -124,27 +124,27 @@ onEvent('item.registry', event => {
 		{ in: '14x #kubejs:cake_slices', out: S(3) },
 		{ in: FD('sweet_berry_cheesecake_slice', 17), out: S(3) },
 		{ in: SP('pancake', 32), out: S(4) },
-		{ in: '16x #market:export/food/3', out: S(3) },
-		{ in: '16x #market:export/food/4', out: S(4) },
-		{ in: '16x #market:export/food/5', out: S(5) },
-		{ in: '16x #market:export/food/6', out: S(6) },
-		{ in: '16x #market:export/food/7', out: S(7) },
-		{ in: '16x #market:export/food/8', out: S(8) },
-		{ in: '16x #market:export/food/9', out: S(9) },
-		{ in: '16x #market:export/food/10', out: S(10) },
-		{ in: '16x #market:export/food/11', out: S(11) },
-		{ in: '16x #market:export/food/12', out: S(12) },
-		{ in: '16x #market:export/food/15', out: S(15) }
+		{ in: '16x #kubejs:market/export/food/3', out: S(3) },
+		{ in: '16x #kubejs:market/export/food/4', out: S(4) },
+		{ in: '16x #kubejs:market/export/food/5', out: S(5) },
+		{ in: '16x #kubejs:market/export/food/6', out: S(6) },
+		{ in: '16x #kubejs:market/export/food/7', out: S(7) },
+		{ in: '16x #kubejs:market/export/food/8', out: S(8) },
+		{ in: '16x #kubejs:market/export/food/9', out: S(9) },
+		{ in: '16x #kubejs:market/export/food/10', out: S(10) },
+		{ in: '16x #kubejs:market/export/food/11', out: S(11) },
+		{ in: '16x #kubejs:market/export/food/12', out: S(12) },
+		{ in: '16x #kubejs:market/export/food/15', out: S(15) }
 	])
 
 	profession("Fishing", 0x9DDFD3, 0xDBF6E9, [
-		{ in: '8x #market:export/fish/1', out: S(1) },
-		{ in: '8x #market:export/fish/3', out: S(3) },
-		{ in: '8x #market:export/fish/4', out: S(4) },
-		{ in: '8x #market:export/fish/5', out: S(5) },
-		{ in: '8x #market:export/fish/7', out: S(7) },
-		{ in: '8x #market:export/fish/8', out: S(8) },
-		{ in: '8x #market:export/fish/10', out: S(10) },
+		{ in: '8x #kubejs:market/export/fish/1', out: S(1) },
+		{ in: '8x #kubejs:market/export/fish/3', out: S(3) },
+		{ in: '8x #kubejs:market/export/fish/4', out: S(4) },
+		{ in: '8x #kubejs:market/export/fish/5', out: S(5) },
+		{ in: '8x #kubejs:market/export/fish/7', out: S(7) },
+		{ in: '8x #kubejs:market/export/fish/8', out: S(8) },
+		{ in: '8x #kubejs:market/export/fish/10', out: S(10) },
 		{ in: AC('neptunium_ingot', 5), out: S(16) }
 	])
 
