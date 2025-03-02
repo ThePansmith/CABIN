@@ -1,7 +1,7 @@
 
 onEvent("ponder.registry", event => {
     event.create("kubejs:alchemical_laser")
-        .scene("alchemy_setup", "The Thermal Alchemy Setup", "laser_alchemy", (scene, util) => {
+        .scene("alchemy_setup", "The Thermal Alchemy Setup", "cabin:laser_alchemy", (scene, util) => {
             scene.configureBasePlate(0, 0, 5);
             scene.showBasePlate();
             scene.idle(10)
