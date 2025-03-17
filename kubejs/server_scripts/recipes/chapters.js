@@ -1098,7 +1098,7 @@ ServerEvents.recipes(event => {
 			for (var op = 0; op < ops.length; op++) {
 
 				let result = ops[op](a, b)
-				var output;
+				let output;
 
 				if (result == 'error')
 					output = KJ('missingno')
