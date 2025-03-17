@@ -34,7 +34,7 @@ export default ESLintUtils.RuleCreator.withoutDocs({
                     chainCount++
                 }
 
-                if(chainCount < 3)
+                if(chainCount < 10)
                     return
 
 
