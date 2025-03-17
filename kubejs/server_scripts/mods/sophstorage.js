@@ -91,12 +91,12 @@ ServerEvents.recipes(event => {
         })
     })
 
-	enderiumMachine(event, Item.of('sophisticatedstorage:controller', 1), 'functionalstorage:storage_controller')
-    enderiumMachine(event, Item.of('sophisticatedstorage:controller', 1), 'functionalstorage:controller_extension')
-    leadMachine(event, Item.of('sophisticatedstorage:storage_input', 1))
-    leadMachine(event, Item.of('sophisticatedstorage:storage_output', 1))
-    event.remove({ id: 'sophisticatedbackpacks:inception_upgrade'})
-    event.remove({ id: 'sophisticatedbackpacks:inception_upgrade'})
+    enderiumMachine(event, Item.of("sophisticatedstorage:controller", 1), "functionalstorage:storage_controller")
+    enderiumMachine(event, Item.of("sophisticatedstorage:controller", 1), "functionalstorage:controller_extension")
+    leadMachine(event, Item.of("sophisticatedstorage:storage_input", 1))
+    leadMachine(event, Item.of("sophisticatedstorage:storage_output", 1))
+    event.remove({ id: "sophisticatedbackpacks:inception_upgrade"})
+    event.remove({ id: "sophisticatedbackpacks:inception_upgrade"})
 
     // Stack upgrades
     let stackupgrade = [
@@ -127,5 +127,5 @@ ServerEvents.recipes(event => {
     event.remove({ output: "sophisticatedbackpacks:stack_upgrade_tier_5" })
 
     // Upgrades
-    brassMachine(event, 'sophisticatedstorage:advanced_hopper_upgrade', 2)
+    brassMachine(event, "sophisticatedstorage:advanced_hopper_upgrade", 2)
 })

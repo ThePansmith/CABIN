@@ -4,32 +4,32 @@ global.cachedAlchemyData = {}
 
 function colourMap(c) {
     switch (c) {
-        case "white": return [255, 255, 255]
-        case "orange": return [255, 150, 0]
-        case "magenta": return [255, 39, 255]
-        case "light_blue": return [170, 202, 255]
+    case "white": return [255, 255, 255]
+    case "orange": return [255, 150, 0]
+    case "magenta": return [255, 39, 255]
+    case "light_blue": return [170, 202, 255]
 
-        case "yellow": return [255, 255, 0]
-        case "lime": return [160, 255, 0]
-        case "pink": return [255, 109, 183]
-        case "gray": return [127, 127, 127]
+    case "yellow": return [255, 255, 0]
+    case "lime": return [160, 255, 0]
+    case "pink": return [255, 109, 183]
+    case "gray": return [127, 127, 127]
 
-        case "light_gray": return [223, 223, 223]
-        case "cyan": return [0, 205, 205]
-        case "purple": return [140, 0, 255]
-        case "blue": return [29, 29, 255]
+    case "light_gray": return [223, 223, 223]
+    case "cyan": return [0, 205, 205]
+    case "purple": return [140, 0, 255]
+    case "blue": return [29, 29, 255]
 
-        case "brown": return [119, 59, 0]
-        case "green": return [12, 203, 0]
-        case "red": return [244, 22, 9]
-        default: return [47, 47, 47]
+    case "brown": return [119, 59, 0]
+    case "green": return [12, 203, 0]
+    case "red": return [244, 22, 9]
+    default: return [47, 47, 47]
     }
 }
 
 function shuffle(array, random) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = random.nextInt(i + 1);
-        var temp = array[i];
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = random.nextInt(i + 1);
+        let temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
@@ -40,7 +40,7 @@ function attackNearby(level, x, y, z) {
     // let aabb = AABB.CUBE.func_72317_d(x - .5, y + .5, z - .5).func_72321_a(-3, -3, -3).func_72321_a(3, 3, 3)
     // let list = level.minecraftLevel.func_217394_a(null, aabb, e => true)
 
-    let entities = level.getEntitiesWithin(AABB.of(x-3,y-3,z-3,x+3,y+3,z+3))
+    let entities = level.getEntitiesWithin(AABB.of(x - 3,y - 3,z - 3,x + 3,y + 3,z + 3))
 
     entities.forEach(e => {
         let entity = e
@@ -99,9 +99,9 @@ function process(level, block, entity, face) {
     let validTool = undefined
     let toProcess = undefined
     let processAmount = 0
-    let magnet = 'thermal:flux_magnet'
-    let staff = 'ae2:charged_staff'
-    let entropy = 'ae2:entropy_manipulator'
+    let magnet = "thermal:flux_magnet"
+    let staff = "ae2:charged_staff"
+    let entropy = "ae2:entropy_manipulator"
 
     items.forEach(e => {
         if (!validForProcessing)
@@ -205,11 +205,11 @@ function process(level, block, entity, face) {
     items.forEach(e => {
         if (!validForTransmutation)
             return
-        if (!e.id.startsWith('kubejs:substrate_')) {
+        if (!e.id.startsWith("kubejs:substrate_")) {
             validForTransmutation = false
             return
         }
-        let mapping = global.substrate_mapping[e.id.replace('kubejs:substrate_', "")]
+        let mapping = global.substrate_mapping[e.id.replace("kubejs:substrate_", "")]
         if (e.id != "kubejs:substrate_silicon" && e.id != "kubejs:substrate_silver" && (!mapping || mapping.category == 6)) {
             if (catalyst || mapping) {
                 validForTransmutation = false
@@ -228,7 +228,7 @@ function process(level, block, entity, face) {
     })
 
     if (validForTransmutation && catalyst && toTransmute) {
-        let categoryMapping = global.substrate_mapping[toTransmute.replace('kubejs:substrate_', "")]
+        let categoryMapping = global.substrate_mapping[toTransmute.replace("kubejs:substrate_", "")]
 
         let id1
         // let id2
@@ -243,7 +243,7 @@ function process(level, block, entity, face) {
         // let i2 = dataReversed[categoryMapping.category * 6 + categoryMapping.index]
         id1 = i1 == 36 ? "kubejs:substrate_silicon" : i1 == 37 ? "kubejs:substrate_silver" : global.substrates[Math.floor(i1 / 6)][i1 % 6].id
         // id2 = i2 == 36 ? "kubejs:substrate_silicon" : global.substrates[Math.floor(i2 / 6)][i2 % 6].id
-        // } 
+        // }
         // else {
         //     if (!categoryMapping || (categoryMapping.category + 1) % 6 != catalystId)
         //         return
@@ -260,7 +260,7 @@ function process(level, block, entity, face) {
         //     if (id1 == "kubejs:substrate_cobblestone")
         //         id1 = "kubejs:substrate_silicon"
         // }
-        let resultItems = [id1]//, id2]
+        let resultItems = [id1]// , id2]
 
         level.server.runCommandSilent(`/particle minecraft:flash ${entity.x} ${entity.y + .5} ${entity.z} 0 0 0 .01 1`)
         level.server.runCommandSilent(`/particle ae2:matter_cannon_fx ${entity.x} ${entity.y + .5} ${entity.z}`)
@@ -269,13 +269,13 @@ function process(level, block, entity, face) {
         attackNearby(level, entity.x, entity.y, entity.z)
 
         let random = new Java.loadClass("java.util.Random")()
-        let resultCounts = [0]//, 0]
+        let resultCounts = [0]// , 0]
 
         for (let i = 0; i < transmuteAmount; i++) {
             let next = random.nextInt(8)
             if (next < (catalystId == -1 ? 4 : 2))
                 continue
-            let index = 0//next == 11 ? 1 : 0
+            let index = 0// next == 11 ? 1 : 0
             resultCounts[index] = resultCounts[index] + 1
         }
 
@@ -290,7 +290,7 @@ function process(level, block, entity, face) {
                 continue
             }
             if (resultCounts[itemIndex] <= 0) {
-                if (itemIndex == 0)//1)
+                if (itemIndex == 0)// 1)
                     continue
                 itemIndex++
                 if (!resultItems[itemIndex])
@@ -338,11 +338,11 @@ function process(level, block, entity, face) {
             glowstoneAccellerator = true
             return
         }
-        if (!e.id.startsWith('kubejs:substrate_')) {
+        if (!e.id.startsWith("kubejs:substrate_")) {
             valid = false
             return
         }
-        let mapping = global.substrate_mapping[e.id.replace('kubejs:substrate_', "")]
+        let mapping = global.substrate_mapping[e.id.replace("kubejs:substrate_", "")]
         if (!mapping)
             return
         if (catCode != -1 && catCode != mapping.category)
@@ -502,15 +502,14 @@ BlockEvents.leftClicked(event => {
     let item = event.getItem()
     let player = event.getPlayer()
 
-    
+
     if (!item.empty)
         return
-    
-//    if (player.name.text != "Deployer")
-//        return
-    
 
-    
+    //    if (player.name.text != "Deployer")
+    //        return
+
+
     let sound = false
 
     Direction.ALL.values().forEach(face => {
@@ -519,27 +518,27 @@ BlockEvents.leftClicked(event => {
         let laser = block.offset(face)
 
 
-        if (!laser.hasTag('kubejs:alchemical_laser_lamp'))
+        if (!laser.hasTag("kubejs:alchemical_laser_lamp"))
             return
 
-        let color = ''
+        let color = ""
 
-        if (laser.hasTag('kubejs:alchemical_laser_lamp/white')) color =  "white";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/orange')) color =  "orange";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/magenta')) color =  "magenta";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/light_blue')) color =  "light_blue";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/yellow')) color =  "yellow";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/lime')) color =  "lime";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/pink')) color =  "pink";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/gray')) color =  "gray";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/light_gray')) color =  "light_gray";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/cyan')) color =  "cyan";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/purple')) color =  "purple";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/blue')) color =  "blue";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/brown')) color =  "brown";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/green')) color =  "green";
-        else if (laser.hasTag('kubejs:alchemical_laser_lamp/red')) color =  "red";
-		
+        if (laser.hasTag("kubejs:alchemical_laser_lamp/white")) color = "white";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/orange")) color = "orange";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/magenta")) color = "magenta";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/light_blue")) color = "light_blue";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/yellow")) color = "yellow";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/lime")) color = "lime";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/pink")) color = "pink";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/gray")) color = "gray";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/light_gray")) color = "light_gray";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/cyan")) color = "cyan";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/purple")) color = "purple";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/blue")) color = "blue";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/brown")) color = "brown";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/green")) color = "green";
+        else if (laser.hasTag("kubejs:alchemical_laser_lamp/red")) color = "red";
+
         // let te = laser.getEntity()
         // if (!te)
         //     return
@@ -567,10 +566,10 @@ BlockEvents.leftClicked(event => {
         let y = laser.y
         let z = laser.z
         // let aabb = AABB.CUBE.func_72317_d(x, y, z).func_72321_a(4 * face.x, 4 * face.y, 4 * face.z)
-        
+
         // let list = level.minecraftWorld.func_217394_a(null, aabb, e => true)
 
-        let entities = level.getEntitiesWithin(AABB.of(x-2,y-2,z-2,x+2,y+2,z+2))
+        let entities = level.getEntitiesWithin(AABB.of(x - 2,y - 2,z - 2,x + 2,y + 2,z + 2))
 
         entities.forEach(e => {
             let entity = e
@@ -601,8 +600,8 @@ BlockEvents.leftClicked(event => {
 
 PlayerEvents.inventoryChanged(event => {
     let entity = event.getEntity()
-    if (event.getItem().id == 'kubejs:missingno') {
-        event.player.inventory.clear('kubejs:missingno')
+    if (event.getItem().id == "kubejs:missingno") {
+        event.player.inventory.clear("kubejs:missingno")
         event.getLevel().getBlock(entity.x, entity.y, entity.z)
             .createExplosion()
             .explosionMode(Level.ExplosionInteraction.TNT)

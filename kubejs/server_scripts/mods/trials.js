@@ -1,10 +1,10 @@
-//Trial Chamber backport
-if (Platform.isLoaded('trials')) {
+// Trial Chamber backport
+if (Platform.isLoaded("trials")) {
     ServerEvents.lowPriorityData(event => {
 
-        //Make a Trial Processor using IntegratedAPI and Lithostitched
-        //Integrated API's waterlog fix processor is used to fix blocks being waterlogged when the structure generates over water
-        //Lithostitched is used to swap blocks while copying over properties. (without it this processor would be almost 3000 lines long)
+        // Make a Trial Processor using IntegratedAPI and Lithostitched
+        // Integrated API's waterlog fix processor is used to fix blocks being waterlogged when the structure generates over water
+        // Lithostitched is used to swap blocks while copying over properties. (without it this processor would be almost 3000 lines long)
         event.addJson("trials:worldgen/processor_list/generic", {
             "processors": [
                 {
@@ -49,10 +49,10 @@ if (Platform.isLoaded('trials')) {
             }
         })
 
-        //Loot Tables are changed in the data folder.
+        // Loot Tables are changed in the data folder.
 
-        //We need to change the type of loot tables to 'chest' so that emi Loot chooses to render it
-        //The loot tables still work in trial vaults when they're set to the 'chest' type
-        //Even if Lootjs were good in this version, we would still likely need to use a datapack to change the loot type
+        // We need to change the type of loot tables to 'chest' so that emi Loot chooses to render it
+        // The loot tables still work in trial vaults when they're set to the 'chest' type
+        // Even if Lootjs were good in this version, we would still likely need to use a datapack to change the loot type
     })
 }

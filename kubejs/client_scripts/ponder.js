@@ -42,9 +42,9 @@
 
 //                 scene.overlay.showControls(new PonderInput(util.vector.blockSurface(util.vector.centerOf(2.5, 1, 2), Facing.west), PonderPointing.RIGHT)
 //                 .rightClick().withWrench(),
-//                 50)            
+//                 50)
 //             scene.idle(10)
-            
+
 //             scene.world.setBlock(util.grid.at(2, 1, 2), util.getDefaultState("kubejs:ponder_laser_lamp_on"), false)
 //             scene.idle(15)
 
@@ -65,7 +65,7 @@
 //                 50)
 //             scene.idle(8)
 //             scene.world.modifyTileNBT(deployerSingle, (nbt) => {nbt.Mode = { Mode: "PUNCH"}});
-            
+
 //             scene.overlay.showText(50)
 //                 .text("Set it to Punch mode using a Wrench")
 //                 .colored(PonderPalette.GREEN)
@@ -114,7 +114,7 @@
 //             scene.world.showSection(util.select.fromTo(1, 1, 0, 3, 1, 0), Facing.west)
 //             scene.idle(5)
 //             //let HopperMinecart = Java.loadClass("net.minecraft.entity.item.minecart.HopperMinecartEntity")
-//             //let cartHandle = 
+//             //let cartHandle =
 //             //scene.special.createCart(util.vector.topOf(2, 0, 0), 0, (w, x, y, z) => new HopperMinecart(w, x, y, z))
 //             scene.world.createEntity("minecraft:hopper_minecart", [2,1,0]);
 //             scene.idle(20)

@@ -1,4 +1,4 @@
-if (Platform.isLoaded('dungeoncrawl')) {
+if (Platform.isLoaded("dungeoncrawl")) {
     ServerEvents.lowPriorityData(event => {
         event.addJson("dungeoncrawl:worldgen/structure_set/dungeons", {
             "structures": [
@@ -21,7 +21,7 @@ if (Platform.isLoaded('dungeoncrawl')) {
     })
 
     ServerEvents.tags("worldgen/structure_set", event => {
-        event.add('cabin:overworld_surface_avoid', "dungeoncrawl:dungeons")
-        event.add('trials:trial_chambers_avoid', "dungeoncrawl:dungeons")
+        event.add("cabin:overworld_surface_avoid", "dungeoncrawl:dungeons")
+        event.add("trials:trial_chambers_avoid", "dungeoncrawl:dungeons")
     })
 }

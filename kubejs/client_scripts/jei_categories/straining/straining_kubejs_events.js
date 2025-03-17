@@ -6,7 +6,7 @@ JEIAddedEvents.registerCategories((event) => {
 
         category.title("Straining")
             .background(guiHelper.createBlankDrawable(146, 30))
-            .icon(guiHelper.createDrawableItemStack(Item.of('mbd2:strainer')))
+            .icon(guiHelper.createDrawableItemStack(Item.of("mbd2:strainer")))
             .setIsRecipeHandledByCategory((recipe) => {
                 return global.jeiCategories.straining.handlers["verifyRecipe"](category.jeiHelpers, recipe);
             })
@@ -26,11 +26,11 @@ JEIAddedEvents.registerRecipeCatalysts(event => {
     let addRecipeCatalyst = function(ingredient, recipeTypes) {
         return event.data["addRecipeCatalyst(net.minecraft.world.item.ItemStack,mezz.jei.api.recipe.RecipeType[])"](ingredient, recipeTypes);
     }
-    addRecipeCatalyst(Item.of('mbd2:strainer'), [global.jeiCategories.straining.recipeType]);
+    addRecipeCatalyst(Item.of("mbd2:strainer"), [global.jeiCategories.straining.recipeType]);
 })
 
 JEIAddedEvents.registerRecipes((event) => {
     let strainer_filter = Item.of("kubejs:strainer_filter"); strainer_filter.setDamageValue(1);
     event.custom("kubejs:straining")
-            .add({input: strainer_filter, output: [{Item: "#kubejs:strainer/sands", Chance: 0.75}, {Item: "minecraft:clay_ball", Chance: 0.25}]})
+        .add({input: strainer_filter, output: [{Item: "#kubejs:strainer/sands", Chance: 0.75}, {Item: "minecraft:clay_ball", Chance: 0.25}]})
 });

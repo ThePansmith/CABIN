@@ -13,7 +13,7 @@ if (!global.jeiCategories.straining) global.jeiCategories.straining = {
 };
 
 /**
- * @param {Internal.IGuiHelper} guiHelper 
+ * @param {Internal.IGuiHelper} guiHelper
  */
 global.jeiCategories.straining.loadResources = function(guiHelper) {
     global.jeiCategories.straining.resources.jeiArrow = guiHelper.createAnimatedDrawable(
@@ -25,9 +25,9 @@ global.jeiCategories.straining.loadResources = function(guiHelper) {
 }
 
 /**
- * @param {Internal.IJeiHelpers} jeiHelpers 
- * @param {any} recipe 
- * @returns 
+ * @param {Internal.IJeiHelpers} jeiHelpers
+ * @param {any} recipe
+ * @returns
  */
 global.jeiCategories.straining.handlers.verifyRecipe = function (jeiHelpers, recipe) {
     // IMPORTANT: Always return true or false. If you do not, it could crash the game or cause JEI to not work properly.
@@ -40,10 +40,10 @@ global.jeiCategories.straining.handlers.verifyRecipe = function (jeiHelpers, rec
 }
 
 /**
- * @param {Internal.IJeiHelpers} jeiHelpers 
- * @param {Internal.IRecipeLayoutBuilder} builder 
- * @param {any} recipe 
- * @param {Internal.IFocusGroup} focuses 
+ * @param {Internal.IJeiHelpers} jeiHelpers
+ * @param {Internal.IRecipeLayoutBuilder} builder
+ * @param {any} recipe
+ * @param {Internal.IFocusGroup} focuses
  */
 global.jeiCategories.straining.handlers.setRecipe = function (jeiHelpers, builder, recipe, focuses) {
     let guiHelper = jeiHelpers.getGuiHelper()
@@ -55,21 +55,21 @@ global.jeiCategories.straining.handlers.setRecipe = function (jeiHelpers, builde
         .setStandardSlotBackground()
         .setBackground(guiHelper.getSlotDrawable(), -1, -1);
 
-    for(let i=0;i<4;++i) {
-        let slotBuilder = builder.addSlot("OUTPUT", 68 +(18*i), 6)
+    for(let i = 0;i < 4;++i) {
+        let slotBuilder = builder.addSlot("OUTPUT", 68 + (18 * i), 6)
         slotBuilder.setStandardSlotBackground()
         slotBuilder.setBackground(guiHelper.getSlotDrawable(), -1, -1);
 
-        if (i<outputItems.length) {
+        if (i < outputItems.length) {
             let itemName = outputItems[i].Item;
             let chance = outputItems[i].Chance;
-            
-            if (itemName.startsWith('#')) {
+
+            if (itemName.startsWith("#")) {
                 slotBuilder.addItemStacks(Ingredient.of(itemName).getStacks().toArray());
             } else {
                 slotBuilder.addItemStack(Item.of(itemName));
             }
-            
+
             slotBuilder.addRichTooltipCallback((recipeSlotView, tooltip) => {
                 let chancePercent = (Math.round(chance * 100)).toString();
                 let text = Component.translatable("create.recipe.processing.chance", chancePercent).withStyle(ChatFormatting.GOLD)
@@ -80,12 +80,12 @@ global.jeiCategories.straining.handlers.setRecipe = function (jeiHelpers, builde
 }
 
 /**
- * @param {Internal.IJeiHelpers} jeiHelpers 
- * @param {any} recipe 
- * @param {Internal.IRecipeSlotsView} recipeSlotsView 
- * @param {Internal.GuiGraphics} guiGraphics 
- * @param {number} mouseX 
- * @param {number} mouseY 
+ * @param {Internal.IJeiHelpers} jeiHelpers
+ * @param {any} recipe
+ * @param {Internal.IRecipeSlotsView} recipeSlotsView
+ * @param {Internal.GuiGraphics} guiGraphics
+ * @param {number} mouseX
+ * @param {number} mouseY
  */
 global.jeiCategories.straining.handlers.draw = function (jeiHelpers, recipe, recipeSlotsView, guiGraphics, mouseX, mouseY) {
     let guiHelper = jeiHelpers.getGuiHelper();
@@ -94,11 +94,11 @@ global.jeiCategories.straining.handlers.draw = function (jeiHelpers, recipe, rec
 }
 
 /**
- * @param {Internal.IJeiHelpers} jeiHelpers 
- * @param {any} recipe 
- * @param {Internal.IRecipeSlotsView} recipeSlotsView 
- * @param {number} mouseX 
- * @param {number} mouseY 
+ * @param {Internal.IJeiHelpers} jeiHelpers
+ * @param {any} recipe
+ * @param {Internal.IRecipeSlotsView} recipeSlotsView
+ * @param {number} mouseX
+ * @param {number} mouseY
  * @returns {[Internal.Component]}
  */
 global.jeiCategories.straining.handlers.tooltips = function(jeiHelpers, recipe, recipeSlotsView, mouseX, mouseY) {

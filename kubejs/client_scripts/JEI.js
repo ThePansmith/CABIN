@@ -1,53 +1,53 @@
 ClientEvents.highPriorityAssets(event=>{
-  let json = {
-    added: [
-      {
-        "stack": "item:minecraft:bundle",
-        "after": "item:minecraft:recovery_compass"
-      },
-      {
-        "stack": "item:create:chromatic_compound",
-        "after": "item:create:brass_ingot"
-      },
-      {
-        "stack": "item:create:refined_radiance",
-        "after": "item:create:chromatic_compound"
-      },
-      {
-        "stack": "item:create:shadow_steel",
-        "after": "item:create:refined_radiance"
-      },
-      {
-        "stack": "item:tconstruct:tinkers_anvil{'texture':'create:zinc_block'}",
-        "after": "item:tconstruct:modifier_worktable"
-      },
-      {
-        "stack": "item:tconstruct:scorched_anvil{'texture':'create:zinc_block'}",
-        "after": "item:tconstruct:tinkers_anvil"
-      }
-    ]
-  }
-  event.add('emi:index/stacks/kubejs_added_stacks', json)
+    let json = {
+        added: [
+            {
+                "stack": "item:minecraft:bundle",
+                "after": "item:minecraft:recovery_compass"
+            },
+            {
+                "stack": "item:create:chromatic_compound",
+                "after": "item:create:brass_ingot"
+            },
+            {
+                "stack": "item:create:refined_radiance",
+                "after": "item:create:chromatic_compound"
+            },
+            {
+                "stack": "item:create:shadow_steel",
+                "after": "item:create:refined_radiance"
+            },
+            {
+                "stack": "item:tconstruct:tinkers_anvil{'texture':'create:zinc_block'}",
+                "after": "item:tconstruct:modifier_worktable"
+            },
+            {
+                "stack": "item:tconstruct:scorched_anvil{'texture':'create:zinc_block'}",
+                "after": "item:tconstruct:tinkers_anvil"
+            }
+        ]
+    }
+    event.add("emi:index/stacks/kubejs_added_stacks", json)
 
-  //Hide Multiblock'd strainer category since it doesn't play well with EMI
-  json = {
-    "filters": [
-      {
-        "category": "mbd2:strainer"
-      }
-    ]
-  }
-  event.add('emi:recipe/filters/strainer', json)
+    // Hide Multiblock'd strainer category since it doesn't play well with EMI
+    json = {
+        "filters": [
+            {
+                "category": "mbd2:strainer"
+            }
+        ]
+    }
+    event.add("emi:recipe/filters/strainer", json)
 })
 
-//JEIEvents.groupEntries( event => {
+// JEIEvents.groupEntries( event => {
 
-	// event.groupItemsByTag('kubejs:rei_groups/supplementaries/hanging_signs', 'Sign Posts', 'supplementaries:hanging_signs')
-	// event.groupItemsByTag('kubejs:rei_groups/supplementaries/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
+// event.groupItemsByTag('kubejs:rei_groups/supplementaries/hanging_signs', 'Sign Posts', 'supplementaries:hanging_signs')
+// event.groupItemsByTag('kubejs:rei_groups/supplementaries/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
 
-  // trades cards need a rework first
-	// event.groupItemsByTag('kubejs:rei_groups/kubejs/transaction_cards/profession', 'Trade Card: Profession', "kubejs:transaction_cards/profession")
-	// event.groupItemsByTag('kubejs:rei_groups/kubejs/transaction_cards/import', 'Trade Card: Import', "kubejs:transaction_cards/import")
+// trades cards need a rework first
+// event.groupItemsByTag('kubejs:rei_groups/kubejs/transaction_cards/profession', 'Trade Card: Profession', "kubejs:transaction_cards/profession")
+// event.groupItemsByTag('kubejs:rei_groups/kubejs/transaction_cards/import', 'Trade Card: Import', "kubejs:transaction_cards/import")
 
 
 // 	const useNbt = [
@@ -124,4 +124,4 @@ ClientEvents.highPriorityAssets(event=>{
 // 		/buddycards:buddycard_holiday/
 // 	])
 
-//})
+// })

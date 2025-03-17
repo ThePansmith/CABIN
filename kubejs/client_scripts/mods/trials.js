@@ -1,4 +1,4 @@
-if (Platform.isLoaded('trials')) {
+if (Platform.isLoaded("trials")) {
     POTIONS.push(["trials:winded", []])
     POTIONS.push(["trials:infested", []])
     POTIONS.push(["trials:weave", []])

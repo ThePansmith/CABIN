@@ -8,7 +8,7 @@ on:
         type: string
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   lint-folder:
@@ -27,5 +27,5 @@ jobs:
         run: |
           cd ${{ github.workspace }}/${{ inputs.folder }}
           npm install
-          npx eslint --fix
+          npx eslint
         shell: bash
