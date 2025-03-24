@@ -48,7 +48,7 @@
     "item.kubejs.pipe_module_tier_1": "Латунный модуль трубы",
     "item.kubejs.pipe_module_tier_2": "Инварный модуль трубы",
     "item.kubejs.pipe_module_tier_3": "Эндериевый модуль трубы",
-    "item.kubejs.circuit_scrap": "Электросхемный металлолом",
+    "item.kubejs.circuit_scrap": "Печатный металлолом",
     "item.kubejs.missingno": "∄",
     "item.kubejs.zinc_dust": "Цинковая пыль",
     "item.kubejs.sand_ball": "Шарик песка",
@@ -216,5 +216,9 @@
     "block.kubejs.substrate_gem": "Самоцветный катализатор",
     "block.kubejs.substrate_igneous": "Магматический катализатор",
     "block.kubejs.substrate_herbal": "Травяной катализатор",
-    "fluid.kubejs.liquid_pulp": "Жидкая древесная масса"
+    "fluid.kubejs.liquid_pulp": "Жидкая древесная масса",
+    "item.spirit_fire.info": "§7Таинственный огонь, способный к трансмутации. Никогда не погаснет.",
+    "item.spirit_fire.creation": "§7Создаётся при поджоге огнивом фрукта демонической мечты.",
+    "item.kubejs.incomplete_flight_anchor": "Незаконченный якорь полёта",
+    "item.kubejs.incomplete_gravity_normalizer": "Незаконченный нормализатор гравитации"
 }
