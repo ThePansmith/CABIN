@@ -2081,7 +2081,6 @@
 			disable_toast: true
 			icon: "quark:myalite"
 			id: "44CDD45033A93614"
-			optional: true
 			rewards: [{
 				auto: "enabled"
 				id: "45FEF3A32F7766AD"

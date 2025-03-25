@@ -1,7 +1,7 @@
 {
   "parent": "cabin:block/substrate",
   "textures": {
-    "particle": "thermal:block/glass/lumium_glass",
+    "particle": "cabin:block/catalyst_glass",
     "0": "cabin:block/catalyst_glass"
   }
 }

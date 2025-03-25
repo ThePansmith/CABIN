@@ -54,7 +54,7 @@ function process(level, block, entity, face) {
 
     if (global.cachedSeed != level.getSeed()) {
         global.cachedSeed = level.getSeed()
-        let random = new Java.loadClass("java.util.Random")(level.getSeed())
+        let random = new Random(level.getSeed())
         let next = () => random.nextInt(6)
         let generateCode = () => [next(), next(), next(), next()]
         for (let cat = 0; cat < 7; cat++) {
@@ -268,7 +268,7 @@ function process(level, block, entity, face) {
         level.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
         attackNearby(level, entity.x, entity.y, entity.z)
 
-        let random = new Java.loadClass("java.util.Random")()
+        let random = new Random()
         let resultCounts = [0]// , 0]
 
         for (let i = 0; i < transmuteAmount; i++) {
@@ -297,11 +297,12 @@ function process(level, block, entity, face) {
                     continue
             }
 
-            let resultItemNBT = Utils.newMap();
-            resultItemNBT.put("Slot", i)
-            resultItemNBT.put("id", resultItems[itemIndex])
-            resultItemNBT.put("Count", Math.min(64, resultCounts[itemIndex]))
-            nbt.Items.add(actualIndex, resultItemNBT.toNBT())
+            let resultItemNBT = {
+                Slot: i,
+                id: resultItems[itemIndex],
+                Count: Math.min(64, resultCounts[itemIndex])
+            };
+            nbt.Items.add(actualIndex, resultItemNBT)
             actualIndex++
 
             resultCounts[itemIndex] = resultCounts[itemIndex] - 64
@@ -389,7 +390,7 @@ function process(level, block, entity, face) {
     })
 
     if (glowstoneAccellerator || redstoneAccellerator) {
-        let random = new Java.loadClass("java.util.Random")()
+        let random = new Random()
         let shuffled = shuffle(Array(0, 1, 2, 3), random)
         for (let i = 0; i < 4; i++) {
             let j = shuffled[i]
@@ -461,28 +462,25 @@ function process(level, block, entity, face) {
         level.server.runCommandSilent(`/playsound minecraft:block.beacon.activate block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
     nbt.Items.clear()
 
-    let resultItemNBT = Utils.newMap();
-    let resultItemTagNBT = Utils.newMap();
-    let resultItemLoreNBT = Utils.newMap();
-    let resultItemLoreList = Utils.newList();
+    let resultItemNBT = {}
+    //let resultItemTagNBT = {}
+    //let resultItemLoreNBT = {}
+    //let resultItemLoreList = []
 
-    resultItemLoreList.add('{"text": "' + guessedString + '", "italic": false}')
-    resultItemLoreNBT.put("Lore", resultItemLoreList.toNBT())
-    resultItemTagNBT.put("display", resultItemLoreNBT.toNBT())
+    //resultItemLoreList.push({text: "' + guessedString + '", italic: false})
+    //resultItemLoreNBT.Lore = resultItemLoreList
+    //resultItemTagNBT.display = resultItemLoreNBT
 
-    resultItemNBT.put("Slot", 0)
-    resultItemNBT.put("id", resultItem)
-    resultItemNBT.put("Count", 1)
-    if (errorId != -1)
-        resultItemNBT.put("tag", resultItemTagNBT.toNBT())
-    nbt.Items.add(0, resultItemNBT.toNBT())
+    resultItemNBT.Slot = 0
+    resultItemNBT.id = resultItem
+    resultItemNBT.Count = 1
+    // if (errorId != -1)
+    //     resultItemNBT.tag = resultItemTagNBT
+    nbt.Items.add(0, resultItemNBT)
 
     if (retain != -1) {
-        resultItemNBT = Utils.newMap();
-        resultItemNBT.put("Slot", 1)
-        resultItemNBT.put("id", reagents[retain])
-        resultItemNBT.put("Count", 1)
-        nbt.Items.add(1, resultItemNBT.toNBT())
+        resultItemNBT = {Slot: 1, id: reagents[retain], Count: 1};
+        nbt.Items.add(1, resultItemNBT)
     }
 
     entity.setNbt(nbt)
