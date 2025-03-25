@@ -219,5 +219,6 @@
     "item.spirit_fire.creation": "§7Criado ao acender a Demon's Dream Fruit com uma Pederneira.",
     "item.spirit_fire.info": "§7Um fogo misterioso que é capaz de transmutar. Nunca se apagará.",
     "item.kubejs.incomplete_gravity_normalizer": "Normalizador de Gravidade Incompleto",
-    "item.kubejs.incomplete_flight_anchor": "Âncora de Voo Incompleta"
+    "item.kubejs.incomplete_flight_anchor": "Âncora de Voo Incompleta",
+    "block.kubejs.substrate_fluix": "Reagente de Fluix"
 }

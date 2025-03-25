@@ -133,7 +133,6 @@
     "block.kubejs.substrate_obsidian": "黑曜石试剂",
     "block.kubejs.substrate_gunpowder": "火药试剂",
     "block.kubejs.substrate_prismarine": "海晶试剂",
-    "block.kubejs.substrate_arcane": "奥术试剂",
     "block.kubejs.substrate_apatite": "磷灰石试剂",
     "block.kubejs.substrate_sulfur": "硫磺试剂",
     "block.kubejs.substrate_niter": "硝石试剂",
@@ -218,5 +217,8 @@
     "block.kubejs.trial_copper_grate_oxidized": "氧化的幻象铜格栅",
     "block.kubejs.substrate_herbal": "草本催化剂",
     "block.mbd2.strainer": "沉积过滤器",
-    "mbd2.strainer": "沉积过滤"
+    "mbd2.strainer": "沉积过滤",
+    "item.kubejs.incomplete_flight_anchor": "Incomplete Flight Anchor",
+    "item.kubejs.incomplete_gravity_normalizer": "Incomplete Gravity Normalizer",
+    "block.kubejs.substrate_fluix": "Fluix Reagent"
 }

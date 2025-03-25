@@ -219,5 +219,6 @@
     "item.spirit_fire.info": "§7Таинственный огонь, способный к трансмутации. Никогда не погаснет.",
     "item.spirit_fire.creation": "§7Создаётся при поджоге огнивом фрукта демонической мечты.",
     "item.kubejs.incomplete_flight_anchor": "Незаконченный якорь полёта",
-    "item.kubejs.incomplete_gravity_normalizer": "Незаконченный нормализатор гравитации"
+    "item.kubejs.incomplete_gravity_normalizer": "Незаконченный нормализатор гравитации",
+    "block.kubejs.substrate_fluix": "Флюисовый реагент"
 }

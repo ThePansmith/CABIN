@@ -5,11 +5,11 @@
     "info.thermal.machine_sawmill.0": "Retire automatiquement le réactif de son récipient.",
     "item.thermal.raw_nickel": "Nickel Brut Concentré",
     "info.thermal.machine_press.2": "Merci pour votre achat !",
-    "info.thermal.machine_sawmill.1": "",
+    "info.thermal.machine_sawmill.1": "Despite it's looks, it's not a sawmill.",
     "info.thermal.machine_press.1": "Nécessite une carte de commerce de l'interface de quête.",
     "item.thermal.turbo_servo_attachment": "Fixation: Servo",
     "block.thermal.machine_frame": "Machine en Invar",
-    "info.thermal.machine_sawmill.2": "",
+    "info.thermal.machine_sawmill.2": "Cutting Edge!",
     "item.thermal.raw_silver": "Argent Brut Concentré",
     "block.thermal.machine_sawmill": "Extracteur de Réactif",
     "msg.fuelingStation.link": "Association en cours pour la Position"
