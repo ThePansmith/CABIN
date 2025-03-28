@@ -52,7 +52,6 @@ JEIEvents.hideItems(event => {
     event.hide("create:crushed_raw_uranium")
     event.hide("create:sturdy_sheet")
     event.hide("create:unprocessed_obsidian_sheet")
-    event.hide("create_central_kitchen:creative_tab_icon")
 
     event.hide(/^createdeco:.*coin/)
 

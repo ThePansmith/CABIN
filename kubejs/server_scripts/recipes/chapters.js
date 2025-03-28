@@ -663,8 +663,8 @@ ServerEvents.recipes(event => {
             "ingredients": [{ "item": fern }],
             "tool": { "tag": "forge:tools/knives" },
             "result": [Item.of(leaf, 2)]
-        }).id(`kjs:cutting/${type}_slime_fern_leaf`)
-        event.custom(ifiniDeploying(event, Item.of(leaf, 2), fern, "#forge:tools/knives"))
+        }).id(`kubejs:cutting/${type}_slime_fern_leaf`)
+        event.custom(ifiniDeploying(event, Item.of(leaf, 2), fern, "#forge:tools/knives")).id(`kubejs:deploying/${type}_slime_fern_leaf_using_deployer`)
         event.custom({
             "type": "occultism:spirit_fire",
             "ingredient": { "item": leaf },
