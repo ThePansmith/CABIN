@@ -220,5 +220,6 @@
     "item.spirit_fire.creation": "§7Создаётся при поджоге огнивом фрукта демонической мечты.",
     "item.kubejs.incomplete_flight_anchor": "Незаконченный якорь полёта",
     "item.kubejs.incomplete_gravity_normalizer": "Незаконченный нормализатор гравитации",
-    "block.kubejs.substrate_fluix": "Флюисовый реагент"
+    "block.kubejs.substrate_fluix": "Флюисовый реагент",
+    "filled_map.fortress": "Fortress Locator Map"
 }

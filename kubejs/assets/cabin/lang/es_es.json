@@ -220,5 +220,6 @@
     "item.spirit_fire.creation": "§7Creado encendiendo una Fruta de Sueño Demoníaco con un Mechero.",
     "item.kubejs.incomplete_flight_anchor": "Incomplete Flight Anchor",
     "item.kubejs.incomplete_gravity_normalizer": "Incomplete Gravity Normalizer",
-    "block.kubejs.substrate_fluix": "Fluix Reagent"
+    "block.kubejs.substrate_fluix": "Fluix Reagent",
+    "filled_map.fortress": "Fortress Locator Map"
 }
