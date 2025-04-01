@@ -244,7 +244,7 @@
 				dimension: "beyond_earth:moon"
 				icon: {
 					Count: 1
-					id: "ad_astra:tier_1_rocket"
+					id: "ad_astra:tier_4_rocket"
 					tag: { }
 				}
 				id: "696B878D65A6BFCC"

@@ -2,6 +2,9 @@
 	chapter_groups: [
 		{ id: "0810E42B2DD79973", title: "{cabin.chapter_group.0810E42B2DD79973}" }
 		{ id: "331B6409EF6A7840", title: "{cabin.chapter_group.331B6409EF6A7840}" }
+		{ id: "693226878D58638A", title: "Interstellar Adventures" }
 		{ id: "3BE4B4DE6A6F6C40", title: "{cabin.chapter_group.3BE4B4DE6A6F6C40}" }
+		{ id: "288DA1F92F7C0A7A", title: "Greg Guides" }
+		{ id: "1C1C4FB2AFCF489D", title: "Milestones" }
 	]
 }

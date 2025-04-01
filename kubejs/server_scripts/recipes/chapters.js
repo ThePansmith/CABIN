@@ -1293,7 +1293,7 @@ ServerEvents.recipes(event => {
     })
 
     // The Rocket
-    event.recipes.create.mechanical_crafting("ad_astra:tier_1_rocket", [
+    event.recipes.create.mechanical_crafting("ad_astra:tier_4_rocket", [
         "    I    ",
         "   IPI   ",
         "   IGI   ",

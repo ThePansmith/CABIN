@@ -775,7 +775,7 @@
 			description: ["{cabin.quest.73473DC7269EC5B0.description1}"]
 			icon: {
 				Count: 1
-				id: "ad_astra:tier_1_rocket"
+				id: "ad_astra:tier_4_rocket"
 				tag: { }
 			}
 			id: "73473DC7269EC5B0"
@@ -785,7 +785,7 @@
 				id: "40C42947058AA817"
 				item: {
 					Count: 1
-					id: "ad_astra:tier_1_rocket"
+					id: "ad_astra:tier_4_rocket"
 					tag: { }
 				}
 				type: "item"

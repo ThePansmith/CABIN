@@ -1,0 +1,727 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "steam_age"
+	group: "693226878D58638A"
+	icon: "ad_astra:moon_sand"
+	id: "3B89FB8839204148"
+	order_index: 0
+	progression_mode: "linear"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4E8ACE294E54B34C"]
+			description: ["With a very small percentage of carbon in its mass, Steel is significantly tougher than Iron or Wrought Iron.&r"]
+			icon: "gtceu:steel_ingot"
+			id: "5D17DFCF6672404C"
+			shape: "square"
+			size: 0.75d
+			subtitle: "Steel, Schrödinger's alloy"
+			tasks: [{
+				count: 32L
+				id: "2446080B788A8A19"
+				item: "gtceu:steel_ingot"
+				type: "item"
+			}]
+			title: "We Need More Steel!"
+			x: -0.75d
+			y: 0.75d
+		}
+		{
+			dependencies: ["4E8ACE294E54B34C"]
+			description: [
+				"&4Mars&r has more veins to mine, and with those veins, new ores to discover. Check the Ore Tab to learn more about the Nether Veins."
+				""
+				"Additionally, &6Mars Ores are worth two Overworld Ores&r if mined with &3Silk Touch&r. "
+			]
+			icon: "ad_astra:mars_globe"
+			id: "7CAD6FF241A827F7"
+			rewards: [
+				{
+					id: "235ABC3543BF8285"
+					item: {
+						Count: 1
+						id: "gtceu:red_steel_pickaxe"
+						tag: {
+							Damage: 0
+							GT.Tool: {
+								Damage: 0
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1A074EA36535C8B0"
+					item: {
+						Count: 1
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "minecraft:silk_touch"
+								lvl: 1s
+							}]
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				dimension: "ad_astra:mars"
+				id: "01DEABF7BF6C5413"
+				title: "Take a trip to Mars"
+				type: "dimension"
+			}]
+			title: "Heating up"
+			x: -2.25d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7CAD6FF241A827F7"]
+			description: [
+				"Mine some &dSulfur&r from Mars."
+				""
+				"If Lava is \"too hot to handle\", we've included a &6direct crafting recipe&r for &aPotions of Fire Resistance&r. EMI might look a little confusing, but don't worry - you can use &bWater Bottles&r in the potion recipe."
+				""
+				"&l&3Lore:&r&o With the existence of &6Small Sulfur Ores&f scattered in GregTech 5 ore veins, you could mine enough Sulfur in the Overworld to skip having to visit the Nether. Sounds broken, but it was still as much of a grind as Nether travel!"
+			]
+			id: "236C886D50A99785"
+			rewards: [
+				{
+					id: "20B864DFB8F05D94"
+					item: {
+						Count: 1
+						id: "minecraft:potion"
+						tag: {
+							Potion: "minecraft:long_fire_resistance"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "37C361DDB9A55FF2"
+					item: {
+						Count: 1
+						id: "minecraft:potion"
+						tag: {
+							Potion: "minecraft:long_fire_resistance"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			size: 0.75d
+			subtitle: "A little bit of exploring never hurt anyone"
+			tasks: [{
+				count: 16L
+				id: "36D03210534D3226"
+				item: "gtceu:sulfur_dust"
+				type: "item"
+			}]
+			title: "S is for Sulfur"
+			x: 3.125d
+			y: -1.5d
+		}
+		{
+			dependencies: ["77EA56D16A9B3BFC"]
+			description: [
+				"Good news - we're going to start to cut down on the amount of components you'll need to submit for quests as you progress further into the modpack. Remember that &2EMI is your true mentor&r if recipes are getting overwhelming."
+				""
+				"Getting back on topic, set yourself up for &7LV&r by crafting six &aLV Electric Motors&r! This may seem like a lot, but that's the bare minimum required to get to the good stuff in &7LV&r."
+				""
+				"&6Once you complete this Quest and the Electronic Circuit Quest, you are ready to move on to the LV Age.&r"
+			]
+			icon: "gtceu:lv_electric_motor"
+			id: "5A8F0124E07D5025"
+			rewards: [{
+				id: "405DCE51B96EB09A"
+				item: "gtceu:steel_block"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.2d
+			subtitle: "Low Voltage beckons..."
+			tasks: [{
+				count: 6L
+				icon: "gtceu:lv_electric_motor"
+				id: "6F01622979E6F332"
+				item: "gtceu:lv_electric_motor"
+				type: "item"
+			}]
+			title: "The First of Many Motors"
+			x: 4.25d
+			y: -1.5d
+		}
+		{
+			dependencies: ["47965C310D9847DC"]
+			description: [
+				"Grow &dRubber Trees&r and cut them down to get &aSticky Resin&r."
+				""
+				"If you're playing on a difficulty other than &bPeaceful&r, Sticky Resin can be obtained from Slimeballs."
+			]
+			id: "3144DC68B266730C"
+			rewards: [{
+				count: 24
+				id: "606726568EBF1E4A"
+				item: "minecraft:redstone"
+				type: "item"
+			}]
+			shape: "square"
+			size: 0.75d
+			subtitle: "Did you think we would force you to use treetaps...?"
+			tasks: [{
+				count: 32L
+				id: "67D04A48C5473D10"
+				item: "gtceu:sticky_resin"
+				type: "item"
+			}]
+			title: "Sticky Resin"
+			x: 3.125d
+			y: -0.375d
+		}
+		{
+			dependencies: [
+				"3144DC68B266730C"
+				"236C886D50A99785"
+			]
+			description: [
+				"Rubber is an excellent insulation material, and that's exactly what it's used for in GTCEu."
+				""
+				"You'll want to use the Hammer to make &aRubber Sheets&r. These ratios aren't particularly great, but we promise that making Rubber Bars will be much more efficient at &7LV&r."
+				"{@pagebreak}"
+				"&l&3Lore:&r&o In base GregTech 5 &7(and in base GTCE)&f, you needed to get string and black wool carpets as your first insulation material. &8&mThat was obviously far, far more fun.&r"
+			]
+			icon: "gtceu:rubber_ingot"
+			id: "77EA56D16A9B3BFC"
+			rewards: [{
+				count: 8
+				id: "7190A812E045BE04"
+				item: "gtceu:rubber_plate"
+				type: "item"
+			}]
+			shape: "square"
+			size: 0.75d
+			subtitle: "Put that resin to use!"
+			tasks: [{
+				id: "5B1CDCDC598717C5"
+				item: "gtceu:rubber_plate"
+				type: "item"
+			}]
+			title: "Rubbering up"
+			x: 4.25d
+			y: -0.375d
+		}
+		{
+			dependencies: ["3144DC68B266730C"]
+			description: [
+				"Resistors are components that will be used to make your first Circuit."
+				""
+				"It wouldn't be unwise to prioritise the recipes that use &aFine Wires&r, as they'll save you more materials in the long run."
+				""
+				"Wires may be expensive right now, but they'll get a lot cheaper in &7LV&r."
+			]
+			id: "391E853DCE86BFD0"
+			rewards: [{
+				count: 4
+				id: "0AEE150D99E66D54"
+				item: "minecraft:charcoal"
+				type: "item"
+			}]
+			shape: "square"
+			size: 0.75d
+			subtitle: "The easier component for circuits"
+			tasks: [{
+				id: "35CFB9E695DE3549"
+				item: "gtceu:resistor"
+				type: "item"
+			}]
+			title: "Electronics #1: Resistors"
+			x: 5.375d
+			y: -0.375d
+		}
+		{
+			dependencies: [
+				"5D17DFCF6672404C"
+				"37C4BFEEE74D276B"
+			]
+			description: [
+				"Crafting Vacuum Tubes might make you question your existence. Sorry about that."
+				""
+				"This is mostly due to the fact that Wires and Rods are &7(sadly)&r very expensive right now, but they'll get cheaper in &7LV&r."
+				""
+				"Vacuum Tubes are also technically your first Ultra Low Voltage (&8ULV&r) Circuit! Congratulations! You won't find very much use for these by themselves, though."
+			]
+			id: "3CF550B81716B8B9"
+			rewards: [{
+				count: 16
+				id: "259F8029A6ED0C85"
+				item: "minecraft:glass_pane"
+				type: "item"
+			}]
+			shape: "square"
+			size: 0.75d
+			subtitle: "The harder component for circuits"
+			tasks: [{
+				count: 2L
+				id: "099C373568DF4500"
+				item: "gtceu:vacuum_tube"
+				type: "item"
+			}]
+			title: "Electronics #3: Vacuum Tubes"
+			x: 3.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3CF550B81716B8B9"
+				"391E853DCE86BFD0"
+				"4ED5A9AEF7B928BA"
+				"77EA56D16A9B3BFC"
+			]
+			description: [
+				"We made it to &7LV&r! Give yourself a pat on the back!"
+				""
+				"Just kidding &7(lol)&r, you actually need two Circuits to get started anywhere relevant in &7LV&r. Thankfully for you, someone left this spare circuit laying around."
+				""
+				"Circuits are an integral part of progression in GregTech, so keep climbing."
+			]
+			icon: "gtceu:basic_electronic_circuit"
+			id: "4B979482EF026BFF"
+			rewards: [{
+				id: "18CBC119F9A02091"
+				item: "gtceu:basic_electronic_circuit"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Your first &aElectronic Circuit&r!"
+			tasks: [{
+				id: "2D394A5292C3BA46"
+				item: "gtceu:basic_electronic_circuit"
+				type: "item"
+			}]
+			title: "Electronics #4: The Circuit"
+			x: 4.25d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3144DC68B266730C"]
+			description: [
+				"Macerate Wood into Wood Pulp, then compress it into Wood Plates. Combine it with Resin to make an empty board."
+				""
+				"Stick in some expensive Copper Wires (these'll get cheaper in &7LV&r) and you've got the base for your first &aCircuit&r."
+				""
+				"Almost there!"
+			]
+			icon: "gtceu:resin_printed_circuit_board"
+			id: "4ED5A9AEF7B928BA"
+			rewards: [{
+				count: 4
+				id: "2A1EAEB72424AFB9"
+				item: "gtceu:wood_plate"
+				type: "item"
+			}]
+			shape: "square"
+			size: 0.75d
+			subtitle: "The circuit-er part of circuits..."
+			tasks: [
+				{
+					id: "3704C06203B7485A"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:plates/wood"
+						}
+					}
+					optional_task: true
+					title: "Wood Plates"
+					type: "item"
+				}
+				{
+					id: "131521889242DDB8"
+					item: "gtceu:resin_printed_circuit_board"
+					type: "item"
+				}
+			]
+			title: "Electronics #2: Circuit Boards"
+			x: 3.125d
+			y: 1.875d
+		}
+		{
+			dependencies: ["4E8ACE294E54B34C"]
+			description: [
+				"Alright - your first &oproper&r &aGregTech&r tool. The first of &dmany&r."
+				""
+				"GT tools can be made out of many different materials. When used in crafting recipes, they &baren't consumed&r, instead losing durability. You'll want to start with an Iron tool - but you could opt for Wrought Iron if you already tackled that quest."
+				""
+				"&9&lHammer&f:&r A crafting tool that shows up in a lot of earlygame recipes. Its secondary function is muting machines by &msmacking&r right-clicking them."
+				""
+				"As a sidenote on all &aGregTech&r tools, you can repair them in an Anvil using the material of the tool itself, just like any vanilla tool. If you are finding yourself short on experience, &eBottles o' Enchanting&r are now craftable."
+			]
+			id: "37C4BFEEE74D276B"
+			rewards: [{
+				id: "20DD8116B35F65AD"
+				item: "gtceu:iron_plate"
+				random_bonus: 2
+				type: "item"
+			}]
+			shape: "square"
+			size: 0.75d
+			subtitle: "Your first GT Tool!"
+			tasks: [{
+				icon: {
+					Count: 1
+					id: "gtceu:steel_hammer"
+					tag: {
+						Damage: 0
+						GT.Tool: {
+							Damage: 0
+						}
+					}
+				}
+				id: "0B4F071C5A537C32"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:tools/hammers"
+					}
+				}
+				title: "Any Hammer!"
+				type: "item"
+			}]
+			title: "STOP! Hammer time!"
+			x: -2.25d
+			y: 0.75d
+		}
+		{
+			dependencies: ["37C4BFEEE74D276B"]
+			description: [
+				"More GregTech tools are required for progression - here are the ones to lay eyes on."
+				""
+				"&9&lWrench:&r A crafting tool, but also the correct tool for GregTech machines... perfect if you think using pickaxes is unethical. It can also double as a &6wrench for other mods&r. Right-click allows you to set the output side of GregTech machines, and sneak-right-clicking rotates machines."
+				""
+				"&9&lFile:&r A crafting tool... and that's it. Yay!"
+				""
+				"&9&lSaw:&r Yet another crafting tool. If we were any more evil, we would force its use if you wanted to obtain 4 Planks and 4 Sticks from their respective crafting recipes. That being said, you can still use it to get &a6 Planks per Log&r, if you wish."
+				"{@pagebreak}"
+				"&eNote:&r Any Quest with GregTech tools can be completed with the tool crafted from any material, not just the one displayed."
+			]
+			icon: {
+				Count: 1
+				id: "gtceu:iron_wrench"
+				tag: {
+					Damage: 0
+					GT.Tool: {
+						Damage: 0
+					}
+				}
+			}
+			id: "7C39EC894FB9F2ED"
+			shape: "square"
+			size: 0.75d
+			tasks: [
+				{
+					id: "0F3B2E579DB1DA6B"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/wrenches"
+						}
+					}
+					title: "Any Wrench!"
+					type: "item"
+				}
+				{
+					id: "6338DAEF11B5B64F"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/files"
+						}
+					}
+					title: "Any File!"
+					type: "item"
+				}
+				{
+					id: "4BFAA251544538D7"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/saws"
+						}
+					}
+					title: "Any Saw!"
+					type: "item"
+				}
+			]
+			title: "Important Tools"
+			x: -2.25d
+			y: 1.875d
+		}
+		{
+			dependencies: ["7C39EC894FB9F2ED"]
+			description: [
+				"More tools - they're not critically important right now, but you'll need to make these at some point."
+				""
+				"&9&lScrewdriver:&r A crafting tool. It's used for special configuration of machines and covers."
+				""
+				"&9&lWire Cutter:&r A crafting tool. You'll need it if you want to configure wire connections. Right-clicking on wires will enable or disable connection to other blocks."
+				""
+				"&9&lMortar:&r A crafting tool, used to grind various things down into dust form."
+				""
+				"&9&lKnife:&r A pretty mediocre weapon, better suited as - &oyou guessed it&r - a crafting tool!"
+				""
+				"&9&lSoft Mallet:&r A tool to toggle machine operation with a simple right-click."
+				"{@pagebreak}"
+				"There are a couple of other tools that are quite niche, but deserve a mention."
+				""
+				"&9&lCrowbar:&r A helpful tool that can remove covers from &aGregTech&r machines by right-clicking the side."
+				""
+				"&9&lScythe:&r A powerful farming tool that can automatically replant your crops in a large area. It's also a surprisingly good weapon!"
+				""
+				"&9&lPlunger:&r A tool to clear stuck fluids from GregTech&a machines."
+				""
+				"&9&lButchery Knife:&r A weapon that comes pre-enchanted with &6Looting III&r. You might want to use it to gather leather and food."
+				"{@pagebreak}"
+				"&e&lNote:&r This quest's reward is &3Damascus Steel&r - a rare material which can only be found as overworld loot. It far surpasses the materials you have now, so be sure to use it."
+			]
+			icon: {
+				Count: 1
+				id: "gtceu:iron_screwdriver"
+				tag: {
+					Damage: 0
+					GT.Tool: {
+						Damage: 0
+					}
+				}
+			}
+			id: "574734F04A0311DF"
+			rewards: [{
+				count: 16
+				id: "06D204097AC04888"
+				item: "gtceu:damascus_steel_ingot"
+				type: "item"
+			}]
+			size: 0.75d
+			tasks: [
+				{
+					id: "24F90D8397D05829"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/screwdrivers"
+						}
+					}
+					title: "Any Screwdriver!"
+					type: "item"
+				}
+				{
+					id: "1863012DE0305E40"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/wire_cutters"
+						}
+					}
+					title: "Any Wire Cutter!"
+					type: "item"
+				}
+				{
+					id: "527E66F3B7757500"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/mortars"
+						}
+					}
+					title: "Any Mortar!"
+					type: "item"
+				}
+				{
+					id: "057A3E76B3E3E0C0"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/knives"
+						}
+					}
+					title: "Any Knife!"
+					type: "item"
+				}
+				{
+					id: "71420EED80446A65"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/mallets"
+						}
+					}
+					title: "Any Soft Mallet!"
+					type: "item"
+				}
+			]
+			title: "More Tools"
+			x: -0.75d
+			y: 1.875d
+		}
+		{
+			dependencies: ["47965C310D9847DC"]
+			description: [
+				"Well, you've finally made it to the moon, now what? "
+				""
+				"From research, moon sand has some interesting reactions with iron, but it might take a bit of effort to figure out how to best utilize it..."
+				""
+				"{@pagebreak}"
+				"As you can guess, this is the GregTech Community Pack Modern copypasted, because I am not writing an entire questbook for a dumb april fools joke. Things may not be completely accurate, but it beats the built in GTM documentation, which is to say, none."
+				""
+				"The questbook you're reading is &ebrimming with information&r to guide you through the modpack, so check it out if you find yourself getting lost.  We wrote it with both &dold-school veterans&r and &bnewcomers&r in mind."
+			]
+			icon: "ad_astra:moon_globe"
+			id: "4E8ACE294E54B34C"
+			shape: "rsquare"
+			size: 1.2d
+			subtitle: "The Real Challenge Begins"
+			tasks: [{
+				dimension: "ad_astra:moon"
+				id: "4EB6084A777ED166"
+				type: "dimension"
+			}]
+			title: "One small step for man..."
+			x: -3.5999999999999996d
+			y: 0.75d
+		}
+		{
+			dependencies: ["4E8ACE294E54B34C"]
+			description: [
+				"Wrought Iron has a very low carbon content, but that's enough to make it &btougher&r than regular Iron."
+				""
+				"&aGregTech&r tools made of Wrought Iron are &650% more durable&r than their Iron cousins. You might want to consider using Wrought Iron until you unlock &2something better&r."
+				""
+				"To obtain Wrought Iron, you can &6smelt&r Iron Nuggets into Wrought Iron Nuggets, then recombine them into an ingot. Make sure you don't convert all of your Iron supply, as the two &4&laren't&r interchangeable."
+				""
+				"This may be time-consuming, but rest assured, you'll unlock a &ebetter way&r to produce Wrought Iron before long."
+			]
+			icon: "gtceu:wrought_iron_ingot"
+			id: "6077DC99F2B6DBBC"
+			rewards: [{
+				count: 5
+				id: "30064BA442B61680"
+				item: "gtceu:wrought_iron_ingot"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Murder, she Wrought"
+			tasks: [{
+				id: "26002F6585C18FBA"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/wrought_iron"
+					}
+				}
+				title: "Wrought Iron Ingot"
+				type: "item"
+			}]
+			title: "Better Than Iron"
+			x: -3.63d
+			y: 1.875d
+		}
+		{
+			dependencies: ["4E8ACE294E54B34C"]
+			description: [
+				"The ore generation in &2GregTech&r is very different to vanilla or normal modded Minecraft. All ores generate in &6huge veins&r, which can contain &dhundreds&o&r of ore blocks."
+				""
+				"GTCEu now features the functionality of &dVisual Prospecting&r natively, which will mark discovered veins on your map. &9Right Click&r an ore block in the vein to add it to the map. You can toggle the ore vein view in the lower left corner of the fullscreen map."
+				"{@pagebreak}"
+				"The full extent of ore generation is explained in the Tips and Tricks tab, but here is what you need to know:"
+				""
+				"&9-&r Ore veins generate in a &4Grid&r. Every vein is &9spaced by (approximately) 3 chunks&r from one to another in a cardinal direction."
+				""
+				"&9-&r It's a good practice to make &dWaypoints&r (default &4N&r) for every vein you find, and to label their type. You may want to come back to the vein several times."
+			]
+			icon: "gtceu:moon_cobaltite_ore"
+			id: "5AD10C97F482F779"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "More like SNORE generation!"
+			tasks: [{
+				id: "7F50B4252A20F81A"
+				title: "Woah, ores sure sound exciting."
+				type: "checkmark"
+			}]
+			title: "Ore Generation"
+			x: -5.28d
+			y: 0.75d
+		}
+		{
+			dependencies: ["5AD10C97F482F779"]
+			description: [
+				"Whilst frolicking about on the lunar surface, you may have spotted a couple of &dSurface rocks&r."
+				""
+				"These little guys indicate the type of veins that are below them. Just right-click &7(or mine!)&r the surface rock to receive a corresponding pile of &aTiny Dust&r. This will also add the vein to your minimap."
+				""
+				"You can now use &2EMI&r to learn more about the vein beneath your feet. Just press &dU&r on the Tiny Dust you mined from the rock, and navigate to the &6Ore Page&r. This page contains details on what &btypes of ores&r generate, their &3generation patterns&r, their &espawning dimension&r and &dY-level range&r, and their &aspawning weight&r, which is the chance it spawns."
+			]
+			icon: "gtceu:cobalt_indicator"
+			id: "3DAE4B7EA232FD74"
+			shape: "circle"
+			size: 0.5d
+			subtitle: "Awakening your inner geologist"
+			tasks: [{
+				id: "18DD7587A9C38EEF"
+				title: "I love prospecting!"
+				type: "checkmark"
+			}]
+			title: "This Rocks!"
+			x: -5.279795918367348d
+			y: 1.875d
+		}
+		{
+			dependencies: ["4B979482EF026BFF"]
+			description: [
+				"We made it to &7LV&r! Give yourself a pat on the back!"
+				""
+				"&aLV Machine Hulls&r can be transformed into various electric machines, much like the machines you've already been making. You'll need one if you're to make any &7LV&r machine. We're feeling generous enough that this quest will grant you a second Hull, free of charge! Consider using it to craft a turbine for power."
+				""
+				"Circuits are an integral part of progression in GregTech, so keep climbing."
+				""
+				"&6Once you complete this Quest and the LV Motor Quest, you are ready to move on to the LV Age.&r"
+			]
+			icon: "gtceu:lv_machine_hull"
+			id: "5089909D185F98AE"
+			rewards: [{
+				id: "5CF0694913DC1000"
+				item: "gtceu:lv_machine_hull"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Your first &aElectronic Circuit&r!"
+			tasks: [{
+				id: "315A7A085AE8E828"
+				item: "gtceu:lv_machine_hull"
+				type: "item"
+			}]
+			title: "Hull Deal"
+			x: 6.75d
+			y: 0.75d
+		}
+	]
+	subtitle: ["The Real Challenge Begins"]
+	title: "&7Getting Started"
+}

@@ -15,7 +15,7 @@ JEIEvents.hideItems(event => {
     event.hide("architects_palette:withered_bone")
 
     let begoneEarth = [
-        "tier_1_rover", "tier_2_rocket", "tier_3_rocket", "tier_4_rocket",
+        "tier_1_rover", "tier_2_rocket", "tier_3_rocket", "tier_1_rocket",
         "steel_cable", "desh_cable", "desh_fluid_pipe", "ostrum_fluid_pipe", "cable_duct", "fluid_pipe_duct",
         "coal_generator", "compressor", "etrionic_blast_furnace", "nasa_workbench", "fuel_refinery",
         "water_pump", "energizer", "cryo_freezer",
@@ -168,9 +168,32 @@ JEIEvents.hideItems(event => {
     event.hide("ae2:facade")
     event.hide("chiselsandbits:block_bit")
 
+    
+
 })
 
 JEIEvents.hideFluids(event => {
     event.hide("tconstruct:molten_tin")
     event.hide("ad_astra:cryo_fuel")
 })
+
+    // Hide GT ores to prevent clutter
+    GTMaterialRegistry.getRegisteredMaterials().forEach(id => {
+        event.hide([
+            `gtceu:granite_${id.name}_ore`,
+            `gtceu:diorite_${id.name}_ore`,
+            `gtceu:andesite_${id.name}_ore`,
+            `gtceu:red_granite_${id.name}_ore`,
+            `gtceu:marble_${id.name}_ore`,
+            `gtceu:deepslate_${id.name}_ore`,
+            `gtceu:tuff_${id.name}_ore`,
+            `gtceu:sand_${id.name}_ore`,
+            `gtceu:red_sand_${id.name}_ore`,
+            `gtceu:gravel_${id.name}_ore`,
+            `gtceu:basalt_${id.name}_ore`,
+            `gtceu:blackstone_${id.name}_ore`,
+            `gtceu:${id.name}_ore`,
+            `gtceu:netherrack_${id.name}_ore`,
+            `gtceu:endstone_${id.name}_ore`,
+        ])
+    })

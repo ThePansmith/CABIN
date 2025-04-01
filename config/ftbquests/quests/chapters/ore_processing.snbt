@@ -1,0 +1,462 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ore_processing"
+	group: "288DA1F92F7C0A7A"
+	icon: "gtceu:crushed_gold_ore"
+	id: "72E9EAAA24C77C22"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["730043448A9ADBB6"]
+			description: [
+				"All good ore processing lines start with a crush, and in your case, you'll want to macerate either your &5Raw Ore&r, or your Ore blocks (if you're using &dSilk Touch&r!)"
+				""
+				"When you can make the large multiblock Miners, your ore yield is almost &aquadrupled&r further, and you won't need to macerate for the first step - the &bLarge Miner&r will output its ores as if they had been macerated."
+			]
+			icon: "gtceu:lv_macerator"
+			id: "012BF60FBD5D41AC"
+			size: 1.1d
+			subtitle: "Well. You've gotta start somewhere!"
+			tasks: [{
+				id: "037584D32CBC5D8D"
+				title: "I'm feeling pretty crushed right now."
+				type: "checkmark"
+			}]
+			title: "The First Maceration"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["012BF60FBD5D41AC"]
+			description: [
+				"Nothing special here. Any ores that you don't wash in novelty chemicals simply need to be washed in water with an &dOre Washer&r. You should use Distilled Water, as it cuts the recipe time down by &650%&r. Set up a couple of Distilleries on-site and buffer into an appropriately-sized &aSuper Tank&r."
+				""
+				"If you don't care about the byproducts in this section, you can wash the ores in &bregular water&r without a configured circuit to process &225x&r faster, but &4without&r byproducts."
+			]
+			icon: "gtceu:distilled_water_bucket"
+			id: "228379C559E390B8"
+			size: 1.1d
+			subtitle: "The \"distinguished\" version of water"
+			tasks: [{
+				id: "2E2ABD36FCFF1CC5"
+				title: "Nah, I'll go with Distilled Water."
+				type: "checkmark"
+			}]
+			title: "Washing with Distilled Water"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"012BF60FBD5D41AC"
+				"4353AB0E20601AEC"
+			]
+			description: [
+				"Sodium Persulfate isn't as simple to obtain as Mercury, but you'll probably find yourself making some when crafting Circuit Boards. Set up a &6Chemical Reactor&r/&bElectrolyser&r combo with a Level Emitter attached if you want to keep some in stock, and then you can wash any Crushed Ore with a &aChemical Bath&r."
+				"{@pagebreak}"
+				"You'll want to use &3Sodium Persulfate&r when processing:"
+				""
+				"- Tin Ore"
+				"- Aluminium Ore"
+				"- Cobalt Ore"
+				"- Cobaltite Ore"
+				"- Bauxite Ore"
+				"- Tetrahedrite Ore"
+				"- Pentlandite Ore"
+				"- Sphalerite Ore"
+				"- Stibnite Ore"
+				"- Yellow Limonite Ore"
+				"- Malachite Ore"
+				"- Iron Ore"
+				""
+				"Enjoy your byproducts!"
+			]
+			icon: "gtceu:sodium_persulfate_bucket"
+			id: "5AB202F6C0B34BF3"
+			shape: "rsquare"
+			subtitle: "Sulfium Persodate"
+			tasks: [{
+				id: "04D48CBAD6DA788D"
+				title: "Sodium Persulfate goes hard!"
+				type: "checkmark"
+			}]
+			title: "Washing with Sodium Persulfate"
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["012BF60FBD5D41AC"]
+			description: [
+				"Washing ores with Mercury where applicable instead of &3Distilled Water&r grants unique byproducts that may be difficult to obtain in other circumstances. It's usually worth doing this, as Mercury is readily available from centrifuging &cRedstone&r or &4Cinnabar&r &7(and in fact, Mercury is the &lonly&r&7 real usage of Cinnabar!)&r."
+				""
+				"Simply wash any &6Crushed Ore&r with a Chemical Bath."
+				"{@pagebreak}"
+				"Here is a non-exhaustive list of ores you likely want to wash in Mercury:"
+				""
+				"- Galena Ore"
+				"- Tungstate Ore"
+				"- Silver Ore"
+				"- Bornite Ore"
+				"- Magnetite Ore"
+				"- Copper Ore"
+				"- Gold Ore"
+				"- Nickel Ore"
+				"- Platinum Ore"
+				"- Chalcopyrite Ore"
+				"- Sheldonite Ore"
+				""
+				"These alternate \"&bwashing routes&r\" will increase your Gold, Silver, and Platinum Group yields significantly!"
+			]
+			icon: "gtceu:mercury_bucket"
+			id: "2E0777FBD0476D75"
+			shape: "rsquare"
+			subtitle: "Bathing with Venus"
+			tasks: [{
+				id: "6508774C6A27D5D9"
+				title: "Showering with Jupiter"
+				type: "checkmark"
+			}]
+			title: "Washing with Mercury"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["478A7F7565AFC8A8"]
+			description: [
+				"The default way to deal with ores at this step is usually with the &eThermal Centrifuge&r for its &bexclusive byproduct&r, but check around the above quest to make sure you're not missing something important."
+				""
+				"&9Al&rle&4z!"
+			]
+			icon: "gtceu:lv_thermal_centrifuge"
+			id: "3C36AA80FE51DA45"
+			subtitle: "This isn't Thermal Expansion..."
+			tasks: [{
+				id: "77457ABAEFF7707B"
+				title: "That's hot."
+				type: "checkmark"
+			}]
+			title: "Thermal Centrifuge"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"5AB202F6C0B34BF3"
+				"228379C559E390B8"
+				"2E0777FBD0476D75"
+			]
+			description: ["From now onwards, you'll be sending &ball of your ores&r towards &6all kinds of places&r, depending on how far you are through your playthrough. Quests will unlock around this node when you &aunlock the ability&r to deal with them, so check back occasionally if you're feeling bored."]
+			icon: "gtceu:purified_gold_ore"
+			id: "478A7F7565AFC8A8"
+			size: 1.1d
+			subtitle: "Started from the Raw Ore, now we here"
+			tasks: [{
+				id: "6A094CE2872E8DA3"
+				title: "Alright, I've read this!"
+				type: "checkmark"
+			}]
+			title: "We've got some Purified Ore - what's next?"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"3C36AA80FE51DA45"
+				"46B3BB368D86D931"
+				"517B6A6E04F4E4C8"
+			]
+			description: [
+				"From now? That's the basics of an &5ore processing setup&r. You can check your filters, make more machines, and generally improve efficiency, but if you've &6loosely&r followed everything on this page, you should be in &bgood stead&r!"
+				""
+				"&m&7Hopefully, some information here was of use.&r"
+			]
+			icon: "gtceu:gold_dust"
+			id: "797EB7DF0C07F327"
+			size: 1.1d
+			subtitle: "That wasn't so bad, now."
+			tasks: [{
+				id: "554BFDB6C8AB1132"
+				title: "Yay! That was really, really fun."
+				type: "checkmark"
+			}]
+			title: "We did it! Now what?"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"012BF60FBD5D41AC"
+				"390E59F05132FCB8"
+			]
+			description: [
+				"Some Gem ores - namely &cRuby&r, &9Sapphire&r, and &2Green Sapphire&r - can be mixed with Aqua Regia in their crushed form to obtain Slurry."
+				""
+				"When electrolysed, the Slurry has some interesting byproducts. Namely, it's one of the few ways to obtain &dTitanium Dust&r without macerating Titanium ingots!"
+			]
+			icon: "gtceu:ruby_slurry_bucket"
+			id: "3D9E045B8D3F2B85"
+			shape: "rsquare"
+			size: 0.9d
+			subtitle: "Not quite like Mekanism"
+			tasks: [{
+				id: "412357F4B4B8FB48"
+				title: "Hurry hurry, slurry."
+				type: "checkmark"
+			}]
+			title: "Slurry Processing"
+			x: 1.7938775510203726d
+			y: 0.019897959183666103d
+		}
+		{
+			dependencies: ["797EB7DF0C07F327"]
+			description: ["Some dusts in &bGregTech&r have little use other than to be processed in an &3Electrolyser&r for some nice bonus chemical outputs. You can either set a manual filter for the desired items in a &aStorage Bus&r, or provide the most vital dusts via ME Interface, for example."]
+			icon: "gtceu:lv_electrolyzer"
+			id: "3B72CFB9F466DD76"
+			subtitle: "We don't need THIS much Cobaltite, right?"
+			tasks: [{
+				id: "1C9515F37AD27BA9"
+				title: "Every last drop counts."
+				type: "checkmark"
+			}]
+			title: "Electrolyse what's left!"
+			x: -1.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["797EB7DF0C07F327"]
+			description: [
+				"Some stages listed on this page output Small/Tiny Dusts, or Nuggets. These have little use in such a form, so it's never a bad idea to route these into a &dPacker&r to \"&7compress&r\" them into their full forms."
+				""
+				"If you're having problems with the Packer filling up with too few Nuggets and clogging your buffer, then you may want to consider using a &6GregTech Robot Arm&r set to \"Supply Exact\". Send your Nuggets in 9 at a time, and you can consider this a problem solved!"
+			]
+			icon: "gtceu:lv_packer"
+			id: "433BE663989445B9"
+			shape: "rsquare"
+			size: 0.9d
+			subtitle: "With our powers combined..."
+			tasks: [{
+				id: "7433795785B315B3"
+				title: "Call me Amazon delivery driver the way I be packaging"
+				type: "checkmark"
+			}]
+			title: "Do we need to package?"
+			x: 0.8891156462584675d
+			y: 9.970918367346947d
+		}
+		{
+			dependencies: ["478A7F7565AFC8A8"]
+			description: ["Gemstones deserve to be sifted. In &2earlier stages&r of the game, this is slow and has poor yields, but when overclocked, sifting quickly becomes a great way to &dmaximise&r your gemstone yield."]
+			icon: "gtceu:lv_sifter"
+			id: "1069BF4C1771A4F6"
+			shape: "rsquare"
+			size: 0.9d
+			subtitle: "Great Grey Wolf Sif-ting"
+			tasks: [{
+				id: "28C312E791DF4125"
+				title: "Sifting through so much rubbish..."
+				type: "checkmark"
+			}]
+			title: "Sifting"
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"478A7F7565AFC8A8"
+				"0F192D1F44B9B599"
+			]
+			description: [
+				"As mentioned in the main sections of this quest book, this &5Indium setup&r has a limited lifetime, so don't stress over optimising every last detail."
+				""
+				"Simply mix &dPurified Galena&r and &eSphalerite&r together with some &aSulfuric Acid&r to obtain &9Indium Concentrate&r, then combine with Aluminium Dust in a Chemical Reactor for your prize!"
+			]
+			icon: "gtceu:indium_dust"
+			id: "38D1336DC84E03FE"
+			shape: "rsquare"
+			size: 0.9d
+			subtitle: "Getting your first Indium has never been so fun."
+			tasks: [{
+				id: "22926D3453E03389"
+				title: "I won't get too attached to my Indium setup."
+				type: "checkmark"
+			}]
+			title: "Indium Processing"
+			x: 2.011564625850305d
+			y: 4.01173469387755d
+		}
+		{
+			dependencies: [
+				"478A7F7565AFC8A8"
+				"57D4E09A9CAB150C"
+			]
+			description: [
+				"You'll want to send off the following ores to &aPlatinum Group Processing&r:"
+				""
+				"- Purified Chalcopyrite Ore"
+				"- Purified Tetrahedrite Ore"
+				"- Purified Chalcocite Ore"
+				"- Purified Bornite Ore"
+				"- Purified Sheldonite Ore"
+				"- Purified Pentlandite Ore"
+				""
+				"Treat these ores with &eNitric Acid&r to receive your &5Platinum Group sludge&r, alongside a Sulfuric byproduct fluid. What you do with these &boutputs&r... is up to you to figure out!"
+				""
+				"&8(Hint: It's in the EV chapter.)"
+			]
+			icon: "gtceu:platinum_group_sludge_dust"
+			id: "427E6091713399FE"
+			shape: "rsquare"
+			size: 0.9d
+			subtitle: "Quite the rabbit hole to jump down..."
+			tasks: [{
+				id: "2AA030AFC90A1E7B"
+				title: "The Entire Platline In 50 Hours"
+				type: "checkmark"
+			}]
+			title: "Platinum Group Processing"
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["478A7F7565AFC8A8"]
+			description: [
+				"The Electromagnetic Separator is an interesting machine that skips &6two processing stages&r, but usually returns &2unique&r byproducts that aren't usually too simple to obtain. You'll need to process down pure dusts to use this - so &bmake sure&r you route any desired ores correctly."
+				"{@pagebreak}"
+				"You may &bappreciate&r performing this stage of processing on the following ores:"
+				""
+				"- Bastnasite Ore &7(This is particularly strong for Neodymium!)&r"
+				"- Naquadah Ore &7(The Enriched Naquadah byproduct is very powerful!)&r"
+				"- Nickel Ore"
+				"- Tin Ore"
+				"- Goethite Ore"
+				"- Hematite Ore"
+				"- Chromite Ore"
+				"- Ilmenite Ore"
+				"- Pyrite Ore"
+				"- Yellow Limonite Ore"
+				"- Glauconite Sand Ore"
+				"- Magnetite Ore"
+				"- Vanadium Magnetite Ore"
+				"- Granitic Mineral Sand Ore"
+				"- Basaltic Mineral Sand Ore"
+			]
+			icon: "gtceu:lv_electromagnetic_separator"
+			id: "46B3BB368D86D931"
+			shape: "rsquare"
+			size: 0.9d
+			subtitle: "Maximising Naquadah"
+			tasks: [{
+				id: "089637EE7F1154FF"
+				title: "I'm harnessing the power of magnetism!"
+				type: "checkmark"
+			}]
+			title: "Electromagnetic Separator"
+			x: -1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["701BCADAE5CF6CA5"]
+			description: [
+				"Hello! You're probably looking to set up &abasic ore processing&r. This quest line will try to guide you through the necessary motions. As always, it's &6important&r to make the disclaimer that this isn't the only &o\"meta\"&r way to process your ores - a strong ore processing facility will treat each ore depending on the demands of your &bGregTech&r factory. We emphasise that you shouldn't take this guide as gospel."
+				""
+				"Ready to get &2into the weeds&r?"
+			]
+			icon: "gtceu:gold_ore"
+			id: "730043448A9ADBB6"
+			shape: "square"
+			size: 1.3d
+			subtitle: "From one Ore, a great many dusts shall flow..."
+			tasks: [{
+				id: "23C471A620644954"
+				title: "One small step for Ore..."
+				type: "checkmark"
+			}]
+			title: "Start here!"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1069BF4C1771A4F6"]
+			description: ["A side product of sifting is the production of &dpure dusts&r. These shouldn't be sent back to your main storage, because they can't be used in recipes... and &3centrifuging&r them will give you a sweet, sweet extra byproduct."]
+			icon: "gtceu:lv_centrifuge"
+			id: "517B6A6E04F4E4C8"
+			shape: "rsquare"
+			size: 0.9d
+			subtitle: "Fear not! We have our solution!"
+			tasks: [{
+				id: "7F9EF449A760D102"
+				title: "Never mind, it's not as bad as I thought."
+				type: "checkmark"
+			}]
+			title: "Oh no! Pure dust?!"
+			x: 1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["730043448A9ADBB6"]
+			description: ["Multiple &don-tier machines&r are never a bad idea, but you should definitely consider using the Large multiblock variants of the singleblock machines from &aGregicality Multiblocks&r. They're significantly easier to upgrade as you progress through the later tiers of the mod (would you rather make a &616A LuV Energy Hatch&r, or &b16 LuV Macerators&r?!), and plus... they look rad as hell."]
+			icon: "gtceu:large_maceration_tower"
+			id: "42F91220B6FA66FC"
+			tasks: [{
+				id: "7C4D7E44B6CDFBAC"
+				type: "checkmark"
+			}]
+			title: "How would I boost my processing power?"
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["730043448A9ADBB6"]
+			description: ["Whilst the majority &7(if not all)&r of the listed steps can be automated &3using GregTech alone&r, savvy players may wish to use &dAE2&r for all their logistics needs. Here, we'll cover some methods you may not be aware of to help you elevate your &aOre Processing&r to the next level."]
+			icon: "ae2:controller"
+			id: "3CCD98E7139BA564"
+			subtitle: "Let's look at what AE2 can do for you!"
+			tasks: [{
+				id: "67AB1263C1AA0EB2"
+				title: "Yes, I understand!"
+				type: "checkmark"
+			}]
+			title: "Applied Energistics 2"
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3CCD98E7139BA564"]
+			description: [
+				"One could define a Subnetwork &7(or \"Subnet\" for short)&r as any network that isn't part of your main network."
+				""
+				"The simplest way to create a Subnet is by attaching an &bME Interface&r to a &aStorage Bus&r. This means that the Storage Bus will treat the Interface as an inventory to be read from - i.e., it'll be able to see &5all of the items&r in the network connected to the Interface."
+				""
+				"As your main network will &4not&r be transferred through the Storage Bus, you'll need to give your subnet power from the main network with &6Quartz Fibre&r. Ensure that you don't accidentally connect the two networks with regular cabling."
+				"{@pagebreak}"
+				"Question is - how does this &abenefit you&r as a player? The logistics powers made available with subnetworking are immense, so we'll cover a few examples &9in light detail&r. The rest is left as an exercise to the reader!"
+				""
+				"- A subnet for your ore processing system, which &bautomatically handles&r all the intermediate byproducts without them constantly entering and exiting your main network!"
+				"- Really, it's useful to subnet &dlarger processing chains&r such as &ePlatinum processing&r. This way, you can ensure that byproducts can be appropriately recycled, and reduce overhead."
+				""
+				""
+				"{@pagebreak}"
+				"Subnets can be infinitely nested, but as always in &bmodded Minecraft&r, this should be performed in moderation (or even better, avoided), as many levels of nesting can cause &4performance issues&r when calculating the network."
+				""
+				"Oh... and if you've re-enabled Channels in this pack, subnetworks only consume a single channel from your main network. What a bargain!"
+			]
+			icon: "ae2:storage_bus"
+			id: "1CB9A26C3296858E"
+			shape: "rsquare"
+			size: 0.75d
+			subtitle: "Socially Distanced Network"
+			tasks: [{
+				id: "24ECAB4EA2E82FE7"
+				title: "Sounds great to me."
+				type: "checkmark"
+			}]
+			title: "Subnets 101"
+			x: -1.5d
+			y: -1.125d
+		}
+	]
+	subtitle: ["How to extract as much as possible..."]
+	title: "Ore Processing"
+}

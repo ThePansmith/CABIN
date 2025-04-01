@@ -1,0 +1,474 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "renewability_and_you"
+	group: "288DA1F92F7C0A7A"
+	icon: "minecraft:water_bucket"
+	id: "4C3D68FB57D3CC02"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4E8ACE294E54B34C"]
+			description: [
+				"You may be wondering how to obtain &6large quantities&r of common resources used in &bGregTech&r. This might be old news to seasoned players, but it's actually possible to set up &dpassive processes&r to make various materials and chemicals &2fully renewable&r."
+				""
+				"We've added this chapter to lead you towards some setups that you &7&omight&r desire. Obviously, there's no need to do all of these, but who doesn't love &2\"free\" resources&r."
+				""
+				"&9&lA footnote:&r There's no way we could document all of the renewable routes in &bGregTech&r. This quest page merely serves as a primer to lead &6newer players&r through their options. Not every option listed in this quest book is optimal, so we urge you to experiment!"
+			]
+			icon: "minecraft:big_dripleaf"
+			id: "4D7A771B67DAFC6F"
+			size: 1.2d
+			subtitle: "Very conscious of you!"
+			tasks: [{
+				id: "10D096D6F4770F24"
+				title: "I love renewable resources!"
+				type: "checkmark"
+			}]
+			title: "Promoting a Sustainable Playthrough"
+			x: 1.2d
+			y: -0.6d
+		}
+		{
+			dependencies: [
+				"4D7A771B67DAFC6F"
+				"1F2359106FC95603"
+			]
+			description: [
+				"Ah, the Rock Crusher - such an unassuming machine that initially appears to only really be a builder's best friend. Who could look past infinite Cobblestone, Deepslate, or Obsidian?"
+				""
+				"Don't be fooled, though, as this little machine might just shock you with the array of materials it makes renewable when you macerate its rocks down to dust form. The surrounding quests will clue you in."
+			]
+			icon: "gtceu:lv_rock_crusher"
+			id: "55D8E30978CBBC0D"
+			shape: "circle"
+			subtitle: "More like game breaking, am I right?"
+			tasks: [{
+				id: "21A653703F408934"
+				title: "Rock Breaking"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["55D8E30978CBBC0D"]
+			description: ["Cobblestone is just the start of things. Let's make a Cobbleworks!"]
+			id: "54D73D049F8CD9FE"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Oh, we're only just getting started."
+			tasks: [{
+				consume_items: false
+				count: 64L
+				id: "72A52930F1754ABF"
+				item: "minecraft:cobblestone"
+				title: "Cobblestone"
+				type: "item"
+			}]
+			title: "The Joy of Cobblestone"
+			x: 0.33d
+			y: -1.65d
+		}
+		{
+			dependencies: ["54D73D049F8CD9FE"]
+			description: [
+				"&6Stone Dust&r can be centrifuged in &bMV&r for a wide range of miscellaneous materials. It's a slow and expensive process, but you may wish to check it out."
+				""
+				"Obviously, Quartzite is Quartzite. Did you know that you could extract any excess Quartzite into &eLiquid Glass&r?"
+				""
+				"&aPotassium Feldspar&r electrolyses into some incredibly useful resources."
+				""
+				"You also have a (low) chance for &dBiotite&r, which notably electrolyses for a very slow source of &bFluorine&r."
+				""
+				"Finally, &aMetal Mixture dust&r is useless until you can centrifuge it at &5EV&r. Pretty much all of its outputs when centrifuged are very useful."
+			]
+			id: "668A8BDDEE17865E"
+			shape: "rsquare"
+			size: 0.5d
+			subtitle: "Small Stone, Big Byproducts"
+			tasks: [{
+				id: "3C1B921715553377"
+				item: "gtceu:stone_dust"
+				type: "item"
+			}]
+			x: -0.33d
+			y: -1.65d
+		}
+		{
+			dependencies: ["54D73D049F8CD9FE"]
+			description: [
+				"Just Forge Hammer that Cobblestone and you'll get some &dGravel&r."
+				""
+				"Gravel macerates into &6Stone Dust&r, but with a low chance of Flint when the recipe is performed in a &6HV Macerator&r or above. You probably want to sift for Flint, anyway!"
+				""
+				"Flint Dust centrifuges into &aSilicon Dioxide&r, which is then electrolysed for Silicon and Oxygen."
+			]
+			id: "52868F643F0A1007"
+			shape: "rsquare"
+			size: 0.5d
+			subtitle: "cp_gravelpit"
+			tasks: [{
+				id: "3850F80F95B8E520"
+				item: "minecraft:gravel"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.31d
+		}
+		{
+			dependencies: ["52868F643F0A1007"]
+			description: [
+				"Yet another &bForge Hammer&r step, but you'll be making &dSand&r renewably. With renewable Sand comes renewable Glass (remember to try using an &9Arc Furnace&r for that sweet &adoubled&r yield!)."
+				""
+				"Quartz Sand Dust centrifuges into a chanced output of &3Certus Quartz&r Dust."
+			]
+			id: "10FD7C65FC83ADD6"
+			shape: "rsquare"
+			size: 0.55d
+			subtitle: "Two vast and trunkless legs of stone..."
+			tasks: [{
+				id: "6724DCD56A7592FF"
+				item: "minecraft:sand"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.97d
+		}
+		{
+			dependencies: ["10FD7C65FC83ADD6"]
+			description: [
+				"Yup - &brenewable&r Glass."
+				""
+				"Glass'll always be useful throughout your playthrough in a variety of recipes."
+			]
+			id: "471B85B964C578A7"
+			shape: "rsquare"
+			size: 0.5d
+			subtitle: "Glass Hurts, doesn't it..."
+			tasks: [{
+				id: "71A450692F1DC98D"
+				item: "minecraft:glass"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.63d
+		}
+		{
+			dependencies: [
+				"55D8E30978CBBC0D"
+				"7567E885B7166603"
+				"0DBC148D92A9F69F"
+			]
+			description: [
+				"Pulverise your Diorite into Dust, then centrifuge for Mirabilite Dust and Clay Dust."
+				""
+				"Mirabilite yields minimal Sulfur, but Clay Dust is the real treasure here. When electrolysed, you'll get some Aluminium for your troubles. Not bad!"
+			]
+			id: "43D5A5F95EEB339C"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Mirabilite, Clay..."
+			tasks: [{
+				id: "6358C3084C675965"
+				item: "minecraft:diorite"
+				type: "item"
+			}]
+			x: 0.99d
+			y: -2.31d
+		}
+		{
+			dependencies: [
+				"55D8E30978CBBC0D"
+				"7567E885B7166603"
+				"0DBC148D92A9F69F"
+			]
+			description: [
+				"Granite Dust centrifuges into Redrock Dust and the familiar Silicon Dioxide Dust."
+				""
+				"Silicon Dioxide is generally just great to have, and Redrock centrifuges into Calcite (that's renewable Calcium) and Flint."
+			]
+			id: "0089AA3A92C02334"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Redrock, Silicon Dioxide..."
+			tasks: [{
+				id: "7D054563301323A4"
+				item: "minecraft:granite"
+				type: "item"
+			}]
+			x: 1.65d
+			y: -2.64d
+		}
+		{
+			dependencies: [
+				"55D8E30978CBBC0D"
+				"4AFD3073C731A1E4"
+				"7FA0ACB7F161F378"
+			]
+			description: [
+				"Deepslate centrifuges into... you guessed it... Silicon Dioxide! You may want to set this up for the guaranteed Biotite output, as Biotite electrolyses into Fluorine."
+				""
+				"This is obviously a far better source of Biotite than Stone Dust. Hopefully, you didn't waste your time setting that up!"
+			]
+			id: "3B436487305AEE38"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Silicon Dioxide, Fluorine..."
+			tasks: [{
+				id: "64EF28C6902C7083"
+				item: "minecraft:deepslate"
+				type: "item"
+			}]
+			x: 2.31d
+			y: -2.64d
+		}
+		{
+			dependencies: [
+				"55D8E30978CBBC0D"
+				"7567E885B7166603"
+				"0DBC148D92A9F69F"
+			]
+			description: [
+				"Andesite Dust will get you some delicious Asbestos Dust, and some Saltpeter Dust to boot."
+				""
+				"Asbestos is a slow source of Magnesium, and Saltpeter has a variety of uses in chemistry."
+			]
+			id: "3BCA8923DF575D5D"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Asbestos, Saltpeter... (No Create)"
+			tasks: [{
+				id: "74AEE715BE76C0CF"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
+			x: 2.97d
+			y: -2.31d
+		}
+		{
+			dependencies: [
+				"55D8E30978CBBC0D"
+				"26394C1290D70AB6"
+				"16A6AE5C770DB83A"
+			]
+			description: [
+				"By placing some Redstone Dust into your Rock Breaker, you'll find yourself making some Obsidian."
+				""
+				"Obsidian Dust is quite useful, as it electrolyses into Iron."
+			]
+			id: "71972471AFB97BB2"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Fallout: New Vegas, Iron..."
+			tasks: [{
+				id: "3C423DE1EB48AFF5"
+				item: "minecraft:obsidian"
+				type: "item"
+			}]
+			x: 3.3d
+			y: -1.65d
+		}
+		{
+			dependencies: [
+				"55D8E30978CBBC0D"
+				"26394C1290D70AB6"
+				"16A6AE5C770DB83A"
+			]
+			description: [
+				"Basalt Dust centrifuges into Olivine, a material which can be used to substitute Emerald in a small handful of recipes - for example, when making Engraved Crystal Chips."
+				""
+				"You also get a pittance of Dark Ash."
+			]
+			id: "1937057C27596942"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Olivine, Dark Ashes..."
+			tasks: [{
+				id: "6F2F8349BF8AF29C"
+				item: "minecraft:basalt"
+				type: "item"
+			}]
+			x: 3.3d
+			y: -0.99d
+		}
+		{
+			dependencies: [
+				"55D8E30978CBBC0D"
+				"26394C1290D70AB6"
+				"4AFD3073C731A1E4"
+				"16A6AE5C770DB83A"
+				"7FA0ACB7F161F378"
+			]
+			description: [
+				"Not to be confused with regular Granite, Red Granite has some useful utility when the dust is processed. "
+				""
+				"Electrolysing it yields Aluminium for slightly fewer steps than the renewable Clay electrolysis."
+			]
+			id: "789E2DC829DD1828"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Aluminium..."
+			tasks: [{
+				id: "10A533EC38D279DA"
+				item: "gtceu:red_granite"
+				type: "item"
+			}]
+			x: 2.97d
+			y: -0.33d
+		}
+		{
+			dependencies: [
+				"55D8E30978CBBC0D"
+				"26394C1290D70AB6"
+				"16A6AE5C770DB83A"
+			]
+			description: ["Marble Dust isn't anything to write home about, yielding Calcite and Magnesium."]
+			id: "3E3EB69F34F50A9C"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Calcite, Magnesium..."
+			tasks: [{
+				id: "0DED39C9E1966F0B"
+				item: "gtceu:marble"
+				type: "item"
+			}]
+			x: 2.31d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4D7A771B67DAFC6F"
+				"48141DBA683F6B5A"
+			]
+			description: [
+				"By collecting Air with a &6Gas Collector&r and cooling it to Liquid state with a &3Vacuum Freezer&r, you can then distill the liquid Air for a plethora of valuable resources."
+				""
+				"You thought that was all? Air collection isn't limited to the &2Overworld&r - whilst you'll require a higher-tier Distillation Tower to distill the \"higher\" tiers of liquid Air, you can also process air from the &4Nether&r and the &5End&r. This process is mostly optional, but you'll definitely find it to be a rewarding one."
+			]
+			icon: "gtceu:distillation_tower"
+			id: "24A90D07C3A35370"
+			shape: "circle"
+			subtitle: "Things are up in the air right now..."
+			tasks: [{
+				id: "2DE291473F207BF8"
+				title: "Air truly is wonderful."
+				type: "checkmark"
+			}]
+			title: "All Kinds Of Air (Distillation)"
+			x: -0.1499999999999999d
+			y: -0.7d
+		}
+		{
+			dependencies: [
+				"24A90D07C3A35370"
+				"7820DF52516344F4"
+			]
+			description: [
+				"&5Ender Air&r is probably the most interesting of the three airs to distill. Requiring an &9IV Distillation Tower&r and distilling in batches of 200,000L, you'll need to outfit your DT with at least an &9IV&r Input Hatch (or an &5ME Hatch&r if you're inclined)."
+				""
+				"You're getting a ton of Nitrogen, Oxygen, Helium, and Deuterium - the latter of which is commonly used in &aFusion&r. Tritium is used to make &6Helium Plasma&r, which is commonly agreed to be the best plasma for &2power generation&r."
+				"{@pagebreak}"
+				"Krypton and Xenon are your run-of-the-mill &aEBF-boosting&r Noble gases. At this point, you should consider running most (if not all) of your EBF recipes on &bCircuit 2&r to benefit from the faster durations."
+				""
+				"Would you look at that - you get &dRadon&r as well! It's a slow process, especially when you consider that your old setup (did you set it up?) already loops on itself, but &dmore Radon&r is nice."
+				""
+				"Last but not least, you're getting a low chance of &3Ender Pearl Dust&r. The chances are low enough that you shouldn't give up on the Mixer recipe just yet... but once again, more &3Ender Pearls&r are nice!"
+			]
+			icon: "gtceu:liquid_ender_air_bucket"
+			id: "77BBAB9CA586BB36"
+			shape: "rsquare"
+			size: 0.7d
+			subtitle: "Nitrogen, Oxygen, Helium, Krypton, Xenon, Radon, Ender Pearls..."
+			tasks: [{
+				id: "37E57DD2AD97DD10"
+				title: "I'm surprised I can breathe in the End."
+				type: "checkmark"
+			}]
+			title: "Liquid Ender Air"
+			x: -3.15d
+			y: -0.7d
+		}
+		{
+			dependencies: [
+				"24A90D07C3A35370"
+				"2AD44111B9B39C90"
+				"6958029B5514D4EC"
+			]
+			description: [
+				"This was touched upon in the &5EV&r chapter, but we'll focus on what this distillation gets you here."
+				""
+				"The Nitrogen output is &bsubstantial&r, and can help you keep any &ePyrolyse Ovens&r running. You should buffer some of the Nitrogen so you can &aboost your EBFs&r - faster recipe times save your sanity and energy in equal measures."
+				"{@pagebreak}"
+				"Helium and Argon yields are low, but ideally you can run the Air Distillation as a &dpassive process&r every so often to keep your supplies topped up. Both are used to &aboost EBF speeds&r."
+				""
+				"&bCrushed Ice&r is... well, &bCrushed Ice&r. Maybe you could open a cocktail bar?"
+			]
+			icon: "gtceu:liquid_air_bucket"
+			id: "213211A0BC475C32"
+			shape: "rsquare"
+			size: 0.75d
+			subtitle: "Nitrogen, Helium, Argon...."
+			tasks: [{
+				id: "3964A8A27402A11B"
+				title: "I promise I won't sell my air as a commodity!"
+				type: "checkmark"
+			}]
+			title: "Liquid Air"
+			x: -1.15d
+			y: -0.7d
+		}
+		{
+			dependencies: [
+				"24A90D07C3A35370"
+				"5DBBD9B1F5B01F4E"
+				"6958029B5514D4EC"
+			]
+			description: [
+				"Carbon Monoxide is useful when making &6Butyraldehyde&r for your Laminated Glass in &9late IV&r."
+				""
+				"&6Coal Gas&r can be processed in a Distillation Tower for a variety of useful outputs."
+				""
+				"Helium-3 is only used in &bFusion&r, and Neon is used to boost a single &aBlast Furnace&r recipe - &4UHV&r superconductors!"
+				""
+				"Ashes are always useful for the handful of resources they grant."
+			]
+			icon: "gtceu:liquid_nether_air_bucket"
+			id: "38E5B595C33A071C"
+			shape: "rsquare"
+			size: 0.7d
+			subtitle: "Carbon, Coal Gas, Helium-3..."
+			tasks: [{
+				id: "074BDDF3F1AE08AA"
+				title: "It's not all hellish in the Nether."
+				type: "checkmark"
+			}]
+			title: "Liquid Nether Air"
+			x: -2.15d
+			y: -0.7d
+		}
+		{
+			dependencies: ["4D7A771B67DAFC6F"]
+			description: [
+				"Just so you're aware - vanilla farms such as &7Iron Golems&r or &ePiglins&r have been &4disabled&r in this pack. There are obviously ways to cheese the pack (such as some good old Minecraft &acapitalism&r, &mif you catch our drift&r), but we encourage you to try to play without taking advantage of some notorious vanilla \"&ocheese&r\"."
+				""
+				"It's possible that in the future, we'll just make a core-mod for the pack, so players can re-enable the disabled mob drops. For now, the drops are disabled via &5KubeJS script&r, so if you're script-savvy, the file can be removed at &o&7server_scripts/vanilla/loot_drops.js&r."
+			]
+			icon: "minecraft:iron_golem_spawn_egg"
+			id: "7ECD974215E77432"
+			shape: "circle"
+			subtitle: "Is it safe? Is it alright?"
+			tasks: [{
+				id: "19F0161CE47673EE"
+				title: "Oh, darn. That kinda sucks."
+				type: "checkmark"
+			}]
+			title: "What about my mob farm?"
+			x: 1.0d
+			y: 0.5d
+		}
+	]
+	subtitle: ["We'll be rich, soon enough!"]
+	title: "Renewability and You"
+}

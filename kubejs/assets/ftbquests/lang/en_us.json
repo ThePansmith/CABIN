@@ -1091,5 +1091,10 @@
     "cabin.task.79AB928A6C8E21DA": "Complete Chapter 4",
     "cabin.task.7A7EE0DF809CEDC8": "Silver Ingot",
     "cabin.task.7F88BABEC9889C76": "Any Logs",
-    "cabin.task.7FEEF6BED2C3F31B": "Complete Chapter 3"
+    "cabin.task.7FEEF6BED2C3F31B": "Complete Chapter 3",
+    "tagprefix.moon": "Moon %s Ore",
+    "tagprefix.mars": "Mars %s Ore",
+    "tagprefix.mercury": "Mercury %s Ore",
+    "tagprefix.venus": "Venus %s Ore",
+    "tagprefix.glacio": "Glacio %s Ore"
 }

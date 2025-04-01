@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
     // Most Ad Astra Recipes are added in chapters.js
-    event.recipes.create.mixing(("3x ad_astra:steel_ingot"),["3x minecraft:iron_ingot", "minecraft:coal"]).heated()
+    // event.recipes.create.mixing(("3x ad_astra:steel_ingot"),["3x minecraft:iron_ingot", "minecraft:coal"]).heated()
 
     event.remove({type: "ad_astra:alloying"})
     event.remove({type: "ad_astra:compressing"})
