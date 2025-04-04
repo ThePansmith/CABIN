@@ -221,5 +221,6 @@
     "block.kubejs.trial_cut_copper_slab": "Illusionary Cut Copper Slab",
     "block.kubejs.trial_copper_block": "Illusionary Block of Copper",
     "item.kubejs.incomplete_gravity_normalizer": "Incomplete Gravity Normalizer",
-    "filled_map.fortress": "Fortress Locator Map"
+    "filled_map.fortress": "Fortress Locator Map",
+    "cabin.trials.crafter.deprecation.tooltip": "Depreciated. Craft into a Crafter from Quark"
 }

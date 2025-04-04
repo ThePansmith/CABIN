@@ -48,7 +48,7 @@
     "item.kubejs.pipe_module_tier_1": "黄铜管道模块",
     "item.kubejs.pipe_module_tier_2": "殷钢管道模块",
     "item.kubejs.pipe_module_tier_3": "末影管道模块",
-    "item.kubejs.circuit_scrap": "计算器",
+    "item.kubejs.circuit_scrap": "电路碎片",
     "item.kubejs.missingno": "∄",
     "item.kubejs.zinc_dust": "锌粉",
     "item.kubejs.sand_ball": "沙子球",
@@ -218,8 +218,9 @@
     "block.kubejs.substrate_herbal": "草本催化剂",
     "block.mbd2.strainer": "沉积过滤器",
     "mbd2.strainer": "沉积过滤",
-    "item.kubejs.incomplete_flight_anchor": "Incomplete Flight Anchor",
+    "item.kubejs.incomplete_flight_anchor": "未完成的飞行锚点",
     "item.kubejs.incomplete_gravity_normalizer": "Incomplete Gravity Normalizer",
     "block.kubejs.substrate_fluix": "Fluix Reagent",
-    "filled_map.fortress": "Fortress Locator Map"
+    "filled_map.fortress": "Fortress Locator Map",
+    "cabin.trials.crafter.deprecation.tooltip": "Depreciated. Craft into a Crafter from Quark"
 }

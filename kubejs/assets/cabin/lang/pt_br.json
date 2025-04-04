@@ -221,5 +221,6 @@
     "item.kubejs.incomplete_gravity_normalizer": "Normalizador de Gravidade Incompleto",
     "item.kubejs.incomplete_flight_anchor": "Âncora de Voo Incompleta",
     "block.kubejs.substrate_fluix": "Reagente de Fluix",
-    "filled_map.fortress": "Fortress Locator Map"
+    "filled_map.fortress": "Mapa Localizador de Fortalezas",
+    "cabin.trials.crafter.deprecation.tooltip": "Descontinuado. Use um Crafter do Quark"
 }

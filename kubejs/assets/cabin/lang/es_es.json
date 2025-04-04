@@ -218,8 +218,9 @@
     "block.kubejs.substrate_crystal": "Catalizador Cristalino",
     "item.spirit_fire.info": "§7Un fuego misterioso capaz de transmutarse. Nunca se apagará.",
     "item.spirit_fire.creation": "§7Creado encendiendo una Fruta de Sueño Demoníaco con un Mechero.",
-    "item.kubejs.incomplete_flight_anchor": "Incomplete Flight Anchor",
-    "item.kubejs.incomplete_gravity_normalizer": "Incomplete Gravity Normalizer",
-    "block.kubejs.substrate_fluix": "Fluix Reagent",
-    "filled_map.fortress": "Fortress Locator Map"
+    "item.kubejs.incomplete_flight_anchor": "Ancla de Vuelo Incompleta",
+    "item.kubejs.incomplete_gravity_normalizer": "Normalizador de Gravedad Incompleto",
+    "block.kubejs.substrate_fluix": "Reactivo de Fluix",
+    "filled_map.fortress": "Mapa Localizador de Fortalezas",
+    "cabin.trials.crafter.deprecation.tooltip": "Descontinuado. Haz en un Crafter de Quark"
 }

@@ -221,5 +221,6 @@
     "item.kubejs.incomplete_flight_anchor": "Незаконченный якорь полёта",
     "item.kubejs.incomplete_gravity_normalizer": "Незаконченный нормализатор гравитации",
     "block.kubejs.substrate_fluix": "Флюисовый реагент",
-    "filled_map.fortress": "Fortress Locator Map"
+    "filled_map.fortress": "Карта поиска крепости",
+    "cabin.trials.crafter.deprecation.tooltip": "Depreciated. Craft into a Crafter from Quark"
 }
