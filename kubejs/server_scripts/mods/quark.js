@@ -56,7 +56,7 @@ if(Platform.isLoaded("quark")) {
     })
 
     ServerEvents.tags("item", event => {
-        //Create a new set of tags for logs ok to use for the easy sticks recipe
+        // Create a new set of tags for logs ok to use for the easy sticks recipe
         const easy_sticks = event.get("minecraft:logs").getObjectIds()
         const easy_sticks_blacklist = Ingredient.of("/.*stripped.*/")
         easy_sticks.forEach(easy_sticks => {
