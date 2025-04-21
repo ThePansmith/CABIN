@@ -42,6 +42,9 @@ if(Platform.isLoaded("quark")) {
             "below": "minecraft:quartz_block",
             "result": { "item": "quark:jasper"}
         })
+
+        // Modify quark easy sticks recipe to prevent conflicts with decorative blocks wood beams
+        event.replaceInput({ id: "quark:tweaks/crafting/utility/misc/easy_sticks" }, "#minecraft:logs", "#kubejs:easy_sticks_logs")
     })
 
     ServerEvents.tags("block", event => {
@@ -50,6 +53,17 @@ if(Platform.isLoaded("quark")) {
         // I really don't know why these blocks are missing the pressure plate tag
         // All the other pressure plates from quark and forbidden have the tag.
         event.add("minecraft:pressure_plates", "quark:obsidian_pressure_plate")
+    })
+
+    ServerEvents.tags("item", event => {
+        //Create a new set of tags for logs ok to use for the easy sticks recipe
+        const easy_sticks = event.get("minecraft:logs").getObjectIds()
+        const easy_sticks_blacklist = Ingredient.of("/.*stripped.*/")
+        easy_sticks.forEach(easy_sticks => {
+            if (!easy_sticks_blacklist.test(easy_sticks)) event.add("kubejs:easy_sticks_logs", easy_sticks)
+        })
+        // We only want to remove stripped logs, not stripped wood
+        event.add("kubejs:easy_sticks_logs", "#forge:stripped_wood")
     })
 
     ServerEvents.lowPriorityData(event => {
