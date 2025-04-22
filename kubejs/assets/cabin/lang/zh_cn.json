@@ -217,8 +217,18 @@
     "block.mbd2.strainer": "沉积过滤器",
     "mbd2.strainer": "沉积过滤",
     "item.kubejs.incomplete_flight_anchor": "未完成的飞行锚点",
-    "item.kubejs.incomplete_gravity_normalizer": "Incomplete Gravity Normalizer",
-    "block.kubejs.substrate_fluix": "Fluix Reagent",
-    "filled_map.fortress": "Fortress Locator Map",
-    "cabin.trials.crafter.deprecation.tooltip": "Depreciated. Craft into a Crafter from Quark"
+    "item.kubejs.incomplete_gravity_normalizer": "未完成的重力标准化器",
+    "block.kubejs.substrate_fluix": "福鲁伊克斯试剂",
+    "filled_map.fortress": "下界堡垒定位图",
+    "cabin.trials.crafter.deprecation.tooltip": "Depreciated. Craft into a Crafter from Quark",
+    "ponderjs.ponder.alchemy_setup.text_5": "Whenever the Deployer activates...",
+    "ponderjs.ponder.alchemy_setup.text_4": "Set it to Punch mode using a Wrench",
+    "ponderjs.ponder.alchemy_setup.text_1": "Start with an Invar Machine",
+    "cabin.ponder.tag.ponders": "CABIN",
+    "ponderjs.ponder.alchemy_setup.text_6": "...the Laser Lamp will emit a High-Energy Beam",
+    "ponderjs.ponder.alchemy_setup.text_7": "Hopper Minecarts caught in the Beam will process their contained Items",
+    "ponderjs.ponder.alchemy_setup.header": "The Alchemical Laser",
+    "ponderjs.ponder.alchemy_setup.text_3": "Place a Deployer targeting the Invar Machine",
+    "ponderjs.ponder.alchemy_setup.text_2": "Attach an Industrial Lamp of any colour",
+    "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN"
 }

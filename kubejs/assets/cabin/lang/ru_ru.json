@@ -220,5 +220,15 @@
     "item.kubejs.incomplete_gravity_normalizer": "Незаконченный нормализатор гравитации",
     "block.kubejs.substrate_fluix": "Флюисовый реагент",
     "filled_map.fortress": "Карта поиска крепости",
-    "cabin.trials.crafter.deprecation.tooltip": "Depreciated. Craft into a Crafter from Quark"
+    "cabin.trials.crafter.deprecation.tooltip": "Не используется. Переделайте его в крафтер из Quark",
+    "ponderjs.ponder.alchemy_setup.text_5": "Whenever the Deployer activates...",
+    "ponderjs.ponder.alchemy_setup.text_4": "Set it to Punch mode using a Wrench",
+    "ponderjs.ponder.alchemy_setup.text_1": "Start with an Invar Machine",
+    "cabin.ponder.tag.ponders": "CABIN",
+    "ponderjs.ponder.alchemy_setup.text_6": "...the Laser Lamp will emit a High-Energy Beam",
+    "ponderjs.ponder.alchemy_setup.text_7": "Hopper Minecarts caught in the Beam will process their contained Items",
+    "ponderjs.ponder.alchemy_setup.header": "The Alchemical Laser",
+    "ponderjs.ponder.alchemy_setup.text_3": "Place a Deployer targeting the Invar Machine",
+    "ponderjs.ponder.alchemy_setup.text_2": "Attach an Industrial Lamp of any colour",
+    "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN"
 }
