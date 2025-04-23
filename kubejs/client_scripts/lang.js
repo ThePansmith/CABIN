@@ -8,13 +8,13 @@ LANGS.forEach(lang => {
 
             let cardKey = `item.kubejs.trade_card_${id}`
 
-            event.add(cardKey, Text.translatable("text.cabin.import", displayName).getString())
+            event.add(cardKey, Text.translatable("cabin.import.prefix", displayName).getString())
         })
 
         global.professions.forEach(id => {
-            let profKey   = `text.cabin.${id}`;
+            let profKey   = `cabin.profession.${id}`;
             let profName  = Text.translatable(profKey).getString();
-            let display   = Text.translatable("text.cabin.profession", Text.translatable(profKey)).getString();
+            let display   = Text.translatable("cabin.profession.prefix", Text.translatable(profKey)).getString();
             
             let cardKey   = `item.kubejs.profession_card_${id}`;
 

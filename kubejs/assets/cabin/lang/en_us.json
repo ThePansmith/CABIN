@@ -233,17 +233,18 @@
     "ponderjs.ponder.alchemy_setup.text_7": "Hopper Minecarts caught in the Beam will process their contained Items",
     
     "cabin.trials.crafter.deprecation.tooltip": "Deprecated. Craft into a Crafter from Quark",
-    
-    "text.cabin.profession": "Profession: %s",
-    "text.cabin.import": "Import: %s",
-    "text.cabin.silver": "Silver",
-    "text.cabin.gold": "Gold",
-    "text.cabin.farming": "Farming",
-    "text.cabin.carpentry": "Carpentry",
-    "text.cabin.mining": "Mining",
-    "text.cabin.masonry": "Masonry",
-    "text.cabin.hunting": "Hunting",
-    "text.cabin.cooking": "Cooking",
-    "text.cabin.fishing": "Fishing",
-    "text.cabin.smithing": "Smithing"
+
+    "cabin.profession.prefix": "Profession: %s",
+    "cabin.profession.farming": "Farming",
+    "cabin.profession.carpentry": "Carpentry",
+    "cabin.profession.mining": "Mining",
+    "cabin.profession.masonry": "Masonry",
+    "cabin.profession.hunting": "Hunting",
+    "cabin.profession.cooking": "Cooking",
+    "cabin.profession.fishing": "Fishing",
+    "cabin.profession.smithing": "Smithing",
+
+    "cabin.import.prefix": "Import: %s",
+    "cabin.currency.silver": "Silver",
+    "cabin.currency.gold": "Gold"
 }
