@@ -1,4 +1,4 @@
-const LANGS = ['es_es', 'fr_fr', 'pt_br', 'ru_ru', 'zh_cn']
+const LANGS = ["es_es", "fr_fr", "pt_br", "ru_ru", "zh_cn"]
 LANGS.forEach(lang => {
     ClientEvents.lang(lang, event => {
         global.trades.forEach(id => {
