@@ -242,7 +242,5 @@
     "cabin.professions.smithing": "铁匠",
 
     "cabin.import.prefix": "进口: %s",
-    "cabin.currency.silver": "银币",
-    "cabin.currency.gold": "金币",
     "item.kubejs.trade_card_exchange_currencies": "货币兑换"
 }
