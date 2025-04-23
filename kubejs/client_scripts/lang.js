@@ -3,7 +3,7 @@ LANGS.forEach(lang => {
     ClientEvents.lang(lang, event => {
         global.trades.forEach(id => {
             // raw may be "16x mod:custom_item" or "minecraft:dirt"
-            let raw    = global.transactions[id][0].out
+            let raw = global.transactions[id][0].out
             let displayName = Item.of(raw).getDisplayName().getString().replace("[","").replace("]","")
 
             let cardKey = `item.kubejs.trade_card_${id}`
@@ -12,11 +12,10 @@ LANGS.forEach(lang => {
         })
 
         global.professions.forEach(id => {
-            let profKey   = `cabin.profession.${id}`;
-            let profName  = Text.translatable(profKey).getString();
-            let display   = Text.translatable("cabin.profession.prefix", Text.translatable(profKey)).getString();
+            let profKey = `cabin.profession.${id}`;
+            let display = Text.translatable("cabin.profession.prefix", Text.translatable(profKey)).getString();
             
-            let cardKey   = `item.kubejs.profession_card_${id}`;
+            let cardKey = `item.kubejs.profession_card_${id}`;
 
             event.add(cardKey, display);
         });
