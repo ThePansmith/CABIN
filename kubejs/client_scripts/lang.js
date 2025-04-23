@@ -12,12 +12,12 @@ LANGS.forEach(lang => {
         })
 
         global.professions.forEach(id => {
-            let profKey = `cabin.profession.${id}`;
-            let display = Text.translatable("cabin.profession.prefix", Text.translatable(profKey)).getString();
+            let profKey = `cabin.profession.${id}`
+            let display = Text.translatable("cabin.profession.prefix", Text.translatable(profKey)).getString()
 
-            let cardKey = `item.kubejs.profession_card_${id}`;
+            let cardKey = `item.kubejs.profession_card_${id}`
 
-            event.add(cardKey, display);
-        });
+            event.add(cardKey, display)
+        })
     })
 })
