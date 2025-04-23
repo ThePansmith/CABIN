@@ -232,5 +232,18 @@
     "ponderjs.ponder.alchemy_setup.text_6": "...the Laser Lamp will emit a High-Energy Beam",
     "ponderjs.ponder.alchemy_setup.text_7": "Hopper Minecarts caught in the Beam will process their contained Items",
     
-    "cabin.trials.crafter.deprecation.tooltip": "Deprecated. Craft into a Crafter from Quark"
+    "cabin.trials.crafter.deprecation.tooltip": "Deprecated. Craft into a Crafter from Quark",
+    
+    "text.cabin.profession": "Profession: %s",
+    "text.cabin.import": "Import: %s",
+    "text.cabin.silver": "Silver",
+    "text.cabin.gold": "Gold",
+    "text.cabin.farming": "Farming",
+    "text.cabin.carpentry": "Carpentry",
+    "text.cabin.mining": "Mining",
+    "text.cabin.masonry": "Masonry",
+    "text.cabin.hunting": "Hunting",
+    "text.cabin.cooking": "Cooking",
+    "text.cabin.fishing": "Fishing",
+    "text.cabin.smithing": "Smithing"
 }
