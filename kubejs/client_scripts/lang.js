@@ -4,7 +4,7 @@ LANGS.forEach(lang => {
         global.trades.forEach(id => {
             // raw may be "16x mod:custom_item" or "minecraft:dirt"
             let raw = global.transactions[id][0].out
-            let displayName = Item.of(raw).getDisplayName().getString().replace("[", "").replace("]", "")
+            let displayName = Text.translatable(Item.of(raw).item.getDescriptionId())
 
             let cardKey = `item.kubejs.trade_card_${id}`
 
