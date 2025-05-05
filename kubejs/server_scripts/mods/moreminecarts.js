@@ -14,6 +14,11 @@ if(Platform.isLoaded("moreminecarts")) {
             .add("moreminecarts:chunk_loader")
             .add("moreminecarts:minecart_loader")
             .add("moreminecarts:minecart_unloader")
+            .add("moreminecarts:filter_unloader")
             .add("moreminecarts:pearl_stasis_chamber")
+    })
+    LootJS.modifiers((event) => {
+        event.addBlockLootModifier('moreminecarts:filter_unloader')
+            .addLoot("moreminecarts:filter_unloader")
     })
 }
