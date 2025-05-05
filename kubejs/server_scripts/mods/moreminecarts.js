@@ -18,7 +18,7 @@ if(Platform.isLoaded("moreminecarts")) {
             .add("moreminecarts:pearl_stasis_chamber")
     })
     LootJS.modifiers((event) => {
-        event.addBlockLootModifier('moreminecarts:filter_unloader')
+        event.addBlockLootModifier("moreminecarts:filter_unloader")
             .addLoot("moreminecarts:filter_unloader")
     })
 }
