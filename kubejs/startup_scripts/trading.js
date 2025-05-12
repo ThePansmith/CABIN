@@ -171,7 +171,7 @@ StartupEvents.registry("item", event => {
         { in: "16x farmersdelight:apple_pie_slice", out: S(3) },
         { in: "16x farmersdelight:chocolate_pie_slice", out: S(4) },
         { in: "17x farmersdelight:sweet_berry_cheesecake_slice", out: S(3) },
-        { in: "14x farmersdelight:cake_slice", out: S(3) },
+        { in: "14x #kubejs:cake_slices", out: S(3) },
         { in: "64x farmersdelight:sweet_berry_cookie", out: S(2) },
         { in: "64x farmersdelight:honey_cookie", out: S(2) },
         { in: "64x minecraft:cookie", out: S(2) },

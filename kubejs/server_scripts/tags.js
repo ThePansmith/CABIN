@@ -58,6 +58,11 @@ ServerEvents.tags("item", event => {
 
     event.add("kubejs:strainer/sands", "minecraft:sand")
 
+    event.get("kubejs:cake_slices")
+        .add("farmersdelight:cake_slice")
+
+    event.remove("tconstruct:anvil_metal", "thermal:bronze_block")
+
     // Create Deco laser lamps
     let decoLampColours = ["yellow", "red", "green", "blue"]
     let decoLampMaterials = ["andesite", "brass", "iron", "copper", "industrial_iron", "zinc"]
@@ -230,7 +235,7 @@ ServerEvents.tags("block", event => {
         event.add(`kubejs:alchemical_laser_lamps/${colours[i]}`, lamp)
     }
 
-    event.remove("minecraft:beacon_base_blocks", "thermal:bronze_block")
+    event.remove("tconstruct:anvil_metal", "thermal:bronze_block")
 
     // Not sure if anything checks for this block tag but don't want to risk it.
     event.remove("forge:storage_blocks/copper", "minecraft:cut_copper");

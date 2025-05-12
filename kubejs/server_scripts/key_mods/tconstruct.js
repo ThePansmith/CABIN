@@ -114,12 +114,15 @@ ServerEvents.recipes(event => {
 ServerEvents.tags("item", event => {
     // zinc anvils
     event.get("tconstruct:anvil_metal").add("create:zinc_block")
+    event.remove("tconstruct:anvil_metal", "#forge:storage_blocks/bronze")
 
     event.add("forge:ingots/seared_brick", "tconstruct:seared_brick")
     event.add("forge:ingots/scorched_brick", "tconstruct:scorched_brick")
 })
 
 ServerEvents.tags("block", event => {
+    event.remove("tconstruct:anvil_metal", "#forge:storage_blocks/bronze")
+
     event.get("tconstruct:mineable/melting_blacklist")
         .add("#forge:storage_blocks/raw_iron")
         .add("#forge:storage_blocks/raw_copper")

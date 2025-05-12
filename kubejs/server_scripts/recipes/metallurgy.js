@@ -34,6 +34,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({ id: "thermal:storage/electrum_block" }, "thermal:constantan_ingot", "#forge:ingots/electrum")
     event.replaceInput({ id: "thermal:parts/electrum_gear" }, "thermal:constantan_ingot", "#forge:ingots/electrum")
 
+    event.replaceInput({ id: "thermal:storage/electrum_ingot_from_block"}, "thermal:electrum_block", "#forge:storage_blocks/electrum")
+
     // Redstone exists in jei to provide a tooltip, we want to remove all of its recipes
     event.remove({ input: "#forge:ores/redstone" })
 })
@@ -131,7 +133,7 @@ ServerEvents.recipes(event => {
     event.recipes.thermal.smelter(Item.of("create:brass_ingot", 2), ["#forge:ingots/copper", "#forge:ingots/zinc"])
     event.recipes.thermal.smelter(Item.of("tconstruct:rose_gold_ingot", 2), ["#forge:ingots/copper", "#forge:ingots/gold"])
     event.recipes.thermal.smelter(Item.of("thermal:constantan_ingot", 2), ["#forge:ingots/copper", "#forge:ingots/nickel"])
-    event.recipes.thermal.smelter(Item.of("thermal:electrum_ingot", 2), ["#forge:ingots/silver", "#forge:ingots/gold"])
+    event.recipes.thermal.smelter(Item.of(getPreferredItemFromTag("forge:ingots/electrum"), 2), ["#forge:ingots/silver", "#forge:ingots/gold"])
     event.recipes.thermal.smelter(Item.of("minecraft:netherite_ingot", 1), [Item.of("#forge:ingots/netherite_scrap", 4), Item.of("#forge:ingots/gold", 4)])
     // bronze
     event.recipes.thermal.smelter("3x thermal:bronze_ingot", [Item.of("minecraft:copper_ingot", 3), "#forge:sand"])
