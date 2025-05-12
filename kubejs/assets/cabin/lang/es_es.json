@@ -230,5 +230,15 @@
     "ponderjs.ponder.alchemy_setup.header": "The Alchemical Laser",
     "ponderjs.ponder.alchemy_setup.text_3": "Place a Deployer targeting the Invar Machine",
     "ponderjs.ponder.alchemy_setup.text_2": "Attach an Industrial Lamp of any colour",
-    "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN"
+    "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN",
+    "cabin.import.prefix": "Import: %s",
+    "cabin.profession.masonry": "Masonry",
+    "cabin.profession.fishing": "Fishing",
+    "cabin.profession.hunting": "Hunting",
+    "cabin.profession.smithing": "Smithing",
+    "cabin.profession.farming": "Farming",
+    "cabin.profession.cooking": "Cooking",
+    "cabin.profession.mining": "Mining",
+    "cabin.profession.carpentry": "Carpentry",
+    "cabin.profession.prefix": "Profession: %s"
 }
