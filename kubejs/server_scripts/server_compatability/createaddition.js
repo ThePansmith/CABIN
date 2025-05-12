@@ -29,7 +29,9 @@ if (Platform.isLoaded("createaddition")) {
 
         // Redstone Relay
         event.remove({ output: "createaddition:redstone_relay" })
-        event.shapeless("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector", "createaddition:connector", "create:electron_tube"])
+        event.shapeless("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
+            .id("kubejs:compat/createaddition/redstone_relay_manual_only")
+        event.recipes.create.deploying("createaddition:redstone_relay", ["projectred_core:platformed_plate", "createaddition:connector"])
 
         // Remove heated basin ingot recipes
         event.remove({ id: "createaddition:mixing/electrum" })
