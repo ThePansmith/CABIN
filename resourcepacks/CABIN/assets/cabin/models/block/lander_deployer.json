@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "cabin:block/navigation_computer_side",
-    "up": "cabin:block/navigation_computer_side",
+    "down": "cabin:block/navigation_computer_bottom",
+    "up": "cabin:block/lander_deployer_top",
     "north": "cabin:block/lander_deployer",
-    "east": "cabin:block/navigation_computer_side",
-    "south": "cabin:block/navigation_computer_side",
-    "west": "cabin:block/navigation_computer_side",
-    "particle": "cabin:block/navigation_computer_side"
+    "east": "cabin:block/lander_deployer",
+    "south": "cabin:block/lander_deployer",
+    "west": "cabin:block/lander_deployer",
+    "particle": "cabin:block/lander_deployer"
   }
 }
