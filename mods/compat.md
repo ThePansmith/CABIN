@@ -63,6 +63,21 @@
     <p>Isn't in the base pack currently due to uncertainty around its performance with Create/Flywheel 6. May cause lag with massive factories</p>
     </td>
   </tr>
+    <tr>
+    <td><p><a href="https://curseforge.com/projects/295910">Integrated Terminals</a></p></td>
+    <td><p>*SC</p></td>
+    <td>
+    <p>Intended as an early-game Storage Terminal to be used with Create Vaults or Drawer Controllers, before getting AE2. All logic and automation-related items have been disabled. Serves as a better QoL alternative to the PrettyPipes Item Terminal.</p>
+    <p><b>The following dependencies and addons must be installed:</b></p>
+    <ul>
+        <li><a href="https://curseforge.com/projects/236307">Integrated Dynamics</a></li>
+        <li><a href="https://curseforge.com/projects/295910">Integrated Terminals</a></li>
+        <li><a href="https://curseforge.com/projects/251389">Integrated Tunnels</a></li>
+        <li><a href="https://curseforge.com/projects/232758">Cyclops Core</a></li>
+        <li><a href="https://curseforge.com/projects/247007">Common Capabilities</a></li>
+    </ul>
+    </td>
+  </tr>
 </table>
 
 <!--<h2>Other Compatible Mods</h2>

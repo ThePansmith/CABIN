@@ -175,9 +175,36 @@ JEIEvents.hideItems(event => {
     event.hide("chiselsandbits:block_bit")
 
     event.hide("trials:crafter")
+
+    event.hide(/integrateddynamics/)
+    event.hide(/integratedtunnels/)
+    event.hide(/integratedterminals/)
 })
 
 JEIEvents.hideFluids(event => {
     event.hide("tconstruct:molten_tin")
     event.hide("ad_astra:cryo_fuel")
+    event.hide("integrateddynamics:menril_resin")
+    event.hide("integrateddynamics:liquid_chorus")
+    event.hide("integrateddynamics:meneglin")
+})
+
+// Re-add any items removed by blanket removal, more efficient than complex regex
+JEIEvents.addItems(event => {
+    event.add("integrateddynamics:menril_log")
+    event.add("integrateddynamics:menril_wood")
+    event.add("integrateddynamics:menril_log_stripped")
+    event.add("integrateddynamics:menril_log_filled")
+    event.add("integrateddynamics:menril_leaves")
+    event.add("integrateddynamics:menril_planks")
+    event.add("integrateddynamics:menril_planks_stairs")
+    event.add("integrateddynamics:menril_slab")
+    event.add("integrateddynamics:menril_fence")
+    event.add("integrateddynamics:menril_fence_gate")
+    event.add("integrateddynamics:crystalized_menril_chunk")
+    event.add("integrateddynamics:crystalized_menril_block")
+    event.add("integrateddynamics:menril_sapling")
+    event.add("integrateddynamics:cable")
+    event.add("integratedtunnels:part_interface_item")
+    event.add("integratedterminals:part_terminal_storage")
 })
