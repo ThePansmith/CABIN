@@ -1,0 +1,10 @@
+{
+    "filters": [
+        {
+            "id": "jei:/integrateddynamics/special/facade"
+        },
+        {
+            "id": "jei:/integrateddynamics/special/clear_facade"
+        }
+    ]
+}

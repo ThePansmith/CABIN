@@ -205,6 +205,7 @@ JEIEvents.addItems(event => {
     event.add("integrateddynamics:crystalized_menril_block")
     event.add("integrateddynamics:menril_sapling")
     event.add("integrateddynamics:cable")
+    event.add("integrateddynamics:facade")
     event.add("integratedtunnels:part_interface_item")
     event.add("integratedterminals:part_terminal_storage")
 })

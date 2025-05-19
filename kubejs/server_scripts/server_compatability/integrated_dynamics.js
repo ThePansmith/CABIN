@@ -15,6 +15,7 @@ if (Platform.isLoaded("integrateddynamics") && Platform.isLoaded("integratedtunn
                     "integrateddynamics:menril_slab",
                     "integrateddynamics:menril_fence",
                     "integrateddynamics:menril_fence_gate",
+                    "integrateddynamics:facade",
                 ]
             }
         })
