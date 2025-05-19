@@ -231,16 +231,14 @@
     "ponderjs.ponder.alchemy_setup.text_3": "Place a Deployer targeting the Invar Machine",
     "ponderjs.ponder.alchemy_setup.text_2": "Attach an Industrial Lamp of any colour",
     "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN",
-    "cabin.professions.prefix": "职业: %s",
-    "cabin.professions.farming": "农夫",
-    "cabin.professions.carpentry": "木匠",
-    "cabin.professions.mining": "矿工",
-    "cabin.professions.masonry": "泥瓦匠",
-    "cabin.professions.hunting": "猎人",
-    "cabin.professions.cooking": "厨师",
-    "cabin.professions.fishing": "渔夫",
-    "cabin.professions.smithing": "铁匠",
-
     "cabin.import.prefix": "进口: %s",
-    "item.kubejs.trade_card_exchange_currencies": "货币兑换"
+    "cabin.profession.smithing": "Smithing",
+    "cabin.profession.masonry": "Masonry",
+    "cabin.profession.fishing": "Fishing",
+    "cabin.profession.hunting": "Hunting",
+    "cabin.profession.farming": "Farming",
+    "cabin.profession.carpentry": "Carpentry",
+    "cabin.profession.cooking": "Cooking",
+    "cabin.profession.mining": "Mining",
+    "cabin.profession.prefix": "Profession: %s"
 }

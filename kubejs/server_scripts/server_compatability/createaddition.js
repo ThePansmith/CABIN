@@ -65,7 +65,6 @@ if (Platform.isLoaded("createaddition")) {
         // Bioethanol & Seed Oil in the Compression Dynamo
         event.recipes.thermal.compression_fuel(Fluid.of("createaddition:bioethanol", 1000)).energy(1000000)
         event.recipes.thermal.compression_fuel(Fluid.of("createaddition:seed_oil", 1000)).energy(30000)
-        // Done!
     })
 
     ServerEvents.tags("item", event => {
