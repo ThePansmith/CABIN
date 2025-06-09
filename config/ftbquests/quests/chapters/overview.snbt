@@ -184,7 +184,7 @@
 				disable_toast: true
 				icon: "kubejs:abstruse_mechanism"
 				id: "4BC5C43C7B23CA16"
-				stat: "minecraft:play_one_minute"
+				stat: "minecraft:play_time"
 				title: "{cabin.task.4BC5C43C7B23CA16}"
 				type: "stat"
 				value: 1
