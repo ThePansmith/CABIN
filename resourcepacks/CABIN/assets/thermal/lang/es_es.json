@@ -1,16 +1,16 @@
 {
     "item.thermal.raw_nickel": "Níquel en Bruto Concentrado",
     "info.thermal.machine_press.1": "Requiere una tarjeta de comercio de la Interfaz de Misiones.",
-    "block.thermal.machine_press": "Estación de Comercio",
+    "block.thermal.machine_press": "Estación de comercio",
     "msg.fuelingStation.link": "Ahora enlazando desde la Posición",
     "info.thermal.machine_press.2": "¡Gracias por su compra!",
-    "item.thermal.raw_silver": "Plata en Bruto Concentrado",
-    "item.thermal.turbo_servo_attachment": "Anexo: Servo",
+    "item.thermal.raw_silver": "Plata en Bruto concentrada",
+    "item.thermal.turbo_servo_attachment": "Extra: Servo",
     "info.thermal.machine_sawmill.0": "Extrae automáticamente los reactivos de su cristal.",
     "block.thermal.machine_sawmill": "Extractor de Reactivos",
     "item.thermal.raw_lead": "Plomo en Bruto Concentrado",
     "info.thermal.machine_sawmill.1": "A pesar de su aspecto, no es un aserradero.",
-    "info.thermal.machine_press.0": "Cambia automáticamente objetos por monedas y viceversa.",
+    "info.thermal.machine_press.0": "Intercambia objetos por monedas y viceversa automaticamente.",
     "block.thermal.machine_frame": "Máquina de Invar",
-    "info.thermal.machine_sawmill.2": "¡Innovación!"
+    "info.thermal.machine_sawmill.2": "¡Innovativo!"
 }
