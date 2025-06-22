@@ -1,0 +1,102 @@
+# This is the default config. Rename it to curvy_pipes.yaml before making edit. Otherwise, it will be overwritten.
+
+# If true, unknown pipes in save data will be deleted instead of crashing.
+ignore_unknown_pipes: false
+
+# Standard pipe types are defined here. You can remove this section entirely if you only want pipes added by cross-mod integrations.
+pipe_types:
+  - # ID of the pipe item
+    id: tiny_item_pipe
+    # Default translation of item.curvy_pipes.tiny_item_pipe
+    name: Tiny Item Pipe
+    # Texture must be in the `block` directory.
+    texture: curvy_pipes:block/item_pipe
+    # Smaller diameter allows more pipes to fit in tight (e.g. single block) space.
+    # There is no upper limit on diameter: pipes can be multiple blocks wide.
+    diameter: 0.1
+    # Items per tick (can be smaller than 1)
+    variant: { Item: { rate: 0.1 } }
+  - { id: small_item_pipe, name: Small Item Pipe, texture: curvy_pipes:block/item_pipe, diameter: 0.2, variant: { Item: { rate: 1. } } }
+  - { id: medium_item_pipe, name: Medium Item Pipe, texture: curvy_pipes:block/item_pipe, diameter: 0.4, variant: { Item: { rate: 10. } } }
+  - { id: large_item_pipe, name: Large Item Pipe, texture: curvy_pipes:block/item_pipe, diameter: 0.8, variant: { Item: { rate: 100. } } }
+  - { id: huge_item_pipe, name: Huge Item Pipe, texture: curvy_pipes:block/item_pipe, diameter: 1.6, variant: { Item: { rate: 1E3 } } }
+
+  # Fluid transfer rate is mB per tick.
+  - { id: tiny_fluid_pipe, name: Tiny Fluid Pipe, texture: curvy_pipes:block/fluid_pipe, diameter: 0.1, variant: { Fluid: { rate: 10. } } }
+  - { id: small_fluid_pipe, name: Small Fluid Pipe, texture: curvy_pipes:block/fluid_pipe, diameter: 0.2, variant: { Fluid: { rate: 100. } } }
+  - { id: medium_fluid_pipe, name: Medium Fluid Pipe, texture: curvy_pipes:block/fluid_pipe, diameter: 0.4, variant: { Fluid: { rate: 1E3 } } }
+  - { id: large_fluid_pipe, name: Large Fluid Pipe, texture: curvy_pipes:block/fluid_pipe, diameter: 0.8, variant: { Fluid: { rate: 10E3 } } }
+  - { id: huge_fluid_pipe, name: Huge Fluid Pipe, texture: curvy_pipes:block/fluid_pipe, diameter: 1.6, variant: { Fluid: { rate: 100E3 } } }
+
+  # Energy transfer rate is FE per tick.
+  - { id: tiny_energy_pipe, name: Tiny Energy Pipe, texture: curvy_pipes:block/energy_pipe, diameter: 0.1, variant: { Energy: { rate: 250. } } }
+  - { id: small_energy_pipe, name: Small Energy Pipe, texture: curvy_pipes:block/energy_pipe, diameter: 0.2, variant: { Energy: { rate: 1000. } } }
+  - { id: medium_energy_pipe, name: Medium Energy Pipe, texture: curvy_pipes:block/energy_pipe, diameter: 0.4, variant: { Energy: { rate: 4000. } } }
+  - { id: large_energy_pipe, name: Large Energy Pipe, texture: curvy_pipes:block/energy_pipe, diameter: 0.8, variant: { Energy: { rate: 16000. } } }
+  - { id: huge_energy_pipe, name: Huge Energy Pipe, texture: curvy_pipes:block/energy_pipe, diameter: 1.6, variant: { Energy: { rate: 64000. } } }
+
+# Applied Energistics 2 integration (ignored if AE2 is not installed)
+ae2:
+  # Automatically generate curvy variants of ME glass/covered/smart/dense covered/dense smart cables
+  # and quartz fiber. No new items will be added. Instead, the curvy variants can be placed using the
+  # corresponding AE2 items.
+  # Allowed values:
+  #   OffHand: using AE2 cables in off-hand will place the curvy variants.
+  #   AnyHand: always place the curvy variants. The original AE2 variant can no longer be placed.
+  #   Disable: do not generate the curvy variants.
+  cables: OffHand
+
+# GregTech CEu integration (ignored if GTCEu is not installed)
+gtceu:
+  # Automatically generate curvy EU cables, item pipes and fluid pipes for every GTCEu material.
+  # No new items will be added. Instead, the curvy variants can be placed using the corresponding GTCEu items.
+  # Note that the curvy item & fluid pipes use Curvy Pipes' logistics system and can't accept GTCEu covers.
+  # The curvy fluid pipes follow the same temperature & material restrictions specified by the GTCEu pipes.
+  # Curvy EU cables support amp-splitting, i.e. they can distribute load across parallel cables.
+  # Allowed values: same as the AE2 integration above.
+  eu_cables: OffHand
+  item_pipes: OffHand
+  fluid_pipes: OffHand
+
+# You can customize recipes here.
+# You can also remove them entirely if you want to use other mods to manage recipes.
+recipes:
+#   item_base:
+#     result: { count: 1, id: curvy_pipes:small_item_pipe }
+#     type: crafting_shaped
+#     key: { A: { tag: c:nuggets/gold }, B: { tag: c:stones } }
+#     pattern: [ 'AAA', 'ABA', 'AAA' ]
+#   fluid_base:
+#     result: { count: 1, id: curvy_pipes:small_fluid_pipe }
+#     type: crafting_shaped
+#     key: { A: { tag: c:gems/lapis }, B: { tag: c:stones } }
+#     pattern: [ ' A ', 'ABA', ' A ' ]
+#   energy_base:
+#     result: { count: 1, id: curvy_pipes:small_energy_pipe }
+#     type: crafting_shaped
+#     key: { A: { tag: c:dusts/redstone }, B: { tag: c:stones } }
+#     pattern: [ ' A ', 'ABA', ' A ' ]
+  item_t2s: { result: { count: 1, id: curvy_pipes:small_item_pipe }, type: crafting_shapeless, ingredients: [ &tf { item: curvy_pipes:tiny_item_pipe }, *tf, *tf, *tf ] }
+  item_s2m: { result: { count: 1, id: curvy_pipes:medium_item_pipe }, type: crafting_shapeless, ingredients: [ &sf { item: curvy_pipes:small_item_pipe }, *sf, *sf, *sf ] }
+  item_m2l: { result: { count: 1, id: curvy_pipes:large_item_pipe }, type: crafting_shapeless, ingredients: [ &mf { item: curvy_pipes:medium_item_pipe }, *mf, *mf, *mf ] }
+  item_l2h: { result: { count: 1, id: curvy_pipes:huge_item_pipe }, type: crafting_shapeless, ingredients: [ &lf { item: curvy_pipes:large_item_pipe }, *lf, *lf, *lf ] }
+  item_h2l: { result: { count: 4, id: curvy_pipes:large_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_item_pipe } ] }
+  item_l2m: { result: { count: 4, id: curvy_pipes:medium_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_item_pipe } ] }
+  item_m2s: { result: { count: 4, id: curvy_pipes:small_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_item_pipe } ] }
+  item_s2t: { result: { count: 4, id: curvy_pipes:tiny_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_item_pipe } ] }
+  fluid_t2s: { result: { count: 1, id: curvy_pipes:small_fluid_pipe }, type: crafting_shapeless, ingredients: [ &ti { item: curvy_pipes:tiny_fluid_pipe }, *ti, *ti, *ti ] }
+  fluid_s2m: { result: { count: 1, id: curvy_pipes:medium_fluid_pipe }, type: crafting_shapeless, ingredients: [ &si { item: curvy_pipes:small_fluid_pipe }, *si, *si, *si ] }
+  fluid_m2l: { result: { count: 1, id: curvy_pipes:large_fluid_pipe }, type: crafting_shapeless, ingredients: [ &mi { item: curvy_pipes:medium_fluid_pipe }, *mi, *mi, *mi ] }
+  fluid_l2h: { result: { count: 1, id: curvy_pipes:huge_fluid_pipe }, type: crafting_shapeless, ingredients: [ &li { item: curvy_pipes:large_fluid_pipe }, *li, *li, *li ] }
+  fluid_h2l: { result: { count: 4, id: curvy_pipes:large_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_fluid_pipe } ] }
+  fluid_l2m: { result: { count: 4, id: curvy_pipes:medium_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_fluid_pipe } ] }
+  fluid_m2s: { result: { count: 4, id: curvy_pipes:small_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_fluid_pipe } ] }
+  fluid_s2t: { result: { count: 4, id: curvy_pipes:tiny_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_fluid_pipe } ] }
+  energy_t2s: { result: { count: 1, id: curvy_pipes:small_energy_pipe }, type: crafting_shapeless, ingredients: [ &te { item: curvy_pipes:tiny_energy_pipe }, *te, *te, *te ] }
+  energy_s2m: { result: { count: 1, id: curvy_pipes:medium_energy_pipe }, type: crafting_shapeless, ingredients: [ &se { item: curvy_pipes:small_energy_pipe }, *se, *se, *se ] }
+  energy_m2l: { result: { count: 1, id: curvy_pipes:large_energy_pipe }, type: crafting_shapeless, ingredients: [ &me { item: curvy_pipes:medium_energy_pipe }, *me, *me, *me ] }
+  energy_l2h: { result: { count: 1, id: curvy_pipes:huge_energy_pipe }, type: crafting_shapeless, ingredients: [ &le { item: curvy_pipes:large_energy_pipe }, *le, *le, *le ] }
+  energy_h2l: { result: { count: 4, id: curvy_pipes:large_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_energy_pipe } ] }
+  energy_l2m: { result: { count: 4, id: curvy_pipes:medium_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_energy_pipe } ] }
+  energy_m2s: { result: { count: 4, id: curvy_pipes:small_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_energy_pipe } ] }
+  energy_s2t: { result: { count: 4, id: curvy_pipes:tiny_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_energy_pipe } ] }
