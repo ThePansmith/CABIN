@@ -76,27 +76,27 @@ recipes:
 #     type: crafting_shaped
 #     key: { A: { tag: c:dusts/redstone }, B: { tag: c:stones } }
 #     pattern: [ ' A ', 'ABA', ' A ' ]
-  item_t2s: { result: { count: 1, id: curvy_pipes:small_item_pipe }, type: crafting_shapeless, ingredients: [ &tf { item: curvy_pipes:tiny_item_pipe }, *tf, *tf, *tf ] }
-  item_s2m: { result: { count: 1, id: curvy_pipes:medium_item_pipe }, type: crafting_shapeless, ingredients: [ &sf { item: curvy_pipes:small_item_pipe }, *sf, *sf, *sf ] }
-  item_m2l: { result: { count: 1, id: curvy_pipes:large_item_pipe }, type: crafting_shapeless, ingredients: [ &mf { item: curvy_pipes:medium_item_pipe }, *mf, *mf, *mf ] }
-  item_l2h: { result: { count: 1, id: curvy_pipes:huge_item_pipe }, type: crafting_shapeless, ingredients: [ &lf { item: curvy_pipes:large_item_pipe }, *lf, *lf, *lf ] }
-  item_h2l: { result: { count: 4, id: curvy_pipes:large_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_item_pipe } ] }
-  item_l2m: { result: { count: 4, id: curvy_pipes:medium_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_item_pipe } ] }
-  item_m2s: { result: { count: 4, id: curvy_pipes:small_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_item_pipe } ] }
-  item_s2t: { result: { count: 4, id: curvy_pipes:tiny_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_item_pipe } ] }
-  fluid_t2s: { result: { count: 1, id: curvy_pipes:small_fluid_pipe }, type: crafting_shapeless, ingredients: [ &ti { item: curvy_pipes:tiny_fluid_pipe }, *ti, *ti, *ti ] }
-  fluid_s2m: { result: { count: 1, id: curvy_pipes:medium_fluid_pipe }, type: crafting_shapeless, ingredients: [ &si { item: curvy_pipes:small_fluid_pipe }, *si, *si, *si ] }
-  fluid_m2l: { result: { count: 1, id: curvy_pipes:large_fluid_pipe }, type: crafting_shapeless, ingredients: [ &mi { item: curvy_pipes:medium_fluid_pipe }, *mi, *mi, *mi ] }
-  fluid_l2h: { result: { count: 1, id: curvy_pipes:huge_fluid_pipe }, type: crafting_shapeless, ingredients: [ &li { item: curvy_pipes:large_fluid_pipe }, *li, *li, *li ] }
-  fluid_h2l: { result: { count: 4, id: curvy_pipes:large_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_fluid_pipe } ] }
-  fluid_l2m: { result: { count: 4, id: curvy_pipes:medium_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_fluid_pipe } ] }
-  fluid_m2s: { result: { count: 4, id: curvy_pipes:small_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_fluid_pipe } ] }
-  fluid_s2t: { result: { count: 4, id: curvy_pipes:tiny_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_fluid_pipe } ] }
-  energy_t2s: { result: { count: 1, id: curvy_pipes:small_energy_pipe }, type: crafting_shapeless, ingredients: [ &te { item: curvy_pipes:tiny_energy_pipe }, *te, *te, *te ] }
-  energy_s2m: { result: { count: 1, id: curvy_pipes:medium_energy_pipe }, type: crafting_shapeless, ingredients: [ &se { item: curvy_pipes:small_energy_pipe }, *se, *se, *se ] }
-  energy_m2l: { result: { count: 1, id: curvy_pipes:large_energy_pipe }, type: crafting_shapeless, ingredients: [ &me { item: curvy_pipes:medium_energy_pipe }, *me, *me, *me ] }
-  energy_l2h: { result: { count: 1, id: curvy_pipes:huge_energy_pipe }, type: crafting_shapeless, ingredients: [ &le { item: curvy_pipes:large_energy_pipe }, *le, *le, *le ] }
-  energy_h2l: { result: { count: 4, id: curvy_pipes:large_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_energy_pipe } ] }
-  energy_l2m: { result: { count: 4, id: curvy_pipes:medium_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_energy_pipe } ] }
-  energy_m2s: { result: { count: 4, id: curvy_pipes:small_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_energy_pipe } ] }
-  energy_s2t: { result: { count: 4, id: curvy_pipes:tiny_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_energy_pipe } ] }
+  item_t2s: { result: { count: 1, item: curvy_pipes:small_item_pipe }, type: crafting_shapeless, ingredients: [ &ti { item: curvy_pipes:tiny_item_pipe }, *ti, *ti, *ti ] }
+  item_s2m: { result: { count: 1, item: curvy_pipes:medium_item_pipe }, type: crafting_shapeless, ingredients: [ &si { item: curvy_pipes:small_item_pipe }, *si, *si, *si ] }
+  item_m2l: { result: { count: 1, item: curvy_pipes:large_item_pipe }, type: crafting_shapeless, ingredients: [ &mi { item: curvy_pipes:medium_item_pipe }, *mi, *mi, *mi ] }
+  item_l2h: { result: { count: 1, item: curvy_pipes:huge_item_pipe }, type: crafting_shapeless, ingredients: [ &li { item: curvy_pipes:large_item_pipe }, *li, *li, *li ] }
+  item_h2l: { result: { count: 4, item: curvy_pipes:large_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_item_pipe } ] }
+  item_l2m: { result: { count: 4, item: curvy_pipes:medium_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_item_pipe } ] }
+  item_m2s: { result: { count: 4, item: curvy_pipes:small_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_item_pipe } ] }
+  item_s2t: { result: { count: 4, item: curvy_pipes:tiny_item_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_item_pipe } ] }
+  fluid_t2s: { result: { count: 1, item: curvy_pipes:small_fluid_pipe }, type: crafting_shapeless, ingredients: [ &tf { item: curvy_pipes:tiny_fluid_pipe }, *tf, *tf, *tf ] }
+  fluid_s2m: { result: { count: 1, item: curvy_pipes:medium_fluid_pipe }, type: crafting_shapeless, ingredients: [ &sf { item: curvy_pipes:small_fluid_pipe }, *sf, *sf, *sf ] }
+  fluid_m2l: { result: { count: 1, item: curvy_pipes:large_fluid_pipe }, type: crafting_shapeless, ingredients: [ &mf { item: curvy_pipes:medium_fluid_pipe }, *mf, *mf, *mf ] }
+  fluid_l2h: { result: { count: 1, item: curvy_pipes:huge_fluid_pipe }, type: crafting_shapeless, ingredients: [ &lf { item: curvy_pipes:large_fluid_pipe }, *lf, *lf, *lf ] }
+  fluid_h2l: { result: { count: 4, item: curvy_pipes:large_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_fluid_pipe } ] }
+  fluid_l2m: { result: { count: 4, item: curvy_pipes:medium_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_fluid_pipe } ] }
+  fluid_m2s: { result: { count: 4, item: curvy_pipes:small_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_fluid_pipe } ] }
+  fluid_s2t: { result: { count: 4, item: curvy_pipes:tiny_fluid_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_fluid_pipe } ] }
+  energy_t2s: { result: { count: 1, item: curvy_pipes:small_energy_pipe }, type: crafting_shapeless, ingredients: [ &te { item: curvy_pipes:tiny_energy_pipe }, *te, *te, *te ] }
+  energy_s2m: { result: { count: 1, item: curvy_pipes:medium_energy_pipe }, type: crafting_shapeless, ingredients: [ &se { item: curvy_pipes:small_energy_pipe }, *se, *se, *se ] }
+  energy_m2l: { result: { count: 1, item: curvy_pipes:large_energy_pipe }, type: crafting_shapeless, ingredients: [ &me { item: curvy_pipes:medium_energy_pipe }, *me, *me, *me ] }
+  energy_l2h: { result: { count: 1, item: curvy_pipes:huge_energy_pipe }, type: crafting_shapeless, ingredients: [ &le { item: curvy_pipes:large_energy_pipe }, *le, *le, *le ] }
+  energy_h2l: { result: { count: 4, item: curvy_pipes:large_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:huge_energy_pipe } ] }
+  energy_l2m: { result: { count: 4, item: curvy_pipes:medium_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:large_energy_pipe } ] }
+  energy_m2s: { result: { count: 4, item: curvy_pipes:small_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:medium_energy_pipe } ] }
+  energy_s2t: { result: { count: 4, item: curvy_pipes:tiny_energy_pipe }, type: crafting_shapeless, ingredients: [ { item: curvy_pipes:small_energy_pipe } ] }
