@@ -90,24 +90,7 @@
 			id: "4F953BACF4D1C151"
 			rewards: [{
 				id: "56DB21D18FB1FF64"
-				item: {
-					Count: 1
-					id: "cb_microblock:diamond_saw"
-					tag: {
-						Damage: 0
-						Enchantments: [{
-							id: "minecraft:unbreaking"
-							lvl: 10s
-						}]
-						HideFlags: 1
-						RepairCost: 0
-						Unbreakable: 1
-						display: {
-							Lore: ["{\"text\":\"Do not use in manual crafting\"}"]
-							Name: "{\"text\":\"Enchanted Saw\",\"color\":\"gold\",\"italic\":false}"
-						}
-					}
-				}
+				item: "kubejs:enchanted_saw"
 				type: "item"
 			}]
 			subtitle: "{cabin.quest.4F953BACF4D1C151.subtitle}"
@@ -151,22 +134,7 @@
 			id: "72CACE8F0E4701B1"
 			rewards: [{
 				id: "743730BBE32A0875"
-				item: {
-					Count: 1
-					id: "projectred_core:screwdriver"
-					tag: {
-						Damage: 0
-						Enchantments: [{
-							id: "minecraft:unbreaking"
-							lvl: 10s
-						}]
-						HideFlags: 1
-						Unbreakable: 1
-						display: {
-							Name: "{\"text\":\"Enchanted Screwdriver\",\"color\":\"gold\",\"italic\":false}"
-						}
-					}
-				}
+				item: "kubejs:enchanted_screwdriver"
 				type: "item"
 			}]
 			subtitle: "{cabin.quest.4F953BACF4D1C151.subtitle}"
@@ -210,22 +178,7 @@
 			id: "43FC566E833BE834"
 			rewards: [{
 				id: "0F4C7BB4C0ECB4CC"
-				item: {
-					Count: 1
-					id: "kubejs:chromatic_resonator"
-					tag: {
-						Damage: 0
-						Enchantments: [{
-							id: "minecraft:unbreaking"
-							lvl: 10s
-						}]
-						HideFlags: 1
-						Unbreakable: 1
-						display: {
-							Name: "{\"text\":\"Enchanted Resonator\",\"color\":\"gold\",\"italic\":false}"
-						}
-					}
-				}
+				item: "kubejs:enchanted_chromatic_resonator"
 				type: "item"
 			}]
 			subtitle: "{cabin.quest.00D6DD6AE8E3C014.subtitle}"
@@ -667,22 +620,7 @@
 			id: "00D6DD6AE8E3C014"
 			rewards: [{
 				id: "3EA7518063CBEA5B"
-				item: {
-					Count: 1
-					id: "kubejs:flash_drive"
-					tag: {
-						Damage: 0
-						Enchantments: [{
-							id: "minecraft:unbreaking"
-							lvl: 10s
-						}]
-						HideFlags: 1
-						Unbreakable: 1
-						display: {
-							Name: "{\"text\":\"Enchanted Flash Drive\",\"color\":\"gold\",\"italic\":false}"
-						}
-					}
-				}
+				item: "kubejs:enchanted_flash_drive"
 				type: "item"
 			}]
 			subtitle: "{cabin.quest.00D6DD6AE8E3C014.subtitle}"
