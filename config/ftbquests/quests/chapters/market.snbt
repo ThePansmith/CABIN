@@ -2,6 +2,7 @@
 	consume_items: true
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
+	default_repeatable_quest: true
 	filename: "market"
 	group: "0810E42B2DD79973"
 	icon: "minecraft:chest"
@@ -254,6 +255,7 @@
 			y: -6.5d
 		}
 		{
+			can_repeat: false
 			description: [
 				"{cabin.quest.0F870BEA235D662D.description1}"
 				""
@@ -1203,6 +1205,35 @@
 			title: "{cabin.quest.42A7073F3681626C.title}"
 			x: -8.0d
 			y: 2.0d
+		}
+		{
+			description: ["No Nether vines in thousands of blocks for some reason? Well, here is some help, but at a cost."]
+			icon: "minecraft:weeping_vines"
+			id: "00B4DAF3E0D3CF8D"
+			rewards: [
+				{
+					count: 32
+					id: "6C5DEB8E7E2060F3"
+					item: "minecraft:weeping_vines"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "4E822D2AE7F12940"
+					item: "minecraft:twisting_vines"
+					type: "item"
+				}
+			]
+			subtitle: "2 Gold"
+			tasks: [{
+				count: 2L
+				id: "34601073EF5F42BD"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "Bad Luck in the Nether?"
+			x: -5.0d
+			y: 1.0d
 		}
 	]
 	title: "{cabin.chapter.44F68408CAD025B8.title}"
