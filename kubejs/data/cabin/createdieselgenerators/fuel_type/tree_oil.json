@@ -1,0 +1,20 @@
+{
+  "fluid": "thermal:tree_oil",
+  "normal": {
+    "speed": 32,
+    "strength": 1024,
+    "burn_rate": 0.05
+  },
+  "modular": {
+    "speed": 64,
+    "strength": 2048,
+    "burn_rate": 0.1
+  },
+  "huge": {
+    "speed": 64,
+    "strength": 3072,
+    "burn_rate": 0.3
+  },
+  "sound_pitch": 1,
+  "burner_multiplier": 1
+}

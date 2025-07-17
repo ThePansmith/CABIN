@@ -1,0 +1,20 @@
+{
+  "fluid": "thermal:light_oil",
+  "normal": {
+    "speed": 64,
+    "strength": 3072,
+    "burn_rate": 0.1
+  },
+  "modular": {
+    "speed": 128,
+    "strength": 6144,
+    "burn_rate": 0.15
+  },
+  "huge": {
+    "speed": 96,
+    "strength": 6144,
+    "burn_rate": 0.3
+  },
+  "sound_pitch": 3,
+  "burner_multiplier": 1
+}

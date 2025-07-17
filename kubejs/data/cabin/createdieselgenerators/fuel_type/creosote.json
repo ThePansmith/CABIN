@@ -1,0 +1,20 @@
+{
+  "fluid": "thermal:creosote",
+  "normal": {
+    "speed": 64,
+    "strength": 2048,
+    "burn_rate": 0.1
+  },
+  "modular": {
+    "speed": 32,
+    "strength": 3072,
+    "burn_rate": 0.3
+  },
+  "huge": {
+    "speed": 32,
+    "strength": 3072,
+    "burn_rate": 0.3
+  },
+  "sound_pitch": 3,
+  "burner_multiplier": 1
+}
