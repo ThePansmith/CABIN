@@ -33,6 +33,15 @@
             "path": "../.github/workflows"
         }
     ],
+    "extensions": {
+        "recommendations": [
+            "GitHub.remotehub",
+            "GitHub.vscode-pull-request-github",
+            "github.vscode-github-actions",
+            "EditorConfig.EditorConfig",
+            "dbaeumer.vscode-eslint"
+        ]
+    },
     "settings": {
         "[json]": {
             "editor.defaultFormatter": "vscode.json-language-features"
