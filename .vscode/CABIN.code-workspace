@@ -42,6 +42,138 @@
             "dbaeumer.vscode-eslint"
         ]
     },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "npm:install",
+                "detail": "Install the KubeJS npm dependencies.",
+                "icon": {
+                    "id": "cloud-download",
+                    "color": "terminal.ansiWhite"
+                },
+                "dependsOn": [],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["install"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "silent",
+                    "focus": false,
+                    "panel": "shared",
+                    "showReuseMessage": false,
+                    "clear": false
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "npm:lint",
+                "detail": "Lint the KubeJS project.",
+                "icon": {
+                    "id": "search-fuzzy",
+                    "color": "terminal.ansiYellow"
+                },
+                "dependsOn": ["npm:install"],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["run", "lint"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "dedicated",
+                    "showReuseMessage": false,
+                    "clear": true
+                },
+                "problemMatcher": [
+                    "$eslint-stylish",
+                    {
+                        "applyTo": "allDocuments",
+                        "source": "prettier",
+                        "fileLocation": [
+                            "relative",
+                            "${workspaceFolder:KubeJS}"
+                        ],
+                        "severity": "info",
+                        "pattern": {
+                            "kind": "file",
+                            "regexp": "^\\[(error|warn|info)\\] (.+)$",
+                            "severity": 1,
+                            "file": 2
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "npm:lint:fix",
+                "detail": "Lint the KubeJS project and attempt to fix any issues found.",
+                "icon": {
+                    "id": "tools",
+                    "color": "terminal.ansiWhite"
+                },
+                "dependsOn": ["npm:install"],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["run", "lint:fix"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "dedicated",
+                    "showReuseMessage": false,
+                    "clear": true
+                },
+                "problemMatcher": [
+                    "$eslint-stylish",
+                    {
+                        "applyTo": "allDocuments",
+                        "source": "prettier",
+                        "fileLocation": [
+                            "relative",
+                            "${workspaceFolder:KubeJS}"
+                        ],
+                        "severity": "info",
+                        "pattern": {
+                            "kind": "file",
+                            "regexp": "^\\[(error|warn|info)\\] (.+)$",
+                            "severity": 1,
+                            "file": 2
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     "settings": {
         "[json]": {
             "editor.defaultFormatter": "vscode.json-language-features"
