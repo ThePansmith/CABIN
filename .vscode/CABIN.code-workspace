@@ -33,6 +33,138 @@
             "path": "../.github/workflows"
         }
     ],
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "npm:install",
+                "detail": "Install the KubeJS npm dependencies.",
+                "icon": {
+                    "id": "cloud-download",
+                    "color": "terminal.ansiWhite"
+                },
+                "dependsOn": [],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["install"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "silent",
+                    "focus": false,
+                    "panel": "shared",
+                    "showReuseMessage": false,
+                    "clear": false
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "npm:lint",
+                "detail": "Lint the KubeJS project.",
+                "icon": {
+                    "id": "search-fuzzy",
+                    "color": "terminal.ansiYellow"
+                },
+                "dependsOn": ["npm:install"],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["run", "lint"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "dedicated",
+                    "showReuseMessage": false,
+                    "clear": true
+                },
+                "problemMatcher": [
+                    "$eslint-stylish",
+                    {
+                        "applyTo": "allDocuments",
+                        "source": "prettier",
+                        "fileLocation": [
+                            "relative",
+                            "${workspaceFolder:KubeJS}"
+                        ],
+                        "severity": "info",
+                        "pattern": {
+                            "kind": "file",
+                            "regexp": "^\\[(error|warn|info)\\] (.+)$",
+                            "severity": 1,
+                            "file": 2
+                        }
+                    }
+                ]
+            },
+            {
+                "label": "npm:lint:fix",
+                "detail": "Lint the KubeJS project and attempt to fix any issues found.",
+                "icon": {
+                    "id": "tools",
+                    "color": "terminal.ansiWhite"
+                },
+                "dependsOn": ["npm:install"],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["run", "lint:fix"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "dedicated",
+                    "showReuseMessage": false,
+                    "clear": true
+                },
+                "problemMatcher": [
+                    "$eslint-stylish",
+                    {
+                        "applyTo": "allDocuments",
+                        "source": "prettier",
+                        "fileLocation": [
+                            "relative",
+                            "${workspaceFolder:KubeJS}"
+                        ],
+                        "severity": "info",
+                        "pattern": {
+                            "kind": "file",
+                            "regexp": "^\\[(error|warn|info)\\] (.+)$",
+                            "severity": 1,
+                            "file": 2
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     "extensions": {
         "recommendations": [
             "GitHub.remotehub",
@@ -57,26 +189,6 @@
         },
         "[javascriptreact]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "workbench.colorCustomizations": {
-            "activityBar.activeBackground": "#bb533a",
-            "activityBar.background": "#bb533a",
-            "activityBar.foreground": "#e7e7e7",
-            "activityBar.inactiveForeground": "#e7e7e799",
-            "activityBarBadge.background": "#3cc356",
-            "activityBarBadge.foreground": "#15202b",
-            "commandCenter.border": "#e7e7e799",
-            "sash.hoverBorder": "#bb533a",
-            "statusBar.background": "#94422e",
-            "statusBar.foreground": "#e7e7e7",
-            "statusBarItem.hoverBackground": "#bb533a",
-            "statusBarItem.remoteBackground": "#94422e",
-            "statusBarItem.remoteForeground": "#e7e7e7",
-            "titleBar.activeBackground": "#94422e",
-            "titleBar.activeForeground": "#e7e7e7",
-            "titleBar.inactiveBackground": "#94422e99",
-            "titleBar.inactiveForeground": "#e7e7e799"
-        },
-        "peacock.color": "#94422e"
+        }
     }
 }
