@@ -1,4 +1,4 @@
-if (Platform.isLoaded("createdieselgenerators")) {
+if (Platform.isLoaded("createaddition")) {
     JEIEvents.hideItems(event => {
         event.hide("createaddition:capacitor")
 
