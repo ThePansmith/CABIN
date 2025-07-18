@@ -105,24 +105,7 @@
                     "showReuseMessage": false,
                     "clear": true
                 },
-                "problemMatcher": [
-                    "$eslint-stylish",
-                    {
-                        "applyTo": "allDocuments",
-                        "source": "prettier",
-                        "fileLocation": [
-                            "relative",
-                            "${workspaceFolder:KubeJS}"
-                        ],
-                        "severity": "info",
-                        "pattern": {
-                            "kind": "file",
-                            "regexp": "^\\[(error|warn|info)\\] (.+)$",
-                            "severity": 1,
-                            "file": 2
-                        }
-                    }
-                ]
+                "problemMatcher": ["$eslint-stylish"]
             },
             {
                 "label": "npm:lint:fix",
@@ -153,24 +136,7 @@
                     "showReuseMessage": false,
                     "clear": true
                 },
-                "problemMatcher": [
-                    "$eslint-stylish",
-                    {
-                        "applyTo": "allDocuments",
-                        "source": "prettier",
-                        "fileLocation": [
-                            "relative",
-                            "${workspaceFolder:KubeJS}"
-                        ],
-                        "severity": "info",
-                        "pattern": {
-                            "kind": "file",
-                            "regexp": "^\\[(error|warn|info)\\] (.+)$",
-                            "severity": 1,
-                            "file": 2
-                        }
-                    }
-                ]
+                "problemMatcher": ["$eslint-stylish"]
             }
         ]
     },
