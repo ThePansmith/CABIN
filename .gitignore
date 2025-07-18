@@ -132,3 +132,6 @@ config/darkmodeeverywhereshaders.json
 
 # Downloadable dependencies
 **/node_modules
+
+# Tooling Cache Files #
+.eslintcache
