@@ -11,7 +11,7 @@ if (Platform.isLoaded("createdieselgenerators")) {
         event.hide("thermal:electrum_plate")
     })
 
-    ClientEvents.highPriorityAssets(event=>{
+    ClientEvents.highPriorityAssets(event => {
         event.add("forge:models/tag/item/dusts/diamond",
             {
                 "parent": "minecraft:item/generated",
