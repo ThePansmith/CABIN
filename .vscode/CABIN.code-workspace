@@ -33,5 +33,14 @@
             "path": "../.github/workflows"
         }
     ],
+    "extensions": {
+        "recommendations": [
+            "GitHub.remotehub",
+            "GitHub.vscode-pull-request-github",
+            "github.vscode-github-actions",
+            "dbaeumer.vscode-eslint",
+            "esbenp.prettier-vscode"
+        ]
+    },
     "settings": {}
 }
