@@ -2,7 +2,8 @@ name: Lint Build Tools
 on:
   pull_request:
     types: [opened, synchronize]
-    paths: 'tools/build/**'
+    paths:
+      - 'tools/build/**'
 
 jobs:
   lint:
