@@ -33,5 +33,18 @@
             "path": "../.github/workflows"
         }
     ],
-    "settings": {}
+    "settings": {
+        "[json]": {
+            "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "[jsonl]": {
+            "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "[jsonc]": {
+            "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "[javascript]": {
+            "editor.defaultFormatter": "vscode.typescript-language-features"
+        }
+    }
 }
