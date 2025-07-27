@@ -121,6 +121,18 @@
     "block.kubejs.trial_copper_grate": "Illusionary Copper Grate",
     "block.kubejs.trial_cut_copper_stairs": "Illusionary Cut Copper Stairs",
     "block.kubejs.trial_cut_copper_slab": "Illusionary Cut Copper Slab",
+    "block.kubejs.trial_exposed_copper": "Illusionary Exposed Block of Copper",
+    "block.kubejs.trial_exposed_cut_copper": "Illusionary Exposed Cut Copper",
+    "block.kubejs.trial_chiseled_copper_exposed": "Illusionary Exposed Chiseled Copper",
+    "block.kubejs.trial_copper_grate_exposed": "Illusionary Exposed Copper Grate",
+    "block.kubejs.trial_exposed_cut_copper_stairs": "Illusionary Exposed Cut Copper Stairs",
+    "block.kubejs.trial_exposed_cut_copper_slab": "Illusionary Exposed Cut Copper Slab",
+    "block.kubejs.trial_weathered_copper": "Illusionary Weathered Block of Copper",
+    "block.kubejs.trial_weathered_cut_copper": "Illusionary Weathered Cut Copper",
+    "block.kubejs.trial_chiseled_copper_weathered": "Illusionary Weathered Chiseled Copper",
+    "block.kubejs.trial_copper_grate_weathered": "Illusionary Weathered Copper Grate",
+    "block.kubejs.trial_weathered_cut_copper_stairs": "Illusionary Weathered Cut Copper Stairs",
+    "block.kubejs.trial_weathered_cut_copper_slab": "Illusionary Weathered Cut Copper Slab",
     "block.kubejs.trial_oxidized_copper": "Illusionary Oxidized Block of Copper",
     "block.kubejs.trial_oxidized_cut_copper": "Illusionary Oxidized Cut Copper",
     "block.kubejs.trial_chiseled_copper_oxidized": "Illusionary Oxidized Chiseled Copper",
@@ -220,7 +232,6 @@
     "item.spirit_fire.info": "§7A mysterious fire that is capable of transmuation. Will never burn out.",
     "item.spirit_fire.creation": "§7Created by igniting Demon's Dream Fruit with Flint and Steel.",
     "filled_map.fortress": "Fortress Locator Map",
-
     "cabin.ponder.tag.ponders": "CABIN",
     "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN",
     "ponderjs.ponder.alchemy_setup.header": "The Alchemical Laser",
@@ -231,9 +242,7 @@
     "ponderjs.ponder.alchemy_setup.text_5": "Whenever the Deployer activates...",
     "ponderjs.ponder.alchemy_setup.text_6": "...the Laser Lamp will emit a High-Energy Beam",
     "ponderjs.ponder.alchemy_setup.text_7": "Hopper Minecarts caught in the Beam will process their contained Items",
-    
     "cabin.trials.crafter.deprecation.tooltip": "Deprecated. Craft into a Crafter from Quark",
-
     "cabin.profession.prefix": "Profession: %s",
     "cabin.profession.farming": "Farming",
     "cabin.profession.carpentry": "Carpentry",
@@ -243,6 +252,5 @@
     "cabin.profession.cooking": "Cooking",
     "cabin.profession.fishing": "Fishing",
     "cabin.profession.smithing": "Smithing",
-
     "cabin.import.prefix": "Import: %s"
 }

@@ -1,0 +1,9 @@
+{
+	"type": "replace",
+	"target": {
+		"block": "kubejs:trial_exposed_copper"
+	},
+	"with": {
+		"block": "minecraft:waxed_exposed_copper"
+	}
+}

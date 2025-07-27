@@ -1,0 +1,9 @@
+{
+	"type": "replace",
+	"target": {
+		"block": "kubejs:trial_weathered_cut_copper_stairs"
+	},
+	"with": {
+		"block": "minecraft:waxed_weathered_cut_copper_stairs"
+	}
+}

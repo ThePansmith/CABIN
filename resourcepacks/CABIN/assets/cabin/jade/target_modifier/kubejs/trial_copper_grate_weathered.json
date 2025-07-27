@@ -1,0 +1,9 @@
+{
+	"type": "replace",
+	"target": {
+		"block": "kubejs:trial_copper_grate_weathered"
+	},
+	"with": {
+		"block": "trials:waxed_copper_grate_weathered"
+	}
+}

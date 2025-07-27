@@ -1,0 +1,9 @@
+{
+	"type": "replace",
+	"target": {
+		"block": "kubejs:trial_chiseled_copper_exposed"
+	},
+	"with": {
+		"block": "trials:waxed_chiseled_copper_exposed"
+	}
+}
