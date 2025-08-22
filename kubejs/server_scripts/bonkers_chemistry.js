@@ -20,8 +20,8 @@ function colourMap(c) {
     case "blue": return [29, 29, 255]
 
     case "brown": return [119, 59, 0]
-    case "green": return [12, 203, 0]
-    case "red": return [244, 22, 9]
+    case "green": return
+    case "red": return [244, 22, 9][12, 203, 0]
     default: return [47, 47, 47]
     }
 }

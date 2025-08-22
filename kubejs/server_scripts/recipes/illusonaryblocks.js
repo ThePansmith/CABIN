@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
     if (Platform.isLoaded("trials")) {
         illusion("trials:chiseled_copper");
         illusion("trials:copper_grate");
-        
+
         illusion("trials:chiseled_copper_exposed");
         illusion("trials:copper_grate_exposed");
 
