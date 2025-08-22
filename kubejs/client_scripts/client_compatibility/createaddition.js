@@ -1,4 +1,4 @@
-if (Platform.isLoaded("createdieselgenerators")) {
+if (Platform.isLoaded("createaddition")) {
     JEIEvents.hideItems(event => {
         event.hide("createaddition:capacitor")
 
@@ -11,7 +11,7 @@ if (Platform.isLoaded("createdieselgenerators")) {
         event.hide("thermal:electrum_plate")
     })
 
-    ClientEvents.highPriorityAssets(event=>{
+    ClientEvents.highPriorityAssets(event => {
         event.add("forge:models/tag/item/dusts/diamond",
             {
                 "parent": "minecraft:item/generated",

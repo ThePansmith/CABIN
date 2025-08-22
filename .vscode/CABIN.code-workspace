@@ -2,30 +2,156 @@
     "folders": [
         {
             "name": "Root",
-            "path": "../",
-        },{
+            "path": "../"
+        },
+        {
             "name": "KubeJS",
             "path": "../kubejs"
-        },{
-        },{
+        },
+        {
             "name": "Assets",
             "path": "../resourcepacks/CABIN/assets"
-        },{
+        },
+        {
             "name": "Configs",
             "path": "../config"
-        },{
+        },
+        {
             "name": "Configs Default",
             "path": "../defaultconfigs"
-        },{
+        },
+        {
             "name": "Quests",
             "path": "../config/ftbquests/quests"
-        },{
+        },
+        {
             "name": "Build",
             "path": "../tools/build"
-        },{
+        },
+        {
             "name": "Workflows",
             "path": "../.github/workflows"
         }
     ],
-    "settings": {}
+    "extensions": {
+        "recommendations": [
+            "GitHub.remotehub",
+            "GitHub.vscode-pull-request-github",
+            "github.vscode-github-actions",
+            "EditorConfig.EditorConfig",
+            "dbaeumer.vscode-eslint"
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "npm:install",
+                "detail": "Install the KubeJS npm dependencies.",
+                "icon": {
+                    "id": "cloud-download",
+                    "color": "terminal.ansiWhite"
+                },
+                "dependsOn": [],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["install"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "silent",
+                    "focus": false,
+                    "panel": "shared",
+                    "showReuseMessage": false,
+                    "clear": false
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "npm:lint",
+                "detail": "Lint the KubeJS project.",
+                "icon": {
+                    "id": "search-fuzzy",
+                    "color": "terminal.ansiYellow"
+                },
+                "dependsOn": ["npm:install"],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["run", "lint"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "dedicated",
+                    "showReuseMessage": false,
+                    "clear": true
+                },
+                "problemMatcher": ["$eslint-stylish"]
+            },
+            {
+                "label": "npm:lint:fix",
+                "detail": "Lint the KubeJS project and attempt to fix any issues found.",
+                "icon": {
+                    "id": "tools",
+                    "color": "terminal.ansiWhite"
+                },
+                "dependsOn": ["npm:install"],
+                "dependsOrder": "sequence",
+                "type": "shell",
+                "command": "npm",
+                "args": ["run", "lint:fix"],
+                "runOptions": {
+                    "instanceLimit": 1,
+                    "instancePolicy": "silent",
+                    "reevaluateOnRerun": true,
+                    "runOn": "default"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder:KubeJS}"
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "dedicated",
+                    "showReuseMessage": false,
+                    "clear": true
+                },
+                "problemMatcher": ["$eslint-stylish"]
+            }
+        ]
+    },
+    "settings": {
+        "[json]": {
+            "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "[jsonl]": {
+            "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "[jsonc]": {
+            "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "[javascript]": {
+            "editor.defaultFormatter": "vscode.typescript-language-features"
+        }
+    }
 }

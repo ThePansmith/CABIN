@@ -1,4 +1,4 @@
-if (Platform.isLoaded("createdieselgenerators")) {
+if (Platform.isLoaded("createcasing")) {
     JEIEvents.hideItems(event => {
         event.hide("createcasing:oak_shaft")
         event.hide("createcasing:spruce_shaft")

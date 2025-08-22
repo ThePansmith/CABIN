@@ -1,0 +1,20 @@
+{
+  "fluid": "thermal:refined_fuel",
+  "normal": {
+    "speed": 64,
+    "strength": 4096,
+    "burn_rate": 0.05
+  },
+  "modular": {
+    "speed": 128,
+    "strength": 8192,
+    "burn_rate": 0.1
+  },
+  "huge": {
+    "speed": 128,
+    "strength": 8192,
+    "burn_rate": 0.2
+  },
+  "sound_pitch": 3,
+  "burner_multiplier": 1
+}
