@@ -240,5 +240,18 @@
     "cabin.profession.carpentry": "Carpintaria",
     "cabin.profession.cooking": "Culinária",
     "cabin.profession.mining": "Mineração",
-    "cabin.profession.prefix": "Profissão: %s"
+    "cabin.profession.prefix": "Profissão: %s",
+    "block.kubejs.trial_chiseled_copper_weathered": "Illusionary Weathered Chiseled Copper",
+    "block.kubejs.trial_exposed_cut_copper": "Illusionary Exposed Cut Copper",
+    "block.kubejs.trial_exposed_cut_copper_stairs": "Illusionary Exposed Cut Copper Stairs",
+    "block.kubejs.trial_copper_grate_weathered": "Illusionary Weathered Copper Grate",
+    "block.kubejs.trial_exposed_copper": "Illusionary Exposed Block of Copper",
+    "block.kubejs.trial_chiseled_copper_exposed": "Illusionary Exposed Chiseled Copper",
+    "block.kubejs.trial_weathered_cut_copper_slab": "Illusionary Weathered Cut Copper Slab",
+    "block.kubejs.trial_weathered_copper": "Illusionary Weathered Block of Copper",
+    "block.kubejs.trial_exposed_cut_copper_slab": "Illusionary Exposed Cut Copper Slab",
+    "block.kubejs.trial_copper_grate_exposed": "Illusionary Exposed Copper Grate",
+    "block.kubejs.trial_weathered_cut_copper": "Illusionary Weathered Cut Copper",
+    "block.kubejs.trial_weathered_cut_copper_stairs": "Illusionary Weathered Cut Copper Stairs",
+    "ftbquests.book.tooltip": "The quest window can also be opened with [`]."
 }

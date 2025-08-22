@@ -230,7 +230,7 @@
     "ponderjs.ponder.alchemy_setup.header": "炼金镭射",
     "ponderjs.ponder.alchemy_setup.text_3": "放置一个机械手，朝向殷钢机器框架",
     "ponderjs.ponder.alchemy_setup.text_2": "安装任意一种颜色的工业灯",
-    "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN",
+    "cabin.ponder.tag.ponders.description": "CAB 和 CABIN 特有的组件和设备",
     "cabin.import.prefix": "产品: %s",
     "cabin.profession.smithing": "铁匠",
     "cabin.profession.masonry": "泥瓦匠",
@@ -240,5 +240,18 @@
     "cabin.profession.carpentry": "木匠",
     "cabin.profession.cooking": "厨师",
     "cabin.profession.mining": "矿工",
-    "cabin.profession.prefix": "职业: %s"
+    "cabin.profession.prefix": "职业: %s",
+    "block.kubejs.trial_chiseled_copper_weathered": "Illusionary Weathered Chiseled Copper",
+    "block.kubejs.trial_exposed_cut_copper": "Illusionary Exposed Cut Copper",
+    "block.kubejs.trial_exposed_cut_copper_stairs": "Illusionary Exposed Cut Copper Stairs",
+    "block.kubejs.trial_copper_grate_weathered": "Illusionary Weathered Copper Grate",
+    "block.kubejs.trial_exposed_copper": "Illusionary Exposed Block of Copper",
+    "block.kubejs.trial_chiseled_copper_exposed": "Illusionary Exposed Chiseled Copper",
+    "block.kubejs.trial_weathered_cut_copper_slab": "Illusionary Weathered Cut Copper Slab",
+    "block.kubejs.trial_weathered_copper": "Illusionary Weathered Block of Copper",
+    "block.kubejs.trial_exposed_cut_copper_slab": "Illusionary Exposed Cut Copper Slab",
+    "block.kubejs.trial_copper_grate_exposed": "Illusionary Exposed Copper Grate",
+    "block.kubejs.trial_weathered_cut_copper": "Illusionary Weathered Cut Copper",
+    "block.kubejs.trial_weathered_cut_copper_stairs": "Illusionary Weathered Cut Copper Stairs",
+    "ftbquests.book.tooltip": "The quest window can also be opened with [`]."
 }
