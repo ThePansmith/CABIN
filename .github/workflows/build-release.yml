@@ -71,21 +71,21 @@ jobs:
             echo "tag=$tag" >> $GITHUB_OUTPUT
           fi
         
-      - name: Check pakku-lock.json in previous tag
-        id: check_pakku_lock_prev
-        shell: bash
-        run: |
-          if git cat-file -e ${{ steps.latest_tag.outputs.tag }}:./pakku-lock.json 2>/dev/null; then
-            echo "File pakku-lock.json found in previous tag"
-            echo "file_found=true" >> $GITHUB_OUTPUT
-          else
-            echo "File pakku-lock.json not found in previous tag"
-            echo "file_found=false" >> $GITHUB_OUTPUT
-          fi
-        
+          - name: Check pakku-lock.json in previous tag
+          id: check_pakku_lock_prev
+          shell: bash
+          run: |
+            if git cat-file -e ${{ steps.latest_tag.outputs.tag }}:./pakku-lock.json 2>/dev/null; then
+              echo "File pakku-lock.json found in previous tag"
+              echo "file_found=true" >> $GITHUB_OUTPUT
+            else
+              echo "File pakku-lock.json not found in previous tag"
+              echo "file_found=false" >> $GITHUB_OUTPUT
+            fi
+
       - name: Check and copy pakku-lock.json from previous tag
         id: check_copy_lock
-        if: steps.check_pakku_lock_prev.outputs.file_found
+        if: steps.check_pakku_lock_prev.outputs.file_found == 'true'
         shell: bash
         run: |
           git show tags/${{ steps.latest_tag.outputs.tag }}:./pakku-lock.json > ./pakku-lock-prev.json
@@ -94,18 +94,18 @@ jobs:
           else
             echo "Error: File pakku-lock-prev.json is empty or not created" && exit 1
           fi
-        
+          
       - name: Download pakku.jar
         id: download_pakku
-        if: steps.check_pakku_lock_prev.outputs.file_found
+        if: steps.check_pakku_lock_prev.outputs.file_found == 'true'
         shell: bash
         run: |
           curl https://github.com/juraj-hrivnak/pakku/releases/latest/download/pakku.jar -o pakku.jar -L -J
           echo "Downloaded pakku.jar "
-        
+
       - name: Run pakku diff
         id: pakku_diff
-        if: steps.check_pakku_lock_prev.outputs.file_found
+        if: steps.check_pakku_lock_prev.outputs.file_found == 'true'
         shell: bash
         run: |
           java -jar pakku.jar diff -v --markdown PROJECTS_DIFF.md ./pakku-lock-prev.json ./pakku-lock.json
@@ -114,19 +114,28 @@ jobs:
           else
             echo "Error: File PROJECTS_DIFF.md not created" && exit 1
           fi
-        
+          
       - name: Read PROJECTS_DIFF.md to variable
         id: read_diff
-        if: steps.check_pakku_lock_prev.outputs.file_found
         shell: bash
         run: |
-          echo "Reading PROJECTS_DIFF.md to variable..."
-          {
-            echo 'diff<<EOF'
-            cat -v PROJECTS_DIFF.md
-            echo EOF
-          } >> "$GITHUB_OUTPUT"
-          echo "Diff content read to variable"
+          if [ "${{ steps.check_pakku_lock_prev.outputs.file_found }}" = "true" ]; then
+            echo "Reading PROJECTS_DIFF.md to variable..."
+            {
+              echo 'diff<<EOF'
+              cat -v PROJECTS_DIFF.md
+              echo EOF
+            } >> "$GITHUB_OUTPUT"
+            echo "Diff content read to variable"
+          else
+            echo "Creating debug message for missing pakku-lock.json..."
+            {
+              echo 'diff<<EOF'
+              echo "No pakku-lock.json found in previous tag ${{ steps.latest_tag.outputs.tag }}, unable to generate diff."
+              echo EOF
+            } >> "$GITHUB_OUTPUT"
+            echo "Debug message written to diff variable"
+          fi
 
       - name: Get Pakku Info
         id: pakku_info
@@ -178,7 +187,6 @@ jobs:
         id: check
         shell: bash
         run: |
-         
           MC_VERSIONS_JSON='${{ steps.pakku_lock_info.outputs.mc_versions }}'
           MINECRAFT_VERSION=$(echo "$MC_VERSIONS_JSON" | jq -r '.[0]' | tr -d '[]"')
 
