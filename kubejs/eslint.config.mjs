@@ -4,7 +4,7 @@
 
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin-js";
-import { MoniLabs } from "./dx/eslint-plugin/custom-plugin.mjs";
+import { PanPack } from "./dx/eslint-plugin/custom-plugin.mjs";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -28,5 +28,5 @@ export default [
             "@stylistic/js/no-multiple-empty-lines": ["error", { max: 2, maxEOF: 0 }],
         },
     },
-    MoniLabs,
+    PanPack,
 ];
