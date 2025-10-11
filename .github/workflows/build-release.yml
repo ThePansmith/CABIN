@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DEV_ENVIRONMENT: ${{ github.ref_name != 'main' }}
+  DEV_ENVIRONMENT: ${{ github.ref_name != '1.20.1' }}
 
 jobs:    
   info:
@@ -63,7 +63,7 @@ jobs:
         id: latest_tag
         shell: bash
         run: |
-          tag=$(git describe --tags --abbrev=0 origin/main)
+          tag=$(git describe --tags --abbrev=0 origin/1.20.1)
           if [ -z "$tag" ]; then
             echo "Latest tag not found" && exit 1
           else
@@ -267,7 +267,7 @@ jobs:
                 repo: context.repo.repo,
                 state: 'open',
                 head: `${context.repo.owner}:dev`,
-                base: 'main'
+                base: '1.20.1'
               });
 
               core.setOutput('exists', prs.length > 0);
@@ -283,7 +283,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_branch: dev
-          target_branch: main
+          target_branch: 1.20.1
           milestone: ${{ steps.changelog.outputs.version }}
           ignore_users: "dependabot"
           draft: true
