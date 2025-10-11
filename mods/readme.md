@@ -1,2 +1,0 @@
-# Why the mod jars?
-- Computercraft tweaked has stopped uploading patches to curseforge. This includes the patch that fixes it crashing with Create 6.0. The mod itself is on the [Approved Non-CurseForge Mods list](https://support.curseforge.com/en/support/solutions/articles/9000197913-non-curseforge-mods), and as such can be included in packs this way. Ideally I want this to be handed via buildscripts (no repo bloat), but for now this will work.

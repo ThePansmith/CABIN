@@ -1,4 +1,4 @@
-Find more info on the website: https://kubejs.com/
+Find out more info on the website: https://kubejs.com/
 
 Directory information:
 

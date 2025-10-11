@@ -1,0 +1,160 @@
+# Changelog
+
+## [Unreleased]
+### Changes
+- Now using Panpack template
+
+## [2.0.9]
+### Changes
+* Added Create Ore Excavation Compatibility
+* Added neptunium fillet knife (now unbreakable and usable in slimy fern recipes)
+* Added Not Enough Recipe Book
+* Added alkaherstry recipes for ores
+* Added exposed and weathered illusionary copper block variants
+* Added a Questbook tooltip about opening it with a keybind
+* Updated Questbook (noted the new AE2 singularity behavior, etc)
+* Updated the compatibility script readme file
+* Cleaned up some recipes
+
+### Bug fixes
+* Fixed Create: Diesel Generators Compatibility
+* Fixed clientside compatibility scripts
+* Fixed Prettypipes Crafting Terminal model
+* Fixed Gemstone Catalysts not having recipes
+
+## [2.0.8]
+### Changes
+* Hotfix to downgrade Create to 6.0.5 until unbreakable items work properly in deployers
+* Readded missing resourcepacks
+
+## [2.0.7]
+### Changes
+* Updated Create to 6.0.5
+* Updated many other mods
+* Added Create: Hypertube Compat
+* Updated Localization Files
+
+### Bug fixes
+* Fixed Infernal Mechanism having the incorrect number of loops
+* Fixed Moon quest
+* Various Questbook fixes
+
+## [2.0.6]
+### Changes
+* Reintroduced Compatibility Scripts for:
+  * Create Connected
+  * Create Crafts & Additions
+* Logistic Mechanisms made cheaper
+* Added more flowers to the phytoenic insolator
+* Cleaned up Certus Quartz EMI
+* Added localization support for Trades and Professions
+* Updated localization files
+
+### Bug fixes
+* Fixed More Minecarts Filter Unloader
+
+## [2.0.5]
+### Changes
+* **Textures:**
+  * New mechanism textures
+  * New Lead Machine Model
+
+* **Mods:**
+  * Added Sophisticated Storage Create Integration (allows SophStorage barrels on contraptions)
+  * Added Oculus, Create Better FPS
+  * Updated Jade, Jade Addons, Occultism, Create Central Kitchen
+* Reimplemented the Alchemical Laser Ponder
+* Variant chests and cabinets now work on contraptions
+* Replaced written book quest reward with clipboard
+* Unified Dough Recipes
+* Halved AE energy cost for crafting blizz rods
+* Updated Localization files
+
+## [2.0.4]
+### Changes
+* Disabled autoclaim on some quests (may require `/ftbquest reset` on existing worlds)
+* Added Create: Powerloader compatibility
+* Deprecated the trials crafter in favor of the Quark variant
+* Updated localization files
+
+### Bug fixes
+* Fixed wooden slab cutting, tree extracting, and cutting board recipes
+* Minor recipe cleanup
+* Sealed mechanism recipe end step now uses a press
+
+## [2.0.3]
+### Changes
+* Questbook Cleanup:
+  * Now uses linear mode by default
+  * Chapters hidden by default
+  * Nether Fortress quest gives a map
+  * Fixed quest reward type issues
+  * General cleanup and corrections
+* Added Mangrove Propagule to exotic saplings pack
+* Added Create Central Kitchen
+* Added various optimization mods
+* Changed item hatch to use default recipe
+* Cherry Logs now sellable
+* Improved Lumisene recipes
+* Internal cleanup
+* Updated Localization Files
+
+### Bug fixes
+* Fixed items being insertable into strainer output slots
+* Removed Better Chunkloading (causing crashes)
+
+## [2.0.2]
+### Changes
+* Updated Create to 6.0.4
+* Added Create Enchantment Industry Compatibility (with custom textures)
+* Updated Localization Files
+
+### Bug fixes
+* Removed FTB Quests Optimizer (was causing issues)
+* Fixed Gold and Lead Machine hitboxes
+* Fixed constantan induction smelter recipe
+
+## [2.0.1]
+### Changes
+* Swapped out Create Deco cards for Quark blocks
+* New gold machine model
+* Adjusted strainer base to reduce z-fighting
+* Updated Localization Files
+
+### Bug fixes
+* Various alchemy-related fixes
+* Fixed saws not shown in EMI
+* Fixed market, bulletin board, and shipments giving team rewards
+* Fixed profession quests not being repeatable
+* Miscellaneous recipe fixes
+
+## [2.0.0]
+### Major Changes
+* Updated to Minecraft 1.20
+* Now using Create v6
+  * Added a new machine: **Lead**
+  * Added a new quest chapter: **2B** for new items
+  * Trimmed modlist (integration support still available for ported addons)
+* Smithing table transformations replaced with manual application/deployer recipes
+* **Ore Processing Buffs:**
+  * Base yields 2–3 crushed ores
+  * Fortune has been buffed
+  * Washing ores can now yield byproducts
+* Pack now supports localization (via Weblate)
+
+### Mod Changes
+* Added **1.21 Trial Chambers** with custom loot
+* Added **Custom Pottery Sherds**
+* Replaced **Storage Drawers** with **Functional Storage**
+* Replaced **Iron Barrels** with **Sophisticated Storage** (same materials)
+* Replaced **Beyond Earth** with **Ad Astra**
+* Added **EMI**
+
+### Other Changes
+* Cleaned up various models
+* Added splash texts (suggestions welcome in *#CABIN's Splashes*)
+* Added trades for 1.19 & 1.20 items
+* Added tooltips for various items
+* Added **Illusionary Copper** — decorative, builder-focused block
+* Reduced structure frequency
+* The pack now has a **mascot: Acey!**
