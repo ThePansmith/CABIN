@@ -20,6 +20,7 @@ jobs:
     outputs:
       project_version: ${{ steps.check.outputs.project_version }}
       project_name: ${{ steps.check.outputs.project_name }}
+      project_file_name: ${{ steps.check.outputs.project_name }}-${{ steps.check.outputs.project_version }}
       project_full_name: ${{ steps.check.outputs.project_name }} ${{ steps.check.outputs.project_version }}
       changelog: ${{ steps.changelog.outputs.description }}
       mc_version: ${{ steps.check.outputs.minecraft_version }}
@@ -415,8 +416,8 @@ jobs:
       - name: Upload artifact CurseForge
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: ${{ needs.info.outputs.project_full_name }}-curseforge
-          path: ./build/curseforge/${{ needs.info.outputs.project_full_name }}-curseforge.zip
+          name: ${{ needs.info.outputs.project_file_name }}-curseforge
+          path: ./build/curseforge/${{ needs.info.outputs.project_file_name }}-curseforge.zip
           if-no-files-found: error
 
       # - name: Preparing the modrinth artifact 
@@ -427,8 +428,8 @@ jobs:
       # - name: Upload artifact to modrinth
       #   uses: actions/upload-artifact@v4.6.2
       #   with:
-      #     name: ${{ needs.info.outputs.project_full_name }}-modrinth
-      #     path: ./build/modrinth/${{ needs.info.outputs.project_full_name }}-modrinth.mrpack
+      #     name: ${{ needs.info.outputs.project_file_name }}-modrinth
+      #     path: ./build/modrinth/${{ needs.info.outputs.project_file_name }}-modrinth.mrpack
       #     if-no-files-found: warn
 
       # - name: Preparing the multimc artifact
@@ -444,13 +445,13 @@ jobs:
       #     cp -rf ./mods ./build/multimc/.minecraft/
 
       #     cd ./build/multimc/
-      #     zip -r ${{ needs.info.outputs.project_full_name }}-multimc.zip icon.png mmc-pack.json instance.cfg .minecraft/ flame/
+      #     zip -r ${{ needs.info.outputs.project_file_name }}-multimc.zip icon.png mmc-pack.json instance.cfg .minecraft/ flame/
       
       # - name: Upload the multimc artifact
       #   uses: actions/upload-artifact@v4.6.2
       #   with:
-      #     name: ${{ needs.info.outputs.project_full_name }}-multimc
-      #     path: ./build/multimc/${{ needs.info.outputs.project_full_name }}-multimc.zip
+      #     name: ${{ needs.info.outputs.project_file_name }}-multimc
+      #     path: ./build/multimc/${{ needs.info.outputs.project_file_name }}-multimc.zip
       #     if-no-files-found: error
 
       - name: Preparing the server artifact
@@ -461,8 +462,8 @@ jobs:
       - name: Upload server artifact
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: ${{ needs.info.outputs.project_full_name }}-serverpack
-          path: ./build/serverpack/${{ needs.info.outputs.project_full_name }}-serverpack.zip
+          name: ${{ needs.info.outputs.project_file_name }}-serverpack
+          path: ./build/serverpack/${{ needs.info.outputs.project_file_name }}-serverpack.zip
           if-no-files-found: error
 
   release-github:
@@ -486,16 +487,16 @@ jobs:
         id: check_artifact
         shell: bash
         run: |
-          if [ ! -f ${{ needs.info.outputs.project_full_name }}-curseforge.zip ]; then
+          if [ ! -f ${{ needs.info.outputs.project_file_name }}-curseforge.zip ]; then
             echo '::error::No value found for artifact `curseforge.zip`.' && exit 1
           fi
-          # if [ ! -f ${{ needs.info.outputs.project_full_name }}-modrinth.mrpack ]; then
+          # if [ ! -f ${{ needs.info.outputs.project_file_name }}-modrinth.mrpack ]; then
           #   echo '::error::No value found for artifact `modrinth.mrpack`.' && exit 1
           # fi
-          if [ ! -f ${{ needs.info.outputs.project_full_name }}-serverpack.zip ]; then
+          if [ ! -f ${{ needs.info.outputs.project_file_name }}-serverpack.zip ]; then
             echo '::error::No value found for artifact `serverpack.zip`.' && exit 1
           fi
-          # if [ ! -f ${{ needs.info.outputs.project_full_name }}-multimc.zip ]; then
+          # if [ ! -f ${{ needs.info.outputs.project_file_name }}-multimc.zip ]; then
           #   echo '::error::No value found for artifact `multimc.zip`.' && exit 1
           # fi
           echo "All artifacts found"
@@ -521,9 +522,9 @@ jobs:
             ${{ needs.info.outputs.changelog }}
             ${{ steps.format_diff.outputs.text }}
           files: |
-            ${{ needs.info.outputs.project_full_name }}-curseforge.zip
-            ${{ needs.info.outputs.project_full_name }}-modrinth.mrpack
-            ${{ needs.info.outputs.project_full_name }}-serverpack.zip
+            ${{ needs.info.outputs.project_file_name }}-curseforge.zip
+            ${{ needs.info.outputs.project_file_name }}-modrinth.mrpack
+            ${{ needs.info.outputs.project_file_name }}-serverpack.zip
           prerelease: ${{ needs.info.outputs.release_type != 'release' }}
           generate_release_notes: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -553,10 +554,10 @@ jobs:
         id: check_artifact
         shell: bash
         run: |
-          if [ ! -f ${{ needs.info.outputs.project_full_name }}-curseforge.zip ]; then
+          if [ ! -f ${{ needs.info.outputs.project_file_name }}-curseforge.zip ]; then
             echo '::error::No value found for artifact `curseforge.zip`.' && exit 1
           fi
-          if [ ! -f ${{ needs.info.outputs.project_full_name }}-serverpack.zip ]; then
+          if [ ! -f ${{ needs.info.outputs.project_file_name }}-serverpack.zip ]; then
             echo '::error::No value found for artifact `serverpack.zip`.' && exit 1
           fi
           echo "All artifacts found"
@@ -568,9 +569,9 @@ jobs:
           api-token: ${{ secrets.CURSEFORGE_TOKEN }}
           project-id: ${{ vars.CURSEFORGE_ID }}
           display-name: ${{ needs.info.outputs.project_full_name }}
-          modpack-path: ${{ needs.info.outputs.project_full_name }}-curseforge.zip
+          modpack-path: ${{ needs.info.outputs.project_file_name }}-curseforge.zip
           server-display-name: ${{ needs.info.outputs.project_full_name }} Serverpack
-          modpack-server-path: ${{ needs.info.outputs.project_full_name }}-serverpack.zip
+          modpack-server-path: ${{ needs.info.outputs.project_file_name }}-serverpack.zip
           changelog: |
             ${{ needs.info.outputs.changelog }}
             ${{ needs.info.outputs.diff }}
@@ -603,7 +604,7 @@ jobs:
   #         id: check_artifact
   #         shell: bash
   #         run: |
-  #           if [ ! -f ${{ needs.info.outputs.project_full_name }}-modrinth.mrpack ]; then
+  #           if [ ! -f ${{ needs.info.outputs.project_file_name }}-modrinth.mrpack ]; then
   #             echo '::error::No value found for artifact `modrinth.mrpack`.' && exit 1
   #           fi
   #           echo "All artifacts found"
@@ -614,7 +615,7 @@ jobs:
         #   with:
         #     api-token: ${{ secrets.MODRINTH_TOKEN }}
         #     project-id: ${{ vars.MODRINTH_ID }}
-        #     modpack-path: ${{ needs.info.outputs.project_full_name }}-modrinth.mrpack
+        #     modpack-path: ${{ needs.info.outputs.project_file_name }}-modrinth.mrpack
         #     changelog: ${{ needs.info.outputs.changelog }}
         #     changelog-format: markdown
         #     game-version: ${{ needs.info.outputs.mc_version }}
