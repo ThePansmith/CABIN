@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - dev
-      - main
+      - 1.20.1
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
