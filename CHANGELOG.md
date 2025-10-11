@@ -1,8 +1,10 @@
 # Changelog
 
-## [Unreleased]
+## [2.0.10]
 ### Changes
-- Now using Panpack template
+- Now using Panpack template, among backend changes, this also includes a new serverpack that should be easier to use
+- Updated localization files
+- Updated Questbook
 
 ## [2.0.9]
 ### Changes
