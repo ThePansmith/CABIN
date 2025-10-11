@@ -4,5 +4,5 @@ if(Platform.isLoaded("moreminecarts")) {
         event.modify("moreminecarts:glass_cactus", block => {
             block.destroySpeed = 0.4
         })
-    })
+        })
 }

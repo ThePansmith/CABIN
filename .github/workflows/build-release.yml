@@ -128,10 +128,9 @@ jobs:
             } >> "$GITHUB_OUTPUT"
             echo "Diff content read to variable"
           else
-            echo "Creating debug message for missing pakku-lock.json..."
             {
               echo 'diff<<EOF'
-              echo "No pakku-lock.json found in previous tag ${{ steps.latest_tag.outputs.tag }}, unable to generate diff."
+              echo "No pakku-lock.json found in previous tag, unable to generate diff."
               echo EOF
             } >> "$GITHUB_OUTPUT"
             echo "Debug message written to diff variable"
