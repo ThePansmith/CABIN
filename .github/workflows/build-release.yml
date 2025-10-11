@@ -632,7 +632,7 @@ jobs:
         shell: bash
         run: |
           if [ "${{ secrets.discord-webhook }}" == '' ]; then
-            echo '`discord-webhook` not set, skipping...' && exit 78
+            echo '`discord-webhook` not set, skipping...' && exit 0
           fi  
 
       - name: Truncate Changelog
