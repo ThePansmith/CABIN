@@ -28,6 +28,24 @@
         "legendary-tooltips": {
             "side": "CLIENT"
         },
+        "zume": {
+            "side": "CLIENT"
+        },
+        "oculus": {
+            "side": "CLIENT"
+        },
+        "watermedia": {
+            "side": "CLIENT"
+        },
+        "embeddium": {
+            "side": "CLIENT"
+        },
+        "embeddiumplus": {
+            "side": "CLIENT"
+        },
+        "citresewn": {
+            "side": "CLIENT"
+        },
         "probejs": {
             "side": "CLIENT",
             "export": false
