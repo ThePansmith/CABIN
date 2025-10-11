@@ -600,7 +600,7 @@
     "cabin.quest.46820FBDDDEE491E.title": "Wood Delivery",
     "cabin.quest.46F150CC9BE2D856.title": "1x Ender Pearl",
     "cabin.quest.472FB03D0E5A38D6.description1": "Algunos de los artilugios siguientes implican dejar caer objetos al suelo. Siempre que un proceso no retroceda por desbordamiento (por ejemplo, objetos en la cinta que esperan automáticamente), es importante activar la producción en determinados umbrales del buffer.",
-    "cabin.quest.472FB03D0E5A38D6.description2": "More concretely: When the output buffer exceeds 75%, stop producing items. Once it reaches below 25%, start the process up again. This prevents overflow and machines from spewing items everywhere.",
+    "cabin.quest.472FB03D0E5A38D6.description2": "More concretely: When the output buffer exceeds 75%%, stop producing items. Once it reaches below 25%%, start the process up again. This prevents overflow and machines from spewing items everywhere.",
     "cabin.quest.472FB03D0E5A38D6.description3": "The Stockpile Switch is designed for this purpose exactly. ",
     "cabin.quest.472FB03D0E5A38D6.title": "Keeping Stock",
     "cabin.quest.4732465116D723EE.description1": "Compacta suficiente polvo para crear la altamente reactiva Carga de Hielo.",
