@@ -10,13 +10,15 @@ server-resource-packs/
 screenshots/
 downloads/
 modernfix/
+fancymenu_data/
+ESM/
 
 icon.png
 options.txt
 rhino.local.properties
 usercache.json
-username.json
-
+usernamecache.json
+emi.json
 
 # Pakku
 build/

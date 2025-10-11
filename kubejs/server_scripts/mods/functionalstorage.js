@@ -1,7 +1,7 @@
 if(Platform.isLoaded("functionalstorage")) {
     ServerEvents.recipes(event => {
-        zincMachine(event, Item.of("functionalstorage:storage_controller", 1), "minecraft:diamond")
-        zincMachine(event, Item.of("functionalstorage:controller_extension", 1), "minecraft:gold_ingot")
+        enderiumMachine(event, Item.of("functionalstorage:storage_controller", 1), "minecraft:diamond")
+        enderiumMachine(event, Item.of("functionalstorage:controller_extension", 1), "minecraft:gold_ingot")
         zincMachine(event, Item.of("functionalstorage:simple_compacting_drawer", 1), "create:mechanical_piston")
         zincMachine(event, Item.of("functionalstorage:compacting_drawer", 1), "create:sticky_mechanical_piston")
         enderiumMachine(event, Item.of("functionalstorage:fluid_1", 4))
