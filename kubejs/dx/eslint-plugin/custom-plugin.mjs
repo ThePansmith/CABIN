@@ -4,7 +4,6 @@
 
 import recipeSpacing from "./recipe-spacing.mjs"
 import multiblockDeclaration from "./multiblock-declaration.mjs"
-import callChains from "./call-chains.mjs"
 
 /**
  * Creates a custom ESLint plugin
@@ -24,8 +23,7 @@ function customPluginWithAllRulesError(name, rules) {
     }
 }
 
-export const MoniLabs = customPluginWithAllRulesError("moni-labs", {
+export const PanPack = customPluginWithAllRulesError("PanPack", {
     "recipe-spacing": recipeSpacing,
-    "multiblock-declaration": multiblockDeclaration,
-    "call-chains": callChains
+    "multiblock-declaration": multiblockDeclaration
 })
