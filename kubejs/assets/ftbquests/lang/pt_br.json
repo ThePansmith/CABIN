@@ -600,7 +600,7 @@
     "cabin.quest.46820FBDDDEE491E.title": "Entrega de Madeira",
     "cabin.quest.46F150CC9BE2D856.title": "1x Pérola do Ender",
     "cabin.quest.472FB03D0E5A38D6.description1": "Algumas das engenhocas a seguir envolvem itens largados no chão. Qualquer processo que não tiver um armazenamento interno para o caso de sobrecarga (itens esperando nas esteiras automaticamente, por exemplo), deve ter certos limites para a sua produção.",
-    "cabin.quest.472FB03D0E5A38D6.description2": "Mais especificamente: Quando o estoque de saída exceder 75%, pare de produzir. Quando ele chegar em 25%, comece a produzir novamente. Isso previne que as maquinas transbordem e joguem itens por toda parte.",
+    "cabin.quest.472FB03D0E5A38D6.description2": "Mais especificamente: Quando o estoque de saída exceder 75%%, pare de produzir. Quando ele chegar em 25%%, comece a produzir novamente. Isso previne que as maquinas transbordem e joguem itens por toda parte.",
     "cabin.quest.472FB03D0E5A38D6.description3": "O Interruptor de Limites é feito para esse exato proposito. ",
     "cabin.quest.472FB03D0E5A38D6.title": "Mantendo o Estoque",
     "cabin.quest.4732465116D723EE.description1": "Compacte o pó para criar uma Carga de Gelo extremamente reativa.",
