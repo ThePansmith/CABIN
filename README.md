@@ -10,7 +10,7 @@
 </h1>
 
 ## Features
- - On the latest version of create with new machines (Gold and Lead) and subchapters for the mechanics added in the 0.5 and 0.6 updates.
+ - On the latest version of create, with new machines (Gold and Lead) and subchapters for the mechanics added in the 0.5 and 0.6 updates.
  - New quality of life recipes, tweaks, quests and features, with features up to trial chambers being factored in.
  - [Dynamically loading compatibility scripts](https://github.com/ThePansmith/CABIN/blob/1.20.1/kubejs/server_scripts/server_compatability/_compatability_readme.md), allowing for lots of replay value.
  - A general cleanup of the modlist, making things run even faster.
@@ -30,5 +30,4 @@ Thank you!
 
 
 ## Contributing
-
-CABIN uses the same rules as Monifactory for contributing, so refer to [here](https://github.com/ThePansmith/Monifactory/blob/main/CONTRIBUTING.md) for info.
+CABIN uses Panpack template, so refer to [here](https://github.com/ThePansmith/PanPack) for setup.
