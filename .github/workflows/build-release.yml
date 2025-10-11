@@ -71,17 +71,17 @@ jobs:
             echo "tag=$tag" >> $GITHUB_OUTPUT
           fi
         
-          - name: Check pakku-lock.json in previous tag
-          id: check_pakku_lock_prev
-          shell: bash
-          run: |
-            if git cat-file -e ${{ steps.latest_tag.outputs.tag }}:./pakku-lock.json 2>/dev/null; then
-              echo "File pakku-lock.json found in previous tag"
-              echo "file_found=true" >> $GITHUB_OUTPUT
-            else
-              echo "File pakku-lock.json not found in previous tag"
-              echo "file_found=false" >> $GITHUB_OUTPUT
-            fi
+      - name: Check pakku-lock.json in previous tag
+        id: check_pakku_lock_prev
+        shell: bash
+        run: |
+          if git cat-file -e ${{ steps.latest_tag.outputs.tag }}:./pakku-lock.json 2>/dev/null; then
+            echo "File pakku-lock.json found in previous tag"
+            echo "file_found=true" >> $GITHUB_OUTPUT
+          else
+            echo "File pakku-lock.json not found in previous tag"
+            echo "file_found=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Check and copy pakku-lock.json from previous tag
         id: check_copy_lock
