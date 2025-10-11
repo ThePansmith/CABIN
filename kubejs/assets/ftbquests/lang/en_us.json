@@ -604,7 +604,7 @@
     "cabin.quest.46820FBDDDEE491E.title": "Wood Delivery",
     "cabin.quest.46F150CC9BE2D856.title": "1x Ender Pearl",
     "cabin.quest.472FB03D0E5A38D6.description1": "A few of the following contraptions involve dropping items on the ground. Whenever a process will not backstack on overflow (e.g. belt items waiting automatically), it is important to toggle the production at certain buffer thresholds.",
-    "cabin.quest.472FB03D0E5A38D6.description2": "More concretely: When the output buffer exceeds 75%, stop producing items. Once it reaches below 25%, start the process up again. This prevents overflow and machines from spewing items everywhere.",
+    "cabin.quest.472FB03D0E5A38D6.description2": "More concretely: When the output buffer exceeds 75%%, stop producing items. Once it reaches below 25%%, start the process up again. This prevents overflow and machines from spewing items everywhere.",
     "cabin.quest.472FB03D0E5A38D6.description3": "The Stockpile Switch is designed for this purpose exactly. ",
     "cabin.quest.472FB03D0E5A38D6.title": "Keeping Stock",
     "cabin.quest.4732465116D723EE.description1": "Compact enough powder back together to create the highly reactive Ice Charge.",
