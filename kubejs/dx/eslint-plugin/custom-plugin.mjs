@@ -1,8 +1,7 @@
 /**
- * Custom ESLint plugin for Monifactory's KubeJS
+ * Custom ESLint plugin for PanPack Template's KubeJS
  */
 
-import commentHeader from "./comment-header.mjs"
 import recipeSpacing from "./recipe-spacing.mjs"
 import multiblockDeclaration from "./multiblock-declaration.mjs"
 import callChains from "./call-chains.mjs"
@@ -26,8 +25,7 @@ function customPluginWithAllRulesError(name, rules) {
 }
 
 export const MoniLabs = customPluginWithAllRulesError("moni-labs", {
-//    "comment-header": commentHeader,
     "recipe-spacing": recipeSpacing,
     "multiblock-declaration": multiblockDeclaration,
-//    "call-chains": callChains
+    "call-chains": callChains
 })

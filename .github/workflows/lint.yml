@@ -1,0 +1,34 @@
+name: Autolint
+
+on:
+  workflow_call:
+
+jobs:
+  run-linters:
+    name: Lint KubeJS
+    runs-on: ubuntu-latest
+
+    defaults:
+        run:
+          working-directory: ./kubejs
+          
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v5.0.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Run linters
+        uses: rkuykendall/lint-action@master
+        with:
+          eslint_dir: ./kubejs
+          auto_fix: true
+          eslint: true
+          eslint_auto_fix: true
