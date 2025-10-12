@@ -25,7 +25,7 @@
 Thank you!
 
 ## Addon Mods (AKA Optional Compats)
-[Compatible Mods List](https://github.com/Mac10goesBRRRT/CABIN/blob/1.20.1/MOD_COMPAT.md)
+[Compatible Mods List](https://github.com/ThePansmith/CABIN/blob/1.20.1/MOD_COMPAT.md)
 
 
 
