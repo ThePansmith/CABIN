@@ -2,7 +2,6 @@
 <html>
 <head>
 </head>
-
 <body>
 <h1> Addon Mods (AKA Optional Compats)</h1>
 <p>To spice up your runs, you can add any of the following mods to your <code>minecraft/mods</code> folder for their recipes and config files to be automatically altered for compatibility with CABIN. If there is a mod that you think could fit on this list, look at <a href="https://github.com/ThePansmith/CABIN/blob/1.20.1/kubejs/server_scripts/server_compatability/_compatability_readme.md">this</a> and feel free to make a PR.</p>
