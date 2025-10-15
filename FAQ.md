@@ -43,7 +43,7 @@ By default, CABIN only supports the mods included with it, and has *[optional co
 
 **Q. How do I add optional compat mods?**
 
-[Instructions can be found here](https://github.com/ThePansmith/CABIN/blob/1.20.1/mods/compat.md)
+[Instructions can be found here](https://github.com/ThePansmith/CABIN/blob/1.20.1/MOD_COMPAT.md)
 
 **Q. How do I write optional compat mod scripts?**
 
