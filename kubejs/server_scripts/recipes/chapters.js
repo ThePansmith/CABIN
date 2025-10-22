@@ -513,8 +513,6 @@ ServerEvents.recipes(event => {
     // - - - - - Chapter 2b - - - - -
 
     // Logistic Mechanisms
-    // TODO: make the line for this, uses above as a placeholder
-
 
     // Liquid Pulp
     event.custom({
@@ -551,7 +549,7 @@ ServerEvents.recipes(event => {
                 "type": "create:filling",
                 "ingredients": [
                     { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "kubejs:liquid_pulp", "amount": 200 }
+                    { "fluid": "kubejs:liquid_pulp", "amount": 30 }
                 ],
                 "results": [
                     { "item": "kubejs:incomplete_logistic_mechanism" }
@@ -561,7 +559,7 @@ ServerEvents.recipes(event => {
                 "type": "create:filling",
                 "ingredients": [
                     { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "kubejs:liquid_pulp", "amount": 200 }
+                    { "fluid": "kubejs:liquid_pulp", "amount": 30 }
                 ],
                 "results": [
                     { "item": "kubejs:incomplete_logistic_mechanism" }
@@ -571,7 +569,7 @@ ServerEvents.recipes(event => {
                 "type": "create:filling",
                 "ingredients": [
                     { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "kubejs:liquid_pulp", "amount": 200 }
+                    { "fluid": "kubejs:liquid_pulp", "amount": 30 }
                 ],
                 "results": [
                     { "item": "kubejs:incomplete_logistic_mechanism" }
