@@ -1161,6 +1161,43 @@
             ]
         },
         {
+            "pakku_id": "Yk6Jn96WYpFHd06h",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "coroutil"
+            },
+            "name": {
+                "curseforge": "CoroUtil"
+            },
+            "id": {
+                "curseforge": "237749"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "coroutil-forge-1.20.1-1.3.7.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5096/38/coroutil-forge-1.20.1-1.3.7.jar",
+                    "id": "5096038",
+                    "parent_id": "237749",
+                    "hashes": {
+                        "sha1": "7f5f0b62a638b6053c95919cbe8c2bea2e0c93d0",
+                        "md5": "6fb9ccbe8c05c1da61c224d1127e9643"
+                    },
+                    "required_dependencies": [],
+                    "size": 64187,
+                    "date_published": "2024-02-10T13:46:20.167Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "ePQkcad0RFvG0Qik",
             "type": "MOD",
             "slug": {
@@ -6165,6 +6202,48 @@
                     "required_dependencies": [],
                     "size": 203313,
                     "date_published": "2024-03-17T14:18:46.477Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "uRPfmAESASQ89GHw",
+            "pakku_links": [
+                "Yk6Jn96WYpFHd06h"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "what-are-they-up-to"
+            },
+            "name": {
+                "curseforge": "What Are They Up To (Watut)"
+            },
+            "id": {
+                "curseforge": "945479"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "watut-forge-1.20.1-1.2.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6315/241/watut-forge-1.20.1-1.2.3.jar",
+                    "id": "6315241",
+                    "parent_id": "945479",
+                    "hashes": {
+                        "sha1": "d376debf1f96f37dbedf56919baeb7da2dcef9ab",
+                        "md5": "345d3ecdf94dffaa0e3ba55538c65f80"
+                    },
+                    "required_dependencies": [
+                        "237749"
+                    ],
+                    "size": 435496,
+                    "date_published": "2025-03-17T12:36:07.270Z"
                 }
             ]
         },
