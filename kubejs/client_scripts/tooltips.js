@@ -5,7 +5,7 @@ ItemEvents.tooltip(tooltip => {
     let not_consumed = (id) => tooltip.add(id, Text.translatable("item.kubejs.not_consumed_in_assembly"));
 
     tooltip.add("minecraft:redstone_ore", Text.translatable("item.minecraft.redstone_ore.tooltip"));
-    tooltip.add("minecraft:deepslate_redstone_ore", Text.translatable("item.minecraft.deepslate_redstone_ore.tooltip"));
+    tooltip.add("minecraft:deepslate_redstone_ore", Text.translatable("item.minecraft.redstone_ore.tooltip"));
     tooltip.add("supplementaries:ash", Text.translatable("item.supplementaries.ash.tooltip"));
     tooltip.add("functionalstorage:storage_controller", Text.translatable("item.functionalstorage.controller.tooltip"));
     tooltip.add("functionalstorage:controller_extension", Text.translatable("item.functionalstorage.controller_extension.tooltip"));
