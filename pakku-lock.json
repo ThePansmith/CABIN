@@ -4307,6 +4307,43 @@
             ]
         },
         {
+            "pakku_id": "VKP6D8Mot0KDWYgz",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "no-chat-reports"
+            },
+            "name": {
+                "curseforge": "No Chat Reports"
+            },
+            "id": {
+                "curseforge": "634062"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "NoChatReports-FORGE-1.20.1-v2.2.2.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4610/474/NoChatReports-FORGE-1.20.1-v2.2.2.jar",
+                    "id": "4610474",
+                    "parent_id": "634062",
+                    "hashes": {
+                        "sha1": "069396e689ae887d065c8d61b7945e685fbcc65b",
+                        "md5": "3153d1e860c6fefe6dac26efdb5c40c6"
+                    },
+                    "required_dependencies": [],
+                    "size": 272740,
+                    "date_published": "2023-06-26T14:50:49.010Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "7AtSJkLIhuD5Bt8x",
             "type": "MOD",
             "slug": {
