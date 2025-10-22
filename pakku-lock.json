@@ -1991,6 +1991,7 @@
         {
             "pakku_id": "IW7TNH5ine3INF2m",
             "type": "MOD",
+            "side": "CLIENT",
             "slug": {
                 "curseforge": "embeddium"
             },
@@ -4471,6 +4472,7 @@
         {
             "pakku_id": "2oVl2bGDduRt0OsH",
             "type": "MOD",
+            "side": "CLIENT",
             "slug": {
                 "curseforge": "oculus"
             },
@@ -5658,6 +5660,52 @@
                     ],
                     "size": 13602746,
                     "date_published": "2025-06-04T19:47:10.190Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "nNShmlN4UJE9m2y9",
+            "pakku_links": [
+                "KHlyAvnm4ZkBeevf",
+                "eNGNkActynnq7kA1",
+                "6LSVvymPWvqFWvsB"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "tconjei"
+            },
+            "name": {
+                "curseforge": "TConJEI"
+            },
+            "id": {
+                "curseforge": "974154"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "tconjei-1.20.1-1.5.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6841/685/tconjei-1.20.1-1.5.0.jar",
+                    "id": "6841685",
+                    "parent_id": "974154",
+                    "hashes": {
+                        "sha1": "ace07009488cb4251e522247d78de438253decac",
+                        "md5": "6adf9af2743d0805bbcd9e047792993e"
+                    },
+                    "required_dependencies": [
+                        "238222",
+                        "74072",
+                        "74924"
+                    ],
+                    "size": 42411,
+                    "date_published": "2025-08-03T04:07:04.020Z"
                 }
             ]
         },
