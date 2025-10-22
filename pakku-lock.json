@@ -6669,6 +6669,32 @@
                     "date_published": "2025-04-17T13:20:48.953Z"
                 }
             ]
+        },
+        {
+            "pakku_id": "hvio3b1nDGQ2BpSO",
+            "type": "MOD",
+            "slug": {
+                "github": "vercte/create-fix-unbreakables"
+            },
+            "name": {
+                "github": "create-fix-unbreakables"
+            },
+            "id": {
+                "github": "1080938098"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "github",
+                    "file_name": "create_fix_unbreakables-1.0.1-for-create-6.0.6.jar",
+                    "release_type": "release",
+                    "url": "https://github.com/vercte/create-fix-unbreakables/releases/download/1.0.1-1.20.1/create_fix_unbreakables-1.0.1-for-create-6.0.6.jar",
+                    "id": "307190804",
+                    "parent_id": "1080938098",
+                    "size": 161469,
+                    "date_published": "2025-10-22T05:11:35Z"
+                }
+            ]
         }
     ],
     "lockfile_version": 1
