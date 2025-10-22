@@ -232,6 +232,8 @@
     "item.kubejs.trial.special_info": "§7It's far cheaper than regular copper but does not oxidize. Perfect for base building!",
     "item.spirit_fire.info": "§7A mysterious fire that is capable of transmuation. Will never burn out.",
     "item.spirit_fire.creation": "§7Created by igniting Demon's Dream Fruit with Flint and Steel.",
+    "item.strainer.info": "§7A sifter capable of straining out sediments from water.",
+    "item.strainer.details": "§7Must be placed in still water to work.",
     "filled_map.fortress": "Fortress Locator Map",
     "cabin.ponder.tag.ponders": "CABIN",
     "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN",
