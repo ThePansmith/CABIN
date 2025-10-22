@@ -539,7 +539,7 @@ ServerEvents.recipes(event => {
                 "type": "create:filling",
                 "ingredients": [
                     { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "create:potion", "nbt": { "Bottle": "REGULAR", "Potion": "kubejs:haste" }, "amount": 250 }
+                    { "fluid": "create:potion", "nbt": { "Bottle": "REGULAR", "Potion": "kubejs:haste" }, "amount": 125 }
                 ],
                 "results": [
                     { "item": "kubejs:incomplete_logistic_mechanism" }
