@@ -206,7 +206,7 @@
     "item.kubejs.main_assembly": "§7Main Assembly: §6{0}",
     "item.kubejs.bonus_assembly": "§7Bonus Assembly: §6{0}",
     "item.kubejs.not_consumed_in_assembly": "§7Not consumed in the Assembly Process",
-    "item.minecraft.redstone_ore.tooltip": "§7Does not generate§6, crush Cinnabar to obtain Redstone.",
+    "item.minecraft.redstone_ore.tooltip": "§7Does not generate, crush Cinnabar to obtain Redstone.",
     "item.supplementaries.ash.tooltip": "Created by burning wooden materials in-world",
     "item.functionalstorage.controller.tooltip": "Allows automation to insert and extract from connected drawers",
     "item.functionalstorage.controller_extension.tooltip": "Serves as an extra point for automation to insert and extract items from if a drawer controller is present.",

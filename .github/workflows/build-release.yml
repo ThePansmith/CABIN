@@ -647,7 +647,7 @@ jobs:
         uses: hugoalh/send-discord-webhook-ghaction@v7.0.5
         with:
           key: ${{ secrets.discord-webhook  }}
-          username: "Panpack" # Change this!
+          username: "CABIN" # Change this!
           avatar_url: "https://media.forgecdn.net/avatars/thumbnails/899/846/64/64/638346046780138525.png" # Change this! (and the below curseforge url)
           content_links_no_embed: .+
           content: |
