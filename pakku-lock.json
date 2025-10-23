@@ -6798,7 +6798,7 @@
             "id": {
                 "github": "1080938098"
             },
-            "redistributable": false,
+            "redistributable": true,
             "files": [
                 {
                     "type": "github",
