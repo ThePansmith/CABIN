@@ -33,6 +33,7 @@ jobs:
       make_pr: ${{ steps.check.outputs.make_pr }}
       pakku-lock_changed: ${{ steps.filter.outputs.pakku-lock }}
       kubejs_changed: ${{ steps.filter.outputs.kubejs }}
+      webhook_present: ${{ steps.webhook.outputs.present }}
 
     steps:
       - name: Checkout
@@ -158,6 +159,16 @@ jobs:
               - 'pakku-lock.json'
             kubejs:
               - 'kubejs/**'
+
+      - name: Check for webhook
+        id: webhook
+        shell: bash
+        run: |
+          if [ "${{ secrets.discord-webhook }}" == '' ]; then
+          echo "present=false" >> $GITHUB_OUTPUT
+          else
+          echo "present=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Changelog Dev Parser
         id: changelog_dev
@@ -626,6 +637,7 @@ jobs:
     name: Discord Message
     needs: [info, release-github, release-curseforge]
     runs-on: ubuntu-latest
+    if: needs.info.outputs.webhook_present == 'true'
     steps:
 
       - name: Check for webhook
