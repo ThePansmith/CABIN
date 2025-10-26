@@ -576,8 +576,8 @@
 				type: "item"
 			}]
 			title: "{cabin.quest.6D900619B1967D72.title}"
-			x: -2.0d
-			y: -3.0d
+			x: 4.0d
+			y: 1.0d
 		}
 		{
 			description: [
@@ -656,7 +656,7 @@
 				type: "item"
 			}]
 			title: "{cabin.quest.087659F192F41C6E.title}"
-			x: 2.0d
+			x: -8.0d
 			y: 1.0d
 		}
 		{
@@ -823,23 +823,27 @@
 				""
 				"[\"\",{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description7\"},{\"color\":\"gold\",\"underlined\":true,\"bold\":1,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description8\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description.hover_text8\"}}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description9\"},{\"color\":\"gold\",\"underlined\":true,\"bold\":1,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description10\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description.hover_text10\"}}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description11\"}]"
 				""
-				"[\"\",{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description12\"},{\"underlined\":true,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description13\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"012E50977D8EEEDB\"}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description14\"}]"
+				"{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description12\"}"
+				"{@pagebreak}"
+				"{cabin.quest.012E50977D8EEEDB.description3}"
+				""
+				"{cabin.quest.012E50977D8EEEDB.description4}"
+				""
+				"{cabin.quest.012E50977D8EEEDB.description5}"
+				"{@pagebreak}"
+				"{cabin.quest.012E50977D8EEEDB.description6}"
+				""
+				"{cabin.quest.012E50977D8EEEDB.description7}"
 			]
 			id: "3A428CA43D545DB9"
-			rewards: [{
-				count: 10
-				id: "7C8E00A7AB9B9A97"
-				item: "thermal:silver_coin"
-				type: "item"
-			}]
 			tasks: [{
 				id: "3B501EA544B81E73"
 				item: "minecraft:crafting_table"
 				type: "item"
 			}]
 			title: "{cabin.quest.3A428CA43D545DB9.title}"
-			x: 4.0d
-			y: 1.0d
+			x: -2.0d
+			y: -3.0d
 		}
 		{
 			description: [
@@ -851,58 +855,27 @@
 			]
 			id: "522065CE0A5CE9D2"
 			rewards: [{
+				count: 4
 				id: "4462C2F952734045"
-				item: "minecraft:white_wool"
-				random_bonus: 2
+				item: {
+					Count: 1
+					id: "aquaculture:worm"
+					tag: {
+						Damage: 0
+					}
+				}
+				random_bonus: 4
 				type: "item"
 			}]
 			tasks: [{
 				id: "7BC3D3EBF0897C0F"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "minecraft:beds"
-					}
-				}
+				item: "aquaculture:tackle_box"
 				title: "Any #minecraft:beds"
 				type: "item"
 			}]
 			title: "{cabin.quest.522065CE0A5CE9D2.title}"
-			x: -8.0d
+			x: 2.0d
 			y: 1.0d
-		}
-		{
-			description: [
-				"{cabin.quest.012E50977D8EEEDB.description1}"
-				""
-				"[\"\",{\"translate\":\"cabin.quest.012E50977D8EEEDB.rich_description1\"},{\"underlined\":true,\"translate\":\"cabin.quest.012E50977D8EEEDB.rich_description2\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"3A428CA43D545DB9\"}},{\"translate\":\"cabin.quest.012E50977D8EEEDB.rich_description3\"}]"
-				""
-				"{cabin.quest.012E50977D8EEEDB.description3}"
-				""
-				"{cabin.quest.012E50977D8EEEDB.description4}"
-				""
-				"{cabin.quest.012E50977D8EEEDB.description5}"
-				"{@pagebreak}"
-				"{cabin.quest.012E50977D8EEEDB.description6}"
-				""
-				"{cabin.quest.012E50977D8EEEDB.description7}"
-			]
-			id: "012E50977D8EEEDB"
-			rewards: [{
-				count: 2
-				id: "1F6629D42E4EA61E"
-				item: "create:factory_gauge"
-				type: "item"
-			}]
-			tasks: [{
-				id: "4ED96F63CB45184C"
-				item: "create:factory_gauge"
-				type: "item"
-			}]
-			title: "{cabin.quest.012E50977D8EEEDB.title}"
-			x: 5.0d
-			y: 3.0d
 		}
 	]
 	title: "{cabin.chapter.0D0BC5B3F6623669.title}"
