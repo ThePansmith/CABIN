@@ -161,7 +161,7 @@ StartupEvents.registry("block", event => {
     event.create("fluix_casing").textureAll("cabin:block/fluix_casing").soundType("metal").tagBlock("mineable/pickaxe").tagBlock("create:wrench_pickup").requiresTool(true).hardness(3.0).displayName("Fluix Casing")
 
     event.create("fluid_drawer_casing", "cardinal").textureAll("cabin:block/fluid_drawer_casing").soundType("metal").tagBlock("mineable/pickaxe").hardness(3.0).requiresTool(true).displayName("Fluid Drawer (Casing)")
- 
+
     event.create("computation_matrix").model("cabin:block/computation_matrix").soundType("lantern").hardness(0.1).displayName("Computation Matrix").fullBlock(false).notSolid().box(1,1,1,15,15,15).waterlogged().opaque(false).lightLevel(7).renderType("translucent")
         .item(i=>{i.rarity("uncommon")})
 
