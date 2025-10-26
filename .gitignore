@@ -6,6 +6,7 @@ logs/
 crash-reports/
 backups/
 resourcepacks/
+!resourcepacks/CABIN/
 server-resource-packs/
 screenshots/
 downloads/

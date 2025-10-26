@@ -8,7 +8,7 @@ if(Platform.isLoaded("balancedflight")) {
             event.recipes.create.deploying("kubejs:incomplete_flight_anchor", ["kubejs:incomplete_flight_anchor", "kubejs:inductive_mechanism"]),
             event.recipes.create.deploying("kubejs:incomplete_flight_anchor", ["kubejs:incomplete_flight_anchor", "kubejs:inductive_mechanism"]),
             event.recipes.create.deploying("kubejs:incomplete_flight_anchor", ["kubejs:incomplete_flight_anchor", "create:shaft"]),
-            event.recipes.create.deploying("kubejs:incomplete_flight_anchor", ["kubejs:incomplete_flight_anchor", Platform.isLoaded("magicfeather") ? "magicfeather:magicfeather" : "minecraft:elytra"]),
+            event.recipes.create.deploying("kubejs:incomplete_flight_anchor", ["kubejs:incomplete_flight_anchor", Platform.isLoaded("create_jetpack") ? "create_jetpack:jetpack" : "minecraft:elytra"]),
         ]).loops(1)
             .transitionalItem("kubejs:incomplete_flight_anchor")
             .id("kubejs:compat/balancedflight/flight_anchor")
