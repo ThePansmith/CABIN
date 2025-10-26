@@ -104,7 +104,7 @@ ItemEvents.tooltip(tooltip => {
             text.add(2, Text.translatable("item.dynamo.info"));
             text.add(3, Text.translatable("item.dynamo.placement"));
             text.add(4, Text.translatable("item.dynamo.details"));
-            
+
         }
     });
 
