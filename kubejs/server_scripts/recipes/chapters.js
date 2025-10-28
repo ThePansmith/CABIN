@@ -572,12 +572,12 @@ ServerEvents.recipes(event => {
             transitionalItem: { item: "kubejs:incomplete_logistic_mechanism" }
         }).id(recipeId);
     }
-    
+
     // Usage:
     logisticMechanismRecipe(event, "create:potion", "kubejs:logistic_mechanism");
     logisticMechanismRecipe(event, "tconstruct:potion", "kubejs:logistic_mechanism_duplicate");
     logisticMechanismRecipe(event, "cofh_core:potion", "kubejs:logistic_mechanism_duplicate_2");
-    
+
 
     donutCraft(event, "kubejs:lead_machine", "kubejs:lead_casing", "kubejs:logistic_mechanism")
 
