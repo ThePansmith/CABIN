@@ -817,7 +817,7 @@
     "cabin.quest.01BE1A7FCE79C63D.description1": "为了生产火药,骨粉和末影粉; 奇特的黏液蕨可以作为怪物农场的替代品。",
     "cabin.quest.23F9DB562ED7C2F6.title": "1x 肋骨",
     "cabin.quest.08DB1CFAE4555525.title": "更多树苗收集",
-    "cabin.quest.472FB03D0E5A38D6.description2": "具体操作如下：输出缓冲区>=75%时停止生产；缓冲区<=25%时重启生产。此举可有效防止产线上物品溢出导致的到处喷溅问题。",
+    "cabin.quest.472FB03D0E5A38D6.description2": "具体操作如下：输出缓冲区>=75%%时停止生产；缓冲区<=25%%时重启生产。此举可有效防止产线上物品溢出导致的到处喷溅问题。",
     "cabin.quest.53735DC4231AB566.title": "砂中铁痕",
     "cabin.quest.42B615F7BECA6E58.description3": "- &a试剂提取机&f可以颠倒此过程。",
     "cabin.quest.70EBB5E32545ACEC.title": "16x 焦褐石头",
