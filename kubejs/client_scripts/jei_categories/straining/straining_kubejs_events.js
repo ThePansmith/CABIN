@@ -5,6 +5,8 @@ JEIAddedEvents.registerCategories((event) => {
         global.jeiCategories.straining.loadResources(guiHelper);
 
         category.title("Straining")
+            .setWidth(146)
+            .setHeight(30)
             .background(guiHelper.createBlankDrawable(146, 30))
             .icon(guiHelper.createDrawableItemStack(Item.of("mbd2:strainer")))
             .setIsRecipeHandledByCategory((recipe) => {

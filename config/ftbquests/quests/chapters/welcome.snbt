@@ -198,11 +198,6 @@
 					item: "create:clipboard"
 					type: "item"
 				}
-				{
-					id: "3EC88C8847EC47A2"
-					item: "tconstruct:materials_and_you"
-					type: "item"
-				}
 			]
 			shape: "hexagon"
 			size: 1.5d

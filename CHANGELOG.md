@@ -1,10 +1,28 @@
 # Changelog
 
+## [2.0.11]
+### Changes
+* Updated Create to 6.0.6, thanks to Fix Unbreakables in Create 6.0.6
+* Added and udated various other mods, see below
+  * Added TConJEI, to be able to easily see TCon materials and abilities 
+* Decreased logistic mechanism cost
+* Added a tooltip for the strainer 
+* Added coloring to various tooltips
+* Updated Questbook
+
+### Fixes
+* Fixed Darkmodeeverywhere button overlapping with other buttons
+* Strainer is no longer waterloggable
+* Fixed Stainer and Alchemy JEI tabs
+* Spelling fixes
+* Fixed a broken link
+
+
 ## [2.0.10]
 ### Changes
-- Now using Panpack template, among backend changes, this also includes a new serverpack that should be easier to use
-- Updated localization files
-- Updated Questbook
+* Now using Panpack template, among backend changes, this also includes a new serverpack that should be easier to use
+* Updated localization files
+* Updated Questbook
 
 ## [2.0.9]
 ### Changes

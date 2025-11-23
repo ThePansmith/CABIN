@@ -527,57 +527,57 @@ ServerEvents.recipes(event => {
         ]
     })
 
-    event.custom({
-        "type": "create:sequenced_assembly",
-        "ingredient": { "item": "create:precision_mechanism" },
-        "loops": 4,
-        "results": [
-            { "item": "kubejs:logistic_mechanism" }
-        ],
-        "sequence": [
-            {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "create:potion", "nbt": { "Bottle": "REGULAR", "Potion": "kubejs:haste" }, "amount": 125 }
-                ],
-                "results": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" }
-                ]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "kubejs:liquid_pulp", "amount": 30 }
-                ],
-                "results": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" }
-                ]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "kubejs:liquid_pulp", "amount": 30 }
-                ],
-                "results": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" }
-                ]
-            },
-            {
-                "type": "create:filling",
-                "ingredients": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" },
-                    { "fluid": "kubejs:liquid_pulp", "amount": 30 }
-                ],
-                "results": [
-                    { "item": "kubejs:incomplete_logistic_mechanism" }
-                ]
-            }
-        ],
-        "transitionalItem": { "item": "kubejs:incomplete_logistic_mechanism" }
-    }).id("kubejs:logistic_mechanism")
+    function logisticMechanismRecipe(event, fluidType, recipeId) {
+        event.custom({
+            type: "create:sequenced_assembly",
+            ingredient: { item: "create:precision_mechanism" },
+            loops: 4,
+            results: [
+                { item: "kubejs:logistic_mechanism" }
+            ],
+            sequence: [
+                {
+                    type: "create:filling",
+                    ingredients: [
+                        { item: "kubejs:incomplete_logistic_mechanism" },
+                        { fluid: "create:potion", nbt: { Bottle: "REGULAR", Potion: "kubejs:haste" }, amount: 125 }
+                    ],
+                    results: [{ item: "kubejs:incomplete_logistic_mechanism" }]
+                },
+                {
+                    type: "create:filling",
+                    ingredients: [
+                        { item: "kubejs:incomplete_logistic_mechanism" },
+                        { fluid: "kubejs:liquid_pulp", amount: 30 }
+                    ],
+                    results: [{ item: "kubejs:incomplete_logistic_mechanism" }]
+                },
+                {
+                    type: "create:filling",
+                    ingredients: [
+                        { item: "kubejs:incomplete_logistic_mechanism" },
+                        { fluid: "kubejs:liquid_pulp", amount: 30 }
+                    ],
+                    results: [{ item: "kubejs:incomplete_logistic_mechanism" }]
+                },
+                {
+                    type: "create:filling",
+                    ingredients: [
+                        { item: "kubejs:incomplete_logistic_mechanism" },
+                        { fluid: "kubejs:liquid_pulp", amount: 30 }
+                    ],
+                    results: [{ item: "kubejs:incomplete_logistic_mechanism" }]
+                }
+            ],
+            transitionalItem: { item: "kubejs:incomplete_logistic_mechanism" }
+        }).id(recipeId);
+    }
+
+    // Usage:
+    logisticMechanismRecipe(event, "create:potion", "kubejs:logistic_mechanism");
+    logisticMechanismRecipe(event, "tconstruct:potion", "kubejs:logistic_mechanism_duplicate");
+    logisticMechanismRecipe(event, "cofh_core:potion", "kubejs:logistic_mechanism_duplicate_2");
+
 
     donutCraft(event, "kubejs:lead_machine", "kubejs:lead_casing", "kubejs:logistic_mechanism")
 

@@ -171,7 +171,6 @@
     "item.kubejs.bonus_assembly": "§7Montaje Bonus: §6{0}",
     "item.kubejs.not_consumed_in_assembly": "§7No se Consume en el Proceso de Montaje",
     "item.minecraft.redstone_ore.tooltip": "§7No se genera, fresa Cinabrio para Obtener Redstone.",
-    "item.minecraft.deepslate_redstone_ore.tooltip": "§7No se genera, fresa Cinabrio para Obtener Redstone.",
     "item.supplementaries.ash.tooltip": "Creado Quemando Materiales de Madera en el Mundo",
     "item.functionalstorage.controller.tooltip": "Permite automatizar la inserción y extracción de cajones conectados",
     "item.functionalstorage.controller_extension.tooltip": "Sirve como punto adicional para que la automatización inserte y extraiga artículos si hay un controlador de cajón.",
@@ -253,5 +252,7 @@
     "block.kubejs.trial_copper_grate_exposed": "Illusionary Exposed Copper Grate",
     "block.kubejs.trial_weathered_cut_copper": "Illusionary Weathered Cut Copper",
     "block.kubejs.trial_weathered_cut_copper_stairs": "Illusionary Weathered Cut Copper Stairs",
-    "ftbquests.book.tooltip": "La pestaña de misiones también puede ser abierta con la tecla asignada."
+    "ftbquests.book.tooltip": "La pestaña de misiones también puede ser abierta con la tecla asignada.",
+    "item.strainer.details": "§6Must be placed in §estill water§6 to work.",
+    "item.strainer.info": "§6A sifter capable of §estraining out sediments§6 from water."
 }

@@ -5,6 +5,8 @@ JEIAddedEvents.registerCategories((event) => {
         global.jeiCategories.alchemy.loadResources(guiHelper);
 
         category.title("Alchemical Laser")
+            .setWidth(146)
+            .setHeight(70)
             .background(guiHelper.createBlankDrawable(146, 70))
             .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:alchemical_laser")))
             .setIsRecipeHandledByCategory((recipe) => {

@@ -87,8 +87,8 @@ ServerEvents.recipes(event => {
         })
     })
 
-    enderiumMachine(event, Item.of("sophisticatedstorage:controller", 1), "functionalstorage:storage_controller")
-    enderiumMachine(event, Item.of("sophisticatedstorage:controller", 1), "functionalstorage:controller_extension")
+    enderiumMachine(event, Item.of("sophisticatedstorage:controller", 1), "minecraft:emerald")
+    enderiumMachine(event, Item.of("sophisticatedstorage:storage_link", 1), "thermal:lead_ingot")
     leadMachine(event, Item.of("sophisticatedstorage:storage_input", 1))
     leadMachine(event, Item.of("sophisticatedstorage:storage_output", 1))
 
