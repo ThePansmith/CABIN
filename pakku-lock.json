@@ -195,12 +195,12 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7240/735/amendments-1.20-2.2.3.jar",
-                    "id": "7240735",
+                    "url": "https://edge.forgecdn.net/files/7049/560/amendments-1.20-2.2.3.jar",
+                    "id": "7049560",
                     "parent_id": "896746",
                     "hashes": {
-                        "sha1": "70f46de146e959d6abb4346a0ac7dfb04475d239",
-                        "md5": "b1013e74d5c4ef229d93bf571968a1f0"
+                        "sha1": "c328e0a49a4e3366b2621d84c64ac87582bafde1",
+                        "md5": "b3ec084bc7ebd6bed6729d9eb321668f"
                     },
                     "required_dependencies": [
                         "499980"
