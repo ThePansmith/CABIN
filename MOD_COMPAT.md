@@ -80,6 +80,21 @@
         <p>Create: Diesel Generators introduces diesel-powered generators for Create, providing a new energy source for your factories.</p>
     </td>
   </tr>
+    <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-mobile-packages">Create: Mobile Packages</a></td>
+    <td>SC</td>
+    <td>Adds Bee Ports and Robo Bees to air deliver Create-mod packages to both ports and players.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-balanced-flight-forked">Create: Balanced Flight</a></td>
+    <td>SC</td>
+    <td>Introduces the Ascended Flight Ring for creative-style flight and a Flight Anchor for limited-area, Create-powered flight.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-factory-logistics">Create: Factory Logistics</a></td>
+    <td>SC</td>
+    <td>Adds fluid package logistics to Create; jars to transport liquids, a Bottler, and fluid gauges.</td>
+  </tr>
     <td><p><a href="https://curseforge.com/projects/815548">Integrated Strongholds</a></p></td>
     <td><p>*SC</p></td>
     <td>
