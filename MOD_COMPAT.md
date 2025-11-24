@@ -88,12 +88,17 @@
   <tr>
     <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-balanced-flight-forked">Create: Balanced Flight</a></td>
     <td>SC</td>
-    <td>Introduces the Ascended Flight Ring for creative-style flight and a Flight Anchor for limited-area, Create-powered flight.</td>
+    <td>Introduces the Flight Anchor for limited-area, Create-powered flight.</td>
   </tr>
   <tr>
     <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-factory-logistics">Create: Factory Logistics</a></td>
     <td>SC</td>
     <td>Adds fluid package logistics to Create; jars to transport liquids, a Bottler, and fluid gauges.</td>
+  </tr>
+    <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-steam-n-rails">Create: Steam 'n' Rails</a></td>
+    <td>SC</td>
+    <td>Adds a variety of new rail related tools and new rail types.</td>
   </tr>
     <td><p><a href="https://curseforge.com/projects/815548">Integrated Strongholds</a></p></td>
     <td><p>*SC</p></td>

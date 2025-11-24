@@ -1,5 +1,26 @@
 # Changelog
 
+## [Unreleased]
+### Changes
+ * Updated Create to 6.0.8
+ * Reworked Main Menu
+ * New textures for Ad Astra and Pretty Pipes
+
+## Tooltips, quests, and other info
+ * Tooltips now highlight when shift is pressed, like create tooltips
+ * Added to tooltips to a variety of items
+ * Reworked a bit of AE2's guidebook to match CABIN progression
+ * Added quest for EMI
+
+### Compat additions
+ * Added Create: Steam 'n' Rails Compat
+ * Added Create: Factory Logistics Compat
+ * Added Create: Mobile Packages compat
+ * Added Create: Balanced Flight Compat
+
+### Fixes
+* Fixed Logistic Mechanisms not working with Tinker's haste potion
+
 ## [2.0.11]
 ### Changes
 * Updated Create to 6.0.6, thanks to Fix Unbreakables in Create 6.0.6
