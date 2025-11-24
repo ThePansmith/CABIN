@@ -153,8 +153,8 @@ element {
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  hoverlabel = &6Github
-  label = Github
+  hoverlabel = {"placeholder":"local","values":{"key":"cabin_titlescreen_github_button_hover"}}
+  label = {"placeholder":"local","values":{"key":"cabin_titlescreen_github_button"}}
   navigatable = true
   widget_active_state_requirement_container_identifier = f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423
   [loading_requirement_container_meta:f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423] = [groups:][instances:]
@@ -218,8 +218,8 @@ element {
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  hoverlabel = &6Addon Mods
-  label = Addon Mods
+  hoverlabel = {"placeholder":"local","values":{"key":"cabin_titlescreen_addons_button_hover"}}
+  label = {"placeholder":"local","values":{"key":"cabin_titlescreen_addons_button"}}
   navigatable = true
   widget_active_state_requirement_container_identifier = f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423
   [loading_requirement_container_meta:f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423] = [groups:][instances:]
@@ -283,8 +283,8 @@ element {
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  hoverlabel = &6Patreon
-  label = Patreon
+  hoverlabel = {"placeholder":"local","values":{"key":"cabin_titlescreen_patreon_button_hover"}}
+  label = {"placeholder":"local","values":{"key":"cabin_titlescreen_patreon_button"}}
   navigatable = true
   widget_active_state_requirement_container_identifier = f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423
   [loading_requirement_container_meta:f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423] = [groups:][instances:]
@@ -348,8 +348,8 @@ element {
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  hoverlabel = &6FaQ
-  label = FaQ
+  hoverlabel = {"placeholder":"local","values":{"key":"cabin_titlescreen_faq_button_hover"}}
+  label = {"placeholder":"local","values":{"key":"cabin_titlescreen_faq_button"}}
   navigatable = true
   widget_active_state_requirement_container_identifier = f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423
   [loading_requirement_container_meta:f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423] = [groups:][instances:]
@@ -413,8 +413,8 @@ element {
   nine_slice_custom_background = false
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  hoverlabel = &6Return
-  label = Return
+  hoverlabel = {"placeholder":"local","values":{"key":"cabin_titlescreen_back_to_menu_button_hover"}}
+  label = {"placeholder":"local","values":{"key":"cabin_titlescreen_back_to_menu_button"}}
   navigatable = true
   widget_active_state_requirement_container_identifier = f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423
   [loading_requirement_container_meta:f81aea9f-c2a4-40ea-b3bf-93165e71fcdf-1761684525423] = [groups:][instances:]
@@ -594,7 +594,7 @@ element {
 
 element {
   interactable = false
-  source = Version DEV
+  source = {"placeholder":"local","values":{"key":"cabin_titlescreen_version"}} DEV
   source_mode = direct
   shadow = true
   scale = 1.0
@@ -664,4 +664,3 @@ element {
   horizontal_tilt_degrees = 0.0
   advanced_horizontal_tilt_mode = false
 }
-
