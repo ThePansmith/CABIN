@@ -190,8 +190,8 @@ StartupEvents.registry("block", event => {
     machine("Andesite", "solid").tagBlock("mineable/axe").box(0, 0, 3, 16, 16, 16).box(3, 14, 3, 13, 18, 17)
     machine("Brass", "translucent").tagBlock("mineable/axe").box(0, 0, 0, 16, 4, 16).box(0, 0, 3, 16, 10, 13).box(8, 3, 4, 16, 16, 16).box(1, 10, 5, 7, 21, 11)
     machine("Copper", "cutout").tagBlock("mineable/axe").box(0, 0, 0, 16, 4, 16).box(1.9, 2, -2, 14.9, 10, 10).box(6, 4, 6, 16, 20, 16).box(0, 4, 6, 10, 24, 16)
-    machine("Gold", "solid").tagBlock("mineable/axe").box(0, 0, 0, 16, 3, 16).box(0, 3, 0, 12, 16, 8).box(0, 3, 8, 10, 14, 16).box(12, 3, 1, 16, 10, 16)
-    machine("Lead", "cutout").box(0, 0, 1, 16, 2, 15).box(1, 2, 7, 14, 14, 15).box(0, 2, 0, 7, 9, 12).box(10, 0, 8, 16, 11, 16).box(7.5, 14, 8.5, 12.5, 21, 13.5)
+    machine("Gold", "cutout").tagBlock("mineable/axe").box(0, 0, 0, 16, 3, 16).box(0, 3, 0, 12, 16, 8).box(0, 3, 8, 10, 14, 16).box(12, 3, 1, 16, 10, 16)
+    machine("Lead", "translucent").box(0, 0, 1, 16, 2, 15).box(1, 2, 7, 14, 14, 15).box(0, 2, 0, 7, 9, 12).box(10, 0, 8, 16, 11, 16).box(7.5, 14, 8.5, 12.5, 21, 13.5)
     machine("Zinc", "cutout")
     machine("Enderium", "cutout")
 

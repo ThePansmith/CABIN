@@ -3,9 +3,9 @@
 	"parent": "block/block",
 	"textures": {
 		"0": "create:block/brass_casing",
-		"2": "thermal:block/trading_machine_side",
-		"3": "thermal:block/trading_machine_front",
-		"particle": "thermal:block/trading_machine_side"
+		"2": "thermal:block/machines/trading_machine_side",
+		"3": "thermal:block/machines/trading_machine",
+		"particle": "thermal:block/machines/trading_machine_side"
 	},
 	"elements": [
 		{
