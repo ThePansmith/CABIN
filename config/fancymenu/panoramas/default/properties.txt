@@ -1,7 +1,7 @@
 type = panorama
 
 panorama-meta {
-  name = name_of_your_panorama
+  name = default_panorama
   speed = 1.0
   fov = 85.0
   angle = 25.0
