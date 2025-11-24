@@ -279,8 +279,10 @@ ServerEvents.recipes(event => {
         goldMachine(event, Item.of("railways:semaphore", 4))
         goldMachine(event, Item.of("railways:conductor_whistle", 4))
         goldMachine(event, Item.of("railways:track_coupler", 2))
+        goldMachine(event, Item.of("railways:portable_fuel_interface", 2))
         goldMachine(event, Item.of("railways:track_switch_andesite", 1), "create:andesite_alloy")
         goldMachine(event, Item.of("railways:track_switch_brass", 1), "create:brass_ingot")
+        goldMachine(event, Item.of("railways:fuel_tank", 1), "create:fluid_tank")
     }
 
     // - - - - - Chapter 2 - - - - -
