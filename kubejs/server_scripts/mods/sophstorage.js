@@ -130,7 +130,8 @@ ServerEvents.recipes(event => {
 
     // Upgrades
     andesiteMachine(event, Item.of("sophisticatedstorage:hopper_upgrade", 2))
-    brassMachine(event, Item.of("sophisticatedstorage:advanced_hopper_upgrade", 2))
+
+    event.remove({ id: "sophisticatedstorage:advanced_hopper_upgrade" })
 
     // Remove Magnet upgrades
     event.remove({ id: "sophisticatedbackpacks:magnet_upgrade" })

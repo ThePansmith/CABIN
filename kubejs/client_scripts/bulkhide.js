@@ -191,6 +191,8 @@ JEIEvents.hideItems(event => {
     event.hide("sophisticatedstorage:magnet_upgrade")
     event.hide("sophisticatedstorage:advanced_magnet_upgrade")
 
+    event.hide("sophisticatedstorage:advanced_hopper_upgrade")
+
     event.hide('balancedflight:ascended_flight_ring')
 })
 
