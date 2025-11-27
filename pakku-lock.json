@@ -6127,16 +6127,16 @@
             ]
         },
         {
-            "pakku_id": "LI82ckrKYYVQm0tb",
+            "pakku_id": "KwEmOSz0mKpZhDPl",
             "type": "MOD",
             "slug": {
-                "curseforge": "trials-chambers-backport"
+                "curseforge": "trials-chambers-reuploaded"
             },
             "name": {
-                "curseforge": "Trials Chambers [1.20.1 Backport]"
+                "curseforge": "Trials Chambers Reuploaded"
             },
             "id": {
-                "curseforge": "1012027"
+                "curseforge": "1392862"
             },
             "files": [
                 {
@@ -6149,16 +6149,16 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6008/720/Trials-2.3.3.jar",
-                    "id": "6008720",
-                    "parent_id": "1012027",
+                    "url": "https://edge.forgecdn.net/files/7266/979/Trials-2.3.3.jar",
+                    "id": "7266979",
+                    "parent_id": "1392862",
                     "hashes": {
-                        "sha1": "606bf9c8cb50b6f8560f892af70387db037f2ca7",
-                        "md5": "af46de5d7e2cad2edb8d6873e51aba08"
+                        "sha1": "c76eee317d09b669d89e71fa82b426f50ae3f241",
+                        "md5": "2bab6c21a8a5efb5e2133ca3ff33aa19"
                     },
                     "required_dependencies": [],
-                    "size": 8337747,
-                    "date_published": "2024-12-20T22:23:51.857Z"
+                    "size": 8337744,
+                    "date_published": "2025-11-27T05:07:48.263Z"
                 }
             ]
         },
