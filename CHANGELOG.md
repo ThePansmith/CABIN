@@ -21,8 +21,10 @@
 ### Compat additions
  * Added Create: Steam 'n' Rails Compat
  * Added Create: Factory Logistics Compat
- * Added Create: Mobile Packages compat
+ * Added Create: Mobile Packages Compat
  * Added Create: Balanced Flight Compat
+ * Added Extra Gauges Compat
+ * Added Create: Railways Navigation Compat
 
 ### Fixes
 * Fixed Logistic Mechanisms not working with Tinker's haste potion
