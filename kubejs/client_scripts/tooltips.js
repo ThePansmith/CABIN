@@ -59,18 +59,18 @@ ItemEvents.tooltip(tooltip => {
 
     tooltip.addAdvanced(["/^kubejs:.+machine$/", "thermal:machine_frame", "ae2:controller"], (item, adv, text) => {
         if (!tooltip.shift) {
-            text.add(1, Text.translatable("item.kubejs.shift.summary"));
+            text.add(1, Text.translatable("item.kubejs.shift"));
         } else {
-            text.add(1, Text.translatable("item.kubejs.shift.summary"));
+            text.add(1, Text.translatable("item.kubejs.shift.active"));
             text.add(2, Text.translatable("item.kubejs.machine.details"));
             text.add(3, Text.translatable("item.kubejs.machine.transformation"));
         }
     });
     tooltip.addAdvanced(["/^kubejs:trial.+$/"], (item, adv, text) => {
         if (!tooltip.shift) {
-            text.add(1, Text.translatable("item.kubejs.shift.summary"));
+            text.add(1, Text.translatable("item.kubejs.shift"));
         } else {
-            text.add(1, Text.translatable("item.kubejs.shift.summary"));
+            text.add(1, Text.translatable("item.kubejs.shift.active"));
             text.add(2, Text.translatable("item.kubejs.trial.details"));
             text.add(3, Text.translatable("item.kubejs.trial.special_info"));
         }
@@ -78,9 +78,9 @@ ItemEvents.tooltip(tooltip => {
 
     tooltip.addAdvanced(["occultism:spirit_fire"], (item, adv, text) => {
         if (!tooltip.shift) {
-            text.add(1, Text.translatable("item.kubejs.shift.summary"));
+            text.add(1, Text.translatable("item.kubejs.shift"));
         } else {
-            text.add(1, Text.translatable("item.kubejs.shift.summary"));
+            text.add(1, Text.translatable("item.kubejs.shift.active"));
             text.add(2, Text.translatable("item.spirit_fire.info"));
             text.add(3, Text.translatable("item.spirit_fire.creation"));
         }
@@ -88,11 +88,22 @@ ItemEvents.tooltip(tooltip => {
 
     tooltip.addAdvanced(["mbd2:strainer"], (item, adv, text) => {
         if (!tooltip.shift) {
-            text.add(1, Text.translatable("item.kubejs.shift.summary"));
+            text.add(1, Text.translatable("item.kubejs.shift"));
         } else {
-            text.add(1, Text.translatable("item.kubejs.shift.summary"));
+            text.add(1, Text.translatable("item.kubejs.shift.active"));
             text.add(2, Text.translatable("item.strainer.info"));
             text.add(3, Text.translatable("item.strainer.details"));
+        }
+    });
+
+    tooltip.addAdvanced(["#thermal:dynamos"], (item, adv, text) => {
+        if (!tooltip.shift) {
+            text.add(1, Text.translatable("item.kubejs.shift"));
+        } else {
+            text.add(1, Text.translatable("item.kubejs.shift.active"));
+            text.add(2, Text.translatable("item.dynamo.info"));
+            text.add(3, Text.translatable("item.dynamo.placement"));
+            text.add(4, Text.translatable("item.dynamo.details"));
         }
     });
 

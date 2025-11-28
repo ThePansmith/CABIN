@@ -17,6 +17,8 @@
 	[Settings."Balancing Config"]
 		#Range: 0.0 ~ 10.0
 		"Anchor Distance Multiplier (0d -> 10d, default 1d)" = 1.0
+		#Range: > 0
+		"Anchor stress impact" = 256
 		"Disable Fall Damage Near Flight Anchor" = true
 		"Disable Fall Damage When Wearing Ascended Ring" = true
 

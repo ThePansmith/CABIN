@@ -1,5 +1,34 @@
 # Changelog
 
+## [Unreleased]
+### Changes
+ * Updated Create to 6.0.8, updated various other mods
+ * Reworked Main Menu
+  * Added a submenu with links to information
+  * Added an ingame changelog
+  
+### Texture work
+ * New textures for Ad Astra, Pretty Pipes, Fluxducts to better match their recipes
+ * Trading Station texture updated to match current brass textures and animated texture while active
+ * Machine models and Lead Casing clean up
+
+### Tooltips, quests, and other info
+ * Tooltips now highlight when shift is held, like create's tooltips
+ * Added tooltips to a variety of items
+ * Reworked a bit of AE2's guidebook to match CABIN progression
+ * Added quest for EMI
+
+### Compat additions
+ * Added Create: Steam 'n' Rails Compat
+ * Added Create: Factory Logistics Compat
+ * Added Create: Mobile Packages Compat
+ * Added Create: Balanced Flight Compat
+ * Added Extra Gauges Compat
+ * Added Create: Railways Navigation Compat
+
+### Fixes
+* Fixed Logistic Mechanisms not working with Tinker's haste potion
+
 ## [2.0.11]
 ### Changes
 * Updated Create to 6.0.6, thanks to Fix Unbreakables in Create 6.0.6

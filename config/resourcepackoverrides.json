@@ -3,15 +3,14 @@
   "failed_reloads_per_session": 5,
 
 	"default_packs": [
-    "vanilla",
+	"vanilla",
 	"mod_resources",
 	"Moonlight Mods Dynamic Assets",
-    "file/CABIN",
 	"file/Create Computers 1.2.1 - 1.20.1.zip",
-	"file/Create-Energistics-1.1.1-mc1.20.1.zip",
-	"file/CABIN - Create Energistics",
-	"file/Created Pretty Pipes1.0 FIXED.zip",
-	"file/CreateSophisticatedBackpacks.zip"
+	"file/moromoro's_create_style_prettypipes.zip",
+	"file/CreateSophisticatedBackpacks.zip",
+	"file/CABIN",
+	"file/CABIN Resource Pack Overrides"
   ],
 	"pack_overrides": {
 		"file/CABIN": {
@@ -20,22 +19,7 @@
 		"programer_art": {
 			"hidden": true
 		},
-		"file/Quark Programmer Art.zip": {
-			"force_compatible": true
-		},
-		"create_central_kitchen:create_styled": {
-			"force_compatible": true
-		},
-		"railways:green_signals": {
-			"force_compatible": true
-		},
-		"railways:legacy_palettes": {
-			"force_compatible": true
-		},
-		"railways:legacy_semaphore": {
-			"force_compatible": true
-		},
-		"file/Created Pretty Pipes1.0 FIXED.zip": {
+		"file/moromoro's_create_style_prettypipes.zip": {
 			"force_compatible": true
 		},
 		"file/CreateSophisticatedBackpacks.zip": {
