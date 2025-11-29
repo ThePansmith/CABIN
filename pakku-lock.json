@@ -4300,44 +4300,6 @@
             ]
         },
         {
-            "pakku_id": "7AtSJkLIhuD5Bt8x",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "noisium"
-            },
-            "name": {
-                "curseforge": "Noisium (archived)"
-            },
-            "id": {
-                "curseforge": "930207"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "noisium-forge-2.3.0+mc1.20-1.20.1.jar",
-                    "mc_versions": [
-                        "1.20.1",
-                        "1.20"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5650/506/noisium-forge-2.3.0+mc1.20-1.20.1.jar",
-                    "id": "5650506",
-                    "parent_id": "930207",
-                    "hashes": {
-                        "sha1": "7da1cdf00c0ae5cad31e17f765f6ea021c8ac808",
-                        "md5": "3a8e9a24408c991b3fb97685884f2cce"
-                    },
-                    "required_dependencies": [],
-                    "size": 218152,
-                    "date_published": "2024-08-21T17:24:11.600Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "FawyngDuGEvpTrTt",
             "pakku_links": [
                 "f9WuBylVHIVSgiOz"
