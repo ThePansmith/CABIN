@@ -2694,6 +2694,170 @@
             ]
         },
         {
+            "pakku_id": "yRxjEhbB97nWA38n",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fast-leaf-decay"
+            },
+            "name": {
+                "curseforge": "Fast Leaf Decay"
+            },
+            "id": {
+                "curseforge": "230976"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "FastLeafDecay-32.jar",
+                    "mc_versions": [
+                        "1.20.2",
+                        "1.20.1",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5375/681/FastLeafDecay-32.jar",
+                    "id": "5375681",
+                    "parent_id": "230976",
+                    "hashes": {
+                        "sha1": "4a76af4ca71dd9939d3c21206792c0d5f75b93a7",
+                        "md5": "20df3e3525622d6ea38a243be828ef38"
+                    },
+                    "required_dependencies": [],
+                    "size": 9835,
+                    "date_published": "2024-05-27T10:44:41.997Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "xMSoJBfcTqvhNiSu",
+            "pakku_links": [
+                "GAej5DkxIhlWIVDp"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fastfurnace"
+            },
+            "name": {
+                "curseforge": "FastFurnace"
+            },
+            "id": {
+                "curseforge": "299540"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "FastFurnace-1.20.1-8.0.2.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5181/98/FastFurnace-1.20.1-8.0.2.jar",
+                    "id": "5181098",
+                    "parent_id": "299540",
+                    "hashes": {
+                        "sha1": "b144b8599acd3fac3f8f9d31fa217a4a5b942f61",
+                        "md5": "48b8d2df29ea216a625928e29a6434da"
+                    },
+                    "required_dependencies": [
+                        "283644"
+                    ],
+                    "size": 6170,
+                    "date_published": "2024-03-14T05:38:15.720Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "O1fXflT1WZLpexLB",
+            "pakku_links": [
+                "GAej5DkxIhlWIVDp"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fastsuite"
+            },
+            "name": {
+                "curseforge": "FastSuite"
+            },
+            "id": {
+                "curseforge": "475117"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "FastSuite-1.20.1-5.1.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6318/54/FastSuite-1.20.1-5.1.0.jar",
+                    "id": "6318054",
+                    "parent_id": "475117",
+                    "hashes": {
+                        "sha1": "3a759dce0ddc91e299027faa800c0ee40ab90de8",
+                        "md5": "5308931eb0df44e4f39c06a7696f42ce"
+                    },
+                    "required_dependencies": [
+                        "283644"
+                    ],
+                    "size": 25305,
+                    "date_published": "2025-03-18T05:27:07.867Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "nHdXH7BEueda5S5y",
+            "pakku_links": [
+                "GAej5DkxIhlWIVDp"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fastworkbench"
+            },
+            "name": {
+                "curseforge": "FastWorkbench"
+            },
+            "id": {
+                "curseforge": "288885"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "FastWorkbench-1.20.1-8.0.4.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5101/229/FastWorkbench-1.20.1-8.0.4.jar",
+                    "id": "5101229",
+                    "parent_id": "288885",
+                    "hashes": {
+                        "sha1": "1a322a85e7c7024b8a0715c12d27b5ed0930d729",
+                        "md5": "2b55c4786cc726b0757689af28b97e7e"
+                    },
+                    "required_dependencies": [
+                        "283644"
+                    ],
+                    "size": 28188,
+                    "date_published": "2024-02-12T05:39:41.417Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "IAToPjG7nFm9oQ83",
             "type": "MOD",
             "slug": {
@@ -3697,47 +3861,6 @@
             ]
         },
         {
-            "pakku_id": "IPaplVEmC4bswM6c",
-            "pakku_links": [
-                "qGPmF8pAk8nV7ofC"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "leaves-be-gone"
-            },
-            "name": {
-                "curseforge": "Leaves Be Gone"
-            },
-            "id": {
-                "curseforge": "686435"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "LeavesBeGone-v8.0.0-1.20.1-Forge.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/4613/293/LeavesBeGone-v8.0.0-1.20.1-Forge.jar",
-                    "id": "4613293",
-                    "parent_id": "686435",
-                    "hashes": {
-                        "sha1": "c5043f862be7db76892c7c0c95d02fa3f8332af0",
-                        "md5": "68c6f0145c5f91511d20eca70efbeb8a"
-                    },
-                    "required_dependencies": [
-                        "495476"
-                    ],
-                    "size": 50042,
-                    "date_published": "2023-06-28T05:09:33.647Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "d3Nv5w6OykmuJyWQ",
             "pakku_links": [
                 "4b83MKA2zvMnWPcp"
@@ -4300,44 +4423,6 @@
             ]
         },
         {
-            "pakku_id": "7AtSJkLIhuD5Bt8x",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "noisium"
-            },
-            "name": {
-                "curseforge": "Noisium (archived)"
-            },
-            "id": {
-                "curseforge": "930207"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "noisium-forge-2.3.0+mc1.20-1.20.1.jar",
-                    "mc_versions": [
-                        "1.20.1",
-                        "1.20"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5650/506/noisium-forge-2.3.0+mc1.20-1.20.1.jar",
-                    "id": "5650506",
-                    "parent_id": "930207",
-                    "hashes": {
-                        "sha1": "7da1cdf00c0ae5cad31e17f765f6ea021c8ac808",
-                        "md5": "3a8e9a24408c991b3fb97685884f2cce"
-                    },
-                    "required_dependencies": [],
-                    "size": 218152,
-                    "date_published": "2024-08-21T17:24:11.600Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "FawyngDuGEvpTrTt",
             "pakku_links": [
                 "f9WuBylVHIVSgiOz"
@@ -4884,42 +4969,6 @@
                     ],
                     "size": 461444,
                     "date_published": "2025-08-09T16:57:29.777Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "qGPmF8pAk8nV7ofC",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "puzzles-lib"
-            },
-            "name": {
-                "curseforge": "Puzzles Lib"
-            },
-            "id": {
-                "curseforge": "495476"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6918/565/PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
-                    "id": "6918565",
-                    "parent_id": "495476",
-                    "hashes": {
-                        "sha1": "285b7c7616971338ccbe0022c9ea0f8ad3036aaf",
-                        "md5": "19f23e3040eaadc7c30ae38f5a3dec68"
-                    },
-                    "required_dependencies": [],
-                    "size": 1342987,
-                    "date_published": "2025-08-23T12:27:32.200Z"
                 }
             ]
         },

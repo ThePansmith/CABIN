@@ -17,7 +17,7 @@ if (Platform.isLoaded("createdieselgenerators")) {
         event.custom({
             "type": "createdieselgenerators:distillation",
             "ingredients": [
-                { "fluid": "thermal:crude_oil", "amount": 200 }
+                { "fluidTag": "forge:crude_oil", "amount": 200 }
             ],
             "heatRequirement": "heated",
             "processingTime": 200,
@@ -63,9 +63,7 @@ if (Platform.isLoaded("createdieselgenerators")) {
             C: "createdieselgenerators:wood_chip" // Now uses 9 instead of 4 in order to prevent duping exploits
         })
 
-        // Asphalt from Bucket
-        event.replaceInput({ id: "createdieselgenerators:crafting/asphalt_block" },
-            "createdieselgenerators:crude_oil_bucket",
-            "thermal:crude_oil_bucket")
+        // Misc
+        event.replaceInput({ mod: "createdieselgenerators" }, "minecraft:dried_kelp", "thermal:cured_rubber")
     })
 }
