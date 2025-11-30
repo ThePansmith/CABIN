@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [2.1.0]
 ### Changes
  * Updated Create to 6.0.8, updated various other mods
  * Reworked Main Menu
@@ -17,7 +17,9 @@
  * Tooltips now highlight when shift is held, like create's tooltips
  * Added tooltips to a variety of items
  * Reworked a bit of AE2's guidebook to match CABIN progression
- * Added quest for EMI and more
+ * Renamed BoP's rose quartz to blood quartz to set it apart from create's version
+ * Added quests for EMI and more
+ * Added a search alias for the configuration tool
 
 ### Compat additions
  * Added Create: Steam 'n' Rails Compat
