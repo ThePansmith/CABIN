@@ -6,7 +6,8 @@
  * Reworked Main Menu
   * Added a submenu with links to information
   * Added an ingame changelog
-  
+  * New loading screen Acey gif
+
 ### Texture work
  * New textures for Ad Astra, Pretty Pipes, Fluxducts to better match their recipes
  * Trading Station texture updated to match current brass textures and animated texture while active
@@ -16,14 +17,14 @@
  * Tooltips now highlight when shift is held, like create's tooltips
  * Added tooltips to a variety of items
  * Reworked a bit of AE2's guidebook to match CABIN progression
- * Added quest for EMI
+ * Added quest for EMI and more
 
 ### Compat additions
  * Added Create: Steam 'n' Rails Compat
  * Added Create: Factory Logistics Compat
  * Added Create: Mobile Packages Compat
  * Added Create: Balanced Flight Compat
- * Added Extra Gauges Compat
+ * Added Create: Extra Gauges Compat
  * Added Create: Railways Navigation Compat
    
 ### Fixes
