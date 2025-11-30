@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.1]
+### Changes
+ * Hotfix for curseforge not accepting CC:tweaked 1.116.2
+
 ## [2.1.0]
 ### Changes
  * Updated Create to 6.0.8, updated various other mods
