@@ -100,6 +100,16 @@
     <td>SC</td>
     <td>Adds a variety of new rail related tools and new rail types.</td>
   </tr>
+      <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-railways-navigator">Create: Railways Navigator</a></td>
+    <td>SC</td>
+    <td> Lists possible train connections in your world from one station to another using the Create Railways Navigator, as well as adding other features related to train navigation, such as route displays. </td>
+  </tr>
+      <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-extra-gauges">Create: Extra Gauges</a></td>
+    <td>SC</td>
+    <td>Adds extra gauges, for those wanting to take their walls to the next level.</td>
+  </tr>
     <td><p><a href="https://curseforge.com/projects/815548">Integrated Strongholds</a></p></td>
     <td><p>*SC</p></td>
     <td>

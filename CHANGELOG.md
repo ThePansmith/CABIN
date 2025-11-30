@@ -25,9 +25,11 @@
  * Added Create: Balanced Flight Compat
  * Added Extra Gauges Compat
  * Added Create: Railways Navigation Compat
-
+   
 ### Fixes
 * Fixed Logistic Mechanisms not working with Tinker's haste potion
+* Fixed Create: Diesel Generator Oil bug
+* Made Create: Power Loader Cheaper
 
 ## [2.0.11]
 ### Changes
