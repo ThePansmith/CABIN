@@ -6190,7 +6190,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "Trials-2.3.3.jar",
+                    "file_name": "Trials-2.3.4.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -6198,16 +6198,16 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7266/979/Trials-2.3.3.jar",
-                    "id": "7266979",
+                    "url": "https://edge.forgecdn.net/files/7280/359/Trials-2.3.4.jar",
+                    "id": "7280359",
                     "parent_id": "1392862",
                     "hashes": {
-                        "sha1": "c76eee317d09b669d89e71fa82b426f50ae3f241",
-                        "md5": "2bab6c21a8a5efb5e2133ca3ff33aa19"
+                        "sha1": "791368beed656939d39bf60250d2dae117eebfc2",
+                        "md5": "0c8eab21ffc934388af9775eb73a9f75"
                     },
                     "required_dependencies": [],
                     "size": 8337744,
-                    "date_published": "2025-11-27T05:07:48.263Z"
+                    "date_published": "2025-12-01T00:49:24.047Z"
                 }
             ]
         },
