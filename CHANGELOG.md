@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.2]
+### Changes
+ * Hotfix for curseforge not accepting the server builds because of Trial Chambers Reuploaded
+
 ## [2.1.1]
 ### Changes
  * Hotfix for curseforge not accepting CC:tweaked 1.116.2
