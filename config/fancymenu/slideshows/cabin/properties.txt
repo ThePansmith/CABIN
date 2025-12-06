@@ -1,0 +1,11 @@
+type = slideshow
+
+slideshow-meta {
+    name = cabin
+    width = 1080
+    height = 1080
+    x = 0
+    y = 0
+    duration = 5.0
+    fadespeed = 4.0
+}

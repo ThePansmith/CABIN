@@ -1,0 +1,29 @@
+forge_titlescreen_mods_button = Mods
+forge_titlescreen_mods_button_hover = &6Mods
+
+mc_titlescreen_multiplayer_button = Multiplayer
+mc_titlescreen_multiplayer_button_hover = &6Multiplayer
+mc_titlescreen_options_button = Options...
+mc_titlescreen_options_button_hover = &6Options...
+mc_titlescreen_quit_button = Quit Game
+mc_titlescreen_quit_button_hover = &6Quit &6Game
+mc_titlescreen_singleplayer_button = Singleplayer
+mc_titlescreen_singleplayer_button_hover = &6Singleplayer
+
+cabin_titlescreen_back_to_menu_button = Back to Menu
+cabin_titlescreen_back_to_menu_button_hover = &6Back &6to &6Menu
+cabin_titlescreen_credits_button = Credits
+cabin_titlescreen_credits_button_hover =  &6Credits
+cabin_titlescreen_discord_button = Discord
+cabin_titlescreen_discord_button_hover = &6Discord
+cabin_titlescreen_addons_button = Addon Mods
+cabin_titlescreen_addons_button_hover = &6Addon Mods
+cabin_titlescreen_faq_button = F.A.Q.
+cabin_titlescreen_faq_button_hover = &6F.A.Q.
+cabin_titlescreen_github_button = GitHub
+cabin_titlescreen_github_button_hover = &6GitHub
+cabin_titlescreen_extras_button = Extras
+cabin_titlescreen_extras_button_hover = &6Extras
+cabin_titlescreen_patreon_button = Patreon
+cabin_titlescreen_patreon_button_hover = &6Patreon
+cabin_titlescreen_version = Version

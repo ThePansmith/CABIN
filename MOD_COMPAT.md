@@ -80,6 +80,36 @@
         <p>Create: Diesel Generators introduces diesel-powered generators for Create, providing a new energy source for your factories.</p>
     </td>
   </tr>
+    <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-mobile-packages">Create: Mobile Packages</a></td>
+    <td>SC</td>
+    <td>Adds Bee Ports and Robo Bees to air deliver Create-mod packages to both ports and players.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-balanced-flight-forked">Create: Balanced Flight Forked</a></td>
+    <td>SC</td>
+    <td>Introduces the Flight Anchor for limited-area, Create-powered flight.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-factory-logistics">Create: Factory Logistics</a></td>
+    <td>SC</td>
+    <td>Adds fluid package logistics to Create; jars to transport liquids, a Bottler, and fluid gauges.</td>
+  </tr>
+    <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-steam-n-rails">Create: Steam 'n' Rails</a></td>
+    <td>SC</td>
+    <td>Adds a variety of new rail related tools and new rail types.</td>
+  </tr>
+      <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-railways-navigator">Create: Railways Navigator</a></td>
+    <td>SC</td>
+    <td> Lists possible train connections in your world from one station to another using the Create Railways Navigator, as well as adding other features related to train navigation, such as route displays. </td>
+  </tr>
+      <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-extra-gauges">Create: Extra Gauges</a></td>
+    <td>SC</td>
+    <td>Adds extra gauges, for those wanting to take their walls to the next level.</td>
+  </tr>
     <td><p><a href="https://curseforge.com/projects/815548">Integrated Strongholds</a></p></td>
     <td><p>*SC</p></td>
     <td>

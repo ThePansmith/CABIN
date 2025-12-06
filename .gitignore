@@ -6,12 +6,14 @@ logs/
 crash-reports/
 backups/
 resourcepacks/
+!resourcepacks/CABIN/
 server-resource-packs/
 screenshots/
 downloads/
 modernfix/
 fancymenu_data/
 ESM/
+panoramas/
 
 icon.png
 options.txt
