@@ -705,12 +705,20 @@
 				"{cabin.quest.667F4F686A45EF3E.description2}"
 			]
 			id: "667F4F686A45EF3E"
-			rewards: [{
-				count: 128
-				id: "72B61CAAE9A75F6F"
-				item: "create:track"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 16
+					id: "34C6FCF3D42F02EF"
+					item: "kubejs:reinforced_mechanism"
+					type: "item"
+				}
+				{
+					id: "7084C571180BD539"
+					item: "minecraft:obsidian"
+					random_bonus: 4
+					type: "item"
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
