@@ -172,8 +172,8 @@
     "item.kubejs.not_consumed_in_assembly": "§7在序列组装过程中不会被消耗",
     "item.minecraft.redstone_ore.tooltip": "§7不会自然生成, 粉碎朱砂以获取红石。",
     "item.supplementaries.ash.tooltip": "通过在世界中点燃木制材料获得",
-    "item.functionalstorage.controller.tooltip": "允许自动化系统从连接的抽屉中输入和输出物品",
-    "item.functionalstorage.controller_extension.tooltip": "如果存在抽屉控制器，它可以作为额外的接口供自动化系统输入和输出物品。",
+    "item.functionalstorage.controller.tooltip": "允许自动化系统从连接的抽屉中无线输入和输出物品",
+    "item.functionalstorage.controller_extension.tooltip": "如果存在存储控制器，它可以作为额外的接口供自动化系统输入和输出物品。",
     "item.kubejs.pureore.tooltip": "§7更纯净的矿石. §7只能在探险中发现。",
     "item.kubejs.accellerator_redstone.tooltip": "§7在炼金研究中使用时: §6放置在§e错误的§6槽位中的§e正确§6试剂不会被消耗",
     "item.kubejs.accellerator_glowstone.tooltip": "§7在炼金研究中使用时: §6放置在§e错误的§6槽位中的§e正确§6试剂不会被消耗",
@@ -187,7 +187,6 @@
     "item.kubejs.category.catalyst": "§8类型: §7催化剂",
     "item.structurescompass.structures_compass.tooltip": "§7右键激活",
     "item.reliquary.alkahestry_tome.tooltip": "§6无法在动力合成或混合搅拌中使用",
-    "item.kubejs.shift.summary": "§7按住[Shift]查看详情",
     "item.kubejs.machine.details": "§6一种可以§e转化§6为各种有用装置和小工具的机器框架。",
     "item.kubejs.machine.transformation": "§6自动化转换可以通过§e机械手§6或§e带有过滤的动力锯§6完成。",
     "item.kubejs.trial.details": "§6一种由§e铜§6与§e荧光物质§6反应生成的特殊材料。",
@@ -254,5 +253,11 @@
     "block.kubejs.trial_weathered_cut_copper_stairs": "锈蚀的切制幻象铜楼梯",
     "ftbquests.book.tooltip": "任务窗口可使用快捷键打开。",
     "item.strainer.details": "§6Must be placed in §estill water§6 to work.",
-    "item.strainer.info": "§6A sifter capable of §estraining out sediments§6 from water."
+    "item.strainer.info": "§6A sifter capable of §estraining out sediments§6 from water.",
+    "item.kubejs.shift": "§7Hold [Shift] for Summary",
+    "item.dynamo.info": "§6Dynamos generate §eredstone flux§6 from applicable fuels, which is used to power electric machinary.",
+    "item.kubejs.shift.active": "§7Hold [§fShift§7] for Summary",
+    "item.dynamo.details": "§6Must be §eactively producting§6 energy to export it.§6",
+    "item.dynamo.placement": "§6Redstone Flux is pushed from the §ered coil§6, and can be transported over distances with §efluxducts§6.",
+    "alias.emi.drawer_key": "Drawer Key"
 }
