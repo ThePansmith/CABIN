@@ -187,7 +187,6 @@
     "item.kubejs.category.catalyst": "§8Category: §7Catalyst",
     "item.structurescompass.structures_compass.tooltip": "§7Right-Click to Activate",
     "item.reliquary.alkahestry_tome.tooltip": "§6Cannot be used in Mechanical Crafting or Mixing",
-    "item.kubejs.shift.summary": "§7Hold [Shift] for Summary",
     "item.kubejs.machine.details": "§7A machine, able to be transformed into a variety of useful gadgets and gizmos.",
     "item.kubejs.machine.transformation": "§7Machine Transformation can be automated with a Deployer or a Filtered Saw.",
     "item.kubejs.trial.details": "§7An odd form of copper caused by a reaction between Copper and Lumisense.",
@@ -254,5 +253,11 @@
     "block.kubejs.trial_weathered_cut_copper_stairs": "Illusionary Weathered Cut Copper Stairs",
     "ftbquests.book.tooltip": "The quest window can also be opened with [`].",
     "item.strainer.details": "§6Must be placed in §estill water§6 to work.",
-    "item.strainer.info": "§6A sifter capable of §estraining out sediments§6 from water."
+    "item.strainer.info": "§6A sifter capable of §estraining out sediments§6 from water.",
+    "item.kubejs.shift": "§7Hold [Shift] for Summary",
+    "item.dynamo.info": "§6Dynamos generate §eredstone flux§6 from applicable fuels, which is used to power electric machinary.",
+    "item.kubejs.shift.active": "§7Hold [§fShift§7] for Summary",
+    "item.dynamo.details": "§6Must be §eactively producting§6 energy to export it.§6",
+    "item.dynamo.placement": "§6Redstone Flux is pushed from the §ered coil§6, and can be transported over distances with §efluxducts§6.",
+    "alias.emi.drawer_key": "Drawer Key"
 }
