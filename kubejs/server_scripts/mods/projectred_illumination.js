@@ -8,6 +8,18 @@ if (Platform.isLoaded("projectred_illumination")) {
             event.shapeless(lamp, [inverted])
         }
 
+        event.shaped(Item.of("projectred_illumination:illumar_smart_lamp", 1), [
+            " C ",
+            "RGB",
+            " S "
+        ], {
+            C: "#forge:glass/colorless",
+            R: "projectred_core:red_illumar",
+            G: "projectred_core:green_illumar",
+            B: "projectred_core:blue_illumar",
+            S: "minecraft:redstone"
+        })
+
         colours.forEach(c => {
             event.shaped(Item.of(`projectred_illumination:${c}_illumar_lamp`, 1), [
                 "G",
