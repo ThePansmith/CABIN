@@ -275,7 +275,7 @@ ServerEvents.recipes(event => {
     let experience = Item.of("create:experience_nugget", 1).withChance(0.75)
 
     let dust_process = (materialName, byproduct, ByproductName) => {
-        let crushedOre = "create:crushed_" + "raw_" + materialName
+        let crushedOre = "create:crushed_raw_" + materialName
         let oreTag = ("#forge:ores/" + materialName)
         let crushedOreBlockTag = ("#forge:storage_blocks/raw_" + materialName)
         let dustTag = ("#forge:dusts/" + materialName)
