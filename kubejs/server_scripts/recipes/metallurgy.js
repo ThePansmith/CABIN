@@ -344,6 +344,11 @@ ServerEvents.recipes(event => {
         event.recipes.create.crushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushedOre).id("kubejs:ore_processing/crushing/crushed/" + materialName)
         event.recipes.thermal.pulverizer([Item.of(dust, 6)], crushedOre, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed/" + materialName)
 
+        // 'crushed'/'raw' ore block to ore dust
+        event.recipes.create.milling([Item.of(dust, 18)], crushedOreBlockTag).id("kubejs:ore_processing/milling/crushed_block/" + materialName)
+        event.recipes.create.crushing([Item.of(dust, 18), Item.of(dust, 18).withChance(0.5)], crushedOreBlockTag).id("kubejs:ore_processing/crushing/crushed_block/" + materialName)
+        event.recipes.thermal.pulverizer([Item.of(dust, 48)], crushedOreBlockTag, 0.2, 6400).id("kubejs:ore_processing/pulverizing/crushed_block/" + materialName)
+
         // ore dust to nuggets
         event.smelting(Item.of(nugget, 1), dustTag).cookingTime(40).id("kubejs:ore_processing/smelting/dust/" + materialName)
 
