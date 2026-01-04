@@ -5,10 +5,18 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing([Item.of("thermal:sapphire", 2), Item.of("thermal:sapphire", 1).withChance(.25), experience,stone], "thermal:sapphire_ore")
     event.recipes.create.crushing([Item.of("thermal:ruby", 2), Item.of("thermal:ruby", 1).withChance(.25), experience,stone], "thermal:ruby_ore")
 
+    // cinnabar things :
+    // from gem to dust
     event.recipes.create.milling(Item.of("minecraft:redstone", 4), "thermal:cinnabar").processingTime(700)
     event.recipes.create.crushing(Item.of("minecraft:redstone", 6), "thermal:cinnabar").processingTime(500)
     event.remove({ id: "thermal:machines/pulverizer/pulverizer_cinnabar" })
     event.recipes.thermal.pulverizer(Item.of("minecraft:redstone", 8), "thermal:cinnabar", 0, 10000)
+    
+    // from gem block to dust
+    event.recipes.create.milling(Item.of("minecraft:redstone", 36), "thermal:cinnabar_block").processingTime(700)
+    event.recipes.create.crushing(Item.of("minecraft:redstone", 63), "thermal:cinnabar_block").processingTime(500)
+    event.recipes.thermal.pulverizer(Item.of("minecraft:redstone", 72), "thermal:cinnabar_block", 0, 10000)
+    // end
 
     event.recipes.create.milling("thermal:sulfur_dust", "#forge:gems/sulfur").processingTime(500)
     event.recipes.create.milling("thermal:niter_dust", "#forge:gems/niter").processingTime(500)
