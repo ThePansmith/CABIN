@@ -56,6 +56,8 @@ ServerEvents.recipes(event => {
     'thermal:cinnabar_ore',
     "#forge:ores/cinnabar"
     )
+    // Remove unused cinnabar dust
+    event.remove({ output: 'thermal:cinnabar_dust'})
 
     // Igneous Extruder recipes
     let bedrock_cobblegen = (adjacent, output) => {
