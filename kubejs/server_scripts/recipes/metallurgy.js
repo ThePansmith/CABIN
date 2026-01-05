@@ -82,6 +82,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: "tconstruct:smeltery/alloys/molten_bronze" })
     event.remove({ id: "tconstruct:smeltery/alloys/molten_brass" })
     event.remove({ id: "tconstruct:smeltery/alloys/molten_invar" })
+    event.remove({ id: "tconstruct:smeltery/alloys/molten_pewter" })
     event.remove({ id: "tconstruct:smeltery/alloys/molten_electrum" })
     event.remove({ id: "tconstruct:smeltery/alloys/molten_constantan" })
     event.remove({ id: "tconstruct:smeltery/alloys/molten_rose_gold" })
@@ -189,6 +190,19 @@ ServerEvents.recipes(event => {
         ],
         "result": {
             "fluid": "tconstruct:molten_bronze",
+            "amount": 270
+        },
+        "temperature": 1000
+    })
+
+    event.custom({
+        "type": "tconstruct:alloy",
+        "inputs": [
+            { "name": "tconstruct:molten_lead", "amount": 180 },
+            { "name": "tconstruct:molten_glass", "amount": 1000 }
+        ],
+        "result": {
+            "fluid": "tconstruct:molten_pewter",
             "amount": 270
         },
         "temperature": 1000

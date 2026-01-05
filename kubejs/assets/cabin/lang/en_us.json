@@ -258,5 +258,6 @@
     "cabin.profession.cooking": "Cooking",
     "cabin.profession.fishing": "Fishing",
     "cabin.profession.smithing": "Smithing",
-    "cabin.import.prefix": "Import: %s"
+    "cabin.import.prefix": "Import: %s",
+    "alias.emi.drawer_key": "Drawer Key"
 }

@@ -1,12 +1,21 @@
 # Changelog
 
-## [Unreleased]
+## [2.1.2]
+### Changes
+ * Hotfix for curseforge not accepting the server builds because of Trial Chambers Reuploaded
+
+## [2.1.1]
+### Changes
+ * Hotfix for curseforge not accepting CC:tweaked 1.116.2
+
+## [2.1.0]
 ### Changes
  * Updated Create to 6.0.8, updated various other mods
  * Reworked Main Menu
   * Added a submenu with links to information
   * Added an ingame changelog
-  
+  * New loading screen Acey gif
+
 ### Texture work
  * New textures for Ad Astra, Pretty Pipes, Fluxducts to better match their recipes
  * Trading Station texture updated to match current brass textures and animated texture while active
@@ -16,14 +25,16 @@
  * Tooltips now highlight when shift is held, like create's tooltips
  * Added tooltips to a variety of items
  * Reworked a bit of AE2's guidebook to match CABIN progression
- * Added quest for EMI
+ * Renamed BoP's rose quartz to blood quartz to set it apart from create's version
+ * Added quests for EMI and more
+ * Added a search alias for the configuration tool
 
 ### Compat additions
  * Added Create: Steam 'n' Rails Compat
  * Added Create: Factory Logistics Compat
  * Added Create: Mobile Packages Compat
  * Added Create: Balanced Flight Compat
- * Added Extra Gauges Compat
+ * Added Create: Extra Gauges Compat
  * Added Create: Railways Navigation Compat
    
 ### Fixes

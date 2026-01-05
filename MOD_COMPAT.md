@@ -86,7 +86,7 @@
     <td>Adds Bee Ports and Robo Bees to air deliver Create-mod packages to both ports and players.</td>
   </tr>
   <tr>
-    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-balanced-flight-forked">Create: Balanced Flight</a></td>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/create-balanced-flight-forked">Create: Balanced Flight Forked</a></td>
     <td>SC</td>
     <td>Introduces the Flight Anchor for limited-area, Create-powered flight.</td>
   </tr>

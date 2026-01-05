@@ -172,8 +172,8 @@
     "item.kubejs.not_consumed_in_assembly": "§7Não consumido no Processo de Montagem",
     "item.minecraft.redstone_ore.tooltip": "§7Não é gerado, moa Cinábrio para conseguir Redstone.",
     "item.supplementaries.ash.tooltip": "Criado a partir da queima da madeira no mundo",
-    "item.functionalstorage.controller.tooltip": "Permite automatização para inserir e extrair das gavetas conectadas",
-    "item.functionalstorage.controller_extension.tooltip": "Serve como um ponto extra de automatização para inserir e extrair itens se um controlador de gaveta estiver presente.",
+    "item.functionalstorage.controller.tooltip": "Permite a automatização das gavetas conectadas, podendo inserir ou retirar itens à distância",
+    "item.functionalstorage.controller_extension.tooltip": "Serve como um ponto a mais para inserir ou extrair itens se um controlador de gaveta estiver presente.",
     "item.kubejs.pureore.tooltip": "§7Um grau mais puro de minério. §7Somente pode ser encontrado explorando.",
     "item.kubejs.accellerator_redstone.tooltip": "§7Quando usado em um Pesquisa Alquímica: §6Um dos Reagentes §eCorretos §6em um espaço §eIncorreto §6não será consumido",
     "item.kubejs.accellerator_glowstone.tooltip": "§7Quando usado em um Pesquisa Alquímica: §6Um dos Reagentes §eCorretos §6em um espaço §eCorreto §6não será consumido",
@@ -187,7 +187,6 @@
     "item.kubejs.category.catalyst": "§8Categoria: §7Catalisador",
     "item.structurescompass.structures_compass.tooltip": "§7Botão Direito para Ativar",
     "item.reliquary.alkahestry_tome.tooltip": "§6Não pode ser usado em Fabricador Mecânico ou Misturando",
-    "item.kubejs.shift.summary": "§7Segure [Shift] para ver o Resumo",
     "item.kubejs.machine.details": "§6Uma máquina que pode ser §etransformada§6 em uma variedade de acessórios e engenhocas úteis.",
     "item.kubejs.machine.transformation": "§6A Transformação de Maquinário pode ser automatizada com um §eImplantador§6 ou uma §eSerra Mecânica com filtro§6.",
     "item.kubejs.trial.details": "§6Uma forma estranha do cobre feita pela reação entre o §eCobre§6 e §eLumisena§6.",
@@ -254,5 +253,11 @@
     "block.kubejs.trial_weathered_cut_copper_stairs": "Escadas de Cobre Desgastado Lapidado Ilusórias",
     "ftbquests.book.tooltip": "A aba de missões pode ser aberta com um atalho.",
     "item.strainer.details": "§6Só funciona na §eágua§6.",
-    "item.strainer.info": "§6Um coador capaz de §eretirar sedimentos§6 da água."
+    "item.strainer.info": "§6Um coador capaz de §eretirar sedimentos§6 da água.",
+    "item.kubejs.shift": "§7Segure [Shift] para ver o Resumo",
+    "item.dynamo.info": "§6Os dínamos são geradores de §eredstone flux (RF)§6 e podem alimentar outras máquinas diretamente, cada um utiliza um combustível específico.",
+    "item.kubejs.shift.active": "§7Segure [§fShift§7] para ver o Resumo",
+    "item.dynamo.details": "§6Só transfere energia se estiver §eproduzindo ativamente§6.§6",
+    "item.dynamo.placement": "§6O Redstone Flux (RF) é transferido ao contato pela §ebobina vermelha§6, mas pode ser transportado usando §eTubos de Fluxo§6.",
+    "alias.emi.drawer_key": "Drawer Key"
 }
