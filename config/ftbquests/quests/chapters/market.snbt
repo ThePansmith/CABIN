@@ -935,7 +935,7 @@
 			icon: "minecraft:minecart"
 			id: "117587D824D23D69"
 			rewards: [{
-				count: 128
+				count: 256
 				id: "738387AED344C59B"
 				item: "create:track"
 				type: "item"
