@@ -252,12 +252,12 @@
     "block.kubejs.trial_weathered_cut_copper": "锈蚀的切制幻象铜块",
     "block.kubejs.trial_weathered_cut_copper_stairs": "锈蚀的切制幻象铜楼梯",
     "ftbquests.book.tooltip": "任务窗口可使用快捷键打开。",
-    "item.strainer.details": "§6Must be placed in §estill water§6 to work.",
-    "item.strainer.info": "§6A sifter capable of §estraining out sediments§6 from water.",
-    "item.kubejs.shift": "§7Hold [Shift] for Summary",
-    "item.dynamo.info": "§6Dynamos generate §eredstone flux§6 from applicable fuels, which is used to power electric machinary.",
-    "item.kubejs.shift.active": "§7Hold [§fShift§7] for Summary",
-    "item.dynamo.details": "§6Must be §eactively producting§6 energy to export it.§6",
-    "item.dynamo.placement": "§6Redstone Flux is pushed from the §ered coil§6, and can be transported over distances with §efluxducts§6.",
-    "alias.emi.drawer_key": "Drawer Key"
+    "item.strainer.details": "§6必须放在§e静止的水§6中才能工作。",
+    "item.strainer.info": "§6筛网可以从水中§e分离出沉积物§6。",
+    "item.kubejs.shift": "§7按住 [Shift] 查看摘要",
+    "item.dynamo.info": "§6发电机从合适的燃料中产生§e红石通量（RF）§6，为机器供能。",
+    "item.kubejs.shift.active": "§7按住 [§fShift§7] 查看摘要",
+    "item.dynamo.details": "§6必须§e主动产生§6能量才会向外输出。§6",
+    "item.dynamo.placement": "§6红石通量（RF）会在§e红色线圈顶端§6输出， 并且可以通过§e能量管道§6远距离传输。",
+    "alias.emi.drawer_key": "抽屉钥匙"
 }
