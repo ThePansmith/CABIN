@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased]
+### Changes
+ * Updated Tinker's Construct
+ * Added slime vines to overworld slime patches
+ * Added more splashes and cleaned up questbook a minor amount 
+
+### Fixes
+* Fixed a Quark and Soph Storage compat bug
+
 ## [2.1.2]
 ### Changes
  * Hotfix for curseforge not accepting the server builds because of Trial Chambers Reuploaded
