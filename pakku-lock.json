@@ -4029,25 +4029,25 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "Mantle-1.20.1-1.11.79.jar",
+                    "file_name": "Mantle-1.20.1-1.11.97.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
                     "loaders": [
-                        "neoforge",
-                        "forge"
+                        "forge",
+                        "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6819/217/Mantle-1.20.1-1.11.79.jar",
-                    "id": "6819217",
+                    "url": "https://edge.forgecdn.net/files/7414/488/Mantle-1.20.1-1.11.97.jar",
+                    "id": "7414488",
                     "parent_id": "74924",
                     "hashes": {
-                        "sha1": "db1ab527fcc48852775e01f9504c7a3ec3083743",
-                        "md5": "19cf5725471882f2f65182e70f9c98ef"
+                        "sha1": "90700ee1d062b42048f37b084df745677a86e184",
+                        "md5": "4542868075d6143a5969e646efbef889"
                     },
                     "required_dependencies": [],
-                    "size": 1480444,
-                    "date_published": "2025-07-27T22:36:16.117Z"
+                    "size": 1580683,
+                    "date_published": "2026-01-03T23:57:49.210Z"
                 }
             ]
         },
@@ -5761,29 +5761,29 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "tconjei-1.20.1-1.5.0.jar",
+                    "file_name": "tconjei-1.20.1-1.5.1.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
                     "loaders": [
-                        "neoforge",
-                        "forge"
+                        "forge",
+                        "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6841/685/tconjei-1.20.1-1.5.0.jar",
-                    "id": "6841685",
+                    "url": "https://edge.forgecdn.net/files/7372/437/tconjei-1.20.1-1.5.1.jar",
+                    "id": "7372437",
                     "parent_id": "974154",
                     "hashes": {
-                        "sha1": "ace07009488cb4251e522247d78de438253decac",
-                        "md5": "6adf9af2743d0805bbcd9e047792993e"
+                        "sha1": "66f0c2598bb2653bb58e9793b79442ace3a31e30",
+                        "md5": "c0bcb76abde6c08d173c03bd8f402f08"
                     },
                     "required_dependencies": [
-                        "238222",
                         "74072",
-                        "74924"
+                        "74924",
+                        "238222"
                     ],
-                    "size": 42411,
-                    "date_published": "2025-08-03T04:07:04.020Z"
+                    "size": 42469,
+                    "date_published": "2025-12-24T08:03:06.613Z"
                 }
             ]
         },
@@ -6039,27 +6039,27 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "TConstruct-1.20.1-3.10.2.92.jar",
+                    "file_name": "TConstruct-1.20.1-3.11.1.158.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
                     "loaders": [
-                        "neoforge",
-                        "forge"
+                        "forge",
+                        "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6777/68/TConstruct-1.20.1-3.10.2.92.jar",
-                    "id": "6777068",
+                    "url": "https://edge.forgecdn.net/files/7419/961/TConstruct-1.20.1-3.11.1.158.jar",
+                    "id": "7419961",
                     "parent_id": "74072",
                     "hashes": {
-                        "sha1": "74cc057cc01fdb0186504d71623b5811bbe705f9",
-                        "md5": "f509c2dc7895504a1ccd7860a2fb7a47"
+                        "sha1": "5084f883390b2dbb337ce53213fd5dfdd3cc57e5",
+                        "md5": "ed2bebdadf1cf75e76ea7820e64fd98a"
                     },
                     "required_dependencies": [
                         "74924"
                     ],
-                    "size": 19792115,
-                    "date_published": "2025-07-16T23:54:00.540Z"
+                    "size": 21473868,
+                    "date_published": "2026-01-05T06:25:59.320Z"
                 }
             ]
         },

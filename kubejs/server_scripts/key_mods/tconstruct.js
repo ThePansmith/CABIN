@@ -151,128 +151,128 @@ ServerEvents.highPriorityData(event => {
         "tools": { "tag": "tconstruct:modifiable/harvest" }
     })
 
-    // Make Melting exclusive to the melting pan
-    event.addJson("tconstruct:recipes/tools/modifiers/ability/melting", {
-        "type": "tconstruct:modifier",
-        "allow_crystal": true,
-        "check_trait_level": true,
-        "inputs": [
-            {
-                "item": "minecraft:blaze_rod"
-            },
-            {
-                "ingredient": [
-                    {
-                        "item": "tconstruct:seared_melter"
-                    },
-                    {
-                        "item": "tconstruct:smeltery_controller"
-                    },
-                    {
-                        "item": "tconstruct:foundry_controller"
-                    }
-                ]
-            },
-            {
-                "item": "minecraft:blaze_rod"
-            },
-            {
-                "item": "minecraft:lava_bucket"
-            },
-            {
-                "item": "minecraft:lava_bucket"
-            }
-        ],
-        "level": 1,
-        "result": "tconstruct:melting",
-        "slots": {
-            "abilities": 1
-        },
-        "tools": [
-            {
-                "item": "tconstruct:melting_pan"
-            }
-        ]
-    })
+    // // Make Melting exclusive to the melting pan
+    // event.addJson("tconstruct:recipes/tools/modifiers/ability/melting", {
+    //     "type": "tconstruct:modifier",
+    //     "allow_crystal": true,
+    //     "check_trait_level": true,
+    //     "inputs": [
+    //         {
+    //             "item": "minecraft:blaze_rod"
+    //         },
+    //         {
+    //             "ingredient": [
+    //                 {
+    //                     "item": "tconstruct:seared_melter"
+    //                 },
+    //                 {
+    //                     "item": "tconstruct:smeltery_controller"
+    //                 },
+    //                 {
+    //                     "item": "tconstruct:foundry_controller"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "item": "minecraft:blaze_rod"
+    //         },
+    //         {
+    //             "item": "minecraft:lava_bucket"
+    //         },
+    //         {
+    //             "item": "minecraft:lava_bucket"
+    //         }
+    //     ],
+    //     "level": 1,
+    //     "result": "tconstruct:melting",
+    //     "slots": {
+    //         "abilities": 1
+    //     },
+    //     "tools": [
+    //         {
+    //             "item": "tconstruct:melting_pan"
+    //         }
+    //     ]
+    // })
 
-    event.addJson("tconstruct:tinkering/tool_definitions/melting_pan", {
-        "modules": [
-            {
-                "type": "tconstruct:material_stats",
-                "primary_part": 0,
-                "stat_types": [
-                    "tconstruct:plating_shield",
-                    "tconstruct:limb"
-                ]
-            },
-            {
-                "type": "tconstruct:default_materials",
-                "materials": [
-                    {
-                        "type": "tconstruct:random"
-                    },
-                    {
-                        "type": "tconstruct:random"
-                    }
-                ]
-            },
-            {
-                "type": "tconstruct:material_traits",
-                "hooks": [
-                    "tconstruct:rebalanced_trait"
-                ],
-                "material_index": 1,
-                "stat_type": "tconstruct:limb"
-            },
-            {
-                "type": "tconstruct:base_stats",
-                "stats": {
-                    "tconstruct:block_amount": 10.0,
-                    "tconstruct:harvest_tier": "minecraft:iron",
-                    "tconstruct:knockback_resistance": 0.1,
-                    "tconstruct:mining_speed": 6.0
-                }
-            },
-            {
-                "type": "tconstruct:modifier_slots",
-                "slots": {
-                    "abilities": 2,
-                    "defense": 1,
-                    "upgrades": 1
-                }
-            },
-            {
-                "type": "tconstruct:melting_fluid_effective",
-                "ignore_tier": false,
-                "inverted_type": "mantle:tag",
-                "predicate_type": "mantle:inverted",
-                "tag": "tconstruct:mineable/melting_blacklist",
-                "temperature": 1500
-            },
-            {
-                "type": "tconstruct:volatile_flag",
-                "flag": "tconstruct:force_melting"
-            },
-            {
-                "type": "tconstruct:vein_aoe",
-                "max_distance": 0
-            },
-            {
-                "type": "tconstruct:traits",
-                "traits": [
-                    {
-                        "level": 2,
-                        "name": "tconstruct:melting"
-                    },
-                    {
-                        "level": 1,
-                        "name": "tconstruct:tank"
-                    }
-                ]
-            },
-            {
-                "type": "tconstruct:dual_option_interaction"
-            }
-        ]
-    })
+    // event.addJson("tconstruct:tinkering/tool_definitions/melting_pan", {
+    //     "modules": [
+    //         {
+    //             "type": "tconstruct:material_stats",
+    //             "primary_part": 0,
+    //             "stat_types": [
+    //                 "tconstruct:plating_shield",
+    //                 "tconstruct:limb"
+    //             ]
+    //         },
+    //         {
+    //             "type": "tconstruct:default_materials",
+    //             "materials": [
+    //                 {
+    //                     "type": "tconstruct:random"
+    //                 },
+    //                 {
+    //                     "type": "tconstruct:random"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "type": "tconstruct:material_traits",
+    //             "hooks": [
+    //                 "tconstruct:rebalanced_trait"
+    //             ],
+    //             "material_index": 1,
+    //             "stat_type": "tconstruct:limb"
+    //         },
+    //         {
+    //             "type": "tconstruct:base_stats",
+    //             "stats": {
+    //                 "tconstruct:block_amount": 10.0,
+    //                 "tconstruct:harvest_tier": "minecraft:iron",
+    //                 "tconstruct:knockback_resistance": 0.1,
+    //                 "tconstruct:mining_speed": 6.0
+    //             }
+    //         },
+    //         {
+    //             "type": "tconstruct:modifier_slots",
+    //             "slots": {
+    //                 "abilities": 2,
+    //                 "defense": 1,
+    //                 "upgrades": 1
+    //             }
+    //         },
+    //         {
+    //             "type": "tconstruct:melting_fluid_effective",
+    //             "ignore_tier": false,
+    //             "inverted_type": "mantle:tag",
+    //             "predicate_type": "mantle:inverted",
+    //             "tag": "tconstruct:mineable/melting_blacklist",
+    //             "temperature": 1500
+    //         },
+    //         {
+    //             "type": "tconstruct:volatile_flag",
+    //             "flag": "tconstruct:force_melting"
+    //         },
+    //         {
+    //             "type": "tconstruct:vein_aoe",
+    //             "max_distance": 0
+    //         },
+    //         {
+    //             "type": "tconstruct:traits",
+    //             "traits": [
+    //                 {
+    //                     "level": 2,
+    //                     "name": "tconstruct:melting"
+    //                 },
+    //                 {
+    //                     "level": 1,
+    //                     "name": "tconstruct:tank"
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "type": "tconstruct:dual_option_interaction"
+    //         }
+    //     ]
+    // })
 })
