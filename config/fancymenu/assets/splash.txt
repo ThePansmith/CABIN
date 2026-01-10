@@ -1,8 +1,8 @@
 The first splash of the list!
 Also try Monifactory!
 Same Day Shipping!
-Blaze Burners can be used as Lava!
-Blaze Burners can be used as Campfires!
+Fed Blaze Burners can be used for bulk blasting!
+Blaze Burners can be used for bulk smoking!
 Train Simulator
 Froge
 Denser Ores!
@@ -43,3 +43,4 @@ Press W to Ponder!
 Ponder that.
 Third time's the charm!
 Creature Channel
+Kubed!
