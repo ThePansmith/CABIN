@@ -3,7 +3,7 @@ navigation:
   title: Getting Started (CABIN)
   position: 10
 ---
-
+# Getting Started (CABIN)
 <div class="notification is-info">
   The following information only applies to Applied Energistics 2 in CABIN! 
 
