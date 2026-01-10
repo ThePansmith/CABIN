@@ -14,7 +14,9 @@ modernfix/
 fancymenu_data/
 ESM/
 panoramas/
-
+*.log
+servers.dat
+servers.dat_old
 icon.png
 options.txt
 rhino.local.properties
@@ -29,6 +31,13 @@ build/
 !pakku.json
 !pakku-lock.json
 
+# X Minecraft Launcher
+versions
+instance-lock.json
+instance.json
+libraries
+modpack-metadata.json
+
 # Node.js
 **/node_modules/
 
@@ -40,6 +49,7 @@ build/
 /.vscode/*
 
 # ProbeJS
+/.probe/
 /kubejs/probe/
 /kubejs/config/probejs.json
 /kubejs/config/probe-settings.json
@@ -82,6 +92,30 @@ config/darkmodeeverywhereshaders*
 config/ichunutil/themes/
 config/gtceu.yaml
 defaultconfigs/ftbultimine/ftbultimine-*.snbt
+config/watut-server.toml
+config/watut-item-arm-adjustments.json
+config/watut-common.toml
+config/voicechat/voicechat-server.properties
+config/voicechat/translations.properties
+config/voicechat/player-volumes.properties
+config/voicechat/category-volumes.properties
+config/sound_physics_remastered/soundphysics.properties
+config/sound_physics_remastered/sound_rates.properties
+config/sound_physics_remastered/reflectivity.properties
+config/sound_physics_remastered/occlusion.properties
+config/NoChatReports/README.md
+config/NoChatReports/NCR-ServerPreferences.json
+config/NoChatReports/NCR-Encryption.json
+config/NoChatReports/NCR-Common.json
+config/fastsuite.cfg
+config/fastbench.cfg
+config/everycomp-hazardous.toml
+config/dragonlib-common.toml
+config/createrailwaysnavigator-common.toml
+config/createmechanicalcompanion-common.toml
+config/createcasing-common.toml
+config/create_connected-common.toml
+config/CoroUtil/General.toml
 
 # Linux
 *~
