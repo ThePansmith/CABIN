@@ -23,7 +23,6 @@ rhino.local.properties
 usercache.json
 usernamecache.json
 emi.json
-kubejs_client_data.json
 
 # Pakku
 build/
@@ -56,8 +55,67 @@ modpack-metadata.json
 /kubejs/config/probe-settings.json
 /kubejs/*/jsconfig.json
 
-# Configs
-/config
+# Client configs (with exceptions below)
+/config/**/*client.*
+
+!/config/sophisticatedstorage-client.toml
+!/config/**/darkmodeeverywhere-client.toml
+!/config/create-client.toml
+
+# Configs (generaly ones that tend to edit the date on launch)
+config/fml.toml
+config/jei/world/local/*
+config/fabric/indigo-renderer.properties
+config/roughlyenoughitems/pinyin*.properties
+config/trofers/general.json5
+config/roughlyenoughitems/config.json5
+config/sidebar_buttons.json
+config/oculus.properties
+config/modernfix-mixins.properties
+config/immediatelyfast.json
+config/ftbbackups2.json
+config/packetfixer.properties
+config/spark/tmp/
+config/spark/activity.json
+config/roughlyenoughitems/hints.json
+config/voicechat/username-cache.json
+config/minihud/*
+config/embeddium-fingerprint.json
+config/chiselsandbits-common.toml
+config/defaultworldtype/world-presets.txt
+config/jecalculation/record.json
+config/jade/sort-order.json
+config/jei*
+config/embeddium++.toml
+config/emi.css
+config/darkmodeeverywhereshaders*
+config/ichunutil/themes/
+config/gtceu.yaml
+defaultconfigs/ftbultimine/ftbultimine-*.snbt
+config/watut-server.toml
+config/watut-item-arm-adjustments.json
+config/watut-common.toml
+config/voicechat/voicechat-server.properties
+config/voicechat/translations.properties
+config/voicechat/player-volumes.properties
+config/voicechat/category-volumes.properties
+config/sound_physics_remastered/soundphysics.properties
+config/sound_physics_remastered/sound_rates.properties
+config/sound_physics_remastered/reflectivity.properties
+config/sound_physics_remastered/occlusion.properties
+config/NoChatReports/README.md
+config/NoChatReports/NCR-ServerPreferences.json
+config/NoChatReports/NCR-Encryption.json
+config/NoChatReports/NCR-Common.json
+config/fastsuite.cfg
+config/fastbench.cfg
+config/everycomp-hazardous.toml
+config/dragonlib-common.toml
+config/createrailwaysnavigator-common.toml
+config/createmechanicalcompanion-common.toml
+config/createcasing-common.toml
+config/create_connected-common.toml
+config/CoroUtil/General.toml
 
 # Linux
 *~
