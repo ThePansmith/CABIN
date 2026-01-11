@@ -19,6 +19,8 @@ mobDropsEnabled = true
 	passivePedestal = false
 	#Disable recipes to craft spawn eggs from fragments
 	disableSpawnEggRecipes = false
+	#Disable all charms and their recipes
+	charms = false
 
 #Potions related settings
 [potions]

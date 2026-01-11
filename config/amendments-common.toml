@@ -10,8 +10,6 @@
 [cauldron]
 	#Enables enhanced cauldron
 	enhanced_cauldron = true
-	#Allows crafting items using cauldrons by clicking on them
-	crafting = true
 	#Allows dying cauldron water bedrock style and mixing them too
 	dye_water = true
 	#Max amount of items that 1 cauldron layer can recolor.This is a multiplier on top of vanilla crafting recipe amount
@@ -28,6 +26,12 @@
 	potion_mixing_limit = 8
 	#Makes cauldrons connect to fences
 	connect_to_fences = true
+	#Allows crafting items using cauldrons by clicking on them
+	hand_crafting = true
+	#Allows crafting items using cauldrons by throwing items in them
+	in_world_crafting = true
+	#Makes it so a dripstone drop only increments a cauldron by 1 layer(buttle) instead of a full bottle, making it just like a water cauldron
+	consistent_lava_layers = false
 
 	#Map of potion ids to their inverse ids. Used for potion mixing
 	[cauldron.inverse_potions]
@@ -110,4 +114,23 @@
 [lily_pad]
 	#Allows lilypads to have any block placed ontop
 	better_lilypads = true
+
+[fireball]
+	#Adds dragons charge item
+	dragon_charge = true
+	#Makes fire & dragon charges have gravity
+	gravity = true
+	#Makes fire charges deflectable by punching
+	deflectable = false
+	#Allows throwing fire & dragon charges
+	fire_charges_throwable = true
+	#Makes dispensers shoot fire charges (the ones with gravity added by the mod) instead of blaze charges. Technically a breaking changes as it could break existing contraptions while allowing for new ones
+	fire_charges_dispenser_behavior = true
+	#Improves ghast & fire charges fireballs by giving them a unique explosion particles and set on fire on hit
+	improved_explosions = true
+
+[snowball]
+	#Allows snowballs to freeze entities on hit. Config is for how many ticks it will freeze
+	#Range: 0 ~ 1000
+	freeze_ticks = 35
 

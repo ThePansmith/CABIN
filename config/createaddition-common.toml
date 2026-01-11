@@ -1,4 +1,6 @@
 
+#Make sure config changes are duplicated on both Clients and the Server when running a dedicated Server,
+# as the config isnt synced between Clients and Server.
 #General Settings
 [general]
 	#Forge Energy conversion rate (in FE/t at 256 RPM, value is the FE/t generated and consumed is at 256rpm).
@@ -7,6 +9,8 @@
 	#Max stress for the Alternator and Electric Motor (in SU at 256 RPM).
 	#Range: > 0
 	max_stress = 16384
+	#If audio should be enabled or not.
+	audio_enabled = true
 
 #Electric Motor
 [electric_motor]
@@ -68,6 +72,9 @@
 	connector_ignore_face_check = true
 	#Allows blocks attached to a connector to freely pass energy to and from the connector network.
 	connector_allow_passive_io = true
+	#Small Connector With Light energy consumption in FE/t.
+	#Range: > 0
+	small_light_connector_consumption = 1
 
 #Accumulator
 [accumulator]

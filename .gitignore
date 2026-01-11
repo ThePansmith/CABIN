@@ -94,6 +94,30 @@ config/darkmodeeverywhereshaders*
 config/ichunutil/themes/
 config/gtceu.yaml
 defaultconfigs/ftbultimine/ftbultimine-*.snbt
+config/sound_physics_remastered/soundphysics.properties
+config/sound_physics_remastered/sound_rates.properties
+config/sound_physics_remastered/reflectivity.properties
+config/sound_physics_remastered/occlusion.properties
+config/NoChatReports/README.md
+config/NoChatReports/NCR-ServerPreferences.json
+config/NoChatReports/NCR-Encryption.json
+config/NoChatReports/NCR-Common.json
+config/fastsuite.cfg
+config/fastbench.cfg
+config/everycomp-hazardous.toml
+config/createcasing-common.toml
+config/createmechanicalcompanion-common.toml
+config/createrailwaysnavigator-common.toml
+config/dragonlib-common.toml
+config/create_connected-common.toml
+config/CoroUtil/General.toml
+config/voicechat/category-volumes.properties
+config/voicechat/player-volumes.properties
+config/voicechat/translations.properties
+config/voicechat/voicechat-server.properties
+config/watut-common.toml
+config/watut-item-arm-adjustments.json
+config/watut-server.toml
 
 # Linux
 *~
@@ -112,12 +136,3 @@ $RECYCLE.BIN/
 .DS_Store
 .AppleDouble
 .LSOverride
-authlib-injector.log
-instance-lock.json
-instance.json
-kubejs_client_data.json
-libraries
-modpack-metadata.json
-servers.dat
-servers.dat_old
-versions
