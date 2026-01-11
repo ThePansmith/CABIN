@@ -21,6 +21,9 @@ rhino.local.properties
 usercache.json
 usernamecache.json
 emi.json
+kubejs_client_data.json
+servers.dat
+servers.dat_old
 
 # Pakku
 build/
@@ -40,10 +43,19 @@ build/
 /.vscode/*
 
 # ProbeJS
+/.probe
 /kubejs/probe/
 /kubejs/config/probejs.json
 /kubejs/config/probe-settings.json
 /kubejs/*/jsconfig.json
+
+# X Minecraft Launcher
+authlib-injector.log
+instance-lock.json
+instance.json
+libraries
+modpack-metadata.json
+versions
 
 # Client configs (with exceptions below)
 /config/**/*client.*
@@ -100,3 +112,12 @@ $RECYCLE.BIN/
 .DS_Store
 .AppleDouble
 .LSOverride
+authlib-injector.log
+instance-lock.json
+instance.json
+kubejs_client_data.json
+libraries
+modpack-metadata.json
+servers.dat
+servers.dat_old
+versions
