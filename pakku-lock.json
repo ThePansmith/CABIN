@@ -4,7 +4,7 @@
         "1.20.1"
     ],
     "loaders": {
-        "forge": "47.4.0"
+        "forge": "47.4.10"
     },
     "projects": [
         {
@@ -48,6 +48,31 @@
                     ],
                     "size": 827642,
                     "date_published": "2024-02-14T09:33:44.710Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "yRSvrlKzUFfsiYVL",
+            "type": "MOD",
+            "slug": {
+                "github": "ThePansmith/AE2-meteor-mixin"
+            },
+            "name": {
+                "github": "AE2-meteor-mixin"
+            },
+            "id": {
+                "github": "1142790963"
+            },
+            "files": [
+                {
+                    "type": "github",
+                    "file_name": "ae2_meteor_nobud-1.0.0.jar",
+                    "release_type": "release",
+                    "url": "https://github.com/ThePansmith/AE2-meteor-mixin/releases/download/1.0.0/ae2_meteor_nobud-1.0.0.jar",
+                    "id": "346276945",
+                    "parent_id": "1142790963",
+                    "size": 48076,
+                    "date_published": "2026-01-26T21:28:44Z"
                 }
             ]
         },
@@ -589,42 +614,6 @@
                     ],
                     "size": 22381010,
                     "date_published": "2025-03-29T17:56:56.543Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "HPN9apTuHpXDUalW",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "block-swap"
-            },
-            "name": {
-                "curseforge": "Block Swap"
-            },
-            "id": {
-                "curseforge": "468893"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "Block Swap-forge-1.20.1-5.0.0.0.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/4598/162/Block Swap-forge-1.20.1-5.0.0.0.jar",
-                    "id": "4598162",
-                    "parent_id": "468893",
-                    "hashes": {
-                        "sha1": "87c5ded19cbcb561d85222611604542f07e9c509",
-                        "md5": "a6cc466ab055777e5dfac3bcb14d412b"
-                    },
-                    "required_dependencies": [],
-                    "size": 308584,
-                    "date_published": "2023-06-20T04:57:28.470Z"
                 }
             ]
         },
