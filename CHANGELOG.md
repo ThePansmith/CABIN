@@ -2,12 +2,18 @@
 
 ## [Unreleased]
 ### Changes
+ * Java 25 support
+    * Updated forge, along with various mods.
+ * Replaced Blockswap with AE2 meteor mixin
  * Updated Tinker's Construct
  * Added slime vines to overworld slime patches
- * Added more splashes and cleaned up questbook a minor amount 
+ * Added more splashes and cleaned up questbook a minor amount
 
 ### Fixes
 * Fixed a Quark and Soph Storage compat bug
+* Fixed the trade machine model
+* Fixed pewter being unobtainable
+* Fuxed the ponder command in the questbook
 
 ## [2.1.2]
 ### Changes
