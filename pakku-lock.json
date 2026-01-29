@@ -8,6 +8,47 @@
     },
     "projects": [
         {
+            "pakku_id": "bWjrpHswnmmlGBmP",
+            "pakku_links": [
+                "eu8Zo0Bcdh8tnkOX"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "ae2-meteor-mixin"
+            },
+            "name": {
+                "curseforge": "AE2 Meteor Mixin"
+            },
+            "id": {
+                "curseforge": "1445574"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "ae2_meteor_nobud-1.0.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7532/98/ae2_meteor_nobud-1.0.0.jar",
+                    "id": "7532098",
+                    "parent_id": "1445574",
+                    "hashes": {
+                        "sha1": "dc8e3e20bb5f9279c359599f2be88490d26b2c36",
+                        "md5": "154dc2d1b18cd107e2299a7f3a8c262a"
+                    },
+                    "required_dependencies": [
+                        "223794"
+                    ],
+                    "size": 48076,
+                    "date_published": "2026-01-26T20:25:25.410Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "F63ecbvl6eNbRz4O",
             "pakku_links": [
                 "wxDpHN7vyw1ufy5z",
@@ -48,31 +89,6 @@
                     ],
                     "size": 827642,
                     "date_published": "2024-02-14T09:33:44.710Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "yRSvrlKzUFfsiYVL",
-            "type": "MOD",
-            "slug": {
-                "github": "ThePansmith/AE2-meteor-mixin"
-            },
-            "name": {
-                "github": "AE2-meteor-mixin"
-            },
-            "id": {
-                "github": "1142790963"
-            },
-            "files": [
-                {
-                    "type": "github",
-                    "file_name": "ae2_meteor_nobud-1.0.0.jar",
-                    "release_type": "release",
-                    "url": "https://github.com/ThePansmith/AE2-meteor-mixin/releases/download/1.0.0/ae2_meteor_nobud-1.0.0.jar",
-                    "id": "346276945",
-                    "parent_id": "1142790963",
-                    "size": 48076,
-                    "date_published": "2026-01-26T21:28:44Z"
                 }
             ]
         },
