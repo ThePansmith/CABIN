@@ -13,7 +13,7 @@
 * Fixed a Quark and Soph Storage compat bug
 * Fixed the trade machine model
 * Fixed pewter being unobtainable
-* Fuxed the ponder command in the questbook
+* Fixed the ponder command in the questbook
 
 ## [2.1.2]
 ### Changes
