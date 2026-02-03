@@ -1,39 +1,21 @@
 if (Platform.isLoaded("createcasing")) {
     JEIEvents.hideItems(event => {
-        event.hide("createcasing:oak_shaft")
-        event.hide("createcasing:spruce_shaft")
-        event.hide("createcasing:birch_shaft")
-        event.hide("createcasing:jungle_shaft")
-        event.hide("createcasing:acacia_shaft")
-        event.hide("createcasing:dark_oak_shaft")
-        event.hide("createcasing:crimson_shaft")
-        event.hide("createcasing:warped_shaft")
+        let woods = ["oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "crimson", "warped", "cherry", "bamboo", "mangrove"]
+        let types = ["shaft", "cogwheel", "large_cogwheel"]
+
+        woods.forEach(wood => {
+            types.forEach(type => {
+                event.hide(`createcasing:${wood}_${type}`)
+            })
+        })
+
         event.hide("createcasing:glass_shaft")
         event.hide("createcasing:brass_shaft")
-        event.hide("createcasing:cherry_shaft")
-        event.hide("createcasing:bamboo_shaft")
-        event.hide("createcasing:mangrove_shaft")
-        event.hide("createcasing:oak_cogwheel")
-        event.hide("createcasing:spruce_cogwheel")
-        event.hide("createcasing:birch_cogwheel")
-        event.hide("createcasing:jungle_cogwheel")
-        event.hide("createcasing:acacia_cogwheel")
-        event.hide("createcasing:dark_oak_cogwheel")
-        event.hide("createcasing:crimson_cogwheel")
-        event.hide("createcasing:warped_cogwheel")
-        event.hide("createcasing:cherry_cogwheel")
-        event.hide("createcasing:bamboo_cogwheel")
-        event.hide("createcasing:mangrove_cogwheel")
-        event.hide("createcasing:oak_large_cogwheel")
-        event.hide("createcasing:spruce_large_cogwheel")
-        event.hide("createcasing:birch_large_cogwheel")
-        event.hide("createcasing:jungle_large_cogwheel")
-        event.hide("createcasing:acacia_large_cogwheel")
-        event.hide("createcasing:dark_oak_large_cogwheel")
-        event.hide("createcasing:crimson_large_cogwheel")
-        event.hide("createcasing:warped_large_cogwheel")
-        event.hide("createcasing:cherry_large_cogwheel")
-        event.hide("createcasing:bamboo_large_cogwheel")
-        event.hide("createcasing:mangrove_large_cogwheel")
+
+        let encasedcasings = [ "andesite", "railway", "creative", "brass", "copper", "industrial_iron", "refined_radiance", "weathered_iron", "shadow_steel"]
+
+        encasedcasings.forEach(casing => {
+            event.hide(`createcasing:${casing}_configurable_gearbox`)
+        })
     })
 }
