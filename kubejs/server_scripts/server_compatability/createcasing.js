@@ -42,7 +42,7 @@ if (Platform.isLoaded("createcasing")) {
             createMachine("create:mechanical_drill", event, `createcasing:${suffix}_mechanical_drill`, casing)
             createMachine("create:mechanical_plough", event, `createcasing:${suffix}_mechanical_plough`, casing)
             createMachine("create:mechanical_roller", event, `createcasing:${suffix}_mechanical_roller`, casing)
-            
+
             event.remove({ output: `createcasing:${suffix}_configurable_gearbox` })
         })
 
