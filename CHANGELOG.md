@@ -6,7 +6,7 @@
     * Updated forge, along with various mods.
  * Replaced Blockswap with AE2 meteor mixin
  * Updated Tinker's Construct
- * Added slime vines to overworld slime patches
+ * Added slime vines to overworld slime patches to aid those making tinker's tools
  * Added more splashes and cleaned up questbook a minor amount
 
 ### Fixes
@@ -14,6 +14,7 @@
 * Fixed the trade machine model
 * Fixed pewter being unobtainable
 * Fixed the ponder command in the questbook
+* Fixed Create: Encased compatibility
 
 ## [2.1.2]
 ### Changes
