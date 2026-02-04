@@ -15,6 +15,7 @@
 * Fixed the trade machine model
 * Fixed pewter being unobtainable
 * Fixed the ponder command in the questbook
+* Fixed Create: Encased compatibility
 
 ## [2.1.2]
 ### Changes

@@ -263,6 +263,25 @@ ServerEvents.recipes(event => {
     event.remove({ id: /tconstruct:smeltery\/.*\/ore/ })
     event.remove({ input: "#create:crushed_raw_materials" })
 
+    // Silver oreproc removals
+    event.remove({ id: "thermal:smelting/silver_ingot_from_ore_smelting"})
+    event.remove({ id: "thermal:smelting/silver_ingot_from_deepslate_ore_smelting"})
+    event.remove({ id: "thermal:smelting/silver_ingot_from_deepslate_ore_blasting"})
+    event.remove({ id: "thermal:smelting/silver_ingot_from_ore_blasting"})
+    event.remove({ id: "occultism:smelting/silver_ingot"})
+    event.remove({ id: "occultism:blasting/silver_ingot"})
+    event.remove({ id: "create:crushing/silver_ore"})
+    event.remove({ id: "occultism:crushing/silver_dust"})
+    event.remove({ id: "thermal:machines/pulverizer/pulverizer_silver_ore"})
+    event.remove({ id: "thermal:machines/smelter/smelter_silver_ore"})
+    event.remove({ id: "thermal:furnace_1301112016" })
+    event.remove({ id: "thermal:furnace_1984648093" })
+    event.remove({ id: "thermal:furnace_735627882" })
+    event.remove({ id: "thermal:furnace_533763864" })
+    event.remove({ id: "thermal:furnace_1331962364" })
+    event.remove({ id: "thermal:furnace_1721263327" })
+
+
     native_metals.forEach(e => {
         event.remove({ type: "minecraft:smelting", input: "#forge:dusts/" + e })
         event.remove({ type: "minecraft:blasting", input: "#forge:dusts/" + e })

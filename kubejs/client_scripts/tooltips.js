@@ -108,4 +108,5 @@ ItemEvents.tooltip(tooltip => {
     });
 
     tooltip.add("trials:crafter", Text.red(Text.translatable("cabin.trials.crafter.deprecation.tooltip")))
+    tooltip.add("thermal:silver_ingot", (Text.translatable("item.silver.tooltip")))
 });
