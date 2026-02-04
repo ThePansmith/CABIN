@@ -6,7 +6,8 @@
     * Updated forge, along with various mods.
  * Replaced Blockswap with AE2 meteor mixin
  * Updated Tinker's Construct
- * Added slime vines to overworld slime patches to aid those making tinker's tools
+ * Cleaned up silver's recipes, and added a tooltip hint regarding how to make it for those wanting to make it early.
+ * Added slime vines to overworld slime patches
  * Added more splashes and cleaned up questbook a minor amount
 
 ### Fixes
