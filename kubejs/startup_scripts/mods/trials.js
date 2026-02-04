@@ -6,4 +6,5 @@ if (Platform.isLoaded("trials")) {
         event.addPotionBrewing("minecraft:cobweb", "minecraft:awkward", "trials:weave");
         event.addPotionBrewing("minecraft:slime_block", "minecraft:awkward", "trials:ooze");
     })
+    Platform.mods.trials.name = 'Trial Chambers'
 }
