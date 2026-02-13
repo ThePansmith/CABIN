@@ -298,7 +298,7 @@ ServerEvents.tags("item", event => {
     event.removeAllTagsFrom("tconstruct:steel_ingot")
     event.removeAllTagsFrom("tconstruct:steel_nugget")
     event.removeAllTagsFrom("occultism:silver_ingot")
-    event.removeAllTagsFrom("occultism:silver_ingot")
+    event.removeAllTagsFrom("occultism:silver_nugget")
 })
 
 ServerEvents.tags("block_entity_type", event => {
