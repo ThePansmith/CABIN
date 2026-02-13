@@ -129,8 +129,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: "sophisticatedstorage:stack_upgrade_omega_tier" })
 
     // Upgrades
-    andesiteMachine(event, Item.of("sophisticatedstorage:hopper_upgrade", 2))
-
+    event.remove({ id: "sophisticatedstorage:hopper_upgrade" })
     event.remove({ id: "sophisticatedstorage:advanced_hopper_upgrade" })
 
     // Remove Magnet upgrades

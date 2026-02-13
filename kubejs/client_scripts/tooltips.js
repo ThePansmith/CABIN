@@ -107,6 +107,8 @@ ItemEvents.tooltip(tooltip => {
         }
     });
 
-    tooltip.add("trials:crafter", Text.red(Text.translatable("cabin.trials.crafter.deprecation.tooltip")))
+    let deprecated = ["trials:crafter", 'functionalstorage:puller_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:collector_upgrade', 'sophisticatedstorage:hopper_upgrade', 'sophisticatedstorage:advanced_hopper_upgrade']
+    deprecated.forEach(item => { tooltip.add(item, Text.red(Text.translatable("cabin.trials.deprecation.tooltip"))) })
+
     tooltip.add("thermal:silver_ingot", (Text.translatable("item.silver.tooltip")))
 });
