@@ -203,9 +203,3 @@ JEIEvents.hideFluids(event => {
     event.hide("ad_astra:cryo_fuel")
     event.hide("kubejs:crude_oil")
 })
-
-JEIEvents.removeCategories(event => {
-    event.remove("ftbquests:quest")
-    event.remove("ae2:certus_growth")
-    event.remove("mbd2:multiblock_info")
-})

@@ -1871,6 +1871,123 @@
             ]
         },
         {
+            "pakku_id": "oIiFr9XGqv63u4Q5",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "emi"
+            },
+            "name": {
+                "curseforge": "EMI"
+            },
+            "id": {
+                "curseforge": "580555"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "emi-1.1.22+1.20.1+forge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6420/945/emi-1.1.22+1.20.1+forge.jar",
+                    "id": "6420945",
+                    "parent_id": "580555",
+                    "hashes": {
+                        "sha1": "d8049d6ec86befcd100a0ff0fc8ebc289f735997",
+                        "md5": "441c582c6e8a1d6fd9e3d16a27c1a39e"
+                    },
+                    "required_dependencies": [],
+                    "size": 1048567,
+                    "date_published": "2025-04-14T03:37:30.690Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "wZsfvXO7Y3Iw5t1n",
+            "pakku_links": [
+                "uvDHIz7JrYCx6czx"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "emi-loot"
+            },
+            "name": {
+                "curseforge": "EMI Loot"
+            },
+            "id": {
+                "curseforge": "681783"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "emi_loot-0.7.9+1.20.1+forge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7417/249/emi_loot-0.7.9+1.20.1+forge.jar",
+                    "id": "7417249",
+                    "parent_id": "681783",
+                    "hashes": {
+                        "sha1": "e3f6289abd4de8ebbbb0ffc162b35346c3acd54f",
+                        "md5": "dbcc539eea0c8ebc84961f476c5d381a"
+                    },
+                    "required_dependencies": [
+                        "580555",
+                        "1005914"
+                    ],
+                    "size": 441180,
+                    "date_published": "2026-01-04T16:37:18.220Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "sy6lTMkKVSpDs3HL",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "emi-ores"
+            },
+            "name": {
+                "curseforge": "EMI Ores"
+            },
+            "id": {
+                "curseforge": "974009"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "emi_ores-1.2+1.20.1+forge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6060/341/emi_ores-1.2+1.20.1+forge.jar",
+                    "id": "6060341",
+                    "parent_id": "974009",
+                    "hashes": {
+                        "sha1": "c821f26e4a00c14fb453bfdb7628aec59fd2acf1",
+                        "md5": "66b441438984b418e7a4e50604a9f280"
+                    },
+                    "required_dependencies": [
+                        "580555"
+                    ],
+                    "size": 114588,
+                    "date_published": "2025-01-06T18:52:34.907Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "IW7TNH5ine3INF2m",
             "type": "MOD",
             "side": "CLIENT",
@@ -2860,6 +2977,48 @@
                     "required_dependencies": [],
                     "size": 544586,
                     "date_published": "2026-01-17T02:39:03.600Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "uvDHIz7JrYCx6czx",
+            "pakku_links": [
+                "xnkfH2u4o2RklyGq"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fzzy-config"
+            },
+            "name": {
+                "curseforge": "Fzzy Config"
+            },
+            "id": {
+                "curseforge": "1005914"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fzzy_config-0.7.5+1.20.1+forge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7489/457/fzzy_config-0.7.5+1.20.1+forge.jar",
+                    "id": "7489457",
+                    "parent_id": "1005914",
+                    "hashes": {
+                        "sha1": "7e890f8b527ccb4523fed54a2864549a53f65fed",
+                        "md5": "0519be93c6e6b9183c9416031db4c715"
+                    },
+                    "required_dependencies": [
+                        "351264"
+                    ],
+                    "size": 2372465,
+                    "date_published": "2026-01-19T17:33:01.213Z"
                 }
             ]
         },
