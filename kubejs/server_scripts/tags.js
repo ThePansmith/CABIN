@@ -294,11 +294,18 @@ ServerEvents.tags("block", event => {
         .add("ae2:smooth_sky_stone_chest")
 })
 
+// Need to implement a proper nukescript into this repo
 ServerEvents.tags("item", event => {
     event.removeAllTagsFrom("tconstruct:steel_ingot")
     event.removeAllTagsFrom("tconstruct:steel_nugget")
+    event.removeAllTagsFrom("occultism:silver_dust")
     event.removeAllTagsFrom("occultism:silver_ingot")
     event.removeAllTagsFrom("occultism:silver_nugget")
+    event.removeAllTagsFrom("occultism:iron_dust")
+        event.removeAllTagsFrom("occultism:copper_dust")
+            event.removeAllTagsFrom("occultism:gold_dust")
+    event.removeAllTagsFrom("thermal:copper_nugget")
+    event.removeAllTagsFrom("tconstruct:copper_nugget")
 })
 
 ServerEvents.tags("block_entity_type", event => {
