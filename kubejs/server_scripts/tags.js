@@ -294,6 +294,13 @@ ServerEvents.tags("block", event => {
         .add("ae2:smooth_sky_stone_chest")
 })
 
+ServerEvents.tags("item", event => {
+    event.removeAllTagsFrom("tconstruct:steel_ingot")
+    event.removeAllTagsFrom("tconstruct:steel_nugget")
+    event.removeAllTagsFrom("occultism:silver_ingot")
+    event.removeAllTagsFrom("occultism:silver_ingot")
+})
+
 ServerEvents.tags("block_entity_type", event => {
 
     // Add tags to basic vanilla-like chests and inventories to allow function with tinker's side inventory feature on crafting stations
@@ -304,3 +311,4 @@ ServerEvents.tags("block_entity_type", event => {
         .add("farmersdelight:cabinet")
         .add("ae2:sky_chest")
 })
+
