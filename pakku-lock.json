@@ -3552,42 +3552,6 @@
             ]
         },
         {
-            "pakku_id": "KHlyAvnm4ZkBeevf",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "jei"
-            },
-            "name": {
-                "curseforge": "Just Enough Items (JEI)"
-            },
-            "id": {
-                "curseforge": "238222"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "jei-1.20.1-forge-15.20.0.129.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/7391/695/jei-1.20.1-forge-15.20.0.129.jar",
-                    "id": "7391695",
-                    "parent_id": "238222",
-                    "hashes": {
-                        "sha1": "eba88424bd28c8bce0e49da13ada71cd47148b47",
-                        "md5": "a5192227a15e0fe0e367828b32c1f472"
-                    },
-                    "required_dependencies": [],
-                    "size": 1409642,
-                    "date_published": "2025-12-29T08:42:52.580Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "oaz3gmsQSELxlo4Y",
             "type": "MOD",
             "slug": {
@@ -5750,7 +5714,6 @@
         {
             "pakku_id": "nNShmlN4UJE9m2y9",
             "pakku_links": [
-                "KHlyAvnm4ZkBeevf",
                 "eNGNkActynnq7kA1",
                 "6LSVvymPWvqFWvsB"
             ],
