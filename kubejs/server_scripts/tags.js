@@ -302,8 +302,8 @@ ServerEvents.tags("item", event => {
     event.removeAllTagsFrom("occultism:silver_ingot")
     event.removeAllTagsFrom("occultism:silver_nugget")
     event.removeAllTagsFrom("occultism:iron_dust")
-        event.removeAllTagsFrom("occultism:copper_dust")
-            event.removeAllTagsFrom("occultism:gold_dust")
+    event.removeAllTagsFrom("occultism:copper_dust")
+    event.removeAllTagsFrom("occultism:gold_dust")
     event.removeAllTagsFrom("thermal:copper_nugget")
     event.removeAllTagsFrom("tconstruct:copper_nugget")
 })
@@ -318,4 +318,3 @@ ServerEvents.tags("block_entity_type", event => {
         .add("farmersdelight:cabinet")
         .add("ae2:sky_chest")
 })
-
