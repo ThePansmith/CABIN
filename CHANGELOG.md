@@ -4,11 +4,14 @@
 ### Changes
  * Java 25 support
     * Updated forge, along with various mods.
- * Replaced Blockswap with AE2 meteor mixin
- * Updated Tinker's Construct
- * Melting can be applied to all tools again
+ * Tinkers Construct Changes:
+    * Updated Tinker's Construct
+    * Melting can be applied to all tools again
+    * Added slime vines to overworld slime patches
+    * Cleaned up and fixed Tinker's EMI tabs a bit
+       * Added a tooltip for traveler's gear noting how to craft it.
+ * Replaced Blockswap mod with a mixin for AE2 meteors (Increased performance)
  * Cleaned up silver's recipes, and added a tooltip hint regarding how to make it for those wanting to make it early.
- * Added slime vines to overworld slime patches
  * Added more splashes and cleaned up questbook a minor amount
 
 ### Fixes
@@ -17,6 +20,7 @@
 * Fixed pewter being unobtainable
 * Fixed the ponder command in the questbook
 * Fixed Create: Encased compatibility
+
 
 ## [2.1.2]
 ### Changes
