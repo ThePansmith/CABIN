@@ -111,4 +111,7 @@ ItemEvents.tooltip(tooltip => {
     deprecated.forEach(item => { tooltip.add(item, Text.red(Text.translatable("cabin.trials.deprecation.tooltip"))) })
 
     tooltip.add("thermal:silver_ingot", (Text.translatable("item.silver.tooltip")))
+
+    let travelers = [ 'tconstruct:travelers_shield', 'tconstruct:travelers_helmet', 'tconstruct:travelers_chestplate', 'tconstruct:travelers_leggings', 'tconstruct:travelers_boots' ];
+    travelers.forEach(item => { tooltip.add(item, Text.darkGray(Text.translatable("cabin.travelersgear.emi.borked"))); });
 });
