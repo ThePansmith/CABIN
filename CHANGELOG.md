@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [2.1.3]
 ### Changes
  * Java 25 support
     * Updated forge, along with various mods.
