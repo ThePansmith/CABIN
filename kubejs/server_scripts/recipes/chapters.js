@@ -140,7 +140,6 @@ ServerEvents.recipes(event => {
     andesiteMachine(event, Item.of("ae2:charger", 1), "ae2:certus_quartz_crystal")
     andesiteMachine(event, Item.of("thermal:dynamo_stirling", 1), "thermal:rf_coil")
     andesiteMachine(event, Item.of("create:andesite_funnel", 4))
-    andesiteMachine(event, Item.of("create:andesite_tunnel", 4))
     andesiteMachine(event, Item.of("kubejs:pipe_module_utility", 4))
     // Gourmand Upgrade
     createMachine("thermal:dynamo_stirling", event, "thermal:dynamo_gourmand", "minecraft:golden_carrot")

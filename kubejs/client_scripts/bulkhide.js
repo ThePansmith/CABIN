@@ -20,6 +20,13 @@ JEIEvents.hideItems(event => {
 
     event.hide("architects_palette:withered_bone")
 
+    event.hide("tconstruct:steel_ingot")
+    event.hide("tconstruct:steel_nugget")
+    event.hide("occultism:silver_ingot")
+    event.hide("occultism:silver_ingot")
+    event.hide("thermal:copper_nugget")
+    event.hide("tconstruct:copper_nugget")
+
     let begoneEarth = [
         "tier_1_rover", "tier_2_rocket", "tier_3_rocket", "tier_4_rocket",
         "steel_cable", "desh_cable", "desh_fluid_pipe", "ostrum_fluid_pipe", "cable_duct", "fluid_pipe_duct",
@@ -190,7 +197,7 @@ JEIEvents.hideItems(event => {
     event.hide("sophisticatedbackpacks:advanced_magnet_upgrade")
     event.hide("sophisticatedstorage:magnet_upgrade")
     event.hide("sophisticatedstorage:advanced_magnet_upgrade")
-
+    event.hide("sophisticatedstorage:hopper_upgrade")
     event.hide("sophisticatedstorage:advanced_hopper_upgrade")
 
     event.hide('balancedflight:ascended_flight_ring')

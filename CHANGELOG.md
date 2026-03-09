@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.1.3]
+### Changes
+ * Java 25 support
+    * Updated forge, along with various mods.
+ * Tinkers Construct Changes:
+    * Updated Tinker's Construct
+    * Melting can be applied to all tools again
+    * Added slime vines to overworld slime patches
+    * Cleaned up and fixed Tinker's EMI tabs a bit
+       * Added a tooltip for traveler's gear noting how to craft it.
+ * Replaced Blockswap mod with a mixin for AE2 meteors (Increased performance)
+ * Cleaned up silver's recipes, and added a tooltip hint regarding how to make it for those wanting to make it early.
+ * Added more splashes and cleaned up questbook a minor amount
+
+### Fixes
+* Fixed a Quark and Soph Storage compat bug
+* Fixed the trade machine model
+* Fixed pewter being unobtainable
+* Fixed the ponder command in the questbook
+* Fixed Create: Encased compatibility
+
+
 ## [2.1.2]
 ### Changes
  * Hotfix for curseforge not accepting the server builds because of Trial Chambers Reuploaded

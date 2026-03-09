@@ -824,18 +824,14 @@
 				"[\"\",{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description7\"},{\"color\":\"gold\",\"underlined\":true,\"bold\":1,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description8\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description.hover_text8\"}}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description9\"},{\"color\":\"gold\",\"underlined\":true,\"bold\":1,\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description10\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description.hover_text10\"}}},{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description11\"}]"
 				""
 				"{\"translate\":\"cabin.quest.3A428CA43D545DB9.rich_description12\"}"
-				"{@pagebreak}"
-				"{cabin.quest.012E50977D8EEEDB.description3}"
-				""
-				"{cabin.quest.012E50977D8EEEDB.description4}"
-				""
-				"{cabin.quest.012E50977D8EEEDB.description5}"
-				"{@pagebreak}"
-				"{cabin.quest.012E50977D8EEEDB.description6}"
-				""
-				"{cabin.quest.012E50977D8EEEDB.description7}"
 			]
 			id: "3A428CA43D545DB9"
+			rewards: [{
+				count: 4
+				id: "3ECC7FCF5DC069DE"
+				item: "minecraft:stick"
+				type: "item"
+			}]
 			tasks: [{
 				id: "3B501EA544B81E73"
 				item: "minecraft:crafting_table"
