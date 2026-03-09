@@ -6108,43 +6108,38 @@
             ]
         },
         {
-            "pakku_id": "2EdkNC0WYSlgrtNz",
-            "pakku_links": [
-                "oIiFr9XGqv63u4Q5"
-            ],
+            "pakku_id": "KHlyAvnm4ZkBeevf",
             "type": "MOD",
             "slug": {
-                "curseforge": "tmrv"
+                "curseforge": "jei"
             },
             "name": {
-                "curseforge": "TooManyRecipeViewers (TMRV)"
+                "curseforge": "Just Enough Items (JEI)"
             },
             "id": {
-                "curseforge": "1194921"
+                "curseforge": "238222"
             },
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "toomanyrecipeviewers-0.7.1+mc.20.1.jar",
+                    "file_name": "jei-1.20.1-forge-15.20.0.129.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
                     "loaders": [
                         "forge"
                     ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7410/427/toomanyrecipeviewers-0.7.1+mc.20.1.jar",
-                    "id": "7410427",
-                    "parent_id": "1194921",
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7391/695/jei-1.20.1-forge-15.20.0.129.jar",
+                    "id": "7391695",
+                    "parent_id": "238222",
                     "hashes": {
-                        "sha1": "29bec57f882d3a4bab4a2dc4c46e19cadcd32c67",
-                        "md5": "1419bf0ba0f79042abe7af61f567d7ea"
+                        "sha1": "eba88424bd28c8bce0e49da13ada71cd47148b47",
+                        "md5": "a5192227a15e0fe0e367828b32c1f472"
                     },
-                    "required_dependencies": [
-                        "580555"
-                    ],
-                    "size": 1667055,
-                    "date_published": "2026-01-03T00:51:42.943Z"
+                    "required_dependencies": [],
+                    "size": 1409642,
+                    "date_published": "2025-12-29T08:42:52.580Z"
                 }
             ]
         },
