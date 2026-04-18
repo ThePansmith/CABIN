@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.4]
+### Changes
+ * Added Create: Repair. This is a mod that backports a bunch of create fixes made on the 1.21 branch back to 1.20.
+    * A full list of fixes can be found [here](https://github.com/VoidLeech/Repair/blob/985494fc1645fa30e2daed90d3078c1cd5948154/REPAIRED.md).
+ * Updated Questbook
+
+
+ 
 ## [2.1.3]
 ### Changes
  * Java 25 support
