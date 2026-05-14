@@ -1447,7 +1447,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "create_repair-forge-1.20.1-1.1.1-all.jar",
+                    "file_name": "create_repair-forge-1.20.1-1.2.1-all.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -1456,19 +1456,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/7928/390/create_repair-forge-1.20.1-1.1.1-all.jar",
-                    "id": "7928390",
+                    "url": "https://edge.forgecdn.net/files/8034/105/create_repair-forge-1.20.1-1.2.1-all.jar",
+                    "id": "8034105",
                     "parent_id": "1477958",
                     "hashes": {
-                        "sha1": "be88f6871ca76d6b47b5fab470e79e43475b49bb",
-                        "md5": "2a40b6b8db077b0fa063f64f4feb8036"
+                        "sha1": "3e0a6483541b1e0aac6ce974ac9fcedd3f99028c",
+                        "md5": "0890dfba5dd8771a86d4d8842cd43d6d"
                     },
                     "required_dependencies": [
-                        "980731",
-                        "328085"
+                        "328085",
+                        "980731"
                     ],
-                    "size": 1260557,
-                    "date_published": "2026-04-15T00:56:39.993Z"
+                    "size": 1280808,
+                    "date_published": "2026-05-03T19:05:59.410Z"
                 }
             ]
         },
@@ -3592,6 +3592,42 @@
                     "required_dependencies": [],
                     "size": 552486,
                     "date_published": "2025-08-06T14:19:52.700Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "KHlyAvnm4ZkBeevf",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "jei"
+            },
+            "name": {
+                "curseforge": "Just Enough Items (JEI)"
+            },
+            "id": {
+                "curseforge": "238222"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "jei-1.20.1-forge-15.20.0.129.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7391/695/jei-1.20.1-forge-15.20.0.129.jar",
+                    "id": "7391695",
+                    "parent_id": "238222",
+                    "hashes": {
+                        "sha1": "eba88424bd28c8bce0e49da13ada71cd47148b47",
+                        "md5": "a5192227a15e0fe0e367828b32c1f472"
+                    },
+                    "required_dependencies": [],
+                    "size": 1409642,
+                    "date_published": "2025-12-29T08:42:52.580Z"
                 }
             ]
         },
@@ -6220,42 +6256,6 @@
                     ],
                     "size": 26957,
                     "date_published": "2023-08-18T21:57:26.293Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "KHlyAvnm4ZkBeevf",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "jei"
-            },
-            "name": {
-                "curseforge": "Just Enough Items (JEI)"
-            },
-            "id": {
-                "curseforge": "238222"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "jei-1.20.1-forge-15.20.0.129.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/7391/695/jei-1.20.1-forge-15.20.0.129.jar",
-                    "id": "7391695",
-                    "parent_id": "238222",
-                    "hashes": {
-                        "sha1": "eba88424bd28c8bce0e49da13ada71cd47148b47",
-                        "md5": "a5192227a15e0fe0e367828b32c1f472"
-                    },
-                    "required_dependencies": [],
-                    "size": 1409642,
-                    "date_published": "2025-12-29T08:42:52.580Z"
                 }
             ]
         },
