@@ -238,7 +238,7 @@
     "item.dynamo.placement": "§6Redstone Flux is pushed from the §ered coil§6, and can be transported over distances with §efluxducts§6.",
     "item.dynamo.details": "§6Must be §eactively producting§6 energy to export it.§6",
     "item.silver.tooltip": "§7Casted from coins",
-    "cabin.travelersgear.emi.borked": "Refer to \"Puny Smelting\" book for this item's base recipe.",
+    "cabin.travelersgear.emi.borked": "Refer to the \"Puny Smelting\" book for this item's base recipe.",
     "filled_map.fortress": "Fortress Locator Map",
     "cabin.ponder.tag.ponders": "CABIN",
     "cabin.ponder.tag.ponders.description": "Components and Devices which are distinctive to A&B and CABIN",
