@@ -1,23 +1,23 @@
 // priority: 800
 global.itemNukeList = [
- 
+
     // AE2
     "ae2:vibration_chamber",
- 
+
     // Aquaculture
     /^aquaculture:.+_fillet_knife$/,
- 
+
     // Architects Palette
     "architects_palette:withered_bone",
- 
+
     // Balanced Flight
     "balancedflight:ascended_flight_ring",
- 
+
     // CB Microblock / AE2 / Chisels — meta/dynamic items with no real recipes
     "cb_microblock:microblock",
     "ae2:facade",
     "chiselsandbits:block_bit",
- 
+
     // Create — crushed ore duplicates
     "create:crushed_raw_tin",
     "create:crushed_raw_silver",
@@ -26,25 +26,25 @@ global.itemNukeList = [
     "create:crushed_raw_platinum",
     "create:crushed_raw_aluminum",
     "create:crushed_raw_uranium",
- 
+
     // CreateDeco
     /^createdeco:.*coin/,
- 
+
     // Decorative Blocks
     "decorative_blocks:blockstate_copy_item",
- 
+
     // Functional Storage
     "functionalstorage:puller_upgrade",
     "functionalstorage:pusher_upgrade",
     "functionalstorage:collector_upgrade",
- 
+
     // KubeJS internals
     /incomplete/,
     /kubejs:growing/,
     /kubejs:failed/,
     "kubejs:silver_coin",
     "kubejs:gold_coin",
- 
+
     // Occultism
     "occultism:debug_foliot_lumberjack",
     "occultism:debug_foliot_transport_items",
@@ -56,10 +56,10 @@ global.itemNukeList = [
     "occultism:jei_dummy/none",
     "occultism:jei_dummy/require_sacrifice",
     "occultism:jei_dummy/require_item_use",
- 
+
     // Pretty Pipes
     "prettypipes:blank_module",
- 
+
     // ProjectRed Core
     "projectred_core:ruby",
     "projectred_core:sapphire",
@@ -95,7 +95,7 @@ global.itemNukeList = [
     "projectred_core:energized_silicon_chip",
     "projectred_transmission:low_load_power_wire",
     "projectred_transmission:low_load_framed_power_wire",
- 
+
     // Sophisticated Storage
     /^sophisticatedstorage:limited.+barrel.+$/,
     "sophisticatedstorage:copper_barrel",
@@ -107,14 +107,14 @@ global.itemNukeList = [
     "sophisticatedstorage:advanced_magnet_upgrade",
     "sophisticatedstorage:hopper_upgrade",
     "sophisticatedstorage:advanced_hopper_upgrade",
- 
+
     // Sophisticated Backpacks
     "sophisticatedbackpacks:stack_upgrade_omega_tier",
     "sophisticatedbackpacks:inception_upgrade",
     "sophisticatedbackpacks:magnet_upgrade",
     "sophisticatedbackpacks:advanced_magnet_upgrade",
     /xp_pump_upgrade/,
- 
+
     // Thermal
     "thermal:rs_control_augment",
     "thermal:side_config_augment",
@@ -142,10 +142,10 @@ global.itemNukeList = [
     "thermal:netherite_plate",
     "thermal:servo_attachment",
     "thermal:device_hive_extractor",
- 
+
     // Trials
     "trials:crafter",
- 
+
     // Ad Astra
     "ad_astra:tier_1_rover",
     "ad_astra:tier_2_rocket",
@@ -203,8 +203,8 @@ global.itemNukeList = [
     "create:tuff_pillar",
 
     // Crates (FD doesnt have a apple crate, oddly enough)
-    'thermal:carrot_block', 
-    'thermal:potato_block', 
+    'thermal:carrot_block',
+    'thermal:potato_block',
     'thermal:beetroot_block'
- 
+
 ];

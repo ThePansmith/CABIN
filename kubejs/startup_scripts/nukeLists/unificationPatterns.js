@@ -7,4 +7,3 @@ global.unificationPattern = new RegExp(
         "|tcintegrations:bronze_(nugget|ingot|block)" +
     ")$"
 );
- 
