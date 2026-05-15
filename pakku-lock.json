@@ -6185,6 +6185,50 @@
             ]
         },
         {
+            "pakku_id": "kIcZthTy3qu2kYhP",
+            "pakku_links": [
+                "6LSVvymPWvqFWvsB",
+                "eNGNkActynnq7kA1"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "tcintegrations"
+            },
+            "name": {
+                "curseforge": "Tinkers Integrations and Tweaks"
+            },
+            "id": {
+                "curseforge": "602680"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "TCIntegrations-1.20.1-2.0.25.19.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7811/712/TCIntegrations-1.20.1-2.0.25.19.jar",
+                    "id": "7811712",
+                    "parent_id": "602680",
+                    "hashes": {
+                        "sha1": "97e1da463ad7a16f5a25509236c998f06cab5e3d",
+                        "md5": "d44dfe14718e6fd1783b0997477ed864"
+                    },
+                    "required_dependencies": [
+                        "74924",
+                        "74072"
+                    ],
+                    "size": 2108964,
+                    "date_published": "2026-03-25T15:27:09.273Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "BwPbCabVg67ekbDl",
             "type": "MOD",
             "slug": {
