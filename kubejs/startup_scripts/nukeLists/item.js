@@ -202,8 +202,7 @@ global.itemNukeList = [
     /^architects_palette:(tuff_(bricks?|pillar)|(chiseled|polished)_tuff)/,
     "create:tuff_pillar",
 
-    // Crates
-    'thermal:apple_block', 
+    // Crates (FD doesnt have a apple crate, oddly enough)
     'thermal:carrot_block', 
     'thermal:potato_block', 
     'thermal:beetroot_block'
