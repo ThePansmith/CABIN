@@ -45,7 +45,7 @@ StartupEvents.registry("item", event => {
         { in: "farmersdelight:rice_bag", out: S(1) },
         { in: "32x farmersdelight:canvas", out: S(1) },
         { in: "thermal:apple_block", out: S(1) },
-        { in: "8x minecraft:sweet_berries", out: S(1) },
+        { in: "quark:berry_sack", out: S(1) },
         { in: "16x minecraft:cocoa_beans", out: S(1) },
         { in: "8x minecraft:honey_bottle", out: S(1) },
         { in: "4x minecraft:honeycomb", out: S(1) },
