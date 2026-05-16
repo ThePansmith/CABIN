@@ -1,8 +1,13 @@
 # Changelog
 
+## [2.1.5]
+### Changes
+* Hotfix to remove Tinker's integrations. Mod has an issue that prevents players from joining multiplayer servers due to a recipe reading issue.
+
+
 ## [2.1.4]
 ### Changes
- * Added Create: Repair. This is a mod that backports a bunch of create fixes made on the 1.21 branch back to 1.20.
+ * Added Create Repair. This is a mod that backports a bunch of create fixes made on the 1.21 branch back to 1.20.
     * A full list of fixes can be found [here](https://github.com/VoidLeech/Repair/blob/mc1.20.1/forge/dev/REPAIRED.md).
  * Added Tinker's compatability to Brass, Neptunium and Desh with [Tinker's integrations](<https://www.curseforge.com/minecraft/mc-mods/tcintegrations>)
   * Applicable modifiers have been added as well, the above link contains more info on the new traits and modifiers.
