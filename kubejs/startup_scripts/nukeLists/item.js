@@ -19,7 +19,7 @@ global.itemNukeList = [
     // Balanced Flight
     "balancedflight:ascended_flight_ring",
 
-    // Create 
+    // Create
     "create:crushed_raw_tin",
     "create:crushed_raw_silver",
     "create:crushed_raw_quicksilver",
