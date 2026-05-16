@@ -3,6 +3,12 @@ global.itemNukeList = [
 
     // AE2
     "ae2:vibration_chamber",
+    "ae2:inscriber",
+    /ae2:.*_budding_quartz/,
+    "ae2:small_quartz_bud",
+    "ae2:medium_quartz_bud",
+    "ae2:large_quartz_bud",
+    "ae2:quartz_cluster",
 
     // Aquaculture
     /^aquaculture:.+_fillet_knife$/,
@@ -13,12 +19,7 @@ global.itemNukeList = [
     // Balanced Flight
     "balancedflight:ascended_flight_ring",
 
-    // CB Microblock / AE2 / Chisels — meta/dynamic items with no real recipes
-    "cb_microblock:microblock",
-    "ae2:facade",
-    "chiselsandbits:block_bit",
-
-    // Create — crushed ore duplicates
+    // Create 
     "create:crushed_raw_tin",
     "create:crushed_raw_silver",
     "create:crushed_raw_quicksilver",
@@ -37,13 +38,6 @@ global.itemNukeList = [
     "functionalstorage:puller_upgrade",
     "functionalstorage:pusher_upgrade",
     "functionalstorage:collector_upgrade",
-
-    // KubeJS internals
-    /incomplete/,
-    /kubejs:growing/,
-    /kubejs:failed/,
-    "kubejs:silver_coin",
-    "kubejs:gold_coin",
 
     // Occultism
     "occultism:debug_foliot_lumberjack",
@@ -206,5 +200,4 @@ global.itemNukeList = [
     'thermal:carrot_block',
     'thermal:potato_block',
     'thermal:beetroot_block'
-
 ];
