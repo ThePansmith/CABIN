@@ -3,7 +3,13 @@
 ## [Unreleased]
 ### Changes
  * Added Create: Repair. This is a mod that backports a bunch of create fixes made on the 1.21 branch back to 1.20.
-    * A full list of fixes can be found [here](https://github.com/VoidLeech/Repair/blob/985494fc1645fa30e2daed90d3078c1cd5948154/REPAIRED.md).
+    * A full list of fixes can be found [here](https://github.com/VoidLeech/Repair/blob/mc1.20.1/forge/dev/REPAIRED.md).
+ * Added Tinker's compatability to Brass, Neptunium and Desh with [Tinker's integrations](<https://www.curseforge.com/minecraft/mc-mods/tcintegrations>)
+  * Applicable modifiers have been added as well, the above link contains more info on the new traits and modifiers.
+ * Reworked how things are hidden and how item unification is handled, and unified some previously ununified things.
+  * Cleaned up tuff blocks
+  * Cocoa beans and sweetberries are now traded in crates, matching the other plants.
+ * Fixed the Discord Rich Presence small icon not appearing properly
  * Updated Questbook
 
 
