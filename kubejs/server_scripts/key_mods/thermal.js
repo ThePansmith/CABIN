@@ -50,6 +50,15 @@ ServerEvents.recipes(event => {
     event.custom({"type": "thermal:gourmand_fuel", "ingredient": {"item": "farmersdelight:cabbage_crate"}, "energy": 32000})
     event.custom({"type": "thermal:gourmand_fuel", "ingredient": {"item": "farmersdelight:onion_crate"}, "energy": 32000})
     event.custom({"type": "thermal:gourmand_fuel", "ingredient": {"item": "farmersdelight:tomato_crate"}, "energy": 16000})
+    // Fix broken cinnabar recipes
+    event.replaceInput(
+    { input: "thermal:cinnabar_ore" },
+    'thermal:cinnabar_ore',
+    "#forge:ores/cinnabar"
+    )
+    // Remove unused cinnabar dust
+    event.remove({ output: 'thermal:cinnabar_dust'})
+
     // Igneous Extruder recipes
     let bedrock_cobblegen = (adjacent, output) => {
         event.custom({
