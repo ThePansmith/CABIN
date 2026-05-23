@@ -110,6 +110,13 @@
     <td>SC</td>
     <td>Adds extra gauges, for those wanting to take their walls to the next level.</td>
   </tr>
+  <tr>
+    <td><p><a href="https://curseforge.com/projects/1264989">Create: Mechanical Companion</a></p></td>
+    <td><p>NSC</p></td>
+    <td>
+        <p>Create: Mechanical Companion introduce a mechanical dog. Equippable with modules that integrate with the classic Create experience.</p>
+    </td>
+  </tr>
     <td><p><a href="https://curseforge.com/projects/815548">Integrated Strongholds</a></p></td>
     <td><p>*SC</p></td>
     <td>
