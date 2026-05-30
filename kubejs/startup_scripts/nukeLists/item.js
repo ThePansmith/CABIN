@@ -139,7 +139,6 @@ global.itemNukeList = [
     "thermal:tin_ore",
     "thermal:deepslate_tin_ore",
     "thermal:tin_nugget",
-    "thermal:tin_ingot",
     "thermal:tin_block",
     "thermal:tin_dust",
     "thermal:tin_plate",
