@@ -248,7 +248,6 @@
     "ponderjs.ponder.alchemy_setup.text_5": "배치기가 활성화될 때마다...",
     "ponderjs.ponder.alchemy_setup.text_6": "...레이저 램프가 고에너지 광선을 방출합니다",
     "ponderjs.ponder.alchemy_setup.text_7": "광선에 닿은 호퍼 광산 수레는 포함된 아이템을 처리합니다",
-    "cabin.trials.crafter.deprecation.tooltip": "Quark의 제작기에서 제작하세요",
     "cabin.profession.prefix": "직업: %s",
     "cabin.profession.farming": "농사",
     "cabin.profession.carpentry": "목공",
