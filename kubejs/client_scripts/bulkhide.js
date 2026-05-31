@@ -11,7 +11,7 @@ JEIEvents.hideItems(event => {
     event.hide("create:sturdy_sheet")
     event.hide("create:unprocessed_obsidian_sheet")
 
-    // Bad lazy fix. 
+    // Bad lazy fix.
     event.hide("thermal:tin_gear")
     event.hide("thermal:tin_ingot")
 })
