@@ -10,6 +10,10 @@ JEIEvents.hideItems(event => {
     event.hide("chiselsandbits:block_bit")
     event.hide("create:sturdy_sheet")
     event.hide("create:unprocessed_obsidian_sheet")
+
+    // Bad lazy fix. 
+    event.hide("thermal:tin_gear")
+    event.hide("thermal:tin_ingot")
 })
 
 JEIEvents.hideFluids(event => {
