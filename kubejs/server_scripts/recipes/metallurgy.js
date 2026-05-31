@@ -58,10 +58,6 @@ ServerEvents.recipes(event => {
     event.remove({ id: "thermal:fire_charge/signalum_ingot_4" })
 
     // Duplicate Recipes
-    event.remove({ id: "thermal:storage/silver_block"})
-    event.remove({ id: "thermal:storage/silver_ingot_from_block"})
-    event.remove({ id: "thermal:storage/silver_ingot_from_nuggets"})
-    event.remove({ id: "thermal:storage/silver_nugget_from_ingot"})
     event.remove({ id: "thermal:smelting/silver_ingot_from_dust_smelting"})
     event.remove({ id: "thermal:smelting/silver_ingot_from_dust_blasting"})
 
