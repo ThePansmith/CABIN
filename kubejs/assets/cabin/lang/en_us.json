@@ -261,5 +261,6 @@
     "cabin.profession.fishing": "Fishing",
     "cabin.profession.smithing": "Smithing",
     "cabin.import.prefix": "Import: %s",
+    "item.create.brass_hand": "Gold Hand",
     "alias.emi.drawer_key": "Drawer Key"
 }
