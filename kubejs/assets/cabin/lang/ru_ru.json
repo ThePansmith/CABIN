@@ -218,7 +218,6 @@
     "item.kubejs.incomplete_gravity_normalizer": "Незаконченный нормализатор гравитации",
     "block.kubejs.substrate_fluix": "Флюисовый реагент",
     "filled_map.fortress": "Карта поиска крепости",
-    "cabin.trials.crafter.deprecation.tooltip": "Не используется. Переделайте его в крафтер из Quark",
     "ponderjs.ponder.alchemy_setup.text_5": "При каждом срабатывании активатора...",
     "ponderjs.ponder.alchemy_setup.text_4": "Переключите его режим с помощью гаечного ключа",
     "ponderjs.ponder.alchemy_setup.text_1": "Начните с инварного устройства",
@@ -259,5 +258,6 @@
     "item.kubejs.shift.active": "§7Удерживайте [§fShift§7] для подробностей",
     "item.dynamo.details": "§6Должно §eактивно производить§6 энергию, чтобы экспортировать её.§6",
     "item.dynamo.placement": "§6RF подаётся через §eкрасную катушку§6 и может транспортироваться на расстояние с помощью §eэнергетических труб§6.",
-    "alias.emi.drawer_key": "Ключ хранилища"
+    "alias.emi.drawer_key": "Ключ хранилища",
+    "cabin.trials.deprecation.tooltip": "Устарело."
 }

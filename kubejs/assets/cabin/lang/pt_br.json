@@ -174,7 +174,7 @@
     "item.supplementaries.ash.tooltip": "Criado a partir da queima da madeira no mundo",
     "item.functionalstorage.controller.tooltip": "Permite a automatização das gavetas conectadas, podendo inserir ou retirar itens à distância",
     "item.functionalstorage.controller_extension.tooltip": "Serve como um ponto a mais para inserir ou extrair itens se um controlador de gaveta estiver presente.",
-    "item.kubejs.pureore.tooltip": "§7Um grau mais puro de minério. §7Somente pode ser encontrado explorando.",
+    "item.kubejs.pureore.tooltip": "§7Um grau mais puro de minério que só pode ser encontrado explorando.",
     "item.kubejs.accellerator_redstone.tooltip": "§7Quando usado em um Pesquisa Alquímica: §6Um dos Reagentes §eCorretos §6em um espaço §eIncorreto §6não será consumido",
     "item.kubejs.accellerator_glowstone.tooltip": "§7Quando usado em um Pesquisa Alquímica: §6Um dos Reagentes §eCorretos §6em um espaço §eCorreto §6não será consumido",
     "item.kubejs.failed_alchemy.tooltip": "§7Coloque em um Separador Centrífugo para analisar.\n\n§6Produz\n- Cinzas §7para cada ingrediente incorreto.\n- Redstone §7para cada ingrediente correto em um espaço incorreto\n- Pedra Brilhante §7para cada ingrediente correto em um espaço correto",
@@ -218,7 +218,6 @@
     "item.kubejs.incomplete_flight_anchor": "Âncora de Voo Incompleta",
     "block.kubejs.substrate_fluix": "Reagente de Fluix",
     "filled_map.fortress": "Mapa Localizador de Fortalezas",
-    "cabin.trials.crafter.deprecation.tooltip": "Descontinuado. Use um Crafter do Quark",
     "ponderjs.ponder.alchemy_setup.text_5": "Quando o Implantador ativar...",
     "ponderjs.ponder.alchemy_setup.text_4": "Coloque-o no modo Atacar usando uma Chave-Inglesa",
     "ponderjs.ponder.alchemy_setup.text_1": "Comece com uma Máquina de Invar",
@@ -259,5 +258,6 @@
     "item.kubejs.shift.active": "§7Segure [§fShift§7] para ver o Resumo",
     "item.dynamo.details": "§6Só transfere energia se estiver §eproduzindo ativamente§6.§6",
     "item.dynamo.placement": "§6O Redstone Flux (RF) é transferido ao contato pela §ebobina vermelha§6, mas pode ser transportado usando §eTubos de Fluxo§6.",
-    "alias.emi.drawer_key": "Drawer Key"
+    "alias.emi.drawer_key": "Drawer Key",
+    "item.silver.tooltip": "§7Feito com moedas"
 }
