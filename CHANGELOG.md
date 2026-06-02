@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.1.6]
+### Changes
+* Fixed a regression caused by the change in how item cleanup was handled
+* Updated localization files
+
 ## [2.1.5]
 ### Changes
 * Hotfix to remove Tinker's integrations. Mod has an issue that prevents players from joining multiplayer servers due to a recipe reading issue.
