@@ -35,7 +35,7 @@ CABIN is currently not planned to be released on Modrinth. Some mods necessary t
 
 **Q. Can I add 'X' mod to my instance of CABIN?**
 
-By default, CABIN only supports the mods included with it, and has *[optional compat](https://github.com/ThePansmith/CABIN/blob/1.20.1/mods/compat.md)* for various mods, such as Enchantment Industry. Any other mods added may break progression and/or deviate from the intended experience. Note that support will not be provided for bugs related to mods not shipped with the pack.
+By default, CABIN only supports the mods included with it, and has *[optional compat](https://github.com/ThePansmith/CABIN/blob/1.20.1/MOD_COMPAT.md)* for various mods, such as Enchantment Industry. Any other mods added may break progression and/or deviate from the intended experience. Note that support will not be provided for bugs related to mods not shipped with the pack.
 
 <hr>
 
