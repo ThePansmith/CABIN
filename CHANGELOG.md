@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.1.7]
+### Changes
+* Fixed various occultism recipes.
+* Fixed a QB inaccuracy.
+
+
 ## [2.1.6]
 ### Changes
 * Fixed a regression caused by the change in how item cleanup was handled
