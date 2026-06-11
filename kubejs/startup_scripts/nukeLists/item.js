@@ -47,7 +47,8 @@ global.itemNukeList = [
     "occultism:debug_djinni_manage_machine",
     "occultism:debug_djinni_test",
     "occultism:lighted_air",
-    "occultism:jei_dummy/none",
+    "occultism:ritual_dummy/custom_ritual",
+    // "occultism:jei_dummy/none",
     "occultism:jei_dummy/require_sacrifice",
     "occultism:jei_dummy/require_item_use",
 
