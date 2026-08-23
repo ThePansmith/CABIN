@@ -24,6 +24,7 @@ global.itemNukeList = [
     "vs_clockwork:wanderlite_deepslate_ore",
     "vs_clockwork:wanderlite_end_ore",
     "vs_clockwork:wanderlite_nyx_ore",
+    "vs_clockwork:charged_nyx",
     "vs_clockwork:nyx",
     "vs_clockwork:cobbled_nyx",
 
