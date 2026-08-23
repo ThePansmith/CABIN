@@ -19,6 +19,14 @@ global.itemNukeList = [
     // Balanced Flight
     "balancedflight:ascended_flight_ring",
 
+    // Clockwork
+    "vs_clockwork:asteroid_block",
+    "vs_clockwork:wanderlite_deepslate_ore",
+    "vs_clockwork:wanderlite_end_ore",
+    "vs_clockwork:wanderlite_nyx_ore",
+    "vs_clockwork:nyx",
+    "vs_clockwork:cobbled_nyx",
+
     // Create
     "create:crushed_raw_tin",
     "create:crushed_raw_silver",
