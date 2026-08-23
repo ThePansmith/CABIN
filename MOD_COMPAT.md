@@ -110,6 +110,13 @@
     <td>SC</td>
     <td>Adds extra gauges, for those wanting to take their walls to the next level.</td>
   </tr>
+  <tr>
+    <td><a href="https://www.curseforge.com/minecraft/mc-mods/valkyrien-skies">Valkyrien Skies</a></td>
+    <td>*SC</td>
+    <td><p><b>You must add <code>mixin.ai.poi=false</code> to <code>.minecraft/config/lithium.properties</code>, or the game will crash on world load!</b></p>
+    <p>Adds Create-powered physics contraptions, airships, and boats.</p>
+    <p>Also install the following addon mods: <a href="https://www.curseforge.com/minecraft/mc-mods/create-clockwork">VS: Clockwork</a>, <a href="https://www.curseforge.com/minecraft/mc-mods/valkyrien-sails">Valkyrien Sails</a> (requires <a href="https://www.curseforge.com/minecraft/mc-mods/vlib">VLib</a>), <a href="https://www.curseforge.com/minecraft/mc-mods/create-interactive">Interactive</a>, and <a href="https://www.curseforge.com/minecraft/mc-mods/trackwork">Trackwork</a>.</p></td>
+  </tr>
     <td><p><a href="https://curseforge.com/projects/815548">Integrated Strongholds</a></p></td>
     <td><p>*SC</p></td>
     <td>
