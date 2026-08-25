@@ -184,7 +184,7 @@ global.itemNukeList = [
     "ad_astra:jet_suit",
     "ad_astra:deepslate_desh_ore",
     "ad_astra:deepslate_ice_shard_ore",
-    /^ad_astra:(space|netherite_space|jet_suit)_(helmet|suit|pants|boots)$/,
+    /^ad_astra:(netherite_space|jet_suit)_(helmet|suit|pants|boots)$/,
     /^ad_astra:(steel|desh|ostrum|calorite)_(tank|engine)$/,
     /ad_astra:.*(mars|venus|mercury|glacio)/,
     /^ad_astra:(?!photovoltaic).*(ostrum|calorite|etrium).*/,
