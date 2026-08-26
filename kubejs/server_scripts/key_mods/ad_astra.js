@@ -8,6 +8,12 @@ ServerEvents.recipes(event => {
     event.remove({type: "ad_astra:nasa_workbench"})
     event.remove({type: "ad_astra:refining"})
 
+
+    event.remove({type: "minecraft:crafting_shaped", output: "ad_astra:space_helmet"})
+    event.remove({type: "minecraft:crafting_shaped", output: "ad_astra:space_suit"})
+    event.remove({type: "minecraft:crafting_shaped", output: "ad_astra:space_pants"})
+    event.remove({type: "minecraft:crafting_shaped", output: "ad_astra:space_boots"})
+
     event.replaceInput({ id: "ad_astra:ti_69" }, "#forge:plates/steel", "kubejs:matter_plastics")
 })
 
