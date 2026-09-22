@@ -174,7 +174,7 @@
     "item.supplementaries.ash.tooltip": "通过在世界中点燃木制材料获得",
     "item.functionalstorage.controller.tooltip": "允许自动化系统从连接的抽屉中无线输入和输出物品",
     "item.functionalstorage.controller_extension.tooltip": "如果存在存储控制器，它可以作为额外的接口供自动化系统输入和输出物品。",
-    "item.kubejs.pureore.tooltip": "§7更纯净的矿石. §7只能在探险中发现。",
+    "item.kubejs.pureore.tooltip": "§7一种纯度更高的矿石，只能在探险中发现。",
     "item.kubejs.accellerator_redstone.tooltip": "§7在炼金研究中使用时: §6放置在§e错误的§6槽位中的§e正确§6试剂不会被消耗",
     "item.kubejs.accellerator_glowstone.tooltip": "§7在炼金研究中使用时: §6放置在§e错误的§6槽位中的§e正确§6试剂不会被消耗",
     "item.kubejs.failed_alchemy.tooltip": "§7放入离心分离机进行分析。\n\n§6产出:\n- §7每个错误的材料都会产生灰烬\n- §7每个放在错误槽位的正确材料都会产生红石粉\n- §7每个放在正确槽位的正确材料都会产生荧石粉",
@@ -258,5 +258,9 @@
     "item.kubejs.shift.active": "§7按住 [§fShift§7] 查看摘要",
     "item.dynamo.details": "§6必须§e主动产生§6能量才会向外输出。§6",
     "item.dynamo.placement": "§6红石通量（RF）会在§e红色线圈顶端§6输出， 并且可以通过§e能量管道§6远距离传输。",
-    "alias.emi.drawer_key": "抽屉钥匙"
+    "alias.emi.drawer_key": "抽屉钥匙",
+    "item.create.brass_hand": "金手部零件",
+    "item.silver.tooltip": "§7由银币铸造",
+    "cabin.travelersgear.emi.borked": "此物品的基础配方请参考《入门熔炼术》一书。",
+    "cabin.trials.deprecation.tooltip": "已弃用。"
 }
