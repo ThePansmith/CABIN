@@ -109,6 +109,25 @@ ServerEvents.recipes(event => {
     event.remove({ id: "tconstruct:smeltery/casting/cheese_block" })
     event.remove({ id: "tconstruct:smeltery/casting/cheese_ingot_gold_cast" })
     event.remove({ id: "tconstruct:smeltery/casting/cheese_ingot_sand_cast" })
+
+    // Allow spouts to fill buckets with awkward potion, Create's potion fluid has no bucket of its own
+    const awkwardPotionBucket = { item: "tconstruct:potion_bucket", nbt: { Potion: "minecraft:awkward" } }
+    event.custom({
+        type: "create:filling",
+        ingredients: [
+            { item: "minecraft:bucket" },
+            { fluid: "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:awkward" }, amount: 1000 }
+        ],
+        results: [awkwardPotionBucket]
+    }).id("kubejs:filling/awkward_potion_bucket")
+    event.custom({
+        type: "create:filling",
+        ingredients: [
+            { item: "minecraft:bucket" },
+            { fluid: "tconstruct:potion", nbt: { Potion: "minecraft:awkward" }, amount: 1000 }
+        ],
+        results: [awkwardPotionBucket]
+    }).id("kubejs:filling/awkward_potion_bucket_tconstruct")
 })
 
 ServerEvents.tags("item", event => {
