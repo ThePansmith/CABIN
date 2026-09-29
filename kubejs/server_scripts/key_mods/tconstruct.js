@@ -110,24 +110,43 @@ ServerEvents.recipes(event => {
     event.remove({ id: "tconstruct:smeltery/casting/cheese_ingot_gold_cast" })
     event.remove({ id: "tconstruct:smeltery/casting/cheese_ingot_sand_cast" })
 
-    // Allow spouts to fill buckets with awkward potion, Create's potion fluid has no bucket of its own
-    const awkwardPotionBucket = { item: "tconstruct:potion_bucket", nbt: { Potion: "minecraft:awkward" } }
-    event.custom({
-        type: "create:filling",
-        ingredients: [
-            { item: "minecraft:bucket" },
-            { fluid: "create:potion", nbt: { Bottle: "REGULAR", Potion: "minecraft:awkward" }, amount: 1000 }
-        ],
-        results: [awkwardPotionBucket]
-    }).id("kubejs:filling/awkward_potion_bucket")
-    event.custom({
-        type: "create:filling",
-        ingredients: [
-            { item: "minecraft:bucket" },
-            { fluid: "tconstruct:potion", nbt: { Potion: "minecraft:awkward" }, amount: 1000 }
-        ],
-        results: [awkwardPotionBucket]
-    }).id("kubejs:filling/awkward_potion_bucket_tconstruct")
+    // Make potion buckets usable with Create. Create's potion fluid has no bucket of its own, and
+    // emptying a potion bucket gives tconstruct:potion, which Create's generated brewing mixes ignore.
+    const ForgeRegistries = Java.loadClass("net.minecraftforge.registries.ForgeRegistries")
+    ForgeRegistries.POTIONS.getKeys().forEach(key => {
+        const potion = String(key)
+        if (potion == "minecraft:empty" || potion == "minecraft:water") return
+        const idName = potion.replace(":", "_")
+        const createFluid = { fluid: "create:potion", nbt: { Bottle: "REGULAR", Potion: potion }, amount: 1000 }
+        const tconFluid = { fluid: "tconstruct:potion", nbt: { Potion: potion }, amount: 1000 }
+        const bucket = { item: "tconstruct:potion_bucket", nbt: { Potion: potion } }
+
+        // Spouts can fill buckets with either potion fluid
+        event.custom({
+            type: "create:filling",
+            ingredients: [{ item: "minecraft:bucket" }, createFluid],
+            results: [bucket]
+        }).id(`kubejs:filling/potion_bucket/${idName}`)
+        event.custom({
+            type: "create:filling",
+            ingredients: [{ item: "minecraft:bucket" }, tconFluid],
+            results: [bucket]
+        }).id(`kubejs:filling/potion_bucket_tconstruct/${idName}`)
+
+        // Item drains empty potion buckets into Create's potion fluid
+        event.custom({
+            type: "create:emptying",
+            ingredients: [{ type: "forge:partial_nbt", item: "tconstruct:potion_bucket", nbt: { Potion: potion } }],
+            results: [{ item: "minecraft:bucket" }, createFluid]
+        }).id(`kubejs:emptying/potion_bucket/${idName}`)
+
+        // Buckets poured into a basin by hand can be mixed back into Create's potion fluid
+        event.custom({
+            type: "create:mixing",
+            ingredients: [tconFluid],
+            results: [createFluid]
+        }).id(`kubejs:mixing/tconstruct_potion_to_create/${idName}`)
+    })
 })
 
 ServerEvents.tags("item", event => {
