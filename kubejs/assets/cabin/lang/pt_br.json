@@ -258,6 +258,9 @@
     "item.kubejs.shift.active": "§7Segure [§fShift§7] para ver o Resumo",
     "item.dynamo.details": "§6Só transfere energia se estiver §eproduzindo ativamente§6.§6",
     "item.dynamo.placement": "§6O Redstone Flux (RF) é transferido ao contato pela §ebobina vermelha§6, mas pode ser transportado usando §eTubos de Fluxo§6.",
-    "alias.emi.drawer_key": "Drawer Key",
-    "item.silver.tooltip": "§7Feito com moedas"
+    "alias.emi.drawer_key": "Chave de Gaveta",
+    "item.silver.tooltip": "§7Feito com moedas",
+    "item.create.brass_hand": "Mão de Ouro",
+    "cabin.travelersgear.emi.borked": "Procure a receita desse item no livro \"Fundições Frágeis\".",
+    "cabin.trials.deprecation.tooltip": "Descontinuado."
 }
