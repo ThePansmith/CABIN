@@ -28,9 +28,9 @@ if (Platform.isLoaded("create_new_age")) {
 	
 
 	// Energizers
-	andesiteMachine(event, Item.of("create_new_age:energiser_t1", 1), "create_new_age:electrical_connector")
-	brassMachine(event, Item.of("create_new_age:energiser_t2", 1), "create_new_age:energiser_t1")
-	invarMachine(event, Item.of("create_new_age:energiser_t3", 1), "create_new_age:energiser_t2")
+	andesiteMachine(event, Item.of("create_new_age:basic_energizer", 1), "create_new_age:electrical_connector")
+	brassMachine(event, Item.of("create_new_age:advanced_energizer", 1), "create_new_age:basic_energizer")
+	invarMachine(event, Item.of("create_new_age:reinforced_energizer", 1), "create_new_age:advanced_energizer")
 
         // Motors & Extensions
 	andesiteMachine(event, Item.of("create_new_age:basic_motor", 1), "create_new_age:overcharged_gold")
