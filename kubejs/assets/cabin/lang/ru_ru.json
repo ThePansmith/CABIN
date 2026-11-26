@@ -259,5 +259,8 @@
     "item.dynamo.details": "§6Должно §eактивно производить§6 энергию, чтобы экспортировать её.§6",
     "item.dynamo.placement": "§6RF подаётся через §eкрасную катушку§6 и может транспортироваться на расстояние с помощью §eэнергетических труб§6.",
     "alias.emi.drawer_key": "Ключ хранилища",
-    "cabin.trials.deprecation.tooltip": "Устарело."
+    "cabin.trials.deprecation.tooltip": "Устарело.",
+    "item.create.brass_hand": "Золотая рука",
+    "item.silver.tooltip": "§7Отлит из монет",
+    "cabin.travelersgear.emi.borked": "Базовый рецепт этого предмета можно найти в книге \"Puny Smelting\"."
 }
